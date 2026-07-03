@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FIX UPP | Plumbing &amp; Electrical Professional Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#fbf9f8",
+                    "outline-variant": "#c2c6d4",
+                    "on-primary-fixed": "#001a40",
+                    "on-tertiary-fixed": "#351000",
+                    "primary-fixed-dim": "#acc7ff",
+                    "on-primary-fixed-variant": "#004491",
+                    "tertiary": "#722b00",
+                    "tertiary-container": "#983c00",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#fd8b00",
+                    "on-primary-container": "#bbd0ff",
+                    "primary-fixed": "#d7e2ff",
+                    "surface-container-low": "#f6f3f2",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-container": "#0056b3",
+                    "surface-container": "#f0eded",
+                    "secondary-fixed": "#ffdcc3",
+                    "on-secondary-fixed-variant": "#6e3900",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f3f0f0",
+                    "on-secondary-container": "#603100",
+                    "surface-container-high": "#eae8e7",
+                    "surface-dim": "#dcd9d9",
+                    "tertiary-fixed-dim": "#ffb694",
+                    "surface": "#fbf9f8",
+                    "secondary-fixed-dim": "#ffb77d",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#303030",
+                    "on-tertiary-fixed-variant": "#7b2f00",
+                    "secondary": "#904d00",
+                    "on-surface-variant": "#424752",
+                    "on-tertiary-container": "#ffc2a7",
+                    "inverse-primary": "#acc7ff",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#1b1c1c",
+                    "background": "#fbf9f8",
+                    "primary": "#003f87",
+                    "on-background": "#1b1c1c",
+                    "surface-variant": "#e4e2e1",
+                    "outline": "#727784",
+                    "on-secondary-fixed": "#2f1500",
+                    "tertiary-fixed": "#ffdbcc",
+                    "surface-tint": "#115cb9",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e4e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1200px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "lg": "48px",
+                    "base": "8px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "headline-md-mobile": ["Montserrat"],
+                    "body-lg": ["Open Sans"],
+                    "title-lg": ["Montserrat"],
+                    "label-sm": ["Open Sans"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-md": ["Open Sans"]
+            },
+            "fontSize": {
+                    "headline-md-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "label-sm": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .bento-card {
+            grid-column: span 12;
+        }
+        @media (min-width: 768px) {
+            .bento-card-md-6 { grid-column: span 6; }
+            .bento-card-md-4 { grid-column: span 4; }
+            .bento-card-md-8 { grid-column: span 8; }
+        }
+        .elevation-1 {
+            box-shadow: 0 4px 12px rgba(0, 63, 135, 0.08);
+        }
+        .elevation-hover:hover {
+            box-shadow: 0 8px 24px rgba(0, 63, 135, 0.12);
+            transform: translateY(-2px);
+        }
+        .pulse-indicator {
+            box-shadow: 0 0 0 0 rgba(253, 139, 0, 0.4);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(253, 139, 0, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(253, 139, 0, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(253, 139, 0, 0); }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm h-20 transition-all duration-300">
+<div class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-sm">
+<img alt="FIX UPP Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLviPdR1xC5UfnDZyh2WUATC7aKdIsWc4cTcbErqGt6f3mUIooA71bokafe9Irb8H4xh3PlqnRQgxStTIuIjO_nt3BmzHHompyTG0C8SOl-sVCv4wrV3cKZNc45S2dzJgiI3-leJhQG4V8TgiqcTvh0npQVtGSSU7m4jdEzmcfsH62W6BMUaLdIjSzM8H6JDX83y0qXgYEZ1I5e1ZnNvj_dhe-bst0eFmG2m0Wt-pSx7blD6sgs2KHxHPQk"/>
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tight md:block hidden">FIX UPP</span>
+</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors" href="#plumbing">Plumbing</a>
+<a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors" href="#electrical">Electrical</a>
+<a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors" href="#tiling">Tiling</a>
+<a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors" href="#gutter-cleaning">Gutter Cleaning</a>
+<a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors" href="#handyman">Handyman</a>
+</div>
+<div class="flex items-center gap-md">
+<a class="hidden sm:flex items-center gap-xs text-primary font-bold hover:opacity-90 active:scale-95 transition-all" href="tel:5551234567">
+<span class="material-symbols-outlined">call</span>
+<span>Call Now</span>
+</a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-surface-bright py-xl">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-xl items-center relative z-10">
+<div class="space-y-md text-center md:text-left">
+<div class="inline-flex items-center gap-sm bg-secondary-fixed/30 px-sm py-1 rounded-full border border-secondary/20">
+<span class="w-2 h-2 rounded-full bg-secondary pulse-indicator"></span>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed-variant uppercase tracking-wider">Emergency Technicians Available</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight">
+                        Professional Repairs <br class="hidden md:block"/> You Can Count On.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto md:mx-0">
+                        From leaky pipes to electrical faults, FIX UPP provides expert plumbing, electrical, and handyman services across the region. Licensed, insured, and reliable.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center gap-md pt-base justify-center md:justify-start">
+<a class="w-full sm:w-auto px-lg py-sm bg-secondary text-surface font-bold rounded-lg elevation-1 hover:bg-secondary-container transition-all text-center active:scale-95" href="#contact">
+                            Get a Free Quote
+                        </a>
+<a class="w-full sm:w-auto px-lg py-sm border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-all text-center active:scale-95" href="#services">
+                            Our Services
+                        </a>
+</div>
+<div class="flex items-center gap-lg pt-md justify-center md:justify-start">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-variant flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional technician portrait, clean blue uniform, friendly smile, workshop background, high quality commercial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvHCmh2UQARTqTonX_gI_X7CFPggbThynWl_kWpfuKhpUgI0zkPofvQV-6UMrNi4MSEos5szncbONfpDXx1w4qjF-7iXBWrue4BVgY71Ma6NJhl0xac8cT0ucxnMq-CCSRnJrok-1VKXmlQdSfimWBcmrIcIREGeS7pv1l_MZ6FN766v_SvIKpmnDOYXWb2idY16QH9wS1nxONJA2iJgNLfFrxwtQ6CB7wHIgJxS5-O8t_7p6E75sQJw"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-variant flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a smiling home repair expert in a work shirt, soft natural lighting, professional and trustworthy appearance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjxEQ9wj7HdwVDcs4FPYnvunHkVrCEKbN7-TdpqbCXxjuIERvKHukxgNXteKl97HWKUGZ4uf4DzAUAarhfZkDfVKZHfPWX_3RbNtGVFkfRSihE6t5XhavMQDUh_QtXX75csM2_bIoleuNxuYGMR6wR-ZZSRWwIuN3X5KEmnhMwFG2FBEUrIcOO-gwtzFX6ml0aqZkwc5zSlugMM9o893FkJ1jnVHoGEq8Y54zuHFuF6rmugFBJLwwTCA"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-primary text-white flex items-center justify-center text-xs font-bold">
+                                4.9+
+                            </div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                            Trusted by <span class="font-bold text-on-surface">2,500+</span> Homeowners
+                        </p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
+<div class="rounded-xl overflow-hidden elevation-1 transform rotate-1 hover:rotate-0 transition-transform duration-500">
+<img class="w-full aspect-[4/5] object-cover" data-alt="A professional plumber in a tidy blue uniform carefully repairing a sink under-counter area in a modern kitchen. Focused expression, high-quality tools visible, bright and airy environment, corporate commercial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP6VPHiRpEh6_zaJSpndQLiinkOy6oXafpiBFPauPmCgGo4LU19cb_XZl6kYyaj21OLeJEqDcxzo6dq1wQUur2I80m7IdOjeoxucytXz-Bi56lac7IWhInxhTV7BITKLa04QVMqhacCxcpKpTs2K3qz83SsiD22L_FwmCaPFXptamFN5FfTE945Ao_m7HoRhNR1B_mIWxZXdi9tj7FcVCyaqXXIN6s4tUx0egy7BIj4Ee9oUM8pFTTGw"/>
+</div>
+<div class="absolute bottom-6 -left-6 md:-left-12 bg-white p-sm rounded-lg shadow-xl border border-outline-variant/20 flex items-center gap-md max-w-[200px]">
+<div class="bg-secondary/10 p-base rounded-full">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<p class="font-title-lg text-label-sm text-on-surface leading-none">Licensed &amp;</p>
+<p class="font-label-sm text-label-sm font-bold text-primary">Insured</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Statement (About) -->
+<section class="py-xl bg-surface">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface mb-sm">Quality Craftsmanship, Guaranteed.</h2>
+<div class="w-20 h-1 bg-secondary mx-auto mb-md"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
+                    FIX UPP is a local leader in home maintenance with a focus on safety and customer satisfaction. We combine decades of technical expertise with a commitment to clean, efficient, and transparent service for every household we touch.
+                </p>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl bg-surface-container-low" id="services">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex justify-between items-end mb-lg">
+<div>
+<span class="text-secondary font-bold uppercase tracking-widest font-label-sm">What We Do</span>
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface mt-xs">Expert Home Solutions</h2>
+</div>
+<a class="hidden md:flex items-center gap-xs text-primary font-bold hover:underline" href="#contact">
+                        View All Services
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="bento-grid">
+<!-- Plumbing -->
+<div class="bento-card bento-card-md-8 bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 elevation-hover transition-all group" id="plumbing">
+<div class="flex flex-col md:flex-row gap-lg">
+<div class="md:w-1/2">
+<span class="material-symbols-outlined text-4xl text-primary mb-md" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-sm">Plumbing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Comprehensive solutions for leaks, new installations, and rapid response emergency repairs to keep your home dry and functional.</p>
+<ul class="space-y-sm font-label-sm text-on-surface-variant mb-lg">
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Pipe Repair &amp; Leak Detection</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Bathroom &amp; Kitchen Installations</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 24/7 Emergency Response</li>
+</ul>
+</div>
+<div class="md:w-1/2 rounded-lg overflow-hidden h-48 md:h-auto">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of high-end chrome kitchen faucets and plumbing fixtures, bright modern kitchen background, clean and professional look, commercial interior photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw3dMjkuoJ6CaeLB-8raS3fTVXPnmAhO7bWgzFfzaTJpm4Rb6UzyFF7NSfdjOBEFIGoBx8-QgS4S5PzyOcXw9Ftk_TJhUxsO_85vGdZ9DyoaUF1o-v5l_1SYSFCOqzJr2SruICamIzRT1lKr34D_zL0GPaLuiHkN8mYrst2Dvua39rc2jeSVoIwxq9tIOMX5IsbmDPhgS-iDvSWXOPvjgbFP2dRkVGOmvcCDOvwR0kntNYYQt9CBO_hw"/>
+</div>
+</div>
+</div>
+<!-- Electrical -->
+<div class="bento-card bento-card-md-4 bg-primary text-white p-lg rounded-xl elevation-hover transition-all flex flex-col justify-between overflow-hidden relative group" id="electrical">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed mb-md" style="font-variation-settings: 'FILL' 1;">electrical_services</span>
+<h3 class="font-title-lg text-title-lg mb-sm text-secondary-fixed">Electrical</h3>
+<p class="font-body-md text-body-md opacity-90 mb-md">Precision fault finding, full property rewiring, and modern lighting designs by certified electricians.</p>
+</div>
+<div class="mt-auto relative z-10">
+<button class="bg-white text-primary px-md py-sm rounded-lg font-bold text-sm hover:bg-secondary-fixed transition-colors active:scale-95">Get Estimate</button>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[150px]">bolt</span>
+</div>
+</div>
+<!-- Tiling -->
+<div class="bento-card bento-card-md-4 bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 elevation-hover transition-all group" id="tiling">
+<span class="material-symbols-outlined text-4xl text-primary mb-md" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-sm">Tiling</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Professional wall and floor tiling with meticulous attention to grout lines and finish.</p>
+<img class="w-full h-32 object-cover rounded-lg" data-alt="Elegant hexagonal ceramic tile installation in progress, professional tools resting on finished section, neutral gray and white color palette, professional masonry photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNoG5kTL3AVOPD6BQbuKl2RMQpv-xbrLB-X103XnzDXiwOvTjt3eAJzyIX5D049_d-KuZX2VDD9ib-TN_9bbI2BuzLiULBnf8tU6XNmUoQ4iQp43ERQxfjextjXwzuygVF6I4aXSNsVHaHZSlgJgJlGxl4fAwMvcgK8MQC7lFjvvpN5btaQVsi8p8mY-03n1jaMvw79dLAkXGjt3cGsaIPyEGBuNEDsPhMtW9M4hChASJdO4ryjIEJ2A"/>
+</div>
+<!-- Gutter Cleaning -->
+<div class="bento-card bento-card-md-4 bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 elevation-hover transition-all" id="gutter-cleaning">
+<span class="material-symbols-outlined text-4xl text-primary mb-md" style="font-variation-settings: 'FILL' 1;">roofing</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-sm">Gutter Cleaning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Ensure proper drainage with comprehensive debris removal and routine system maintenance for all roof types.</p>
+<div class="mt-md pt-md border-t border-outline-variant/20 flex items-center justify-between text-primary font-bold">
+<span class="font-label-sm">Preventative Care</span>
+<span class="material-symbols-outlined">cleaning_services</span>
+</div>
+</div>
+<!-- Handyman -->
+<div class="bento-card bento-card-md-4 bg-secondary text-surface p-lg rounded-xl elevation-hover transition-all group overflow-hidden relative" id="handyman">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl mb-md" style="font-variation-settings: 'FILL' 1;">build</span>
+<h3 class="font-title-lg text-title-lg mb-sm">Handyman</h3>
+<p class="font-body-md text-body-md opacity-90">General home repairs and maintenance tasks handled with professional efficiency.</p>
+</div>
+<div class="absolute right-0 bottom-0 p-lg opacity-20 group-hover:rotate-12 transition-transform">
+<span class="material-symbols-outlined text-7xl">construction</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Indicators (Testimonials) -->
+<section class="py-xl bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="font-headline-md text-center text-on-surface mb-lg">What Our Clients Say</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/20 elevation-1 italic">
+<div class="flex text-secondary mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-md">"Prompt and professional service! Fixed our burst pipe in the middle of the night. Can't thank them enough."</p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center font-bold text-primary">JD</div>
+<span class="font-label-sm font-bold text-on-surface">John Doe, Tech City</span>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/20 elevation-1 italic">
+<div class="flex text-secondary mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-md">"The electrical rewiring was handled so cleanly. Minimal disruption and the lighting looks fantastic."</p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center font-bold text-primary">SM</div>
+<span class="font-label-sm font-bold text-on-surface">Sarah Miller, Heights</span>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/20 elevation-1 italic">
+<div class="flex text-secondary mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-md">"Best gutter cleaning service I've ever used. They even fixed a small leak without charging extra!"</p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center font-bold text-primary">RB</div>
+<span class="font-label-sm font-bold text-on-surface">Robert Brown, Suburbia</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Location -->
+<section class="py-xl bg-surface-bright relative" id="contact">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-xl">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Let's Fix It Together</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Need an emergency repair or planning a home upgrade? Get in touch with our team for expert advice and transparent pricing.</p>
+<div class="space-y-lg mb-lg">
+<div class="flex items-start gap-md">
+<div class="bg-primary/10 p-sm rounded-lg text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label-sm font-bold text-on-surface">Phone Number</p>
+<a class="font-body-md text-primary text-xl hover:underline" href="tel:5551234567">(555) 123-4567</a>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="bg-primary/10 p-sm rounded-lg text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-label-sm font-bold text-on-surface">Email Address</p>
+<a class="font-body-md text-primary text-xl hover:underline" href="mailto:hello@fixupp.com">hello@fixupp.com</a>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="bg-primary/10 p-sm rounded-lg text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label-sm font-bold text-on-surface">Our Location</p>
+<p class="font-body-md text-on-surface-variant">123 Maintenance Way, Tech City</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden elevation-1 h-64 relative">
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="A minimalist stylized map view of a suburban neighborhood area, showing clean street layouts and local green spaces, professional design for a business location section." data-location="Tech City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_VnWHzwdhNHDd5SauIhADkwOLtgcXLu-Mrqy-xV35eZwuHGRiPYG7KpLR7bkIerjc-d1cierVISRT4qR4d82DC1Rtm9wpJvGEBN2xd8aq4gW9sKHhSxsGQEH49XknXZ3LZ_CefpeH8UpS9l5CAjwlLsCmZD0_hq4QDvIj4sT9lqEgPsmmpQN9bAGtMNTEFUtz2VwArzFDg3bGLtArrLaMSrQlUWVORYD4NKCORGPNHaabdThj4Gx_cw"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary text-white p-base rounded-full shadow-lg pulse-indicator">
+<span class="material-symbols-outlined">home_repair_service</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 elevation-1">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-md">Request a Callback</h3>
+<form class="space-y-md">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-sm text-on-surface font-bold">Full Name</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-on-surface font-bold">Phone Number</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="(555) 000-0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-on-surface font-bold">Service Required</label>
+<select class="w-full bg-surface border border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all">
+<option>Select a service...</option>
+<option>Plumbing</option>
+<option>Electrical</option>
+<option>Tiling</option>
+<option>Gutter Cleaning</option>
+<option>Handyman</option>
+<option>Other</option>
+</select>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-on-surface font-bold">Your Message</label>
+<textarea class="w-full bg-surface border border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="Briefly describe what you need help with..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-surface py-md rounded-lg font-bold hover:bg-secondary-container transition-all elevation-1 active:scale-95" type="submit">Send Request</button>
+<p class="text-center font-label-sm text-on-surface-variant italic opacity-70">We typically respond within 30 minutes during business hours.</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface text-surface w-full py-xl">
+<div class="flex flex-col md:flex-row justify-between items-start px-gutter max-w-container-max mx-auto gap-md">
+<div class="space-y-md max-w-md">
+<span class="font-headline-md text-headline-md font-bold text-secondary-fixed">FIX UPP</span>
+<p class="font-body-md text-surface-variant">Your reliable partner for all essential home maintenance needs. Licensed, insured, and dedicated to precision craftsmanship.</p>
+<div class="flex gap-md">
+<a class="w-10 h-10 rounded-full bg-surface/10 flex items-center justify-center hover:bg-secondary-fixed/20 transition-all text-secondary-fixed" href="#">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface/10 flex items-center justify-center hover:bg-secondary-fixed/20 transition-all text-secondary-fixed" href="#">
+<span class="material-symbols-outlined">share_reviews</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface/10 flex items-center justify-center hover:bg-secondary-fixed/20 transition-all text-secondary-fixed" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-lg">
+<div class="space-y-sm">
+<h4 class="font-label-sm font-bold text-surface uppercase opacity-50">Legal</h4>
+<ul class="space-y-base font-body-md text-surface-variant">
+<li><a class="hover:text-secondary-container transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-sm">
+<h4 class="font-label-sm font-bold text-surface uppercase opacity-50">Support</h4>
+<ul class="space-y-base font-body-md text-surface-variant">
+<li><a class="hover:text-secondary-container transition-colors" href="#">Service Areas</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-xl pt-lg border-t border-surface/10 text-center md:text-left">
+<p class="font-body-md text-surface-variant">© 2024 FIX UPP Plumbing &amp; Electrical. All rights reserved. Licensed &amp; Insured.</p>
+</div>
+</footer>
+<script>
+        // Smooth reveal on scroll for bento cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+
+        // Sticky nav shadow
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

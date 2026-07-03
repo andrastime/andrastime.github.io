@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BlueFlame Plumbing and Heating | Brixton & Clapham</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#86a0cd",
+                        "on-surface-variant": "#43474e",
+                        "surface-container": "#e8eeff",
+                        "on-secondary-fixed-variant": "#004a78",
+                        "surface-container-high": "#e3e8f9",
+                        "surface": "#f9f9ff",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#c4c6cf",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#99cbff",
+                        "primary-container": "#1a365d",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#cfe5ff",
+                        "on-surface": "#161c27",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#8c1620",
+                        "surface-dim": "#d4daea",
+                        "surface-container-low": "#f1f3ff",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary-container": "#004470",
+                        "secondary-container": "#61b4fd",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "on-primary-fixed": "#001b3c",
+                        "primary-fixed-dim": "#adc7f7",
+                        "outline": "#74777f",
+                        "surface-bright": "#f9f9ff",
+                        "error-container": "#ffdad6",
+                        "secondary": "#00629d",
+                        "background": "#f9f9ff",
+                        "tertiary-container": "#720011",
+                        "primary": "#002045",
+                        "tertiary-fixed": "#ffdad8",
+                        "on-tertiary-fixed": "#410006",
+                        "tertiary": "#4a0008",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#ff7170",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "inverse-primary": "#adc7f7",
+                        "inverse-surface": "#2a303d",
+                        "surface-variant": "#dde2f3",
+                        "on-secondary-fixed": "#001d34",
+                        "surface-tint": "#455f88",
+                        "surface-container-highest": "#dde2f3",
+                        "inverse-on-surface": "#ecf0ff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#161c27",
+                        "on-tertiary": "#ffffff",
+                        "safety-orange": "#F97316"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "stack-lg": "48px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "stack-sm": "12px",
+                        "container-max": "1200px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "caption": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .trust-badge-grayscale {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+        .trust-badge-grayscale:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-outline-variant sticky top-0 z-50 w-full">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20 w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary" href="#">BlueFlame Plumbing</a>
+<nav class="hidden md:flex space-x-8 items-center">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 transition-all" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#credentials">Credentials</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#guides">Guides</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a class="hidden lg:block font-label-md text-label-md text-primary font-bold" href="tel:02071234567">020 7123 4567</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-80 transition-all active:scale-95">Book Now</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional, high-resolution photograph of a clean, modern high-efficiency combination boiler installed on a white wall in a bright London home. The lighting is soft and natural, emphasizing the technical precision and cleanliness of the installation. A professional heating engineer in a subtle navy uniform is visible from the side, checking a digital pressure gauge with focused expertise. The overall mood is reliable, calm, and technically advanced, reflecting a premium plumbing service." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwwU9peOpLGfjh8V5h8FXtPCFljsZbu_t3SRKQpkmMHkk1NMbU5m3xUwXL6Auphz7VcmzwNEofTFc4Iw-_89yeTPQAn9JP2RIE8aDg1Ay-ITnfWlL2kV4ECBynTO5ZLZgsc7_tAhd1bjn2JWArh2JyMolomebKhrYDw_hBPhuuD-cPQGB3ytsFobgtDJNzVWNV-F_xd4UGI_2GqpQJGxAQh8zxYjakQchW4UKz6uUii1MwvNp2RKTl2Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-gutter w-full py-stack-lg">
+<div class="max-w-2xl">
+<div class="inline-flex items-center space-x-2 bg-secondary-container/20 text-secondary-container px-3 py-1 rounded-full mb-6 border border-secondary-container/30">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-md text-label-md">Gas Safe Registered Engineers</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-white mb-6">Expert Plumbing & Heating in Brixton & Clapham</h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-8 max-w-lg">
+                        Unwavering reliability and technical excellence for your home. From emergency repairs to premium boiler installations, we are your local authority in heating solutions.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-safety-orange text-white px-8 py-4 rounded-xl font-headline-md text-headline-md shadow-lg hover:brightness-110 transition-all active:scale-95">
+                            Book a Diagnostic
+                        </button>
+<a class="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-headline-md text-headline-md hover:bg-white/20 transition-all" href="tel:02071234567">
+<span class="material-symbols-outlined">call</span>
+<span>020 7123 4567</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-surface border-b border-outline-variant py-8" id="credentials">
+<div class="max-w-container-max mx-auto px-gutter flex flex-wrap justify-center md:justify-between items-center gap-8">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider w-full text-center md:w-auto md:text-left">Accredited by industry leaders</p>
+<div class="flex flex-wrap justify-center items-center gap-12">
+<div class="trust-badge-grayscale flex items-center space-x-2">
+<span class="material-symbols-outlined text-4xl text-primary">verified_user</span>
+<span class="font-bold text-primary">Gas Safe Reg: 123456</span>
+</div>
+<div class="trust-badge-grayscale flex items-center space-x-2">
+<span class="material-symbols-outlined text-4xl text-primary">construction</span>
+<span class="font-bold text-primary">City & Guilds Qualified</span>
+</div>
+<div class="trust-badge-grayscale flex items-center space-x-2">
+<span class="material-symbols-outlined text-4xl text-primary">workspace_premium</span>
+<span class="font-bold text-primary">Which? Trusted Trader</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-stack-lg bg-surface-container-low" id="services">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Core Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">Providing precise, professional solutions for all your plumbing and heating needs with a focus on efficiency and safety.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Boiler Repairs -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant hover:shadow-xl transition-shadow group">
+<div class="w-14 h-14 bg-secondary-container/10 text-secondary rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">build</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Boiler Repairs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Quick response times and 24/7 emergency care for all major brands. We diagnose accurately to get your heat back on fast.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center text-label-md"><span class="material-symbols-outlined text-secondary mr-2 text-sm">check_circle</span> 2-Hour Window</li>
+<li class="flex items-center text-label-md"><span class="material-symbols-outlined text-secondary mr-2 text-sm">check_circle</span> No Hidden Fees</li>
+</ul>
+<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-white transition-all">Learn More</button>
+</div>
+<!-- Installations -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant hover:shadow-xl transition-shadow group relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-[10px] font-bold uppercase tracking-widest">Popular</div>
+<div class="w-14 h-14 bg-secondary-container/10 text-secondary rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">hvac</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Installations</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">High-efficiency boiler upgrades tailored to your home’s requirements. Expert advice on energy-saving models.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center text-label-md"><span class="material-symbols-outlined text-secondary mr-2 text-sm">check_circle</span> Up to 10yr Warranty</li>
+<li class="flex items-center text-label-md"><span class="material-symbols-outlined text-secondary mr-2 text-sm">check_circle</span> Free Site Survey</li>
+</ul>
+<button class="w-full py-3 bg-primary text-white font-label-md rounded-lg hover:opacity-90 transition-all">Get a Quote</button>
+</div>
+<!-- Gas Safety Checks -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant hover:shadow-xl transition-shadow group">
+<div class="w-14 h-14 bg-secondary-container/10 text-secondary rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">gpp_good</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Gas Safety Checks</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Essential landlord certificates (CP12) and comprehensive home safety inspections by certified experts.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center text-label-md"><span class="material-symbols-outlined text-secondary mr-2 text-sm">check_circle</span> Digital Certificates</li>
+<li class="flex items-center text-label-md"><span class="material-symbols-outlined text-secondary mr-2 text-sm">check_circle</span> Reminders Included</li>
+</ul>
+<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-white transition-all">Book Service</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Expertise & Guides (Bento Style) -->
+<section class="py-stack-lg bg-surface" id="guides">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Expert Guides & Tips</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Stay informed with maintenance advice from Brixton's most trusted heating engineers.</p>
+</div>
+<button class="text-secondary font-label-md flex items-center hover:underline">
+                        View All Articles <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Article -->
+<div class="md:col-span-7 group cursor-pointer">
+<div class="relative h-80 rounded-2xl overflow-hidden mb-6">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="A close-up, high-detail image of a modern radiator control valve in a tastefully decorated living room. The focus is sharp on the metallic texture of the valve, with a soft, warm bokeh background showing a cozy interior. The lighting is golden and inviting, suggesting a well-heated home in winter. The style is professional editorial photography, clean and focused on home comfort." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfwmNSqFqXvdWTnLYnt29e8dthr9n4pn5_tCkh7IEXLHHYazz7NmjEJH3U5nzTJnLs5wOervUfMA6gpBqRgDEpcEfY6oeMdh24U_RpJ7uYDw7L7RUoCokAgb2EfitCOgeGUok1ra_levDf92aSfHx9lHbRwrPit2aZY8XrrhQ1uAW5EuO725nUtHi9S9necEwhiXdmuLgxowjKHW_yqjDuu8cXqQYaUNZGm_xBVhKIxiUGFTI4HcjiJA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<span class="bg-safety-orange text-white text-[10px] font-bold px-2 py-1 rounded mb-3 inline-block uppercase">Maintenance</span>
+<h3 class="text-white font-headline-md text-headline-md">5 Signs Your Boiler Needs a Service</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Don't wait for a breakdown. Learn how to spot early warning signs like strange noises, yellow flames, or rising energy bills before they become costly repairs.</p>
+</div>
+<!-- Side Articles -->
+<div class="md:col-span-5 space-y-gutter">
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform" data-alt="A clean, industrial-style image of copper plumbing pipes neatly arranged against a brick wall. The pipes show a slight metallic sheen under cool, professional lighting. One pipe has a layer of professional foam insulation being applied. The mood is technical, orderly, and protective, highlighting home preparation for cold weather." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCY8VhWcog0dPmFYnhnmLqmaQ0gL0N4riUoQKCWuaT60-12omQOXiwUY6aHpMooL9f8tdqZbyQMMkcFrB7N1FGkv6kcTDTBaYLWBKzCM8VdHRd635sRoye8QLJz9VS5plMQYlyp2BKrBTpCw-flztEv5P_8FBtg62UstRr-Tdcz3Cd8GT7pxKfY4qw2lnq80TUVYQbjjT8wt4iNhL4IhTrgUtVe0KLEZhjRjT84NTbgKOotnRPj7snafg')"></div>
+</div>
+<div>
+<h4 class="font-headline-md text-label-md text-primary mb-2 group-hover:text-secondary transition-colors">Preparing Your Pipes for Winter</h4>
+<p class="text-caption text-on-surface-variant">Prevent frozen pipes and leaks with our comprehensive autumn checklist for South London homeowners.</p>
+</div>
+</div>
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform" data-alt="A high-tech digital smart thermostat mounted on a minimalist gray wall, displaying a warm temperature setting. The interface is glowing softly with blue and orange accents. The lighting is modern and clean, symbolizing energy efficiency and smart home integration in a contemporary London residence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgpFBnd4JuyGk011KdM__QUlWvfnspaZNZ_hvzc1Tl_YrUO4Fahalt1s5Mb7_NVZwkehFYU-mtFQYENla5OHwFuKMzOf1H4FbPHZdMuJkyxhJc3c_1gINIUArG2AqP4yBwt9RwszCB92B_1eobtycNfNyvmVkz-GoNBBMq2AUjzPAlRH8_T3X6fLP7lSVpwS5nFUyC6wNA9ptzy74ULFwKQFuZRySM8d_DF9BIVasMULeJm1WiVoC6PQ')"></div>
+</div>
+<div>
+<h4 class="font-headline-md text-label-md text-primary mb-2 group-hover:text-secondary transition-colors">Saving Money on Heating Bills</h4>
+<p class="text-caption text-on-surface-variant">Simple adjustments and smart tech that can reduce your annual energy consumption by up to 20%.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking/Contact Section -->
+<section class="py-stack-lg bg-surface-container-high relative overflow-hidden" id="contact">
+<!-- Subtle atmospheric pattern -->
+<div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #002045 1px, transparent 0); background-size: 32px 32px;"></div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<!-- Form -->
+<div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Schedule an Appointment</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface">Name</label>
+<input class="w-full border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary-container focus:border-secondary outline-none transition-all" placeholder="Your Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface">Phone</label>
+<input class="w-full border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary-container focus:border-secondary outline-none transition-all" placeholder="07xxx xxxxxx" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface">Service Required</label>
+<select class="w-full border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary-container focus:border-secondary outline-none transition-all">
+<option>Boiler Repair</option>
+<option>New Installation</option>
+<option>Safety Check (Gas Safe)</option>
+<option>General Plumbing</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface">Message</label>
+<textarea class="w-full border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary-container focus:border-secondary outline-none transition-all" placeholder="How can we help?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-headline-md text-headline-md hover:brightness-110 transition-all active:scale-95 shadow-md" type="submit">
+                                Send Request
+                            </button>
+</form>
+</div>
+<!-- Contact Info -->
+<div class="lg:pt-12">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Get In Touch</h2>
+<div class="space-y-10">
+<div class="flex items-start space-x-6">
+<div class="bg-primary text-white p-3 rounded-lg">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-headline-md text-label-md text-primary mb-1">Our Local Base</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Clapham High Street, London, SW4 7UL</p>
+<p class="text-caption text-secondary mt-1">Serving Brixton, Clapham & Battersea</p>
+</div>
+</div>
+<div class="flex items-start space-x-6">
+<div class="bg-primary text-white p-3 rounded-lg">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-headline-md text-label-md text-primary mb-1">Call for Emergency</h4>
+<p class="font-headline-md text-headline-md text-primary">020 7123 4567</p>
+<p class="text-caption text-on-surface-variant">Available 24/7 for urgent boiler failures</p>
+</div>
+</div>
+<div class="flex items-start space-x-6">
+<div class="bg-primary text-white p-3 rounded-lg">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h4 class="font-headline-md text-label-md text-primary mb-1">Email Enquiries</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">info@blueflame-plumbing.co.uk</p>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="rounded-2xl overflow-hidden h-48 border border-outline-variant mt-8 grayscale">
+<div class="w-full h-full bg-cover bg-center" data-location="Brixton, London" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3Stk44csZmtdvjWg95cLb8l27IJOimp6tuT2N2Zxd-HTlC_TI4fmT7HbLkQqKhSBCkpidQmvpetDKFs3hR8kN7-Peq_UXaYg5SaBBESpkcyISpizsSjtD2gzU9Jv3EVk0Fco4C0_P7UUO6-JRVWSfs8C30Ex6LxaAl9511pjUnWKv0yJOX9HnnnP2fjFzARjJ8hG0tuEZv-6_1tsneIRrWdtS95flFs4gvlvpIj-aSkCFbhngdQmLkQ')"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container">
+<div class="max-w-container-max mx-auto px-gutter py-stack-lg flex flex-col md:flex-row justify-between w-full">
+<div class="mb-12 md:mb-0 max-w-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-primary block mb-4">BlueFlame Plumbing</span>
+<p class="font-body-md text-body-md text-on-primary/80 mb-6">Premium plumbing and heating services for Brixton and Clapham. Gas Safe registered experts dedicated to technical excellence and local reliability.</p>
+<div class="flex space-x-4">
+<a class="text-on-primary/60 hover:text-secondary-container transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-on-primary/60 hover:text-secondary-container transition-colors" href="#"><span class="material-symbols-outlined">share_reviews</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+<div>
+<h5 class="font-label-md text-label-md uppercase tracking-widest mb-6 opacity-60">Services</h5>
+<ul class="space-y-4">
+<li><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#">Boiler Repairs</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#">Installations</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#">Safety Checks</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#">Emergency</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md uppercase tracking-widest mb-6 opacity-60">Company</h5>
+<ul class="space-y-4">
+<li><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#">About Us</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#">Guides</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#">Terms</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#">Privacy</a></li>
+</ul>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<h5 class="font-label-md text-label-md uppercase tracking-widest mb-6 opacity-60">Status</h5>
+<div class="bg-white/10 p-4 rounded-lg">
+<div class="flex items-center space-x-2 text-secondary-container mb-2">
+<span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+<span class="font-label-md">Engineers Available</span>
+</div>
+<p class="text-caption text-on-primary/60">Current wait time: ~45 mins in Clapham area.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-8 border-t border-white/10 text-center md:text-left">
+<p class="text-caption text-on-primary/60">© 2024 BlueFlame Plumbing and Heating Brixton & Clapham. All rights reserved. Gas Safe Registered.</p>
+</div>
+</footer>
+<!-- Mobile Navigation (Floating Sticky for Quick Access) -->
+<div class="md:hidden fixed bottom-6 left-6 right-6 z-50">
+<a class="flex items-center justify-center space-x-3 bg-safety-orange text-white py-4 rounded-full shadow-2xl active:scale-95 transition-transform" href="tel:02071234567">
+<span class="material-symbols-outlined">call</span>
+<span class="font-headline-md">Emergency Call Now</span>
+</a>
+</div>
+<script>
+        // Micro-interaction for form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Sending...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = 'Sent Successfully!';
+                btn.classList.replace('bg-primary', 'bg-green-600');
+                e.target.reset();
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.replace('bg-green-600', 'bg-primary');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Simple scroll reveal effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

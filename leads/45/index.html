@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Local Plumbers | Professional Plumbing Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-variant": "#e5e2e1",
+                "on-tertiary-fixed": "#351000",
+                "primary-fixed": "#d7e2ff",
+                "error": "#ba1a1a",
+                "surface-dim": "#dcd9d9",
+                "on-secondary-container": "#603100",
+                "surface-tint": "#115cb9",
+                "on-secondary": "#ffffff",
+                "surface": "#fcf9f8",
+                "on-primary-fixed-variant": "#004491",
+                "background": "#fcf9f8",
+                "surface-bright": "#fcf9f8",
+                "inverse-on-surface": "#f3f0ef",
+                "tertiary-fixed-dim": "#ffb694",
+                "surface-container": "#f0eded",
+                "on-primary": "#ffffff",
+                "on-primary-container": "#bbd0ff",
+                "on-error": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "outline": "#727784",
+                "error-container": "#ffdad6",
+                "on-surface-variant": "#424752",
+                "inverse-surface": "#313030",
+                "surface-container-highest": "#e5e2e1",
+                "surface-container-high": "#eae7e7",
+                "on-tertiary-container": "#ffc2a7",
+                "primary-fixed-dim": "#acc7ff",
+                "secondary": "#904d00",
+                "primary": "#003f87",
+                "on-surface": "#1c1b1b",
+                "inverse-primary": "#acc7ff",
+                "outline-variant": "#c2c6d4",
+                "tertiary": "#722b00",
+                "on-tertiary-fixed-variant": "#7b2f00",
+                "on-secondary-fixed": "#2f1500",
+                "tertiary-fixed": "#ffdbcc",
+                "on-tertiary": "#ffffff",
+                "on-primary-fixed": "#001a40",
+                "on-background": "#1c1b1b",
+                "on-error-container": "#93000a",
+                "secondary-fixed": "#ffdcc3",
+                "secondary-fixed-dim": "#ffb77d",
+                "on-secondary-fixed-variant": "#6e3900",
+                "primary-container": "#0056b3",
+                "secondary-container": "#fd8b00",
+                "surface-container-low": "#f6f3f2",
+                "tertiary-container": "#983c00"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "base": "8px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "margin-desktop": "40px",
+                "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                "headline-xl-mobile": ["Montserrat"],
+                "headline-lg": ["Montserrat"],
+                "headline-md": ["Montserrat"],
+                "body-lg": ["Inter"],
+                "label-md": ["Inter"],
+                "headline-xl": ["Montserrat"],
+                "body-md": ["Inter"],
+                "button": ["Inter"]
+            },
+            "fontSize": {
+                "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                "button": ["16px", { "lineHeight": "1", "fontWeight": "600" }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .bg-action-orange { background-color: #fd8b00; }
+        .text-safety-blue { color: #003f87; }
+        .service-card-shadow { box-shadow: 0px 4px 20px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-surface/95 shadow-sm backdrop-blur-md">
+<nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md text-primary font-bold tracking-tight">Local Plumbers</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="#areas">Areas</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="#testimonials">Testimonials</a>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg font-button text-button hover:opacity-90 active:scale-95 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+                    Emergency Call
+                </button>
+</div>
+<!-- Mobile Toggle -->
+<button class="md:hidden p-2 text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1 space-y-6">
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                        Professional Expertise Since 2008
+                    </span>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary leading-tight">
+                        Reliable Plumbing Services in Your Neighborhood
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        From emergency bursts to full bathroom installations, our certified local experts provide rapid, high-quality plumbing solutions that last.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary-container px-8 py-4 rounded-lg font-button text-button hover:bg-secondary-container/90 transition-colors shadow-lg shadow-secondary-container/20" href="#contact">
+                            Get a Quote
+                        </a>
+<a class="inline-flex items-center justify-center border-2 border-primary text-primary px-8 py-4 rounded-lg font-button text-button hover:bg-primary/5 transition-colors" href="#services">
+                            View Services
+                        </a>
+</div>
+</div>
+<div class="order-1 md:order-2 relative">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A professional and friendly male plumber in a clean navy blue uniform with a visible logo, smiling at the camera while holding a wrench. He is standing in a bright, modern, well-lit suburban kitchen with polished countertops and stainless steel appliances. The lighting is warm and welcoming, emphasizing a corporate and modern photographic style with high clarity and professional depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuLLqGFNsbAVYmZ4djz844s3a9YzWkmCvyzfvv8cNv9VOKy4bBtWzy8KFEil93ccfxL3iPTOnInsM_5k0lqPUKM9Yq_t9_LLmDCHGwmWEYsBq4PUHmpVtKE_FFsW5231VX5YZ72Xkt_Bd7iEqVLnD2tOdeDl4luA9DH2imGYUMpkjrt1CTQyh9QEkWfAzy5Kd_J-brYiE0YTUlcQn6wXZp88Loq0xTUHVcZSBZA7EkZibYsOogkO-U"/>
+</div>
+<!-- Floating Stat Badge -->
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl hidden lg:block">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<div class="text-headline-md font-bold text-primary">30 Min</div>
+<div class="text-label-md text-on-surface-variant">Avg. Response Time</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-surface-container-low py-12 px-margin-mobile md:px-margin-desktop border-y border-outline-variant/30">
+<div class="max-w-container-max mx-auto flex flex-wrap justify-center md:justify-between gap-8 items-center opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[32px]">verified_user</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Fully Licensed</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[32px]">support_agent</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">24/7 Emergency Service</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[32px]">thumb_up</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Satisfaction Guaranteed</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[32px]">construction</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Gas Safe Registered</span>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="services">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">Our Expert Solutions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Professional plumbing services tailored to home owners and property managers, ensuring peace of mind with every repair.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface p-8 rounded-2xl service-card-shadow border border-outline-variant/20 group hover:border-primary/50 transition-all">
+<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">emergency</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Emergency Repairs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Rapid response for burst pipes, flooding, and urgent drainage issues at any hour.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface p-8 rounded-2xl service-card-shadow border border-outline-variant/20 group hover:border-primary/50 transition-all">
+<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">nest_detect</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Leak Detection</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Non-invasive ultrasonic technology to find and fix hidden leaks before they cause damage.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface p-8 rounded-2xl service-card-shadow border border-outline-variant/20 group hover:border-primary/50 transition-all">
+<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">heat_pump</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Boiler Maintenance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Annual servicing and efficient repairs for all major boiler brands and central heating systems.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface p-8 rounded-2xl service-card-shadow border border-outline-variant/20 group hover:border-primary/50 transition-all">
+<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">bathtub</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Bathroom Fit-outs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Design-to-completion installation of modern luxury bathrooms and efficient wet rooms.</p>
+</div>
+</div>
+</section>
+<!-- Areas We Cover (Bento Layout) -->
+<section class="py-20 bg-surface-container-highest/30 px-margin-mobile md:px-margin-desktop" id="areas">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<div class="lg:col-span-1 space-y-6 flex flex-col justify-center">
+<h2 class="font-headline-lg text-headline-lg text-primary">Areas We Cover</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We provide hyper-local services across the city, ensuring a plumber is always less than 30 minutes away from your doorstep.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface border border-outline-variant px-4 py-2 rounded-full font-label-md text-label-md">SW1</span>
+<span class="bg-surface border border-outline-variant px-4 py-2 rounded-full font-label-md text-label-md">SW3</span>
+<span class="bg-surface border border-outline-variant px-4 py-2 rounded-full font-label-md text-label-md">W1</span>
+<span class="bg-surface border border-outline-variant px-4 py-2 rounded-full font-label-md text-label-md">W2</span>
+<span class="bg-surface border border-outline-variant px-4 py-2 rounded-full font-label-md text-label-md">WC1</span>
+<span class="bg-surface border border-outline-variant px-4 py-2 rounded-full font-label-md text-label-md">NW1</span>
+</div>
+</div>
+<div class="lg:col-span-2">
+<div class="h-96 w-full rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+<img class="w-full h-full object-cover" data-alt="A clean, professional minimalist street map of a central city neighborhood highlighting residential areas. The map uses a sophisticated color scheme of soft greys, safety blues, and highlights indicating service coverage areas. The style is modern, architectural, and high-contrast, fitting for a corporate plumbing website's service area visual." data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS7qKhKuAoMh0wBHiUxoi_PQWh0mtkmKxMrpL5rWT1ZhEmJLkiN2Eow5i2si_522ibaHEbcpY-d1AL26HwQenKTm0nBSdMC0iKAWnAxeaAfgSqnSlztLLkjmllywhXrIcrDq3Bvy6DBT6y-B5gceG8L1tm9_HZ43HA-2FOuuJUro1LlIH3BV15FhC1llILb_rKF6fDPk1lW-HN-QOwilzhSMZXXte9SfIPJQKhoCtKKeju6vns_bBr"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="testimonials">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-16">What Our Customers Say</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/30 relative">
+<div class="absolute -top-4 right-8 text-primary/10">
+<span class="material-symbols-outlined text-[64px]">format_quote</span>
+</div>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-6">"Emergency plumber arrived within 20 minutes of my call for a burst pipe. Efficient, professional, and cleaned up after. Highly recommend!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A portrait of a middle-aged woman with a friendly expression, high-quality professional lighting, light mode corporate aesthetic, clear skin and natural features." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAE0Y9MdBtdXbJWcQHSqb60B8hrVed_afhZvFPMS5h5knlRsMbUwiTHFEGMA6UNaLX_rJku_B-a7ahfYb55YYBgSzVa8WZ1C2WQxMh7R26ehXIHpKXVvb1TV3EWNGllC1b9Lv_fDdykRB5gzIdRYWmol21Y30EKHJ_v7ep68iHj9B7lnT2t3PSIJ3w3ZLtM2o4UfyTp6VZ3BgbuiPYsmauHw0la0wNYdPJlxGjq7Jddz548gmPTKIb"/>
+</div>
+<div>
+<div class="font-label-md text-label-md text-primary">Sarah Jenkins</div>
+<div class="text-[12px] text-on-surface-variant">Homeowner in SW3</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/30 relative">
+<div class="absolute -top-4 right-8 text-primary/10">
+<span class="material-symbols-outlined text-[64px]">format_quote</span>
+</div>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-6">"Excellent service for our new boiler installation. The team was punctual and the quote was very competitive. Great job!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A portrait of a professional man in his 40s wearing a smart casual shirt, smiling confidently, high-quality studio lighting, modern minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXuhoMBNNgLC0xiMQfq_h2mU_b3KvZKaJM16kPLbk5sTmQc0Z2-_MndBOnuzkDd8h7_NKun6Md6sxslFWj4aXCWL4YoOIMotFFEUYbtbedkj1YxZock76p07Epg7XSwC4DT1759CFF1_R3JkjclK0K82pgK_0sqlW0enOzOPxoHL0zA_PBEjfTnnYDBHupwABK_vnU38ZUrDszveZZ8pX75-Ko0ptHeBlTSjiLK1LaqZZR71AB3BxC"/>
+</div>
+<div>
+<div class="font-label-md text-label-md text-primary">Mark Thompson</div>
+<div class="text-[12px] text-on-surface-variant">Property Manager</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/30 relative">
+<div class="absolute -top-4 right-8 text-primary/10">
+<span class="material-symbols-outlined text-[64px]">format_quote</span>
+</div>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-6">"Found a leak I didn't even know existed using their thermal cameras. Saved me thousands in potential damage. Incredible tech."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A portrait of an elderly man with a grateful and happy expression, clear professional lighting, soft focus background, modern light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpo5u10qMM550Lea00lOloUjL9oK5FGtgrpS6Mzncu_5WSH2PHnuy7p59YRC0GleVcW_33WTfes-iZloYq19nv8J1qPZVyi7lFi4hQt6_U7_ahePXlX7Yle4G_pa55Tqsyr-uGgt4krovv0jBx0MQk_7O1MnI6NBR7iyf5-AzDy7HBIx9B66qMhAEElKvav1XuKhiva8fFKWSEwbg3urcW_RzpLr09qjgXNH_EY-lFzquPpI5YI8_S"/>
+</div>
+<div>
+<div class="font-label-md text-label-md text-primary">David Miller</div>
+<div class="text-[12px] text-on-surface-variant">Resident in W1</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-20 bg-primary/5 px-margin-mobile md:px-margin-desktop" id="contact">
+<div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+<div class="p-8 md:p-12 bg-primary text-white">
+<h2 class="font-headline-lg text-headline-lg mb-6">Book Your Service</h2>
+<p class="font-body-md mb-8 opacity-80">Fill out the form for a free, no-obligation quote or call us for immediate emergency support.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined p-2 bg-white/10 rounded-lg">call</span>
+<div>
+<div class="font-label-md text-label-md opacity-60">Call Us 24/7</div>
+<div class="font-headline-md text-headline-md">0800 123 4567</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined p-2 bg-white/10 rounded-lg">mail</span>
+<div>
+<div class="font-label-md text-label-md opacity-60">Email Inquiries</div>
+<div class="font-body-md font-semibold">info@localplumbers.com</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined p-2 bg-white/10 rounded-lg">verified</span>
+<div>
+<div class="font-label-md text-label-md opacity-60">Emergency Dispatch</div>
+<div class="font-body-md font-semibold">Response under 30 mins</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-8 md:p-12">
+<form class="space-y-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Your Name</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary p-3" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Phone Number</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary p-3" placeholder="07123 456 789" type="tel"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Service Required</label>
+<select class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary p-3">
+<option>Emergency Repair</option>
+<option>Leak Detection</option>
+<option>Boiler Service</option>
+<option>Bathroom Installation</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Message</label>
+<textarea class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary p-3 h-32" placeholder="Briefly describe the issue..."></textarea>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-container py-4 rounded-lg font-button text-button hover:opacity-90 transition-opacity flex items-center justify-center gap-2" type="submit">
+                            Send Request
+                            <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-highest border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-4">
+<div class="text-headline-md font-headline-md text-primary font-bold">Local Plumbers</div>
+<p class="font-body-md text-on-surface-variant pr-4">Providing premium plumbing and heating solutions with a focus on speed, quality, and fair pricing.</p>
+<div class="flex items-center gap-2">
+<img alt="SSL Security Badge" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkmdcQNn5dqxmpojZFwCz9o8yae59KTtxnYo4DgN9UJxMRz_JlBvJH1ZFIyb39ozQBwBI1kCUtSSxGS9z-uKGVd0gfhpB51MaKM6O_tZolfg8znSSdSOWhSiIwd_1rzBGfbMqrGYHr1EpU3JDjjyjop57-zw8rlWPMay-li2AYpx-UOwrI3xhPk-6Y0H849wqhvcJ-R23GxDkFf5Wdz8arsaxgeC0R82hbfbVEmUNbCeCryxTtzbLT"/>
+<span class="text-[12px] font-label-md text-on-surface-variant">256-bit Secure Connection</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-wider">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#services">Our Services</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#areas">Service Areas</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#testimonials">Client Reviews</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#contact">Get a Quote</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Health &amp; Safety</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Insurance Detail</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-wider">Contact Details</h4>
+<div class="space-y-4 text-on-surface-variant font-body-md">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>123 Pipe Lane, Central District,<br/>London, EC1 2AB</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>0800 123 4567</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">access_time</span>
+<span>Open 24/7 for Emergencies</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant py-8 px-margin-mobile md:px-margin-desktop text-center">
+<p class="font-body-md text-on-surface-variant/70">© 2024 Local Plumbers. All rights reserved. Professional Plumbing Services.</p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for smooth scrolling and scroll shadows
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

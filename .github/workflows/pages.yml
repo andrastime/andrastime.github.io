@@ -27,14 +27,21 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # For pure static HTML repo, upload repository root as artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './leads'
+          path: "./leads"
 
-      - name: Deploy to GitHub Pages (retry)
+      - name: Deploy to GitHub Pages
         id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 600000
+        continue-on-error: true
+
+      - name: Retry deploy once if needed
+        if: steps.deployment.outcome == 'failure'
+        id: deployment_retry
         uses: actions/deploy-pages@v4
         with:
           timeout: 600000

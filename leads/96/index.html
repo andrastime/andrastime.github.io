@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reid Plumbing | Precision Plumbing & Heating</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open_Sans:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#236580",
+                        "inverse-surface": "#303030",
+                        "on-primary-fixed": "#001e2b",
+                        "primary": "#00475e",
+                        "outline-variant": "#c0c8cd",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-container": "#5d1900",
+                        "on-primary-container": "#9bd7f7",
+                        "primary-fixed": "#c0e8ff",
+                        "on-background": "#1b1c1c",
+                        "tertiary-fixed": "#dbe4e7",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#40484d",
+                        "on-error-container": "#93000a",
+                        "background": "#fcf9f8",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container": "#f0eded",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#92cfee",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e4e2e1",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed-variant": "#004d66",
+                        "on-secondary-fixed-variant": "#832600",
+                        "tertiary": "#3a4345",
+                        "surface-container-high": "#eae7e7",
+                        "on-tertiary-container": "#c8d1d4",
+                        "outline": "#70787d",
+                        "secondary-fixed": "#ffdbd0",
+                        "tertiary-fixed-dim": "#bfc8cb",
+                        "primary-container": "#1a5f7a",
+                        "on-tertiary-fixed": "#141d1f",
+                        "on-secondary-fixed": "#390c00",
+                        "secondary-container": "#fe6a34",
+                        "inverse-primary": "#92cfee",
+                        "on-primary": "#ffffff",
+                        "secondary": "#ab3500",
+                        "tertiary-container": "#515a5d",
+                        "surface": "#fcf9f8",
+                        "secondary-fixed-dim": "#ffb59d",
+                        "surface-bright": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#3f484b",
+                        "surface-container-low": "#f6f3f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Montserrat"],
+                        "body-md": ["Open Sans"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Open Sans"],
+                        "label-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .emergency-glow {
+            animation: pulse-orange 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-orange {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface-container-low/90 backdrop-blur-md border-b border-outline-variant shadow-sm transition-all duration-300">
+<nav class="max-w-7xl mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+<a class="font-display-lg text-headline-md font-bold text-primary" href="#">Reid Plumbing</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#reviews">Reviews</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#about">Service Areas</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:block font-label-md text-label-md text-secondary font-bold hover:scale-105 transition-transform" href="tel:08001234567">
+                    Emergency 24/7
+                </a>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-2.5 rounded-lg font-bold hover:bg-primary-container transition-all active:scale-95">
+                    Book Now
+                </button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-resolution photograph of a pristine, modern designer bathroom with matte black fixtures and marble tiling. The lighting is soft and natural, emphasizing a clean and professional atmosphere. The composition is wide-angle to show the expert craftsmanship of the plumbing installation. Subtle reflections on the water surfaces add a sense of luxury and precision consistent with a high-end plumbing brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5BAXJ878Y8UCyZ0IWYDbQpsngL1c627GI1J5pskUI0dl3o4lrIDMrzCVbWA6LxYzeLvBJo8I-sgOTz1RqLjBBJ2tlP005B3tkOG1zdetRRC0cAQfM8vlsRu7dcgDORrs2mVsL-WDbb9MfZZq_pTmd-cOFemScoV0JUpNUtNgwryJi00K5wgMUrA3cbtad_hOETQrRCBO3lCkCwUk_yQ9ZDY-IJDhaMaXd2VmYc2gbfn0xTyl-_fYo_g"/>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="max-w-2xl space-y-6">
+<div class="inline-flex items-center gap-2 bg-primary-container/20 text-primary px-4 py-1 rounded-full border border-primary/20">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="text-label-md font-label-md uppercase tracking-wider">Gas Safe Registered Engineers</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-[64px] md:leading-[72px] text-primary">
+                        Your Local Experts for <br/><span class="text-secondary">Plumbing, Heating & Gas.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Fast, reliable, and professional service for your home or business. Available 24/7 for emergency repairs and precision installations across the region.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                            Request a Free Quote
+                        </button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/5 transition-all">
+                            Call Now: 0800 123 4567
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Emergency Banner -->
+<section class="bg-secondary-container py-6 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-on-secondary-container flex items-center justify-center emergency-glow">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl">warning</span>
+</div>
+<h2 class="font-display-lg text-headline-md text-on-secondary-container font-bold uppercase tracking-tight">
+                        Plumbing Emergency? We're here 24/7
+                    </h2>
+</div>
+<a class="group flex items-center gap-3 bg-on-secondary-container text-white px-8 py-3 rounded-full hover:bg-secondary transition-all" href="tel:08001234567">
+<span class="font-display-lg text-headline-md font-extrabold tracking-widest">0800 123 4567</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Subtle background texture -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #fff 1px, transparent 0); background-size: 24px 24px;"></div>
+</section>
+<!-- Services Grid (Bento Style) -->
+<section class="py-section-gap max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop" id="services">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-display-lg text-headline-lg text-primary">Comprehensive Solutions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">From minor leaks to full central heating installations, we deliver industrial-grade precision to every domestic project.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Plumbing -->
+<div class="md:col-span-8 bg-white border border-outline-variant p-8 rounded-2xl group hover:shadow-lg transition-all">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-1 space-y-4">
+<div class="w-14 h-14 bg-primary-fixed rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">water_damage</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Plumbing Services</h3>
+<p class="text-on-surface-variant">Precision repairs for leaks, burst pipes, and modern fixture installations. We handle everything from dripping taps to complex drainage solutions with guaranteed reliability.</p>
+<ul class="grid grid-cols-2 gap-2 text-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Leak Detection</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Pipe Repair</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Fixture Install</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span>Drainage</li>
+</ul>
+</div>
+<div class="w-full md:w-64 h-48 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A close-up photograph of a professional plumber's hands using high-quality chrome wrenches to tighten a pipe under a modern sink. The lighting is crisp and bright, highlighting the metallic textures and the precision of the tools. The background is a clean, modern kitchen, reflecting a professional and organized workspace in a high-end home." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1anHQjbx162E9N7_5bauDhnFmDBU616AZ3UAE-3t2OgzbXH_JaXtkPnBL7W-9LokNMcI1_KyFHTTjCdRwNnAoXe28zVo0-WfiWDz4ofJdG1Pbexqu-3c2hM4SmiP5b_H2dX_61O0sqw6XguDVWEHsW6S03dtm_QTZ-7HOIc3t4Iq7DpCPtfXlGf_xf-YO0Ew2lgpxub09AWJWGnMFBezIzeOkLStzqKNt7zziDFJa6dNshzijSDWASA"/>
+</div>
+</div>
+</div>
+<!-- Boiler Service -->
+<div class="md:col-span-4 bg-primary text-on-primary p-8 rounded-2xl flex flex-col justify-between hover:shadow-xl transition-all">
+<div class="space-y-4">
+<div class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-on-primary">thermostat</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Heating & Boilers</h3>
+<p class="opacity-90">Expert installation, emergency repairs, and annual servicing for all major boiler brands. Keeping your home warm efficiently.</p>
+</div>
+<button class="mt-8 border border-white/30 hover:bg-white/10 py-3 rounded-lg font-bold transition-all">View Heating Plans</button>
+</div>
+<!-- Gas Safety -->
+<div class="md:col-span-4 bg-tertiary-fixed text-on-tertiary-fixed p-8 rounded-2xl hover:shadow-lg transition-all border border-outline-variant">
+<div class="space-y-4">
+<div class="w-14 h-14 bg-primary text-white rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl">gpp_good</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Gas Safety</h3>
+<p class="text-on-surface-variant">Certified inspections and Landlord Gas Safety Certificates (CP12). Ensuring your property remains compliant and safe.</p>
+</div>
+</div>
+<!-- Custom Bathrooms -->
+<div class="md:col-span-8 bg-surface-container-low border border-outline-variant p-8 rounded-2xl group hover:shadow-lg transition-all overflow-hidden relative">
+<div class="relative z-10 max-w-md space-y-4">
+<h3 class="font-headline-md text-headline-md text-primary">Bathroom Renovations</h3>
+<p class="text-on-surface-variant">Full design and installation service for luxury bathrooms. We manage the entire process from plumbing to final tiling.</p>
+<button class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
+                            Explore Gallery <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="absolute right-0 bottom-0 top-0 w-1/3 hidden md:block">
+<img class="w-full h-full object-cover" data-alt="A modern, high-end bathroom renovation showcase featuring a walk-in rainfall shower with slate grey tiles and integrated LED lighting. The image captures the 'after' result of a professional plumbing and design project, radiating cleanliness, luxury, and meticulous attention to detail. The atmosphere is spa-like and serene, emphasizing the high-quality finish of the plumbing fixtures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdOJg3ngJZdRb3Cs_hgYFlhl8nLdf71qdGc4_MUQ5VdhSY-jfCy1pEYpnh468YM8vi4n8N9KOPlJ4HGdM6r-zQPIjt9mVrCSpW2NZJHOkDP7OWLvkFmUA7lh0MxlY4-J6f3KLySrOLVf8Jp2M4qmdpAUpALhLa694lcR51zLpHzmroqi_--9lTHuksrUiuxbW3zOYLncgmDqiwUyv_wNouW5onN9jt1bt3Lbftn3Yrj8xfyI0B2JWk2w"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-section-gap bg-tertiary text-on-tertiary relative overflow-hidden" id="reviews">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div class="space-y-4">
+<h2 class="font-display-lg text-headline-lg">What Our Customers Say</h2>
+<div class="flex items-center gap-4">
+<div class="flex text-secondary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-bold">4.9/5 Based on 450+ Reviews</span>
+</div>
+</div>
+<button class="bg-white/10 hover:bg-white/20 border border-white/20 px-6 py-2 rounded-lg transition-all">Write a Review</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl space-y-6">
+<p class="italic text-body-lg">"Had a major leak at 2 AM. The team arrived within 30 minutes and fixed it immediately. Incredible service and very professional. Highly recommend!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold">JD</div>
+<div>
+<h4 class="font-bold">James Dalton</h4>
+<p class="text-sm opacity-70">Residential Client</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl space-y-6">
+<p class="italic text-body-lg">"The boiler installation was seamless. They explained everything clearly, worked tidily, and the price was exactly as quoted. Very impressed."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold">SM</div>
+<div>
+<h4 class="font-bold">Sarah Miller</h4>
+<p class="text-sm opacity-70">Homeowner</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl space-y-6">
+<p class="italic text-body-lg">"Reid Plumbing handles all our landlord certificates. Reliable, on time, and great communication. A valuable partner for our business."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-on-tertiary-container flex items-center justify-center text-tertiary font-bold">RK</div>
+<div>
+<h4 class="font-bold">Robert King</h4>
+<p class="text-sm opacity-70">Property Manager</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative wave background -->
+<div class="absolute bottom-0 left-0 w-full opacity-5 pointer-events-none">
+<svg viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path d="M0,224L60,202.7C120,181,240,139,360,117.3C480,96,600,96,720,117.3C840,139,960,181,1080,181.3C1200,181,1320,139,1380,117.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" fill="#ffffff" fill-opacity="1"></path></svg>
+</div>
+</section>
+<!-- About & Service Areas -->
+<section class="py-section-gap max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Left: Why Choose Us -->
+<div class="space-y-8">
+<h2 class="font-display-lg text-headline-lg text-primary">Why Choose Reid Plumbing?</h2>
+<p class="text-body-lg text-on-surface-variant">With over 15 years of experience serving the community, we've built our reputation on precision, transparency, and unwavering reliability.</p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Fully Licensed & Insured</h4>
+<p class="text-on-surface-variant">Total peace of mind with comprehensive public liability insurance and industry certifications.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Upfront Pricing</h4>
+<p class="text-on-surface-variant">No hidden fees or surprise costs. We provide detailed quotes before any work begins.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Guaranteed Appointments</h4>
+<p class="text-on-surface-variant">We value your time. Our technicians arrive on schedule or we'll give you a discount.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Service Areas -->
+<div class="bg-surface-container-high rounded-3xl p-8 space-y-8 border border-outline-variant">
+<div class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-primary">Where We Work</h3>
+<p class="text-on-surface-variant">We provide rapid response plumbing and heating services to the following areas:</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2 font-bold"><span class="w-2 h-2 bg-secondary rounded-full"></span> Downtown Core</div>
+<div class="flex items-center gap-2 font-bold"><span class="w-2 h-2 bg-secondary rounded-full"></span> West Heights</div>
+<div class="flex items-center gap-2 font-bold"><span class="w-2 h-2 bg-secondary rounded-full"></span> Riverside District</div>
+<div class="flex items-center gap-2 font-bold"><span class="w-2 h-2 bg-secondary rounded-full"></span> East Valley</div>
+<div class="flex items-center gap-2 font-bold"><span class="w-2 h-2 bg-secondary rounded-full"></span> North Park</div>
+<div class="flex items-center gap-2 font-bold"><span class="w-2 h-2 bg-secondary rounded-full"></span> South Harbour</div>
+</div>
+</div>
+<div class="h-64 rounded-2xl overflow-hidden shadow-inner border border-outline bg-white flex items-center justify-center">
+<div class="w-full h-full relative">
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="A clean, minimalist map illustration of a city region, highlighted with a transparent primary-color wash indicating the service coverage area. The map shows major roads and neighborhood names in a professional, slightly technical aesthetic, with a 'You are here' or 'Technicians nearby' pin icon in the center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMc1MsyREHKx8X9VvUvTGC0HBIQJfcxefImNGoYmBic1Kt10kYk2wK56Z0tLLZOywEoR_gbGkVVScscjoXXHjQ88NjwrU3ppk7mZxV0bG-H6iAp7B4PTb5NKWXd1EznKCpwH8ckdD5BGdcxyaoA5YnCu-iD7RCBrJprb5_3FcakwFMDl7h_4GQpv089adIUpPiry9wSL55V0EXg-8CwyyhA7j9GT5wRnSvX91y51RhRaUxdKFpeR6aig"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold shadow-xl flex items-center gap-2 animate-bounce">
+<span class="material-symbols-outlined">location_on</span>
+                                    Servicing Your Area
+                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA / Contact -->
+<section class="py-section-gap bg-surface-container-lowest" id="contact">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-outline-variant">
+<div class="md:w-1/2 p-12 lg:p-16 space-y-8">
+<div>
+<h2 class="font-display-lg text-headline-lg text-primary mb-4">Let's Fix It Together</h2>
+<p class="text-on-surface-variant">Send us a message and we'll get back to you with a free, no-obligation quote within 60 minutes.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary">Name</label>
+<input class="w-full border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary px-4 py-3" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary">Phone</label>
+<input class="w-full border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary px-4 py-3" placeholder="07123 456 789" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary">Service Needed</label>
+<select class="w-full border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary px-4 py-3">
+<option>General Plumbing Repair</option>
+<option>Boiler Service/Repair</option>
+<option>Gas Safety Inspection</option>
+<option>Emergency Service</option>
+<option>Bathroom Renovation</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary">Message</label>
+<textarea class="w-full border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary px-4 py-3" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all active:scale-95" type="submit">
+                                Send Message
+                            </button>
+</form>
+</div>
+<div class="md:w-1/2 bg-primary p-12 lg:p-16 text-on-primary flex flex-col justify-between relative overflow-hidden">
+<div class="space-y-12 relative z-10">
+<div>
+<h3 class="font-headline-md text-headline-md mb-8">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined">call</span>
+</div>
+<span class="text-lg">0800 123 4567</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="text-lg">help@reidplumbing.com</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<span class="text-lg">123 Industrial Way, Suite 400<br/>Plumb City, PC1 2AB</span>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/20">
+<h4 class="font-bold mb-4">Our Hours</h4>
+<div class="space-y-2 opacity-80">
+<div class="flex justify-between"><span>Mon - Fri:</span> <span>8:00 AM - 6:00 PM</span></div>
+<div class="flex justify-between"><span>Sat - Sun:</span> <span>9:00 AM - 4:00 PM</span></div>
+<div class="flex justify-between text-secondary-fixed font-bold"><span>Emergency:</span> <span>24/7 Available</span></div>
+</div>
+</div>
+</div>
+<!-- Abstract pipe decoration -->
+<div class="absolute -right-20 -bottom-20 opacity-10">
+<span class="material-symbols-outlined text-[300px]" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-tertiary dark:bg-tertiary-container text-on-tertiary w-full py-12 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
+<div class="col-span-1 md:col-span-1 space-y-4">
+<div class="font-display-lg text-headline-md text-on-tertiary flex items-center gap-2">
+<span class="material-symbols-outlined">plumbing</span>
+                        Reid Plumbing
+                    </div>
+<p class="text-on-tertiary/80 text-sm">Providing precision plumbing and heating solutions across the region. Gas Safe Registered and fully insured for your peace of mind.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold uppercase tracking-wider text-sm opacity-60">Services</h4>
+<ul class="space-y-2">
+<li><a class="hover:text-on-tertiary transition-all hover:underline" href="#">Emergency Repairs</a></li>
+<li><a class="hover:text-on-tertiary transition-all hover:underline" href="#">Boiler Installation</a></li>
+<li><a class="hover:text-on-tertiary transition-all hover:underline" href="#">Bathroom Renovation</a></li>
+<li><a class="hover:text-on-tertiary transition-all hover:underline" href="#">Drain Cleaning</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold uppercase tracking-wider text-sm opacity-60">Company</h4>
+<ul class="space-y-2">
+<li><a class="hover:text-on-tertiary transition-all hover:underline" href="#">About Us</a></li>
+<li><a class="hover:text-on-tertiary transition-all hover:underline" href="#">Our Team</a></li>
+<li><a class="hover:text-on-tertiary transition-all hover:underline" href="#">Service Areas</a></li>
+<li><a class="hover:text-on-tertiary transition-all hover:underline" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold uppercase tracking-wider text-sm opacity-60">Legal</h4>
+<ul class="space-y-2">
+<li><a class="hover:text-on-tertiary transition-all hover:underline" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-on-tertiary transition-all hover:underline" href="#">Terms of Service</a></li>
+<li><a class="hover:text-on-tertiary transition-all hover:underline" href="#">Gas Safe Register</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-tertiary/80 font-body-md text-body-md text-center md:text-left">
+                    © 2024 Reid Plumbing Services. Precision in every pipe.
+                </p>
+<div class="flex gap-6">
+<a class="hover:text-secondary-fixed transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="hover:text-secondary-fixed transition-colors" href="#"><span class="material-symbols-outlined">video_library</span></a>
+<a class="hover:text-secondary-fixed transition-colors" href="#"><span class="material-symbols-outlined">share_reviews</span></a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll observer for header shrinkage
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'bg-surface/95');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'bg-surface/95');
+            }
+        });
+
+        // Interactive effect for service cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('translate-y-[-4px]');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('translate-y-[-4px]');
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Plumb London | Expert Plumbing &amp; Boiler Services 24/7</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-surface": "#0b1c30",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed": "#00164e",
+                "error-container": "#ffdad6",
+                "secondary-fixed": "#acedff",
+                "outline-variant": "#c5c5d3",
+                "error": "#ba1a1a",
+                "primary": "#00236f",
+                "outline": "#757682",
+                "surface-container-highest": "#d3e4fe",
+                "secondary-fixed-dim": "#4cd7f6",
+                "on-tertiary-fixed": "#410004",
+                "tertiary": "#5c0008",
+                "surface-dim": "#cbdbf5",
+                "tertiary-fixed-dim": "#ffb3ad",
+                "background": "#f8f9ff",
+                "on-secondary": "#ffffff",
+                "tertiary-container": "#860011",
+                "on-tertiary-fixed-variant": "#930013",
+                "primary-fixed": "#dce1ff",
+                "on-tertiary": "#ffffff",
+                "on-secondary-fixed": "#001f26",
+                "surface-bright": "#f8f9ff",
+                "on-tertiary-container": "#ff8a83",
+                "surface-tint": "#4059aa",
+                "inverse-primary": "#b6c4ff",
+                "on-background": "#0b1c30",
+                "secondary-container": "#57dffe",
+                "inverse-surface": "#213145",
+                "inverse-on-surface": "#eaf1ff",
+                "on-secondary-container": "#006172",
+                "tertiary-fixed": "#ffdad7",
+                "surface-container-low": "#eff4ff",
+                "secondary": "#00687a",
+                "surface": "#f8f9ff",
+                "on-primary-container": "#90a8ff",
+                "primary-container": "#1e3a8a",
+                "on-primary-fixed-variant": "#264191",
+                "surface-variant": "#d3e4fe",
+                "on-surface-variant": "#444651",
+                "on-error-container": "#93000a",
+                "surface-container-high": "#dce9ff",
+                "on-error": "#ffffff",
+                "on-secondary-fixed-variant": "#004e5c",
+                "surface-container": "#e5eeff",
+                "primary-fixed-dim": "#b6c4ff",
+                "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "xs": "4px",
+                "md": "24px",
+                "container-max": "1280px",
+                "xl": "80px",
+                "sm": "12px",
+                "base": "8px",
+                "lg": "48px"
+            },
+            "fontFamily": {
+                "h2": ["Inter"],
+                "body-lg": ["Inter"],
+                "caption": ["Inter"],
+                "label-bold": ["Inter"],
+                "h3": ["Inter"],
+                "body-md": ["Inter"],
+                "h1-mobile": ["Inter"],
+                "h1": ["Inter"]
+            },
+            "fontSize": {
+                "h2": ["36px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                "label-bold": ["14px", {"lineHeight": "1", "fontWeight": "600"}],
+                "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "h1-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .pulse-emergency {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(186, 26, 26, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(186, 26, 26, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(186, 26, 26, 0); }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest dark:bg-on-surface shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<div class="font-h3 text-h3 font-bold text-primary dark:text-primary-fixed">Plumb London</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex space-x-lg items-center font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-200" href="#services">Services</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-200" href="#reviews">Reviews</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-200" href="#about">About</a>
+</div>
+<div class="flex items-center gap-base">
+<a class="bg-error text-on-error px-6 py-3 rounded-full font-label-bold flex items-center gap-2 pulse-emergency Active: scale-95 transition-transform duration-150" href="tel:02012345678">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emergency</span>
+                    Emergency Call
+                </a>
+</div>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-xl lg:pt-48 lg:pb-xl overflow-hidden">
+
+<div class="max-w-container-max mx-auto px-gutter relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-lg items-center">
+<!-- Left Side Content -->
+<div class="lg:col-span-7">
+<div class="flex flex-wrap gap-sm mb-md">
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full text-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                        Secure &amp; Certified
+                    </span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">nest_eco_leaf</span>
+                        Gas Safe Registered
+                    </span>
+</div>
+<h1 class="font-h1-mobile text-h1-mobile md:font-h1 md:text-h1 text-primary mb-md leading-tight">
+                    Your Trusted London Plumbers. <br class="hidden md:block"/>
+<span class="text-secondary">Available 24/7.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-xl">
+                    Professional, reliable, and efficient plumbing solutions for homes and businesses across London. From emergency leaks to boiler installations, we've got you covered.
+                </p>
+<div class="flex flex-wrap gap-md">
+<div class="flex -space-x-3 overflow-hidden">
+<img class="inline-block h-12 w-12 rounded-full ring-2 ring-surface-container-lowest" data-alt="Close-up professional headshot of a friendly plumber wearing a clean company uniform with a blue polo shirt, smiling confidently against a soft-focus urban London background in bright daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXJuLJDg4U3JPsO8F3Cu9Aup-n6uLghcTaAQu7OC99znUBDgTHUi3CpL932J_IN6PjoLBpABa2h6a4iJj8YX5kPUjWA3nTf4MVCGiZoQohmg6zSQ5t_4n_vJjtm-2WQHOvPYN9FBl_CtWZrUUXX0RLEF8PrihbMuBzT6NDFfve7sTGlwKLtz7AUg4FEJETjD8wBYXZwn6_glr8TrG3z-yhCVLM7Gypy_krs8u3oc91l_XWhd9iI3cC"/>
+<img class="inline-block h-12 w-12 rounded-full ring-2 ring-surface-container-lowest" data-alt="Portrait of an experienced female gas engineer wearing professional work gear and safety glasses, looking professionally at the camera with a reassuring smile in a well-lit residential setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzDugQiTeg9r7e5gtXA4d09YeYG3POMcW9WmcyE3FAQWRdoyXur2zw3U14VfcitaoYrss-l43d63Vd-bxFge8L3fb_kYarxbQMy82gCP5551knK9gMST4tjBdR_uV-lxkQOLxjgyOrISt4w42nbXFWVL-_jmVn24LFOKd-Ebz8wWrypLaXpcGk5I1ay-UzS3n3w2kpVrDiHMfWDcmZT8ik-OjKGNbnbwArEkI9B8lt8uGAp3DVE9yY"/>
+<img class="inline-block h-12 w-12 rounded-full ring-2 ring-surface-container-lowest" data-alt="Professional technician holding a tablet and smiling, wearing a dark blue branded jacket with visible precision tools in the background, set in a clean, modern interior with soft ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXF7XF3iQ2qnaciz4RKykbCWjpQWrKGFwi3VJZ_xMVWnoheFZYQY93rkHLR1995Gzno79OlesdqJg9qi_RV9JivFjFuRkkko0FsJgjSfSZS3IFOSAyhUqX2aNGkLXoe1uEDjXJuGouY0jt00Oag6iQxa3a9jFoQgGCkeazb7JwHzI0IY9e7kRV8wtcrI6UFvr8qj9g3rjh-dIM1RspkQtHEMXJM1JSJIB9-PsXJDE1Cg3K0KEmqWWA"/>
+</div>
+<div class="flex flex-col justify-center">
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-caption font-label-bold">500+ Local Reviews</span>
+</div>
+</div>
+</div>
+<!-- Right Side Lead Form -->
+<div class="lg:col-span-5">
+<div class="bg-surface-container-lowest p-lg rounded-xl shadow-md border border-outline-variant/30">
+<h3 class="font-h3 text-h3 text-on-surface mb-sm">Request a Quote</h3>
+<p class="text-body-md text-on-surface-variant mb-md">Quick response within 1 hour.</p>
+<form class="space-y-base">
+<div>
+<label class="block text-caption font-label-bold mb-1 text-on-surface-variant">Full Name</label>
+<input class="w-full px-4 py-3 rounded-lg border-2 border-surface-container-high focus:border-primary focus:ring-0 transition-all outline-none" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block text-caption font-label-bold mb-1 text-on-surface-variant">Phone Number</label>
+<input class="w-full px-4 py-3 rounded-lg border-2 border-surface-container-high focus:border-primary focus:ring-0 transition-all outline-none" placeholder="07123 456789" type="tel"/>
+</div>
+<div>
+<label class="block text-caption font-label-bold mb-1 text-on-surface-variant">Service Type</label>
+<select class="w-full px-4 py-3 rounded-lg border-2 border-surface-container-high focus:border-primary focus:ring-0 transition-all outline-none">
+<option>Emergency Repair</option>
+<option>Boiler Service</option>
+<option>Drainage Issue</option>
+<option>General Plumbing</option>
+</select>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-label-bold hover:bg-primary-container transition-all shadow-sm flex justify-center items-center gap-base" type="submit">
+                            Get My Free Quote
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-surface-container py-md">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-wrap justify-center items-center gap-lg md:gap-xl opacity-70">
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-h3">verified</span>
+<span class="font-label-bold uppercase tracking-wider text-caption">Secure SSL Connection</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-h3">local_fire_department</span>
+<span class="font-label-bold uppercase tracking-wider text-caption">Gas Safe Registered</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-h3">award_star</span>
+<span class="font-label-bold uppercase tracking-wider text-caption">Checkatrade Approved</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl bg-surface-bright" id="services">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center max-w-2xl mx-auto mb-lg">
+<h2 class="font-h2 text-h2 text-on-surface mb-sm">Expert Plumbing Solutions</h2>
+<p class="text-body-lg text-on-surface-variant">Comprehensive services tailored to meet the needs of London residents and businesses.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Boiler Services -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all group">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center text-primary mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">heat_pump</span>
+</div>
+<h3 class="font-h3 text-h3 mb-sm">Boiler Services</h3>
+<p class="text-body-md text-on-surface-variant mb-lg">From annual servicing and safety checks to full boiler replacements and repairs.</p>
+<a class="inline-flex items-center font-label-bold text-primary group-hover:gap-2 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined ml-1">chevron_right</span>
+</a>
+</div>
+<!-- Drainage -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all group">
+<div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">water_damage</span>
+</div>
+<h3 class="font-h3 text-h3 mb-sm">Drainage</h3>
+<p class="text-body-md text-on-surface-variant mb-lg">Blocked drains, CCTV surveys, and high-pressure jetting to clear any obstruction fast.</p>
+<a class="inline-flex items-center font-label-bold text-primary group-hover:gap-2 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined ml-1">chevron_right</span>
+</a>
+</div>
+<!-- General Plumbing -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all group">
+<div class="w-16 h-16 bg-surface-container-highest rounded-full flex items-center justify-center text-primary mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+</div>
+<h3 class="font-h3 text-h3 mb-sm">General Plumbing</h3>
+<p class="text-body-md text-on-surface-variant mb-lg">Leaky taps, burst pipes, radiator replacements, and bathroom installations.</p>
+<a class="inline-flex items-center font-label-bold text-primary group-hover:gap-2 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined ml-1">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-xl bg-primary text-on-primary relative overflow-hidden" id="reviews">
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<h2 class="font-h2 text-h2 text-center mb-lg">What Our Customers Say</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Review 1 -->
+<div class="bg-on-primary-fixed/20 p-lg rounded-xl backdrop-blur-sm border border-primary-container">
+<div class="flex text-tertiary-fixed-dim mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md mb-lg italic">"Excellent service! Called at 2 AM for a burst pipe and they were here in 30 minutes. Fixed it quickly and charged a fair price. Highly recommend!"</p>
+<div class="flex items-center gap-base">
+<div class="font-label-bold">Sarah Jenkins</div>
+<div class="h-px w-8 bg-on-primary-container"></div>
+<div class="text-caption text-on-primary-container">Chelsea, SW3</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-on-primary-fixed/20 p-lg rounded-xl backdrop-blur-sm border border-primary-container">
+<div class="flex text-tertiary-fixed-dim mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md mb-lg italic">"Professional team. They installed a new boiler in one day and left the place spotless. The price was exactly as quoted. 5-star experience."</p>
+<div class="flex items-center gap-base">
+<div class="font-label-bold">Mark Thompson</div>
+<div class="h-px w-8 bg-on-primary-container"></div>
+<div class="text-caption text-on-primary-container">Greenwich, SE10</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-on-primary-fixed/20 p-lg rounded-xl backdrop-blur-sm border border-primary-container hidden lg:block">
+<div class="flex text-tertiary-fixed-dim mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md mb-lg italic">"Used Plumb London for a commercial project and they were exceptional. Knowledgeable technicians and great communication throughout."</p>
+<div class="flex items-center gap-base">
+<div class="font-label-bold">David Richardson</div>
+<div class="h-px w-8 bg-on-primary-container"></div>
+<div class="text-caption text-on-primary-container">City of London, EC2</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Preview Section -->
+<section class="py-xl">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-base">
+<div>
+<h2 class="font-h2 text-h2 text-on-surface">Expert Plumbing Advice</h2>
+<p class="text-body-lg text-on-surface-variant">Stay informed with tips from our master plumbers.</p>
+</div>
+<a class="bg-surface-container text-primary px-6 py-2 rounded-full font-label-bold hover:bg-surface-container-highest transition-all" href="#">View All Tips</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<article class="group cursor-pointer">
+<div class="h-64 rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-resolution close-up of a modern boiler control panel showing digital temperature settings with clean, sharp focus and professional interior lighting in a modern utility room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzCFOxNtghpmw9bhjmysvV7iEEVvSRZjIgMOqrYwIBb9BGB8ZYtdFMu_FAXu6deLxTRlv6BA1WhBMWrlOldHiaCX2X5WTkp5d0GrH6dhaJ6aAMnf10BpX4oapChMNnxjiwz1jXaMZaBxqp2CjhsBM1hyEz43zqIuabaN0yIDnh25QpeqPf2CRb2bbJR7n9b-gAUHfMLOltYhMYjZFm9R_SfDNdtvHJ-tS8cxdoIjNRWuzfdRLgfLCK"/>
+<span class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full text-caption">Boiler Care</span>
+</div>
+<h3 class="font-h3 text-h3 mb-base group-hover:text-primary transition-colors">How to Bleed Your Radiators for Efficiency</h3>
+<p class="text-body-md text-on-surface-variant mb-sm">Learn the simple step-by-step process to keep your home warm and reduce your energy bills this winter...</p>
+</article>
+<article class="group cursor-pointer">
+<div class="h-64 rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macro shot of water droplets on a chrome bathroom faucet, emphasizing cleanliness and precision, with a soft bokeh background of a high-end luxury bathroom in neutral blue and white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx7UQ0R9_3PfxK_QQisQ7m88ACkWvnPWBKESgVii4V8q1Pxy5AimCAJRhFiY_UbC4CafzwCIMkK_39V4l3NJTHlBsHSKFYSTRfxLTz4mwyQ4mVX0vDGimxA_Gae4bPiaQdOgsOjLQPq5ddZ-nTGbTR6AwCQKt9ooocStZuQgE7CPhSmjxWGlH0jDFOSCRtiy3JCyv7gNyjAwwLffwzgCzMCUvvMkOjm1CuE32kDG8CgoXehShUzDt1"/>
+<span class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full text-caption">Maintenance</span>
+</div>
+<h3 class="font-h3 text-h3 mb-base group-hover:text-primary transition-colors">5 Signs You Have a Hidden Leak</h3>
+<p class="text-body-md text-on-surface-variant mb-sm">A tiny leak can lead to massive damage. Discover the warning signs every homeowner should watch out for...</p>
+</article>
+<article class="group cursor-pointer hidden lg:block">
+<div class="h-64 rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A collection of professional plumbing tools including a pipe wrench, pliers, and soldering kit neatly organized on a clean workbench with a blueprint in the background, lit by bright daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs4Yud0cA_eUfd6ERU7o3HbkbfsC5VKlRWB-6EF2adYtbb05fTiKmMuzfyRfG8ama1o_4etSNxfYlH27s1VnlbFUG9fIZ42m3bXrOvbPXQcC-z7BPJpxnubMsFgXxP9MKBeu0qynbzaV98bYM-pd0lTLSSoBA82gnUjauICuEUj4r6O4pkjucYs--CAiXA9h0OEtU3BHRrQGLQ3qNUzW6Mm9kFF9W-VIdIBaxGTCPAFuUGmgIpVXnR"/>
+<span class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full text-caption">Professional Advice</span>
+</div>
+<h3 class="font-h3 text-h3 mb-base group-hover:text-primary transition-colors">Preparing Your Pipes for Freezing Weather</h3>
+<p class="text-body-md text-on-surface-variant mb-sm">Avoid the catastrophe of burst pipes by following these simple insulation and maintenance protocols before the cold hit...</p>
+</article>
+</div>
+</div>
+</section>
+<!-- Social Bar -->
+<section class="bg-secondary text-on-secondary py-md">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-md">
+<span class="font-h3 text-h3">Follow Our Daily Service Highlights</span>
+<div class="flex gap-lg items-center">
+<a class="hover:scale-110 transition-transform flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">face_nod</span>
+<span class="font-label-bold">Facebook</span>
+</a>
+<a class="hover:scale-110 transition-transform flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+<span class="font-label-bold">Instagram</span>
+</a>
+<a class="hover:scale-110 transition-transform flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">brand_family</span>
+<span class="font-label-bold">Twitter</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-xl">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Brand & Contact -->
+<div class="space-y-md">
+<div class="font-h3 text-h3 font-bold text-surface-container-lowest dark:text-on-surface">Plumb London</div>
+<div class="text-outline-variant dark:text-on-surface-variant space-y-sm">
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined">location_on</span>
+                        123 London Bridge, London, SE1 9SG
+                    </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined">phone</span>
+                        020 1234 5678
+                    </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined">mail</span>
+                        info@plumblondon.co.uk
+                    </p>
+</div>
+</div>
+<!-- Useful Links -->
+<div class="space-y-md">
+<h4 class="font-label-bold text-surface-container-lowest dark:text-on-surface uppercase tracking-widest">Service Areas</h4>
+<div class="grid grid-cols-2 gap-sm">
+<a class="text-outline-variant hover:text-secondary-fixed transition-colors" href="#">Central London</a>
+<a class="text-outline-variant hover:text-secondary-fixed transition-colors" href="#">North London</a>
+<a class="text-outline-variant hover:text-secondary-fixed transition-colors" href="#">South London</a>
+<a class="text-outline-variant hover:text-secondary-fixed transition-colors" href="#">East London</a>
+<a class="text-outline-variant hover:text-secondary-fixed transition-colors" href="#">West London</a>
+<a class="text-outline-variant hover:text-secondary-fixed transition-colors" href="#">Greater London</a>
+</div>
+</div>
+<!-- Compliance & Secondary Links -->
+<div class="space-y-md">
+<h4 class="font-label-bold text-surface-container-lowest dark:text-on-surface uppercase tracking-widest">Company Info</h4>
+<nav class="flex flex-col gap-sm">
+<a class="text-outline-variant hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="text-outline-variant hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="text-outline-variant hover:text-secondary-fixed transition-colors" href="#">Cookie Policy</a>
+<a class="text-outline-variant hover:text-secondary-fixed transition-colors" href="#">Emergency Services</a>
+</nav>
+<div class="pt-base border-t border-outline-variant/20">
+<p class="text-caption text-outline-variant">© 2024 Plumb London. All rights reserved.</p>
+</div>
+</div>
+</div>
+</footer>
+<!-- FAB for quick contact (Mobile only) -->
+<a class="md:hidden fixed bottom-gutter right-gutter bg-error text-on-error w-16 h-16 rounded-full flex items-center justify-center shadow-lg z-50 pulse-emergency" href="tel:02012345678">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+</a>
+<script>
+        // Simple form submission handler
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalContent = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Sending...';
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Success!';
+                btn.classList.replace('bg-primary', 'bg-secondary');
+                e.target.reset();
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.replace('bg-secondary', 'bg-primary');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('article, .bg-surface-container-lowest').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

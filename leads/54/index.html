@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Plumus Ltd | Professional Plumbing Solutions</title>
+<meta content="Plumus Ltd offers expert residential, commercial, and 24/7 emergency plumbing services with modern technology and certified professionals." name="description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#ffb68e",
+                    "primary-fixed": "#d9e2ff",
+                    "surface-container-high": "#dce9ff",
+                    "on-background": "#0b1c30",
+                    "secondary-fixed": "#ffdbc9",
+                    "inverse-surface": "#213145",
+                    "surface-container": "#e5eeff",
+                    "on-tertiary-container": "#ffaf90",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#7f2b00",
+                    "tertiary-fixed-dim": "#ffb599",
+                    "outline": "#737784",
+                    "on-secondary-container": "#6e2f00",
+                    "on-tertiary-fixed": "#370e00",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "on-secondary-fixed-variant": "#763300",
+                    "inverse-primary": "#b0c6ff",
+                    "tertiary-fixed": "#ffdbce",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#0b1c30",
+                    "surface-container-low": "#eff4ff",
+                    "primary-container": "#004aad",
+                    "secondary": "#9b4500",
+                    "primary": "#00357f",
+                    "secondary-container": "#ff914e",
+                    "on-secondary-fixed": "#331200",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-surface-variant": "#434653",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#215abd",
+                    "surface-variant": "#d3e4fe",
+                    "on-primary-fixed": "#001945",
+                    "surface": "#f8f9ff",
+                    "tertiary-container": "#8e3100",
+                    "tertiary": "#682200",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#00429b",
+                    "inverse-on-surface": "#eaf1ff",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f8f9ff",
+                    "background": "#f8f9ff",
+                    "outline-variant": "#c3c6d5",
+                    "on-surface-variant": "#434653"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "lg": "48px",
+                    "md": "24px",
+                    "sm": "16px",
+                    "gutter": "24px",
+                    "base": "4px",
+                    "xl": "80px",
+                    "xs": "8px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Montserrat"],
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-xl": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .tonal-card-shadow {
+            box-shadow: 0 4px 12px rgba(0, 53, 127, 0.08);
+        }
+        .active-nav-underline {
+            position: relative;
+        }
+        .active-nav-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #00357f;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest shadow-sm">
+<nav class="max-w-container-max mx-auto flex justify-between items-center px-gutter py-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-headline-md" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">Plumus Ltd</span>
+</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="font-label-md text-label-md text-primary active-nav-underline" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#testimonials">Testimonials</a>
+</div>
+<div class="flex items-center gap-sm">
+<a class="hidden lg:flex items-center gap-xs px-sm py-xs bg-secondary text-on-secondary rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity" href="tel:+1234567890">
+<span class="material-symbols-outlined text-[18px]">emergency_home</span>
+                    Emergency Service
+                </a>
+<button class="px-sm py-xs border-2 border-primary text-primary rounded-lg font-label-md text-label-md hover:bg-primary hover:text-white transition-all">
+                    Request a Quote
+                </button>
+</div>
+</nav>
+</header>
+<main class="pt-[72px]">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden bg-primary-fixed">
+
+<div class="relative z-10 max-w-container-max mx-auto px-gutter grid lg:grid-cols-2 gap-xl items-center py-xl">
+<div class="space-y-md">
+<div class="inline-flex items-center gap-xs bg-secondary-container text-on-secondary-container px-sm py-xs rounded-full font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        24/7 Emergency Services Available
+                    </div>
+<h1 class="font-headline-xl text-headline-xl text-on-background max-w-xl">
+                        Professional Plumbing Solutions <span class="text-primary">You Can Trust</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Expert craftsmanship meets modern technology. From emergency repairs to major commercial installations, Plumus Ltd delivers reliability and precision for every pipe and fixture.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-sm pt-sm">
+<button class="px-xl py-md bg-primary text-on-primary rounded-lg font-label-md text-label-md shadow-lg hover:scale-[1.02] transition-transform flex items-center justify-center gap-sm">
+                            Request a Free Quote
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="flex items-center gap-xs px-sm py-md text-on-surface-variant">
+<span class="material-symbols-outlined text-success">lock</span>
+<span class="font-label-sm text-label-sm">Secure SSL Encrypted Site</span>
+</div>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="absolute -inset-4 bg-white/30 backdrop-blur-md rounded-full animate-pulse"></div>
+<div class="relative aspect-square rounded-full overflow-hidden border-8 border-white shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A professional plumber in a clean blue uniform and branded Plumus Ltd cap, inspecting high-end stainless steel commercial kitchen piping. The scene is brightly lit with natural daylight, emphasizing a clean, modern, and high-performance industrial environment. The plumber holds a digital tablet, showcasing a modern technology stack for diagnostics. The background has soft bokeh of a sleek, contemporary kitchen space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN1CTzxvnIIC6D_cT5R14uM7EdzzvZDZ2fpoYsnO_JbkgYwOKFhAiGBDoaUZiq8BiQZTvgbb4Z5yG9uHY3GfDu6rJ24w9B1XT-mEyB7t0Fqk3SqI4d3LZWH0wbeaYo8cKBgGF9IAViYg5tARWRhotyNe0b6DufknBmhkSK3sHEv9NIBG1wyiBxgs06BjpX0W14hQem9nfRRrBw-P0rooLhhe_ThTFRqwX0s2UWHmGHpeU0xaWZ5eAj2A"/>
+</div>
+<!-- Badges -->
+<div class="absolute top-0 right-0 bg-white p-sm rounded-xl tonal-card-shadow flex items-center gap-sm">
+<div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Certified Pros</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Industry Leading</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section: Bento Grid Pattern -->
+<section class="py-xl max-w-container-max mx-auto px-gutter" id="services">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-xs">Our Expert Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Providing a comprehensive suite of plumbing solutions for every environment, backed by decades of technical expertise.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-md">
+<!-- Residential -->
+<div class="group bg-white rounded-xl p-md tonal-card-shadow border-t-2 border-primary hover:border-secondary transition-all">
+<div class="w-16 h-16 bg-surface-container-low rounded-xl flex items-center justify-center text-primary mb-md group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-headline-md">home</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-sm">Residential Plumbing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                        Comprehensive home services from faucet repairs and drain cleaning to full bathroom remodeling and water heater installations.
+                    </p>
+<ul class="space-y-xs mb-lg">
+<li class="flex items-center gap-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span> Leak Detection
+                        </li>
+<li class="flex items-center gap-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span> Drain Cleaning
+                        </li>
+</ul>
+<a class="inline-flex items-center gap-xs text-primary font-label-md text-label-md hover:gap-sm transition-all" href="#">
+                        Explore Service <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Commercial -->
+<div class="group bg-white rounded-xl p-md tonal-card-shadow border-t-2 border-primary hover:border-secondary transition-all">
+<div class="w-16 h-16 bg-surface-container-low rounded-xl flex items-center justify-center text-primary mb-md group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-headline-md">apartment</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-sm">Commercial Services</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                        High-capacity plumbing solutions for offices, retail, and hospitality. We manage large-scale systems with minimal business disruption.
+                    </p>
+<ul class="space-y-xs mb-lg">
+<li class="flex items-center gap-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span> System Maintenance
+                        </li>
+<li class="flex items-center gap-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span> Backflow Testing
+                        </li>
+</ul>
+<a class="inline-flex items-center gap-xs text-primary font-label-md text-label-md hover:gap-sm transition-all" href="#">
+                        Explore Service <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Emergency -->
+<div class="group bg-on-background rounded-xl p-md tonal-card-shadow border-t-2 border-secondary text-white relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary/20 rounded-full blur-2xl"></div>
+<div class="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center text-white mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-headline-md">emergency</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Emergency Repairs</h3>
+<p class="font-body-md text-body-md opacity-80 mb-md">
+                        Critical response team available 24/7. Burst pipes, overflowing drains, or major leaks—we are on-site within 60 minutes.
+                    </p>
+<ul class="space-y-xs mb-lg">
+<li class="flex items-center gap-xs font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">warning</span> Rapid Response
+                        </li>
+<li class="flex items-center gap-xs font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">warning</span> Weekend/Holiday Call-outs
+                        </li>
+</ul>
+<a class="inline-flex items-center gap-xs text-secondary-fixed font-label-md text-label-md hover:text-white transition-all" href="tel:+1234567890">
+                        Call Dispatch Now <span class="material-symbols-outlined">phone_forwarded</span>
+</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl bg-surface-container-low overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-gutter grid lg:grid-cols-2 gap-xl items-center">
+<div class="relative order-2 lg:order-1">
+<div class="grid grid-cols-2 gap-sm">
+<div class="aspect-[4/5] bg-cover bg-center rounded-xl shadow-lg" data-alt="Close up high-definition photograph of a professional-grade plumbing wrench and modern copper pipe fittings on a dark, textured workbench. The lighting is moody and focused, highlighting the precision and industrial quality of the tools. The aesthetic is professional and hardware-focused, aligned with the Plumus Ltd blue and silver theme." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2Vpg4tqzFQlxatiBhzg6WXJRTtzDNT9HcneStAjjnaDZB-p-LkJxI26uU6fhth6cQeN_QgA_aPt3U67awfWaMGBSnK_xz1csHaKx7a1Hyg5mJ4sZt7KGG6IIn0YA13BVoHjLFbxT8vOoM4HgDTDDKsToETkPLfA-3F5kjjjDeDy08Siom_RXQ38KADXt-bwJOo44XA0BMk49iRVFQTLUcQydykZMbCsFMVAmkcIJlcWP2qi2iYguJQ')"></div>
+<div class="space-y-sm pt-xl">
+<div class="aspect-square bg-cover bg-center rounded-xl shadow-lg" data-alt="A modern diagnostic screen showing a 3D digital infrared scan of a residential plumbing system. The image is sleek and high-tech, showcasing glowing orange heat maps against a cool blue blueprint of a house structure. This represents the modern technology stack for leak detection and efficiency used by Plumus Ltd." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADfpYiQo-_567toui8mmtDlL25s7sb5667qWQqIPhUdzEu3RkZVI1VokjJ3yUpuLEakRH-702j3IqzfF5kIji4-tfyKO9YTor6YGZ_1XEvfCrypFx2WgOUT4wf37RuwtnSjrrKJ9Z6kr1lIDdca-ZEr8itieTCjh0fxighbuk_j16b-JZnnU3h3yXYVhl7ccB1czUiy_U5gLmK9NdagWpRjLhxF0HwJM_Cnqc3gFUUeCNIUdnAVtKs1w')"></div>
+<div class="p-md bg-primary text-on-primary rounded-xl">
+<p class="font-headline-md text-headline-md">15+</p>
+<p class="font-label-sm text-label-sm uppercase tracking-wider opacity-80">Years Excellence</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-md order-1 lg:order-2">
+<h2 class="font-headline-lg text-headline-lg text-on-background">Modern Expertise for the Modern Property</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        At Plumus Ltd, we don't just fix pipes; we optimize systems. We leverage a <span class="font-bold text-primary">Modern Technology Stack for Efficient Service</span>, using infrared leak detection and eco-friendly components to ensure longevity.
+                    </p>
+<div class="grid grid-cols-2 gap-md pt-sm">
+<div class="flex flex-col gap-xs">
+<span class="material-symbols-outlined text-primary text-headline-md">precision_manufacturing</span>
+<h4 class="font-label-md text-label-md font-bold">Precision Tools</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Laser-accurate diagnostics for zero-guesswork repairs.</p>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="material-symbols-outlined text-primary text-headline-md">eco</span>
+<h4 class="font-label-md text-label-md font-bold">Eco-Friendly</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Sustainable solutions that save water and reduce costs.</p>
+</div>
+</div>
+<div class="flex gap-sm items-center pt-md">
+<div class="flex -space-x-4">
+<img class="w-12 h-12 rounded-full border-2 border-white object-cover" data-alt="Headshot of a friendly professional plumber smiling, in a bright studio setting with soft natural light. He is wearing a blue uniform with the Plumus logo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB299OtC6dWrspDVBlPPQ6y1ZKdCriCQBcLvUnDma7LOg2xnDba7MMpVIkQyNQ0i_zpa2gz2YJUAETJitQDcIULmqP8PS3AoqIHCKTtd16rveqkxOIfuNZWVSxjxxcgSCzvQ7wuXeTUviqheztlkitJE8VHt8-0-SJIWmT-sShfZxhlDZBzyQ21vXqr2ifcLDlmjtWvJxBJ1nQkmAXkXnuE5km5IJh2cHyloYvCngY4uSjf6ns-EkNzkA"/>
+<img class="w-12 h-12 rounded-full border-2 border-white object-cover" data-alt="Headshot of a female technician in plumbing attire, focused and professional. High-key lighting, corporate portrait style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcUM6RPZHBNPFwK7QmMe8AuAZBrmcAU2sP6SPToyo84BlLBBuD87UKsoG91ta8NEEFzKSJrBATFKKsRYrsU7UfgySQJ4oZK3Yd1fpCr1IzZHDSNP2RGMyf9kGANIi33Hswp32e59Ye_z4-t0DkQO303b1ydWJSwnL01b9LfLsnwwmV4-Wwj3iFOwlpyPc1oOuaDXHqytshOqTA389MzK52bqhUDKHcad9y9BM_0dURLpuV46styUpjJg"/>
+<img class="w-12 h-12 rounded-full border-2 border-white object-cover" data-alt="Headshot of an experienced lead plumber with graying hair and a confident expression. Cinematic lighting, professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjQXz69UCjFyV7jXGt3Gxd7XAkUXMdhLCaJx9ew5jxp-OkU_2Bf0xwB5QYR-QYSnIQoycB8E76UPYjz1MeBHac9_zyu7S6HHSxEGA1nd3QrNGykRkZYi5UbfF0LwdRtnW2WTQOxf0cigzaexTSEdCvznQPJ45N8VvrqZX0EEP_sClMHhUqdhOK6sS-Q9WaHr03Uiu99ZPaE_0gfcJsuTpeZWAeCCxgVFO927jV6UfY39FbilGOGlgCkw"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Joined by <span class="text-on-surface font-bold">20+ Certified Experts</span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xl max-w-container-max mx-auto px-gutter" id="testimonials">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-background">Customer Testimonials</h2>
+<div class="flex justify-center gap-xs mt-xs text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mt-xs">Rated 4.9/5 based on 2,400+ reviews</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Testimonial 1 -->
+<div class="bg-white p-md rounded-xl tonal-card-shadow flex flex-col gap-sm">
+<div class="flex gap-base text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"Plumus arrived within 45 minutes of our midnight burst pipe call. Professional, efficient, and very transparent about costs. Highly recommended!"</p>
+<div class="flex items-center gap-sm mt-auto pt-sm border-t border-outline-variant/30">
+<div class="w-10 h-10 bg-primary-fixed rounded-full flex items-center justify-center font-bold text-primary">JD</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">James D.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Residential Client</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-md rounded-xl tonal-card-shadow flex flex-col gap-sm">
+<div class="flex gap-base text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"We use Plumus for all our commercial properties. Their modern diagnostic tools have saved us thousands in potential water damage."</p>
+<div class="flex items-center gap-sm mt-auto pt-sm border-t border-outline-variant/30">
+<div class="w-10 h-10 bg-primary-fixed rounded-full flex items-center justify-center font-bold text-primary">SC</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Sarah C.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Property Manager</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="hidden lg:flex bg-white p-md rounded-xl tonal-card-shadow flex flex-col gap-sm">
+<div class="flex gap-base text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"Clean work, polite technicians, and fair pricing. They fixed a leak three other companies couldn't find. 5 stars!"</p>
+<div class="flex items-center gap-sm mt-auto pt-sm border-t border-outline-variant/30">
+<div class="w-10 h-10 bg-primary-fixed rounded-full flex items-center justify-center font-bold text-primary">RM</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Robert M.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Homeowner</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Info -->
+<section class="bg-on-background py-xl" id="contact">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid lg:grid-cols-2 gap-xl">
+<!-- Form -->
+<div class="bg-white p-md rounded-xl">
+<h2 class="font-headline-md text-headline-md text-on-background mb-md">Request a Free Quote</h2>
+<form class="space-y-sm">
+<div class="grid sm:grid-cols-2 gap-sm">
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Service Type</label>
+<select class="w-full bg-surface-container-low border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all">
+<option>Residential Repair</option>
+<option>Commercial Maintenance</option>
+<option>Emergency Service</option>
+<option>Installation Quote</option>
+</select>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Message</label>
+<textarea class="w-full bg-surface-container-low border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="How can we help?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-md rounded-lg font-label-md text-label-md shadow-md hover:bg-primary-container transition-colors">
+                                Submit Request
+                            </button>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant mt-sm">
+<span class="material-symbols-outlined text-[14px]">shield</span> Your data is protected with SSL Encryption.
+                            </p>
+</form>
+</div>
+<!-- Info -->
+<div class="text-white space-y-xl">
+<div class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg">Business Hours</h2>
+<div class="space-y-sm">
+<div class="flex justify-between border-b border-white/10 pb-xs">
+<span class="font-body-md">Mon - Fri</span>
+<span class="font-label-md font-bold">8am - 6pm</span>
+</div>
+<div class="flex justify-between border-b border-white/10 pb-xs">
+<span class="font-body-md">Saturday</span>
+<span class="font-label-md font-bold">9am - 2pm</span>
+</div>
+<div class="flex justify-between items-center text-secondary-container">
+<span class="font-body-md">Emergency Services</span>
+<span class="px-sm py-xs bg-secondary-container/20 rounded-full font-label-md font-bold">24/7 Available</span>
+</div>
+</div>
+</div>
+<div class="space-y-md">
+<h3 class="font-headline-md text-headline-md">Follow Us</h3>
+<div class="flex gap-md">
+<a class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors group" href="#">
+<svg class="w-6 h-6 fill-white" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<svg class="w-6 h-6 fill-white" viewbox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+</a>
+<a class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<svg class="w-6 h-6 fill-white" viewbox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path></svg>
+</a>
+</div>
+</div>
+<div class="flex gap-md pt-md">
+<div class="flex items-center gap-xs text-secondary-fixed">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-label-sm text-label-sm">Certified Professionals</span>
+</div>
+<div class="flex items-center gap-xs text-secondary-fixed">
+<span class="material-symbols-outlined">lock</span>
+<span class="font-label-sm text-label-sm">SSL Secured</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-background text-white pt-xl pb-lg px-gutter">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-md">
+<div class="space-y-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-fixed text-headline-md" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+<span class="font-headline-md text-headline-md font-bold text-primary-fixed">Plumus Ltd</span>
+</div>
+<p class="font-body-md text-body-md opacity-60 max-w-xs">Professional Plumbing Solutions. Expertly engineered, reliably delivered.</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-xl">
+<div class="space-y-sm">
+<h4 class="font-label-md text-label-md font-bold uppercase tracking-wider text-primary-fixed">Services</h4>
+<ul class="space-y-xs font-label-sm text-label-sm opacity-80">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Residential</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Commercial</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Emergency Repair</a></li>
+</ul>
+</div>
+<div class="space-y-sm">
+<h4 class="font-label-md text-label-md font-bold uppercase tracking-wider text-primary-fixed">Company</h4>
+<ul class="space-y-xs font-label-sm text-label-sm opacity-80">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Testimonials</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="space-y-sm">
+<h4 class="font-label-md text-label-md font-bold uppercase tracking-wider text-primary-fixed">Legal</h4>
+<ul class="space-y-xs font-label-sm text-label-sm opacity-80">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto border-t border-white/10 mt-xl pt-md flex flex-col sm:flex-row justify-between items-center gap-sm">
+<p class="font-label-sm text-label-sm opacity-50">© 2024 Plumus Ltd. Professional Plumbing Solutions.</p>
+<div class="flex gap-md">
+<img class="h-6 opacity-30" data-alt="Small grayscale icon of a credit card processor logo, minimal style, for payment trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFC_Qpn8YdG7SY0h0ePBZ5uTlKS3qnYaTBn1RwajhcFl3j2xPfwlxVdlMEduNsZ30E8JYdGQkDEBncPmnigUzj4v9QWNlnD3wC71QCuU5LThe3JivEVH8-snsXtYpMgIgwhNl1E98WM95qQ_u4KlRecAP8cbRoYYXOOq2Bj7VZ6UlXzSg7pFQLX3wIF5nMWXOqHLBKmFRx82_mDel4j7zlaJmgGFjekVYjvOBcKGpsnOzHJ3fX7v_7Ng"/>
+<img class="h-6 opacity-30" data-alt="Small grayscale icon of an industry trade certification seal, minimal style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHhrogWwZc5FQn56C51wjFsUkug0mpX8RVGMG8IjhRXr3bsjIqAj8tZ07moORf5KLXXi8IZMrSQcJ1ojTcm-9aCBNUigdI5_lrDepVANkjHFq8mjlhjKNFj4pCxn5TOR--FsijVnQI6aPof_OhSxI6uIJtN_X1pwowcZWAzaTYTLHaINEhbeyMJIsIu1_aCw_uCNv-YBreiw8ZE1_Ri-GteAKUK3DSIWreUdxVS84v3MEmgVJZq53L8w"/>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll spy for navigation underline
+        window.addEventListener('scroll', () => {
+            const sections = ['services', 'about', 'testimonials'];
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = "";
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const sectionTop = element.offsetTop;
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section;
+                    }
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav-underline', 'text-primary');
+                link.classList.add('text-on-surface-variant');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active-nav-underline', 'text-primary');
+                    link.classList.remove('text-on-surface-variant');
+                }
+            });
+        });
+
+        // Form submission micro-interaction
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Sending...';
+            btn.classList.add('opacity-80', 'pointer-events-none');
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Sent Successfully';
+                btn.classList.replace('bg-primary', 'bg-green-600');
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.replace('bg-green-600', 'bg-primary');
+                    btn.classList.remove('opacity-80', 'pointer-events-none');
+                    e.target.reset();
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body></html>

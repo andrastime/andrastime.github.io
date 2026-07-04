@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MML Plumbing Ltd | Professional Plumbing &amp; Heating Services in London</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "background": "#f7f9fb",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary-container": "#603100",
+                    "on-background": "#191c1e",
+                    "tertiary-fixed": "#ffdbca",
+                    "secondary-container": "#fd8b00",
+                    "surface-container-high": "#e6e8ea",
+                    "on-tertiary-fixed-variant": "#723610",
+                    "surface": "#f7f9fb",
+                    "tertiary": "#381300",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "on-secondary-fixed-variant": "#6e3900",
+                    "on-primary-fixed": "#001b3c",
+                    "primary": "#001e40",
+                    "secondary": "#904d00",
+                    "on-secondary-fixed": "#2f1500",
+                    "primary-fixed": "#d5e3ff",
+                    "inverse-surface": "#2d3133",
+                    "on-primary-container": "#799dd6",
+                    "surface-tint": "#3a5f94",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-tertiary-fixed": "#341100",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "outline": "#737780",
+                    "secondary-fixed": "#ffdcc3",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#d8dadc",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#003366",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#43474f",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "surface-bright": "#f7f9fb",
+                    "on-surface": "#191c1e",
+                    "secondary-fixed-dim": "#ffb77d",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#a7c8ff",
+                    "tertiary-container": "#592300"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "section-gap": "80px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "button": ["Inter"],
+                    "title-sm": ["Montserrat"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "headline-md-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "button": ["16px", {"lineHeight": "1.0", "fontWeight": "600"}],
+                    "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-link-active {
+            border-bottom: 2px solid #fd8b00;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-white">
+<!-- Header / TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant h-20">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-[24px] md:text-display-lg text-primary uppercase tracking-tighter font-extrabold" href="#">
+                    MML Plumbing
+                </a>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-title-sm text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-title-sm text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#about">About Us</a>
+<a class="font-title-sm text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#areas">Areas</a>
+<a class="font-title-sm text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Reviews</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:flex items-center gap-2 text-primary font-bold" href="tel:02012345678">
+<span class="material-symbols-outlined">call</span>
+                    020 1234 5678
+                </a>
+<div class="flex gap-2">
+<button class="bg-primary text-on-primary px-6 py-3 font-button text-button active:scale-95 transition-transform hidden sm:block">
+                        Emergency Call
+                    </button>
+<button class="bg-secondary-container text-on-secondary px-6 py-3 font-button text-button active:scale-95 transition-transform">
+                        Book Now
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional male plumber in a navy blue uniform kneeling on a beige drop cloth while repairing a white radiator in a bright, modern living room. The lighting is warm and natural from a large window in the background, creating a trustworthy and clean atmosphere. High-fidelity photography with sharp focus on the technician's hands and tools, reflecting expert workmanship and professional trade quality." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAY8NvLBHVHRfUOKRxwww4aHEBItAOt7WN9-58qB-gUsV-aXSHgjmeRyMiD5UVxPtL5evxh-mecrIUGAIjttk0HBCxVnN5VvjRRlNb0Vfir5GChpqcPZCszHznjgKzpFyQaRLwMkT1GchWCl2UIpmDcE5werkKTlN1IxApcZbh19PUQShJ-tVXCwc8Bi83urgc-DBnF97nNWpXB3aAc5x_29cFOKkHzN9mYm1SvA5tHoPLPh1cwpswh')"></div>
+<div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl text-on-primary">
+<span class="inline-block bg-secondary-container text-on-secondary px-3 py-1 font-label-caps text-label-caps mb-6">Available 24/7 Across London</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+                        Professional Plumbing &amp; Heating Services in London
+                    </h1>
+<p class="font-body-lg text-body-lg mb-8 opacity-90 max-w-xl">
+                        Reliable, transparent, and expert solutions for your home or business. 24/7 Emergency support available when you need it most.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-secondary-container hover:bg-secondary text-on-secondary px-10 py-4 font-button text-button transition-colors">
+                            Get a Quote
+                        </button>
+<button class="border-2 border-on-primary hover:bg-on-primary hover:text-primary text-on-primary px-10 py-4 font-button text-button transition-all">
+                            Emergency Call
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Style) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="services">
+<div class="mb-12">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary mb-4">Our Professional Services</h2>
+<div class="w-20 h-1.5 bg-secondary-container"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Leak Detection -->
+<div class="md:col-span-8 group relative overflow-hidden bg-white border border-outline-variant h-[400px]">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="A close-up shot of a high-tech digital leak detection device being held by a hand in a blue nitrile glove. The device has a glowing screen displaying data while being held against an industrial silver pipe with a yellow hazard label. The background is a clean, well-lit professional workshop. The image exudes technical precision and modern diagnostic authority, using high-contrast lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1puR1YJZ6wb4TpeTfzt3IN6e5fgbckzATjPpQeqhxgfDYf_YzyKvHXxIET4gqlg2yTVy4j4telWI-ITfUDIVZhF3MSMKKzyrsbunndsRgTs7D8t4qW_x8C9qy6eQdbhM914PPlMs-IO-w3bcK_wSbZ1gjsNwCTEa9WgxFxtiGyfALfn-To5rYo1bOpFtjtcCNYTHJ2BcDH10p_rnAaSJm95d6LYSUGQoVT6nUpZRDO-Y_fvdAJ_57')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-on-primary">
+<h3 class="font-title-sm text-title-sm mb-2">Leak Detection</h3>
+<p class="font-body-md opacity-80 max-w-md">Advanced digital detection for hidden leaks using state-of-the-art diagnostic equipment to prevent structural damage.</p>
+<a class="mt-4 inline-flex items-center gap-2 font-button text-secondary-container group-hover:gap-4 transition-all" href="#">
+                            Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Boiler Services -->
+<div class="md:col-span-4 group bg-primary p-8 flex flex-col justify-between border border-primary">
+<div class="text-on-primary">
+<span class="material-symbols-outlined text-5xl text-secondary-container mb-6">mode_fan</span>
+<h3 class="font-title-sm text-title-sm mb-4">Boiler Services</h3>
+<p class="font-body-md opacity-70">Expert maintenance, repair, and new installations. Gas Safe certified engineers ensuring your home stays warm and efficient.</p>
+</div>
+<ul class="mt-6 space-y-3 text-on-primary/80 font-body-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Annual Servicing</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Emergency Repairs</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> System Upgrades</li>
+</ul>
+</div>
+<!-- General Plumbing -->
+<div class="md:col-span-12 group relative overflow-hidden bg-white border border-outline-variant h-[300px]">
+<div class="flex flex-col md:flex-row h-full">
+<div class="w-full md:w-1/3 p-8 flex flex-col justify-center">
+<h3 class="font-title-sm text-title-sm text-primary mb-2">General Plumbing &amp; Repairs</h3>
+<p class="font-body-md text-on-surface-variant">From dripping taps to complex radiator installations, our expert team handles all domestic plumbing needs with precision.</p>
+<button class="mt-6 self-start text-primary font-bold border-b-2 border-secondary-container">View Full Range</button>
+</div>
+<div class="hidden md:block md:w-2/3 relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A focused male plumber working on a modern silver faucet over a white vessel sink in a minimalist, sun-drenched bathroom. He is using a wrench with technical precision. The marble countertop is clean and bright, reflecting a professional and high-standard service environment. The lighting is soft and airy, emphasizing cleanliness and quality workmanship." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuButolYSaiJRLE4BrA8j8db24ciLKu1D8NPoGu6UIFAjFTn-RAPKDAiMsP6X3_cUIaaRM_s0kd7hiKdHMYiZsadMynAZmspI0o97v-su2evqYxQ0uhnVDxcUtISV14r7jJPRGNITc4diMhd2xaYpmCgHUZn-4tefj65zl474yPt_XRPj9YIUO_Km3W-UgYul5BrKv9vSQRS_Acnj3f4Wk7mGaaoEOLBnxc3BZSFB7BmggAvmsui98Xa')"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="bg-primary py-section-gap" id="about">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-square bg-surface-container-high relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A collage of professional plumbing toolsets, a Gas Safe certification badge, and a friendly, smiling plumber in a navy uniform standing in front of a white service van. The style is professional corporate photography with a clean, high-contrast look. The lighting is bright and even, conveying transparency, reliability, and local expertise in a modern urban setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1KfoaMgEvbrIlHoh8jzvpnQpHxBSkD8XAH76lInYthp0bLTdUEEThe4s3XzlgjhjNYSThH7-bT7SSezrsfzpTevNpql6woBmoav525aydcs2y9n5M1APzP6VHLlNr3dm3ojlmUrJfAK88XH3t2yqji25MFr8zVgyj6kAthNP7draaYEp3KLyEcwwFIg5QtAkvJDX9XH-Y8iS_39_7_RT6-D3xHY2W2hVyrgdVXDVy2ssXoRHw3MAp')"></div>
+<div class="absolute -bottom-6 -right-6 bg-secondary-container p-8 text-on-secondary hidden lg:block">
+<span class="block text-4xl font-bold">10+</span>
+<span class="font-label-caps text-xs uppercase tracking-widest">Years Experience</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 text-on-primary">
+<span class="text-secondary-container font-label-caps tracking-widest mb-4 block uppercase">Our Heritage</span>
+<h2 class="font-headline-md text-headline-md mb-6">London's Trusted Plumbing Experts</h2>
+<p class="font-body-lg text-body-lg opacity-80 mb-6">
+                        MML Plumbing Ltd has been providing professional, certified plumbing and heating services across London for over 10 years. We pride ourselves on transparent pricing and high-quality workmanship that stands the test of time.
+                    </p>
+<p class="font-body-md opacity-70 mb-8">
+                        Our team of Gas Safe registered engineers is committed to providing a clean, efficient service with minimal disruption to your daily routine. Whether it's a routine check or a midnight emergency, we are your local partners in home maintenance.
+                    </p>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container">verified</span>
+<span class="font-body-md font-semibold">Fully Insured</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container">engineering</span>
+<span class="font-body-md font-semibold">Gas Safe Registered</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container">schedule</span>
+<span class="font-body-md font-semibold">24/7 Response</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container">payments</span>
+<span class="font-body-md font-semibold">Fair Pricing</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Areas -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="areas">
+<div class="flex flex-col lg:flex-row gap-16 items-start">
+<div class="w-full lg:w-1/3">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Areas We Serve</h2>
+<p class="font-body-md text-on-surface-variant mb-8">
+                        We provide rapid response services throughout Greater London. Our localized teams ensure we can reach you quickly in case of emergencies.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 p-4 bg-white border border-outline-variant hover:border-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-body-md font-bold">North London</span>
+</li>
+<li class="flex items-center gap-4 p-4 bg-white border border-outline-variant hover:border-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-body-md font-bold">Central London</span>
+</li>
+<li class="flex items-center gap-4 p-4 bg-white border border-outline-variant hover:border-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-body-md font-bold">West London</span>
+</li>
+</ul>
+</div>
+<div class="w-full lg:w-2/3 h-[500px] bg-surface-container-high overflow-hidden border border-outline-variant relative">
+<!-- Map Placeholder -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+<div class="bg-white/90 p-4 shadow-xl border border-outline-variant">
+<span class="text-primary font-bold">Service Coverage Map</span>
+</div>
+</div>
+<img class="w-full h-full object-cover grayscale brightness-110 opacity-60" data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB82MZKsbXloNzqxpOnCoTfVt0p0TrDipEizuIMUMHTzqDJFp40U5r6g3T2v-Ir6T6bYQaRP_C4vrcNZDqwVr8wHuasWAUFI1c7UXNjlc7zjiZ9Xf5OTnA0Mvqh5Pfz-tV4aXPYX84JVh3QGSZBgTo-u0VF4WnXYp4UpeWVRCib_61ZaI0APcuuodifITRhyjaB1j1MMQxLbeMV3yBmKUZd66oQ1wl5tzIeZJO-b9g7w8DrvZQoqPQY"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+</div>
+</section>
+<!-- Call to Action Banner -->
+<section class="bg-secondary-container py-16 text-on-secondary">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+<div>
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md mb-2">Got a Plumbing Emergency?</h2>
+<p class="font-body-lg text-body-lg">We're on standby 24/7. Call us for immediate professional help.</p>
+</div>
+<div class="flex items-center gap-4">
+<a class="bg-primary text-on-primary px-10 py-5 font-button text-xl flex items-center gap-4 shadow-lg hover:scale-105 transition-transform" href="tel:02012345678">
+<span class="material-symbols-outlined">call</span>
+                        020 1234 5678
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary w-full">
+<div class="flex flex-col md:flex-row justify-between items-start py-section-gap px-margin-mobile md:px-margin-desktop gap-gutter max-w-container-max mx-auto">
+<div class="max-w-xs">
+<div class="font-display-lg text-[24px] text-on-primary uppercase tracking-tighter font-extrabold mb-6">MML Plumbing</div>
+<p class="font-body-md opacity-70 mb-6">Professional, reliable plumbing and heating solutions for London homes and businesses.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-on-primary/20 flex items-center justify-center hover:bg-on-primary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-primary/20 flex items-center justify-center hover:bg-on-primary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-primary/20 flex items-center justify-center hover:bg-on-primary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div>
+<h4 class="font-title-sm text-sm uppercase tracking-widest text-secondary-container mb-6">Services</h4>
+<ul class="space-y-3 font-body-md opacity-80">
+<li><a class="hover:text-secondary-container transition-colors" href="#">Leak Detection</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Boiler Repair</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Radiator Care</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Gas Certificates</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-title-sm text-sm uppercase tracking-widest text-secondary-container mb-6">Contact</h4>
+<ul class="space-y-3 font-body-md opacity-80">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">mail</span> info@mmlplumbing.co.uk</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">location_on</span> London, United Kingdom</li>
+<li class="mt-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 border border-on-primary/20 rounded-lg opacity-60">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="text-xs font-bold uppercase tracking-tighter">SSL Secured</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="border-t border-on-primary/10 px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<p class="font-body-md text-sm opacity-60">© 2024 MML Plumbing Ltd. All rights reserved. Professional Plumbing Services across London.</p>
+<div class="flex gap-8 font-body-md text-sm opacity-60">
+<a class="hover:underline" href="#">Terms of Service</a>
+<a class="hover:underline" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple intersection observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(section);
+        });
+
+        // Sticky Nav logic
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body></html>

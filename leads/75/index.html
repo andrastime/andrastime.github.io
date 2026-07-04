@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Docklands Plumbing | Professional Plumbing Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#005049",
+                    "on-tertiary-fixed": "#370e00",
+                    "surface-variant": "#d3e4fe",
+                    "on-background": "#0b1c30",
+                    "tertiary-fixed": "#ffdbce",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#c6c6cd",
+                    "primary": "#000000",
+                    "tertiary-container": "#370e00",
+                    "background": "#f8f9ff",
+                    "on-secondary-fixed": "#00201d",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#000000",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#f8f9ff",
+                    "inverse-surface": "#213145",
+                    "outline": "#76777d",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "on-surface": "#0b1c30",
+                    "secondary-container": "#86f2e4",
+                    "secondary-fixed": "#89f5e7",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#565e74",
+                    "primary-fixed": "#dae2fd",
+                    "surface-container-highest": "#d3e4fe",
+                    "surface": "#f8f9ff",
+                    "on-surface-variant": "#45464d",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-tertiary-container": "#e45405",
+                    "surface-container-low": "#eff4ff",
+                    "surface-container": "#e5eeff",
+                    "on-primary-fixed": "#131b2e",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#dce9ff",
+                    "tertiary-fixed-dim": "#ffb599",
+                    "primary-container": "#131b2e",
+                    "on-primary-container": "#7c839b",
+                    "secondary": "#006a61",
+                    "secondary-fixed-dim": "#6bd8cb",
+                    "on-secondary-container": "#006f66",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-tertiary-fixed-variant": "#7f2b00",
+                    "inverse-primary": "#bec6e0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "headline-xl": ["Montserrat"],
+                    "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .btn-offset-hover {
+            position: relative;
+            transition: all 0.2s ease;
+        }
+        .btn-offset-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 0 0 #005049;
+        }
+        .btn-emergency:hover {
+            box-shadow: 0 4px 0 0 #7f2b00;
+        }
+        .industrial-plate {
+            background: #ffffff;
+            border: 1px solid #c6c6cd;
+            transition: all 0.3s ease;
+        }
+        .industrial-plate:hover {
+            border-color: #006a61;
+        }
+        .status-chip {
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-background border-b-2 border-outline-variant">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center gap-4">
+<img alt="Docklands Plumbing Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS4p0syn8FlaYO-vb2tau_m4WJP07eZZDSzoJkBzPF57ZiRXtKFvc9yFEIW5vHGN3lXlmYGW51QlE9t2ocSH-MNMnp-wF8VOpsb2oLDHoDeuk2Pp4ib48k40LXNnfHfl2wEwbMmQssCo6T8v3eBmG-fr1FjkrsLBA8t4h8KaC134s07sunO_JEbYWegeVYyAk-EafLNKhaOlMnJrxnUrhd082mRFg1KJCz1oi1oUI2k24j73DgQM1KuQ"/>
+<span class="font-headline-md text-headline-md font-bold text-primary hidden md:block">Docklands Plumbing</span>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface font-medium hover:text-secondary transition-colors duration-200" href="#services">Services</a>
+<a class="text-on-surface font-medium hover:text-secondary transition-colors duration-200" href="#about">About Us</a>
+<a class="text-on-surface font-medium hover:text-secondary transition-colors duration-200" href="#testimonials">Testimonials</a>
+<a class="text-on-surface font-medium hover:text-secondary transition-colors duration-200" href="#blog">Blog</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="bg-on-tertiary-container text-on-tertiary font-label-bold text-label-bold px-6 py-3 btn-offset-hover btn-emergency" href="tel:0201234567">
+                    Emergency Call
+                </a>
+<button class="md:hidden flex items-center text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-surface-container-low">
+<div class="absolute inset-0 z-0 opacity-10">
+
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-gutter relative z-10 py-12 md:py-24">
+<div class="flex flex-col justify-center space-y-8">
+<div class="space-y-4">
+<span class="status-chip bg-secondary-container text-on-secondary-container w-fit rounded-lg">Available 24/7 Across Docklands</span>
+<h1 class="font-headline-xl text-headline-xl text-primary max-w-xl">
+                            Reliable Plumbing Solutions in <span class="text-secondary">Docklands</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                            From emergency leaks to premium bathroom installations, our master plumbers deliver technical excellence and guaranteed results for London's most demanding environments.
+                        </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary text-on-secondary font-label-bold text-label-bold px-8 py-4 text-center btn-offset-hover shadow-lg" href="#contact">
+                            Book Now
+                        </a>
+<a class="bg-primary-container text-on-primary-container font-label-bold text-label-bold px-8 py-4 text-center border-2 border-primary-container hover:bg-transparent hover:text-primary transition-all" href="tel:0201234567">
+                            020 7123 4567
+                        </a>
+</div>
+<div class="flex items-center gap-6 pt-4 border-t border-outline-variant">
+<div class="flex -space-x-3">
+<div class="w-12 h-12 rounded-full border-2 border-background bg-surface-dim overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a professional male plumber with a friendly smile, wearing a clean navy blue technician uniform with a small logo, high-key studio lighting, modern professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuofyK421uZ3Pe2-1tTbV1s_YwXDuCR4aVSE3B56sD4qpe18kq5NTPg8IMbF9zjIMsaBFEIXKyg5zq_Nolnjixf83rCTUHFCtTBeM-uGb7nn3yXO4Ul9jFbL5Fjg8bEpW8I7GfqGP9-k7hqe2D7yRRSZljtpw87CDkAr7vq2GFwzxk5rmXRLAahWvjUbYfLL7EdXGl1-aSlXlmaVuxWtjQWaWtwdN2PF_1AR50nLu491GVYDdez3_Izg"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-background bg-surface-dim overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a skilled female plumbing engineer in a professional work environment, bright natural lighting, focused and trustworthy expression, clean corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZqV_tksCBArHaKtNgP8TB-R7UJ6q098MXS7gDME58Gb1F16Ba9cD8emVw8o6YCCXFCTxkTuFiA78DdWo3FtXSXUA-nKFFpiTcVO3HMrY098LH4bPSk-Yv5P9aEjXVn7KkP3HavIM8vf8SeFQQBhPXBl-Ci-iUBRYF-h-RRCD24Q0O-Lz9TVawnLDpdMmin9jcfKDTrcd0DaTGU27-v6dkHbG1cqSH0ylPDH1lbQwtg3LeV1dd7vDXEQ"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-background bg-secondary flex items-center justify-center text-white text-xs font-bold">
+                                +15
+                            </div>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-primary">Certified Expert Team</p>
+<p class="text-label-sm text-on-surface-variant">Over 2,500 projects completed</p>
+</div>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="absolute -inset-4 bg-secondary/10 rounded-xl transform rotate-3"></div>
+<div class="relative industrial-plate h-[500px] w-full overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A high-end modern bathroom scene with polished chrome fixtures and technical plumbing details. The lighting is crisp and cool-toned, emphasizing the metallic textures and clean ceramic surfaces. Industrial modern aesthetic with a focus on precision and high-quality craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXCsFdJ6LZOrWAH_6dm09-5g1oMs3z8OwaMbs9bV6NzX_HKCnRXTGzx3w9QZ-qtmHIO6x6ez8HV5RMrgDepM-6n_vBIHE2lpteDp4fCiGVJ9OWE-pFA3xuN0_nHL_Fp18tqHcpFdhl7y-SOVdZ23tlTerOcsdTwfyzZ_t1C1dJuaCgrdv3kSVBYucUSu4-ISc25c50fLtuc2TtXGdNsrbo6ceICKh9Vk9g9bSquLdb7TKFAxnd6inT4Q"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-surface p-6 shadow-xl border border-outline-variant max-w-xs">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span class="font-label-bold text-label-bold">SafeContractor Approved</span>
+</div>
+<p class="text-label-sm text-on-surface-variant">Fully insured and Gas Safe registered engineers serving the Docklands community for over 15 years.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-white" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 text-left max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Specialist Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We combine traditional craftsmanship with modern technology to solve even the most complex plumbing challenges.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service Card 1 -->
+<div class="industrial-plate p-8 flex flex-col group">
+<div class="w-16 h-16 bg-surface-container-low flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="water_drop">water_drop</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Drain Unblocking</h3>
+<p class="text-on-surface-variant mb-8 flex-grow">Advanced high-pressure jetting and CCTV surveys to identify and clear the most stubborn blockages quickly.</p>
+<a class="flex items-center gap-2 text-secondary font-label-bold hover:gap-4 transition-all" href="#">
+                            Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Service Card 2 -->
+<div class="industrial-plate p-8 flex flex-col group">
+<div class="w-16 h-16 bg-surface-container-low flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="mode_fan">mode_fan</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Boiler Repair</h3>
+<p class="text-on-surface-variant mb-8 flex-grow">Gas Safe engineers specializing in all major boiler brands. Efficient diagnostics and genuine manufacturer parts.</p>
+<a class="flex items-center gap-2 text-secondary font-label-bold hover:gap-4 transition-all" href="#">
+                            Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Service Card 3 -->
+<div class="industrial-plate p-8 flex flex-col group">
+<div class="w-16 h-16 bg-surface-container-low flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="bathroom">bathroom</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Bathroom Installation</h3>
+<p class="text-on-surface-variant mb-8 flex-grow">Full bespoke design and installation services. We manage everything from plumbing to tiling for a seamless finish.</p>
+<a class="flex items-center gap-2 text-secondary font-label-bold hover:gap-4 transition-all" href="#">
+                            Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="industrial-plate h-64 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional plumbing workshop with organized tools on a pegboard. High-quality wrenches, pipe cutters, and technical measuring devices arranged neatly. Industrial workspace aesthetic, clean, focused, and professional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfJU7_eR5lkJBDrUTn6u_8x0r8z8X1joHB8wQapbZXE97ougliFK9h3t97nil3WI6tzSHopo5AGnGzbXDTHnn9e9q9jb1tU40sWtOGdkRHs-UaGRoN4vmfG9gq160gEQ4vUPBFFZNTHpft_bUcntJdPFpMoOQ3z76YZV24ajGqcnVz4iiVaF2RUTZ2V1yr0qfJa_7IugPrtQG3B9muksksItAC6aBQHlMjI2CLlsWFVmBYDQXEsUJdKA"/>
+</div>
+<div class="industrial-plate h-64 mt-8 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A plumbing engineer working on a complex boiler system with copper pipes. Visible technical expertise, focused action, and high-quality metal fittings. Cinematic lighting highlighting the technical details of the piping." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgwFNXpWe293npJcuSQgqLaa5DKJdd885XT-dQ8rhf6DJPFOyX5wo5aZFjrdRpn7cVa_LdnKh39ExzKxWiIzGPrBcGWPpbkdVQAhYfjl1KCj5B19J6ZadFzJdnBgO345E491RjhfAyZ8iIrk-rVomAsLIqD4wt76vfj8E-ndhT9IZfFaaxDc4cfVhUz6KyD5HLIgCQrUHMNnifbJgibaZtCU9XcCxfQ54HaXyGXw_Lw5q0JkU2u5BSmA"/>
+</div>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-secondary text-white p-8 rounded-full w-40 h-40 flex flex-col items-center justify-center border-4 border-white shadow-xl">
+<span class="text-4xl font-bold">15+</span>
+<span class="text-xs uppercase font-bold tracking-widest text-center">Years in Docklands</span>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-primary">A Legacy of Technical Precision</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Founded in the heart of London's financial district, Docklands Plumbing Services started with a simple mission: to provide the highest standard of technical plumbing with the transparency homeowners deserve.
+                    </p>
+<p class="text-on-surface-variant">
+                        Our team consists of master plumbers who treat every leak like a structural emergency and every installation like a work of art. We don't just fix pipes; we provide peace of mind through rigorous testing and an obsession with detail.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="font-label-bold text-label-bold block">Certified Professionals</span>
+<span class="text-label-sm text-on-surface-variant">All staff are Gas Safe Registered and heavily vetted.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="font-label-bold text-label-bold block">12-Month Guarantee</span>
+<span class="text-label-sm text-on-surface-variant">We stand by our work with a full year workmanship warranty.</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-white" id="testimonials">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary">Trusted by Locals</h2>
+<div class="flex justify-center mt-4">
+<div class="flex text-on-tertiary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="ml-2 font-bold">4.9/5 on Google</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Review 1 -->
+<div class="bg-surface-container-low p-8 border border-outline-variant relative">
+<span class="absolute top-4 right-4 material-symbols-outlined text-surface-dim text-6xl opacity-30">format_quote</span>
+<div class="flex text-on-tertiary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-6 italic">"Absolutely professional. They handled a burst pipe in the middle of the night with incredible speed. Highly recommended for any emergency."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary-container text-white rounded-full flex items-center justify-center font-bold">JS</div>
+<div>
+<p class="font-label-bold text-label-bold">James Sterling</p>
+<p class="text-label-sm text-on-surface-variant">Canary Wharf Resident</p>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-low p-8 border border-outline-variant relative">
+<span class="absolute top-4 right-4 material-symbols-outlined text-surface-dim text-6xl opacity-30">format_quote</span>
+<div class="flex text-on-tertiary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-6 italic">"Transformed our outdated bathroom into a modern spa. The attention to detail on the tiling and fixtures is second to none. Technical masters."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary-container text-white rounded-full flex items-center justify-center font-bold">EM</div>
+<div>
+<p class="font-label-bold text-label-bold">Elena Martinez</p>
+<p class="text-label-sm text-on-surface-variant">Property Manager</p>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-low p-8 border border-outline-variant relative">
+<span class="absolute top-4 right-4 material-symbols-outlined text-surface-dim text-6xl opacity-30">format_quote</span>
+<div class="flex text-on-tertiary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-6 italic">"Honest pricing and excellent communication. They explained exactly what was wrong with my boiler and fixed it the same day."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary-container text-white rounded-full flex items-center justify-center font-bold">DT</div>
+<div>
+<p class="font-label-bold text-label-bold">David Thompson</p>
+<p class="text-label-sm text-on-surface-variant">Homeowner</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Section -->
+<section class="py-24 bg-surface-container-high" id="blog">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Plumbing Insights</h2>
+<p class="text-on-surface-variant mt-2">Expert tips to maintain your home's systems.</p>
+</div>
+<a class="hidden md:flex items-center gap-2 font-label-bold text-secondary hover:underline" href="#">
+                        View All Articles <span class="material-symbols-outlined">north_east</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<article class="industrial-plate overflow-hidden group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up of a modern heating system's control panel and copper pipes in a clean utility room. Soft natural light, high-end industrial design, professional maintenance context. Crisp technical details and clean aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLmHFn8ymiPS6r-4OtawQ69Q4Q6V7JL2vn1n1As9UAFbWGUpBrCBeAwKhd2slb51ZKGjQx4_9UPLhKOqr7hyiu07UWo8_JWo-PSRwZCENDxC-E_PZC0wiBrP9LFAvacOhRcLbjv9iczsAyIMnlWwpybQd70h7djEEKW-VBrLnez3r3N9Je1t7BCBsg8hMnaKYi7XOKBSBCNeeWqoxUu2NMT6xkwkGtYVY32jy9oSLs35lgZe3df5kvxA"/>
+</div>
+<div class="p-8">
+<span class="text-label-sm text-secondary font-bold uppercase tracking-wider">Maintenance</span>
+<h3 class="font-headline-md text-headline-md mt-2 mb-4 group-hover:text-secondary transition-colors">Winter Boiler Maintenance Tips</h3>
+<p class="text-on-surface-variant mb-6">Avoid costly emergency call-outs this winter with our comprehensive guide to pre-season boiler checks.</p>
+<a class="font-label-bold text-primary flex items-center gap-2" href="#">Read More <span class="material-symbols-outlined">trending_flat</span></a>
+</div>
+</article>
+<article class="industrial-plate overflow-hidden group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-end designer plumbing fixtures in a luxury bathroom setting. Brushed gold faucets and white marble surfaces. Elegant lighting, sophisticated interior design aesthetic, focus on premium quality and style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHdNkZLNVE-m_V7Kn4M7SGrAdm_88oXj8h3axV08QTRIu5YA7R8HwZ4-9yCFLoXaNCpM1ELFCxGRSwaS062a173A-QmUSMuDCNXC0LsMdRgSNO4xmi11hT_1IQZgsIiHDZWcMXhOtj8kVrNC1idtmhIArE2bNkoGYPXOaTihxk4KkZI1r8oNtZ8-DH4VF2XFd3lcDKI0l06DzlkpXCGLhijnTw1EEYWiHqxyXFldqaUuArK0Q1t7AFNA"/>
+</div>
+<div class="p-8">
+<span class="text-label-sm text-secondary font-bold uppercase tracking-wider">Design</span>
+<h3 class="font-headline-md text-headline-md mt-2 mb-4 group-hover:text-secondary transition-colors">Top 5 Luxury Bathroom Trends 2024</h3>
+<p class="text-on-surface-variant mb-6">Explore the latest in sustainable luxury, from smart water-saving fixtures to biophilic design elements.</p>
+<a class="font-label-bold text-primary flex items-center gap-2" href="#">Read More <span class="material-symbols-outlined">trending_flat</span></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-primary text-white relative overflow-hidden" id="contact">
+
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
+<div class="space-y-12">
+<div class="space-y-6">
+<h2 class="font-headline-lg text-headline-lg">Get an Instant Quote</h2>
+<p class="text-on-primary-container text-body-lg">Have an emergency or planning a project? Fill out the form and our technical team will reach out within 60 minutes.</p>
+</div>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-secondary flex items-center justify-center">
+<span class="material-symbols-outlined">phone_in_talk</span>
+</div>
+<div>
+<p class="text-label-sm text-on-primary-container uppercase">24/7 Hotline</p>
+<p class="text-headline-md font-bold">020 7123 4567</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-secondary flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-label-sm text-on-primary-container uppercase">Email Us</p>
+<p class="text-headline-md font-bold">support@docklandsplumbing.com</p>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-on-primary-container/20 flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-400">verified_user</span>
+<span class="text-label-sm">SSL Secure Payment</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span class="text-label-sm">Gas Safe Registered</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 md:p-12 text-on-background industrial-plate">
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold uppercase">Your Name</label>
+<input class="w-full border-2 border-outline focus:border-secondary focus:ring-0 px-4 py-3 bg-white" placeholder="John Doe" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold uppercase">Phone Number</label>
+<input class="w-full border-2 border-outline focus:border-secondary focus:ring-0 px-4 py-3 bg-white" placeholder="07123 456 789" required="" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold uppercase">Service Required</label>
+<select class="w-full border-2 border-outline focus:border-secondary focus:ring-0 px-4 py-3 bg-white">
+<option>Emergency Repair</option>
+<option>Boiler Service</option>
+<option>Drain Unblocking</option>
+<option>Bathroom Renovation</option>
+<option>Other</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold uppercase">Message / Detail</label>
+<textarea class="w-full border-2 border-outline focus:border-secondary focus:ring-0 px-4 py-3 bg-white" placeholder="Tell us about the issue..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-label-bold text-label-bold py-5 btn-offset-hover uppercase tracking-widest" type="submit">
+                            Send Request
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container text-on-primary-container py-16">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="flex items-center gap-3">
+<img alt="Logo" class="h-8 w-auto invert grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS4p0syn8FlaYO-vb2tau_m4WJP07eZZDSzoJkBzPF57ZiRXtKFvc9yFEIW5vHGN3lXlmYGW51QlE9t2ocSH-MNMnp-wF8VOpsb2oLDHoDeuk2Pp4ib48k40LXNnfHfl2wEwbMmQssCo6T8v3eBmG-fr1FjkrsLBA8t4h8KaC134s07sunO_JEbYWegeVYyAk-EafLNKhaOlMnJrxnUrhd082mRFg1KJCz1oi1oUI2k24j73DgQM1KuQ"/>
+<span class="font-headline-md text-headline-md font-bold text-white">Docklands</span>
+</div>
+<p class="text-label-sm">Professional plumbing and heating services for London's Docklands and surrounding areas. Available 24/7 for all emergencies.</p>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline-md text-headline-md text-white">Services</h4>
+<ul class="space-y-3">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Emergency Services</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Boiler Repair</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Drain Unblocking</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Bathroom Installation</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline-md text-headline-md text-white">Company</h4>
+<ul class="space-y-3">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Our Team</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Testimonials</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline-md text-headline-md text-white">Legal</h4>
+<ul class="space-y-3">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Gas Safe Rules</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-16 pt-8 border-t border-on-primary-container/10 flex flex-col md:row justify-between items-center gap-4 text-label-sm">
+<p>© 2024 Docklands Plumbing Services. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Twitter</a>
+<a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-white transition-colors" href="#">Facebook</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll spy for navigation active states
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-secondary', 'font-bold', 'border-b-2', 'border-secondary', 'pb-1');
+                link.classList.add('text-on-surface', 'font-medium');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.remove('text-on-surface', 'font-medium');
+                    link.classList.add('text-secondary', 'font-bold', 'border-b-2', 'border-secondary', 'pb-1');
+                }
+            });
+        });
+    </script>
+</body></html>

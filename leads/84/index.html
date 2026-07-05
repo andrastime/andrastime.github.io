@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Emergency Heat &amp; Flow | 24/7 Professional Support</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#8690ee",
+                    "secondary": "#b6171e",
+                    "on-primary-fixed-variant": "#343d96",
+                    "primary-container": "#1a237e",
+                    "on-secondary-container": "#fffbff",
+                    "on-error-container": "#93000a",
+                    "primary": "#000666",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#ffdad6",
+                    "on-background": "#1a1c1c",
+                    "surface": "#f9f9f9",
+                    "on-tertiary-container": "#6b95f3",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-container-highest": "#e2e2e2",
+                    "inverse-primary": "#bdc2ff",
+                    "on-tertiary-fixed-variant": "#00429c",
+                    "on-surface-variant": "#454652",
+                    "surface-container-low": "#f3f3f3",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f9f9f9",
+                    "outline": "#767683",
+                    "surface-container": "#eeeeee",
+                    "secondary-container": "#da3433",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#4c56af",
+                    "tertiary-fixed-dim": "#b0c6ff",
+                    "secondary-fixed-dim": "#ffb3ac",
+                    "on-surface": "#1a1c1c",
+                    "on-primary-fixed": "#000767",
+                    "on-tertiary-fixed": "#001945",
+                    "tertiary-fixed": "#d9e2ff",
+                    "outline-variant": "#c6c5d4",
+                    "inverse-surface": "#2f3131",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#e0e0ff",
+                    "surface-variant": "#e2e2e2",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#410003",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-dim": "#dadada",
+                    "tertiary": "#001944",
+                    "primary-fixed-dim": "#bdc2ff",
+                    "on-secondary-fixed-variant": "#930010",
+                    "surface-bright": "#f9f9f9",
+                    "tertiary-container": "#002c6e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding-mobile": "40px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "container-max": "1200px",
+                    "section-padding-desktop": "80px"
+            },
+            "fontFamily": {
+                    "headline-xl-mobile": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "label-md": ["Inter"],
+                    "headline-xl": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 6, 102, 0.85), rgba(0, 6, 102, 0.6)), url('placeholder');
+        }
+        .nav-scrolled {
+            @apply shadow-md bg-surface/95 backdrop-blur-sm;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary selection:text-white">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant shadow-sm transition-all duration-300" id="top-nav">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="home_repair_service">home_repair_service</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">Emergency Heat &amp; Flow</span>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#about">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#testimonials">Testimonials</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#contact">Contact</a>
+<a class="flex items-center gap-2 bg-secondary text-on-secondary px-6 py-2 rounded-lg font-bold hover:bg-secondary-container transition-all active:scale-95" href="tel:08001234567">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+                    0800 123 4567
+                </a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+</button>
+</div>
+<!-- Mobile Dropdown -->
+<div class="hidden md:hidden bg-surface border-t border-outline-variant px-gutter py-4 space-y-4" id="mobile-menu">
+<a class="block font-label-md text-label-md py-2" href="#services">Services</a>
+<a class="block font-label-md text-label-md py-2" href="#about">About</a>
+<a class="block font-label-md text-label-md py-2" href="#contact">Contact</a>
+<a class="flex items-center justify-center gap-2 bg-secondary text-on-secondary py-3 rounded-lg font-bold" href="tel:08001234567">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+                0800 123 4567
+            </a>
+</div>
+</nav>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A high-resolution, professional photograph of a modern residential boiler system in a clean, brightly lit utility room. The image conveys technical excellence and reliability through sharp focus and a clean, organized environment. Soft cinematic lighting highlights the metallic surfaces of the pipes and the digital display of the boiler. The color palette is dominated by cool blues and crisp whites, reflecting a professional and authoritative brand identity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDoom9lXXl9zNDFdQNQAVekey6_fo688gI8NT3-Oy8IqPhkGcbhgvCC2odDVxEgmzt8ebajcyhROG4aZTtrAmgOD_BKAfXuzoSRfGzON_BAvce25cMQsKkSASROYCCfNUThlgm8heEeto3ZUoc5KA3ALE7DS3FBzbbDtXD-J7Hw68R-hX9CAn6qAAQM812qExwSJCkiEZTbdPmMwSkjh7-DDypLg4EVkEXEc-0ws0cpQFMh1rNhBGj2')"></div>
+<div class="absolute inset-0 bg-primary/70 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary to-transparent opacity-90"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-gutter w-full grid md:grid-cols-2 gap-12 items-center">
+<div class="text-on-primary">
+<div class="inline-flex items-center gap-2 bg-secondary px-4 py-1 rounded-full mb-6 animate-pulse">
+<span class="w-2 h-2 bg-white rounded-full"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Available 24/7 For Emergencies</span>
+</div>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6 leading-tight">
+                        Rapid Response Emergency Heating &amp; Plumbing
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-10 max-w-xl">
+                        Expert support for your home. We arrive within 60 minutes to handle burst pipes, boiler failures, and heating outages. Professional, licensed, and reliable.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-3 hover:shadow-xl hover:-translate-y-1 transition-all active:scale-95" href="tel:08001234567">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+                            Request Emergency Help
+                        </a>
+<a class="border-2 border-on-primary text-on-primary px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center hover:bg-on-primary hover:text-primary transition-all" href="#services">
+                            View Services
+                        </a>
+</div>
+</div>
+<div class="hidden md:block">
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-2xl">
+<h3 class="font-headline-md text-headline-md mb-4">Book a Non-Emergency Visit</h3>
+<form class="space-y-4">
+<input class="w-full bg-white/5 border border-white/20 rounded-lg p-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-secondary outline-none" placeholder="Your Name" type="text"/>
+<input class="w-full bg-white/5 border border-white/20 rounded-lg p-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-secondary outline-none" placeholder="Email Address" type="email"/>
+<select class="w-full bg-white/5 border border-white/20 rounded-lg p-3 text-white focus:ring-2 focus:ring-secondary outline-none">
+<option class="text-primary">Service Type</option>
+<option class="text-primary">Boiler Repair</option>
+<option class="text-primary">Plumbing Issue</option>
+<option class="text-primary">Heating Maintenance</option>
+</select>
+<button class="w-full bg-on-primary text-primary font-bold py-3 rounded-lg hover:bg-secondary hover:text-white transition-colors">Submit Request</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="bg-surface-container py-12 border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-wrap justify-center md:justify-between items-center gap-12 grayscale opacity-70 hover:grayscale-0 transition-all duration-500">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl" data-icon="verified">verified</span>
+<span class="font-bold text-lg">Gas Safe Registered</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl" data-icon="engineering">engineering</span>
+<span class="font-bold text-lg">Licensed Plumbers</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl" data-icon="shutter_speed">shutter_speed</span>
+<span class="font-bold text-lg">Fast Response Guaranteed</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl" data-icon="stars">stars</span>
+<span class="font-bold text-lg">5-Star Rated Service</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop" id="services">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Emergency Services</h2>
+<div class="h-1.5 w-24 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-3 gap- base md:gap-8">
+<!-- Service 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 rounded-xl shadow-sm hover:shadow-xl hover:border-primary transition-all group">
+<div class="w-16 h-16 bg-primary-fixed rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="water_drop">water_drop</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Emergency Plumbing</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                            From burst pipes and severe leaks to blocked drains, our licensed plumbers handle any emergency with precision and speed to prevent property damage.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#contact">
+                            Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 rounded-xl shadow-sm hover:shadow-xl hover:border-primary transition-all group">
+<div class="w-16 h-16 bg-primary-fixed rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="heat_pump">heat_pump</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Heating Solutions</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                            Restore comfort to your home. We troubleshoot radiator issues, thermostat malfunctions, and central heating system failures 24/7.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#contact">
+                            Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 rounded-xl shadow-sm hover:shadow-xl hover:border-primary transition-all group">
+<div class="w-16 h-16 bg-primary-fixed rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="nest_eco_leaf">nest_eco_leaf</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Boiler Repair</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                            Certified Gas Safe engineers providing immediate repairs for all major boiler brands. We diagnose faults quickly to get your hot water back.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#contact">
+                            Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="bg-primary text-on-primary py-section-padding-mobile md:py-section-padding-desktop" id="about">
+<div class="max-w-container-max mx-auto px-gutter grid md:grid-cols-2 gap-16 items-center">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl h-[450px]">
+<div class="w-full h-full bg-cover bg-center" data-alt="A dedicated plumbing and heating specialist wearing a professional dark blue uniform with a visible logo, working diligently on a complex copper pipe installation. The setting is a professional residential workspace with bright, even lighting that emphasizes the technician's focus and technical expertise. The image uses a shallow depth of field to keep the focus on the technician's hands and tools, creating a sense of professional authority and trust." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApBakVVjxWzIEk7tefZG-1ghLbKwOQlXDxEvgUtTwsL24vApwUNO4BE4eUaNQ8u3s5UVrnKemjNRXDMc535WuP15uczmTPjxM4difuaS60HKHrR46fRoyg4uSwOqNbymddYM5O9xoTuJdgohef9WMfuSbpsLR8NSAIWKaj9DhtblLlRGgEEzFpygAxhuEG23YeMPT0G0i1zenTLJNNenNJbfczR6zBj08D5cymlbVeKNe1vLSQkI2b')"></div>
+<div class="absolute bottom-6 right-6 bg-secondary p-6 rounded-xl shadow-lg">
+<div class="text-4xl font-extrabold">15+</div>
+<div class="text-sm font-label-md uppercase tracking-wide">Years Experience</div>
+</div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Built on Reliability and Speed</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-6">
+                        Emergency Heat &amp; Flow was founded with a single mission: to provide the most reliable emergency home services in the region. We understand that a plumbing or heating failure isn't just an inconvenience—it's a stressor that threatens your home's safety and comfort.
+                    </p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<span>Fully Insured and Gas Safe Registered Technicians</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<span>Transparent, No-Haggle Emergency Pricing</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<span>Equipped Vans for First-Visit Fixes</span>
+</li>
+</ul>
+<a class="inline-block bg-on-primary text-primary px-8 py-4 rounded-lg font-bold hover:bg-secondary hover:text-white transition-all" href="tel:08001234567">Get in Touch</a>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop overflow-hidden" id="testimonials">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">What Our Clients Say</h2>
+<div class="h-1.5 w-24 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-6xl text-primary/10 absolute top-4 right-4" data-icon="format_quote">format_quote</span>
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-6">
+                            "A pipe burst at 3 AM and they arrived in 40 minutes. Truly a life-saver during a very stressful situation. Professional and very efficient!"
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-cover bg-center" data-alt="A professional close-up portrait of a middle-aged woman with a warm, satisfied smile, representing a happy homeowner. She is set against a blurred, softly lit living room background. The image reflects trust, relief, and satisfaction, using soft natural light and a clean, high-end lifestyle aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvE3QWOsbKVk0t_PaQX-snBYB0NN07eZKAfxdQVy6h7Lkj2ThkNz64535UHaH3QDWdBw1K2G4y238TANRdtndXUHea2a3J9Q872YycbbN5PN_ITd30g4zk8gQHrAk-saFLp-9OTiknKGTH9E7efTgUD703Hl1JsgufOcF4qykCYacw0smUIgblCaQRVPCf_pTzVKHQ6SQNZlUZLYDcqOhfnRFF8x7BPp9kEclVnF7eBoqqkXA3WRvC')"></div>
+<div>
+<div class="font-bold text-primary">Sarah Jenkins</div>
+<div class="text-xs uppercase font-label-md text-outline">Homeowner</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-6xl text-primary/10 absolute top-4 right-4" data-icon="format_quote">format_quote</span>
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-6">
+                            "Our boiler failed in the middle of winter. The engineer was incredibly knowledgeable and had the part on his van. Back up and running in 2 hours."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-cover bg-center" data-alt="A portrait of a satisfied male homeowner in his 40s, looking confidently at the camera with a friendly expression. The background is a modern, well-maintained home interior. The lighting is bright and clean, reinforcing the feeling of safety and professional resolution." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCr42QpxV1PIb66ijGGQpP0G4lpOUhdKTDKIza3sgs4z9uNksRY0-Y4yGVz0csxiZ4oFGGUCWvlmJ8qpF2fgY_-YmOpoVJr8NrgyHOIo-KGH8Rg9nLKatFmsdc4VRKPA201eDyGU2zgDDuq5DrJJQZSvD-2iQr34gYWe-v4iRjRsyxLcNkHxrybzicsh-ya-4Mxy70VtfOht4nkTf0I4mp2787Z4gpEwRZk6w9f7NMQx4nCn9GUqBk')"></div>
+<div>
+<div class="font-bold text-primary">David Thompson</div>
+<div class="text-xs uppercase font-label-md text-outline">Property Manager</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-6xl text-primary/10 absolute top-4 right-4" data-icon="format_quote">format_quote</span>
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-6">
+                            "Excellent service from start to finish. The pricing was transparent and the work was neat. Highly recommend Emergency Heat &amp; Flow!"
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-cover bg-center" data-alt="A portrait of a smiling woman in a professional business-casual outfit, standing in a bright office environment. She represents a commercial client who values efficiency and reliability. The visual style is crisp and modern, with a palette of soft neutrals and professional blues." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbxWin4UFqka5K4_e6-7HBCZ5LZtSpVblE2qBFcvUw17D0XWaOBx2uK0HmWt5NU4go6O7HSV300vbCVJNPcaqIxsy-9oeuzVcAIe8NzdLSjskb1EwhuYOwPkUl1rUbTD_yW8yK3ZxJ2uwGPT5JntsS8lcCXmDSPi5wj1ehX6quF47sGMWfgmWYML1j0nphckjRhhqFIurqjS9vKihQgoMVK70_btIB1JnXtGsxX7sOa0YUUur0Mvoe')"></div>
+<div>
+<div class="font-bold text-primary">Emma Radcliffe</div>
+<div class="text-xs uppercase font-label-md text-outline">Business Owner</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-low" id="contact">
+<div class="max-w-container-max mx-auto px-gutter grid md:grid-cols-2 gap-12">
+<div class="bg-white p-10 rounded-2xl shadow-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Book Your Visit</h2>
+<form class="space-y-6">
+<div class="grid sm:grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Phone Number</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none" type="tel"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Service Required</label>
+<select class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary outline-none">
+<option>Emergency Plumbing</option>
+<option>Boiler Service</option>
+<option>Heating Repair</option>
+<option>General Maintenance</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Your Message</label>
+<textarea class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary outline-none" placeholder="Please describe the issue..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-bold py-4 rounded-lg hover:bg-secondary transition-all active:scale-95 shadow-lg" type="submit">Send Request</button>
+</form>
+</div>
+<div class="flex flex-col justify-center">
+<div class="mb-10">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Direct Contact</h3>
+<p class="text-on-surface-variant mb-8 max-w-sm">For immediate emergencies, please call us directly for the fastest response times.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="phone_in_talk">phone_in_talk</span>
+</div>
+<div>
+<div class="font-bold text-lg">0800 123 4567</div>
+<div class="text-sm text-on-surface-variant">24/7 Emergency Line</div>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div>
+<div class="font-bold text-lg">help@emergencyflow.com</div>
+<div class="text-sm text-on-surface-variant">Inquiries within 24h</div>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<div class="font-bold text-lg">London Service Hub</div>
+<div class="text-sm text-on-surface-variant">123 Industrial Way, London, SE1 0XY</div>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg h-64 grayscale opacity-80 hover:grayscale-0 transition-all border border-outline-variant">
+<div class="w-full h-full bg-cover bg-center" data-location="London" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAj2RPG2w4Fcc2IoXAQUc-fB5mD-OZZD8zcFDSr1RSQ_8SUYp-VuOoG2WUncaGBfTffGc5sMLLi6MebJjqMrPbQmhuIICUcpR7VuxwSt2G2ucrU8a3t1W5fZwmxd4TWjVdT4SRye5X025uCi_7b-wJNnlUPGcbMqtAPRuFZAYplBgtYC-k0oGohwD5lvSqtG4vLBfKQdASvjUUSsHVY4vNNNRZzv3vrFYbVg-K54WgU9fZclxYaug36')"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary py-section-padding-mobile md:py-section-padding-desktop">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-base md:gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-on-primary text-3xl" data-icon="home_repair_service">home_repair_service</span>
+<span class="font-headline-md text-headline-md font-bold text-on-primary">Emergency Heat &amp; Flow</span>
+</div>
+<p class="text-on-primary-container text-body-md mb-6 leading-relaxed">
+                    Dedicated to providing expert emergency plumbing and heating repairs across the city. Gas Safe Registered and fully licensed.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="facebook">face_nod</span>
+</a>
+<a class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="alternate_email">alternate_email</span>
+</a>
+<a class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="linked_camera">linked_camera</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-on-primary-container hover:text-on-primary transition-colors" href="#services">Services</a></li>
+<li><a class="text-on-primary-container hover:text-on-primary transition-colors" href="#about">About Us</a></li>
+<li><a class="text-on-primary-container hover:text-on-primary transition-colors" href="#testimonials">Testimonials</a></li>
+<li><a class="text-on-primary-container hover:text-on-primary transition-colors" href="#contact">Emergency Guide</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-lg font-bold mb-6">Legal</h4>
+<ul class="space-y-3">
+<li><a class="text-on-primary-container hover:text-on-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-primary-container hover:text-on-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-primary-container hover:text-on-primary transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-lg font-bold mb-6">Availability</h4>
+<div class="space-y-3 text-on-primary-container">
+<div class="flex justify-between items-center py-2 border-b border-white/10">
+<span>Mon - Fri</span>
+<span class="text-on-primary">24 Hours</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-white/10">
+<span>Saturday</span>
+<span class="text-on-primary">24 Hours</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-white/10">
+<span>Sunday</span>
+<span class="text-on-primary">24 Hours</span>
+</div>
+<div class="mt-4 flex items-center gap-2 text-secondary font-bold">
+<span class="w-2 h-2 bg-secondary rounded-full"></span>
+                        Emergency Team Active Now
+                    </div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-white/10 text-center text-on-primary-container text-sm">
+            © 2024 Emergency Heating and Plumbing. All rights reserved. Gas Safe Registered.
+        </div>
+</footer>
+<script>
+        // Navbar scroll effect
+        const nav = document.getElementById('top-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                nav.classList.add('nav-scrolled');
+                nav.querySelector('div').classList.remove('py-4');
+                nav.querySelector('div').classList.add('py-2');
+            } else {
+                nav.classList.remove('nav-scrolled');
+                nav.querySelector('div').classList.remove('py-2');
+                nav.querySelector('div').classList.add('py-4');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => menu.classList.add('hidden'));
+        });
+
+        // Simple form validation micro-interaction
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = form.querySelector('button');
+                const originalText = btn.innerText;
+                btn.innerText = 'Sending...';
+                btn.disabled = true;
+                setTimeout(() => {
+                    btn.innerText = 'Message Sent!';
+                    btn.classList.add('bg-green-600');
+                    form.reset();
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.classList.remove('bg-green-600');
+                        btn.disabled = false;
+                    }, 2000);
+                }, 1500);
+            });
+        }
+    </script>
+</body></html>

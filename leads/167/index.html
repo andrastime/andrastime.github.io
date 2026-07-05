@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Handyman Co. | Precision Home Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#3f465c",
+                    "primary-container": "#131b2e",
+                    "tertiary": "#000000",
+                    "surface-dim": "#d8dadc",
+                    "outline": "#76777d",
+                    "surface-bright": "#f7f9fb",
+                    "on-error": "#ffffff",
+                    "primary": "#000000",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#dae2fd",
+                    "tertiary-fixed": "#d5e3fd",
+                    "on-primary-container": "#7c839b",
+                    "tertiary-fixed-dim": "#b9c7e0",
+                    "on-surface-variant": "#45464d",
+                    "on-surface": "#191c1e",
+                    "on-tertiary-container": "#76859b",
+                    "surface-tint": "#565e74",
+                    "outline-variant": "#c6c6cd",
+                    "secondary-container": "#fd761a",
+                    "surface": "#f7f9fb",
+                    "on-secondary-fixed-variant": "#783200",
+                    "surface-container-high": "#e6e8ea",
+                    "inverse-primary": "#bec6e0",
+                    "on-primary-fixed": "#131b2e",
+                    "on-secondary-container": "#5c2400",
+                    "secondary": "#9d4300",
+                    "secondary-fixed-dim": "#ffb690",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-fixed": "#341100",
+                    "on-background": "#191c1e",
+                    "on-tertiary-fixed-variant": "#3a485c",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-container": "#0d1c2f",
+                    "surface-variant": "#e0e3e5",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f2f4f6",
+                    "on-tertiary-fixed": "#0d1c2f",
+                    "secondary-fixed": "#ffdbca",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-primary": "#ffffff",
+                    "background": "#f7f9fb",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "label-md": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .tactile-btn {
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px -4px rgba(13, 28, 47, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant shadow-sm h-20">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">handyman</span>
+<span class="text-headline-md font-headline-md font-bold text-primary tracking-tight">The Handyman Co.</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-200" href="#services">Services</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-200" href="#about">About</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-200" href="#testimonials">Testimonials</a>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md text-label-md tactile-btn hover:opacity-90 active:scale-95 transition-all" onclick="scrollToContact()">Book Now</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Image" class="w-full h-full object-cover grayscale-[20%] brightness-[85%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVxRhbO3KWBSafWPE7fqsIQIPkPzSm6LlbtK8DQkXM9XmON61XspO-51lk83zoASDLnUvhIxmUFDlHUAMOrGSn7bj8_6-8X7_lZX0q4sSPYL8yqGT-R25i0HubineV0ADSSLbthTSKVWFpEzlKXARbhEvLUdTeomhYpbVfnPeSOFTfNTiYp1VjCCg9MJCClbxVrS3CKk6yfB8e_2swLyE2BUMXeZpHS8DJrMDP3XEWOgNeWRz3US4G"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest/90 via-surface-container-lowest/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Licensed &amp; Insured</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl md:text-[64px] text-primary leading-[1.1] tracking-tighter">Your Home,<br/>Our Precision.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Professional, reliable handyman services for the modern homeowner. From small repairs to custom installations, we handle it all with care and technical expertise.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-headline-md text-headline-md tactile-btn hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-2" onclick="scrollToContact()">
+                            Book a Service
+                            <span class="material-symbols-outlined">calendar_today</span>
+</button>
+<button class="bg-white border border-outline-variant text-primary px-8 py-4 rounded-lg font-headline-md text-headline-md hover:bg-surface-container transition-colors flex items-center justify-center gap-2">
+                            View Portfolio
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-24 bg-surface-container-lowest" id="services">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+<div class="space-y-4">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block">What We Offer</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Core Services for Every Need</h2>
+</div>
+<p class="max-w-md text-on-surface-variant">Our technicians are specialists in high-demand trades, bringing commercial-grade quality to residential projects.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="group bg-white p-8 border border-outline-variant rounded-xl card-hover transition-all duration-300">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Electrical</h3>
+<p class="text-on-surface-variant leading-relaxed">Fixture installations, outlet repairs, and smart lighting integration with meticulous safety standards.</p>
+<div class="mt-6 font-label-sm text-label-sm text-secondary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                            View Pricing <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group bg-white p-8 border border-outline-variant rounded-xl card-hover transition-all duration-300">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Plumbing</h3>
+<p class="text-on-surface-variant leading-relaxed">Faucet replacements, leak repairs, and appliance hookups performed with leak-proof precision.</p>
+<div class="mt-6 font-label-sm text-label-sm text-secondary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                            View Pricing <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group bg-white p-8 border border-outline-variant rounded-xl card-hover transition-all duration-300">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">carpenter</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Carpentry</h3>
+<p class="text-on-surface-variant leading-relaxed">Custom shelving, molding installation, and furniture assembly with furniture-grade finishing.</p>
+<div class="mt-6 font-label-sm text-label-sm text-secondary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                            View Pricing <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="group bg-white p-8 border border-outline-variant rounded-xl card-hover transition-all duration-300">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">format_paint</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Painting</h3>
+<p class="text-on-surface-variant leading-relaxed">Professional interior touch-ups and accent wall painting with zero-drip clean-up guarantee.</p>
+<div class="mt-6 font-label-sm text-label-sm text-secondary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                            View Pricing <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+<!-- Service 5 -->
+<div class="group bg-white p-8 border border-outline-variant rounded-xl card-hover transition-all duration-300">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">nest_remote_comfort_sensor</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Smart Home</h3>
+<p class="text-on-surface-variant leading-relaxed">Doorbell, thermostat, and security camera installation with full mobile integration help.</p>
+<div class="mt-6 font-label-sm text-label-sm text-secondary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                            View Pricing <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+<!-- Service 6 -->
+<div class="group bg-white p-8 border border-outline-variant rounded-xl card-hover transition-all duration-300">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">construction</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">General Repairs</h3>
+<p class="text-on-surface-variant leading-relaxed">The "Everything Else" list: drywall repair, screen fixes, and general household maintenance.</p>
+<div class="mt-6 font-label-sm text-label-sm text-secondary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                            View Pricing <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-primary text-on-primary" id="about">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative rounded-2xl overflow-hidden aspect-video lg:aspect-square">
+<img class="w-full h-full object-cover" data-alt="A professional handyman wearing a high-quality navy blue uniform, standing in a brightly lit, modern minimalist home interior. He is holding a digital tablet and reviewing project plans, surrounded by organized, high-end tools. The lighting is crisp and even, emphasizing cleanliness and professional competence. The aesthetic is corporate and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfAFsKKvzFUhVSEhaQ1CQI_FczwhB_fHlHFcCxqnY4DZ9gj94hgRg2JrFhL4aCkb63vC6pHn8jzHvFl-X3cso8YK9Qt0UJ3ZvdIiawwwiMDjUTwQmzBiDN_bCAQGVpy8x3kp9gB9Sz4JfvYl8boFvk0fpN6XoVJ1C2EQEHD5L2Mai_1CmIBEgyTlQ2Q90B_PxHUA_sk2Q-NrARne_JK6rV1H_A8YLTDPxHAwX5Jc78pPZhN1KfB6tT"/>
+<div class="absolute bottom-8 right-8 bg-secondary p-8 rounded-xl shadow-2xl">
+<div class="text-headline-xl font-headline-xl leading-none">15+</div>
+<div class="font-label-md text-label-md uppercase tracking-wider opacity-80">Years Expertise</div>
+</div>
+</div>
+<div class="space-y-8">
+<span class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest">Our Philosophy</span>
+<h2 class="font-headline-lg text-headline-lg leading-tight">Quality You Can Trust, Service You Can Depend On.</h2>
+<p class="text-body-lg text-on-primary-container leading-relaxed">
+                        At The Handyman Co., we believe home maintenance shouldn't be a source of stress. We've redefined the industry standards by combining master-level craftsmanship with white-glove customer service.
+                    </p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<div class="p-1 bg-secondary-container rounded-full text-on-secondary-container">
+<span class="material-symbols-outlined">check</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md block">Extreme Cleanliness</span>
+<p class="text-on-primary-container">We use drop cloths and boot covers for every visit, leaving your home cleaner than we found it.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="p-1 bg-secondary-container rounded-full text-on-secondary-container">
+<span class="material-symbols-outlined">check</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md block">Technical Expertise</span>
+<p class="text-on-primary-container">Our technicians undergo rigorous background checks and continuous trade training.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-24 bg-surface">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-20 space-y-4">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">The Process</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Precision in 3 Steps</h2>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Progress Line (Desktop only) -->
+<div class="hidden md:block absolute top-1/4 left-[15%] right-[15%] h-[2px] bg-outline-variant z-0"></div>
+<div class="relative z-10 text-center space-y-6">
+<div class="w-16 h-16 bg-white border-4 border-surface shadow-xl rounded-full flex items-center justify-center mx-auto text-primary font-headline-md text-headline-md">1</div>
+<h3 class="font-headline-md text-headline-md">Book Online</h3>
+<p class="text-on-surface-variant">Select your service and choose a time that fits your schedule via our portal.</p>
+</div>
+<div class="relative z-10 text-center space-y-6">
+<div class="w-16 h-16 bg-white border-4 border-surface shadow-xl rounded-full flex items-center justify-center mx-auto text-primary font-headline-md text-headline-md">2</div>
+<h3 class="font-headline-md text-headline-md">Professional Visit</h3>
+<p class="text-on-surface-variant">A uniformed technician arrives on time with all necessary specialized tools.</p>
+</div>
+<div class="relative z-10 text-center space-y-6">
+<div class="w-16 h-16 bg-white border-4 border-surface shadow-xl rounded-full flex items-center justify-center mx-auto text-primary font-headline-md text-headline-md">3</div>
+<h3 class="font-headline-md text-headline-md">Guaranteed Results</h3>
+<p class="text-on-surface-variant">Complete inspection of the work and a 1-year guarantee on all labor.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface-container-low overflow-hidden" id="testimonials">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-16 text-center">What Homeowners Say</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-white p-10 rounded-xl border border-outline-variant relative">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-6xl absolute top-4 right-4 opacity-20">format_quote</span>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-body-lg italic mb-8">"Unbelievable attention to detail. They installed smart lighting throughout my condo and left the place spotless. Worth every penny."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container"></div>
+<div>
+<div class="font-headline-md text-body-md font-bold">Sarah Jenkins</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Homeowner, Downtown</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-xl border border-outline-variant relative">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-6xl absolute top-4 right-4 opacity-20">format_quote</span>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-body-lg italic mb-8">"The tech arrived exactly on time—to the minute. He fixed my plumbing leak in 20 minutes and even looked at a loose door hinge for free."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container"></div>
+<div>
+<div class="font-headline-md text-body-md font-bold">David Miller</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Property Manager</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-xl border border-outline-variant relative">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-6xl absolute top-4 right-4 opacity-20">format_quote</span>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-body-lg italic mb-8">"Finally, a handyman company that understands high-end finishes. The carpentry work on our custom shelving was absolute perfection."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container"></div>
+<div>
+<div class="font-headline-md text-body-md font-bold">Elena Rodriguez</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Interior Designer</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface-container-highest" id="contact">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div class="space-y-12">
+<div class="space-y-6">
+<h2 class="font-headline-lg text-headline-xl text-primary">Start Your Next Project</h2>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">Ready for professional help? Fill out the form or reach out directly. Our response time is typically under 1 hour during business hours.</p>
+</div>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant">Call Us Today</div>
+<div class="font-headline-md text-headline-md">(555) 234-5678</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant">Email Us</div>
+<div class="font-headline-md text-headline-md">hello@handymanco.pro</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant">Working Hours</div>
+<div class="font-headline-md text-headline-md">Mon-Sat: 8am - 6pm</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-outline-variant">
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('Message sent! We will contact you shortly.')">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Full Name</label>
+<input class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="John Doe" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Email Address</label>
+<input class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="john@example.com" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Service Needed</label>
+<select class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
+<option>Electrical</option>
+<option>Plumbing</option>
+<option>Carpentry</option>
+<option>Smart Home Setup</option>
+<option>General Repair</option>
+<option>Other</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Project Message</label>
+<textarea class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-headline-md text-headline-md tactile-btn hover:opacity-90 active:scale-95 transition-all" type="submit">Send Inquiry</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-12 bg-surface-container-highest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-2 space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">handyman</span>
+<span class="text-headline-md font-headline-md font-bold text-primary">The Handyman Co.</span>
+</div>
+<p class="max-w-md text-on-surface-variant font-body-md text-body-md">Precision-engineered home services for homeowners who value reliability over the lowest price. Serving the greater metropolitan area with master-trade excellence.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">mail</span></a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-primary">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:underline decoration-secondary" href="#services">Services</a></li>
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:underline decoration-secondary" href="#about">About</a></li>
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:underline decoration-secondary" href="#testimonials">Gallery</a></li>
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:underline decoration-secondary" href="#contact">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-primary">Legal</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:underline decoration-secondary" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:underline decoration-secondary" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:underline decoration-secondary" href="#">Guarantee Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">© 2024 The Handyman Co. Precision Service, Guaranteed.</p>
+</div>
+</footer>
+<script>
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body></html>

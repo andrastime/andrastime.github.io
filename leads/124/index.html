@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Beck's Homes UK Ltd | Professional Home Improvements</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#75859d",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d8dadc",
+                        "secondary-container": "#fd761a",
+                        "surface": "#f7f9fb",
+                        "primary-fixed": "#dae2fd",
+                        "inverse-surface": "#2d3133",
+                        "secondary-fixed": "#ffdbca",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary": "#9d4300",
+                        "secondary-fixed-dim": "#ffb690",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "on-surface": "#191c1e",
+                        "on-secondary-container": "#5c2400",
+                        "surface-container-high": "#e6e8ea",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#0b1c30",
+                        "on-primary-container": "#7c839b",
+                        "on-secondary-fixed-variant": "#783200",
+                        "tertiary": "#000000",
+                        "surface-tint": "#565e74",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "on-background": "#191c1e",
+                        "outline-variant": "#c6c6cd",
+                        "error": "#ba1a1a",
+                        "background": "#f7f9fb",
+                        "primary": "#000000",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-secondary-fixed": "#341100",
+                        "primary-container": "#131b2e",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#bec6e0",
+                        "surface-container": "#eceef0",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-surface-variant": "#45464d",
+                        "surface-bright": "#f7f9fb",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "outline": "#76777d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "grid-gutter": "24px",
+                        "section-gap-desktop": "120px",
+                        "base": "8px",
+                        "grid-margin-desktop": "40px",
+                        "section-gap-mobile": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "title-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "title-lg": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+        .btn-shadow {
+            box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .btn-shadow:hover {
+            box-shadow: 0px 10px 25px rgba(15, 23, 42, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container/30">
+<!-- Header (TopNavBar) -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md dark:bg-on-background/90 shadow-sm dark:shadow-none h-20">
+<div class="flex justify-between items-center w-full px-grid-margin-desktop max-w-[1280px] mx-auto h-full">
+<a class="text-title-lg font-headline-md font-bold text-primary dark:text-on-primary" href="#">
+                Beck's Homes UK Ltd
+            </a>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed border-b-2 border-secondary pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#credentials">About</a>
+<a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#testimonials">Testimonials</a>
+<a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#blog">Blog</a>
+<a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center space-x-6">
+<div class="hidden lg:flex items-center space-x-4">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="facebook">face_nod</span>
+</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="instagram">infrared</span>
+</a>
+</div>
+<a class="bg-secondary-container text-on-primary font-bold px-6 py-2 rounded transition-transform active:scale-95 btn-shadow" href="#contact">
+                    Get a Quote
+                </a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000" data-alt="A high-end, luxury home interior showcasing a modern, open-plan kitchen and living area with polished hardwood floors and expansive floor-to-ceiling windows. The afternoon sun casts long, warm shadows across the minimalist furniture, highlighting the premium finishes and meticulous construction quality. The atmosphere is professional and sophisticated, emphasizing the high-quality home renovation work of a UK contractor." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfqj8EdmQqyT2IZcqGwCA5SK1LPMxp2Fu4OiH0OLCk0D8r300H7ILqL5-q3ib33dH6Fz0Z_-11rc5E0pnQcfM1H_XqfaHqvNVBAqBkxzwK2F8bXKKwCq7656F32CESJSByoF9GDvKkpnEC99aRirmEz1ppvnjU-rGV_GPUJWLYodxdfkFdjAvhNGbbbPSpV6aM5xM2jBipcJtbBnZNBMz9prjWou7orsjlVla-vbVMPF-zFSTGV2R65Q')"></div>
+<div class="absolute inset-0 bg-primary-container/40 backdrop-brightness-75"></div>
+</div>
+<div class="relative z-10 px-grid-margin-desktop max-w-[1280px] mx-auto w-full">
+<div class="max-w-2xl text-on-primary">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+                    Professional Home Improvements &amp; Maintenance in the UK
+                </h1>
+<p class="font-body-lg text-body-lg mb-10 text-surface/90">
+                    Quality craftsmanship you can trust. From kitchen renovations to general repairs, we handle it all with precision.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary-container text-on-primary font-bold px-8 py-4 rounded-lg text-center transition-all hover:bg-secondary active:scale-95 btn-shadow" href="#contact">
+                        Get Your Free Quote
+                    </a>
+<a class="border-2 border-on-primary text-on-primary font-bold px-8 py-4 rounded-lg text-center transition-all hover:bg-on-primary/10 active:scale-95" href="#services">
+                        View Services
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Credentials & Trust Section -->
+<section class="py-section-gap-mobile md:py-20 bg-surface-container-low border-y border-outline-variant/30" id="credentials">
+<div class="max-w-[1280px] mx-auto px-grid-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-secondary-container/10 flex items-center justify-center mb-4 text-secondary">
+<span class="material-symbols-outlined !text-4xl" data-icon="verified_user">verified_user</span>
+</div>
+<h3 class="font-title-lg text-title-lg mb-2 text-primary">Fully Licensed &amp; Insured</h3>
+<p class="font-body-md text-on-surface-variant">Complete peace of mind for every project, backed by comprehensive liability insurance and professional certifications.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-secondary-container/10 flex items-center justify-center mb-4 text-secondary">
+<span class="material-symbols-outlined !text-4xl" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-title-lg text-title-lg mb-2 text-primary">Certified Craftsmanship</h3>
+<p class="font-body-md text-on-surface-variant">Our team consists of industry-certified specialists who maintain the highest standards of technical excellence.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-secondary-container/10 flex items-center justify-center mb-4 text-secondary">
+<span class="material-symbols-outlined !text-4xl" data-icon="calendar_month">calendar_month</span>
+</div>
+<h3 class="font-title-lg text-title-lg mb-2 text-primary">10+ Years Experience</h3>
+<p class="font-body-md text-on-surface-variant">A decade of delivering measured excellence to homeowners across the UK with a portfolio of success.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop" id="services">
+<div class="max-w-[1280px] mx-auto px-grid-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="max-w-2xl">
+<span class="text-secondary font-label-md tracking-widest uppercase mb-4 block">Our Expertise</span>
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary">Comprehensive Solutions for Modern Living</h2>
+</div>
+<p class="max-w-md font-body-md text-on-surface-variant">We bring measured excellence to every corner of your home, ensuring structural integrity and aesthetic perfection.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Kitchen -->
+<div class="service-card group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+<div class="aspect-video overflow-hidden">
+<div class="service-image w-full h-full bg-cover bg-center transition-transform duration-500" data-alt="A luxurious modern kitchen featuring bespoke navy cabinetry, white marble countertops, and high-end brass fixtures. Professional under-cabinet lighting highlights the meticulous installation of the tiled backsplash. The setting is bright and spacious, reflecting high-quality UK craftsmanship and modern design principles." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvsWKb9RP-8yvV7yYwknUm4VLunKY-x2m1XdyS52_hm04dxo5Lc0VsWGgBfxtVbw-OHutrdFMpcvxeuZRYO0T9V5Z701ODQzOQV-P5PpjOhzTCnNgF9ROBbwLzRvNGHZ9cua-wUhxxLoxKMKbcvsRoBLMuM8gHeR7Sjh-pONcQwc_kNxSxWjHGGgMUD2RiWg2TCXliL1j6mv5DoG-aU6jn0j2g0sfwGxn_l3lH2TLbmSlld3XC20joqw')"></div>
+</div>
+<div class="p-8">
+<h3 class="font-title-lg text-title-lg text-primary-container mb-3">Kitchen Renovations</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Bespoke kitchen design and installation tailored to your lifestyle, using premium materials and expert fitting.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-secondary-container mr-2" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Custom Cabinetry</li>
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-secondary-container mr-2" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Appliance Integration</li>
+</ul>
+<a class="text-secondary font-bold inline-flex items-center group-hover:gap-2 transition-all" href="#">Learn More <span class="material-symbols-outlined ml-1">arrow_forward</span></a>
+</div>
+</div>
+<!-- Bathroom -->
+<div class="service-card group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+<div class="aspect-video overflow-hidden">
+<div class="service-image w-full h-full bg-cover bg-center transition-transform duration-500" data-alt="A minimalist contemporary bathroom renovation showcasing a walk-in rainfall shower with seamless glass panels and large slate-grey tiles. The vanity is made of natural wood with a sleek ceramic basin. Soft, diffused lighting creates a spa-like atmosphere, emphasizing clean lines and expert plumbing work." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmgvh-6MQxJBMnfOJV3uD69NsanbSvSpfSkVevWYALNyawWd_Wex7tNVMqYGoEdCNbk4jcgfdhrAMxyu4SKzVVA6gXXG80fGmL92s9UR4hd8bJxEw90twy3fRbQ7e-faz_gTvSLVUvPRkPou0ABEg8XQnPIkqnaSduHjjuIf-97s4IUccaK-T_0AMBmPBxtkIqxoI3Ktc1CnFj44ivgYyage-u58HUPsF1PzEDEV-fFFuOcktRGH1UBw')"></div>
+</div>
+<div class="p-8">
+<h3 class="font-title-lg text-title-lg text-primary-container mb-3">Bathroom Renovations</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Transform your bathroom into a personal sanctuary with our specialized plumbing and tiling services.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-secondary-container mr-2" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Wet Room Specialists</li>
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-secondary-container mr-2" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Modern Fixtures</li>
+</ul>
+<a class="text-secondary font-bold inline-flex items-center group-hover:gap-2 transition-all" href="#">Learn More <span class="material-symbols-outlined ml-1">arrow_forward</span></a>
+</div>
+</div>
+<!-- Plumbing & Electrical -->
+<div class="service-card group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+<div class="aspect-video overflow-hidden">
+<div class="service-image w-full h-full bg-cover bg-center transition-transform duration-500" data-alt="Close-up shot of a professional electrician installing a modern smart home control panel with clean wiring and precision tools nearby. The lighting is focused and clear, highlighting the technical expertise and safety standards followed during the home maintenance process. Professional tools are organized neatly in the background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFHZTToNFmOoXKvjynU3JLyx6ioDlRv5kZ_zJXnvH1lNisvHxxHow6MtlVsGtETf22XmweSNurlO_7o3kRef7NBDPHGeO_CbxaLPYB_q-eb8BFbIVwU-UMna1W0lztERwFckRv_SCfPWvfQ89V1AVkzLtqJ5trujk2KxUcmqqXtmRUkKWW3_7Ccd9sE4uuJAdXgbdU_mX3JgoKW4akjeVfACgMX8pjEk0UlyzqECO0mARiDOwGNfzq7w')"></div>
+</div>
+<div class="p-8">
+<h3 class="font-title-lg text-title-lg text-primary-container mb-3">Plumbing &amp; Electrical</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Certified technical services ensuring your home's systems are efficient, safe, and fully compliant.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-secondary-container mr-2" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Smart Home Wiring</li>
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-secondary-container mr-2" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Boiler Maintenance</li>
+</ul>
+<a class="text-secondary font-bold inline-flex items-center group-hover:gap-2 transition-all" href="#">Learn More <span class="material-symbols-outlined ml-1">arrow_forward</span></a>
+</div>
+</div>
+<!-- Painting & Decorating -->
+<div class="service-card group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+<div class="aspect-video overflow-hidden">
+<div class="service-image w-full h-full bg-cover bg-center transition-transform duration-500" data-alt="A professionally painted living room featuring a accent wall in a sophisticated deep navy shade, perfectly contrasted by crisp white crown molding. The lighting is natural and bright, showcasing the flawless, smooth finish of the paintwork. The room is styled with minimalist furniture, emphasizing a clean and high-end aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6V7WTeMl8fca5We3wW90Wm3L3MHxeHy0r2XIFC4Y6OiTYa273gLggDCGD8HovhFGtu0Ky4WEtpjajgPGmJm2IttGr7ZWaUou9Fo2efcm5gqA2fDwwrZMrsJFP-ujxDA3KUtU1BYQ26SbLIwqOsJqo3V8wADhNOwI_fiVOejQl1MOAOYvBoPrlIkAs6quFRH2h2YraD_dIzAHaVpiiYGJXKKs-HnlH_wUTKJcqF4UO8b0-FTRFmr90sA')"></div>
+</div>
+<div class="p-8">
+<h3 class="font-title-lg text-title-lg text-primary-container mb-3">Painting &amp; Decorating</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Flawless finishes for every surface. We use high-grade paints and meticulous preparation for lasting beauty.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-secondary-container mr-2" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Wallpapering</li>
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-secondary-container mr-2" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Interior/Exterior</li>
+</ul>
+<a class="text-secondary font-bold inline-flex items-center group-hover:gap-2 transition-all" href="#">Learn More <span class="material-symbols-outlined ml-1">arrow_forward</span></a>
+</div>
+</div>
+<!-- General Maintenance -->
+<div class="service-card group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+<div class="aspect-video overflow-hidden">
+<div class="service-image w-full h-full bg-cover bg-center transition-transform duration-500" data-alt="A montage of home maintenance tasks including a professional repairing a timber door frame, checking a window seal, and adjusting a cabinet hinge. The lighting is clear and professional, showing the diverse skill set and attention to detail required for general home repairs. The mood is reliable and helpful." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1jejZB-ZCHZa7ghgeyQfvtF3BykJw9-Un2lgLK_3-LcQB9eu7iSTzBLYFkSsJCgkpY0Riu1FV6iI81NzPk8UeVpt_BOoaW7DH0z-FduL8H8n9GxtQhjH-zDbAzGRa1Qu6mKk7JcB5Rg5e_nKdUugMVkWXphXIYJVXmJbELY4jHdseuy6srkmT91kOVnmGC6psfWT5T1T7BjKu0CVp63jCt9JfHI8ZQKKn1If0XoDFPWNsbCPRKBvKoQ')"></div>
+</div>
+<div class="p-8">
+<h3 class="font-title-lg text-title-lg text-primary-container mb-3">Maintenance &amp; Repairs</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Proactive care for your property. Small repairs handled with the same attention as major renovations.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-secondary-container mr-2" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Property Health Checks</li>
+<li class="flex items-center text-sm"><span class="material-symbols-outlined text-secondary-container mr-2" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Swift Response</li>
+</ul>
+<a class="text-secondary font-bold inline-flex items-center group-hover:gap-2 transition-all" href="#">Learn More <span class="material-symbols-outlined ml-1">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-on-background text-on-primary" id="testimonials">
+<div class="max-w-[1280px] mx-auto px-grid-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md mb-4">Measured Excellence, Proven Results</h2>
+<p class="text-on-tertiary-container max-w-2xl mx-auto">Don't just take our word for it. Here is what our clients across the UK have to say about our craftsmanship.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-tertiary-container p-8 rounded-xl relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-secondary-container opacity-20 text-4xl" data-icon="format_quote">format_quote</span>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md mb-6 italic">"Beck's Homes transformed our kitchen beyond our expectations. Highly professional and efficient! The attention to detail on the tiling was simply superb."</p>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center mr-3">
+<span class="font-bold text-secondary-fixed-dim">SJ</span>
+</div>
+<div>
+<p class="font-label-md">Sarah J.</p>
+<p class="text-xs text-on-tertiary-container">London Residence</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-tertiary-container p-8 rounded-xl relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-secondary-container opacity-20 text-4xl" data-icon="format_quote">format_quote</span>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md mb-6 italic">"Reliable, honest, and meticulous. They fixed our electrical issues and repainted the whole ground floor. It feels like a brand new house. Truly professional team."</p>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center mr-3">
+<span class="font-bold text-secondary-fixed-dim">MT</span>
+</div>
+<div>
+<p class="font-label-md">Mark T.</p>
+<p class="text-xs text-on-tertiary-container">Manchester Homeowner</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-tertiary-container p-8 rounded-xl relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-secondary-container opacity-20 text-4xl" data-icon="format_quote">format_quote</span>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md mb-6 italic">"I've used several contractors over the years, but none have the 'measured excellence' that Beck's Homes provides. Their project management is top-tier."</p>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center mr-3">
+<span class="font-bold text-secondary-fixed-dim">DR</span>
+</div>
+<div>
+<p class="font-label-md">David R.</p>
+<p class="text-xs text-on-tertiary-container">Birmingham Property</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog/News Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop" id="blog">
+<div class="max-w-[1280px] mx-auto px-grid-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-center mb-16">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary">Homeowner Insights</h2>
+<a class="text-secondary font-bold hover:underline" href="#">View All Articles</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Blog 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A high-resolution image showcasing a successful kitchen remodel project. The scene features a bright, modern kitchen with white cabinets, a central island with a wooden countertop, and integrated high-end appliances. The photo is well-lit, emphasizing clean surfaces and professional construction photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBThPKNHP-4Vz6s7-UBbtp7lk02EwnfQwoMoVQP7h6XmozLtiXO8S_J4R01tefYUc2IgZQSlO4CDMYmY-uo83VgQBqTyeetq7Gsa9Mj8a2_lSrF4cav24s3r1Wfhb8VNFWfCj8SH1LF7RYYzSKYFC65Y8VyFXNMWr_Q9kRmmWQLsRLbMwaa649O02C16--rYueNdgiTp5edougXE3HS0kNVihZUHKmUHtqICoUYOKviiMwI3o5WzX6U3A')"></div>
+</div>
+<p class="text-secondary font-label-md mb-2">October 14, 2023</p>
+<h3 class="font-title-lg text-title-lg text-primary-container group-hover:text-secondary transition-colors mb-2">5 Tips for a Successful Kitchen Remodel</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-2">Plan your dream kitchen with these expert considerations for layout, lighting, and longevity...</p>
+</div>
+<!-- Blog 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="An image illustrating home maintenance with a focus on a professionally serviced boiler and heating system. The lighting is clear, showing a clean utility area with organized copper piping and a modern control panel. The mood is safe and reliable, reflecting the theme of saving money through regular upkeep." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBtl2ztggSuNAYL5cgUodN2bOianT-jLnL7Y1bojwYuLiq2Z9Q029JGl2V9yJ2kPqBb78aG0TkLEc4L99amKlpjg-T5bHkf37XD3aj5BwyCDILEMi-hW8pqIDzmz6Sa4WWw6mpVNIrL-Of1oV_BaNc4B-IpTUHwvelcs5gd0DAnyUwIhzOlplOQ2bk8Nwo_7QPlgMUU8CiX4qSwVanu-P5oS2JGiSwpERXmE59fvpP2EVlMOVvuxno-JA')"></div>
+</div>
+<p class="text-secondary font-label-md mb-2">September 28, 2023</p>
+<h3 class="font-title-lg text-title-lg text-primary-container group-hover:text-secondary transition-colors mb-2">Why Regular Maintenance Saves You Money</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-2">Small checks today prevent expensive disasters tomorrow. Learn our essential homeowner checklist...</p>
+</div>
+<!-- Blog 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A modern interior space featuring professional painting and decorating. The focus is on a crisp, contrasting paint finish between a light grey wall and a dark charcoal door frame. The lighting is soft and natural, emphasizing the precision and high quality of the finish. Minimalist decor elements add to the professional aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBjYTFHaxg9S91XiOVYZ2HR_kDclBibt3CX33CEna-C7yLxRlJBtuoegYs6OA9S0MCsAPgCw74c5H_IJoJIxcfW9Gqw2RfsbiIIXNEeEDr4pLEk0KMfrKylSEiaGvSWjRo_igNSTXsOjZjF37QFWELA40HEqJbNAz-ikgDOODO31LC5vAzpipPxQvcEdIGuRFKKOnQ8LmdopupUEVHCx81dhnfQAQzu6mtB4SD0DOfCq7VMn3TCSETiw')"></div>
+</div>
+<p class="text-secondary font-label-md mb-2">September 12, 2023</p>
+<h3 class="font-title-lg text-title-lg text-primary-container group-hover:text-secondary transition-colors mb-2">Choosing the Right Color Palette</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-2">Discover how to select colors that enhance space and reflect your personality with our design guide...</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container" id="contact">
+<div class="max-w-[1280px] mx-auto px-grid-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary mb-6">Let's Discuss Your Project</h2>
+<p class="font-body-lg text-on-surface-variant mb-10">Whether it's a minor repair or a complete home overhaul, we are ready to bring our expertise to your doorstep. Contact us today for a detailed, no-obligation quote.</p>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-lg bg-on-background flex items-center justify-center mr-4 text-on-primary">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h4 class="font-label-md text-primary">Office Address</h4>
+<p class="text-on-surface-variant">123 Construction House, Brick Lane<br/>London, UK E1 6QL</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-lg bg-on-background flex items-center justify-center mr-4 text-on-primary">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<div>
+<h4 class="font-label-md text-primary">Phone Number</h4>
+<p class="text-on-surface-variant">+44 (0) 20 7946 0000</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-lg bg-on-background flex items-center justify-center mr-4 text-on-primary">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div>
+<h4 class="font-label-md text-primary">Email Address</h4>
+<p class="text-on-surface-variant">info@beckshomes.co.uk</p>
+</div>
+</div>
+</div>
+<div class="mt-12 rounded-xl overflow-hidden h-64 grayscale opacity-80 hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist map showing the London area with a professional marker indicating the office location of Beck's Homes UK Ltd. The map style is corporate and modern, using a muted grey and navy color palette that matches the website's brand identity. All labels are clear and legible." data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCg3fnMyFP4QEIhi_iwbQcmtCCcFBJ3-FsPcGHJapeOCVHV3FrEX1rK0WJSeTX42RXio03pFFjyHEMllfM-vVlfDHAh-mZzm3crPNKW4gktKwGY-j8L7h5It59r0EdklxB0IFkgocc7Th3rqVGwWGQLNY-Hmi8v0gV0LB82Kc3IrvN69AHyPJ5HNjQQ9L_-UD-bX7gZY6NYUK3FRezDCgtrFklac9zz7G9lGPDksgru2Ohao3dbThRBw"/>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 md:p-12 rounded-2xl shadow-lg">
+<form action="#" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-on-surface mb-2">Full Name</label>
+<input class="w-full bg-surface border border-outline rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary-container focus:border-transparent outline-none transition-all" placeholder="John Smith" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-2">Email Address</label>
+<input class="w-full bg-surface border border-outline rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary-container focus:border-transparent outline-none transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-on-surface mb-2">Phone Number</label>
+<input class="w-full bg-surface border border-outline rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary-container focus:border-transparent outline-none transition-all" placeholder="07123 456 789" type="tel"/>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-2">Service Needed</label>
+<select class="w-full bg-surface border border-outline rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary-container focus:border-transparent outline-none transition-all">
+<option>Kitchen Renovation</option>
+<option>Bathroom Renovation</option>
+<option>Electrical/Plumbing</option>
+<option>General Maintenance</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-2">Project Details</label>
+<textarea class="w-full bg-surface border border-outline rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary-container focus:border-transparent outline-none transition-all" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary-container text-on-primary font-bold py-4 rounded-lg transition-all hover:bg-secondary active:scale-95 btn-shadow" type="submit">
+                            Send Message
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-on-background dark:bg-tertiary-container w-full py-section-gap-mobile md:py-section-gap-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter px-grid-margin-desktop max-w-[1280px] mx-auto">
+<div class="md:col-span-1">
+<a class="text-title-lg font-headline-md font-bold text-on-primary block mb-6" href="#">
+                    Beck's Homes UK Ltd
+                </a>
+<p class="text-on-tertiary-container font-body-md mb-8">
+                    Committed to measured excellence in every home renovation and maintenance task we undertake. Your trusted UK partner.
+                </p>
+<div class="flex space-x-4">
+<a class="text-secondary-fixed hover:text-secondary-fixed-dim transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="facebook">face_nod</span>
+</a>
+<a class="text-secondary-fixed hover:text-secondary-fixed-dim transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="instagram">infrared</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-on-primary font-bold mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant dark:text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#services">Services</a></li>
+<li><a class="text-surface-variant dark:text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#credentials">About Us</a></li>
+<li><a class="text-surface-variant dark:text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#testimonials">Testimonials</a></li>
+<li><a class="text-surface-variant dark:text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#blog">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-primary font-bold mb-6">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant dark:text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant dark:text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-surface-variant dark:text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">Accreditations</a></li>
+<li><a class="text-surface-variant dark:text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-primary font-bold mb-6">Newsletter</h4>
+<p class="text-on-tertiary-container text-sm mb-4">Get the latest home improvement tips and exclusive offers.</p>
+<div class="flex">
+<input class="bg-primary-container border border-outline-variant text-on-primary text-sm rounded-l px-4 py-2 w-full outline-none focus:border-secondary-container" placeholder="Email address" type="email"/>
+<button class="bg-secondary-container text-on-primary px-4 py-2 rounded-r transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-grid-margin-desktop mt-20 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+<p class="text-surface-variant dark:text-on-tertiary-container text-sm">
+                © 2024 Beck's Homes UK Ltd. All rights reserved. Measured Excellence.
+            </p>
+<div class="flex items-center space-x-6 mt-4 md:mt-0">
+<img class="h-8 opacity-60" data-alt="A small, professional badge for 'Federation of Master Builders' in high-contrast monochrome, suitable for a dark footer background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd3iSH__BOknlYxDI6Vs6yp0TDvMd0u4i-idpFcgOEDISYNN1S_5ApTgUhS0lyxQwCjch8njm-9h6a501J-BR6tBbma8vnYcRS7y8xybg-J_kWDUWzjSRPQniik1wbkJSwGXgaR1SgHuMnnkXkhprcWYG-6GBiQ75tZK2ngrhEjvHkYc9ZznteD_sHY3h67pl3-M-rH4QtHVjQv6c_Gs-W0dXLEjSxA6KNL6rCnJpFi4pxMXgtbmIPPg"/>
+<img class="h-8 opacity-60" data-alt="A professional 'Gas Safe' registered logo in monochrome, designed to fit into a corporate website footer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAekPnTU-AuphL5YD0qU_b5Nm1-cqUeGFF2HtNdr9Z_sEGzwjlBIiKRMVtQFpY20K3FLHhGEwJTnkHW_9ct8IYJlNPql6kKu_Jn-v_Rc0tCl5biK90Gk71cGnd5jOnAV50c_rw265BDqedZ7lWpBv7EQXQFbODHWe8kl-R5E6fospAylNPduCUpIyF9_yR1DI9muCGoJdpXj7UN8e58J1OQIZ1HU1oivlP3KGLXMrxS3iuIt32dHQE-4A"/>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll behavior for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-lg');
+                header.classList.add('shadow-sm');
+            }
+        });
+
+        // Intersection observer for fade-in effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, #credentials > div > div').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

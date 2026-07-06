@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portland Hardware & Handyman | Quality You Can Trust</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f7f9fb",
+                    "on-primary": "#ffffff",
+                    "background": "#f7f9fb",
+                    "outline": "#75777a",
+                    "on-secondary-fixed-variant": "#7e2c00",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-tint": "#5d5e61",
+                    "on-primary-fixed-variant": "#454749",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#370e00",
+                    "on-primary-container": "#838486",
+                    "primary-container": "#1a1c1e",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "tertiary-container": "#0c1d30",
+                    "on-tertiary-container": "#75859d",
+                    "on-secondary-container": "#5d1e00",
+                    "surface-container": "#eceef0",
+                    "surface-container-high": "#e6e8ea",
+                    "on-surface": "#191c1e",
+                    "secondary": "#a53c00",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#d8dadc",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "on-primary-fixed": "#1a1c1e",
+                    "secondary-fixed": "#ffdbce",
+                    "outline-variant": "#c5c6ca",
+                    "primary-fixed-dim": "#c6c6c9",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-fixed": "#d3e4fe",
+                    "surface-variant": "#e0e3e5",
+                    "primary": "#000101",
+                    "on-surface-variant": "#44474a",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#c6c6c9",
+                    "inverse-surface": "#2d3133",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#ffb598",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "surface": "#f7f9fb",
+                    "primary-fixed": "#e2e2e5",
+                    "on-background": "#191c1e",
+                    "tertiary": "#000104",
+                    "secondary-container": "#ff6f2b",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "label-md": ["Inter"],
+                    "caption": ["Inter"],
+                    "headline-xl": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav {
+            border-bottom-width: 2px;
+            padding-bottom: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest w-full top-0 sticky z-50 border-b border-outline-variant">
+<nav class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-primary">Portland Hardware & Handyman</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary border-b-2 border-secondary pb-1 transition-colors duration-200" href="#services">Services</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" href="#shop">Hardware Shop</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" href="#about">About</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" href="#contact">Contact</a>
+</div>
+<a class="bg-secondary-container text-on-secondary px-6 py-3 font-label-md text-label-md uppercase tracking-wider hover:opacity-80 transition-opacity" href="#contact">
+                Get an Estimate
+            </a>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105" data-alt="A professional handyman in charcoal workwear meticulously repairing a high-end wooden door frame in a bright Portland residence. The lighting is crisp and natural, highlighting the texture of the grain and the industrial orange tools on his belt. The overall atmosphere is focused and expert, with a clean, high-contrast aesthetic that feels modern and reliable." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3-ItvmY5tJ4Ax75ujUELiVZMizk4AzkN68TfjYt0N8mvQzElcoegNh7jKHmZPn_oVuZfKC1IVde7jazKjW4-I6m4PaeK--HO07QCqmxMKarnEBBa76EIHGWw1LHg9D3uu2yKaSIGkvspX-LHYj8ZUaFW47VcWN1rEb0Ho-sXxiIiY3M037iED0yV9C9Gy8V-e7HG_-4X46HDEIrMlKJ2TsIiPV8OP1bL-6X-3w2CmljVlrC9dhsQmPg')"></div>
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full text-white">
+<div class="max-w-2xl">
+<h1 class="font-headline-xl text-headline-xl mb-6 leading-tight">Your Local Experts for Hardware & Property Services.</h1>
+<p class="font-body-lg text-body-lg mb-10 opacity-90">Quality tools, expert handyman services, and reliable property maintenance for Portland homes and businesses.</p>
+<div class="flex gap-4">
+<a class="bg-secondary-container text-on-secondary px-8 py-4 font-label-md text-label-md uppercase tracking-widest font-bold hover:scale-[1.02] transition-transform" href="#contact">Get an Estimate</a>
+<a class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 font-label-md text-label-md uppercase tracking-widest font-bold hover:bg-white/20 transition-all" href="#services">Our Services</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-surface-bright" id="services">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-16">
+<div class="max-w-xl">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-[0.2em] block mb-4">What We Do</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Professional Grade Maintenance</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service Card 1 -->
+<div class="group bg-surface-container-lowest border border-outline-variant p-8 transition-all hover:shadow-xl hover:shadow-black/5">
+<div class="w-12 h-12 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-4xl" data-icon="home_repair_service">home_repair_service</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">General Repairs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">From door adjustments to structural patching, we handle the fine details that keep your home functioning perfectly.</p>
+<a class="flex items-center gap-2 text-secondary font-label-md text-label-md uppercase tracking-wider group-hover:gap-4 transition-all" href="#contact">
+                            Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-surface-container-lowest border border-outline-variant p-8 transition-all hover:shadow-xl hover:shadow-black/5">
+<div class="w-12 h-12 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-4xl" data-icon="plumbing">plumbing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Plumbing & Electrical</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Expert fixture replacement and minor electrical updates performed with precision and code compliance.</p>
+<a class="flex items-center gap-2 text-secondary font-label-md text-label-md uppercase tracking-wider group-hover:gap-4 transition-all" href="#contact">
+                            Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-surface-container-lowest border border-outline-variant p-8 transition-all hover:shadow-xl hover:shadow-black/5">
+<div class="w-12 h-12 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-4xl" data-icon="format_paint">format_paint</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Painting & Drywall</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Seamless drywall patching and professional paint finishes to revitalize your living or commercial spaces.</p>
+<a class="flex items-center gap-2 text-secondary font-label-md text-label-md uppercase tracking-wider group-hover:gap-4 transition-all" href="#contact">
+                            Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Hardware Shop Highlight -->
+<section class="bg-primary-container text-white py-24 overflow-hidden" id="shop">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="h-64 bg-cover bg-center rounded-lg" data-alt="A close-up shot of high-quality, professional charcoal-colored power tools and hand tools arranged on a dark metal pegboard. The lighting is moody with warm orange accents, reflecting a high-end industrial aesthetic. The focus is on the precision and quality of the steel tools." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEkmjjobJv4l_JUogjf7rbLNz91dtFKtKGwvRqQQjw0stpZchUJ4Az7X411E-PRC6JV2uXCq1fDWvhNYU9JTj16U0vS0m0EfcnuPrry_UT_YwjhqfMLC0k3QkJw3VuGLuIz6scQST5VyxoKAjYz_sDq85Z-ffC_xYNM0lZ7VbDVtvpe0AP7ZkbymJjk4G38tFTzn_FHUaThZQwKQI2upAvayZomolW_QEAIdgR6MxHcw_G1e5FgbNj6Q')"></div>
+<div class="h-48 bg-cover bg-center rounded-lg" data-alt="A shelf in a modern hardware store featuring beautifully organized essential building supplies like brass screws, steel hinges, and high-performance adhesives. The image uses a clean, shallow depth of field with a focus on the premium packaging and metallic textures." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA99T_4WIsZgwnIzYtQjlTktvUqH7QLF0ynfbq2zTm2MXH8SCIMtvpKZff0HvYL7I1qnc4CeLyovFbTS-RYL-N8NVgm3M9I141pJPegkzVKOuQCgZj8ZQr1M3Y1zMqaNGQoP8ndhi5KrZGMM3_tEOyZYYAO5tfO59Mou8onl_WF9oJG7rgjqwEzUyL66b7KxjiBnmlDvvpmZma4Rjfv6sjS1PxV3Wn8UoxoZVo5PIgSjuNsDyjPm-oCRg')"></div>
+</div>
+<div class="pt-8 space-y-4">
+<div class="h-48 bg-cover bg-center rounded-lg" data-alt="Handcrafted local tool kits displayed in a modern retail setting in Portland. The lighting is warm and inviting, showcasing artisanal quality and professional-grade durability. Deep charcoal backgrounds contrast with bright orange branding elements." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4uOHNSUfBukhlrRzjG_yxENxx_5BrloUeqHsaegzY9tyEbzuHDFOCAthljsSKkmBaUNtERV876EndQHslYb9xVb7W31N5hnau1bObzsIq2XkWVyOOrrSRoPy3tBmC1HpE7P1Ed40vWP3uT4y_ydJzTxH2iWymj4nhZXt9Lacd8bfB7F3A5NK_PAoAMxenzRKGvt8RFjAs6lBsAG8O9Jdg4KdcRzGbS74AdUDAb3G0sHaH7d1OoZZ2gA')"></div>
+<div class="h-64 bg-cover bg-center rounded-lg" data-alt="An assortment of premium measuring tools and leveling instruments laid out on a dark architect's desk. The aesthetic is highly technical and precise, utilizing high-contrast lighting to emphasize the markings and material quality." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOWcmaEboOVDlkMmhZ39vL-rOXa6NVEPiY14G3Zut3MP-GeeIhDoGrWzoLQfq0Ds58KTIYIPuLNQU3xFcmPGEFl3cpjMyNrQJN7tlNlbVUHwSxu1OaFGPBhaoxU9PqX7ZBSy8AwWfbXwEyIbVL89_0UGg5HsljBLjo5_7ewX-QnLZCwi1hQJPJ6k6Pgr7p9ux0V6BbNi7Vs5x4j_ZEWFFl7O2dDxKmIFGEo9WW7ed6zGi0DQNAwFi0Uw')"></div>
+</div>
+</div>
+</div>
+<div>
+<span class="text-secondary-container font-label-md text-label-md uppercase tracking-[0.2em] block mb-4">Our Local Shop</span>
+<h2 class="font-headline-xl text-headline-xl mb-8">Hardware Built for Professionals</h2>
+<p class="font-body-lg text-body-lg mb-8 text-on-primary-container">We stock more than just basics. From premium German-engineered tools to the essential supplies local contractors trust, Portland Hardware & Handyman is your neighborhood resource for quality that lasts.</p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">Premium Tools & Equipment</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">Essential Building Supplies</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">Expert Advice Included</span>
+</li>
+</ul>
+<a class="inline-block bg-secondary-container text-on-secondary px-10 py-4 font-label-md text-label-md uppercase tracking-widest font-bold hover:scale-[1.02] transition-transform" href="#">Shop Locally</a>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="py-32 bg-surface-container-low" id="about">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Built to Last in Portland</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Providing reliable property services to the Portland metro area for over 15 years. We treat every job like it's for our own home.</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+<div>
+<div class="font-headline-xl text-headline-xl text-secondary mb-2">15+</div>
+<p class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Years Serving Portland</p>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-secondary mb-2">5k+</div>
+<p class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Projects Completed</p>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-secondary mb-2">100%</div>
+<p class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Quality Guarantee</p>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-secondary mb-2">4.9/5</div>
+<p class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Client Rating</p>
+</div>
+</div>
+</section>
+<!-- Contact/Booking Section -->
+<section class="py-24 bg-surface-bright" id="contact">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-surface-container-lowest border border-outline-variant overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-2/5 p-12 bg-primary-container text-white">
+<h2 class="font-headline-lg text-headline-lg mb-6">Request a Handyman</h2>
+<p class="font-body-md text-body-md text-on-primary-container mb-12">Fill out the form for a prompt response within 24 hours. Let us help you with your next home project.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-container" data-icon="bolt">bolt</span>
+<div>
+<h4 class="font-label-md text-label-md text-white uppercase tracking-wider mb-1">Fast Response</h4>
+<p class="text-on-primary-container text-sm">We respond to all requests within one business day.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-container" data-icon="verified">verified</span>
+<div>
+<h4 class="font-label-md text-label-md text-white uppercase tracking-wider mb-1">Licensed & Insured</h4>
+<p class="text-on-primary-container text-sm">Rest easy knowing your property is in professional hands.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:w-3/5 p-12">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-primary uppercase tracking-wider">Name</label>
+<input class="w-full bg-surface border border-outline-variant p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Your Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-primary uppercase tracking-wider">Service Type</label>
+<select class="w-full bg-surface border border-outline-variant p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+<option>General Repair</option>
+<option>Plumbing</option>
+<option>Electrical</option>
+<option>Painting</option>
+<option>Drywall</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-primary uppercase tracking-wider">Description</label>
+<textarea class="w-full bg-surface border border-outline-variant p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary py-5 font-label-md text-label-md uppercase tracking-[0.2em] font-bold hover:opacity-90 transition-opacity flex items-center justify-center gap-3" type="submit">
+                                Submit Request <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container text-on-primary-container w-full py-12 border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline-md text-headline-md text-on-primary block mb-4">Portland Hardware & Handyman</span>
+<p class="font-body-md text-body-md mb-6 opacity-70">© 2024 Portland Hardware & Handyman. Built to last.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-white uppercase tracking-widest mb-4">Quick Links</h4>
+<a class="block font-body-md text-body-md text-outline-variant hover:text-on-primary hover:underline transition-all" href="#services">Services</a>
+<a class="block font-body-md text-body-md text-outline-variant hover:text-on-primary hover:underline transition-all" href="#shop">Hardware Shop</a>
+<a class="block font-body-md text-body-md text-outline-variant hover:text-on-primary hover:underline transition-all" href="#about">About Our Team</a>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-white uppercase tracking-widest mb-4">Policies</h4>
+<a class="block font-body-md text-body-md text-outline-variant hover:text-on-primary hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="block font-body-md text-body-md text-outline-variant hover:text-on-primary hover:underline transition-all" href="#">Terms of Service</a>
+<a class="block font-body-md text-body-md text-outline-variant hover:text-on-primary hover:underline transition-all" href="#">Fast Response Guarantee</a>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-white uppercase tracking-widest mb-4">Service Area</h4>
+<p class="font-body-md text-body-md text-outline-variant">Serving Portland, Beaverton, Gresham, and surrounding metro areas.</p>
+<div class="flex gap-4 mt-6">
+<a class="text-outline-variant hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="facebook">face_nod</span></a>
+<a class="text-outline-variant hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="instagram">infrared</span></a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interactions for buttons and form focus
+        document.querySelectorAll('input, select, textarea').forEach(el => {
+            el.addEventListener('focus', () => {
+                el.parentElement.querySelector('label').classList.add('text-secondary');
+            });
+            el.addEventListener('blur', () => {
+                el.parentElement.querySelector('label').classList.remove('text-secondary');
+            });
+        });
+
+        // Smooth reveal animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

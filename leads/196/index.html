@@ -1,0 +1,558 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>East London Handyman | Professional Home Repairs</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2e3132",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d2e4fb",
+                    "tertiary-fixed": "#feddb5",
+                    "outline-variant": "#c4c6cd",
+                    "on-primary-fixed": "#0b1d2d",
+                    "on-tertiary-fixed": "#281802",
+                    "on-surface": "#191c1d",
+                    "secondary-fixed-dim": "#ffb961",
+                    "tertiary-fixed-dim": "#e1c29b",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#4f6073",
+                    "tertiary-container": "#38260b",
+                    "surface-bright": "#f8f9fa",
+                    "on-secondary-fixed-variant": "#663e00",
+                    "primary-fixed-dim": "#b7c8de",
+                    "tertiary": "#211200",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary-fixed": "#2b1700",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-variant": "#e1e3e4",
+                    "surface": "#f8f9fa",
+                    "on-background": "#191c1d",
+                    "secondary-fixed": "#ffddb9",
+                    "primary-container": "#1a2b3c",
+                    "on-secondary-container": "#694000",
+                    "on-primary": "#ffffff",
+                    "primary": "#041627",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#38485a",
+                    "on-primary-container": "#8192a7",
+                    "on-error": "#ffffff",
+                    "secondary": "#865300",
+                    "secondary-container": "#fea520",
+                    "surface-container": "#edeeef",
+                    "outline": "#74777d",
+                    "background": "#f8f9fa",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#44474c",
+                    "on-tertiary-fixed-variant": "#584326",
+                    "surface-container-low": "#f3f4f5",
+                    "on-tertiary-container": "#a88c69",
+                    "inverse-primary": "#b7c8de",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-container-high": "#e7e8e9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1200px",
+                    "base": "8px",
+                    "margin-mobile": "16px",
+                    "stack-lg": "48px",
+                    "margin-desktop": "40px",
+                    "stack-md": "24px",
+                    "stack-sm": "12px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "label-md": ["Inter"],
+                    "headline-xl-mobile": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .cta-shadow {
+            box-shadow: 0px 4px 20px rgba(26, 43, 60, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-surface/90 backdrop-blur-md dark:bg-primary/90 border-b border-outline-variant/30 dark:border-outline/20 shadow-sm dark:shadow-none transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">handyman</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-on-primary tracking-tight">East London Handyman</span>
+</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-on-primary transition-colors font-label-md text-label-md" href="our-services-east-london-handyman.html">Services</a>
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-on-primary transition-colors font-label-md text-label-md" href="pricing-estimates-east-london-handyman.html">Pricing</a>
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-on-primary transition-colors font-label-md text-label-md" href="#">Reviews</a>
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-on-primary transition-colors font-label-md text-label-md" href="blog-east-london-handyman.html">Blog</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:block font-label-md text-label-md text-primary dark:text-on-primary font-bold" href="tel:02079460000">020 7946 0000</a>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-full font-label-md text-label-md font-bold hover:brightness-95 transition-all duration-200 active:scale-95">Book Now</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface-bright py-20 lg:py-32">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="z-10">
+<span class="inline-block bg-primary-fixed text-on-primary-fixed px-4 py-1 rounded-full text-label-md font-bold mb-6">Expert Tradesmen in Your Area</span>
+<h1 class="font-headline-xl text-headline-xl mb-6 text-primary max-w-xl">Reliable Home Repairs in East London</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">From plumbing leaks to electrical fit-outs, we provide professional, punctual, and high-quality maintenance for homeowners who value precision.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-md text-label-md font-bold cta-shadow hover:bg-primary/90 transition-all active:scale-95">Book a Service</button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-label-md text-label-md font-bold hover:bg-primary/5 transition-all active:scale-95">Get a Free Estimate</button>
+</div>
+<div class="mt-12 flex items-center gap-6">
+<div class="flex -space-x-3">
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a friendly professional plumber in a clean navy uniform smiling at the camera, light-filled modern home background, cinematic lighting, corporate professional style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNDjgqqzDmiZX49OFFSg5SZmkFSPkGIBgM3SHBLODmQq4U2dOTp0sfY31K8S4DqY1dQA-bN-MuLoKksNPqR2waOS29NlYMAHhmMNwXs1RoqP9584FqHDtJrE-ZpJKB31JXbpDqlEbhmKvGocD554PHQTFRQqMSRtVwUaEOfkrLIiTGzuqyrvyQqR1Ol-zpHN2wmUVj2PREwlZ1cAgfzp8C7oEkOJcg76-4vcRqXGQRBd8UfMwtutvl">
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-slate-300 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a female electrician holding a professional multimeter, focused and confident expression, pristine white workshop background, bright natural lighting, professional photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp-Anr6causiiztPyfO4NJ4XMYAYUFNvmo3uDCLijaDhvrrG4Sw7kCJujimhPXtsPCK2Gx3rtUuSeh0SRxNMVMeCi_ra1ecPXX5Us3KAKsQzDfbZUOIQPjqxJTxGf6THdRqM3zSCinGe9N9vwxB1yXxChljA6C9J2jWFB1kPzvdBPxKylgwgVohg5yTe6Dsy4rpz5Lvu7m3UNYKEEt9huvg60fYigbaTdN_WZmZWKRTUTO4zCWvhVi">
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-slate-400 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a master carpenter in a professional grey work polo, tools in background, warm interior lighting, high-quality professional photography, clean and trustworthy aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtaNgYl0sHELPedwFd_SHi1jgfoB72oCtLZptw_A_9tcNCPBffFtb9oDo6pponUMOnDzvfDKiAgzaMLUo1e7yvLH9UDK6CDPnaWVS82jvdBgOBhTPHV8NnqUHlPufJd2CtsL9N9yJHLKI2e2OEdxOxbm7HkX1ykib3MiBid3xMa4GKJ9DO-s8va-uY3woychjYrO5j1AtqEe_G-JbaRSy7NOLpMImRE2XVmf_8muK9l-hPq9lCM8xd">
+</div>
+</div>
+<div>
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-label-md text-on-surface-variant">Trusted by 500+ Local Residents</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-[40px] overflow-hidden shadow-2xl relative z-0">
+<img class="w-full h-full object-cover" data-alt="A professional handyman in a navy blue branded polo shirt meticulously repairing a kitchen cabinet. The scene is brightly lit with soft, natural morning light, emphasizing cleanliness and precision. The background is a modern, high-end East London kitchen with marble countertops. The mood is calm, professional, and reliable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaPEk8NQXG-56bdocvYnj3HnrUuZqI4Xphm7UlnX-6CNN1Unrk4fRcJ2dhPL0QLutq-YXrxRyqotDOA9SXwtzJzDowyKEBqvYjJHQvEmoHF93yxnKgX94MyMCy-4LzcpgTzu7NYFb6K-HFCy8KyY8XoqVuAvR8hwInFvsD5-5UmNOND5vPco4fwxtewFcQoAcP6MZwqbNKihRVGid7rHZtF7vvIFCcoKFeo3xkqi7tE9MjKTfNSTOv">
+<!-- Floating Glass Card -->
+<div class="absolute bottom-8 left-8 right-8 glass-effect p-6 rounded-2xl shadow-xl border border-white/20">
+<div class="flex items-start gap-4">
+<div class="bg-secondary-container p-3 rounded-xl">
+<span class="material-symbols-outlined text-on-secondary-container">verified</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] text-primary">Fully Insured &amp; Accredited</h4>
+<p class="text-body-md text-on-surface-variant">Up to £5m Public Liability insurance for your peace of mind.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-secondary-fixed/30 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -bottom-12 -left-12 w-64 h-64 bg-primary-fixed/30 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-stack-lg bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Services at a Glance</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">From minor fixes to major renovations, our specialists cover all aspects of home maintenance with technical expertise and local care.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service Card 1 -->
+<div class="service-card group bg-surface-container-lowest p-8 rounded-2xl shadow-[0px_4px_20px_rgba(26,43,60,0.05)] hover:shadow-[0px_8px_30px_rgba(26,43,60,0.10)] transition-all duration-300">
+<div class="service-icon w-14 h-14 bg-primary-fixed text-primary rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">plumbing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Plumbing</h3>
+<p class="text-body-md text-on-surface-variant mb-6 leading-relaxed">Fixing leaks, installing taps, unblocking drains, and bathroom maintenance.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> 24/7 Emergencies
+                            </li>
+<li class="flex items-center gap-2 text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Tap Replacements
+                            </li>
+</ul>
+</div>
+<!-- Service Card 2 -->
+<div class="service-card group bg-surface-container-lowest p-8 rounded-2xl shadow-[0px_4px_20px_rgba(26,43,60,0.05)] hover:shadow-[0px_8px_30px_rgba(26,43,60,0.10)] transition-all duration-300">
+<div class="service-icon w-14 h-14 bg-secondary-fixed text-secondary rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">electrical_services</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Electrical</h3>
+<p class="text-body-md text-on-surface-variant mb-6 leading-relaxed">Light fixture installs, socket replacements, and electrical fault finding.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> PAT Testing
+                            </li>
+<li class="flex items-center gap-2 text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Smart Home Setup
+                            </li>
+</ul>
+</div>
+<!-- Service Card 3 -->
+<div class="service-card group bg-surface-container-lowest p-8 rounded-2xl shadow-[0px_4px_20px_rgba(26,43,60,0.05)] hover:shadow-[0px_8px_30px_rgba(26,43,60,0.10)] transition-all duration-300">
+<div class="service-icon w-14 h-14 bg-primary-fixed text-primary rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">carpenter</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Carpentry</h3>
+<p class="text-body-md text-on-surface-variant mb-6 leading-relaxed">Door hanging, floor installation, shelving, and bespoke furniture assembly.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Flat Pack Expert
+                            </li>
+<li class="flex items-center gap-2 text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Custom Shelving
+                            </li>
+</ul>
+</div>
+<!-- Service Card 4 -->
+<div class="service-card group bg-surface-container-lowest p-8 rounded-2xl shadow-[0px_4px_20px_rgba(26,43,60,0.05)] hover:shadow-[0px_8px_30px_rgba(26,43,60,0.10)] transition-all duration-300">
+<div class="service-icon w-14 h-14 bg-secondary-fixed text-secondary rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">format_paint</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Painting</h3>
+<p class="text-body-md text-on-surface-variant mb-6 leading-relaxed">Internal and external painting, wallpapering, and surface preparation.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Neat Finish
+                            </li>
+<li class="flex items-center gap-2 text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Touch-ups
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us / Trust Section -->
+<section class="py-stack-lg bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="relative rounded-3xl overflow-hidden h-[400px]">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a craftsman's hands using a high-quality spirit level on a wooden surface, showing extreme precision. The lighting is focused and warm, highlighting the texture of the wood and the metallic surface of the tool. The overall style is clean, corporate, and professional, suggesting attention to detail and reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa3CSZhIy9brsFMEqidvl-QZfSLdPKKBN5PN9VrkWx35PLfxVfEcL-sjlWArIay_Azrs54i2cT5nrdkjtWhyrEN5sMiunzOrcajW9fZyoCQACxnayvXwoNct5Vef9ASoVfn5Q8_igyyKZ22ItNsL3fWuKZxFqQIHiXtKU9ZW0u9ng--d_0pr_Xnb1MJrNCTYzbEfcNKL8SUeUyJ6nnGbsET2fxSIJ0EngXbAuevGmJaPnKlc7U3_jT">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8">Why East London Chooses Us</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 rounded-lg bg-on-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl">schedule</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[18px] mb-2">Punctuality First</h4>
+<p class="text-body-md text-on-primary-fixed-variant">We value your time. Our handymen arrive on time, every time.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 rounded-lg bg-on-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl">payments</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[18px] mb-2">Fair Pricing</h4>
+<p class="text-body-md text-on-primary-fixed-variant">Transparent quotes with no hidden call-out fees or surprises.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 rounded-lg bg-on-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl">workspace_premium</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[18px] mb-2">Expert Quality</h4>
+<p class="text-body-md text-on-primary-fixed-variant">Multi-skilled professionals with years of site experience.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 rounded-lg bg-on-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl">mop</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[18px] mb-2">Clean Working</h4>
+<p class="text-body-md text-on-primary-fixed-variant">We respect your home and always leave our workspace tidy.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-stack-lg bg-surface-bright overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Latest Reviews</h2>
+<p class="font-body-md text-on-surface-variant">Read what our local customers say about our precision and reliability.</p>
+</div>
+<div class="hidden sm:flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-primary hover:bg-primary-fixed transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-primary hover:bg-primary-fixed transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-gutter overflow-x-auto pb-8 snap-x no-scrollbar">
+<!-- Review 1 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/30">
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-primary mb-6">"Absolute professional. Arrived exactly when promised to fix a leaking tap and even sorted out a loose cabinet door while he was here. Highly recommend for anyone in Hackney."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold">JS</div>
+<div>
+<h5 class="font-label-md text-primary">James Smith</h5>
+<p class="text-[12px] text-on-surface-variant">Hackney, London</p>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/30">
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-primary mb-6">"Fantastic service. The team put up some heavy floating shelves and the finish is perfect. They were clean, tidy, and very polite. Will definitely book again."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold">SM</div>
+<div>
+<h5 class="font-label-md text-primary">Sarah Miller</h5>
+<p class="text-[12px] text-on-surface-variant">Shoreditch, London</p>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/30">
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-primary mb-6">"Excellent communication and quality work. Replaced several outdated light switches and fixed a complex wiring issue. Great value for such professional work."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-bold">DW</div>
+<div>
+<h5 class="font-label-md text-primary">David Wilson</h5>
+<p class="text-[12px] text-on-surface-variant">Stratford, London</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Coverage & Contact Grid -->
+<section class="py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-md items-start">
+<!-- Coverage Area Card -->
+<div class="bg-surface-container rounded-[32px] overflow-hidden p-8 flex flex-col h-full">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Coverage Area</h2>
+<p class="font-body-md text-on-surface-variant mb-8">Serving all of East London including Hackney, Tower Hamlets, Newham, Waltham Forest, and Greenwich.</p>
+<div class="flex-grow rounded-2xl overflow-hidden border border-outline-variant/50 min-h-[300px]">
+<div class="w-full h-full bg-cover bg-center" data-alt="A clean, minimalist stylized map illustration of East London neighborhoods like Hackney, Shoreditch, and Stratford. The map uses a professional color palette of light greys and navy blues, with major landmarks subtly indicated. No clutter, focused on professional service area visualization." data-location="East London" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBDfdzpEnfcpoFmV44tSuvwRYR9NRqApm1Evyfm-e6h3GDzrT73Ly7iPWbj9ixBZaZgJMgj8O--L0Ces3drEtW3AAYT-i57Nwfr_EOwx_Zaal5Bvdr-_U8NYPiQ5SYxVbU8I4nOTjO3RZNtDOnpau5MxnMc7s8-kfc9DhfYMQi8PPPRqb6yKYK1ck4jnI5xFQKXtQLDlkMpdwRSjiBZ2P4zEhx0qYdijP5DoeFD7iUpBfAyohvUjij')"></div>
+</div>
+<div class="mt-8 grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-label-md">Hackney</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-label-md">Shoreditch</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-label-md">Walthamstow</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-label-md">Bow &amp; Stratford</span>
+</div>
+</div>
+</div>
+<!-- Contact Form Card -->
+<div class="bg-white p-10 rounded-[32px] shadow-[0px_8px_30px_rgba(26,43,60,0.08)] border border-outline-variant/20">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Get in Touch</h2>
+<p class="font-body-md text-on-surface-variant mb-8">Ready to start your project? Fill out the form below for a quick callback.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block text-label-md font-bold text-primary mb-2">Name</label>
+<input class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Your full name" type="text">
+</div>
+<div>
+<label class="block text-label-md font-bold text-primary mb-2">Phone</label>
+<input class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="07xxx xxxxxx" type="tel">
+</div>
+</div>
+<div>
+<label class="block text-label-md font-bold text-primary mb-2">Email</label>
+<input class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="email@address.com" type="email">
+</div>
+<div>
+<label class="block text-label-md font-bold text-primary mb-2">Service Required</label>
+<select class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all appearance-none bg-transparent">
+<option>Select a service</option>
+<option>Plumbing</option>
+<option>Electrical</option>
+<option>Carpentry</option>
+<option>Painting &amp; Decorating</option>
+<option>Other / Multiple</option>
+</select>
+</div>
+<div>
+<label class="block text-label-md font-bold text-primary mb-2">Job Description</label>
+<textarea class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" placeholder="Tell us a bit about what needs doing..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold hover:bg-primary/95 transition-all shadow-lg active:scale-[0.98]" type="submit">Request Quote</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-inverse-surface text-on-primary dark:text-inverse-on-surface">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-on-primary text-3xl" style="font-variation-settings: 'FILL' 1;">handyman</span>
+<span class="font-headline-md text-headline-md font-bold text-on-primary">East London Handyman</span>
+</div>
+<p class="font-body-md text-on-primary-fixed-variant mb-6">Precision in every project. Your local, reliable experts for all home maintenance needs in East London.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-on-primary/10 flex items-center justify-center hover:bg-secondary-fixed transition-colors" href="our-services-east-london-handyman.html">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-on-primary/10 flex items-center justify-center hover:bg-secondary-fixed transition-colors" href="blog-east-london-handyman.html">
+<span class="material-symbols-outlined">camera</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-[18px] text-on-primary mb-6">Services</h4>
+<ul class="space-y-4">
+<li><a class="font-label-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="our-services-east-london-handyman.html">Plumbing</a></li>
+<li><a class="font-label-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="our-services-east-london-handyman.html">Electrical</a></li>
+<li><a class="font-label-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="our-services-east-london-handyman.html">Carpentry</a></li>
+<li><a class="font-label-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="our-services-east-london-handyman.html">Painting</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-[18px] text-on-primary mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="font-label-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="pricing-estimates-east-london-handyman.html">Pricing</a></li>
+<li><a class="font-label-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="blog-east-london-handyman.html">Our Blog</a></li>
+<li><a class="font-label-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-label-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="our-services-east-london-handyman.html">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-[18px] text-on-primary mb-6">Contact</h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 font-label-md text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-secondary-fixed">phone</span>
+                        020 7946 0000
+                    </li>
+<li class="flex items-center gap-3 font-label-md text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-secondary-fixed">mail</span>
+                        hello@eastlondonhandy.com
+                    </li>
+<li class="flex items-center gap-3 font-label-md text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-secondary-fixed">location_on</span>
+                        Hackney, London
+                    </li>
+</ul>
+</div>
+</div>
+<div class="border-t border-on-primary/10 py-8 px-margin-desktop text-center">
+<p class="font-label-md text-on-primary-fixed-variant">© 2024 East London Handyman. Precision in every project.</p>
+</div>
+</footer>
+<!-- FAB (Suppressed on Landing but kept for quick call if needed, here we'll place a sticky "Book Now" for mobile) -->
+<div class="fixed bottom-6 right-6 md:hidden z-50">
+<button class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-full shadow-2xl flex items-center justify-center active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl">add_call</span>
+</button>
+</div>
+<script>
+        // Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple header background shift on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

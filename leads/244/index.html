@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Handyman Station | Professional Home Maintenance</title>
+<meta content="Reliable, professional handyman services for electrical, plumbing, painting, and general home maintenance." name="description"/>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom smooth transition for interactive elements */
+        .btn-transition {
+            transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* Step indicators connection line */
+        .step-line::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 100%;
+            height: 2px;
+            background-color: #e2e8f0;
+            z-index: -1;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ffb690",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container": "#eceef0",
+                        "background": "#f7f9fb",
+                        "on-surface-variant": "#45474c",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "primary": "#091426",
+                        "tertiary-fixed-dim": "#7bd0ff",
+                        "tertiary-container": "#002c3e",
+                        "on-primary-container": "#8590a6",
+                        "surface": "#f7f9fb",
+                        "surface-dim": "#d8dadc",
+                        "surface-variant": "#e0e3e5",
+                        "on-background": "#191c1e",
+                        "outline-variant": "#c5c6cd",
+                        "primary-container": "#1e293b",
+                        "primary-fixed-dim": "#bcc7de",
+                        "on-surface": "#191c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#004c69",
+                        "primary-fixed": "#d8e3fb",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#bcc7de",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary-container": "#5c2400",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#9d4300",
+                        "tertiary-fixed": "#c4e7ff",
+                        "surface-tint": "#545f73",
+                        "on-tertiary-container": "#009acf",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-fixed": "#ffdbca",
+                        "on-secondary-fixed": "#341100",
+                        "secondary-container": "#fd761a",
+                        "outline": "#75777d",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#001622",
+                        "on-primary-fixed": "#111c2d",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed": "#001e2c",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#783200",
+                        "on-primary-fixed-variant": "#3c475a",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f2f4f6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "xl": "80px",
+                        "margin-mobile": "16px",
+                        "md": "24px",
+                        "max-width": "1200px",
+                        "sm": "16px",
+                        "margin-desktop": "auto",
+                        "base": "4px",
+                        "gutter": "24px",
+                        "xs": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant shadow-sm h-20">
+<nav class="flex justify-between items-center h-full px-md max-w-max-width mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2" href="#">
+<span class="material-symbols-outlined filled-icon text-secondary-container">home_repair_service</span>
+                Handyman Station
+            </a>
+<div class="hidden md:flex items-center gap-lg">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#testimonials">Testimonials</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all" href="#booking">Book Now</a>
+</div>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-primary text-on-primary py-xl md:py-[120px]">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="w-full h-full bg-cover bg-center" data-alt="A macro photography shot of professional industrial tools like a sleek metal wrench and leveler resting on a clean blueprint. The lighting is dramatic with high contrast shadows, reflecting a professional and precise atmosphere. The color palette is dominated by dark navy and silver metallic tones with warm orange light highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBE4VvB-A1jxjsiOVrlrR_d5lTeRTFXNWoqdkSv2KA4FaxFc7c2zNZnDfHBgdUsQSQ3UESAINJZW7pEMyhooSiTxGTJ9Vz8DG40g8n7iaaCooVtbvE3IV8vC_O8iY5gEiUWY9cCjxY1PPFTefpAUFt8XVnO4aDh0eondld2mVtH2CwBz9s74BlM6TuE4jxBxP5R-zGfRNIbRbDCc6JBzuIVukh1gdXXJ2B3jN9hfssl0foH2FRfoTMjfg')"></div>
+</div>
+<div class="relative max-w-max-width mx-auto px-md z-10 flex flex-col items-center text-center">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary font-label-sm mb-6 uppercase tracking-wider">Trusted by 2,000+ Homeowners</span>
+<h1 class="font-headline-xl text-headline-xl mb-6 max-w-3xl md:text-[64px] md:leading-tight">
+                    Your Trusted Partner for Home Repairs &amp; Maintenance
+                </h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-xl max-w-2xl">
+                    Professional, reliable, and efficient handyperson services for your every home need. From minor leaks to full interior painting, we handle it with master craftsmanship.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<a class="bg-secondary-container text-on-primary px-8 py-4 rounded-lg font-headline-md text-headline-md hover:brightness-110 active:scale-95 btn-transition shadow-lg" href="#booking">Book a Service</a>
+<a class="border border-on-primary-container text-on-primary px-8 py-4 rounded-lg font-headline-md text-headline-md hover:bg-white/10 active:scale-95 btn-transition" href="#services">View Services</a>
+</div>
+</div>
+</section>
+<!-- Services Overview: Bento Grid -->
+<section class="py-xl max-w-max-width mx-auto px-md" id="services">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-4">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Professional Services</h2>
+<p class="font-body-md text-on-surface-variant">We provide a comprehensive range of home maintenance and repair solutions delivered with industrial precision and corporate-grade reliability.</p>
+</div>
+<a class="text-secondary font-label-md flex items-center gap-1 group" href="#booking">
+                    View full service catalog <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Electrical Repairs -->
+<div class="md:col-span-8 bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="w-full md:w-1/2 aspect-video overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close up of a professional electrician in a clean navy uniform installing a modern smart light switch. The setting is a minimalist, bright interior with white walls. The focus is sharp on the precision of the tools and the organized workspace, reflecting reliability and technical accuracy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZsgAUQLtSG8yL9XsJMksP08VJo9YvwLF5xfOWFtCkUxjXgi7j02sLt6fEl1caJIyRxyM32x8lW2o0svmzidhsVqYr40m4M2uJxKcPV_kjs7C9wEb14zELErLMoX2v1_Z0oZKvJGXc0b-xl0KbixSztUIp3V66XoiFLGg8640mtJm6VKOoZWO08lgVfrI9c4n5wl0brhAP2BMcMt0C4TATLmN00fnAVat-MbqbcP2iV8VZuKPxgzebMA"/>
+</div>
+<div class="w-full md:w-1/2 flex flex-col justify-center">
+<span class="material-symbols-outlined text-secondary-container text-[40px] mb-4">electrical_services</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Electrical Repairs</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Expert diagnostic and repair services for wiring, lighting, and smart home installations. Safety-first approach for every job.</p>
+<a class="font-label-md text-primary underline underline-offset-4 hover:text-secondary" href="#">Learn More</a>
+</div>
+</div>
+</div>
+<!-- Plumbing Solutions -->
+<div class="md:col-span-4 bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm hover:shadow-md transition-shadow group">
+<span class="material-symbols-outlined text-secondary-container text-[40px] mb-4">plumbing</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Plumbing Solutions</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Fixing leaks, installing fixtures, and unclogging drains with professional efficiency and zero mess.</p>
+<div class="w-full aspect-square overflow-hidden rounded-lg mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-quality image of a sleek, modern chrome bathroom faucet being precisely tightened with a wrench by a professional technician. The background is a clean, white-tiled bathroom. The image emphasizes cleanliness and professional plumbing expertise with soft ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBECqx9BRayponzhqGATEOr0m-RZfZt84-AbMUN_qL6ehT9h23-KGOm6LDt833v5udVAoMN79cOCuKfHXHuptsWBlClmDqQXiOdw-3_rULjWfvU8Gh-CuFQ_tnrpNJ12kBloNtUJXM9mZPB07HjVnfC2hG7RIvGnN9IHu4znrN3neXshRYUwMR-saRbpenbW5p7q8pexsnK7m2gZn9HEuzgD2ayLrDz2vM4n7f_XsgAr-444oMYgyKPQ"/>
+</div>
+<a class="font-label-md text-primary underline underline-offset-4 hover:text-secondary" href="#">Learn More</a>
+</div>
+<!-- Painting & Decorating -->
+<div class="md:col-span-4 bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm hover:shadow-md transition-shadow group">
+<span class="material-symbols-outlined text-secondary-container text-[40px] mb-4">format_paint</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Painting &amp; Decorating</h3>
+<p class="font-body-md text-on-surface-variant mb-6">High-quality interior and exterior finishes that revitalize your living space with precision.</p>
+<div class="w-full aspect-[4/3] overflow-hidden rounded-lg mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern living room with a fresh coat of soft gray paint on one wall. A professional paint roller and a clean bucket of paint are visible in the foreground, suggesting a job well done. The room is filled with bright, natural daylight, highlighting the smooth texture of the walls and the clean edges of the work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAtAbCbrEvfN5obcn-pWlHPhMzf3LrRgcFVW2kWY2jCkzMF6_HyUybrMOpNCiUEYcqXtpiW1TaSTcS5ph0VbRFSg6s_8vWoukMwbEtLC1Jc5umy_Et6vd38eBrIPPDkQwEASpGfmImCivhI1QUxiUbbObTjf12HAYw18eGUsNxilhHTCzq4gLb1lQWYq55z_s6cWJsRgIoBUuVCvfj98C5rHW-ObvvJFNKWUTALzPhloiAHzI_pgH_vA"/>
+</div>
+<a class="font-label-md text-primary underline underline-offset-4 hover:text-secondary" href="#">Learn More</a>
+</div>
+<!-- General Maintenance -->
+<div class="md:col-span-8 bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex flex-col md:flex-row-reverse gap-6">
+<div class="w-full md:w-1/2 aspect-video overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A montage of home maintenance tasks: a wooden fence being repaired, a shelf being perfectly leveled, and a door hinge being oiled. The aesthetic is organized and structural, featuring high-contrast colors and clean lines. The light is bright and clear, reflecting a reliable and professional service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBweKYVuRCE8HL7ceggmX1jyus07LmDNk8fE_J41kEgm5WqbDr3wB94UjPBEIpvVq2EOJfKwdRRI-WJQrkHyQhHHSzR6tn9aL5f5Ge8m5oAxQD43_yDK-Sa4LiJ9EJ0gzRjSlTpTO21Gvxi8jJi76pNqIma8ETnvFFl7wl952QuCRVPD-NUEa3ceqtCTWJmjclew7mYNf-uUW_dPa-8Hks8tRzSTfETXcBdhtxoM7ZyYzBVCnZSCRgSBA"/>
+</div>
+<div class="w-full md:w-1/2 flex flex-col justify-center">
+<span class="material-symbols-outlined text-secondary-container text-[40px] mb-4">construction</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">General Maintenance</h3>
+<p class="font-body-md text-on-surface-variant mb-6">From gutter cleaning to furniture assembly, we take care of the 'to-do' list that keeps your home running smoothly.</p>
+<a class="font-label-md text-primary underline underline-offset-4 hover:text-secondary" href="#">Learn More</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="bg-surface-container-low py-xl overflow-hidden" id="about">
+<div class="max-w-max-width mx-auto px-md grid grid-cols-1 md:grid-cols-2 items-center gap-xl">
+<div class="relative">
+<div class="rounded-lg overflow-hidden shadow-lg transform -rotate-2">
+<img class="w-full aspect-[4/5] object-cover" data-alt="A professional portrait of a diverse team of three handypeople wearing branded navy uniforms with orange logos. They stand confidently in front of a well-organized mobile workshop van. The mood is professional and trustworthy, with warm morning sunlight illuminating the scene and casting soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0QyTp3Ow8sGk3YHyjodp8gxh1tNjRmdR-FtkhWSAw420wTN-Tf5JuteZb3i-eFX9kFkv7tzdFBMZ2I2pT-RVJtxvnPwK929f50x-OtIIQbFeMwYovl4rUMOU1h9jMTfhCxIkkKYdvzZ3F5gtLEvMdEXbLSlOGFiSo_tf1uVsTZa6ca_we76TfewKD2eLgL86rJ0j_0lMTjHl4anSDwM2laCRgM9iEv35f5aCbtEtwJ1ZiNLyrcLnX-Q"/>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-secondary-container p-8 rounded-lg shadow-xl text-on-primary hidden lg:block">
+<p class="text-[48px] font-bold leading-none mb-2">15+</p>
+<p class="font-label-md">Years of Professional<br/>Excellence</p>
+</div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Built on Trust and Precision</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        Founded in 2009, Handyman Station was born from a simple mission: to bring professional-grade engineering standards to the residential home maintenance industry.
+                    </p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded-lg flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary">verified</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] text-primary mb-1">Quality Craftsmanship</h4>
+<p class="font-body-md text-on-surface-variant">We don't just "fix" things; we ensure they are repaired to last, using high-quality materials and technical expertise.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded-lg flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary">schedule</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] text-primary mb-1">Unmatched Reliability</h4>
+<p class="font-body-md text-on-surface-variant">We value your time. Our technicians arrive on schedule, every time, with a fully-equipped mobile workshop.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded-lg flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary">security</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] text-primary mb-1">Fully Insured</h4>
+<p class="font-body-md text-on-surface-variant">Complete peace of mind with comprehensive liability insurance and background-checked professional staff.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Online Booking Section -->
+<section class="py-xl max-w-[800px] mx-auto px-md" id="booking">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Book Your Service Online</h2>
+<p class="font-body-md text-on-surface-variant">Fast, secure, and transparent booking process. Get a professional at your door in 3 easy steps.</p>
+</div>
+<!-- Progress Indicator -->
+<div class="flex justify-between items-center mb-xl relative">
+<div class="flex flex-col items-center z-10">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold mb-2">1</div>
+<span class="font-label-sm text-primary">Service</span>
+</div>
+<div class="h-[2px] flex-1 bg-primary mx-4"></div>
+<div class="flex flex-col items-center z-10">
+<div class="w-10 h-10 rounded-full border-2 border-outline-variant bg-surface-container-lowest text-on-surface-variant flex items-center justify-center font-bold mb-2">2</div>
+<span class="font-label-sm text-on-surface-variant">Schedule</span>
+</div>
+<div class="h-[2px] flex-1 bg-outline-variant mx-4"></div>
+<div class="flex flex-col items-center z-10">
+<div class="w-10 h-10 rounded-full border-2 border-outline-variant bg-surface-container-lowest text-on-surface-variant flex items-center justify-center font-bold mb-2">3</div>
+<span class="font-label-sm text-on-surface-variant">Contact</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-md md:p-xl rounded-lg border border-outline-variant shadow-lg">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="col-span-2">
+<label class="block font-label-md text-primary mb-2">Select Service</label>
+<select class="w-full p-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all">
+<option>Electrical Repairs</option>
+<option>Plumbing Solutions</option>
+<option>Painting &amp; Decorating</option>
+<option>General Maintenance</option>
+<option>Custom Request</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-primary mb-2">Preferred Date</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" type="date"/>
+</div>
+<div>
+<label class="block font-label-md text-primary mb-2">Preferred Time Slot</label>
+<select class="w-full p-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all">
+<option>Morning (8am - 12pm)</option>
+<option>Afternoon (12pm - 4pm)</option>
+<option>Evening (4pm - 7pm)</option>
+</select>
+</div>
+<div class="col-span-2">
+<label class="block font-label-md text-primary mb-2">Full Name</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-primary mb-2">Email Address</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" placeholder="john@example.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-primary mb-2">Phone Number</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="col-span-2">
+<label class="block font-label-md text-primary mb-2">Project Details</label>
+<textarea class="w-full p-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" placeholder="Briefly describe what needs fixing..." rows="4"></textarea>
+</div>
+</div>
+<button class="w-full bg-secondary-container text-on-primary py-4 rounded-lg font-headline-md text-headline-md hover:brightness-110 active:scale-95 btn-transition shadow-lg" type="submit">Confirm Booking Request</button>
+</form>
+</div>
+</section>
+<!-- Social Proof Section -->
+<section class="bg-primary py-xl" id="testimonials">
+<div class="max-w-max-width mx-auto px-md">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-4">Real Reviews from Happy Homeowners</h2>
+<div class="flex justify-center items-center gap-1 text-secondary-container mb-4">
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="text-on-primary ml-2 font-label-md">4.9/5 based on 800+ reviews</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-primary-container p-8 rounded-lg relative overflow-hidden group">
+<span class="material-symbols-outlined absolute -top-4 -right-4 text-white/5 text-[120px] select-none pointer-events-none">format_quote</span>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+</div>
+<p class="font-body-md text-on-primary-container mb-6 italic">"Absolutely professional. They fixed an electrical issue that two other companies couldn't diagnose. Arrived right on time and left the place spotless. Highly recommended!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional close-up headshot of a middle-aged woman with a kind smile, set against a bright modern home background. The image is crisp and professional, fitting a testimonial section." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3KGauKglkDJV7jifFn9rMMR8aETb_TqcobTvvVL7BcBjSFfZAU5V1gKJ-c6sOd3nZMkv11GGKJBp3MtPydW2Xfa-VmM6_ndt7EZ5QoreEVqglivCmEwhOnoCoHM0SngLcj5D_vvDpRxQxpT5lVQrNk6q9y1R6G9kNxt73dREceLvQLHztb_zbaDo2BElF4SEO0EO7ioNlBPqBLLBuYadrYtxh4lolZ9YYBucFfI5mJC28a4w-giUYUQ"/>
+</div>
+<div>
+<h5 class="font-label-md text-on-primary">Sarah Jenkins</h5>
+<span class="font-label-sm text-on-primary-container">Homeowner, Chicago</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-primary-container p-8 rounded-lg relative overflow-hidden group">
+<span class="material-symbols-outlined absolute -top-4 -right-4 text-white/5 text-[120px] select-none pointer-events-none">format_quote</span>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+</div>
+<p class="font-body-md text-on-primary-container mb-6 italic">"Had my entire living room painted and some shelves installed. The attention to detail on the edging was perfect. It's rare to find craftsmen who take such pride in their work."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young professional man in a crisp white shirt, smiling warmly. He is in a brightly lit office environment, projecting a sense of trust and satisfaction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTEOF_j2db2xEi_ZtuVKo7BvupQuH9id7XIH6_67tBkXbUiQZdVE3GJLqh49Rq1yZS24jILLr8MRq97c808Z2ltn7qfZ6W-ST_CERJFExfhhlXadVbA56kv7IkKAegorm9tEOLJI08d1HNpcfifBSTCYxYalv4ISxNPTnBz_gkvX_Gle2byCQdqlZPT6ydDfuE0s0H2_D7B4XbD3RBZ9kfaNSYH-ygAhp3YeZQQk1OzFohzn1eJQDnlw"/>
+</div>
+<div>
+<h5 class="font-label-md text-on-primary">David Chen</h5>
+<span class="font-label-sm text-on-primary-container">Property Manager</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-primary-container p-8 rounded-lg relative overflow-hidden group">
+<span class="material-symbols-outlined absolute -top-4 -right-4 text-white/5 text-[120px] select-none pointer-events-none">format_quote</span>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+</div>
+<p class="font-body-md text-on-primary-container mb-6 italic">"Handyman Station is my go-to for all repairs. Transparent pricing, easy online booking, and honest technicians. They even fixed a small leak for free while doing the main job!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of an elderly gentleman with silver hair and a friendly, satisfied expression. He is standing in front of a well-maintained garden. The lighting is soft and natural, emphasizing trust and community." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6-3CpWmpFB-5FIqVGBVgMOQWE9jKYFIT8t0d8T850Q-KscJU97fuY7UV0OZvaon9k4JwEtJKKD6xY9ZeadvVbXK7jFarpIs5IV0bfeGxP7dZlfYHI31xAXLjsB4ouwoQkna7TJ8yFddYCQAxPvFbVpBe9h3iUohmOsR5eWUY2zM7gHXLgXQVf9RN9n5VMZKC7ymNJTdzY5UgREvrBHY6KyioXTnxB_HEHiLer1Mue4hNkm7WTEVE0yg"/>
+</div>
+<div>
+<h5 class="font-label-md text-on-primary">Robert Miller</h5>
+<span class="font-label-sm text-on-primary-container">Retired Homeowner</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Location -->
+<section class="py-xl max-w-max-width mx-auto px-md" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Get in Touch</h2>
+<p class="font-body-lg text-on-surface-variant mb-xl">Have a specific project in mind? Contact us today for a free, no-obligation quote or to discuss your maintenance needs.</p>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-surface-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label-sm text-on-surface-variant uppercase tracking-wider">Call Us Anytime</p>
+<p class="font-headline-md text-[20px] text-primary">(555) 123-4567</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-surface-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-label-sm text-on-surface-variant uppercase tracking-wider">Email Us</p>
+<p class="font-headline-md text-[20px] text-primary">hello@handymanstation.com</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-surface-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label-sm text-on-surface-variant uppercase tracking-wider">Main Station</p>
+<p class="font-headline-md text-[20px] text-primary">452 Industrial Way, Chicago, IL 60601</p>
+</div>
+</div>
+</div>
+<div class="mt-xl flex gap-4">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center rounded-lg hover:bg-primary hover:text-on-primary btn-transition" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+</a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center rounded-lg hover:bg-primary hover:text-on-primary btn-transition" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+<div class="relative bg-surface-container h-[400px] md:h-full rounded-lg overflow-hidden border border-outline-variant">
+<!-- Map Placeholder with Location Data -->
+<div class="w-full h-full flex flex-col items-center justify-center p-md text-center" data-location="Chicago" style="">
+<span class="material-symbols-outlined text-[64px] text-primary mb-4">map</span>
+<p class="font-headline-md text-primary">Interactive Service Area Map</p>
+<p class="font-body-md text-on-surface-variant max-w-xs mx-auto">We proudly serve Chicago and all surrounding suburbs within a 50-mile radius.</p>
+<div class="mt-xl grid grid-cols-2 gap-4 text-left">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary-container"></div>
+<span class="font-label-sm">Primary Area</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="font-label-sm">Extended Area</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary w-full py-xl">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-md max-w-max-width mx-auto">
+<div>
+<a class="font-headline-md text-headline-md text-on-primary font-bold block mb-4" href="#">Handyman Station</a>
+<p class="font-body-md text-on-primary-container mb-6 max-w-xs">© 2024 Handyman Station. Professional Home Maintenance. Your dependable partner for quality repairs and precision craftsmanship.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined filled-icon text-secondary-container">shield</span>
+<span class="font-label-sm">Fully Insured &amp; Bonded</span>
+</div>
+</div>
+<div>
+<h6 class="font-headline-md text-[20px] text-on-primary mb-6">Quick Links</h6>
+<div class="grid grid-cols-2 gap-4">
+<a class="font-label-sm text-on-primary-container hover:text-on-primary hover:underline transition-all" href="#services">Services</a>
+<a class="font-label-sm text-on-primary-container hover:text-on-primary hover:underline transition-all" href="#about">About</a>
+<a class="font-label-sm text-on-primary-container hover:text-on-primary hover:underline transition-all" href="#testimonials">Testimonials</a>
+<a class="font-label-sm text-on-primary-container hover:text-on-primary hover:underline transition-all" href="#contact">Contact</a>
+<a class="font-label-sm text-on-primary-container hover:text-on-primary hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="font-label-sm text-on-primary-container hover:text-on-primary hover:underline transition-all" href="#">Terms of Service</a>
+</div>
+</div>
+<div>
+<h6 class="font-headline-md text-[20px] text-on-primary mb-6">Newsletter</h6>
+<p class="font-body-md text-on-primary-container mb-4">Get home maintenance tips and seasonal discounts delivered to your inbox.</p>
+<form class="flex flex-col gap-3">
+<input class="bg-primary-container border border-on-primary-fixed-variant p-3 rounded-lg text-on-primary outline-none focus:border-secondary-container transition-all" placeholder="Email Address" type="email"/>
+<button class="bg-secondary-container text-on-primary p-3 rounded-lg font-label-md hover:brightness-110 active:scale-95 transition-all">Subscribe</button>
+</form>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Micro-interactions
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth Scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Compensate for header
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Form placeholder logic (visual only)
+            const form = document.querySelector('form');
+            if(form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert('Booking request received! We will contact you shortly to confirm.');
+                    form.reset();
+                });
+            }
+        });
+    </script>
+</body></html>

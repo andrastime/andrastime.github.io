@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GreenScape | Cultivating Nature with Precision</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Source+Sans+3:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#dae4ea",
+                        "on-secondary-container": "#466d24",
+                        "on-primary-container": "#819986",
+                        "on-primary-fixed": "#0b2013",
+                        "on-tertiary-fixed": "#291800",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#0c2000",
+                        "on-primary-fixed-variant": "#364c3c",
+                        "primary-fixed-dim": "#b4cdb8",
+                        "outline": "#737973",
+                        "secondary-container": "#bfee95",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#a6d47e",
+                        "on-surface-variant": "#434843",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffddb2",
+                        "surface": "#f3faff",
+                        "on-background": "#131d21",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#2b5008",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#e1c298",
+                        "inverse-primary": "#b4cdb8",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#4d6453",
+                        "inverse-surface": "#283237",
+                        "tertiary-container": "#3b280a",
+                        "background": "#f3faff",
+                        "surface-bright": "#f3faff",
+                        "surface-container": "#e5eff6",
+                        "primary-container": "#1b3022",
+                        "surface-container-high": "#dfeaf0",
+                        "secondary-fixed": "#c2f198",
+                        "outline-variant": "#c3c8c1",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#131d21",
+                        "primary-fixed": "#d0e9d4",
+                        "inverse-on-surface": "#e8f2f9",
+                        "primary": "#061b0e",
+                        "surface-container-low": "#ebf5fc",
+                        "on-tertiary-fixed-variant": "#594323",
+                        "surface-dim": "#d1dce2",
+                        "on-tertiary-container": "#ab8e68"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "section-gap": "120px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["\"Source Sans 3\""],
+                        "body-lg": ["\"Source Sans 3\""]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(195, 200, 193, 0.3);
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(6, 27, 14, 0.8), rgba(6, 27, 14, 0.2));
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary">GreenScape</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#portfolio">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#contact">Contact</a>
+</div>
+<button class="bg-secondary text-white px-6 py-2.5 rounded-lg font-headline-sm text-label-sm hover:bg-primary transition-all active:scale-95 duration-150">
+                Get a Quote
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[921px] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0" data-alt="A sprawling, perfectly manicured estate garden at sunrise, featuring rolling emerald green lawns, decorative stone pathways, and expertly pruned ornamental trees. The golden morning light casts long, soft shadows across the dew-covered grass, creating a serene and luxurious atmosphere. The composition is wide-angle, emphasizing the vast, open-air scale of high-end landscape architecture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrbeNARXiuuafsYH92RnKwHkNp2LLtBPLuoOc7fd3YuJVYNLWzm1Ma3uoTAYnd-UN-8K8qW_l_1-jmLYKK37zUOeJ7_jyPtBuuvTsrP4RXSE0W4daHC8K6ABdlfs7xx2w47eIbmN58EIet0ZeuNz37T5BzBSy4zU9IXL4yYwo_F2TcLpm2Y4kw2uJkDcDEwiTee0ICfzPjUtAC99DHqr-nNQCBoVfx_NOkDAfpcuu-68otN7qFbLkt4A')">
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-2xl">
+<h1 class="text-white font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+                    Transform Your Outdoor Space into a Masterpiece.
+                </h1>
+<p class="text-white/90 font-body-lg text-body-lg mb-10 max-w-xl">
+                    Experience the pinnacle of residential landscaping. We blend architectural precision with the raw beauty of nature to create living works of art.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary text-white px-8 py-4 rounded-lg font-headline-sm text-headline-sm hover:bg-primary text-center transition-all shadow-lg hover:shadow-secondary/20" href="#contact">
+                        Request an Estimate
+                    </a>
+<a class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-lg font-headline-sm text-headline-sm text-center hover:bg-white/20 transition-all" href="#portfolio">
+                        View Our Work
+                    </a>
+</div>
+</div>
+</div>
+</header>
+<!-- Services Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="services">
+<div class="text-center mb-16">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest">Our Expertise</span>
+<h2 class="font-headline-md text-headline-md md:text-[32px] mt-2">Professional Landscape Services</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="bg-white border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up, high-detail shot of a professional lawn mower blade precisely cutting vibrant, thick green grass on a sunny day. The focus is sharp on the texture of the blades of grass and the clean cut line. The lighting is bright and clear, reflecting a professional maintenance standard. The overall aesthetic is clean and industrial-meets-organic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpMjN8b6R_ZRGBrFAQHxS0Y_A8IS8HGQ5PrN5yeb1bUT-k95xQbhf2Z6sSBPsLM_oCnuV9TiTkhQ27cQR7_XtgCF_NJqn2BROp4siQz86nKe_xWqNdcclxJ-19kRQ_4UYI5U-CB_CuvxcTRPunsqKoLnLOP_fCjWPqT3z0AMHvMHzUZYbZWkrtrqbmA9ib5WuykytYO3O-v8ZfrcFooMB6ee0f5euwjAiyHmW3HhcfLSXcWQmAwKdgvw"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">content_cut</span>
+<h3 class="font-headline-md text-headline-md">Precision Lawn Care</h3>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">
+                        Routine maintenance including precision mowing, edging, and fertilization programs tailored to your specific turf variety.
+                    </p>
+<a class="text-primary font-label-sm text-label-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="bg-white border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An architectural landscape blueprint overlaying a photo of a luxury backyard garden in progress. The design includes zones for a modern fire pit, layered garden beds, and accent lighting. The mood is sophisticated and technical, showing the bridge between creative vision and physical execution in landscape design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5-jhB_A2EV1O8ivk4ST4TUTTExy7BPzNfxtgen5HMFX25tVOPfPjPGyFHUsmIa9j7hn2heh-BNpsqUeJWQVXWJFhMfx_lYJWVvqRKz_fu5P-bkIPuqVwmL1jgmCHlWC3IOSX3Yu2My1TwI3gBqSNm-u0lYg6nYIARGKcALXf9mVjMFtfmkCYZG13aoEqmvyukpvt1KTQykp8n4fVFWpZuITKVcyzAD8NUy-rOfwwXzxfu5VMAlSNhNw"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">architecture</span>
+<h3 class="font-headline-md text-headline-md">Landscape Design</h3>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">
+                        Custom digital 3D renderings and master plans that transform your vision into a sustainable, functional outdoor sanctuary.
+                    </p>
+<a class="text-primary font-label-sm text-label-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="bg-white border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A masterfully crafted flagstone patio area featuring a built-in outdoor kitchen and a natural stone retaining wall. The masonry work is impeccable, with tight joints and rich textures of slate and granite. The setting is surrounded by lush forest trees under a soft, diffused twilight sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmKPmDYGMPmQ4GPn3df4NZkD5UPX10yPqkcOCTvxzowiW_BeVashNJXe9zURkNK5RvpgbSDsZdaO6h_5KsPLdmFtEiKUNevx5Qn81y93tQL0zQFx07C1tzegIRTXqILLecaDznA4_pnHAO2M8VflRyCRrccyp70klbKvC22YobQDCodZGFOsJVFknZu_wVD2_fS0tL9TennsQbtQqhatHWzLwCkGjkJWQIKToEc8n0EFDDKOplni3PJA"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">foundation</span>
+<h3 class="font-headline-md text-headline-md">Hardscaping Excellence</h3>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">
+                        Structural beauty including natural stone patios, retaining walls, fire pits, and walkways built to last generations.
+                    </p>
+<a class="text-primary font-label-sm text-label-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="bg-surface-container py-section-gap" id="about">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden relative z-10">
+<img class="w-full h-full object-cover" data-alt="A portrait of a professional landscape architect in a modern field vest, standing in a lush garden with a digital tablet showing project designs. The background is a soft-focus garden with diverse plantings and structured hedges. The professional's expression is confident and friendly, embodying the brand's core values of reliability and expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZNP2AVy7n4mxFB9BBXkBFqrC9EjL5gXEUGm6NRV6hoS-izk7KB67WNEheigx5W7O-oLpm1GXZTRIq1Pa_mrFp6iiWdzRSLBV4nvkDWniLt0K2Kdv2EPlxoj4c5UYRZrB6ViE78-tR0b1gjBt7Ie8bMogoZoJjDGniGcdiNAeBEtksAPd8Gtf9tTxYX6xxFgb53fCQwudHOL9yjAm-DVQuwQiY1lsX1JGZt-GQDArUvI3UxJvNC6G5Ew"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -right-6 w-48 h-48 bg-secondary/10 rounded-2xl -z-0"></div>
+<div class="absolute -top-6 -left-6 w-32 h-32 border-l-4 border-t-4 border-secondary/30 rounded-tl-2xl -z-0"></div>
+</div>
+<div>
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest">Our Legacy</span>
+<h2 class="font-headline-md text-headline-md md:text-[40px] mt-2 mb-6 leading-tight">Expert Care for Your Green Space.</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-8 leading-relaxed">
+                    At GreenScape, we believe that a garden is more than just land; it's an extension of your home and a reflection of your lifestyle. For over two decades, our team of horticultural experts and master craftsmen have dedicated themselves to the art of precision landscaping.
+                </p>
+<div class="grid grid-cols-2 gap-8 mb-10">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">20+ Years</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">Of industry-leading experience in premium maintenance.</p>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Eco-Conscious</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">Sustainable practices and organic soil treatments.</p>
+</div>
+</div>
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-headline-sm text-headline-sm hover:bg-secondary transition-all">
+                    Read Our Story
+                </button>
+</div>
+</div>
+</section>
+<!-- Portfolio (Bento Grid) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="portfolio">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest">Showcase</span>
+<h2 class="font-headline-md text-headline-md md:text-[32px] mt-2">The GreenScape Gallery</h2>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-secondary text-white rounded-full text-label-sm font-label-sm">All</button>
+<button class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-label-sm font-label-sm hover:bg-secondary hover:text-white transition-all">Lawns</button>
+<button class="px-4 py-2 bg-surface-variant text-on-surface-variant rounded-full text-label-sm font-label-sm hover:bg-secondary hover:text-white transition-all">Hardscape</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[800px]">
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-2xl shadow-lg border border-outline-variant/20">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A wide-angle, panoramic shot of a completed residential project featuring a multi-level terrace garden with custom stone walls, a central infinity-edge koi pond, and lush, layered perennials. The lighting is soft afternoon sun, highlighting the rich textures of the vegetation and stonework. This is a showcase of total landscape transformation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpQMMHxccAeGm_o3PrzuNy9x2UZYNm5pHn1R983NreZwRnWd8KXo_nqS3zu6OO6Qi2tb2WqajGK-Q3O2Xx1BBTcsz5HXOcSOO0BwgMih_01irEEJogKFMeEHoRfIwq7PJHRshdk2Cl7ZutJRrsLw6v6EkalgxtXgsTnxC9rnIIsMY3QtsoKbjprGzfI0EnYt_iS2wNU-VLfgbFgz21KspbFo9K4Tk4PicuzLP8tdWD43rvm5KLneN0oQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+<p class="text-white font-label-sm text-label-sm uppercase tracking-widest mb-2">Residential Masterpiece</p>
+<h3 class="text-white font-headline-md text-headline-md">The Sterling Estate</h3>
+</div>
+</div>
+<div class="md:col-span-2 group relative overflow-hidden rounded-2xl shadow-lg border border-outline-variant/20">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A top-down architectural view of a geometric modern lawn with perfectly straight, alternating green and deep green mower stripes. Flanked by minimalist boxwood hedges and dark mulch paths. The aesthetic is extremely clean, showcasing the precision and attention to detail of professional maintenance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyAA9WRxP8D2U4BHxg_XBnVT7_Z04sQbp3spA8TU2w3PfyDNFpwoNm9fRNqcjtwGq7T_PhGH93z5YtIR9YUUYlWXydqXS2vRhWXf2K8jPx5talq3P7KQhQo_s69_GgJ-YPBE7iMKxnGqRtsKjkqtz84FOU3mHwEcfjc67IUEeLeZry2V63ZqcsUK_StxNA-uoSpPXJYZd7qMCxBmIoDKoGX7TvQzwlzWKjZeFoYsWFQ2XyeXypFVlfSQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white font-headline-md text-headline-md">Modern Precision Mow</h3>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl shadow-lg border border-outline-variant/20">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A cozy, intimate outdoor fire pit area at night. The fire is glowing warmly, surrounded by elegant Adirondack chairs on a circular gravel base. Soft landscape lighting illuminates the surrounding trees, creating a magical, inviting atmosphere. High-end hardscape and lighting integration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPCJh8RbPEXj9kKxr-tx93BFD_NzAbyj7aFc7DKqyCJe5W7nui-DSy3LQ80AhOJXJNW0YAYb9n6qIu--BVI-rSeoSJiSJXAwYdUjt6tnk_N5Cinx4W7Bm2iGqYN9EZj3hIQG1lKqhi4zhcUxw7VUSs_pzRPD2jPgmyE5p6ExWltLBxg_Qd9UtBxySG9g2O-y2_ec34QWSw5SCTdIJgfZoAu4jJ-cuHSUTAUYOB6mN7VdlvQnodlMxHCA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<h3 class="text-white font-headline-sm text-headline-sm">Twilight Fire Pit</h3>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl shadow-lg border border-outline-variant/20">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A vibrant English-style flower garden in peak summer bloom, featuring a mix of lavender, hydrangeas, and roses. A winding stone path leads through the blossoms toward a classic wooden arbor. The colors are rich and saturated, symbolizing the life and vitality of expert gardening." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQc1-BcTT3ensNHyROrzZRUpTpXp6ojbCbHbc64BSjCsrenv2ZEqyXfhPC5Hfl1lGTD64ZOZNqpScbBQRo_riEkm2CtXLv40iRYeVPHub8gnYyOERkbCxrYqTy1h0YHsCMR7bntMPugKmUCg9J2GqATtTkFJv54lynlZ4c1sqAyaHuNLIZn0OGa_23Pfj-M7TOG7NHKrs_5GN-g0gLVRovk9L1otbRcMgjaAYCfDdfXfQfQR1NfIiq9A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<h3 class="text-white font-headline-sm text-headline-sm">Bloom Garden</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="bg-primary text-white py-section-gap overflow-hidden relative">
+<!-- Abstract organic pattern in background -->
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<path d="M47,-62.4C60.1,-52.1,69.5,-37.6,73.5,-22.1C77.5,-6.6,76.1,9.9,71.1,26.4C66.1,42.9,57.5,59.3,44.1,67.7C30.6,76.1,12.3,76.5,-5.5,74.2C-23.3,71.9,-40.6,66.9,-54.6,56.5C-68.5,46.1,-79.1,30.3,-82.1,13.2C-85.1,-3.9,-80.5,-22.3,-70.6,-36.4C-60.7,-50.5,-45.5,-60.3,-30.5,-69.5C-15.5,-78.6,-0.7,-87.1,14,-84.9C28.7,-82.6,47,-62.4Z" fill="#ffffff" transform="translate(200 200)"></path>
+</svg>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+<div class="text-center mb-16">
+<span class="text-secondary-fixed font-label-sm text-label-sm uppercase tracking-widest">Testimonials</span>
+<h2 class="font-headline-md text-headline-md md:text-[32px] mt-2">What Our Clients Say.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20">
+<div class="flex gap-1 text-secondary-fixed mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg mb-6 italic">"GreenScape transformed our overgrown backyard into a luxury retreat. Their attention to detail on the stonework was truly remarkable."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary">
+<img class="w-full h-full object-cover" data-alt="A friendly middle-aged woman with a warm smile, wearing stylish glasses and a cream-colored sweater, set against a blurred indoor home library background. Professional headshot quality, bright and welcoming." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCToil6qsFMd0pD4GEcZndSF6shCrEgII8KN_hZQkOZ_AzZv6kh_6ZlZVWCuqT1rbOQywGMuNMfSyiHZye_M3vH-iBG0DePwUKUtbLC1DAPIlp-TR4Mp59Hd7zBPDrpkZScTu3MDnoTThdOMZwfUxkhTQHNDVRcAgF__1VfNpP1NmVjldPhpMM-9VLVmMTVm9mwGvVND7lW1EcRm7CSdsKFjKG-643P-rDggw8Jmj9d0kbEB_TrEbO9Eg"/>
+</div>
+<div>
+<p class="font-headline-sm text-label-sm">Sarah Jenkins</p>
+<p class="text-white/60 text-sm">Residential Client</p>
+</div>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20">
+<div class="flex gap-1 text-secondary-fixed mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg mb-6 italic">"The weekly maintenance team is always professional and punctual. Our lawn has never looked this lush or healthy."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary">
+<img class="w-full h-full object-cover" data-alt="A professional man in his 40s wearing a crisp navy polo shirt, standing in a sunlit garden. He has a satisfied and relaxed expression. High-quality commercial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArvdvj0BfnmURwaE_zA_rOjO2d8wTuhh1a6NtvvnVJ9XamBjCsAhAEuSejI7yw1JFDvwbYc-WjFkXE6StYZ6-Rz5lQIAf64KEko00rfCJri-dwcv2lZuFHNjsL5wstGc4o2O6EgbsOtj5eHqcL3Kq8aOgT2WKLYXLNwa1BXSZp7D11CBaOch0k3RqtFnDL45w5ixTl-Mj9NeT9WZv6ly-JyF6xVeZZuIPtDgU9ByHbFwXgD2nscPTrTA"/>
+</div>
+<div>
+<p class="font-headline-sm text-label-sm">Marcus Thorne</p>
+<p class="text-white/60 text-sm">Commercial Property Manager</p>
+</div>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20">
+<div class="flex gap-1 text-secondary-fixed mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg mb-6 italic">"From the first 3D design to the final planting, the process was seamless. They really understood the aesthetic we were going for."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary">
+<img class="w-full h-full object-cover" data-alt="An artistic professional woman in her 30s with short hair, wearing a designer earth-toned blouse, standing in front of a modern architectural home. Soft morning lighting, high-end lifestyle photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsll--Mj5H1pZdw_S4s8znqnRlBoQBu5gjwMzGu_Eq3h4nL599fjp23OlzJk6Q2zhbpRCMlxLlYWeUJI6ikvL2LG3DWwI3XwECsjoT9Lh5NeOHeh2La6S5fPQt7OWifZS7ZLulwQ44z1AKAEVxKt8QctA8SVtn-pNZF9rtUGsPAoOiUx_pdVnFUqHHkGXsmN4sYYBv4ZRudXWkYZFRpD8v_SwHhlrbrnHv_MAJs6O_zY8WPBtrGtCb8g"/>
+</div>
+<div>
+<p class="font-headline-sm text-label-sm">Elena Rodriguez</p>
+<p class="text-white/60 text-sm">Homeowner</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest">Connect</span>
+<h2 class="font-headline-md text-headline-md md:text-[32px] mt-2 mb-6">Let's Grow Something Beautiful.</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-8">
+                    Ready to elevate your outdoor living experience? Fill out the form below and one of our experts will contact you for a consultation.
+                </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Call Us</p>
+<p class="font-headline-sm text-headline-sm text-primary">(555) 123-4567</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Our Studio</p>
+<p class="font-headline-sm text-headline-sm text-primary">1200 Greenway Drive, Ste 400<br/>Portland, OR 97201</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 md:p-12 rounded-2xl border border-outline-variant/30 shadow-sm">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-low border-outline-variant focus:border-secondary focus:ring-0 rounded-lg py-3 px-4 transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-low border-outline-variant focus:border-secondary focus:ring-0 rounded-lg py-3 px-4 transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Service Interest</label>
+<select class="w-full bg-surface-container-low border-outline-variant focus:border-secondary focus:ring-0 rounded-lg py-3 px-4 transition-all">
+<option>Lawn Maintenance</option>
+<option>Landscape Design</option>
+<option>Hardscaping</option>
+<option>Irrigation Systems</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Your Message</label>
+<textarea class="w-full bg-surface-container-low border-outline-variant focus:border-secondary focus:ring-0 rounded-lg py-3 px-4 transition-all" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-white py-4 rounded-lg font-headline-sm text-headline-sm hover:bg-primary transition-all shadow-md" type="submit">
+                        Submit Request
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto flex flex-col gap-base">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 pb-12 border-b border-outline-variant/10">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">GreenScape</div>
+<div class="flex flex-wrap gap-8">
+<a class="text-on-surface-variant hover:text-secondary hover:underline transition-all font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary hover:underline transition-all font-body-md text-body-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-secondary hover:underline transition-all font-body-md text-body-md" href="#">Service Areas</a>
+<a class="text-on-surface-variant hover:text-secondary hover:underline transition-all font-body-md text-body-md" href="#">Careers</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">camera</span>
+</a>
+</div>
+</div>
+<div class="pt-8 text-center md:text-left">
+<p class="text-on-surface-variant font-body-md text-body-md">© 2024 GreenScape Lawn & Garden. Cultivating nature with precision.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal interaction
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-8', 'opacity-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'translate-y-8', 'opacity-0');
+            observer.observe(section);
+        });
+
+        // Instant classes for hero to avoid flash
+        const hero = document.querySelector('header');
+        hero.classList.remove('translate-y-8', 'opacity-0');
+    </script>
+</body></html>

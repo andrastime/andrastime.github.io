@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>SiteHunter — Email Template Variables</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: #1a2233;
+        background: #f7f9fc;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+      h1 {
+        font-size: 1.7rem;
+        margin: 0 0 4px;
+      }
+      .sub {
+        color: #5b667a;
+        margin: 0 0 32px;
+      }
+      h2 {
+        font-size: 1.15rem;
+        margin: 40px 0 12px;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 0.9em;
+        background: #e9eef6;
+        color: #1c3a5e;
+        padding: 1px 6px;
+        border-radius: 5px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 8px 0;
+        font-size: 0.95rem;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid #dde3ec;
+        vertical-align: top;
+      }
+      th {
+        color: #5b667a;
+        font-weight: 600;
+      }
+      .callout {
+        border: 1px solid #f0d48a;
+        background: #fdf6e3;
+        border-left: 4px solid #e0a800;
+        border-radius: 8px;
+        padding: 16px 18px;
+        margin: 12px 0;
+      }
+      .callout strong {
+        color: #7a5900;
+      }
+      footer {
+        margin-top: 48px;
+        color: #8a94a6;
+        font-size: 0.85rem;
+      }
+      a {
+        color: #2563eb;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: #d6deea;
+          background: #0e1420;
+        }
+        .sub {
+          color: #93a0b5;
+        }
+        code {
+          background: #1c2636;
+          color: #9cc4ff;
+        }
+        th,
+        td {
+          border-bottom-color: #26324a;
+        }
+        th {
+          color: #93a0b5;
+        }
+        .callout {
+          border-color: #4a3d1a;
+          background: #211c10;
+          border-left-color: #d0a020;
+        }
+        .callout strong {
+          color: #e6c869;
+        }
+        footer {
+          color: #6b7688;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Email Template Variables</h1>
+      <p class="sub">Placeholders you can drop into an A/B email template body or subject line. Each <code>{%…%}</code> tag is replaced per-lead when a kickoff draft is rendered.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>What it becomes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>{%new_site_link%}</code></td>
+            <td>Link to the newly generated demo site (the recipient-facing URL).</td>
+          </tr>
+          <tr>
+            <td><code>{%old_site_link%}</code></td>
+            <td>The lead's existing website URL.</td>
+          </tr>
+          <tr>
+            <td><code>{%old_site_pic%}</code></td>
+            <td>A screenshot of their current site. <em>See the caveat below.</em></td>
+          </tr>
+          <tr>
+            <td><code>{%upsell_list%}</code></td>
+            <td>The generated upsell / gap checklist for that lead.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Caveat: <code>{%old_site_pic%}</code></h2>
+      <div class="callout">
+        <p><strong>Heads up.</strong> <code>{%old_site_pic%}</code> points at a <code>127.0.0.1</code> URL that only you can load, so in the seeded template it's a small secondary "your current site" thumbnail — the recipient-facing image is the <code>cid:demo</code> demo screenshot. Edit the template body in the A/B Tests tab if you want to drop that line.</p>
+      </div>
+
+      <footer>SiteHunter · reference page · edit templates under the A/B Tests tab.</footer>
+    </main>
+  </body>
+</html>

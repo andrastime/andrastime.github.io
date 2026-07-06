@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Expert carpentry, electrical, plumbing, and painting services. Florin the Builder and Handyman delivers high-end home repairs and structural integrity for modern homeowners." name="description"/>
+<title>FLORIN THE BUILDER AND HANDYMAN | Professional Home Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "tertiary-container": "#314156",
+                "surface-container-lowest": "#ffffff",
+                "on-error-container": "#93000a",
+                "on-tertiary-fixed": "#0b1c30",
+                "secondary-fixed": "#ffdbca",
+                "surface-container-high": "#e6e8ea",
+                "outline-variant": "#c5c5d3",
+                "on-secondary": "#ffffff",
+                "tertiary-fixed-dim": "#b7c8e1",
+                "surface-tint": "#4059aa",
+                "on-secondary-fixed-variant": "#783200",
+                "surface-dim": "#d8dadc",
+                "outline": "#757682",
+                "on-primary-fixed": "#00164e",
+                "inverse-surface": "#2d3133",
+                "tertiary-fixed": "#d3e4fe",
+                "on-background": "#191c1e",
+                "surface-container-highest": "#e0e3e5",
+                "surface-variant": "#e0e3e5",
+                "on-tertiary-fixed-variant": "#38485d",
+                "on-primary-container": "#90a8ff",
+                "on-secondary-container": "#5c2400",
+                "on-tertiary": "#ffffff",
+                "on-surface-variant": "#444651",
+                "on-tertiary-container": "#9dadc6",
+                "background": "#f7f9fb",
+                "secondary-fixed-dim": "#ffb690",
+                "error-container": "#ffdad6",
+                "secondary-container": "#fd761a",
+                "primary-fixed-dim": "#b6c4ff",
+                "on-surface": "#191c1e",
+                "primary": "#00236f",
+                "error": "#ba1a1a",
+                "primary-fixed": "#dce1ff",
+                "on-primary-fixed-variant": "#264191",
+                "inverse-on-surface": "#eff1f3",
+                "on-error": "#ffffff",
+                "primary-container": "#1e3a8a",
+                "surface": "#f7f9fb",
+                "surface-container-low": "#f2f4f6",
+                "surface-bright": "#f7f9fb",
+                "on-primary": "#ffffff",
+                "secondary": "#9d4300",
+                "on-secondary-fixed": "#341100",
+                "surface-container": "#eceef0",
+                "inverse-primary": "#b6c4ff",
+                "tertiary": "#1b2b3f"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "container-max": "1280px",
+                "stack-sm": "8px",
+                "stack-lg": "32px",
+                "stack-md": "16px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "margin-desktop": "40px",
+                "base": "8px"
+            },
+            "fontFamily": {
+                "headline-md": ["Montserrat"],
+                "headline-lg": ["Montserrat"],
+                "label-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-lg-mobile": ["Montserrat"],
+                "body-sm": ["Inter"],
+                "body-md": ["Inter"],
+                "label-bold": ["Inter"],
+                "headline-xl": ["Montserrat"]
+            },
+            "fontSize": {
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "label-bold": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav { 
+            border-bottom: 2px solid #9d4300;
+            color: #9d4300;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Bar -->
+<header class="w-full sticky top-0 z-50 bg-surface shadow-sm border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<a class="text-headline-md font-headline-md font-bold text-primary" href="#">FLORIN THE BUILDER</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#services">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#portfolio">Portfolio</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#tips">Tips</a>
+<a class="bg-secondary-container text-on-secondary py-2 px-6 rounded-lg font-label-bold hover:scale-105 active:scale-95 transition-all" href="#contact">Contact Us</a>
+</nav>
+<button class="md:hidden text-primary" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center bg-surface overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center z-10 relative">
+<div class="space-y-stack-md">
+<span class="text-secondary font-label-bold uppercase tracking-widest bg-secondary-fixed px-3 py-1 rounded">Expert Craftsmanship</span>
+<h1 class="text-headline-xl font-headline-xl text-primary leading-tight">
+                    Your Reliable Partner for <br/>
+<span class="text-secondary">Every Repair &amp; Build</span>
+</h1>
+<p class="text-body-lg text-on-surface-variant max-w-xl">
+                    High-quality handyman and construction services tailored for homeowners who value durability and professional integrity. From plumbing to custom carpentry, we handle the details so you don't have to.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-stack-md">
+<a class="bg-secondary-container text-on-secondary px-8 py-4 rounded-lg font-label-bold text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all" href="#contact">Get a Free Quote</a>
+<a class="border border-outline text-primary px-8 py-4 rounded-lg font-label-bold text-center hover:bg-surface-container-low transition-colors" href="#portfolio">View Recent Projects</a>
+</div>
+<div class="flex items-center gap-6 pt-stack-md border-t border-outline-variant">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-slate-300" data-alt="A professional headshot of a happy client in a modern home interior, soft lighting, 50mm lens photography, corporate modern aesthetic with warm navy and orange tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBSbJhZ7Ob-z-DfDXfXU3Msr8fxp3dUjZapsyKKha6Px_bt6B5fYpujMUkyWd6dH57eCfihud3-o2Oomd3RCW1VXv88Yn0JR6pBCZX5Nw1uXIklKIlkd9F6BOAr8IsKWpXYLneo3-nyP7tazVlOlAEtp-bUXJXnJhHOGL73SLdC1YrEg8aeGxAEzld92kKiN8NGKRFG6jdG5MpdYbbQknK4fKZL8Pk9KBZN7fxHqVnUYlemNiAkOnbo')"></div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-slate-300" data-alt="A portrait of a satisfied homeowner smiling in front of a newly renovated kitchen, high-quality lighting, bright and professional visual style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBep7zE-m0ntOEGO6NCWOW3nCxgUpY2Qvai3ayAdbb8OwL97ym2tMfyFVkVtob8WavKY0CFJW8JnyGzkdH1uGcnrBTQUm47MPw8BRdXineij9Ur0tKsEqaqjlFGlRgi1pNXwBK7eXd01mHfBIbDPESFeIjImCq9e5iDtXn7rM2JwBZVbuvPPpS6WBmpkayWoYslfxgfXWo2B0aRfJ1UngmJ9r8rqJxVV973FYFR648PSL_91mODnW-i')"></div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-slate-300" data-alt="A close up of a smiling commercial property manager in a well-lit office hallway, symbolizing reliability and trust, professional photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBETZ8GOnocmF5ZteXrymUQrYcJ4Xhd2dKv9FG7GigGXAh0Pc-JmO33muR46wCG50fv8QEQlQ5zNdnnWjBYphBcE4QwjveA25uaJNK3WtNVBWp7YQp1jojOiOxq1yyRN3hppClkKJBQEA3PuWwZCsYBt0TYjhTrDmqZMzmFbCCt9DCkvHNb9oM7OtGA5LdUYx4H1_pEtHVNskqMEtYrV52CeW2pXpzIdUm0sT36H1IsQ1Z2lACMy6wq')"></div>
+</div>
+<p class="text-body-sm text-on-surface-variant font-medium">Trusted by 500+ Local Homeowners</p>
+</div>
+</div>
+<div class="hidden lg:block relative h-full">
+<div class="rounded-xl overflow-hidden shadow-2xl h-[600px] w-full">
+<img class="w-full h-full object-cover" data-alt="A professional handyman in a navy blue branded uniform skillfully working on a custom wooden cabinetry project in a modern, bright workshop. High-contrast lighting highlights the textures of the wood and the precision of the tools. The background is clean and organized, reinforcing the theme of reliability and structural integrity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUcrSYfIM8PG0vB4EsD8lopHBlFbnaKlPkFPl3TNMMWZObn4JttfGQk3rSIDUmZoNpOUN9HJi3l3R7Any5-CMT5pyeQOkjSDX1-RP4mhjAo_NPWxGvRfxym6aqPGsQx8gFPV5TZIrTa1KPIZGQQSsMWug2MtYeH-IyYDw2EgKWv1JPwZgkCR-zs7U7amVHtVlfUR3u01f0jJwHGz0DJ76GNAqwaqW682ldoSeuhAfhHzmbxvZ_6P2a"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl shadow-xl border border-outline-variant max-w-xs">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-4xl" data-weight="fill">verified</span>
+<div>
+<p class="font-label-bold text-primary">Fully Insured</p>
+<p class="text-body-sm text-on-surface-variant">Licensed &amp; Bonded Professional</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Subtle Grid Background -->
+<div class="absolute inset-0 pointer-events-none opacity-[0.03]" style="background-image: linear-gradient(#1e3a8a 1px, transparent 1px), linear-gradient(90deg, #1e3a8a 1px, transparent 1px); background-size: 40px 40px;"></div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-surface-container-low" id="services">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-4">Our Professional Services</h2>
+<p class="text-body-md text-on-surface-variant max-w-2xl mx-auto">Expertise you can depend on. We provide comprehensive repair and maintenance solutions with a focus on precision and quality materials.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Carpentry -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant hover:border-secondary transition-all group">
+<div class="w-12 h-12 bg-primary-container text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined">carpenter</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">Carpentry</h3>
+<p class="text-body-sm text-on-surface-variant mb-6">Custom shelving, deck repairs, and structural framing built to last generations.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-body-sm font-medium"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Custom Cabinets</li>
+<li class="flex items-center gap-2 text-body-sm font-medium"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Floor Installation</li>
+</ul>
+</div>
+<!-- Electrical -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant hover:border-secondary transition-all group">
+<div class="w-12 h-12 bg-primary-container text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">Electrical</h3>
+<p class="text-body-sm text-on-surface-variant mb-6">Safe and efficient wiring, lighting installations, and troubleshooting for your home.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-body-sm font-medium"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Panel Upgrades</li>
+<li class="flex items-center gap-2 text-body-sm font-medium"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Smart Home Setup</li>
+</ul>
+</div>
+<!-- Plumbing -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant hover:border-secondary transition-all group">
+<div class="w-12 h-12 bg-primary-container text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">Plumbing</h3>
+<p class="text-body-sm text-on-surface-variant mb-6">Leak repairs, fixture installations, and modern pipe solutions for peace of mind.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-body-sm font-medium"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Pipe Repair</li>
+<li class="flex items-center gap-2 text-body-sm font-medium"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Faucet Install</li>
+</ul>
+</div>
+<!-- Painting -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant hover:border-secondary transition-all group">
+<div class="w-12 h-12 bg-primary-container text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined">format_paint</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">Painting</h3>
+<p class="text-body-sm text-on-surface-variant mb-6">Professional interior and exterior painting with premium, long-lasting finishes.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-body-sm font-medium"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Color Matching</li>
+<li class="flex items-center gap-2 text-body-sm font-medium"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Surface Prep</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-24 bg-surface" id="portfolio">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-headline-lg font-headline-lg text-primary">Recent Showcase</h2>
+<p class="text-body-md text-on-surface-variant mt-2">Browse our latest completions and see the quality of our craftsmanship.</p>
+</div>
+<button class="text-primary font-label-bold flex items-center gap-2 hover:gap-4 transition-all">
+                    View Entire Gallery <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A wide-angle shot of a beautifully completed modern kitchen renovation featuring custom navy blue cabinetry, white marble countertops, and warm orange accent lighting. Professional photography style, clean and architectural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu7GIURTNXIb576y6JLoJWB-IVzKPtWr520WkqUS7V58mWWaiBPJsrAO9Gh2sLeHMD5odMotps55XooOSVOK7Z70dmmdi6KUZns7cpGs7A13hDY0SRxmI5d_k_2xTj4452rI4US08MDk7L88CxD-I54WyMxGkKEsvQzMCASDwKvq0dzlGrTDKAoEXoMKSwEHcl-OSjbV3LIbviEgFnBb93H4GzoGgp7YHSCOa8gfD5h6wOW57qBHoy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white">
+<span class="text-secondary font-label-bold">Kitchen Remodel</span>
+<h4 class="text-headline-md font-headline-md">Modern Minimalist Upgrade</h4>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Detail shot of a perfectly executed custom hardwood deck with precise joinery and a rich mahogany stain. The lighting is soft morning sun, highlighting the craftsmanship and structural integrity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8nEGJvI1yLMCIl3DUBPkb7Bio-qWlr6_swkH41fths0aCf_OoEPst06g9B7vwIrtC05Bj3I3G2LKNFT2-7nlPMb9Ep6rrGfe7KhCSWc19NMIbi4sW3CQ4dLoy7vgQXnJkIzj28O9Wlx3JG9y-wVHaRRk835dmO7jb4Plwtrwxhlk5EvnFftwo1P3AuxnVrFELvvyI5YHQlLGSUJlX3aGqnmYNRy7WdAyfVlqz7QUWu9W_WqqAJFUj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white">
+<span class="text-secondary font-label-bold">Exterior</span>
+<h4 class="text-headline-md font-headline-md">Premium Oak Deck</h4>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl h-[300px]">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Professional electrical panel installation showing perfectly organized wiring and clear labeling, a hallmark of high-end expert work. Clean, industrial lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE48AztEhRNXbjnJNH7nJYoTX-uGmPS3AkWPdqNSHm22JY-kv43WYbyCJx0J-REk0umXrvrrUe8rhH3DanYOwPOoBS6P-Upbs_KFoJbg6wdlKweKQ72biKQ0iBSjU4-HwcoPMILhIGTRRXqjQe2CXlYKLjoaeGeSpmX0jL3E6HySN1sN4i6GiqKR6Pn59X_stCoZ-tpxIA1Pqws6y4J56ClPvlJ-ag-wi2wMKAkDNCwM_XqK9Hh7Yy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white">
+<span class="text-secondary font-label-bold">Electrical</span>
+<h4 class="text-headline-md font-headline-md">Full House Rewire</h4>
+</div>
+</div>
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[300px]">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A spacious living area featuring professional painting with a high-contrast accent wall in deep navy, complemented by pristine white trim and warm wood floors. High-end real estate photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnGIHPtyI7_DcXGrniRlrZ_CT03_qiR1X8BTQzwELmqHCNQlQnbWp9s6DY_IwTxb6afQmA7RQy47Ry8D0zj4ZUp_4JbAYvRE1-nkk8V2ozq-rVYVBQ87xsWeiS_PYea_kfamGoSuNSpiIfnZETAf5TxH1CuPcu0uHSj9biUi6covjHk4aJNrhcAmwfJG9gwauPgL_FMoo0kU4YOp1aNeg91D49YMADcLfvjk2C5I1e9KlovVtAaV9Z"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white">
+<span class="text-secondary font-label-bold">Interior Painting</span>
+<h4 class="text-headline-md font-headline-md">Modern Accent Finishes</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog / Tips Section -->
+<section class="py-24 bg-surface-container-low" id="tips">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-12">Pro Tips for Home Maintenance</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<article class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close up of a homeowner performing seasonal maintenance on a home heating system, wearing work gloves, clean and bright lighting, informative and helpful mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFKSv5MHxTnXKpGiNzqzgqNDI-LD_zehK0rZWtViuy84FNuvHrr07TqBPM_RJCWPgdkgNH3cVS2Ko-Ybc6srgV_5G9qfdvW26JZPNM9IIgCF74V0xft2TJPTEBZ8XFgbUeZ6nGOudmSVXfR1iDzqQ52whPkTWYqFoLDefNzbrvn5IDGhm91GSOBPBOiJO5KUijU6y7XhoxhoXMwnVbf6g1PEzs9fyq3-3SESHvpO1vRFVCRw8d36Ig"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-surface-container-high px-2 py-1 rounded text-label-md text-on-surface-variant">Maintenance</span>
+<span class="text-label-md text-on-surface-variant">5 min read</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">5 Critical Seasonal Checks</h3>
+<p class="text-body-sm text-on-surface-variant mb-6">Avoid costly repairs by following these simple seasonal maintenance routines for your roof and plumbing.</p>
+<a class="text-secondary font-label-bold hover:underline" href="#">Read Article</a>
+</div>
+</article>
+<article class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional painting setup with a variety of paint swatches, brushes, and rollers on a clean drop cloth. The colors are navy, orange, and neutrals, following the brand palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD42DdgV-fq9LVYJ4AoT5Z13rWeyf9suRotPhX1XsBdQXLpdw1J6icGp4JZikZc_V53HxMUsrul129OLlRloBKZNmUfFjFjFAdCudsdoh5Ohh9o_1avX1aTK2xf0w3-FJkZhRMrEko7lOyUgtmc3q4zxwgP2NsAQerRJlTOJfQhUo4HpRjq4-HRJ_gGvxg_4SMF4gecUiY_CU1CNX82hVtL04B9KNXJFkXtSbrJsbP-USt0vkY6MPa9"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-surface-container-high px-2 py-1 rounded text-label-md text-on-surface-variant">DIY Guide</span>
+<span class="text-label-md text-on-surface-variant">8 min read</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">Choosing the Right Paint</h3>
+<p class="text-body-sm text-on-surface-variant mb-6">Not all paints are created equal. Learn which finishes work best for high-traffic areas vs decorative walls.</p>
+<a class="text-secondary font-label-bold hover:underline" href="#">Read Article</a>
+</div>
+</article>
+<article class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A high-tech digital home thermostat being adjusted by a hand, symbolizing energy efficiency and modern home upgrades. High-key lighting, clean professional look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj5jLcHamuXmCvZSxUqAt-brIF3G-MrT25GTeS_HG6-SF1ttVvvCwxVHZnI9BjG_MhOuXJKeyULeeUxaQUf0YXQ4PBJ18ozGSAaUdoThh3uFdx-pG7Vf_zmekXM_2PQ184jcXb59OEIftL6v6oB2ABtUFy3vWL5tKgW1msw4KzITlJgrfF2f_ssVNQan9zx6uQewxmrf4-4Jh1IL4tBSJYWVpVfk8ZcC7m4HRpYRxvUbbKIUfHt7Hy"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-surface-container-high px-2 py-1 rounded text-label-md text-on-surface-variant">Efficiency</span>
+<span class="text-label-md text-on-surface-variant">4 min read</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">Reducing Energy Costs</h3>
+<p class="text-body-sm text-on-surface-variant mb-6">Simple upgrades like weather stripping and smart thermostats can save you hundreds each year.</p>
+<a class="text-secondary font-label-bold hover:underline" href="#">Read Article</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface" id="contact">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-primary text-white rounded-2xl overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+<div class="p-12 lg:w-1/2 flex flex-col justify-between">
+<div>
+<h2 class="text-headline-lg font-headline-lg mb-6">Ready to start your project?</h2>
+<p class="text-body-lg text-primary-fixed mb-12">Contact us today for a free, no-obligation quote. Our experts are ready to help with your build or repair.</p>
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-label-bold opacity-60">Call Us</p>
+<p class="text-headline-md font-headline-md">+1 (555) 892-0123</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-label-bold opacity-60">Email Us</p>
+<p class="text-headline-md font-headline-md">hello@florinthebuilder.com</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-label-bold opacity-60">Visit Our Office</p>
+<p class="text-headline-md font-headline-md">123 Construction Way, Suite 100, New York</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 flex gap-4">
+<div class="w-8 h-8 rounded bg-white/20 hover:bg-secondary transition-colors cursor-pointer flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+<div class="w-8 h-8 rounded bg-white/20 hover:bg-secondary transition-colors cursor-pointer flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-12 lg:w-1/2 text-on-surface">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-label-bold text-primary">Your Name</label>
+<input class="w-full p-4 border border-outline-variant rounded-lg focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-bold text-primary">Email Address</label>
+<input class="w-full p-4 border border-outline-variant rounded-lg focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 outline-none transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-label-bold text-primary">Service Needed</label>
+<select class="w-full p-4 border border-outline-variant rounded-lg focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 outline-none transition-all">
+<option>Carpentry</option>
+<option>Electrical</option>
+<option>Plumbing</option>
+<option>Painting</option>
+<option>Other / General Handyman</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-label-bold text-primary">Message Details</label>
+<textarea class="w-full p-4 border border-outline-variant rounded-lg focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 outline-none transition-all" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary py-4 rounded-lg font-label-bold text-lg hover:bg-secondary transition-colors shadow-lg" type="submit">Send Quote Request</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-tertiary text-on-tertiary py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
+<div class="md:col-span-2">
+<p class="text-headline-md font-headline-md font-bold text-surface-container-lowest mb-4">FLORIN THE BUILDER</p>
+<p class="text-on-tertiary-container max-w-sm">Building a foundation of trust through quality craftsmanship and transparent service since 2010. Your local partner for home excellence.</p>
+</div>
+<div>
+<h5 class="text-label-bold text-white mb-4">Navigation</h5>
+<ul class="space-y-2">
+<li><a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">Services</a></li>
+<li><a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">Portfolio</a></li>
+<li><a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-label-bold text-white mb-4">Legal</h5>
+<ul class="space-y-2">
+<li><a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-on-tertiary-fixed-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-body-sm text-on-tertiary-container">© 2024 FLORIN THE BUILDER AND HANDYMAN. All rights reserved.</p>
+<div class="flex gap-4">
+<!-- Google Analytics Integration Placeholder -->
+<span class="text-label-md text-on-tertiary-fixed-variant italic">Site Analytics Enabled</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        mobileMenuBtn.addEventListener('click', () => {
+            // Mobile menu logic would go here
+            console.log('Mobile menu clicked');
+        });
+
+        // Form submission micro-interaction
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerText = 'Request Sent!';
+                btn.classList.replace('bg-secondary-container', 'bg-green-600');
+                form.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.replace('bg-green-600', 'bg-secondary-container');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Simple scroll reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

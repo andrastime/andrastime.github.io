@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clearview Accounting LLC | Precision &amp; Clarity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Source+Serif+4:opsz,wght@8..60,400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#45464d",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-container": "#237157",
+                      "tertiary-fixed": "#d4e4fa",
+                      "outline-variant": "#c6c6cd",
+                      "on-surface": "#191c1e",
+                      "surface-container-low": "#f2f4f6",
+                      "on-primary-container": "#7c839b",
+                      "surface-container-high": "#e6e8ea",
+                      "on-error-container": "#93000a",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#2d3133",
+                      "tertiary-fixed-dim": "#b9c8de",
+                      "tertiary": "#000000",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "primary-fixed": "#dae2fd",
+                      "on-primary-fixed": "#131b2e",
+                      "surface-container": "#eceef0",
+                      "on-tertiary": "#ffffff",
+                      "secondary": "#1b6b51",
+                      "inverse-primary": "#bec6e0",
+                      "outline": "#76777d",
+                      "inverse-on-surface": "#eff1f3",
+                      "primary-container": "#131b2e",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-tint": "#565e74",
+                      "on-tertiary-fixed": "#0d1c2d",
+                      "on-tertiary-fixed-variant": "#39485a",
+                      "tertiary-container": "#0d1c2d",
+                      "surface": "#f7f9fb",
+                      "background": "#f7f9fb",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#002116",
+                      "primary-fixed-dim": "#bec6e0",
+                      "secondary-fixed-dim": "#8bd6b6",
+                      "surface-variant": "#e0e3e5",
+                      "secondary-container": "#a6f2d1",
+                      "surface-container-highest": "#e0e3e5",
+                      "surface-dim": "#d8dadc",
+                      "secondary-fixed": "#a6f2d1",
+                      "primary": "#000000",
+                      "on-secondary-fixed-variant": "#00513b",
+                      "on-background": "#191c1e",
+                      "error": "#ba1a1a",
+                      "on-tertiary-container": "#768599",
+                      "surface-bright": "#f7f9fb",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "margin-mobile": "20px",
+                      "gutter-desktop": "24px",
+                      "gutter-mobile": "16px",
+                      "unit": "4px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "body-md": ["\"Source Serif 4\""],
+                      "body-lg": ["\"Source Serif 4\""],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "display-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(247, 249, 251, 0.95) 40%, rgba(247, 249, 251, 0.4) 100%);
+        }
+        .bento-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 4px 12px rgba(15, 23, 42, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<nav class="max-w-container-max mx-auto px-margin-desktop flex items-center justify-between h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary tracking-tight">
+                Clearview Accounting LLC
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#contact">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-label-md text-label-md font-semibold hover:bg-primary transition-all active:opacity-80 active:scale-[0.99]">
+                Get Started
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="home">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdfdTx-nGXFOx36UbxsKtDo6JRbg5Gf4UFnn220OTKYlmFMfClXDphM3pa7HPLUWcwtGBpMQdowZdtkKBfdG5NasL0cERVkyO2n7BWd9JUzbWCj7PB76zr1Pn09C74e3mORR5Ss-tfjyQlqBMJIZ81-ooMNI5k7OCb3p8ZvRAH4SYeMLYPvJ7a_BD-FTaOtJwxR1UZngab8Z1rORw2R6YzZWCk_q3c254UuQcsZPctp2SU7M-QEmSI"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop">
+<div class="flex flex-col justify-center space-y-8 animate-fade-in">
+<div class="space-y-4">
+<span class="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container font-label-md text-label-md rounded-full">
+                            Trusted Financial Partners
+                        </span>
+<h1 class="font-display-lg text-display-lg text-primary max-w-xl">
+                            Precision in Every Detail. Clarity in Every Choice.
+                        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                            Navigating the complexities of wealth management and corporate compliance with institutional-grade expertise and a bespoke approach to financial strategy.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-headline-md text-label-md font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/10">
+                            Schedule a Consultation
+                        </button>
+<button class="border border-outline text-primary px-8 py-4 rounded-lg font-headline-md text-label-md font-bold hover:bg-surface-container-low transition-all">
+                            Our Approach
+                        </button>
+</div>
+<div class="grid grid-cols-3 gap-8 pt-8 border-t border-outline-variant/30">
+<div>
+<div class="font-headline-lg text-primary">25+</div>
+<div class="font-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Years Experience</div>
+</div>
+<div>
+<div class="font-headline-lg text-primary">$2B+</div>
+<div class="font-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Assets Managed</div>
+</div>
+<div>
+<div class="font-headline-lg text-primary">98%</div>
+<div class="font-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Client Retention</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 bg-surface-container-lowest" id="services">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Strategic Financial Services</h2>
+<div class="h-1 w-20 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Tax Planning -->
+<div class="bento-card p-10 bg-white border border-outline-variant/30 rounded-xl flex flex-col items-start gap-6">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-lg text-primary">
+<span class="material-symbols-outlined text-[32px]">payments</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Tax Planning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                            Sophisticated tax optimization strategies designed for high-net-worth individuals and complex corporate structures to minimize liabilities and ensure long-term compliance.
+                        </p>
+<ul class="space-y-3 font-label-md text-label-md text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                                Multi-jurisdictional compliance
+                            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                                Estate and Gift Tax Strategy
+                            </li>
+</ul>
+</div>
+<!-- Audit & Assurance -->
+<div class="bento-card p-10 bg-primary-container text-on-primary rounded-xl flex flex-col items-start gap-6">
+<div class="w-12 h-12 bg-white/10 flex items-center justify-center rounded-lg text-white">
+<span class="material-symbols-outlined text-[32px]">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">Audit &amp; Assurance</h3>
+<p class="font-body-md text-body-md text-white/80 flex-grow">
+                            Rigorous audit processes that provide the transparency and trust required by stakeholders, investors, and regulatory bodies. Our precision is your peace of mind.
+                        </p>
+<ul class="space-y-3 font-label-md text-label-md text-white/90">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-sm">check_circle</span>
+                                Financial Statement Audits
+                            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-sm">check_circle</span>
+                                Internal Control Reviews
+                            </li>
+</ul>
+</div>
+<!-- Business Advisory -->
+<div class="bento-card p-10 bg-white border border-outline-variant/30 rounded-xl flex flex-col items-start gap-6">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-lg text-primary">
+<span class="material-symbols-outlined text-[32px]">insights</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Business Advisory</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                            Beyond the numbers, we provide actionable insights for M&amp;A, capital structure optimization, and long-term strategic growth planning.
+                        </p>
+<ul class="space-y-3 font-label-md text-label-md text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                                M&amp;A Due Diligence
+                            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                                Profitability Analysis
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-32 overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv95UzxbJktUirKAjjJGoqSVQPTKTgVLU_A-j_Jd0Zns85iKQgfWeyR2kSKI2ohwieOS9h_JGacRbSqC_tRPL7EFw6NaUA1nPSWaBBvLo27p_Hh6k7K5omJu-QLBetF9-lfA5auLIvvhPb668goO3we4ncS1S7rXlxME4Th56V3ALtWkNjCeQ3I5_9keGqwb_yBbJ2-XcJYoe38YZHgKfSsmgXN_xEp1hJdKJfuvuceGNoqP9KVEZO"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 h-64 border-[12px] border-outline-variant/20 rounded-xl z-0"></div>
+</div>
+<div class="space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-primary">Rooted in Integrity, Driven by Precision</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Clearview Accounting LLC was founded on the principle that financial clarity is the ultimate luxury in a complex world. We don't just manage accounts; we steward the legacies and growth of the clients who trust us.
+                        </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Our team of CPAs and advisors bring together decades of experience from Tier-1 global firms, delivering a boutique service level that larger institutions cannot replicate. We believe in quiet excellence and enduring stability.
+                        </p>
+<div class="pt-4">
+<blockquote class="border-l-4 border-secondary pl-6 py-2 italic font-body-lg text-primary">
+                                "Our mission is to provide the quiet confidence that comes from knowing every detail is accounted for."
+                            </blockquote>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 group">
+                            Learn more about our team 
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-32 bg-primary-container text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-3xl mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Client Perspectives</h2>
+<p class="font-body-lg opacity-80">The standard of trust we uphold for our long-term partners.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop">
+<div class="p-10 border border-white/10 rounded-xl space-y-6">
+<div class="flex gap-1 text-secondary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg italic leading-relaxed">
+                            "Clearview has been instrumental in our international expansion. Their grasp of multi-jurisdictional tax laws and their attention to detail during our annual audit is unparalleled in the industry."
+                        </p>
+<div>
+<p class="font-label-md text-label-md font-bold">Arthur Sterling</p>
+<p class="font-label-sm text-label-sm opacity-60">CEO, Global Logistics Group</p>
+</div>
+</div>
+<div class="p-10 border border-white/10 rounded-xl space-y-6">
+<div class="flex gap-1 text-secondary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg italic leading-relaxed">
+                            "Precision is the word that comes to mind. They transformed our financial reporting from a chaotic seasonal task into a continuous strategic advantage."
+                        </p>
+<div>
+<p class="font-label-md text-label-md font-bold">Elena Vance</p>
+<p class="font-label-sm text-label-sm opacity-60">Director of Finance, TechNova Solutions</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact/CTA Section -->
+<section class="py-32" id="contact">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+<div class="space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-primary">Start a Conversation</h2>
+<p class="font-body-lg text-on-surface-variant">
+                            Ready to experience financial clarity? Contact our advisors for a confidential assessment of your requirements.
+                        </p>
+<div class="space-y-6 pt-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-primary">New York Headquarters</p>
+<p class="font-body-md text-body-md text-on-surface-variant">520 Madison Avenue, 25th Floor, New York, NY</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">call</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-primary">Direct Line</p>
+<p class="font-body-md text-body-md text-on-surface-variant">+1 (212) 555-0198</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">mail</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-primary">Email</p>
+<p class="font-body-md text-body-md text-on-surface-variant">advisory@clearview-acct.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 border border-outline-variant/30 rounded-xl shadow-sm">
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">First Name</label>
+<input class="w-full border-outline-variant rounded-lg focus:ring-primary focus:border-primary px-4 py-3 bg-surface" placeholder="John" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Last Name</label>
+<input class="w-full border-outline-variant rounded-lg focus:ring-primary focus:border-primary px-4 py-3 bg-surface" placeholder="Doe" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Corporate Email</label>
+<input class="w-full border-outline-variant rounded-lg focus:ring-primary focus:border-primary px-4 py-3 bg-surface" placeholder="john@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Service Interest</label>
+<select class="w-full border-outline-variant rounded-lg focus:ring-primary focus:border-primary px-4 py-3 bg-surface">
+<option>Tax Planning</option>
+<option>Audit &amp; Assurance</option>
+<option>Business Advisory</option>
+<option>Other</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-primary">Brief Inquiry</label>
+<textarea class="w-full border-outline-variant rounded-lg focus:ring-primary focus:border-primary px-4 py-3 bg-surface" placeholder="Tell us how we can assist you..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-label-md text-label-md font-bold hover:bg-primary/90 transition-all">
+                                Send Inquiry
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-primary-container text-on-primary-container border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-desktop py-16 flex flex-col md:flex-row justify-between gap-gutter-desktop">
+<div class="space-y-6 max-w-sm">
+<div class="font-headline-md text-headline-md font-bold text-on-primary-container tracking-tight">
+                    Clearview Accounting LLC
+                </div>
+<p class="font-body-md text-body-md opacity-80">
+                    Trusted financial stewardship for global leaders and enduring enterprises since 1999.
+                </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all" href="#">
+<span class="material-symbols-outlined text-sm">rss_feed</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md font-bold text-on-primary uppercase tracking-widest text-xs">Services</h4>
+<ul class="space-y-2 font-body-md text-body-md">
+<li><a class="text-on-primary-container/80 hover:text-on-primary hover:underline transition-all" href="#">Tax Planning</a></li>
+<li><a class="text-on-primary-container/80 hover:text-on-primary hover:underline transition-all" href="#">Audit &amp; Assurance</a></li>
+<li><a class="text-on-primary-container/80 hover:text-on-primary hover:underline transition-all" href="#">Business Advisory</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md font-bold text-on-primary uppercase tracking-widest text-xs">Legal</h4>
+<ul class="space-y-2 font-body-md text-body-md">
+<li><a class="text-on-primary-container/80 hover:text-on-primary hover:underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-on-primary-container/80 hover:text-on-primary hover:underline transition-all" href="#">Terms of Service</a></li>
+<li><a class="text-on-primary-container/80 hover:text-on-primary hover:underline transition-all" href="#">Disclosures</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md font-bold text-on-primary uppercase tracking-widest text-xs">Connect</h4>
+<ul class="space-y-2 font-body-md text-body-md">
+<li><a class="text-on-primary-container/80 hover:text-on-primary hover:underline transition-all" href="#">LinkedIn</a></li>
+<li><a class="text-on-primary-container/80 hover:text-on-primary hover:underline transition-all" href="#">Career Center</a></li>
+<li><a class="text-on-primary-container/80 hover:text-on-primary hover:underline transition-all" href="#">Newsletter</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-white/5 text-center md:text-left font-body-md text-label-md opacity-60">
+            © 2024 Clearview Accounting LLC. All rights reserved.
+        </div>
+</footer>
+<script>
+        // Simple scroll behavior for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.add('shadow-sm');
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Basic reveal animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'ease-out');
+        });
+    </script>
+</body></html>

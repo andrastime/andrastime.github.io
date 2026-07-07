@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SMR Group | Expert Electrical Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 1);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#b4c5ff",
+                    "on-surface": "#191c1e",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "primary-fixed": "#dbe1ff",
+                    "tertiary-container": "#996100",
+                    "surface-variant": "#e0e3e5",
+                    "on-primary-container": "#eeefff",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "on-tertiary-fixed": "#2a1700",
+                    "surface-container": "#eceef0",
+                    "on-background": "#191c1e",
+                    "on-tertiary-container": "#ffeedd",
+                    "surface-tint": "#0053db",
+                    "tertiary-fixed": "#ffddb8",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-fixed": "#111c2d",
+                    "surface-bright": "#f7f9fb",
+                    "on-primary-fixed": "#00174b",
+                    "surface-container-low": "#f2f4f6",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2d3133",
+                    "surface": "#f7f9fb",
+                    "on-secondary-container": "#586377",
+                    "primary-container": "#2563eb",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-high": "#e6e8ea",
+                    "tertiary": "#784b00",
+                    "primary": "#004ac6",
+                    "secondary": "#545f73",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "on-surface-variant": "#434655",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c3c6d7",
+                    "on-error-container": "#93000a",
+                    "outline": "#737686",
+                    "inverse-on-surface": "#eff1f3",
+                    "secondary-fixed": "#d8e3fb",
+                    "secondary-container": "#d5e0f8",
+                    "background": "#f7f9fb",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap": "96px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-xl-mobile": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "button": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "headline-xl": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Integration -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 dark:bg-surface-dim/95 backdrop-blur-sm border-b border-outline-variant/30 dark:border-outline/20 shadow-sm">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary">SMR Group</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-button text-button text-secondary hover:text-primary transition-colors duration-200" href="#services">Services</a>
+<a class="font-button text-button text-secondary hover:text-primary transition-colors duration-200" href="#about">About</a>
+<a class="font-button text-button text-secondary hover:text-primary transition-colors duration-200" href="#reviews">Reviews</a>
+<a class="font-button text-button text-secondary hover:text-primary transition-colors duration-200" href="#blog">Blog</a>
+</div>
+<a class="hidden md:flex items-center bg-primary-container text-on-primary-container px-6 py-3 rounded hover:opacity-90 transition-opacity font-button text-button" href="#contact">
+                Request a Quote
+            </a>
+<!-- Mobile Menu Toggle -->
+<button aria-label="Toggle Menu" class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-20">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/90 to-on-surface/40 z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="A high-definition, industrial photograph of a master electrician in high-visibility gear working on a complex, high-voltage control panel. The lighting is crisp and cool-toned, emphasizing the metallic textures of conduits and wires. The shallow depth of field keeps the electrician's steady hands in sharp focus, conveying a sense of technical precision and unwavering safety in a modern commercial setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDv_ShTla2zp8YAKH3VGRwGf-mP9mHbchLJM3JhRDjUhD1uVQg5jNj6vTpgRlq_WkVG_JtpiI2376bKM2ZfGwoTm_a4oCM7rHfYh3iNKpG6MpNEaaLZ0-BFfGDefzfpIZrjbTcrGgNaOLvrGWZdFGNc3ddaxNIGNyoe1pFsGT5uMqGhHim0gCoAynjYcG3RlUDj9PK4XKGW0y4lywTNditmiJhIHjYRgidXsJNnsepTSO-8B_NDEk8')"></div>
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="max-w-2xl">
+<span class="inline-block py-1 px-3 mb-6 bg-primary/20 text-primary-fixed border border-primary/30 rounded font-label-bold text-label-bold uppercase tracking-wider">
+                    Precision Electrical Engineering
+                </span>
+<h1 class="font-headline-xl text-headline-xl text-surface-container-lowest mb-6">
+                    Powering Your Vision with Precision
+                </h1>
+<p class="font-body-lg text-body-lg text-surface-variant/90 mb-10">
+                    Industry-leading electrical solutions for residential and commercial infrastructure. We prioritize safety, reliability, and modern efficiency in every circuit we design.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex items-center justify-center bg-primary-container text-on-primary-container px-8 py-4 rounded font-button text-button hover:opacity-90 transition-all transform hover:-translate-y-1" href="#contact">
+                        Request a Quote
+                    </a>
+<a class="flex items-center justify-center border-2 border-surface-container-lowest text-surface-container-lowest px-8 py-4 rounded font-button text-button hover:bg-surface-container-lowest/10 transition-all" href="#services">
+                        View Our Services
+                    </a>
+</div>
+</div>
+</div>
+</header>
+<!-- Services Section -->
+<section class="py-section-gap bg-surface" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Our Specialized Services</h2>
+<div class="h-1 w-20 bg-primary mx-auto mb-6"></div>
+<p class="font-body-md text-body-md text-secondary max-w-2xl mx-auto">
+                    From emergency repairs to large-scale commercial installations, SMR Group delivers technical excellence at every scale.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="p-8 bg-surface-container-lowest border border-outline-variant hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-primary/10 rounded flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-surface-container-lowest transition-colors" data-icon="home">home</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Residential</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">
+                        Complete home wiring, panel upgrades, and smart home integration with a focus on family safety and energy efficiency.
+                    </p>
+<a class="flex items-center text-primary font-button text-button group-hover:gap-2 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined ml-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="p-8 bg-surface-container-lowest border border-outline-variant hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-primary/10 rounded flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-surface-container-lowest transition-colors" data-icon="business">business</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Commercial</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">
+                        Industrial-grade infrastructure, tenant fit-outs, and ongoing maintenance for high-demand business environments.
+                    </p>
+<a class="flex items-center text-primary font-button text-button group-hover:gap-2 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined ml-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="p-8 bg-surface-container-lowest border border-outline-variant hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-primary/10 rounded flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-surface-container-lowest transition-colors" data-icon="bolt">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Emergency</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">
+                        Available 24/7 for critical failures. Our rapid response team ensures your operations stay powered through any crisis.
+                    </p>
+<a class="flex items-center text-primary font-button text-button group-hover:gap-2 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined ml-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 z-0"></div>
+<div class="relative z-10 bg-surface-container h-[500px] w-full bg-cover bg-center shadow-lg" data-alt="A professional team photo of SMR Group electricians standing confidently in front of a modern corporate office building. They are wearing clean, branded uniforms and holding blueprints. The setting is bright with natural morning light, conveying professional values, a culture of excellence, and an established reputation for reliability in the electrical industry." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1w2PVULyk3o4Vczz78MSSfBSSTpRR9Qmdh4BgGbyrAIfWBxlLb1EovydU6Qu9-r7me4lNuRRrbEXZhwSJRUDIpUZeGZiq4bwICjdB2-OYsfqyfu9TU4aiU2JkHDxhrynBkbw3MWQi93O0etZa-VfoJfdi1eF7yLlFC_IWeGNTxFxRHPhIToYOaQnI9mhkoNXXIXHlUe3Vi3EWX7kFio6IzbumlBOk77VKUWNx5_vcXR2FxzEzG1g')"></div>
+<div class="absolute -bottom-8 -right-8 glass-card p-6 flex flex-col items-center">
+<span class="text-primary font-headline-xl text-headline-xl">15+</span>
+<span class="text-secondary font-label-bold text-label-bold">Years Experience</span>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Built on Safety & Excellence</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-6">
+                        Founded on the principles of technical mastery and honest service, SMR Group has grown from a local contractor to a trusted regional leader in electrical engineering.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Our mission is to provide the highest standard of electrical safety and performance. Every project we undertake is guided by our core values: Precision, Transparency, and a Commitment to future-proof infrastructure.
+                    </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface">Fully Licensed & Insured Master Electricians</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface">Upfront Pricing & Detailed Project Scoping</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface">Compliance with all Modern Building Codes</span>
+</li>
+</ul>
+<a class="inline-flex items-center gap-2 border-b-2 border-primary pb-1 font-button text-button text-primary hover:text-primary-container transition-colors" href="#contact">
+                        Meet the team <span class="material-symbols-outlined" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Indicators / Testimonials -->
+<section class="py-section-gap bg-surface-container-low" id="reviews">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">What Our Clients Say</h2>
+<div class="flex items-center gap-2 text-primary">
+<div class="flex">
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-bold text-label-bold">4.9/5 Rating (500+ Reviews)</span>
+</div>
+</div>
+<div class="hidden md:flex gap-4 mt-6 md:mt-0">
+<div class="flex items-center gap-2 bg-surface-container-lowest px-4 py-2 border border-outline-variant rounded">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+<span class="font-label-bold text-label-bold text-secondary">Licensed & Insured</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-4 py-2 border border-outline-variant rounded">
+<span class="material-symbols-outlined text-primary" data-icon="lock">lock</span>
+<span class="font-label-bold text-label-bold text-secondary">SSL Secured</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex text-primary mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-6 italic">"The team from SMR was incredibly professional. They handled our commercial rewiring ahead of schedule and the documentation they provided was impeccable. Highly recommend for any business."</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container"></div>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">Marcus Chen</p>
+<p class="text-[12px] text-secondary">Operations Director, TechFlow</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex text-primary mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-6 italic">"Emergency call at 2 AM on a Sunday. They were here within 45 minutes and solved the main panel issue quickly. Fair pricing despite the odd hour. Lifesavers!"</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container"></div>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">Sarah Jennings</p>
+<p class="text-[12px] text-secondary">Homeowner</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex text-primary mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-6 italic">"Expert knowledge on EV charger installations. They explained everything clearly and the install looks incredibly clean. Great communication throughout."</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container"></div>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">David Wilson</p>
+<p class="text-[12px] text-secondary">Property Manager</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Section -->
+<section class="py-section-gap bg-surface-container-lowest" id="blog">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Latest from SMR</h2>
+<p class="font-body-md text-secondary">Expert insights and company updates.</p>
+</div>
+<a class="hidden md:block font-button text-button text-primary hover:opacity-80" href="#">View All Posts</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Post 1 -->
+<article class="group cursor-pointer">
+<div class="h-64 bg-surface-variant overflow-hidden mb-6">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A detailed closeup of a modern electrical panel with neatly organized wires and labeled circuit breakers. The lighting is bright and industrial, emphasizing order and professionalism. The composition is clean and focused, reflecting a technical guide on home safety." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6-ZYm9cgVqEsmooli2tcyDsGv_ponUWKg4lKtN5653OVhgT_t3GxOV5wu5A_IVVWwyZOpssF1nS3QuyRpBrMZMViHu_ByepT0-emPdF0CfYfbVzCt6TglILSVvrYMeAF06UQyUOcQP_44b4N8UxrFMV0SikozGsTT2s8xosu5yx8ETBbeUoYvEDbXPZOKEYrvlYtNCzowqOf6ayRT1Uo2jqMlOz_bZwi7c44l3spnViLZf3fKleA')"></div>
+</div>
+<p class="font-label-bold text-label-bold text-primary mb-2">SAFETY TIPS</p>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">5 Signs Your Home Needs a Panel Upgrade</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-2">Learn how to identify the warning signs of an aging electrical system before they become dangerous hazards.</p>
+</article>
+<!-- Post 2 -->
+<article class="group cursor-pointer">
+<div class="h-64 bg-surface-variant overflow-hidden mb-6">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A sleek, modern electric vehicle charging station installed on a clean garage wall. The lighting is soft and high-key, highlighting the minimalist design of the charger and the premium quality of the installation. A blurred EV is partially visible in the background, suggesting a sustainable, high-tech lifestyle." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdbP4TAzBW23zDGUAd6MHxME6nuaviNuPTDFEYOnX5HrjsTLDt64WdPuer9SX6fXhXOyJBY3_MDO1SgtHferTJULEWxpTL4JhzdffxwDmMkXKo2kYeJG8fKtueEBWKb4IMoJoJ-nAUFb1404ZoOKX6OmyPncpzf4v3DcKzSchx9NrYvfIqLCiTIJm1afIQUIgcUUH-qq5zDxwcBPdeGZ9fr8HB7rlj9k2Sd5iLh5CInxUgzkTQEUY')"></div>
+</div>
+<p class="font-label-bold text-label-bold text-primary mb-2">ENERGY</p>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Preparing Your Home for an EV Charger</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-2">A comprehensive guide on what electrical modifications are needed to support rapid home charging for electric vehicles.</p>
+</article>
+<!-- Post 3 -->
+<article class="group cursor-pointer">
+<div class="h-64 bg-surface-variant overflow-hidden mb-6">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="An interior shot of a contemporary office with advanced smart lighting systems. The space is illuminated with cool, balanced light that enhances the architectural lines and productivity-focused environment. This scene illustrates the sophisticated application of commercial electrical design." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0I-Kq5OINz1McFXT_jHKjNxPVcNbZKS2ODZBN6IP4nU4rKH6YpkqcoIhUkjX4V1eCQtAhHqd49BmBvxb3fDm4o2xkuA0IEkQGAjUze5NdDQCojlNTY3JX-Yb6ej4oV1Wc4ugwwL7y6QTA-eSPsQIjoi9vxVqydxqA93N1DeBncUOlUgLfP_msdcplIEiREr8ElESb8tZedMEftYuhfdmk-gB6S1t8rtdZk2-SlsXNH3ZY_Exxgrk')"></div>
+</div>
+<p class="font-label-bold text-label-bold text-primary mb-2">COMMERCIAL</p>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Improving Efficiency with Smart Lighting</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-2">How automated lighting controls can reduce commercial energy costs by up to 30% while improving employee comfort.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- Final CTA & Contact Section -->
+<section class="py-section-gap bg-on-surface text-surface" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-surface-container-lowest mb-6">Get Started with SMR Group</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-10">
+                        Ready to power your next project? Fill out the form or give us a call for a professional consultation and transparent quote.
+                    </p>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-primary-fixed">Phone Support</p>
+<p class="font-headline-md text-headline-md text-surface-container-lowest">(555) 123-4567</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-primary-fixed">Email Address</p>
+<p class="font-headline-md text-headline-md text-surface-container-lowest">service@smrgroup.com</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-primary-fixed">Main Headquarters</p>
+<p class="font-body-md text-body-md text-surface-variant">123 Industrial Way, Electric City, ST 56789</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded text-on-surface">
+<form class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-secondary">Full Name</label>
+<input class="w-full p-4 border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-secondary">Email Address</label>
+<input class="w-full p-4 border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-secondary">Service Required</label>
+<select class="w-full p-4 border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
+<option>Residential Service</option>
+<option>Commercial Project</option>
+<option>Emergency Repair</option>
+<option>EV Charger Install</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-secondary">Message / Details</label>
+<textarea class="w-full p-4 border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-4 font-button text-button rounded hover:opacity-90 transition-opacity" type="submit">
+                            Send Request
+                        </button>
+<p class="text-[12px] text-center text-secondary">
+<span class="material-symbols-outlined text-[14px] align-middle" data-icon="lock">lock</span>
+                            Your information is protected by industry-standard SSL encryption.
+                        </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Integration -->
+<footer class="w-full pt-section-gap pb-8 bg-on-surface dark:bg-surface-container-lowest border-t border-outline/10 text-surface">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-surface mb-6">SMR Group</div>
+<p class="font-body-md text-surface-variant/80 mb-6">Mastering electrical infrastructure since 2008. Dedicated to precision, safety, and reliability.</p>
+<div class="flex gap-4">
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="facebook">face_nod</span>
+</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary-fixed-dim uppercase tracking-widest mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#services">Services</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#about">About Us</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#reviews">Reviews</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#blog">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary-fixed-dim uppercase tracking-widest mb-6">Resources</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Contact Us</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Safety Standards</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary-fixed-dim uppercase tracking-widest mb-6">Service Area</h4>
+<p class="font-body-md text-surface-variant mb-4">Proudly serving all major metropolitan areas and surrounding industrial zones.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="verified_user">verified_user</span>
+<span class="font-label-bold text-label-bold">Licensed & Fully Insured</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-section-gap pt-8 border-t border-outline/20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-surface-variant/60">© 2024 SMR Group. All rights reserved. Licensed & Insured.</p>
+<div class="flex items-center gap-4 text-surface-variant/60 font-body-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="security">security</span> SSL Secured</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

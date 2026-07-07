@@ -1,0 +1,522 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="One Spark Electrics: Your trusted local electricians for residential, commercial, and emergency electrical services. Licensed, insured, and committed to safety." name="description">
+<title>One Spark Electrics | Professional Electrical Services</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .service-card:hover {
+            background-color: #F8FAFC;
+            transform: translateY(-4px);
+        }
+        .transition-standard {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#ffbb1e",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#3c475a",
+                    "surface": "#f8f9ff",
+                    "on-tertiary-container": "#465165",
+                    "outline-variant": "#d5c4ac",
+                    "secondary": "#0057c0",
+                    "on-primary": "#ffffff",
+                    "outline": "#837560",
+                    "inverse-on-surface": "#eaf1ff",
+                    "tertiary-fixed": "#d8e3fb",
+                    "on-primary-container": "#6b4b00",
+                    "on-tertiary-fixed": "#111c2d",
+                    "primary-fixed": "#ffdea7",
+                    "on-surface": "#0b1c30",
+                    "surface-container-highest": "#d3e4fe",
+                    "inverse-primary": "#ffbb1e",
+                    "on-error-container": "#93000a",
+                    "primary": "#7c5800",
+                    "on-background": "#0b1c30",
+                    "on-primary-fixed": "#271900",
+                    "primary-container": "#fdb813",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f8f9ff",
+                    "tertiary-container": "#b9c4dc",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "surface-container": "#e5eeff",
+                    "secondary-fixed": "#d8e2ff",
+                    "surface-container-low": "#eff4ff",
+                    "surface-tint": "#7c5800",
+                    "background": "#f8f9ff",
+                    "surface-container-high": "#dce9ff",
+                    "on-secondary-container": "#fefcff",
+                    "secondary-fixed-dim": "#aec6ff",
+                    "on-surface-variant": "#504533",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#001a43",
+                    "secondary-container": "#006ff0",
+                    "surface-variant": "#d3e4fe",
+                    "surface-dim": "#cbdbf5",
+                    "on-secondary-fixed-variant": "#004397",
+                    "inverse-surface": "#213145",
+                    "tertiary": "#545f73",
+                    "tertiary-fixed-dim": "#bcc7de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "section-gap": "80px",
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-mobile": ["Inter"],
+                    "display": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-sm shadow-sm border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg font-black text-primary" href="one-spark-electrics-home-mobile.html">One Spark Electrics</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#testimonials">Testimonials</a>
+<a class="bg-primary-container text-on-primary-container px-6 py-2.5 font-label-bold text-label-bold rounded hover:scale-95 transition-transform duration-150 shadow-sm" href="#contact">Get a Quote</a>
+</div>
+<button class="md:hidden text-on-surface" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/90 via-on-surface/60 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional electrician in high-visibility gear working with precision on a complex electrical panel in a modern residential setting. The lighting is crisp and natural, highlighting the technical details of the wires and tools. The overall style is clean, high-end, and industrial, evoking a sense of safety and trust." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDISyqII4y3kKy2uDXIu0jcItA0W_qxfCHH6hUN2MWdKvmqVhsotwojtRuTRnEc-NA0zGHTB5gwn3lgnHVV70ZAsP0WLLokOO2fwwxWo9qCpOoPg5smd0A8aKeH2RHh02YgwO3De_Y0EAf0tmgQB6ZSzJN75VLbXQPDGH0lkifUVDDXuCocJSOkBSqgvpps8m3u6h_9H-4NV6UvhB7WPZaIDC4Oa4yBcow-9iQ4SQSCLAhV2JVI3Fhp')"></div>
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl">
+<span class="inline-block bg-primary text-on-primary px-3 py-1 font-label-bold text-label-sm mb-6 rounded-sm uppercase tracking-widest">Safety First Excellence</span>
+<h1 class="font-display text-display text-white mb-6">Reliable Electrical Solutions for Your Home &amp; Business</h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-10 max-w-lg">Licensed &amp; Insured Electricians Serving the Local Community with 24/7 Emergency Support.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 font-label-bold text-label-bold rounded text-center hover:bg-primary-fixed transition-standard shadow-lg" href="#contact">Get a Free Quote</a>
+<a class="bg-inverse-surface text-white px-8 py-4 font-label-bold text-label-bold rounded text-center border border-white/20 hover:bg-white hover:text-on-surface transition-standard flex items-center justify-center gap-2" href="tel:5550123456">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+                        Call Now: (555) 012-3456
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap bg-surface" id="services">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Our Specialized Services</h2>
+<p class="font-body-md text-on-surface-variant max-w-xl">From minor repairs to major industrial installations, our team brings precision and safety to every project.</p>
+</div>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Residential -->
+<div class="service-card p-8 bg-white border border-outline/20 rounded transition-standard group">
+<div class="w-14 h-14 bg-secondary-container/10 flex items-center justify-center mb-6 rounded group-hover:bg-secondary-container transition-standard">
+<span class="material-symbols-outlined text-secondary text-3xl group-hover:text-white transition-standard" data-icon="home">home</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Residential</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Modern Home Wiring
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Smart Lighting Solutions
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Panel Upgrades &amp; Repairs
+                        </li>
+</ul>
+</div>
+<!-- Commercial -->
+<div class="service-card p-8 bg-white border border-outline/20 rounded transition-standard group">
+<div class="w-14 h-14 bg-secondary-container/10 flex items-center justify-center mb-6 rounded group-hover:bg-secondary-container transition-standard">
+<span class="material-symbols-outlined text-secondary text-3xl group-hover:text-white transition-standard" data-icon="business">business</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Commercial</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Preventative Maintenance
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Office Fit-outs &amp; Lighting
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Industrial System Checks
+                        </li>
+</ul>
+</div>
+<!-- Emergency -->
+<div class="service-card p-8 bg-white border border-outline/20 rounded transition-standard group">
+<div class="w-14 h-14 bg-primary-container/10 flex items-center justify-center mb-6 rounded group-hover:bg-primary-container transition-standard">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary-container transition-standard" data-icon="warning">warning</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">24/7 Emergency</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Rapid On-site Response
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Storm Damage Repairs
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Power Outage Resolution
+                        </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section (Bento Layout) -->
+<section class="py-section-gap bg-surface-container-low overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-5">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">The One Spark Difference</h2>
+<p class="font-body-md text-on-surface-variant mb-6">Founded on the principles of technical precision and unwavering safety, One Spark Electrics has become the local benchmark for electrical excellence. We don't just fix wires; we build long-term relationships through transparency and master-level craftsmanship.</p>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="mt-1 bg-primary/10 p-2 rounded">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Licensed &amp; Insured</h4>
+<p class="font-label-sm text-on-surface-variant">Full peace of mind for every residential and commercial project.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 bg-primary/10 p-2 rounded">
+<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Transparent Pricing</h4>
+<p class="font-label-sm text-on-surface-variant">No hidden fees or surprise charges. Up-front quotes always.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 bg-primary/10 p-2 rounded">
+<span class="material-symbols-outlined text-primary" data-icon="health_and_safety">health_and_safety</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Safety First Approach</h4>
+<p class="font-label-sm text-on-surface-variant">Rigorous compliance with all local electrical codes and standards.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-2 gap-4">
+<div class="h-80 rounded overflow-hidden shadow-sm border border-outline/10">
+<div class="w-full h-full bg-cover bg-center" data-alt="Close-up shot of an electrician's steady hand adjusting a high-tech smart home thermostat. The image uses a shallow depth of field, focusing on the precision of the work. The color palette is modern and warm, with subtle yellow accents and clean white walls in a luxury home." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbzAvEcMtbeM3O7kB7DCC5sfyRQTgmh_Sg2SBfrskkxzCiM7gySHZW8EoB8mtIQKEbvQL7i4ULh-sHjD1NlQH-fy82q2_JsZlD7gUtT0FYHaIguquFoYD0NQ1v5udVOXVJCeWU3Fe0In5TDnbdIURs32hvRv6JrZMACZ5NuDXennHrsX5m74kbGWHj566jnMwg4aZ064ylhvOPB64QtaRFhF5Vl3drZTzaJrhDnM0nCvlMcqT1Pe3W')"></div>
+</div>
+<div class="h-80 rounded overflow-hidden shadow-sm border border-outline/10 mt-8">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional commercial electrician inspecting large-scale wiring in a clean industrial warehouse facility. High-key lighting fills the space, showcasing a professional and organized environment. The mood is competent and industrious, with high-contrast safety gear visible." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBtKhLleFkmGHjuFDVIJQMzS-aHO14v5ndfvOdo5qfJgt5VDE4sdHKAMLVGzRdBwG2BtUpV05slsJCdxOgM-LAEzextNzBWTH9eAy1-km14_o53kjR5kBLixKXA2eYWq4ANYxAM2UOdB1IRazG-4Qrv7nL1OblPSiDruz5cMvq6F6AlHKsKh-FSFMl-KH5bTS_DpEej5laRYy9oA-ZZJ53aqaKhLUx-qXzBZCWnJX5N97NL5522t63v')"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-section-gap bg-surface" id="testimonials">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-on-surface text-center mb-12">What Our Clients Say</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 border border-outline/20 rounded shadow-sm">
+<div class="flex text-primary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-6">"Fast, professional, and very knowledgeable. They fixed a panel issue that two other companies couldn't figure out. Highly recommended!"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-secondary-fixed text-on-secondary-fixed rounded-full flex items-center justify-center font-label-bold">MS</div>
+<div>
+<h5 class="font-label-bold text-label-bold text-on-surface">Mark Stevenson</h5>
+<p class="font-label-sm text-on-surface-variant">Homeowner</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 border border-outline/20 rounded shadow-sm">
+<div class="flex text-primary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-6">"One Spark handled our entire office renovation. The lighting plan they suggested has completely transformed our workspace productivity."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-secondary-fixed text-on-secondary-fixed rounded-full flex items-center justify-center font-label-bold">AR</div>
+<div>
+<h5 class="font-label-bold text-label-bold text-on-surface">Angela Reed</h5>
+<p class="font-label-sm text-on-surface-variant">Facilities Manager</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-8 border border-outline/20 rounded shadow-sm">
+<div class="flex text-primary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-6">"Emergency service was top-notch. They were at my door in 30 minutes after a storm knocked out my power line. True professionals."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-secondary-fixed text-on-secondary-fixed rounded-full flex items-center justify-center font-label-bold">JD</div>
+<div>
+<h5 class="font-label-bold text-label-bold text-on-surface">James D.</h5>
+<p class="font-label-sm text-on-surface-variant">Local Business Owner</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Presence & Trust Section -->
+<section class="py-12 bg-on-surface text-white">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-6">
+<div class="bg-white p-4 rounded flex items-center gap-3">
+<img alt="Google" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA83VUxS9snylZhN618Ky4aev8RZzW9YEpvFvfJmG0IyWRT2ATAmxH6Mvig-FxjPKTAlborc1hYWE6QVnQOgP0NTX5L51rjMNBfIDuDZOOB9FqKeUhIAsgExW8k9Kc8ZO280-qzZwHHbV6hWeAtC5oZvQJB6M5nlpndGUSWuwTHxLrw2XzjlatmtmPTjlI7GRuIp0Y7ngvYEtSYPRPRVHQZUuBr-KIusj-buncu-kN7RgdWPg1e-Zhm">
+<div class="h-8 w-px bg-outline/20"></div>
+<div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface font-label-bold text-[10px]">Review us on Google</p>
+</div>
+</div>
+</div>
+<div class="flex gap-6">
+<a class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary transition-standard" href="one-spark-electrics-home-mobile.html">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary transition-standard" href="one-spark-electrics-home-mobile.html">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary transition-standard" href="one-spark-electrics-home-mobile.html">
+<span class="material-symbols-outlined">work</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-section-gap bg-surface" id="contact">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-white border border-outline/20 shadow-xl overflow-hidden rounded-lg">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="p-10 lg:p-16 bg-surface-container-high">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Let's Discuss Your Project</h2>
+<p class="font-body-md text-on-surface-variant mb-10">Have an electrical emergency or planning a renovation? Fill out the form below and one of our master electricians will get back to you within 2 business hours.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span class="font-body-md text-on-surface">123 Spark Street, Electra City, EC 56789</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<span class="font-body-md text-on-surface">info@onesparkelectrics.com</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<span class="font-body-md text-on-surface">Mon-Fri: 8am - 6pm (Emergency 24/7)</span>
+</div>
+</div>
+</div>
+<div class="p-10 lg:p-16">
+<form class="space-y-6" id="quote-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface">Name</label>
+<input class="w-full bg-white border border-outline/40 p-3 rounded focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-standard" placeholder="John Doe" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface">Email</label>
+<input class="w-full bg-white border border-outline/40 p-3 rounded focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-standard" placeholder="john@example.com" type="email">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface">Service Type</label>
+<select class="w-full bg-white border border-outline/40 p-3 rounded focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-standard">
+<option>Residential Wiring</option>
+<option>Commercial Maintenance</option>
+<option>Emergency Repair</option>
+<option>Other</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface">Message</label>
+<textarea class="w-full bg-white border border-outline/40 p-3 rounded focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-standard" placeholder="Tell us about your electrical needs..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-4 font-label-bold text-label-bold rounded shadow hover:bg-primary-fixed transition-standard" type="submit">Send Request</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-inverse-surface text-surface border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="space-y-6">
+<span class="font-headline-md text-headline-md font-bold text-primary-fixed">One Spark Electrics</span>
+<p class="font-body-md text-surface-variant max-w-xs">Excellence in every connection. Licensed, insured, and ready to spark quality into your next project.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<h6 class="font-label-bold text-label-bold text-primary-fixed-dim uppercase tracking-wider">Navigation</h6>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm text-surface-variant hover:text-primary transition-colors" href="#services">Services</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant hover:text-primary transition-colors" href="#about">About</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant hover:text-primary transition-colors" href="#testimonials">Testimonials</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h6 class="font-label-bold text-label-bold text-primary-fixed-dim uppercase tracking-wider">Legal</h6>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm text-surface-variant hover:text-primary transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant hover:text-primary transition-colors" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-6">
+<h6 class="font-label-bold text-label-bold text-primary-fixed-dim uppercase tracking-wider">Newsletter</h6>
+<p class="font-label-sm text-label-sm text-surface-variant">Stay updated with electrical safety tips and news.</p>
+<div class="flex">
+<input class="bg-white/10 border border-white/20 p-3 rounded-l text-white outline-none w-full" placeholder="Email Address" type="email">
+<button class="bg-primary-container text-on-primary-container px-4 rounded-r font-label-bold">Join</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-margin-desktop text-center">
+<p class="font-label-sm text-label-sm text-surface-variant">© 2024 One Spark Electrics. Licensed &amp; Insured. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple Micro-interactions
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            // Placeholder for mobile menu toggle logic
+            alert('Mobile menu navigation placeholder');
+        });
+
+        const form = document.getElementById('quote-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...';
+            btn.classList.add('scale-95', 'opacity-80');
+            
+            setTimeout(() => {
+                btn.innerText = 'Sent Successfully!';
+                btn.classList.replace('bg-primary-container', 'bg-green-500');
+                btn.classList.replace('text-on-primary-container', 'text-white');
+                form.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.replace('bg-green-500', 'bg-primary-container');
+                    btn.classList.replace('text-white', 'text-on-primary-container');
+                    btn.classList.remove('scale-95', 'opacity-80');
+                }, 3000);
+            }, 1500);
+        });
+
+        // Sticky Navbar reveal/hide
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const nav = document.querySelector('nav');
+            
+            if (currentScroll <= 0) {
+                nav.classList.remove('shadow-lg');
+                return;
+            }
+            
+            if (currentScroll > lastScroll) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+                nav.classList.add('shadow-lg');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body></html>

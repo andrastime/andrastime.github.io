@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jema Electrical | Certified Electrical Contractors</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      line-height: 1;
+    }
+    .technical-grid {
+      background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .clip-diagonal {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    }
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+    .emergency-pulse {
+      animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface-container-lowest": "#ffffff",
+                  "primary": "#000000",
+                  "surface-variant": "#d3e4fe",
+                  "inverse-surface": "#213145",
+                  "on-secondary-container": "#6f5100",
+                  "on-tertiary": "#ffffff",
+                  "surface-bright": "#f8f9ff",
+                  "primary-fixed-dim": "#bec6e0",
+                  "on-primary-fixed": "#131b2e",
+                  "on-secondary-fixed": "#261a00",
+                  "on-surface": "#0b1c30",
+                  "on-primary": "#ffffff",
+                  "tertiary-container": "#001e2c",
+                  "on-secondary-fixed-variant": "#5c4300",
+                  "surface": "#f8f9ff",
+                  "secondary-fixed-dim": "#f9bd22",
+                  "surface-container-low": "#eff4ff",
+                  "secondary": "#795900",
+                  "error": "#ba1a1a",
+                  "tertiary-fixed": "#c4e7ff",
+                  "primary-fixed": "#dae2fd",
+                  "surface-container-highest": "#d3e4fe",
+                  "tertiary": "#000000",
+                  "error-container": "#ffdad6",
+                  "on-primary-container": "#7c839b",
+                  "inverse-on-surface": "#eaf1ff",
+                  "surface-tint": "#565e74",
+                  "on-error": "#ffffff",
+                  "on-primary-fixed-variant": "#3f465c",
+                  "tertiary-fixed-dim": "#7bd0ff",
+                  "on-tertiary-fixed-variant": "#004c69",
+                  "surface-container": "#e5eeff",
+                  "background": "#f8f9ff",
+                  "surface-dim": "#cbdbf5",
+                  "on-error-container": "#93000a",
+                  "outline-variant": "#c6c6cd",
+                  "secondary-fixed": "#ffdf9f",
+                  "outline": "#76777d",
+                  "on-tertiary-fixed": "#001e2c",
+                  "on-background": "#0b1c30",
+                  "primary-container": "#131b2e",
+                  "on-surface-variant": "#45464d",
+                  "secondary-container": "#ffc329",
+                  "surface-container-high": "#dce9ff",
+                  "on-tertiary-container": "#008ebf",
+                  "on-secondary": "#ffffff",
+                  "inverse-primary": "#bec6e0"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.125rem",
+                  "lg": "0.25rem",
+                  "xl": "0.5rem",
+                  "full": "0.75rem"
+          },
+          "spacing": {
+                  "container-max": "1280px",
+                  "gutter": "24px",
+                  "margin-mobile": "16px",
+                  "base": "8px",
+                  "margin-desktop": "40px"
+          },
+          "fontFamily": {
+                  "headline-md": ["Inter"],
+                  "body-md": ["Inter"],
+                  "label-md": ["Inter"],
+                  "display-lg-mobile": ["Inter"],
+                  "label-sm": ["Inter"],
+                  "display-lg": ["Inter"],
+                  "body-lg": ["Inter"],
+                  "headline-sm": ["Inter"]
+          },
+          "fontSize": {
+                  "headline-md": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                  "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                  "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                  "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                  "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                  "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                  "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                  "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-black text-primary tracking-tight">Jema Electrical</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md transition-transform active:scale-95" href="#">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-md text-label-md active:scale-95" href="#">About</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-md text-label-md active:scale-95" href="#">Testimonials</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-md text-label-md active:scale-95" href="#">Emergency Info</a>
+</nav>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 font-label-md text-label-md font-bold uppercase tracking-wider rounded shadow-sm hover:brightness-95 active:scale-95 transition-all">
+        Request Quote
+      </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-primary-container">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary-container/60 z-10"></div>
+<img class="w-full h-full object-cover grayscale opacity-40 mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB59C3jgOUk3MvJxBX8bHusUKULtlmkcUDuQePxxqvOy6XpJVC_yxdL2hc7THkrsmV8fzSkUhQbNOvOOJq929lzZuYubXr-KthhNSoro7WqU-UauIHUem7wqcLK52a8FrgzsuwFVBiEJVBUR0a9Yj9z1qUAtTtygAkT9Sxt7SG-nVosMbV-0jQaBhS-HpjcXEpyi4s6SDidrFb9e-EBZE7xgSmnX4BXm5-TmQC-gol6aZAC7ISQuQ"/>
+</div>
+<div class="relative z-20 px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div class="text-on-primary">
+<div class="inline-flex items-center gap-2 bg-secondary/20 border border-secondary text-secondary-fixed px-3 py-1 mb-6 rounded-full">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">NICEIC Certified</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+            Expert Electrical Solutions for Your Home &amp; Business
+          </h1>
+<p class="font-body-lg text-body-lg mb-10 text-primary-fixed max-w-xl">
+            Reliable, Certified, and Available 24/7. High-precision engineering and professional safety standards for every project. Quality you can trust.
+          </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 font-label-md text-label-md font-bold uppercase tracking-widest rounded shadow-md hover:brightness-95 active:scale-95 transition-all flex items-center gap-3">
+              Request a Quote
+              <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-primary border border-outline-variant text-on-primary px-8 py-4 font-label-md text-label-md font-bold uppercase tracking-widest rounded hover:bg-on-primary-fixed-variant transition-colors flex items-center gap-3">
+              View Services
+            </button>
+</div>
+</div>
+<div class="hidden md:block relative">
+<div class="absolute -inset-4 border-2 border-dashed border-outline-variant/30 rounded-lg"></div>
+<div class="bg-surface-container-high/10 backdrop-blur-md p-8 border border-outline-variant/20 rounded-lg">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/5 p-4 border border-outline-variant/20">
+<div class="text-secondary-fixed font-headline-sm text-headline-sm mb-1">15+</div>
+<div class="text-on-primary-fixed-variant font-label-sm text-label-sm">Years Experience</div>
+</div>
+<div class="bg-white/5 p-4 border border-outline-variant/20">
+<div class="text-secondary-fixed font-headline-sm text-headline-sm mb-1">24/7</div>
+<div class="text-on-primary-fixed-variant font-label-sm text-label-sm">Emergency Support</div>
+</div>
+<div class="bg-white/5 p-4 border border-outline-variant/20 col-span-2">
+<div class="text-secondary-fixed font-headline-sm text-headline-sm mb-1">100%</div>
+<div class="text-on-primary-fixed-variant font-label-sm text-label-sm">Licensed &amp; Insured Guarantee</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto technical-grid">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="text-secondary font-bold font-label-md text-label-md uppercase tracking-[0.2em] block mb-2">Expertise</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Our Services</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Providing industry-leading electrical solutions with a focus on technical precision and unwavering safety protocols.
+        </p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Residential -->
+<div class="group bg-surface-container-lowest p-8 border border-outline-variant hover:border-secondary transition-all hover:shadow-xl relative">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-16 h-16 mb-8 overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+<img class="w-[300%] max-w-none ml-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoSZZsbsOm66hmFK9mkGvLBs1oGXposAifqPMkP9gWxyHX2Zh3Ff7Ct2jBABIT-Dq8D8l0DQBF0WBxN0X0EfnSKKwrXN9zOcL5sGUgts0teCgYYkBvLZb2W_6gDX1JeZPvdeR-FCHHY7zHZAE17fnKYeNKajpVdI1XgUomN3BrIH2JVDwb0PZVzjeoV8VhamL-Nie6P-Fv7iKbzFedk1oYGSW9CejmDiE8Bp-fy6ft8bxB0l2d2Q" style="object-fit: none; object-position: 0 0;"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-4">Residential</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Expert home wiring, smart lighting solutions, and comprehensive safety inspections to protect your family.</p>
+<ul class="space-y-3 font-label-md text-label-md text-on-surface">
+<li class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary"></span> Whole-house Rewiring
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary"></span> Lighting Design
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary"></span> EV Charger Install
+            </li>
+</ul>
+</div>
+<!-- Commercial -->
+<div class="group bg-surface-container-lowest p-8 border border-outline-variant hover:border-secondary transition-all hover:shadow-xl relative">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-16 h-16 mb-8 overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+<img class="w-[300%] max-w-none ml-[-64px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoSZZsbsOm66hmFK9mkGvLBs1oGXposAifqPMkP9gWxyHX2Zh3Ff7Ct2jBABIT-Dq8D8l0DQBF0WBxN0X0EfnSKKwrXN9zOcL5sGUgts0teCgYYkBvLZb2W_6gDX1JeZPvdeR-FCHHY7zHZAE17fnKYeNKajpVdI1XgUomN3BrIH2JVDwb0PZVzjeoV8VhamL-Nie6P-Fv7iKbzFedk1oYGSW9CejmDiE8Bp-fy6ft8bxB0l2d2Q" style="object-fit: none; object-position: 0 0;"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-4">Commercial</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Scalable power systems, proactive maintenance, and industrial-grade installations for modern businesses.</p>
+<ul class="space-y-3 font-label-md text-label-md text-on-surface">
+<li class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary"></span> Switchboard Upgrades
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary"></span> Testing &amp; Tagging
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary"></span> Data &amp; Comms
+            </li>
+</ul>
+</div>
+<!-- Emergency -->
+<div class="group bg-inverse-surface p-8 border border-outline hover:border-secondary transition-all hover:shadow-xl relative text-inverse-on-surface">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
+<div class="w-16 h-16 mb-8 overflow-hidden">
+<img class="w-[300%] max-w-none ml-[-128px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoSZZsbsOm66hmFK9mkGvLBs1oGXposAifqPMkP9gWxyHX2Zh3Ff7Ct2jBABIT-Dq8D8l0DQBF0WBxN0X0EfnSKKwrXN9zOcL5sGUgts0teCgYYkBvLZb2W_6gDX1JeZPvdeR-FCHHY7zHZAE17fnKYeNKajpVdI1XgUomN3BrIH2JVDwb0PZVzjeoV8VhamL-Nie6P-Fv7iKbzFedk1oYGSW9CejmDiE8Bp-fy6ft8bxB0l2d2Q" style="object-fit: none; object-position: 0 0; filter: invert(1);"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-4">Emergency</h3>
+<p class="font-body-md text-body-md opacity-80 mb-6">24/7 rapid response for urgent electrical failures, power outages, and hazardous safety faults.</p>
+<ul class="space-y-3 font-label-md text-label-md">
+<li class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary-fixed"></span> 1 Hour Response Time
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary-fixed"></span> Fault Diagnosis
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary-fixed"></span> Emergency Repairs
+            </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Trust / About Section -->
+<section class="bg-surface-container-low py-24">
+<div class="px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row gap-16 items-center">
+<div class="flex-1 space-y-8">
+<div>
+<span class="text-secondary font-bold font-label-md text-label-md uppercase tracking-[0.2em] block mb-2">The Standard</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Why Choose Jema Electrical?</h2>
+</div>
+<div class="grid gap-6">
+<div class="flex gap-4 p-6 bg-surface-container-lowest border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-3xl">verified_user</span>
+<div>
+<h4 class="font-headline-sm text-label-md font-bold text-on-surface mb-1">Fully Licensed &amp; Insured</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Comprehensive liability coverage for your absolute peace of mind on every site.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 bg-surface-container-lowest border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-3xl">history</span>
+<div>
+<h4 class="font-headline-sm text-label-md font-bold text-on-surface mb-1">15+ Years of Experience</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Decades of technical expertise across residential and heavy industrial sectors.</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4 items-center">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Follow us:</span>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-on-primary hover:bg-secondary transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-on-primary hover:bg-secondary transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.058-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-on-primary hover:bg-secondary transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+</a>
+</div>
+</div>
+<div class="flex-1 w-full grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="h-64 border border-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A focused electrical engineer wearing safety goggles and a navy work shirt, meticulously inspecting a modern, clean electrical control panel with numerous circuit breakers in a high-tech facility. The lighting is bright and industrial, emphasizing technical precision and professional safety. The overall color palette is dominated by professional navy blue, clean whites, and subtle metallic accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj44cm0PIX3Fiu06mCmbJDdt_FzDP0f8iMLErm7tmco2anxcksj0kRNCbyuGqJoO6tVGBIRKHbwKqc1qKdMD20zjVlj3htzg5uXjh2Wp03nM1jwnEPW87uEizrOxrlyq-_AibfC4FLFUXPl6M9UVJubLY7_nSIHUpmesEqv4qwrHUbIxq4anWNsMNzQeNXx1pKZodMhwcfbTYjiWXQLobXL9bFwpbU65FWgalKTrf80VMbDmv6zw"/>
+</div>
+<div class="h-40 bg-primary-container p-6 flex flex-col justify-end">
+<span class="text-secondary-fixed font-display-lg text-display-lg-mobile leading-none">24/7</span>
+<span class="text-on-primary-fixed-variant font-label-md text-label-md">Availability</span>
+</div>
+</div>
+<div class="space-y-4 mt-8">
+<div class="h-40 bg-secondary p-6 flex flex-col justify-end">
+<span class="text-on-secondary font-display-lg text-display-lg-mobile leading-none">5★</span>
+<span class="text-on-secondary font-label-md text-label-md">Average Rating</span>
+</div>
+<div class="h-64 border border-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up of high-quality industrial electrical components and wiring neatly organized within a grey metal enclosure. The image showcases professional cable management, clean labeling, and precise engineering work. The aesthetic is extremely organized and technical, using a clean, light-mode commercial lighting setup to highlight the quality of craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALg2G1lOTMO-6v-aG6plwWPRy6wqW47vLeoeWhID0ck7Uodwamm0G27oPNkvvis2PCOZrYH--Ks-MOSbEPcL37TeQZ2GTFOcXvN5thKIn2GeIlJj1blCRrAO_FPXyJa2WctIwqAfa0pMP6xcTZCWGS-E1oea8WUs1S_mGNQA10RQd8IZklw-U2DXQfio22V5gbrrrmWqYCJBHPQ-Khd-9uMMJU16RXsljJ_7JYVkGwL7IqczocSw"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="text-secondary font-bold font-label-md text-label-md uppercase tracking-[0.2em] block mb-2">Verified Reviews</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">What Our Clients Say</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-surface-container-highest p-8 border border-outline-variant relative">
+<span class="material-symbols-outlined text-secondary text-5xl opacity-20 absolute top-4 right-4">format_quote</span>
+<div class="flex gap-1 text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 italic">"Jema Electrical were incredible. Had a complete power failure at 2 AM, and their engineer was at my door within 45 minutes. Fixed the issue swiftly and professionally."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-fixed rounded-full"></div>
+<div>
+<div class="font-label-md text-on-surface">Sarah Thompson</div>
+<div class="text-xs text-on-surface-variant font-medium">Homeowner, London</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest p-8 border border-outline-variant relative">
+<span class="material-symbols-outlined text-secondary text-5xl opacity-20 absolute top-4 right-4">format_quote</span>
+<div class="flex gap-1 text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 italic">"We've used Jema for all our commercial warehouse installations over the past 5 years. Their attention to detail and adherence to safety standards is second to none."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-fixed rounded-full"></div>
+<div>
+<div class="font-label-md text-on-surface">Michael Chen</div>
+<div class="text-xs text-on-surface-variant font-medium">Logistics Manager</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest p-8 border border-outline-variant relative">
+<span class="material-symbols-outlined text-secondary text-5xl opacity-20 absolute top-4 right-4">format_quote</span>
+<div class="flex gap-1 text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 italic">"Professional, tidy, and transparent with pricing. They explained exactly what needed to be done for our lighting upgrade. Highly recommend."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-fixed rounded-full"></div>
+<div>
+<div class="font-label-md text-on-surface">Robert Fletcher</div>
+<div class="text-xs text-on-surface-variant font-medium">Property Developer</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Emergency Contact Banner -->
+<section class="bg-secondary-container py-12">
+<div class="px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-on-secondary-container flex items-center justify-center rounded emergency-pulse">
+<span class="material-symbols-outlined text-secondary-container text-4xl">emergency_home</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-secondary-container">Emergency? Call 24/7</h2>
+<p class="font-display-lg text-display-lg-mobile md:text-headline-md font-black text-on-secondary-container tracking-tight">0800-JEMA-ELECT</p>
+</div>
+</div>
+<a class="bg-primary text-on-primary px-10 py-5 font-label-md text-label-md font-bold uppercase tracking-widest rounded shadow-xl hover:brightness-110 active:scale-95 transition-all flex items-center gap-3" href="tel:0800JEMAELECT">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+          Call Now
+        </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface border-t border-outline">
+<div class="flex flex-col md:flex-row justify-between items-center py-base px-margin-desktop max-w-container-max mx-auto gap-base">
+<div class="flex flex-col gap-2">
+<div class="font-headline-sm text-headline-sm font-bold text-surface-bright">Jema Electrical Ltd.</div>
+<p class="font-label-sm text-label-sm text-surface-variant">© 2024 Jema Electrical Ltd. All rights reserved. Certified Electrical Contractors.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-surface-variant font-medium hover:text-secondary-fixed transition-colors font-label-sm text-label-sm" href="#">Privacy Policy</a>
+<a class="text-surface-variant font-medium hover:text-secondary-fixed transition-colors font-label-sm text-label-sm" href="#">Terms of Service</a>
+<a class="text-surface-variant font-medium hover:text-secondary-fixed transition-colors font-label-sm text-label-sm" href="#">Safety Certifications</a>
+<a class="text-surface-variant font-medium hover:text-secondary-fixed transition-colors font-label-sm text-label-sm" href="#">Emergency Protocols</a>
+</div>
+<div class="flex gap-4">
+<a aria-label="Facebook" class="text-surface-variant hover:text-secondary-fixed transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+</a>
+<a aria-label="LinkedIn" class="text-surface-variant hover:text-secondary-fixed transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a aria-label="Instagram" class="text-surface-variant hover:text-secondary-fixed transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.058-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+</footer>
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Reveal on scroll logic
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section > div').forEach(el => {
+      el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+      observer.observe(el);
+    });
+  </script>
+</body></html>

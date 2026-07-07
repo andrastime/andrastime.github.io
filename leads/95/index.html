@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VoltGuard | Expert Electrical Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#041632",
+                    "primary-fixed": "#d7e2ff",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c5c6ce",
+                    "primary-container": "#1b2b48",
+                    "tertiary-fixed": "#dde3eb",
+                    "error-container": "#ffdad6",
+                    "background": "#f7f9fb",
+                    "surface-dim": "#d8dadc",
+                    "tertiary-fixed-dim": "#c1c7cf",
+                    "on-background": "#191c1e",
+                    "surface-variant": "#e0e3e5",
+                    "tertiary-container": "#262c32",
+                    "secondary": "#705d00",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-surface": "#191c1e",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-container": "#6e5c00",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#fcd400",
+                    "on-tertiary-fixed-variant": "#41474e",
+                    "on-primary-fixed": "#091b37",
+                    "on-tertiary-fixed": "#161c22",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#4f5e7e",
+                    "surface-container": "#eceef0",
+                    "outline": "#75777e",
+                    "on-surface-variant": "#44474d",
+                    "surface-container-low": "#f2f4f6",
+                    "inverse-surface": "#2d3133",
+                    "surface-container-high": "#e6e8ea",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-container": "#8d939b",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#ffe16d",
+                    "primary-fixed-dim": "#b7c7eb",
+                    "on-secondary-fixed-variant": "#544600",
+                    "surface-bright": "#f7f9fb",
+                    "tertiary": "#11181d",
+                    "on-secondary-fixed": "#221b00",
+                    "inverse-primary": "#b7c7eb",
+                    "on-primary-container": "#8393b5",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#374765",
+                    "secondary-fixed-dim": "#e9c400"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "max-width": "1280px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .industrial-border { border-top: 4px solid #041632; }
+      .safety-glow { filter: drop-shadow(0 0 8px rgba(252, 212, 0, 0.4)); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant shadow-sm h-20">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a class="text-headline-md font-headline-md text-primary tracking-tight" href="#">VoltGuard</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#services">Services</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#about">About</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#testimonials">Testimonials</a>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-bold text-label-bold hover:bg-primary-container transition-colors duration-200 flex items-center gap-2" href="tel:24/7">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+                    Emergency 24/7
+                </a>
+</nav>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-primary py-20 lg:py-32">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary/80 z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A professional electrician wearing a high-visibility vest and navy blue work uniform, performing precision testing on a complex industrial circuit board. The lighting is dramatic and technical, with cool blue highlights and warm yellow accents echoing the brand palette. The setting is a modern clean facility, emphasizing safety and unwavering reliability in an industrial-modern style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVWVVi3uM8vUwtZmXHUSW2zn2ZZ3H9BUyPO16dTgKffvXcINLKiEGScRgop5vk_RzdGCSoibAnTFswt8LGu_RbG_CO4ZBNS2srQ5dtYH5iN7vb2mLDMowHK3_nKAzTJqm0P3e2Goy47kUrc71oVP55Yjhf28epGC0_fqEO11DrVyYLSUFBy_3xhlERGEelOD4oVWcn9wKNSYy7WfHf3Pd88auFulM2WYJm0D-0uDNov0MYsG068Jni"/>
+</div>
+<div class="relative z-20 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-start gap-8">
+<div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-bold text-label-bold animate-pulse">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                    24/7 EMERGENCY RESPONSE AVAILABLE
+                </div>
+<h1 class="text-on-primary font-display text-[40px] md:text-display max-w-2xl leading-tight">
+                    Expert Electrical Solutions When You Need Them Most
+                </h1>
+<p class="text-primary-fixed-dim font-body-lg text-body-lg max-w-xl opacity-90">
+                    Certified professional electricians providing reliable installations, repairs, and emergency callouts for homes and businesses across the city.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<a class="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-lg font-label-bold text-label-bold text-center hover:scale-[1.02] transition-transform duration-200 shadow-lg" href="#quote">
+                        Get a Free Quote
+                    </a>
+<a class="border-2 border-on-primary text-on-primary px-10 py-4 rounded-lg font-label-bold text-label-bold text-center hover:bg-on-primary hover:text-primary transition-all duration-200" href="tel:000">
+                        Call Now
+                    </a>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-24 bg-background" id="services">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Core Expertise</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">From light switches to industrial power plants, we bring precision and safety to every connection.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl industrial-border shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="w-14 h-14 bg-surface-container flex items-center justify-center rounded-lg mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">home</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Residential Electrical</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">Safety inspections, rewiring, smart home installations, and lighting designs tailored for modern living.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-body-md font-label-bold text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Home Safety Audits
+                            </li>
+<li class="flex items-center gap-2 text-body-md font-label-bold text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Panel Upgrades
+                            </li>
+</ul>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl industrial-border shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="w-14 h-14 bg-surface-container flex items-center justify-center rounded-lg mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">apartment</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Commercial Solutions</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">Scaleable power systems, emergency lighting, and data cabling to keep your business running 24/7.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-body-md font-label-bold text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Office Fit-outs
+                            </li>
+<li class="flex items-center gap-2 text-body-md font-label-bold text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Maintenance Contracts
+                            </li>
+</ul>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl industrial-border shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="w-14 h-14 bg-surface-container flex items-center justify-center rounded-lg mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">factory</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Industrial Systems</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">Heavy-duty power distribution, machine controls, and high-voltage servicing for manufacturing facilities.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-body-md font-label-bold text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Three-Phase Power
+                            </li>
+<li class="flex items-center gap-2 text-body-md font-label-bold text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                PLC Programming
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden" id="about">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-8 -left-8 w-32 h-32 bg-secondary-container rounded-lg -z-10"></div>
+<div class="rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full aspect-[4/5] object-cover" data-alt="A portrait of a highly experienced lead electrician standing proudly in front of a modern service van. He is smiling warmly, projecting authority and friendliness. He wears a clean, professional navy blue uniform with an embroidered logo. The background is a slightly blurred suburban street in golden hour light, symbolizing safety and community trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGIuvgEZkvld-TbYFNUm4SrOUhwguhZDhvefLcsvB2eUhmw3dqAJHcN8w3hYSsxwaBrNSIFZNS35digo5P-3fOAEQta5TB41hV7_qxB26zGMSiPzyKFqnrRP5x5KWuS2hNz-rblV_PqRPOJW73MK_5B0cwXsFOh0tMWEyujM4owhnBN8V1TU5qqyTcSXV7errPWoeUYIeg0p2epdCpRab_tbyDHJsRm0-Ukb_Yn_vDySJYYGoBV9HR"/>
+</div>
+<div class="absolute bottom-6 right-6 bg-primary p-6 rounded-lg shadow-xl border-l-4 border-secondary-container">
+<p class="text-on-primary font-headline-lg text-headline-lg">15+</p>
+<p class="text-primary-fixed-dim text-label-bold font-label-bold">Years of Trust</p>
+</div>
+</div>
+<div class="space-y-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Reliable Service Since 2009</h2>
+<p class="text-body-lg text-body-lg text-on-surface-variant mb-6">
+                                VoltGuard began with a simple mission: to provide the highest standard of electrical safety and craftsmanship to our local community. Today, we've grown into a full-service agency known for our meticulous attention to detail.
+                            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Safety First</h4>
+<p class="text-body-md text-on-surface-variant">Non-negotiable adherence to regulations.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">handshake</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Integrity</h4>
+<p class="text-body-md text-on-surface-variant">Honest pricing and transparent advice.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Excellence</h4>
+<p class="text-body-md text-on-surface-variant">Craftsmanship that stands the test of time.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">flash_on</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Efficiency</h4>
+<p class="text-body-md text-on-surface-variant">Swift response without cutting corners.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-background" id="testimonials">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">What Our Customers Say</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-6">"Absolute lifesavers! We had a total power failure at 2 AM on a Sunday. VoltGuard had an electrician at our door in 30 minutes. Fixed the issue and was incredibly professional."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center font-bold text-primary">JS</div>
+<div>
+<p class="font-label-bold text-primary">James Smith</p>
+<p class="text-body-md text-on-surface-variant opacity-70">Homeowner</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-6">"We use VoltGuard for all our retail fit-outs. Their attention to industrial standards and wiring neatness is second to none. Truly the experts in the field."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center font-bold text-primary">LR</div>
+<div>
+<p class="font-label-bold text-primary">Linda Rodriguez</p>
+<p class="text-body-md text-on-surface-variant opacity-70">Facility Manager</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-6">"Fair pricing, no hidden fees, and they cleaned up after themselves. It's hard to find tradespeople this reliable. Highly recommended for any home repairs."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center font-bold text-primary">MT</div>
+<div>
+<p class="font-label-bold text-primary">Mark Thompson</p>
+<p class="text-body-md text-on-surface-variant opacity-70">Property Owner</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Emergency Banner -->
+<section class="bg-secondary-container py-12 relative overflow-hidden">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center safety-glow">
+<span class="material-symbols-outlined text-secondary-container text-4xl animate-bounce">warning</span>
+</div>
+<div>
+<h3 class="font-display text-2xl md:text-3xl text-primary leading-tight">Electrical Emergency?</h3>
+<p class="text-on-secondary-container font-label-bold text-lg">Our technicians are on standby 24 hours a day, 7 days a week.</p>
+</div>
+</div>
+<a class="bg-primary text-on-primary px-12 py-5 rounded-lg font-display text-xl hover:bg-primary-container transition-all shadow-xl group" href="tel:000">
+<span class="flex items-center gap-2">
+                        Call (800) VOLT-911
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">phone_forwarded</span>
+</span>
+</a>
+</div>
+<!-- Decorative background text -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 text-[120px] font-display text-primary opacity-[0.03] select-none pointer-events-none whitespace-nowrap">
+                EMERGENCY 24/7 • CALL NOW • SAFETY FIRST
+            </div>
+</section>
+<!-- Lead Form Section -->
+<section class="py-24 bg-surface-container-lowest" id="quote">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Request a Free Quote</h2>
+<p class="text-body-lg text-on-surface-variant mb-10">Fill out the form below and one of our master electricians will get back to you within 2 business hours with a transparent, no-obligation estimate.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<p class="text-on-surface font-label-bold">Serving the Greater Metropolitan Area</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<p class="text-on-surface font-label-bold">service@voltguard.com</p>
+</div>
+</div>
+</div>
+<div class="bg-background p-8 rounded-xl industrial-border shadow-lg">
+<form class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-primary block">FULL NAME</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-2 focus:border-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-primary block">EMAIL ADDRESS</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-2 focus:border-primary outline-none transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-primary block">SERVICE TYPE</label>
+<select class="w-full p-3 rounded-lg border border-outline-variant focus:border-2 focus:border-primary outline-none transition-all bg-white">
+<option>Residential Repair</option>
+<option>Commercial Installation</option>
+<option>Industrial Maintenance</option>
+<option>Emergency Service</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-primary block">PROJECT DETAILS</label>
+<textarea class="w-full p-3 rounded-lg border border-outline-variant focus:border-2 focus:border-primary outline-none transition-all" placeholder="Briefly describe your needs..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-headline-md py-4 rounded-lg hover:bg-primary-container transition-colors shadow-md" type="submit">
+                                Submit Request
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary py-12 border-t border-primary-container">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="text-headline-lg font-headline-lg text-secondary-container">VoltGuard</div>
+<div class="flex gap-8 text-primary-fixed-dim opacity-80 font-body-md text-body-md">
+<a class="hover:text-secondary-fixed transition-opacity" href="#">Privacy Policy</a>
+<a class="hover:text-secondary-fixed transition-opacity" href="#">Terms of Service</a>
+<a class="hover:text-secondary-fixed transition-opacity" href="#">Licensing</a>
+</div>
+<div class="text-primary-fixed-dim opacity-80 font-body-md text-body-md">
+                © 2024 VoltGuard Electrical Services. All rights reserved.
+            </div>
+</div>
+</footer>
+<!-- FAB for Emergency (Mobile Only) -->
+<a class="md:hidden fixed bottom-6 right-6 w-16 h-16 bg-error-container text-on-error-container rounded-full shadow-2xl flex items-center justify-center z-40 animate-bounce" href="tel:000">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">emergency</span>
+</a>
+<script>
+        // Smooth reveal animations for cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('#services > div > div > div').forEach(card => {
+                card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(card);
+            });
+        });
+    </script>
+</body></html>

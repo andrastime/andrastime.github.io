@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Novi Electrics | Expert Electrical Services in North London</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#b8c7e7",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#221b00",
+                    "on-tertiary-container": "#4c3f00",
+                    "secondary": "#0453cd",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#0d1c2f",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#e9c400",
+                    "tertiary": "#705d00",
+                    "on-secondary-container": "#fefcff",
+                    "secondary-container": "#356ee7",
+                    "tertiary-container": "#c9a900",
+                    "surface-container-highest": "#d5e3fd",
+                    "on-primary-container": "#7684a1",
+                    "error": "#ba1a1a",
+                    "surface": "#f8f9ff",
+                    "surface-container-high": "#dde9ff",
+                    "primary-container": "#0c1b34",
+                    "surface-dim": "#ccdbf4",
+                    "surface-bright": "#f8f9ff",
+                    "inverse-on-surface": "#ebf1ff",
+                    "surface-tint": "#505f7a",
+                    "secondary-fixed": "#dae2ff",
+                    "inverse-primary": "#b8c7e7",
+                    "primary": "#000000",
+                    "on-secondary-fixed": "#001848",
+                    "on-tertiary-fixed-variant": "#544600",
+                    "inverse-surface": "#233144",
+                    "primary-fixed": "#d6e3ff",
+                    "tertiary-fixed": "#ffe16d",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#0c1b34",
+                    "on-surface-variant": "#44474d",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#b2c5ff",
+                    "on-primary-fixed-variant": "#394761",
+                    "outline-variant": "#c5c6ce",
+                    "surface-container": "#e6eeff",
+                    "surface-container-low": "#eff4ff",
+                    "on-surface": "#0d1c2f",
+                    "on-secondary-fixed-variant": "#0040a2",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#d5e3fd",
+                    "background": "#f8f9ff",
+                    "on-error": "#ffffff",
+                    "outline": "#75777e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-mobile": "20px",
+                    "base": "8px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "headline-sm": ["Montserrat"],
+                    "label-bold": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .btn-primary {
+            @apply bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-label-bold px-6 py-3 rounded-lg transition-all hover:opacity-90 active:scale-95 flex items-center justify-center gap-2;
+        }
+        .btn-secondary {
+            @apply bg-primary-container text-on-primary font-label-bold text-label-bold px-6 py-3 rounded-lg transition-all hover:opacity-90 active:scale-95 flex items-center justify-center gap-2;
+        }
+        .card-service {
+            @apply bg-surface-container-lowest border border-outline-variant p-gutter rounded-xl transition-all hover:border-secondary hover:-translate-y-1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant dark:border-outline">
+<div class="font-display-lg text-display-lg-mobile md:text-display-lg font-bold text-on-background">
+            Novi Electrics
+        </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors" href="#services">Services</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors" href="#reviews">Reviews</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors" href="#areas">Areas</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors" href="#contact">Emergency</a>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-label-bold px-5 py-2 rounded-lg hover:opacity-80 active:scale-95 transition-all">
+                Book Now
+            </button>
+</nav>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional electrician in high-visibility gear working on a complex residential fuse box in a clean, modern North London home. The lighting is crisp and professional, highlighting technical precision and safety. The overall color palette features cool blues and warm amber accents, maintaining a high-contrast corporate aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDuiAVgAOWahnm4lecC0IOkZcnM-KR4AE09f1JN-lEtaiFOwFU9Wd5NY7dZxdSsfDM9Hxx7KzPFC_1kQpo4TnffhSdB9bHQycopURazVF4yUR64bC6Uj72BKIq4ITI8gW6dk7_jm0_vnaSJkfLEhXeIIf3AzohcYbnRHjFNPeG3E15AJYCh3vmYSfhLx9GcEYpf6PYeR_-86lw5YZF8igW4pT8iDFn6cI1TlceWwRpfRoBHGXpFMhq')">
+</div>
+<div class="absolute inset-0 bg-primary-container/60 backdrop-brightness-75"></div>
+</div>
+<div class="container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-on-primary">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+                        Expert Electrical Services in North London
+                    </h1>
+<p class="font-body-lg text-body-lg mb-10 opacity-90">
+                        Reliable, certified, and ready for any job – from emergency repairs to full installations. Your safety is our technical priority.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-label-bold px-8 py-4 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined">calendar_today</span>
+                            Book a Service
+                        </button>
+<a class="bg-surface-container-lowest text-primary-container font-label-bold text-label-bold px-8 py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-all" href="tel:020XXXXXXXX">
+<span class="material-symbols-outlined">call</span>
+                            Emergency Call: 020 XXXX XXXX
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-24 bg-surface" id="services">
+<div class="container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<span class="text-secondary font-label-bold text-label-bold uppercase tracking-wider mb-2 block">What We Do</span>
+<h2 class="font-headline-md text-headline-md text-on-background">Our Professional Services</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="card-service">
+<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined text-3xl">home</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Residential Installations</h3>
+<p class="text-on-surface-variant">Full property rewiring, lighting design, and smart home integration tailored for modern North London homes.</p>
+</div>
+<div class="card-service">
+<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined text-3xl">business</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Commercial Maintenance</h3>
+<p class="text-on-surface-variant">Comprehensive electrical solutions for businesses, including retail fit-outs and scheduled safety inspections.</p>
+</div>
+<div class="card-service">
+<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined text-3xl">build</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Fault Finding &amp; Repairs</h3>
+<p class="text-on-surface-variant">Rapid diagnostic services to identify and fix complex electrical faults safely and efficiently.</p>
+</div>
+<div class="card-service">
+<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined text-3xl">warning</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Emergency Callouts</h3>
+<p class="text-on-surface-variant">24/7 rapid response for critical electrical failures. We're on call when you need us most.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="py-24 bg-surface-container-low" id="reviews">
+<div class="container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-md text-headline-md text-center mb-16">What Our Customers Say</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<div class="flex gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-6">"Novi Electrics saved the day when our shop's power went out. Professional, fast, and very reasonably priced for London."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant"></div>
+<div>
+<p class="font-label-bold text-label-bold">James T.</p>
+<p class="text-xs text-on-surface-variant">Islington Business Owner</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<div class="flex gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-6">"Highly recommend for home rewiring. They were extremely tidy and explained everything clearly. Truly expert service."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant"></div>
+<div>
+<p class="font-label-bold text-label-bold">Sarah L.</p>
+<p class="text-xs text-on-surface-variant">Camden Resident</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<div class="flex gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-6">"Fast response for an emergency leak near our consumer unit. Safe, efficient, and gave us total peace of mind."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant"></div>
+<div>
+<p class="font-label-bold text-label-bold">David M.</p>
+<p class="text-xs text-on-surface-variant">Hackney Resident</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Accreditation -->
+<section class="py-12 border-y border-outline-variant bg-surface-container-lowest overflow-hidden">
+<div class="container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="text-center font-label-bold text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined">verified</span> NICEIC Approved Contractor
+                </div>
+<div class="text-center font-label-bold text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined">school</span> City &amp; Guilds Qualified
+                </div>
+<div class="text-center font-label-bold text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined">shield</span> Fully Insured
+                </div>
+<div class="text-center font-label-bold text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined">task_alt</span> TrustMark Certified
+                </div>
+</div>
+</section>
+<!-- Service Areas -->
+<section class="py-24" id="areas">
+<div class="container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<h2 class="font-headline-md text-headline-md mb-6">Where We Work</h2>
+<p class="font-body-lg text-body-lg mb-8 text-on-surface-variant">Serving all of North London with rapid response times and local expertise. Our engineers are strategically based to reach you quickly.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2 font-label-bold">
+<span class="material-symbols-outlined text-secondary">location_on</span> Islington
+                            </div>
+<div class="flex items-center gap-2 font-label-bold">
+<span class="material-symbols-outlined text-secondary">location_on</span> Camden
+                            </div>
+<div class="flex items-center gap-2 font-label-bold">
+<span class="material-symbols-outlined text-secondary">location_on</span> Hackney
+                            </div>
+<div class="flex items-center gap-2 font-label-bold">
+<span class="material-symbols-outlined text-secondary">location_on</span> Barnet
+                            </div>
+<div class="flex items-center gap-2 font-label-bold">
+<span class="material-symbols-outlined text-secondary">location_on</span> Haringey
+                            </div>
+<div class="flex items-center gap-2 font-label-bold">
+<span class="material-symbols-outlined text-secondary">location_on</span> Enfield
+                            </div>
+</div>
+</div>
+<div class="w-full md:w-1/2 h-80 rounded-2xl overflow-hidden shadow-xl border border-outline-variant">
+<div class="w-full h-full bg-surface-container" data-alt="A clean, minimalist vector map of North London, focusing on boroughs like Islington and Camden. The map uses a professional color palette of soft grays and blues, with local hubs highlighted with subtle icons. It serves as a visual representation of service coverage area." data-location="London" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSceEohp-VJ08DROdKTh9kSblc4zHTsUCWtWOCcAoZU51u98UtsOqTZS6rVDAaBkERPEdY8xCKNzcx8r_R7roTcoRhrepWlXXRSKb2Txi8QxCdNbu_rWZzCPWg9s_tX6t4Gw0YIPMalxXnMwgdGt5S1zjOpkc9F11knfcfPwy9iV_Xvd-AK_rBCP_L87TKqidWei0jA2x9sve5cBedQll5a-agcgQ1YzVIQfMlG2fBjdnqalR01KoO')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog/News -->
+<section class="py-24 bg-surface-container-low">
+<div class="container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="text-secondary font-label-bold text-label-bold uppercase tracking-wider mb-2 block">Stay Safe</span>
+<h2 class="font-headline-md text-headline-md">Latest Electrical Tips</h2>
+</div>
+<button class="hidden md:flex items-center gap-2 text-secondary font-label-bold border-b-2 border-secondary pb-1">View All Articles</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden transition-all hover:shadow-lg">
+<div class="h-48 overflow-hidden">
+<div class="w-full h-full bg-cover transition-transform group-hover:scale-105" data-alt="A close-up shot of an older electrical panel with outdated wiring, used to illustrate electrical safety risks. The lighting is slightly dramatic to emphasize potential hazards. High-resolution digital photograph in a professional documentary style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBR6B2AdE-3jqjKPPvt4uA2Cu7W7yyqLKxe9oPySthvp_17AtIWXbTiyhCDipdXi571Zmdye8AJEL-Jk66jyweRjqtwAgqKDkeK9kwv63x7hYNAuNt9vWFzcLzl6MJXaXv-LB9r1WUA6EkWIp2uoMRBArDIEQ-FKXZBMgZAu4EhFsVeKcZPYVhoJ9y52F7rslnHYWFgFr4Igvl8nvqXIS9KaGpjbFnDnJiXk4WiQmwC_Tw1CsA5YP9V')"></div>
+</div>
+<div class="p-6">
+<span class="text-xs font-label-bold bg-secondary/10 text-secondary px-2 py-1 rounded-full uppercase mb-4 inline-block">Safety</span>
+<h3 class="font-headline-sm text-headline-sm mb-4 leading-tight">5 Signs Your Home Needs Rewiring</h3>
+<p class="text-on-surface-variant mb-6">Don't ignore the warning signs. Learn what to look for to keep your family safe...</p>
+<a class="text-primary-container font-label-bold flex items-center gap-1 group-hover:translate-x-1 transition-all" href="#">Read More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden transition-all hover:shadow-lg">
+<div class="h-48 overflow-hidden">
+<div class="w-full h-full bg-cover transition-transform group-hover:scale-105" data-alt="A modern kitchen interior showing well-placed electrical outlets and stylish pendant lighting. The image represents modern electrical standards and design aesthetics. Bright, clean, high-key photography style suitable for a premium property blog." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJi10xF2qX8drCpKAUWABbV3Jh5RRetGGL4unnRSsSNC8IscHZGQjle2vrqXzy-h_Oe8hHYeNgCkNeRlqHzqpXpbG5nU33GcuvSKXFCKXo0bpmR4Ez7uoDDHuh8pP_l2cPoGnkrrvYbYrZwqKtXYR75ffPidK94vPxBt548yf4BTfQ7yqYQZKuHQqshqPRryku-rfOF8OGAycZmXql22vFT6gQTxafXk9Rr4Kq6jkaUFgM7L9GRLn2')"></div>
+</div>
+<div class="p-6">
+<span class="text-xs font-label-bold bg-secondary/10 text-secondary px-2 py-1 rounded-full uppercase mb-4 inline-block">Guide</span>
+<h3 class="font-headline-sm text-headline-sm mb-4 leading-tight">Electrical Safety for Homeowners</h3>
+<p class="text-on-surface-variant mb-6">A complete checklist for maintaining electrical health in your London property...</p>
+<a class="text-primary-container font-label-bold flex items-center gap-1 group-hover:translate-x-1 transition-all" href="#">Read More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden transition-all hover:shadow-lg">
+<div class="h-48 overflow-hidden">
+<div class="w-full h-full bg-cover transition-transform group-hover:scale-105" data-alt="An electric vehicle charging point installed on the brick wall of a modern London driveway. The sun is setting, creating a warm, progressive atmosphere that reflects modern energy solutions. Professional architectural photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXDKJNHZdXGKOI3xKAJOMu-JztiBP5PRKR6knNzoOgvKwYmwPOmk07uDZtGr3DGT75FCN0NMdEd1U1MreqnhiIJ4wUyibS7U05rThs5W9kDzTYLUyfTxhkgQxjOsjLjhxHy_aO0Aw07eD0CWMCR02KAHhgqUn26ODrXqHsXQmTNLW3BKUlYB11BK9mhDsgoPUU_yWq1kleDErwGDTB8cMQBv5EkFg14Ndglebx-oWScyYvN1tuPV3t')"></div>
+</div>
+<div class="p-6">
+<span class="text-xs font-label-bold bg-secondary/10 text-secondary px-2 py-1 rounded-full uppercase mb-4 inline-block">New Tech</span>
+<h3 class="font-headline-sm text-headline-sm mb-4 leading-tight">Installing an EV Charger at Home</h3>
+<p class="text-on-surface-variant mb-6">Everything you need to know about the switch to electric and your home's capacity...</p>
+<a class="text-primary-container font-label-bold flex items-center gap-1 group-hover:translate-x-1 transition-all" href="#">Read More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-primary-container text-on-primary" id="contact">
+<div class="container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md mb-8">Get in Touch</h2>
+<p class="font-body-lg text-body-lg mb-12 opacity-80">Whether it's a minor repair or a large-scale commercial installation, our expert team is ready to help. Reach out for a free quote or emergency support.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-full bg-on-primary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label-bold text-secondary-fixed">General Enquiries</p>
+<p class="text-2xl font-bold">020 XXXX XXXX</p>
+</div>
+</div>
+<div class="flex items-start gap-6 bg-tertiary-container/20 p-6 rounded-2xl border border-tertiary/30">
+<div class="w-12 h-12 rounded-full bg-tertiary flex items-center justify-center flex-shrink-0 text-on-tertiary">
+<span class="material-symbols-outlined">emergency</span>
+</div>
+<div>
+<p class="font-label-bold text-tertiary-fixed">24/7 Emergency Service</p>
+<p class="text-3xl font-bold text-tertiary-fixed">0800 XXX XXXX</p>
+<p class="text-sm opacity-70">Immediate response across all N &amp; NW postcodes.</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-full bg-on-primary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-label-bold text-secondary-fixed">Email Us</p>
+<p class="text-xl">hello@novielectrics.co.uk</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-full bg-on-primary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label-bold text-secondary-fixed">Office Address</p>
+<p class="text-xl opacity-90">123 Upper Street, Islington,<br/>London N1 1QP</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 md:p-12 rounded-3xl text-on-background">
+<h3 class="font-headline-sm text-headline-sm mb-8 text-on-surface">Send a Message</h3>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-xs uppercase tracking-wider text-on-surface-variant">Full Name</label>
+<input class="w-full border-outline-variant bg-surface rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-xs uppercase tracking-wider text-on-surface-variant">Phone Number</label>
+<input class="w-full border-outline-variant bg-surface rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary transition-all" placeholder="07XXX XXXXXX" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-xs uppercase tracking-wider text-on-surface-variant">Service Required</label>
+<select class="w-full border-outline-variant bg-surface rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary transition-all">
+<option>Residential Installation</option>
+<option>Commercial Maintenance</option>
+<option>Emergency Repair</option>
+<option>Safety Inspection (EICR)</option>
+<option>Other</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-xs uppercase tracking-wider text-on-surface-variant">Message</label>
+<textarea class="w-full border-outline-variant bg-surface rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary transition-all" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-label-bold text-label-bold py-4 rounded-lg hover:opacity-90 active:scale-95 transition-all" type="submit">Send Enquiry</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col items-center text-center space-y-base bg-on-background dark:bg-primary-container text-surface-container-lowest">
+<div class="font-display-lg text-display-lg-mobile text-surface-container-lowest font-bold mb-4">
+            Novi Electrics
+        </div>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8">
+<a class="text-surface-container-highest/70 hover:text-tertiary-fixed transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-surface-container-highest/70 hover:text-tertiary-fixed transition-colors font-body-md text-body-md" href="#">Terms of Service</a>
+<a class="text-surface-container-highest/70 hover:text-tertiary-fixed transition-colors font-body-md text-body-md" href="#">Insurance &amp; Certifications</a>
+<a class="text-surface-container-highest/70 hover:text-tertiary-fixed transition-colors font-body-md text-body-md" href="#">Contact</a>
+</nav>
+<p class="text-surface-container-highest/50 font-body-md text-body-md max-w-2xl">
+            © 2024 Novi Electrics. All rights reserved. Registered in England &amp; Wales. Part of the North London Trades Guild.
+        </p>
+<div class="flex gap-6 mt-8">
+<a class="w-10 h-10 rounded-full border border-surface-container-highest/20 flex items-center justify-center hover:bg-on-primary/10 transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-surface-container-highest/20 flex items-center justify-center hover:bg-on-primary/10 transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Mobile menu toggle (placeholder logic)
+        const menuBtn = document.querySelector('button.md\\:hidden');
+        menuBtn.addEventListener('click', () => {
+            alert('Mobile menu navigation options would appear here.');
+        });
+    </script>
+</body></html>

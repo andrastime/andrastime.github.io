@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BESA Electrical | NICEIC Approved Electrical Experts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#c8c6c7",
+                    "primary-container": "#1b1b1c",
+                    "surface": "#fbf8ff",
+                    "on-surface": "#1a1b22",
+                    "on-secondary-fixed-variant": "#544600",
+                    "on-primary-fixed": "#1b1b1c",
+                    "on-tertiary-container": "#838485",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#000000",
+                    "surface-container": "#eeedf7",
+                    "secondary": "#705d00",
+                    "secondary-fixed-dim": "#e9c400",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#5f5e5f",
+                    "on-secondary-fixed": "#221b00",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#6e5c00",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e3e1ec",
+                    "primary-fixed-dim": "#c8c6c7",
+                    "inverse-surface": "#2f3038",
+                    "secondary-fixed": "#ffe16d",
+                    "inverse-on-surface": "#f1effa",
+                    "primary": "#000000",
+                    "on-primary-fixed-variant": "#474647",
+                    "on-primary-container": "#858384",
+                    "surface-container-highest": "#e3e1ec",
+                    "secondary-container": "#fcd400",
+                    "on-tertiary-fixed": "#1a1c1d",
+                    "surface-container-low": "#f4f2fd",
+                    "primary-fixed": "#e5e2e3",
+                    "tertiary-fixed": "#e2e2e3",
+                    "surface-bright": "#fbf8ff",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-background": "#1a1b22",
+                    "on-secondary": "#ffffff",
+                    "background": "#fbf8ff",
+                    "surface-container-high": "#e8e7f1",
+                    "surface-dim": "#dad9e3",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#1a1c1d",
+                    "outline-variant": "#c7c6ca",
+                    "on-surface-variant": "#46474a",
+                    "on-tertiary-fixed-variant": "#454748",
+                    "outline": "#76777b",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "md": "24px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "lg": "48px",
+                    "xl": "80px",
+                    "sm": "12px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Montserrat"],
+                    "caption": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "label-bold": ["Inter"],
+                    "display-mobile": ["Montserrat"],
+                    "display": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .industrial-shadow {
+            box-shadow: 0 12px 24px -10px rgba(26, 27, 34, 0.1);
+        }
+        .yellow-accent-border {
+            border-top: 4px solid #fcd400;
+        }
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #705d00;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Custom Decorative Cursor Element -->
+<div class="custom-cursor hidden md:block" id="cursor"></div>
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant shadow-sm h-20 flex items-center">
+<div class="max-w-container-max mx-auto px-gutter w-full flex justify-between items-center">
+<a class="font-headline-md text-headline-md font-black tracking-tighter text-primary" href="#">
+                BESA <span class="text-secondary">ELECTRICAL</span>
+</a>
+<nav class="hidden md:flex items-center space-x-md">
+<a class="font-label-bold text-label-bold uppercase text-secondary border-b-2 border-secondary pb-1" href="#emergency">Emergency</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary transition-colors" href="#services">Services</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary transition-colors" href="#about">About</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary transition-colors" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-md">
+<a class="font-label-bold text-label-bold text-primary hover:opacity-90 transition-opacity hidden sm:block" href="tel:02081234567">
+                    020 8123 4567
+                </a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center bg-primary-container overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-50" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYFQ6Dc5GO0baaai5cVh_l2YPhnq7a2ObaK3V1D5rmOa07jNPucf1XArmJajkpK2kd50RIqGDNOmkjjKqWy9ifNLVz6_MSQbfO6xHXGyY5AEzG2xcLD2sGvfCyJLWOUjn4_g6VCpj1boDvTIND11ThffWbq-uypcUdCGbmzURha8bCVLXjj37B78gdOU2XSFSNy5v2Wyqjs4mT_fyzGc7jE2ZD5zKMpyNMpOiCh-bennP3u14qYakw')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="animate-fade-in-up">
+<div class="inline-flex items-center gap-xs bg-secondary-container text-on-secondary-container px-sm py-1 font-label-bold text-caption rounded-full mb-md uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                        Available Now
+                    </div>
+<h1 class="font-display text-display text-white mb-md leading-none">
+                        NICEIC Approved Electrical Experts Available 24/7
+                    </h1>
+<p class="font-body-lg text-body-lg text-white/80 mb-lg max-w-lg">
+                        Professional commercial and emergency electrical solutions across London and the South East. Rapid response, guaranteed safety.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-md">
+<a class="bg-secondary-container text-primary font-label-bold text-label-bold uppercase px-lg py-md hover:scale-95 transition-transform flex items-center justify-center gap-xs" href="#contact">
+                            Request an Emergency Electrician
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="border-2 border-white text-white font-label-bold text-label-bold uppercase px-lg py-md hover:bg-white/10 transition-colors flex items-center justify-center" href="#services">
+                            Our Services
+                        </a>
+</div>
+</div>
+</div>
+<!-- Industrial Pattern Overlay -->
+<div class="absolute bottom-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 100 100">
+<pattern height="10" id="grid" patternunits="userSpaceOnUse" width="10">
+<path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"></path>
+</pattern>
+<rect fill="url(#grid)" height="100" width="100"></rect>
+</svg>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-surface border-b border-outline-variant py-md">
+<div class="max-w-container-max mx-auto px-gutter flex flex-wrap justify-center md:justify-between items-center gap-lg">
+<div class="flex items-center gap-md grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center p-2 rounded-lg">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold uppercase text-primary">NICEIC Approved</p>
+<p class="text-caption text-on-surface-variant uppercase tracking-tighter">Contractor Status</p>
+</div>
+</div>
+<div class="flex items-center gap-md grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center p-2 rounded-lg">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold uppercase text-primary">City &amp; Guilds</p>
+<p class="text-caption text-on-surface-variant uppercase tracking-tighter">Level 3 Qualified</p>
+</div>
+</div>
+<div class="flex items-center gap-md grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center p-2 rounded-lg">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold uppercase text-primary">Fully Insured</p>
+<p class="text-caption text-on-surface-variant uppercase tracking-tighter">£5m Public Liability</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid Style) -->
+<section class="py-xl bg-surface-container-low" id="services">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-xs uppercase tracking-tight">Our Core Services</h2>
+<div class="w-16 h-1.5 bg-secondary mb-md"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md">
+<!-- Service 1: Emergency -->
+<div class="md:col-span-8 group bg-white p-lg border border-outline-variant relative overflow-hidden transition-all duration-300 hover:shadow-xl yellow-accent-border">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-5xl mb-md block">emergency_home</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-md">24/7 Emergency Services</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg max-w-xl">
+                                Fast response for power outages, electrical fires, and safety issues. We understand that electrical failures don't stick to office hours. Our emergency response team is available around the clock to secure your property.
+                            </p>
+<a class="inline-flex items-center gap-xs font-label-bold text-label-bold uppercase text-secondary group-hover:gap-md transition-all" href="tel:02081234567">
+                                Call Emergency Line
+                                <span class="material-symbols-outlined">call</span>
+</a>
+</div>
+<div class="absolute -bottom-8 -right-8 opacity-5 scale-150 group-hover:rotate-12 transition-transform duration-700 pointer-events-none">
+<span class="material-symbols-outlined text-[120px]">bolt</span>
+</div>
+</div>
+<!-- Service 2: Commercial -->
+<div class="md:col-span-4 bg-primary text-white p-lg flex flex-col justify-between group transition-all duration-300 hover:bg-primary-container">
+<div>
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-md block">business</span>
+<h3 class="font-headline-md text-headline-md mb-md">Commercial Solutions</h3>
+<p class="font-body-md text-body-md text-white/70">
+                                Comprehensive installations, lighting design, and scheduled maintenance for businesses of all sizes.
+                            </p>
+</div>
+<div class="mt-lg">
+<ul class="space-y-sm mb-lg text-white/80">
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 bg-secondary-fixed"></span> Office Refurbishments</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 bg-secondary-fixed"></span> Industrial Wiring</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 bg-secondary-fixed"></span> Data Cabling</li>
+</ul>
+</div>
+</div>
+<!-- Service 3: Compliance -->
+<div class="md:col-span-4 group bg-white p-lg border border-outline-variant yellow-accent-border hover:shadow-xl transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl mb-md block">verified</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-md">Compliance &amp; Testing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                            PAT testing, EICR reports, and safety certifications to keep your premises compliant with current regulations.
+                        </p>
+</div>
+<!-- Static Image/Visual Card -->
+<div class="md:col-span-8 h-64 md:h-auto bg-cover bg-center border border-outline-variant" data-alt="A professional electrician wearing grey workwear and high-quality protective gloves working on a complex industrial control panel. The lighting is bright and technical, showing neatly organized wires and precision components. The background is a clean, modern commercial utility room with conduits and metal pipes. Industrial yellow accents from tools highlight the precision and safety focus." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIpKyDrGvSgnQhFIb4mXMpU28hAEUKaEKtSfaAOa3gJgedjB2n5diPW66lBAL9Ryio_OHs3E_8nNk808omKbO7Y68oVp6L83_7h7ZjvtU0fCzAL9jxJagqtyOAegICVqLToqebNVwoPr3RL_hV6YE3LIz5GtHkSO27QOgVv05HB6XMCo_zDafh_jN5KwcP6ekFNXP-im-ieTd5QVDfU5DKG9eXKBNDzqqmzNQAMcMD8lLg3U7YqB_Z')">
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl" id="about">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="relative">
+<div class="aspect-square bg-surface-container overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Close up of high-end electrical testing equipment like a digital multimeter being used by a professional. The screen shows technical voltage readings. The scene is shot with a shallow depth of field, focusing on the precision of the tool. The color palette is industrial with grey, charcoal, and flashes of yellow and red." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFBSqrrIQjzCZSfJnPjejwBfAcDzGmxIbphqVRaegPpoNhjdepfUzr_zBIOHtU1thx_qkRN63yjbei1Y6k8VWNLD66d0uDAfzQCd4b3K1F4UHpImjfvGCMCT12SGdbYvP3S9p9cf9RmuzXAmytnQqkjsKgsqjVQYsgLBdQYtIK-2kPa7YWQzUmpxCQ4nxFRRUk-vfayn4quj_FJHSWfpVI6WtwUINVIm0De0W7fKk5MOpbaDgISUw8"/>
+</div>
+<div class="absolute -bottom-base -right-base bg-secondary-container p-lg max-w-[280px] hidden md:block">
+<p class="font-display text-headline-lg text-primary mb-xs">15+</p>
+<p class="font-label-bold text-label-bold uppercase tracking-widest text-on-secondary-container">Years of technical excellence across the South East</p>
+</div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md uppercase">Our Commitment to Mastery</h2>
+<p class="font-body-lg text-body-lg text-on-surface mb-md leading-relaxed">
+                        BESA Electrical Services LTD was founded on the principle that electrical safety is non-negotiable. Our company history is built on a foundation of technical mastery and unwavering reliability.
+                    </p>
+<div class="space-y-md mb-lg">
+<div class="flex items-start gap-md">
+<div class="mt-1 w-8 h-8 flex-shrink-0 flex items-center justify-center bg-primary text-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-primary">Safety First Mission</h4>
+<p class="text-body-md text-on-surface-variant">Every wire, every terminal, and every installation is verified against the most stringent safety standards.</p>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="mt-1 w-8 h-8 flex-shrink-0 flex items-center justify-center bg-primary text-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-primary">Technical Precision</h4>
+<p class="text-body-md text-on-surface-variant">We leverage modern engineering practices to deliver solutions that are both efficient and future-proof.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Coverage Area -->
+<section class="bg-primary text-white py-xl overflow-hidden relative">
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="flex flex-col md:flex-row items-end justify-between mb-lg gap-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-xs uppercase">Service Coverage</h2>
+<p class="text-white/60">London and the South East Regions</p>
+</div>
+<div class="bg-secondary-container text-primary px-lg py-sm font-label-bold text-label-bold uppercase">
+                        Emergency Rapid Response Zone
+                    </div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-lg">
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-secondary-fixed mb-md border-b border-white/20 pb-2">Central London</h4>
+<ul class="space-y-xs text-body-md text-white/80">
+<li>Westminster</li>
+<li>City of London</li>
+<li>Camden</li>
+<li>Islington</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-secondary-fixed mb-md border-b border-white/20 pb-2">South East</h4>
+<ul class="space-y-xs text-body-md text-white/80">
+<li>Greenwich</li>
+<li>Lewisham</li>
+<li>Bexley</li>
+<li>Bromley</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-secondary-fixed mb-md border-b border-white/20 pb-2">Kent</h4>
+<ul class="space-y-xs text-body-md text-white/80">
+<li>Dartford</li>
+<li>Sevenoaks</li>
+<li>Maidstone</li>
+<li>Tunbridge Wells</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-secondary-fixed mb-md border-b border-white/20 pb-2">Surrey</h4>
+<ul class="space-y-xs text-body-md text-white/80">
+<li>Croydon</li>
+<li>Sutton</li>
+<li>Epsom</li>
+<li>Guildford</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 h-full w-1/2 opacity-20 pointer-events-none">
+<div class="w-full h-full grayscale invert opacity-30" data-location="London" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEt3_rxw7-ceLNaDyKkbkgkSCcHsxT7EMRisggqV8P-9ke_imfJlgms9dh0JUhUHFCoDgtHd6jvGkf25VXdBcf-y2uR1pbZUuCIn6UJIRK2kidZ2XchkYaeuXlgKSJIIJ44KnaBDIsoxWL-c5yO1bMvFiWARTivJOF7KroSY7rimf0LIiXfDuLKcWofWl2-l3Fv2uuljg3AxAP_XvMGHZ2rpGJ79rdr-y4VQata4V3D9pDJDBZqwEF')"></div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl bg-surface-container-low" id="contact">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="bg-white industrial-shadow grid grid-cols-1 lg:grid-cols-12 overflow-hidden border border-outline-variant">
+<div class="lg:col-span-5 bg-primary-container p-lg text-white">
+<h2 class="font-headline-lg text-headline-lg mb-lg uppercase">Get in Touch</h2>
+<div class="space-y-lg">
+<div class="flex items-start gap-md">
+<span class="material-symbols-outlined text-secondary-fixed">phone_in_talk</span>
+<div>
+<p class="font-label-bold text-label-bold uppercase text-secondary-fixed">Emergency Line</p>
+<p class="text-headline-md font-bold">020 8123 4567</p>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<span class="material-symbols-outlined text-secondary-fixed">mail</span>
+<div>
+<p class="font-label-bold text-label-bold uppercase text-secondary-fixed">Email</p>
+<p class="text-body-lg">info@besaelectrics.co.uk</p>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<span class="material-symbols-outlined text-secondary-fixed">location_on</span>
+<div>
+<p class="font-label-bold text-label-bold uppercase text-secondary-fixed">Head Office</p>
+<p class="text-body-lg">BESA House, Business Park Road,<br/>London SE1 1TY</p>
+</div>
+</div>
+</div>
+<div class="mt-xl pt-lg border-t border-white/10">
+<p class="text-caption text-white/50 uppercase tracking-widest">NICEIC APPROVED CONTRACTOR #BE92138</p>
+</div>
+</div>
+<div class="lg:col-span-7 p-lg">
+<form class="space-y-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="flex flex-col gap-xs">
+<label class="font-label-bold text-label-bold uppercase text-primary">Full Name</label>
+<input class="border border-outline-variant p-md focus:border-secondary-container focus:ring-1 focus:ring-secondary-container outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-bold text-label-bold uppercase text-primary">Phone Number</label>
+<input class="border border-outline-variant p-md focus:border-secondary-container focus:ring-1 focus:ring-secondary-container outline-none transition-all" placeholder="07123 456 789" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-bold text-label-bold uppercase text-primary">Service Required</label>
+<select class="border border-outline-variant p-md focus:border-secondary-container focus:ring-1 focus:ring-secondary-container outline-none transition-all">
+<option>Emergency Call-Out</option>
+<option>Commercial Installation</option>
+<option>Compliance &amp; Testing</option>
+<option>Residential Services</option>
+</select>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-bold text-label-bold uppercase text-primary">Your Message</label>
+<textarea class="border border-outline-variant p-md focus:border-secondary-container focus:ring-1 focus:ring-secondary-container outline-none transition-all" placeholder="Describe the issue or project requirement..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white font-label-bold text-label-bold uppercase py-md hover:bg-secondary transition-colors flex items-center justify-center gap-xs" type="submit">
+                                Send Inquiry
+                                <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-tertiary-container py-xl border-t-4 border-secondary text-on-tertiary-container">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-lg">
+<div class="space-y-md">
+<a class="font-headline-lg text-headline-lg font-bold text-white block" href="#">
+                    BESA <span class="text-secondary-container">ELECTRICAL</span>
+</a>
+<p class="font-body-md text-body-md text-white/60">
+                    Trusted electrical contractors serving the greater London area with high-precision engineering and emergency response.
+                </p>
+<div class="flex gap-md">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-secondary-container hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">public</span>
+</a>
+</div>
+</div>
+<div class="space-y-md">
+<h4 class="font-label-bold text-label-bold uppercase text-white">Quick Links</h4>
+<nav class="flex flex-col space-y-sm">
+<a class="text-on-tertiary-fixed-variant hover:text-white transition-colors hover:underline" href="#emergency">Emergency Support</a>
+<a class="text-on-tertiary-fixed-variant hover:text-white transition-colors hover:underline" href="#services">All Services</a>
+<a class="text-on-tertiary-fixed-variant hover:text-white transition-colors hover:underline" href="#about">About Company</a>
+<a class="text-on-tertiary-fixed-variant hover:text-white transition-colors hover:underline" href="#contact">Request Quote</a>
+</nav>
+</div>
+<div class="space-y-md">
+<h4 class="font-label-bold text-label-bold uppercase text-white">Compliance</h4>
+<nav class="flex flex-col space-y-sm">
+<a class="text-on-tertiary-fixed-variant hover:text-white transition-colors hover:underline" href="#">Terms of Service</a>
+<a class="text-on-tertiary-fixed-variant hover:text-white transition-colors hover:underline" href="#">Privacy Policy</a>
+<a class="text-on-tertiary-fixed-variant hover:text-white transition-colors hover:underline" href="#">Health &amp; Safety Policy</a>
+</nav>
+<p class="text-caption mt-lg text-white/40">
+                    © 2024 BESA Electrical Services LTD. All rights reserved. NICEIC Approved Contractor.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Custom Cursor
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(2)';
+                cursor.style.backgroundColor = 'rgba(252, 212, 0, 0.2)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.backgroundColor = 'transparent';
+            });
+        });
+
+        // Simple smooth scroll highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach((a) => {
+                a.classList.remove('text-secondary', 'border-b-2', 'border-secondary', 'pb-1');
+                a.classList.add('text-on-surface');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('text-secondary', 'border-b-2', 'border-secondary', 'pb-1');
+                    a.classList.remove('text-on-surface');
+                }
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>W5 Electrical Ltd | Expert Electrical Solutions</title>
+<meta content="Professional, reliable, and certified electrical installations for residential, commercial, and industrial clients." name="description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f2f4f6",
+                    "on-primary-container": "#90a8ff",
+                    "tertiary": "#1d2b3d",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container": "#eceef0",
+                    "surface-container-high": "#e6e8ea",
+                    "primary-fixed": "#dce1ff",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-surface-variant": "#444651",
+                    "primary-container": "#1e3a8a",
+                    "on-background": "#191c1e",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-fixed": "#0d1c2e",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#00164e",
+                    "outline": "#757682",
+                    "on-primary-fixed-variant": "#264191",
+                    "error-container": "#ffdad6",
+                    "primary": "#00236f",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#d5e3fc",
+                    "secondary-fixed-dim": "#ffb690",
+                    "surface-variant": "#e0e3e5",
+                    "inverse-primary": "#b6c4ff",
+                    "on-surface": "#191c1e",
+                    "outline-variant": "#c5c5d3",
+                    "tertiary-fixed-dim": "#b9c7df",
+                    "on-tertiary-fixed-variant": "#3a485b",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#d8dadc",
+                    "surface-tint": "#4059aa",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#334154",
+                    "background": "#f7f9fb",
+                    "secondary": "#f97316", // Adjusted to Safety Orange per prompt instructions/system brand anchors
+                    "surface-bright": "#f7f9fb",
+                    "secondary-fixed": "#ffdbca",
+                    "inverse-surface": "#2d3133",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#fd761a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#341100",
+                    "on-secondary-container": "#5c2400",
+                    "on-tertiary-container": "#9eadc4",
+                    "on-secondary-fixed-variant": "#783200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "16px",
+                    "margin-desktop": "64px",
+                    "md": "24px",
+                    "lg": "48px",
+                    "xl": "80px",
+                    "base": "4px",
+                    "xs": "8px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "headline-md-mobile": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "headline-sm": ["Montserrat"],
+                    "label-bold": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .shadow-level-1 { box-shadow: 0 2px 4px rgba(30, 58, 138, 0.05); }
+        .shadow-level-2 { box-shadow: 0 10px 15px rgba(30, 58, 138, 0.08); }
+        
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 24px;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { grid-template-columns: repeat(3, 1fr); }
+            .grid-span-2 { grid-column: span 2; }
+            .grid-row-2 { grid-row: span 2; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm h-20 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full max-w-[1280px] mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                W5 Electrical Ltd
+            </div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-lg">
+<a class="text-on-surface-variant hover:text-primary font-label-bold text-label-bold transition-colors" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-primary font-label-bold text-label-bold transition-colors" href="#portfolio">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary font-label-bold text-label-bold transition-colors" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-primary font-label-bold text-label-bold transition-colors" href="#blog">Blog</a>
+<a class="text-on-surface-variant hover:text-primary font-label-bold text-label-bold transition-colors" href="#contact">Contact</a>
+<a class="bg-secondary text-on-primary px-6 py-3 rounded-[4px] font-label-bold text-label-bold shadow-level-2 hover:opacity-90 transition-all" href="#contact">Request Quote</a>
+</div>
+<!-- Mobile Toggle -->
+<button class="md:hidden text-primary" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="hidden md:hidden absolute top-20 left-0 w-full bg-surface border-b border-outline-variant p-6 flex flex-col space-y-4 animate-in fade-in slide-in-from-top-4" id="mobile-menu">
+<a class="text-on-surface-variant font-label-bold text-label-bold" href="#services">Services</a>
+<a class="text-on-surface-variant font-label-bold text-label-bold" href="#portfolio">Portfolio</a>
+<a class="text-on-surface-variant font-label-bold text-label-bold" href="#about">About</a>
+<a class="text-on-surface-variant font-label-bold text-label-bold" href="#blog">Blog</a>
+<a class="text-secondary font-label-bold text-label-bold" href="#contact">Request Quote</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-20 overflow-hidden bg-primary min-h-[90vh] flex items-center">
+
+<div class="relative z-10 max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl items-center py-xl">
+<div class="text-left space-y-md">
+<h1 class="text-on-primary font-display-lg text-display-lg-mobile md:text-display-lg leading-tight">
+                    Expert Electrical Solutions for Home &amp; Business
+                </h1>
+<p class="text-primary-fixed-dim font-body-lg text-body-lg max-w-lg">
+                    Professional, reliable, and certified electrical installations in West London and beyond. Precision engineering for your peace of mind.
+                </p>
+<div class="flex flex-col sm:flex-row gap-md pt-base">
+<a class="bg-secondary text-on-primary px-xl py-lg rounded-[4px] font-label-bold text-label-bold text-center shadow-level-2 hover:scale-[1.02] transition-transform" href="#contact">
+                        Request a Free Quote
+                    </a>
+<a class="border border-primary-fixed-dim text-on-primary px-xl py-lg rounded-[4px] font-label-bold text-label-bold text-center hover:bg-primary-fixed-dim/10 transition-colors" href="#services">
+                        Our Services
+                    </a>
+</div>
+</div>
+<div class="hidden lg:block relative group">
+<div class="absolute -inset-4 bg-secondary/10 rounded-xl blur-3xl group-hover:bg-secondary/20 transition-colors duration-700"></div>
+<img class="relative w-full aspect-square object-cover rounded-xl shadow-level-2 border-4 border-surface/10 grayscale hover:grayscale-0 transition-all duration-500" data-alt="A macro photograph of a perfectly organized, modern industrial electrical panel with multi-colored wiring and high-end circuit breakers. The lighting is crisp and cool, emphasizing precision and professionalism. The composition is clean and technical, shot with a shallow depth of field to create a professional corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnJ66hdQ6Pv9K76lo__cdGBRTdssnXQ-xC9gN3-y_t7nITp9jGrK9kRwz82WTJaHS3K3mP8nYAGZzwVMjr3eDjVD66woBnFnJV37UFpZCGsyidm-UoaNXgvKhz9BjOUJWrG-MQiRmgzYCJnkEjVHJHu974lNNVEPI5jFlB2sdvvOrDCU67vD68AlTbCc6yKkHMfjmOICGPUMRaGD_z_6FlO3L8i9n1S6Z9KZXHWzJBYkQbG-lM18ug"/>
+</div>
+</div>
+</header>
+<!-- Trust Banner -->
+<section class="bg-surface-container py-lg border-b border-outline-variant/30">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-wrap justify-center items-center gap-xl grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[32px]">verified</span>
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">NICEIC Approved</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[32px]">security</span>
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">TrustMark Member</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[32px]">thumb_up</span>
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">Checkatrade Certified</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-xl bg-surface" id="services">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-xs">Specialized Electrical Services</h2>
+<div class="w-20 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Domestic -->
+<div class="group p-lg bg-surface-container-lowest rounded-[4px] shadow-level-1 hover:shadow-level-2 transition-all border-b-4 border-transparent hover:border-secondary">
+<span class="material-symbols-outlined text-outline text-[48px] group-hover:text-primary transition-colors mb-md">home</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Domestic</h3>
+<p class="text-on-surface-variant font-body-md mb-md">Safe and reliable residential services including full house rewiring, smart home lighting, and EV charger installations.</p>
+<ul class="space-y-xs text-on-surface-variant font-label-bold text-[13px]">
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Fuse Box Upgrades</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Lighting &amp; Switches</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Safety Inspections</li>
+</ul>
+</div>
+<!-- Commercial -->
+<div class="group p-lg bg-surface-container-lowest rounded-[4px] shadow-level-1 hover:shadow-level-2 transition-all border-b-4 border-transparent hover:border-secondary">
+<span class="material-symbols-outlined text-outline text-[48px] group-hover:text-primary transition-colors mb-md">business</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Commercial</h3>
+<p class="text-on-surface-variant font-body-md mb-md">Bespoke electrical infrastructure for offices, retail units, and healthcare facilities with minimal business disruption.</p>
+<ul class="space-y-xs text-on-surface-variant font-label-bold text-[13px]">
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Office Fit-outs</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Data Cabling</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Emergency Lighting</li>
+</ul>
+</div>
+<!-- Industrial -->
+<div class="group p-lg bg-surface-container-lowest rounded-[4px] shadow-level-1 hover:shadow-level-2 transition-all border-b-4 border-transparent hover:border-secondary">
+<span class="material-symbols-outlined text-outline text-[48px] group-hover:text-primary transition-colors mb-md">factory</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Industrial</h3>
+<p class="text-on-surface-variant font-body-md mb-md">High-voltage systems and heavy machinery maintenance for warehouses and manufacturing plants with 24/7 support.</p>
+<ul class="space-y-xs text-on-surface-variant font-label-bold text-[13px]">
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Three-Phase Power</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Plant Maintenance</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Control Panels</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Gallery (Bento Style Masonry) -->
+<section class="py-xl bg-surface-container-low" id="portfolio">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-xl">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-xs">Featured Projects</h2>
+<p class="text-on-surface-variant max-w-md">Take a look at our recent installations across residential, commercial, and industrial sectors.</p>
+</div>
+<a class="hidden md:block text-primary font-label-bold text-label-bold hover:underline" href="#">View All Projects</a>
+</div>
+<div class="masonry-grid">
+<div class="grid-span-2 grid-row-2 relative group overflow-hidden rounded-[4px] shadow-level-1 aspect-video lg:aspect-auto">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Wide angle view of a sleek, modern corporate office space with architectural recessed ceiling lighting and minimalist cable management. The lighting is bright and professionally installed, creating an inviting workspace. The style is contemporary and clean with high-contrast surfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOCiWHwADny3EoaphIGZ4IVdoP1G0mRW1C86RH76H1Gle2KsoCILUjn48JaFiEeABF2UzU5WIvYnmao5L4XL_FArolNTC8f1OBzel7Ni1ZbWfZssL5nZXJIxcy0Ie66XVr-lxJI0s8ndsPkQgun7v1pKGwtdxBm-MGJhACKWkNIvcoa3p6zCiqse3R9yfOCg_d22rLhJUiDK3RGaLkpwUjfswLqfuVvwN0wbl6gjTAG1XWNMMeT_Ny"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-lg">
+<div class="text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Commercial</span>
+<h4 class="font-headline-sm text-headline-sm">London Tech Hub HQ</h4>
+</div>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-[4px] shadow-level-1 aspect-square">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a designer kitchen renovation featuring warm pendant lighting over a marble island. The electrical work is perfectly integrated into the high-end cabinetry. Soft ambient lighting creates a luxury residential atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGv-YBP5nkCrgf-BWI10kfFiNLj9aX1M-mZ4Wku_1rrT9mF72sA_0VD6xfPunrv4JieaSt9jcXwfeHowGLqByQEUTAjeB7l-oqMeTgD1fiSO75MsCX66hFZvnHsnNnvqBvt7JrAoZvsnFlRBGkZ0BuBjjSuNo6jv74CBGiW8oupyo-Uz5LarNy6YHGp9dsmObCwW3cRDSSwfjq19knQ-QTvGwhE4PvozzQpqT3Dp7B3zXMH_FQn96v"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-md">
+<div class="text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Domestic</span>
+<h4 class="font-headline-sm text-headline-sm">Kensington Kitchen</h4>
+</div>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-[4px] shadow-level-1 aspect-square">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Internal view of a large-scale industrial warehouse with massive LED bay lighting arrays hanging from a steel ceiling structure. The scale is immense, showing organized industrial electrical distribution. Clear and bright lighting reflects off the polished concrete floor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvYi60fpiiDQEjk04TG6OecpThpx350_eEvd69AP9xPJynZavmuEjjfS4LEbWw8rbcAo5-joJzMkRXzx0Sh38t8Kn1Z1L10gn9ZNxRGVrYIdIeZFKHofYyanBsruEzcJR8Xl2a0XhRQ-iya3ju6VG_2nvwCBQti5zoysvf3s4fn14SkzWXN8blS-3R6t_HEKh3sKDc0sEWIGu3naP6h_w_ijdZ3idTaynBy25SjlnEdiy4fzcQq5Ep"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-md">
+<div class="text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Industrial</span>
+<h4 class="font-headline-sm text-headline-sm">Logistics Center</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl bg-surface" id="about">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="order-2 lg:order-1">
+<img class="w-full rounded-[4px] shadow-level-2" data-alt="A professional electrician wearing a branded W5 Electrical navy blue uniform and high-visibility vest, using a handheld digital tester to check a modern circuit breaker panel. He looks focused and professional. The background is a clean, well-lit utility room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Q69ZzO-2qpMBDBaelajSm8hNykRGB64b4eDkq63Rgg4jGb1md1BqhkazjBEbrhRZrcIHAfcVR0ZNq-xt5iYqp5UeBo1aEW_PeIncS79V8-RzNFUv_RCV-5gLjWSp-H4nW8oS2YZu3-vy6FiMjYy2g2kgTYanCdEVS_SLkDhi3JK_CiTG_Uy7FcmXzLWcQOhHQobjZpotgjtE8uk4WyBaFcSG9TacrB0Gez4dcbVR621bs4it6DdE"/>
+</div>
+<div class="order-1 lg:order-2 space-y-md">
+<span class="font-label-bold text-label-bold text-secondary uppercase tracking-[0.2em]">Our Commitment</span>
+<h2 class="font-display-lg text-headline-md md:text-display-lg text-primary leading-tight">Powering Your Vision with Safety &amp; Precision</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg">
+                    At W5 Electrical Ltd, we believe that electrical excellence is the foundation of any safe and productive space. Founded on the principles of technical precision and unwavering reliability, our team of certified engineers brings decades of combined experience to every project.
+                </p>
+<p class="text-on-surface-variant font-body-md">
+                    Whether it's a critical industrial power upgrade or a modern home renovation, we approach every task with the same commitment to safety and quality. We don't just fix wires; we build the infrastructure that keeps your life and business moving forward.
+                </p>
+<div class="flex gap-lg pt-sm">
+<div>
+<div class="font-display-lg text-headline-md text-primary">15+</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase">Years Experience</div>
+</div>
+<div>
+<div class="font-display-lg text-headline-md text-primary">2k+</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase">Projects Completed</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xl bg-primary text-on-primary">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-xl">
+<h2 class="font-headline-md text-headline-md mb-xs">What Our Clients Say</h2>
+<div class="w-20 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Quote 1 -->
+<div class="bg-primary-container p-lg rounded-[4px] border border-on-primary-container/20">
+<div class="flex text-secondary-fixed-dim mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic mb-lg text-on-primary-container">"W5 Electrical completely rewired our warehouse. The team was incredibly professional, finished ahead of schedule, and the attention to detail in the control panels was top-notch."</p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center font-bold">JD</div>
+<div>
+<div class="font-label-bold text-label-bold">James Dalton</div>
+<div class="text-label-sm text-on-primary-container/70">Industrial Facilities Manager</div>
+</div>
+</div>
+</div>
+<!-- Quote 2 -->
+<div class="bg-primary-container p-lg rounded-[4px] border border-on-primary-container/20">
+<div class="flex text-secondary-fixed-dim mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic mb-lg text-on-primary-container">"Responsive and reliable. They handled our office fit-out with zero downtime for our staff. Highly recommended for any commercial work in the area."</p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center font-bold">SM</div>
+<div>
+<div class="font-label-bold text-label-bold">Sarah Miller</div>
+<div class="text-label-sm text-on-primary-container/70">CEO, Miller Creative Agency</div>
+</div>
+</div>
+</div>
+<!-- Quote 3 -->
+<div class="bg-primary-container p-lg rounded-[4px] border border-on-primary-container/20 md:hidden lg:block">
+<div class="flex text-secondary-fixed-dim mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic mb-lg text-on-primary-container">"We used W5 for our smart home lighting installation. The technician was knowledgeable and took the time to explain the app controls. Excellent service!"</p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center font-bold">RK</div>
+<div>
+<div class="font-label-bold text-label-bold">Robert Knight</div>
+<div class="text-label-sm text-on-primary-container/70">Homeowner, Kensington</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Preview -->
+<section class="py-xl bg-surface" id="blog">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-xl">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-xs">Industry Insights</h2>
+<p class="text-on-surface-variant max-w-md">Latest news and safety tips from the world of electrical engineering.</p>
+</div>
+<a class="hidden md:flex items-center gap-xs text-primary font-label-bold text-label-bold group" href="#">
+                    Visit Our Blog <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-[4px] mb-md aspect-video">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A detailed shot of an old, slightly charred electrical outlet showing signs of burning and wear. The image emphasizes the safety hazard. Shot with realistic lighting to underline the importance of maintenance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYVo6okOSe1qCpV_u1YC3dYHe3_YkGqrYfidLBSbb38AdElyoetR_D9I5FdAgGnNmcZqR36nDL2eLnsv1vCFW4xCmt88rdJE9V032I1ZYpjKuZuHFe9LASlWCB_8FLD-LmD3cMpgVlYW4exQJsnaHlRSr93Ljr2Z_U005XbAGZH8kpsX7J0i9ncR4-guJipCn6NA5bIS7ung9SoCEk5Atk6TnYajGyMuiH-K9E9-IxUMSPNMyG7-zn"/>
+</div>
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest mb-xs block">Home Safety</span>
+<h3 class="font-headline-sm text-[20px] text-primary group-hover:text-secondary transition-colors leading-snug">5 Signs Your Home Needs Urgent Rewiring</h3>
+</article>
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-[4px] mb-md aspect-video">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An artistic high-tech shot of LED strips glowing in a cool blue hue inside a modern architectural space. The image highlights energy efficiency and modern design. Clean, professional, and futuristic visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrOsRcSGHXy8kLDzop1JZ070nxOdGX0sCZ95kE6FOLQWutsxycfqGKm-6kOZs0D5BTTbJnINAk45f55jcYdvJbnynLNGrItKDWcaQx_UzGUCoFFLL6beePhJgVLxHrOtub-c6z7nNZe6TtOS16Va-dQu6O2zWMig7PCrpPPJpfsib3EaGMx0qk90tbAKlE8aZiVPtT3PbMPqp-Y2twNWg5r8YuVwhJgKBXxJ7kVQwgeITO_dVksEO-"/>
+</div>
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest mb-xs block">Tech Trends</span>
+<h3 class="font-headline-sm text-[20px] text-primary group-hover:text-secondary transition-colors leading-snug">The Future of Energy-Efficient Lighting</h3>
+</article>
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-[4px] mb-md aspect-video">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean white Electric Vehicle charging station installed in a modern driveway with a luxury electric car partially visible in the background. The scene is bright and highlights modern sustainable technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbo_XrBXNtgzENd1asZLbaIHMCZF3GLfA1jY0FhsXGuigWpruR50jr8F4TZleh1gL62pmqr6tzwVXt9R3QOs5ZR4hd8UKCuiCVvMngW3rzUeksdOoE-wHVGAwvnWjpKijn8ylViCxE1eQL-CNfR6RjOjPL4ZqGeomf8BZMA6v3TVeBDYOXALINevGLEnvY_ugow3ZaYcHjv6mKUBOk_gKARBmsMTJmAgJnF5ZnIfhPgjsAEvmSDO_R"/>
+</div>
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest mb-xs block">Sustainability</span>
+<h3 class="font-headline-sm text-[20px] text-primary group-hover:text-secondary transition-colors leading-snug">Is Your Property Ready for an EV Charger?</h3>
+</article>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl bg-surface-container-high relative overflow-hidden" id="contact">
+<div class="absolute right-0 top-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform origin-top-right"></div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<div class="space-y-lg">
+<h2 class="font-display-lg text-headline-md md:text-display-lg text-primary">Get in Touch</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-md">Ready to start your next project? Fill out the form or give us a call for a free consultation and estimate.</p>
+<div class="space-y-md pt-md">
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded-[4px] flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary">call</span>
+</div>
+<div>
+<div class="font-label-bold text-label-bold text-primary">Phone Number</div>
+<div class="font-body-md text-on-surface-variant">020 8555 1234</div>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded-[4px] flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary">location_on</span>
+</div>
+<div>
+<div class="font-label-bold text-label-bold text-primary">Office Address</div>
+<div class="font-body-md text-on-surface-variant">123 Engineering Way, West London, W5 2AB</div>
+</div>
+</div>
+</div>
+<div class="w-full aspect-[16/9] bg-surface-dim rounded-[4px] overflow-hidden grayscale border border-outline-variant shadow-level-1">
+<div class="w-full h-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[64px]" data-location="West London">map</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-lg md:p-xl rounded-[4px] shadow-level-2 border-t-4 border-secondary">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-lg">Request a Quote</h3>
+<form class="space-y-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-[4px] py-3 px-4" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-[4px] py-3 px-4" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Service Type</label>
+<select class="w-full bg-surface border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-[4px] py-3 px-4">
+<option>Domestic Electrical</option>
+<option>Commercial Services</option>
+<option>Industrial Installation</option>
+<option>Safety Inspection</option>
+</select>
+</div>
+<div class="space-y-xs">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Your Message</label>
+<textarea class="w-full bg-surface border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-[4px] py-3 px-4" placeholder="Briefly describe your requirements..." rows="5"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-primary font-label-bold text-label-bold py-lg rounded-[4px] shadow-level-2 hover:brightness-110 transition-all" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-tertiary text-on-tertiary">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-xl">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-surface-container-lowest mb-md">
+                        W5 Electrical Ltd
+                    </div>
+<p class="text-on-tertiary/80 text-body-md pr-md">Your trusted partner for precision electrical engineering across London and the Home Counties.</p>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-surface-container-lowest mb-md uppercase tracking-wider">Quick Links</h4>
+<ul class="space-y-xs text-on-tertiary/70 text-body-md">
+<li><a class="hover:text-on-tertiary transition-colors" href="#services">Services</a></li>
+<li><a class="hover:text-on-tertiary transition-colors" href="#portfolio">Portfolio</a></li>
+<li><a class="hover:text-on-tertiary transition-colors" href="#about">About Us</a></li>
+<li><a class="hover:text-on-tertiary transition-colors" href="#blog">Expert Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-surface-container-lowest mb-md uppercase tracking-wider">Services</h4>
+<ul class="space-y-xs text-on-tertiary/70 text-body-md">
+<li><a class="hover:text-on-tertiary transition-colors" href="#">EV Charging</a></li>
+<li><a class="hover:text-on-tertiary transition-colors" href="#">EICR Testing</a></li>
+<li><a class="hover:text-on-tertiary transition-colors" href="#">LED Lighting</a></li>
+<li><a class="hover:text-on-tertiary transition-colors" href="#">Fuse Box Upgrades</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-surface-container-lowest mb-md uppercase tracking-wider">Contact</h4>
+<ul class="space-y-xs text-on-tertiary/70 text-body-md">
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">phone</span> 020 8555 1234</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">mail</span> info@w5electrical.co.uk</li>
+<li class="flex items-start gap-xs"><span class="material-symbols-outlined text-[18px]">location_on</span> W5 2AB, London</li>
+</ul>
+</div>
+</div>
+<div class="pt-lg border-t border-on-tertiary/10 flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="text-label-sm text-on-tertiary/60">
+                    © 2024 W5 Electrical Ltd. All rights reserved. Registered in England &amp; Wales.
+                </div>
+<div class="flex gap-lg">
+<a class="text-label-sm text-on-tertiary/60 hover:text-on-tertiary" href="#">Privacy Policy</a>
+<a class="text-label-sm text-on-tertiary/60 hover:text-on-tertiary" href="#">Terms of Service</a>
+<a class="text-label-sm text-on-tertiary/60 hover:text-on-tertiary" href="#">Cookie Policy</a>
+<a class="text-label-sm text-on-tertiary/60 hover:text-on-tertiary" href="#">Certifications</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for form button
+        const form = document.querySelector('form');
+        if(form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = form.querySelector('button');
+                const originalText = btn.innerText;
+                btn.innerText = 'Sending...';
+                btn.disabled = true;
+                btn.classList.add('opacity-70');
+                
+                setTimeout(() => {
+                    btn.innerText = 'Message Sent!';
+                    btn.classList.remove('bg-secondary');
+                    btn.classList.add('bg-green-600');
+                    form.reset();
+                    
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.classList.add('bg-secondary');
+                        btn.classList.remove('bg-green-600', 'opacity-70');
+                        btn.disabled = false;
+                    }, 3000);
+                }, 1500);
+            });
+        }
+
+        // Scroll reveal animation logic (simple version)
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in', 'fade-in', 'duration-1000');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body></html>

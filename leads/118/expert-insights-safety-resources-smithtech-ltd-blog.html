@@ -1,0 +1,384 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Safety &amp; Resources | SmithTech Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#ffdad6",
+                    "surface-container-low": "#181c23",
+                    "primary-container": "#4a8eff",
+                    "inverse-on-surface": "#2d3039",
+                    "inverse-primary": "#005bc0",
+                    "on-primary-fixed": "#001a41",
+                    "status-emergency": "#FF3B30",
+                    "on-secondary-container": "#abb9d6",
+                    "neutral-silver": "#E2E8F0",
+                    "surface-container-lowest": "#0b0e16",
+                    "on-tertiary-container": "#002f33",
+                    "secondary-container": "#3c4962",
+                    "secondary": "#b9c7e4",
+                    "outline": "#8b90a0",
+                    "on-secondary-fixed-variant": "#39475f",
+                    "secondary-fixed": "#d6e3ff",
+                    "inverse-surface": "#e0e2ed",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#272a32",
+                    "on-primary": "#002e68",
+                    "surface-dim": "#10131b",
+                    "on-error": "#690005",
+                    "surface-bright": "#363942",
+                    "on-secondary-fixed": "#0d1c32",
+                    "surface-tint": "#adc7ff",
+                    "tertiary-fixed": "#7df4ff",
+                    "tertiary-fixed-dim": "#00dbe9",
+                    "on-secondary": "#233148",
+                    "deep-navy-bg": "#050B14",
+                    "surface-container": "#1c2027",
+                    "primary-fixed-dim": "#adc7ff",
+                    "background": "#10131b",
+                    "surface-variant": "#31353d",
+                    "primary": "#adc7ff",
+                    "electric-glow": "rgba(0, 240, 255, 0.15)",
+                    "surface-container-highest": "#31353d",
+                    "on-primary-container": "#00285b",
+                    "outline-variant": "#414754",
+                    "on-surface-variant": "#c1c6d7",
+                    "on-background": "#e0e2ed",
+                    "on-primary-fixed-variant": "#004493",
+                    "on-tertiary-fixed": "#002022",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "tertiary-container": "#00a0aa",
+                    "surface": "#10131b",
+                    "tertiary": "#00dbe9",
+                    "on-surface": "#e0e2ed",
+                    "error": "#ffb4ab",
+                    "secondary-fixed-dim": "#b9c7e4",
+                    "on-tertiary": "#00363a",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-lg": "80px",
+                    "unit": "8px",
+                    "stack-sm": "8px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "stack-md": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Sora"],
+                    "headline-lg": ["Sora"],
+                    "body-md": ["Inter"],
+                    "headline-xl": ["Sora"],
+                    "label-caps": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+        }
+        .card-border {
+            border-top: 1px solid transparent;
+            background-image: linear-gradient(rgba(5, 11, 20, 1), rgba(5, 11, 20, 1)), radial-gradient(circle at top left, #adc7ff, transparent);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+    </style>
+</head>
+<body class="bg-deep-navy-bg text-on-background selection:bg-primary/30 font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-deep-navy-bg/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_0_20px_rgba(0,240,255,0.1)] transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-20">
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter text-primary">
+                SmithTech Ltd
+            </div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="professional-electrical-wellness-services-smithtech-ltd.html">Electrical</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="professional-electrical-wellness-services-smithtech-ltd.html">Sauna Repair</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="professional-electrical-wellness-services-smithtech-ltd.html">Commercial</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="expert-insights-safety-resources-smithtech-ltd-blog.html">Safety &amp; Resources</a>
+</nav>
+<div class="flex items-center gap-gutter">
+<a class="hidden md:block font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="tel:03303211551">0330 321 1551</a>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-caps text-label-caps uppercase tracking-wider glow-hover transition-all duration-300">
+                    Emergency Call
+                </button>
+</div>
+</div>
+</header>
+<!-- Hero Section with Shader Background -->
+<section class="relative pt-40 pb-20 overflow-hidden">
+
+<div class="relative max-w-container-max mx-auto px-margin-desktop text-center">
+<div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full mb-6">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Authority &amp; Expertise</span>
+</div>
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-surface mb-6 max-w-4xl mx-auto">
+                Safety First. <span class="text-primary">Always.</span>
+</h1>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">
+                Empowering homeowners and commercial operators with the technical knowledge to maintain safe, efficient electrical and wellness systems.
+            </p>
+</div>
+</section>
+<!-- Main Content Area -->
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Blog Feed (Col 1-8) -->
+<div class="lg:col-span-8 space-y-stack-lg">
+<!-- Featured Article -->
+<article class="group bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/30 transition-all duration-500 hover:border-primary/40">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-end modern residential interior with minimalist lighting fixtures and sophisticated electrical panels integrated into architectural lines. The lighting is cold and crisp, featuring electric blue highlights and deep shadows. The mood is professional, technical, and premium, suggesting high-stakes engineering for luxury homes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhGS2p_W-mhoMVaza-Q5e3-yYdqOCdI3ytbE99oeuGgQQNLw-mrlX1njj6HZIycuLCwFTVLcDEUJvpbPMPEhFB5bl73LU41-CCKQSvJ8ANcBcLEe5_f--b4CDesBwH0CE1TBm9ics4vyuZjN5CkPPuLrYUeWxvDEIDMpsFM1wH7Lv2CXKO-3PocZnzyJGZMQQW8j--d7qtyBs-Vz2Fx8WVMB_abQS70km4jP64rhqGbnw_mkCDsrrK9A">
+<div class="absolute top-6 left-6 bg-primary text-on-primary font-label-caps text-label-caps px-4 py-2 rounded-full">
+                        Essential Safety
+                    </div>
+</div>
+<div class="p-8 md:p-12">
+<div class="flex items-center gap-4 mb-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant">May 24, 2024</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">By SmithTech Engineering</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6 group-hover:text-primary transition-colors">
+                        Electrical Safety in the Modern Home
+                    </h2>
+<p class="text-on-surface-variant mb-8 line-clamp-3 leading-relaxed">
+                        With the rise of smart home technologies and high-wattage wellness equipment, the load on domestic circuits is greater than ever. Learn how to audit your home's electrical health and identify warning signs before they become emergencies.
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps uppercase tracking-widest hover:gap-4 transition-all" href="expert-insights-safety-resources-smithtech-ltd-blog.html">
+                        Read Full Audit <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</article>
+<!-- Grid Articles -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Sauna Article -->
+<article class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl p-6 transition-all duration-300 hover:bg-surface-container-low">
+<div class="aspect-square rounded-lg mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A luxury designer sauna interior made of dark charcoal cedar wood with glowing linear LED lights under the benches. Wisps of steam rise from a modern stone heater. The atmosphere is extremely high-end, featuring a dark navy and cyan glow palette, reflecting a high-performance wellness sanctuary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgBW94edwgMgmT_8lvwJncsJ2WOcFu3zYpnEA8TC7Ot_qcaS-bJ-vRYie3NEi9PI-d1KCwNWrAtGGYKtvylaAdhQctAqQqPY9qUd0KfBltd28kwo0g709_XAbIjQD4pQtsDgBsCxE9c75pnK276Fzh1cqDS6n96Mz7AY43bsS8aI6990swQN9RG9Zlv8jOGKn0IObDSUVCOUFeCgpltx_snT_nqgTNNsWyeOEXmzsF-8nXI-KSRrqtdw">
+</div>
+<div class="font-label-caps text-label-caps text-primary mb-3">Wellness Maintenance</div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface mb-4">Maintaining Your Custom Sauna</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">
+                        Luxury saunas require precise environmental control. From element descaling to sensor calibration, here's our guide to longevity.
+                    </p>
+<button class="w-full py-3 border border-outline-variant/30 rounded font-label-caps text-label-caps uppercase hover:bg-primary/10 hover:border-primary/50 transition-all">
+                        View Checklist
+                    </button>
+</article>
+<!-- Power Cut Article -->
+<article class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl p-6 transition-all duration-300 hover:bg-surface-container-low">
+<div class="aspect-square rounded-lg mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A dramatic close-up of a high-tech electrical circuit board in a dark room, illuminated only by a few glowing red and blue status indicator lights. The style is cinematic and technical, focusing on the precision of electrical components during a power management scenario. Moody, dark aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLLihQo8Dclx3zRBoHK_M32hRKUoP_DVytyYKoD16nISmRNutgs3sH6mSD-03Sm4gYTSs5L7OK834zEPlqh6rnzyUzJk1x9Fec-kZdsDVU3sSSODF1-eiAFZGwDGRfSXehOZfRC45hp6y1rEJu0TwK0WXkaXSW8TkBDWkud_kqO9N7H3agOqAMKYkVHV1S-4ZUGAd7FJQZSZLoVVjuvz4XiewX2ahw3Dpt4MpwZ6Gi1C6dc63udqwoEg">
+</div>
+<div class="font-label-caps text-label-caps text-status-emergency mb-3">Protocol</div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface mb-4">What to do in a Power Cut</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">
+                        Don't get left in the dark. Follow these critical steps to protect your sensitive electronics and wellness systems during outages.
+                    </p>
+<button class="w-full py-3 border border-outline-variant/30 rounded font-label-caps text-label-caps uppercase hover:bg-status-emergency/10 hover:border-status-emergency/50 transition-all">
+                        Action Plan
+                    </button>
+</article>
+</div>
+<!-- Bento Resource Section -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 bg-gradient-to-br from-secondary-container/20 to-surface-container-high border border-outline-variant/30 rounded-xl p-8 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-lg text-headline-lg-mobile text-on-surface mb-4">Technical Data Sheets</h4>
+<p class="text-on-surface-variant text-sm">Download official NICEIC safety guides and manufacturer specs for Huum, Harvia, and Vidalux systems.</p>
+</div>
+<div class="mt-8 flex flex-wrap gap-3">
+<button class="bg-surface-container-highest px-4 py-2 rounded text-xs font-label-caps uppercase flex items-center gap-2 hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">download</span> Sauna_Safety_v2.pdf
+                        </button>
+<button class="bg-surface-container-highest px-4 py-2 rounded text-xs font-label-caps uppercase flex items-center gap-2 hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">download</span> Domestic_Circuit_Map.pdf
+                        </button>
+</div>
+</div>
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-8 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">verified</span>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-2 uppercase">Fully Registered</h4>
+<p class="text-xs text-on-surface-variant">NICEIC &amp; TrustMark certified for over 20 years.</p>
+</div>
+</div>
+</div>
+<!-- Sidebar (Col 9-12) -->
+<aside class="lg:col-span-4 space-y-gutter">
+<!-- Emergency CTA -->
+<div class="bg-surface-container-high border border-status-emergency/30 rounded-xl p-8 sticky top-24">
+<div class="flex items-center gap-3 text-status-emergency mb-4 animate-pulse-slow">
+<span class="material-symbols-outlined">emergency_home</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest">24/7 Response Active</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface mb-4">Emergency Service</h3>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                    Experiencing a power failure or sauna malfunction in the middle of the night? Our elite engineers are on call 365 days a year.
+                </p>
+<a class="block w-full bg-status-emergency text-white text-center py-4 rounded-lg font-headline-lg text-headline-lg-mobile transition-transform hover:scale-[1.02] shadow-[0_4px_20px_rgba(255,59,48,0.2)]" href="tel:03303211551">
+                    0330 321 1551
+                </a>
+<p class="text-center text-[10px] text-on-surface-variant mt-4 font-label-caps uppercase tracking-tighter">
+                    Standard &amp; Premium rates apply depending on time of call
+                </p>
+</div>
+<!-- Testimonials -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl p-8">
+<h4 class="font-label-caps text-label-caps text-primary uppercase mb-6 tracking-widest">Latest Feedback</h4>
+<div class="space-y-8">
+<div class="relative pl-6 border-l-2 border-primary/30">
+<div class="flex text-primary mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm text-on-surface-variant italic mb-2">"Fast, efficient and friendly service. Emergency electrician arrived within one hour to fix power cut issues. Highly recommended!"</p>
+<div class="font-label-caps text-[10px] text-on-surface uppercase">— Martin W, London</div>
+</div>
+<div class="relative pl-6 border-l-2 border-primary/30">
+<div class="flex text-primary mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm text-on-surface-variant italic mb-2">"Expert sauna repair. Found the fault in minutes that three other companies missed. Professional engineering at its best."</p>
+<div class="font-label-caps text-[10px] text-on-surface uppercase">— Sarah J, Surrey</div>
+</div>
+</div>
+<button class="w-full mt-8 text-xs font-label-caps text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest">
+                    View All Testimonials
+                </button>
+</div>
+<!-- Newsletter -->
+<div class="bg-secondary-container/10 border border-outline-variant/30 rounded-xl p-8">
+<h4 class="font-headline-lg text-headline-lg-mobile text-on-surface mb-3">Newsletter</h4>
+<p class="text-xs text-on-surface-variant mb-6">Stay updated with the latest safety regulations and wellness tech trends.</p>
+<form class="space-y-3">
+<input class="w-full bg-deep-navy-bg border border-outline-variant rounded p-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Email address" type="email">
+<button class="w-full bg-primary text-on-primary py-3 rounded font-label-caps text-label-caps uppercase tracking-wider">Subscribe</button>
+</form>
+</div>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy-bg w-full py-stack-lg border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-lg text-headline-lg text-primary mb-6">SmithTech</div>
+<p class="text-on-surface-variant text-sm mb-6 max-w-xs">
+                    Elite electrical and wellness engineering servicing Greater London, Surrey, Berkshire and Kent.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="expert-insights-safety-resources-smithtech-ltd-blog.html">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="service-areas-smithtech-ltd-coverage-map.html">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h5 class="font-label-caps text-label-caps text-primary uppercase mb-6 tracking-widest">Quick Links</h5>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors text-sm" href="index.html">Home</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors text-sm" href="service-areas-smithtech-ltd-coverage-map.html">Areas We Cover</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors text-sm" href="#">Our Rates</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors text-sm" href="professional-electrical-wellness-services-smithtech-ltd.html">Emergency Electrician</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors text-sm" href="professional-electrical-wellness-services-smithtech-ltd.html">Sauna Repair</a></li>
+</ul>
+</div>
+<!-- Resources -->
+<div>
+<h5 class="font-label-caps text-label-caps text-primary uppercase mb-6 tracking-widest">Resources</h5>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors text-sm" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors text-sm" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors text-sm" href="professional-electrical-wellness-services-smithtech-ltd.html">Emergency Rates</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors text-sm" href="expert-insights-safety-resources-smithtech-ltd-blog.html">Warranty Info</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors text-sm" href="service-areas-smithtech-ltd-coverage-map.html">Service Areas</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h5 class="font-label-caps text-label-caps text-primary uppercase mb-6 tracking-widest">Contact</h5>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span class="text-on-surface-variant text-sm">0330 321 1551</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="text-on-surface-variant text-sm">info@smithtech.co.uk</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span class="text-on-surface-variant text-sm">7 days a week, 365 days</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-stack-lg pt-8 border-t border-outline-variant/10 text-center">
+<p class="text-[10px] font-label-caps text-on-surface-variant/60 uppercase tracking-widest">
+                © 2024 SmithTech Ltd. NICEIC Registered. All Rights Reserved. Sauna Installation, Repair, Servicing &amp; Wellness Solutions.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for the fixed header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('h-16', 'bg-deep-navy-bg/95');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('h-16', 'bg-deep-navy-bg/95');
+                header.classList.add('h-20');
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Charges &amp; Pricing | All Electrical Services London</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glass-panel:hover {
+            border-color: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .electric-glow {
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .plasma-glow {
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+        }
+
+        .skyline-motif {
+            mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        @keyframes pulse-border {
+            0% { border-color: rgba(255, 215, 0, 0.4); }
+            50% { border-color: rgba(255, 215, 0, 1); }
+            100% { border-color: rgba(255, 215, 0, 0.4); }
+        }
+
+        .emergency-pulse {
+            animation: pulse-border 2s infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#00daf3",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "primary-container": "#ffd700",
+                      "on-error": "#690005",
+                      "deep-obsidian": "#0A0A0B",
+                      "glass-surface": "rgba(255, 255, 255, 0.03)",
+                      "on-secondary-fixed": "#001f24",
+                      "background": "#161308",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-container": "#00616d",
+                      "surface-container-low": "#1f1b10",
+                      "surface-container": "#231f14",
+                      "inverse-primary": "#705d00",
+                      "inverse-on-surface": "#343024",
+                      "surface-container-high": "#2e2a1e",
+                      "surface-variant": "#393528",
+                      "secondary-fixed": "#9cf0ff",
+                      "surface": "#161308",
+                      "on-surface-variant": "#d0c6ab",
+                      "surface-container-highest": "#393528",
+                      "primary-fixed-dim": "#e9c400",
+                      "electric-gold": "#FFD700",
+                      "on-surface": "#eae2cf",
+                      "plasma-blue": "#00E5FF",
+                      "on-secondary": "#00363d",
+                      "tertiary-fixed": "#e5e2e1",
+                      "surface-container-lowest": "#110e05",
+                      "error": "#ffb4ab",
+                      "secondary": "#bdf4ff",
+                      "on-primary": "#3a3000",
+                      "outline-variant": "#4d4732",
+                      "on-primary-fixed-variant": "#544600",
+                      "error-container": "#93000a",
+                      "surface-dim": "#161308",
+                      "on-tertiary": "#313030",
+                      "on-primary-container": "#705e00",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "on-background": "#eae2cf",
+                      "primary-fixed": "#ffe16d",
+                      "secondary-container": "#00e3fd",
+                      "primary": "#fff6df",
+                      "tertiary": "#f9f5f5",
+                      "on-tertiary-container": "#605f5e",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "surface-bright": "#3d392c",
+                      "inverse-surface": "#eae2cf",
+                      "glass-border": "rgba(255, 255, 255, 0.12)",
+                      "surface-tint": "#e9c400",
+                      "tertiary-container": "#dcd9d9",
+                      "on-secondary-fixed-variant": "#004f58",
+                      "on-primary-fixed": "#221b00",
+                      "outline": "#999077"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "stack-md": "16px",
+                      "margin-mobile": "20px",
+                      "section-gap": "120px",
+                      "stack-sm": "8px",
+                      "container-max": "1280px",
+                      "stack-lg": "32px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["Space Grotesk"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Space Grotesk"],
+                      "label-caps": ["Inter"],
+                      "body-md": ["Inter"],
+                      "callout": ["Space Grotesk"],
+                      "headline-xl": ["Space Grotesk"],
+                      "display-lg": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "callout": ["20px", {"lineHeight": "30px", "fontWeight": "500"}],
+                      "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-deep-obsidian text-on-surface selection:bg-electric-gold selection:text-on-primary">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-deep-obsidian/80 backdrop-blur-xl border-b border-glass-border shadow-2xl">
+<nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-electric-gold uppercase">
+                All Electrical Services
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-electric-gold transition-colors font-label-caps text-label-caps" href="homepage-all-electrical-services.html">Home</a>
+<a class="text-on-surface-variant hover:text-electric-gold transition-colors font-label-caps text-label-caps" href="our-services-all-electrical-services.html">Services</a>
+<a class="text-electric-gold border-b-2 border-electric-gold pb-1 font-label-caps text-label-caps" href="index.html">Charges</a>
+<a class="text-on-surface-variant hover:text-electric-gold transition-colors font-label-caps text-label-caps" href="contact-us-all-electrical-services.html">Contact</a>
+</div>
+<div class="flex gap-4">
+<a class="hidden lg:flex items-center gap-2 border border-electric-gold px-6 py-2 rounded-lg text-electric-gold font-label-caps text-label-caps emergency-pulse hover:bg-electric-gold hover:text-on-primary transition-all" href="tel:08002793443">
+<span class="material-symbols-outlined text-[18px]">emergency_home</span>
+                    Emergency Call
+                </a>
+<button class="bg-electric-gold text-on-primary px-6 py-2 rounded-lg font-label-caps text-label-caps electric-glow hover:scale-105 transition-transform active:scale-95">
+                    Book Now
+                </button>
+</div>
+</nav>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative pt-40 pb-20 px-gutter max-w-container-max mx-auto overflow-hidden">
+
+<div class="relative z-10 text-center md:text-left max-w-3xl">
+<span class="inline-block px-4 py-1 glass-panel rounded-full text-plasma-blue font-label-caps text-label-caps mb-6 tracking-widest">
+                    LONDON'S ELITE ELECTRICAL PARTNER
+                </span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-stack-md leading-none">
+                    Transparent Pricing, <span class="text-electric-gold">Professional Standards.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl">
+                    High-end electrical excellence without the mystery. We provide clear, upfront costs for residential and commercial projects across London, backed by over 35 years of NICEIC-approved experience.
+                </p>
+<div class="flex flex-wrap gap-4 justify-center md:justify-start">
+<div class="flex items-center gap-2 px-4 py-2 glass-panel rounded-lg">
+<span class="material-symbols-outlined text-electric-gold" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caps text-label-caps">NICEIC APPROVED</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 glass-panel rounded-lg">
+<span class="material-symbols-outlined text-plasma-blue">schedule</span>
+<span class="font-label-caps text-label-caps">24/7 AVAILABILITY</span>
+</div>
+</div>
+</div>
+<!-- London Skyline Motif -->
+<div class="absolute bottom-0 left-0 w-full h-32 skyline-motif hidden md:block">
+<svg class="w-full h-full stroke-plasma-blue fill-none" viewBox="0 0 1200 200">
+<path d="M0 180 L50 180 L50 150 L80 150 L80 180 L120 180 L120 100 L160 100 L160 180 L200 180 L200 60 L240 60 L240 180 L280 180 L350 40 L420 180 L480 180 L480 130 L530 130 L530 180 L600 180 L600 20 L680 20 L680 180 L750 180 L800 120 L850 180 L900 180 L900 80 L960 80 L960 180 L1020 180 L1050 140 L1100 180 L1200 180" stroke-width="1"></path>
+</svg>
+</div>
+</section>
+<!-- Pricing Tiers (Bento Grid) -->
+<section class="py-section-gap px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg">
+<!-- Standard Call-Out -->
+<div class="md:col-span-4 glass-panel p-stack-lg flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-electric-gold mb-4 text-4xl">bolt</span>
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Standard Call-Out</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Expert diagnostic and minor repairs during business hours (8am - 6pm).</p>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-plasma-blue text-sm">check_circle</span>First hour diagnostic</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-plasma-blue text-sm">check_circle</span>Minor fault resolution</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-plasma-blue text-sm">check_circle</span>Full safety check</li>
+</ul>
+</div>
+<div class="mt-10">
+<div class="text-headline-xl font-headline-xl text-electric-gold">£95<span class="text-body-md text-on-surface-variant">/hr</span></div>
+<p class="text-label-caps font-label-caps text-on-surface-variant mt-2">+ VAT (1hr minimum)</p>
+</div>
+</div>
+<!-- Emergency Response -->
+<div class="md:col-span-4 bg-glass-surface border border-electric-gold/40 p-stack-lg relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-electric-gold/10 rounded-full blur-3xl group-hover:bg-electric-gold/20 transition-all"></div>
+<span class="absolute top-4 right-4 px-3 py-1 bg-electric-gold text-on-primary font-label-caps text-[10px] rounded tracking-tighter">HOTLINE ACTIVE</span>
+<span class="material-symbols-outlined text-electric-gold mb-4 text-4xl">notification_important</span>
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Emergency Call-Out</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Immediate rapid response for out-of-hours, weekends, or bank holiday emergencies.</p>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface">
+<li class="flex items-center gap-2 font-semibold"><span class="material-symbols-outlined text-electric-gold text-sm">alarm</span>60-min response target</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-gold text-sm">check_circle</span>All-hours availability</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-gold text-sm">check_circle</span>Full circuit isolation</li>
+</ul>
+<div class="mt-10">
+<div class="text-headline-xl font-headline-xl text-electric-gold">£165<span class="text-body-md text-on-surface-variant">/hr</span></div>
+<p class="text-label-caps font-label-caps text-on-surface-variant mt-2">NO HIDDEN PREMIUMS</p>
+</div>
+</div>
+<!-- Fixed Price Services -->
+<div class="md:col-span-4 glass-panel p-stack-lg flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-plasma-blue mb-4 text-4xl">assignment_turned_in</span>
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Fixed Price Certs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Mandatory compliance testing and certification for landlords and homeowners.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-glass-border pb-2">
+<span class="font-body-md text-on-surface">EICR (Up to 2 Bed)</span>
+<span class="font-headline-md text-plasma-blue">£150</span>
+</div>
+<div class="flex justify-between items-center border-b border-glass-border pb-2">
+<span class="font-body-md text-on-surface">Landlord Gas+Elec</span>
+<span class="font-headline-md text-plasma-blue">£220</span>
+</div>
+<div class="flex justify-between items-center border-b border-glass-border pb-2">
+<span class="font-body-md text-on-surface">Fuse Board Upgrade</span>
+<span class="font-headline-md text-plasma-blue text-[24px]">From £450</span>
+</div>
+</div>
+</div>
+<button class="mt-8 w-full border border-plasma-blue text-plasma-blue py-3 rounded-lg font-label-caps text-label-caps hover:bg-plasma-blue/10 transition-colors">
+                        GET FULL RATE CARD
+                    </button>
+</div>
+</div>
+</section>
+<!-- What's Included / Value Section -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+<div class="relative rounded-2xl overflow-hidden aspect-square md:aspect-video">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A macro close-up of a high-end, modern electrical consumer unit with perfectly organized wiring and switches. The lighting is cold and clinical, with blue and white accents highlighting the metallic surfaces. The aesthetic is clean, professional, and sophisticated, mirroring an urban electrical engineering facility in London. High-fidelity glass-morphic textures and depth of field create a premium feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByV5tsU32Kqgbi8b25x-JFbn8b9vvqb2EsipSywzIlUwBjHCR8u5cN8qKXp8gjUpf1ZEdo0RmzHwQfb7h5Z3cQWC6uZ9Z9kHCllCXCPg33oOPGY1FDLo_MzJb8Kzljqjrh5R65Elnjm5j6jAl6gk3Y9IychRz8DSqoUSye5R18nOJdNQBbhgLyjlrs30lRlsyHL78vcPLhlN8gg8m6kwJ732JvnUD991Q9BtA2kHykweMp0iPQm4qt">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-obsidian via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 flex gap-4">
+<div class="glass-panel p-4 rounded-xl plasma-glow">
+<div class="text-headline-md text-electric-gold">35+</div>
+<div class="text-label-caps text-on-surface-variant">YEARS EXP</div>
+</div>
+<div class="glass-panel p-4 rounded-xl plasma-glow">
+<div class="text-headline-md text-plasma-blue">100%</div>
+<div class="text-label-caps text-on-surface-variant">COMPLIANT</div>
+</div>
+</div>
+</div>
+<div class="pl-0 md:pl-12">
+<h2 class="font-headline-xl text-headline-xl mb-stack-md">Professional Standards In <span class="text-electric-gold">Every Charge.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+                        We don't just provide a service; we deliver peace of mind. Every quote and invoice is backed by our elite accreditation and commitment to London's highest electrical safety standards.
+                    </p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-electric-gold text-3xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<div>
+<h4 class="font-headline-md text-callout">NICEIC Gold Approval</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">The industry's highest mark of quality. All work is fully insured and certified.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-plasma-blue text-3xl" style="font-variation-settings: 'FILL' 1;">transcribe</span>
+<div>
+<h4 class="font-headline-md text-callout">Zero Hidden Fees</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">No congestion charge surprises or parking fees in central London. What we quote is what you pay.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-electric-gold text-3xl" style="font-variation-settings: 'FILL' 1;">speed</span>
+<div>
+<h4 class="font-headline-md text-callout">Efficient Turnaround</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Swift diagnosis using advanced thermal imaging and testing equipment.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-gap px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-xl text-headline-xl mb-4">Pricing <span class="text-plasma-blue">Insights</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Clear answers to our most common billing questions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md max-w-4xl mx-auto">
+<details class="glass-panel rounded-xl p-6 group cursor-pointer" open="">
+<summary class="list-none flex justify-between items-center font-headline-md text-callout">
+                        Do you charge for travel time?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">No. Unlike many London competitors, our timer only starts once we arrive at your premises. We do not charge for the time spent in London traffic.</p>
+</details>
+<details class="glass-panel rounded-xl p-6 group cursor-pointer">
+<summary class="list-none flex justify-between items-center font-headline-md text-callout">
+                        Is VAT included in your quotes?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">All standard rates mentioned are subject to VAT at the current prevailing rate. We provide clear VAT-itemised invoices for your records.</p>
+</details>
+<details class="glass-panel rounded-xl p-6 group cursor-pointer">
+<summary class="list-none flex justify-between items-center font-headline-md text-callout">
+                        What is an EICR and why is it fixed price?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">Electrical Installation Condition Reports (EICR) are formal safety tests. We offer fixed pricing based on the number of circuits to ensure you have predictable compliance costs.</p>
+</details>
+<details class="glass-panel rounded-xl p-6 group cursor-pointer">
+<summary class="list-none flex justify-between items-center font-headline-md text-callout">
+                        How can I pay my invoice?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">We accept all major credit/debit cards via secure mobile terminals on-site, as well as bank transfers (BACS) for larger project milestones.</p>
+</details>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap px-gutter max-w-container-max mx-auto text-center">
+<div class="glass-panel p-16 rounded-3xl relative overflow-hidden">
+
+<div class="relative z-10">
+<h2 class="font-headline-xl text-display-lg-mobile md:text-headline-xl mb-stack-md">Ready to secure your <span class="text-electric-gold">London Property?</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl mx-auto">
+                        Connect with an NICEIC-approved engineer today for a free, transparent quote on your next project.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-stack-md justify-center">
+<a class="bg-electric-gold text-on-primary px-10 py-4 rounded-full font-label-caps text-label-caps flex items-center justify-center gap-2 electric-glow hover:scale-105 transition-all" href="tel:08002793443">
+<span class="material-symbols-outlined">call</span> FREEPHONE: 0800 279 3443
+                        </a>
+<button class="border border-glass-border bg-white/5 hover:bg-white/10 px-10 py-4 rounded-full font-label-caps text-label-caps transition-all">
+                            ENQUIRE ONLINE
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-glass-border">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-gutter py-section-gap max-w-container-max mx-auto relative overflow-hidden">
+<!-- London Skyline Motif in Footer -->
+<div class="absolute bottom-0 left-0 w-full h-24 skyline-motif opacity-5">
+<svg class="w-full h-full stroke-plasma-blue fill-none" viewBox="0 0 1200 200">
+<path d="M0 180 L50 180 L50 150 L80 150 L80 180 L120 180 L120 100 L160 100 L160 180 L200 180 L200 60 L240 60 L240 180 L280 180 L350 40 L420 180 L480 180 L480 130 L530 130 L530 180 L600 180 L600 20 L680 20 L680 180 L750 180 L800 120 L850 180 L900 180 L900 80 L960 80 L960 180 L1020 180 L1050 140 L1100 180 L1200 180" stroke-width="0.5"></path>
+</svg>
+</div>
+<div class="md:col-span-1">
+<div class="font-display-lg text-headline-md text-electric-gold mb-6 uppercase">AES</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Premium Electrical Excellence in London for over 35 years. Trusted by homeowners and businesses across the city.</p>
+</div>
+<div class="md:col-span-1">
+<h5 class="font-label-caps text-label-caps text-electric-gold mb-6">SERVICES</h5>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-plasma-blue transition-colors" href="our-services-all-electrical-services.html">Residential Services</a></li>
+<li><a class="hover:text-plasma-blue transition-colors" href="our-services-all-electrical-services.html">Commercial Excellence</a></li>
+<li><a class="hover:text-plasma-blue transition-colors" href="contact-us-all-electrical-services.html">Emergency Response</a></li>
+<li><a class="hover:text-plasma-blue transition-colors" href="our-services-all-electrical-services.html">Compliance &amp; Testing</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h5 class="font-label-caps text-label-caps text-electric-gold mb-6">CONTACT</h5>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">phone_in_talk</span> 0208 376 5289</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">mail</span> info@aes24-7.co.uk</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">location_on</span> London &amp; M25 Outskirts</li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h5 class="font-label-caps text-label-caps text-electric-gold mb-6">ACCREDITATIONS</h5>
+<div class="flex gap-4">
+<div class="w-12 h-12 glass-panel rounded flex items-center justify-center grayscale brightness-200">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<div class="w-12 h-12 glass-panel rounded flex items-center justify-center grayscale brightness-200">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div class="w-12 h-12 glass-panel rounded flex items-center justify-center grayscale brightness-200">
+<span class="material-symbols-outlined">electric_bolt</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-glass-border px-gutter py-8 max-w-container-max mx-auto flex flex-col md:row justify-between items-center text-label-caps font-label-caps text-on-surface-variant gap-4">
+<span>© 2024 All Electrical Services. Premium Electrical Excellence in London.</span>
+<div class="flex gap-8">
+<a class="hover:text-electric-gold transition-colors" href="index.html">Terms</a>
+<a class="hover:text-electric-gold transition-colors" href="index.html">Privacy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for glass panels
+        document.querySelectorAll('.glass-panel').forEach(panel => {
+            panel.addEventListener('mouseenter', () => {
+                panel.style.transform = 'translateY(-4px)';
+            });
+            panel.addEventListener('mouseleave', () => {
+                panel.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

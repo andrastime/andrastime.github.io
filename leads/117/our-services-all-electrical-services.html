@@ -1,0 +1,372 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Our Services | All Electrical Services London</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.12);
+        }
+        body {
+            background-color: #0A0A0B;
+            color: #eae2cf;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-panel:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .skyline-motif {
+            mask-image: linear-gradient(to top, black 20%, transparent 100%);
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+        }
+        .emergency-pulse {
+            animation: pulse-border 2s infinite;
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary-fixed-dim": "#00daf3",
+                "on-tertiary-fixed": "#1c1b1b",
+                "primary-container": "#ffd700",
+                "on-error": "#690005",
+                "deep-obsidian": "#0A0A0B",
+                "glass-surface": "rgba(255, 255, 255, 0.03)",
+                "on-secondary-fixed": "#001f24",
+                "background": "#161308",
+                "on-error-container": "#ffdad6",
+                "on-secondary-container": "#00616d",
+                "surface-container-low": "#1f1b10",
+                "surface-container": "#231f14",
+                "inverse-primary": "#705d00",
+                "inverse-on-surface": "#343024",
+                "surface-container-high": "#2e2a1e",
+                "surface-variant": "#393528",
+                "secondary-fixed": "#9cf0ff",
+                "surface": "#161308",
+                "on-surface-variant": "#d0c6ab",
+                "surface-container-highest": "#393528",
+                "primary-fixed-dim": "#e9c400",
+                "electric-gold": "#FFD700",
+                "on-surface": "#eae2cf",
+                "plasma-blue": "#00E5FF",
+                "on-secondary": "#00363d",
+                "tertiary-fixed": "#e5e2e1",
+                "surface-container-lowest": "#110e05",
+                "error": "#ffb4ab",
+                "secondary": "#bdf4ff",
+                "on-primary": "#3a3000",
+                "outline-variant": "#4d4732",
+                "on-primary-fixed-variant": "#544600",
+                "error-container": "#93000a",
+                "surface-dim": "#161308",
+                "on-tertiary": "#313030",
+                "on-primary-container": "#705e00",
+                "on-tertiary-fixed-variant": "#474746",
+                "on-background": "#eae2cf",
+                "primary-fixed": "#ffe16d",
+                "secondary-container": "#00e3fd",
+                "primary": "#fff6df",
+                "tertiary": "#f9f5f5",
+                "on-tertiary-container": "#605f5e",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "surface-bright": "#3d392c",
+                "inverse-surface": "#eae2cf",
+                "glass-border": "rgba(255, 255, 255, 0.12)",
+                "surface-tint": "#e9c400",
+                "tertiary-container": "#dcd9d9",
+                "on-secondary-fixed-variant": "#004f58",
+                "on-primary-fixed": "#221b00",
+                "outline": "#999077"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "stack-md": "16px",
+                "margin-mobile": "20px",
+                "section-gap": "120px",
+                "stack-sm": "8px",
+                "container-max": "1280px",
+                "stack-lg": "32px"
+            },
+            "fontFamily": {
+                "display-lg-mobile": ["Space Grotesk"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Space Grotesk"],
+                "label-caps": ["Inter"],
+                "body-md": ["Inter"],
+                "callout": ["Space Grotesk"],
+                "headline-xl": ["Space Grotesk"],
+                "display-lg": ["Space Grotesk"]
+            },
+            "fontSize": {
+                "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "callout": ["20px", {"lineHeight": "30px", "fontWeight": "500"}],
+                "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-deep-obsidian/80 backdrop-blur-xl border-b border-glass-border shadow-2xl">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-electric-gold uppercase">
+                All Electrical Services
+            </div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-body-md text-on-surface-variant hover:text-electric-gold transition-colors" href="homepage-all-electrical-services.html">Home</a>
+<a class="font-body-md text-electric-gold border-b-2 border-electric-gold pb-1" href="our-services-all-electrical-services.html">Services</a>
+<a class="font-body-md text-on-surface-variant hover:text-electric-gold transition-colors" href="index.html">Charges</a>
+<a class="font-body-md text-on-surface-variant hover:text-electric-gold transition-colors" href="contact-us-all-electrical-services.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:flex items-center gap-2 px-6 py-2 border border-electric-gold text-electric-gold font-bold uppercase text-xs tracking-widest emergency-pulse hover:bg-electric-gold hover:text-deep-obsidian transition-all" href="tel:02083765289">
+<span class="material-symbols-outlined text-sm">emergency_home</span>
+                    Emergency Call
+                </a>
+<button class="bg-electric-gold text-on-primary px-6 py-2 font-bold uppercase text-xs tracking-widest hover:shadow-[0_0_20px_rgba(255,215,0,0.4)] transition-all active:scale-95">
+                    Book Now
+                </button>
+</div>
+</div>
+</nav>
+<main class="relative pt-32">
+<!-- Hero Section Background -->
+<div class="absolute inset-0 z-0 overflow-hidden">
+
+</div>
+<!-- Hero Content -->
+<section class="relative z-10 px-gutter max-w-container-max mx-auto mb-section-gap">
+<div class="max-w-3xl">
+<span class="font-label-caps text-plasma-blue uppercase tracking-widest mb-4 block">Our Expertise</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-stack-md leading-none">
+                    Elite Electrical <br><span class="text-electric-gold">Excellence in London.</span>
+</h1>
+<p class="font-body-lg text-on-surface-variant max-w-xl">
+                    NICEIC Approved contractors with 35+ years of experience delivering precision electrical engineering for high-end residential and commercial estates across London.
+                </p>
+</div>
+</section>
+<!-- Services Grid - Our Expertise -->
+<section class="relative z-10 px-gutter max-w-container-max mx-auto mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Residential - Large Feature -->
+<div class="md:col-span-8 group relative overflow-hidden glass-panel p-stack-lg rounded-xl flex flex-col justify-end min-h-[480px]">
+<div class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-end modern London apartment interior with luxury designer lighting installations and recessed LED strips. The atmosphere is sophisticated and moody, featuring dark wood textures and polished marble surfaces illuminated by warm electric gold accents. The shot is wide-angle, showcasing professional electrical integration in a premium residential setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwVBTDzjMLp3Nm0yvZMKoaIktJjhWd5ooIUUAYNlbRq0HuYFFkSN_ZpjpBIJw2jqXEvYa07Kwi3ZvUgwg0OXMydrNjypQF02hOUICnrhAlJIwJFxvTGX23cuPOk0PkIwkbewTLz60BBWllYktm-bWFw40Qf7u_z0wXMk-9Dza0pdC_w8tVGXWnbV0HADhXbM3bZmJWPijtFoZ9Ilzya1Yw8uHBleTWfbOCEklsze0MN_644K-_iEMX')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-obsidian via-deep-obsidian/60 to-transparent z-10 opacity-90"></div>
+<div class="relative z-20">
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-plasma-blue/20 text-plasma-blue rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">
+<span class="material-symbols-outlined text-xs">home</span> Residential Excellence
+                        </span>
+<h3 class="font-headline-xl text-white mb-stack-sm">Full &amp; Part House Rewiring</h3>
+<p class="font-body-md text-on-surface-variant max-w-lg mb-stack-lg">
+                            Comprehensive modernization of your property's electrical infrastructure using premium materials and the latest safety protocols for seamless performance.
+                        </p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-white/5 border border-white/10 text-xs font-medium rounded-full">Home Electrical Installations</span>
+<span class="px-4 py-2 bg-white/5 border border-white/10 text-xs font-medium rounded-full">Bespoke Lighting</span>
+</div>
+</div>
+</div>
+<!-- Emergency - Pulsing Card -->
+<div class="md:col-span-4 glass-panel p-stack-lg rounded-xl border-electric-gold/30 flex flex-col justify-between group overflow-hidden">
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-lg bg-electric-gold/10 flex items-center justify-center mb-6 border border-electric-gold/20">
+<span class="material-symbols-outlined text-electric-gold text-3xl">bolt</span>
+</div>
+<h3 class="font-headline-md text-electric-gold mb-4 uppercase tracking-tighter">24/7 Emergency Response</h3>
+<p class="font-body-md text-on-surface-variant mb-6">
+                            Critical response team available around the clock for rapid fault finding and restoration of services across all London postcodes.
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-plasma-blue text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Rapid Fault Finding
+                            </li>
+<li class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-plasma-blue text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Immediate Safety Isolation
+                            </li>
+</ul>
+</div>
+<button class="mt-8 w-full py-4 bg-electric-gold text-deep-obsidian font-bold uppercase text-xs tracking-widest transition-all hover:brightness-110 active:scale-95">
+                        Call Emergency: 0800 279 3443
+                    </button>
+</div>
+<!-- Commercial & Landlord Section - Bento Grid Style -->
+<div class="md:col-span-4 glass-panel p-8 rounded-xl group relative overflow-hidden h-[400px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-40 group-hover:opacity-60" data-alt="Close up of a professional high-tech consumer unit installation with perfectly managed wiring and modern circuit breakers. The lighting is crisp, highlighting the precision and cleanliness of the electrical engineering. The scene is set in a modern utility room with minimalist dark grey walls and high-end industrial aesthetics." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPTAPefZUCDH_etJVNQLWw0hmLiod0RyMxHd8fFZQdU_8sRTgNlIj8SwlE9a7JA1o2Xyw_vTmPEvfphguSjC5Migy_R39C4bTyBDfh1EGEyrOf6SQeI3H2-jTgMHS0_36pb7Y65iUziQwvTGZXDiabakOlYrqBWgw__EWZisxdyCiMTprNrCJp3jl3kueeKfUw7hurrT98v84hbCkC386V_KLEsrC8sU1s7BGT32FuqEul7IH_LAIb')">
+</div>
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-plasma-blue text-4xl mb-4">settings_input_component</span>
+<h3 class="font-headline-md text-white">Consumer Unit Installations</h3>
+</div>
+<p class="font-body-md text-on-surface-variant">
+                            Upgrading old fuse boards to high-specification RCD-protected consumer units for enhanced safety and compliance.
+                        </p>
+</div>
+</div>
+<div class="md:col-span-4 glass-panel p-8 rounded-xl flex flex-col justify-between h-[400px]">
+<div>
+<span class="material-symbols-outlined text-plasma-blue text-4xl mb-4">assignment_turned_in</span>
+<h3 class="font-headline-md text-white">Testing &amp; Inspections</h3>
+<p class="font-body-md text-on-surface-variant mt-4">
+                            All types of electrical testing by NICEIC Approved Contractors to ensure your property meets the highest safety standards.
+                        </p>
+</div>
+<div class="pt-6 border-t border-glass-border">
+<p class="font-label-caps text-electric-gold mb-2">Accreditation</p>
+<div class="flex items-center gap-4 grayscale brightness-200 opacity-50">
+<!-- NICEIC Placeholder Style -->
+<div class="px-3 py-1 border border-white text-[10px] font-bold">NICEIC APPROVED</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 glass-panel p-8 rounded-xl h-[400px] flex flex-col justify-between group overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-40 transition-opacity" data-alt="A professional electrician in high-end gear performing a diagnostic check on a complex commercial circuit board using a digital multimeter. The environment is a modern London office building with architectural glass and steel details. The lighting emphasizes the blue plasma glow of digital displays and clean white task lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxggfUozzJjoeS8QzAL343dhvtp0FbQkvG2i3kIdt1DLPu_bBVKr6L4AQz5lXwgMqMANy59FZQnsHIKNJU2lp8fnqN3c6l2gofkGQ1er2whFjBPXzfVnpquXV1Tuojo4QqVyPYqvNXVSIKnqkVmt_LrIurZilnhEGuda17gy623GArZfweY9MsuuVvn--kchU_8czzR3UEHf7OPIMQE2o2j5a0T3Z09oSs2aX3BzLgWYFGKbR0OBxw')">
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-plasma-blue text-4xl mb-4">verified_user</span>
+<h3 class="font-headline-md text-white">Landlord Certificates</h3>
+<p class="font-body-md text-on-surface-variant mt-4">
+                            Legally required EICR reports and safety certifications for property professionals and premises managers.
+                        </p>
+</div>
+<a class="relative z-10 text-electric-gold font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="our-services-all-electrical-services.html">
+                        Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="relative z-10 py-section-gap overflow-hidden">
+<div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-plasma-blue to-transparent"></div>
+<div class="px-gutter max-w-3xl mx-auto text-center relative">
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-64 h-64 bg-plasma-blue/20 blur-[120px] rounded-full"></div>
+<h2 class="font-display-lg text-headline-xl md:text-display-lg text-white mb-stack-md">Ready to Secure Your Property?</h2>
+<p class="font-body-lg text-on-surface-variant mb-stack-lg">
+                    Whether your requirements are large or small, we ensure the work is carried out to the highest professional standards.
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="bg-electric-gold text-on-primary px-10 py-5 font-bold uppercase text-sm tracking-widest hover:shadow-[0_0_30px_rgba(255,215,0,0.4)] transition-all active:scale-95 w-full md:w-auto">
+                        Get a Free Quote Today
+                    </button>
+<a class="font-display text-white text-xl flex items-center gap-3 hover:text-plasma-blue transition-colors" href="tel:02083765289">
+<span class="material-symbols-outlined text-plasma-blue">call</span> 0208 376 5289
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-glass-border pt-section-gap pb-12 relative">
+<!-- Skyline Motif -->
+<div class="absolute bottom-0 left-0 w-full h-48 skyline-motif overflow-hidden">
+<svg class="w-full h-full text-plasma-blue fill-current" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,200 L0,150 L20,150 L20,160 L40,160 L40,120 L60,120 L60,170 L80,170 L80,140 L100,140 L100,180 L140,180 L140,100 L170,100 L170,180 L200,180 L200,60 L230,60 L230,180 L260,180 L260,140 L300,140 L300,180 L350,180 L350,40 L380,40 L380,180 L420,180 L420,130 L450,130 L450,180 L500,180 L500,80 L540,80 L540,180 L600,180 L600,20 L650,20 L650,180 L700,180 L700,100 L750,100 L750,180 L800,180 L800,50 L840,50 L840,180 L900,180 L900,120 L950,120 L950,180 L1000,180 L1000,30 L1050,30 L1050,180 L1100,180 L1100,140 L1150,140 L1150,180 L1200,180 L1200,200 Z"></path>
+</svg>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-gutter py-section-gap max-w-container-max mx-auto relative z-10">
+<div class="md:col-span-2">
+<div class="font-display-lg text-headline-md text-electric-gold mb-6">All Electrical Services</div>
+<p class="font-body-md text-on-surface-variant max-w-md mb-8">
+                    Premium Electrical Excellence in London since 1989. NICEIC Approved contractors delivering 24/7 emergency response and expert installations.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-glass-border flex items-center justify-center hover:text-electric-gold transition-colors" href="index.html">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-glass-border flex items-center justify-center hover:text-electric-gold transition-colors" href="contact-us-all-electrical-services.html">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-white mb-6 uppercase tracking-widest">Expertise</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-surface-variant hover:text-plasma-blue transition-colors" href="our-services-all-electrical-services.html">Residential</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-plasma-blue transition-colors" href="our-services-all-electrical-services.html">Commercial</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-plasma-blue transition-colors" href="index.html">Emergency</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-plasma-blue transition-colors" href="index.html">Pricing</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-white mb-6 uppercase tracking-widest">Support</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-surface-variant hover:text-plasma-blue transition-colors" href="index.html">Terms</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-plasma-blue transition-colors" href="index.html">Privacy</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-plasma-blue transition-colors" href="index.html">Cookie Policy</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-plasma-blue transition-colors" href="index.html">FAQ</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter pt-8 border-t border-glass-border relative z-10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-on-surface-variant text-sm">© 2024 All Electrical Services. Premium Electrical Excellence in London.</p>
+<div class="flex items-center gap-2 text-xs font-bold uppercase text-electric-gold">
+<span class="material-symbols-outlined text-sm">verified</span> NICEIC APPROVED CONTRACTOR
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for glass panels
+        document.querySelectorAll('.glass-panel').forEach(panel => {
+            panel.addEventListener('mousemove', (e) => {
+                const rect = panel.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                panel.style.setProperty('--mouse-x', `${x}px`);
+                panel.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Subtle parallax on scroll for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroText = document.querySelector('h1');
+            if(heroText) {
+                heroText.style.transform = `translateY(${scrolled * 0.15}px)`;
+            }
+        });
+    </script>
+</body></html>

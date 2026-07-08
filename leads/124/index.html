@@ -1,0 +1,376 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>VCO Electrical | Architectural Electrical Services London</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#00f0ff",
+                    "on-error": "#690005",
+                    "on-secondary-fixed": "#271900",
+                    "secondary-fixed-dim": "#ffba20",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "inverse-primary": "#006970",
+                    "surface-container": "#1c2026",
+                    "inverse-on-surface": "#2d3137",
+                    "electric-amber": "#FFB800",
+                    "surface-container-high": "#262a31",
+                    "background": "#10141a",
+                    "pure-white": "#FFFFFF",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-low": "#181c22",
+                    "on-secondary-container": "#6b4b00",
+                    "primary-fixed-dim": "#00dbe9",
+                    "on-surface": "#dfe2eb",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-secondary": "#412d00",
+                    "surface-variant": "#31353c",
+                    "secondary-fixed": "#ffdea8",
+                    "surface": "#10141a",
+                    "on-surface-variant": "#b9cacb",
+                    "secondary-container": "#feb700",
+                    "glass-stroke": "rgba(255, 255, 255, 0.08)",
+                    "primary-fixed": "#7df4ff",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "glass-fill": "rgba(255, 255, 255, 0.03)",
+                    "inverse-surface": "#dfe2eb",
+                    "surface-bright": "#353940",
+                    "on-tertiary-container": "#605f5e",
+                    "tertiary-container": "#dcd9d8",
+                    "on-secondary-fixed-variant": "#5e4200",
+                    "on-primary-fixed": "#002022",
+                    "outline": "#849495",
+                    "surface-tint": "#00dbe9",
+                    "neon-cyan": "#00F0FF",
+                    "surface-container-lowest": "#0a0e14"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "1.5rem",
+                    "stack-md": "1.5rem",
+                    "margin-mobile": "1rem",
+                    "stack-sm": "0.5rem",
+                    "margin-desktop": "2.5rem",
+                    "container-max": "1280px",
+                    "stack-lg": "4rem"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "headline-md-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .neon-glow:hover {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav {
+            color: #00F0FF;
+            font-weight: 700;
+            border-bottom: 2px solid #00F0FF;
+            padding-bottom: 4px;
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-neon-cyan/30">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto bg-background/80 backdrop-blur-lg border-b border-glass-stroke">
+<div class="flex items-center gap-2">
+<img alt="VCO Electrical" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLvTscdpOC18mbRWugV1g646nuYI6BVPoDmeEcnhVoZYFqPy721GpvDl9TiLFHFurOa0TQhrsXWu07VQ-cAknAwroWxMFOIq4SX4kawuquT5U1AIBr2OOtwbDjnpb7Qrq7JmEcETJtTUzUlfTTAb4Qw9tqcG0OxPyMOEtHf0hot0ZoOnMsMGvNIb4K2778Skydz71F-0Rpo5ff0tsE-vT7VoGUViqFiKkkqd815IgbUlMpT6Ps2pTDK_Sy0">
+<span class="font-display-lg text-[24px] tracking-tighter text-on-surface uppercase">VCO ELECTRICAL</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-neon-cyan font-bold border-b-2 border-neon-cyan pb-1 font-body-md text-body-md" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="vco-electrical-services.html">Services</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="vco-electrical-services.html">Projects</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="vco-electrical-testimonials.html">Testimonials</a>
+</div>
+<button class="bg-primary-container text-on-primary font-bold px-6 py-2 rounded-lg neon-glow active:scale-95 transition-all duration-300">
+            Get a Quote
+        </button>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center px-gutter overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 mb-6 glass-panel rounded-full">
+<span class="flex h-2 w-2 rounded-full bg-neon-cyan animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-neon-cyan uppercase">Premium London Electricians</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+                    Architectural Electricals: <br>
+<span class="text-neon-cyan">Lighting the Path to Luxury</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl">
+                    High-end electrical solutions for London's most prestigious residences. We merge technical precision with architectural vision to create seamless, intelligent environments.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-neon-cyan text-on-primary font-bold px-8 py-4 rounded-lg neon-glow flex items-center gap-2 transition-all">
+                        Request a Quote <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="glass-panel text-on-surface font-bold px-8 py-4 rounded-lg hover:bg-glass-fill transition-all flex items-center gap-2">
+                        View Portfolio
+                    </button>
+</div>
+</div>
+</section>
+<!-- USP Section (Grid) -->
+<section class="py-stack-lg px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="glass-panel p-10 rounded-xl relative overflow-hidden group">
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-neon-cyan/5 rounded-full blur-3xl group-hover:bg-neon-cyan/10 transition-all"></div>
+<span class="material-symbols-outlined text-neon-cyan text-4xl mb-6">architecture</span>
+<h3 class="font-headline-md text-headline-md mb-4">Architectural Integration</h3>
+<p class="text-on-surface-variant text-body-md leading-relaxed">
+                        We don't just pull cables; we understand the design intent. Our team collaborates with architects and interior designers to ensure every switch, fixture, and smart sensor enhances the aesthetic harmony of your space.
+                    </p>
+</div>
+<div class="glass-panel p-10 rounded-xl relative overflow-hidden group">
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-electric-amber/5 rounded-full blur-3xl group-hover:bg-electric-amber/10 transition-all"></div>
+<span class="material-symbols-outlined text-electric-amber text-4xl mb-6">cleaning_services</span>
+<h3 class="font-headline-md text-headline-md mb-4">Cleanliness &amp; Transparency</h3>
+<p class="text-on-surface-variant text-body-md leading-relaxed">
+                        Precision engineering meets pristine execution. Our white-glove service ensures your property remains immaculate, while our live digital reporting keeps you informed of every circuit, test, and milestone in real-time.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Service Bento Grid -->
+<section class="py-stack-lg px-gutter max-w-container-max mx-auto">
+<div class="mb-12 text-center">
+<h2 class="font-display-lg text-display-lg-mobile md:text-[48px] mb-4">Expert Services</h2>
+<div class="h-1 w-20 bg-neon-cyan mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+<!-- EICR (Large) -->
+<div class="md:col-span-2 md:row-span-2 glass-panel rounded-2xl p-8 flex flex-col justify-end relative overflow-hidden group">
+<div class="absolute inset-0 z-0 opacity-40 group-hover:scale-105 transition-transform duration-700 bg-cover bg-center" data-alt="High-detail macro photography of a modern digital electrical tester displaying precise readings against a backdrop of clean, well-organized high-end wiring and circuit breakers in a luxury London home, cinematic lighting, neon cyan accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCesAyDNIfP23RWqUF50wVETafXJANrCg_iAmHxpRcZjtoVQ9BPL031rkVAf61jwB9i48h15JmCBiIhkde6C_7EkeCvhZyrsTfRec7y-mvG7y5Cjl2jIze7LbzdmW7GTuW6wHRmk0hoPSwr-78u9gdkEnOy0K_hiQnVJ8ZB2pESQpIR_MUMBEC1jYI_rGFa0jByV1mS7A_ULP54QIDf1nOFaUQnOXPIeE0Dd9fbVwXnYmR0mmIePJHT')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-10"></div>
+<div class="relative z-20">
+<span class="inline-block px-3 py-1 bg-neon-cyan/20 text-neon-cyan text-xs font-bold rounded-full mb-4">COMPLIANCE</span>
+<h3 class="font-headline-md text-headline-md mb-2">EICR Inspections</h3>
+<p class="text-on-surface-variant text-sm mb-6 max-w-sm">Rigorous safety certifications for premium residential and commercial estates.</p>
+<button class="text-neon-cyan font-bold flex items-center gap-2 text-sm hover:underline">Learn More <span class="material-symbols-outlined text-sm">open_in_new</span></button>
+</div>
+</div>
+<!-- Smart Home -->
+<div class="md:col-span-2 glass-panel rounded-2xl p-8 flex items-center gap-6 group hover:bg-glass-fill transition-all">
+<div class="w-20 h-20 rounded-full glass-panel flex items-center justify-center shrink-0 border-neon-cyan/30">
+<span class="material-symbols-outlined text-neon-cyan text-3xl" data-weight="fill">smartphone</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md-mobile md:text-headline-md mb-1">Smart Home Ecosystems</h3>
+<p class="text-on-surface-variant text-sm">Intelligent lighting, heating, and security integration for the modern home.</p>
+</div>
+</div>
+<!-- EV Charging -->
+<div class="md:col-span-1 glass-panel rounded-2xl p-8 flex flex-col justify-between group">
+<span class="material-symbols-outlined text-neon-cyan text-3xl">ev_charger</span>
+<div>
+<h3 class="font-bold text-lg mb-2">EV Charging</h3>
+<p class="text-on-surface-variant text-xs">High-speed, discreet charging points for premium electric vehicles.</p>
+</div>
+</div>
+<!-- Rewiring -->
+<div class="md:col-span-1 glass-panel rounded-2xl p-8 flex flex-col justify-between group bg-gradient-to-br from-glass-fill to-surface-container">
+<span class="material-symbols-outlined text-electric-amber text-3xl">bolt</span>
+<div>
+<h3 class="font-bold text-lg mb-2">Rewiring</h3>
+<p class="text-on-surface-variant text-xs">Full property overhauls with zero-compromise architectural finish.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="py-stack-lg bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-gutter flex flex-wrap justify-center md:justify-between items-center gap-12">
+<div class="flex items-center gap-4">
+<div class="text-center">
+<div class="flex text-electric-amber mb-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">5.0 Star Rated on Google</span>
+</div>
+</div>
+<div class="h-16 w-px bg-glass-stroke hidden md:block"></div>
+<div class="flex items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-[24px] font-extrabold text-white">NICEIC</span>
+<span class="text-[10px] uppercase text-on-surface-variant tracking-widest">Approved Contractor</span>
+</div>
+<div class="h-10 w-px bg-glass-stroke"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-neon-cyan">verified</span>
+<span class="font-bold text-on-surface uppercase text-sm">Trusted in London</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Projects Gallery -->
+<section class="py-stack-lg px-gutter max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-[48px]">Recent Projects</h2>
+<p class="text-on-surface-variant">A showcase of technical excellence across London.</p>
+</div>
+<a class="hidden md:flex items-center gap-2 text-neon-cyan font-bold" href="vco-electrical-services.html">View All Projects <span class="material-symbols-outlined">chevron_right</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A luxurious minimalist living room in a Mayfair penthouse featuring bespoke recessed ceiling lighting, glowing cove lights in warm amber, and high-end brass switchplates, captured with architectural photography style, deep shadows and crisp highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCzWPcvvB3VR20slArIpoHspf5C5EixGcKm2SGeJgtWuHgbE2QvM3PqBO373sdag9pZRVaBecVztTiyD8LDUwwwKUBMwEQU8mVg0HU_CDqG5_P0IUPmo0dcemJK8Wdh-V9zF82twwpjpGQX-E1UVRLlMDFJYOkcRaVjxE4nWzJ8BtE9n59KGT-S9ENsvygOZmjca0hss65y04pSPsLxBO1FoOImUE-D7pMtAzhssyvzb9yTNtQNKC9f')"></div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-bold px-6 py-2 glass-panel rounded-full">View Details</span>
+</div>
+</div>
+<h4 class="font-bold text-lg">Mayfair Penthouse</h4>
+<p class="text-on-surface-variant text-sm">Full Smart Integration &amp; Architectural Lighting</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="The sleek interior of a modern garage in Chelsea housing a luxury electric sports car connected to a minimalist, neon-ringed EV charging station mounted on a dark textured wall, moody blue atmospheric lighting, architectural precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLpa-W53wypV0AcaPaXH50FoRi7WpVo-a2B4xD4P2bZvD28YdEKkeTFGiUAS1LM0dLY0wnIplKtxxaBs8JDHkQAgPkCpf5q2HnJXJNhUzoKjrZ5fr_sPnqjOqqOGES1MkEZvxcEcryE5ZR8Bvte0JOMsu0XYeCy9jIcGbckZET-FSWQsyQfL7BeKLk3bM3y3UaskdPjrNg5-a3GIDLgmaJGx5pdQYn3JWEEp6Z6Uvxs6bT1nMkfCSH')"></div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-bold px-6 py-2 glass-panel rounded-full">View Details</span>
+</div>
+</div>
+<h4 class="font-bold text-lg">Chelsea Mews EV Setup</h4>
+<p class="text-on-surface-variant text-sm">High-Speed Power &amp; Discreet Infrastructure</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Wide shot of a contemporary open-plan kitchen and dining area in Hampstead, featuring complex layered lighting including pendant drops over a marble island and integrated LED strips beneath cabinetry, elegant high-end finish, sharp focus." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDK4PrNoXvb_JewTvJgd5mWajrpsDVyD0wTuylQWnMm3VwiO-IVAZ45w4ka7VLLGvUlg_ATcUP03gfgUBJVlbH6ZRpO1gH8_usU4UHJwpLgZI03NH_3znWRN97_AJgCgPmxgEYVo67P0J29KlmXTYaIMEMhSovixnukOLeFvoOh_ZHkDKtwBfrpxNSFBolEv6NikTHwXEzMzGoqXslT3XaMjGFhJfCjiw7suLt8Xd8OoCheIB05jJ3n')"></div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-bold px-6 py-2 glass-panel rounded-full">View Details</span>
+</div>
+</div>
+<h4 class="font-bold text-lg">Hampstead Residence</h4>
+<p class="text-on-surface-variant text-sm">Bespoke Rewiring &amp; Multi-zone Lighting</p>
+</div>
+</div>
+</section>
+<!-- Final CTA / Contact CTA -->
+<section class="py-stack-lg px-gutter">
+<div class="max-w-4xl mx-auto glass-panel p-12 rounded-3xl text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-neon-cyan to-transparent"></div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-[40px] mb-6">Ready to illuminate your vision?</h2>
+<p class="text-on-surface-variant text-lg mb-10">Consult with London's premier architectural electrical team today.</p>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<button class="bg-neon-cyan text-on-primary font-bold px-10 py-5 rounded-xl text-lg neon-glow transition-all">Book a Diagnostic</button>
+<button class="glass-panel text-on-surface font-bold px-10 py-5 rounded-xl text-lg hover:bg-glass-fill transition-all">Download Service Guide</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-gutter flex flex-col md:flex-row justify-between gap-stack-md max-w-container-max mx-auto border-t border-glass-stroke mt-stack-lg">
+<div class="flex flex-col gap-6 max-w-xs">
+<div class="flex items-center gap-2">
+<img alt="VCO Electrical" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLvTscdpOC18mbRWugV1g646nuYI6BVPoDmeEcnhVoZYFqPy721GpvDl9TiLFHFurOa0TQhrsXWu07VQ-cAknAwroWxMFOIq4SX4kawuquT5U1AIBr2OOtwbDjnpb7Qrq7JmEcETJtTUzUlfTTAb4Qw9tqcG0OxPyMOEtHf0hot0ZoOnMsMGvNIb4K2778Skydz71F-0Rpo5ff0tsE-vT7VoGUViqFiKkkqd815IgbUlMpT6Ps2pTDK_Sy0">
+<span class="font-display-lg-mobile text-display-lg-mobile text-on-surface text-[20px] tracking-tighter">VCO ELECTRICAL</span>
+</div>
+<p class="text-on-surface-variant text-sm">Expert electrical engineering for luxury properties across Greater London and the South East.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-3">
+<h5 class="font-bold text-neon-cyan text-sm uppercase tracking-widest mb-2">Services</h5>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="vco-electrical-services.html">EICR Reports</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="vco-electrical-services.html">Full Rewiring</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="vco-electrical-services.html">Smart Systems</a>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="font-bold text-neon-cyan text-sm uppercase tracking-widest mb-2">Eco Tech</h5>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="vco-electrical-services.html">EV Charging</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="vco-electrical-services.html">Solar PV</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="vco-electrical-services.html">Energy Storage</a>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="font-bold text-neon-cyan text-sm uppercase tracking-widest mb-2">Legal</h5>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="vco-electrical-services.html">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="vco-electrical-testimonials.html">Accreditations</a>
+</div>
+</div>
+<div class="mt-12 md:mt-0 pt-8 border-t border-glass-stroke md:border-0 w-full md:w-auto">
+<p class="text-on-surface-variant text-[12px] opacity-60">© 2024 VCO Electrical Services London. All rights reserved.</p>
+</div>
+</footer>
+<!-- Floating Quick Actions -->
+<div class="fixed bottom-8 right-8 flex flex-col gap-3 z-[100]">
+<!-- WhatsApp Quick Connect -->
+<a class="w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative" href="vco-electrical-services.html">
+<span class="absolute right-full mr-4 bg-background px-3 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity border border-glass-stroke">WhatsApp Diagnostic</span>
+<svg fill="currentColor" height="28" viewBox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.437 5.63 1.438h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+</a>
+<!-- Phone Quick Connect -->
+<a class="w-14 h-14 bg-neon-cyan text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative" href="tel:020">
+<span class="absolute right-full mr-4 bg-background px-3 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity border border-glass-stroke">Call Now</span>
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">call</span>
+</a>
+</div>
+<script>
+        // Subtle Parallax / Interaction Script
+        document.addEventListener('mousemove', (e) => {
+            const panels = document.querySelectorAll('.glass-panel');
+            const x = (e.clientX / window.innerWidth - 0.5) * 10;
+            const y = (e.clientY / window.innerHeight - 0.5) * 10;
+            
+            panels.forEach(panel => {
+                const rect = panel.getBoundingClientRect();
+                if(rect.top < window.innerHeight && rect.bottom > 0) {
+                    panel.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+                }
+            });
+        });
+    </script>
+</body></html>

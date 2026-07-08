@@ -1,0 +1,433 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact &amp; Booking | Sinera Electrical Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#e9c400",
+                        "on-tertiary-container": "#006a70",
+                        "inverse-primary": "#705d00",
+                        "on-secondary-container": "#684100",
+                        "secondary-container": "#ffa504",
+                        "surface-container-low": "#1c1b1b",
+                        "primary": "#fff6df",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed": "#2a1700",
+                        "tertiary-fixed": "#79f5ff",
+                        "on-secondary": "#462a00",
+                        "secondary": "#ffcb8d",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "primary-container": "#ffd700",
+                        "background": "#131313",
+                        "electric-amber": "#FFBF00",
+                        "outline-variant": "#4d4732",
+                        "tertiary": "#defcff",
+                        "surface-bright": "#3a3939",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#00dbe8",
+                        "surface-container": "#201f1f",
+                        "on-primary-fixed": "#221b00",
+                        "on-background": "#e5e2e1",
+                        "on-primary-container": "#705e00",
+                        "surface-variant": "#353534",
+                        "surface": "#131313",
+                        "secondary-fixed": "#ffddb7",
+                        "graphite": "#1A1A1A",
+                        "surface-dim": "#131313",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#004f54",
+                        "muted-gold": "rgba(255, 215, 0, 0.15)",
+                        "on-primary": "#3a3000",
+                        "on-surface-variant": "#d0c6ab",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-fixed": "#002022",
+                        "on-surface": "#e5e2e1",
+                        "obsidian": "#050505",
+                        "secondary-fixed-dim": "#ffb95c",
+                        "tertiary-container": "#00f1ff",
+                        "on-primary-fixed-variant": "#544600",
+                        "outline": "#999077",
+                        "voltage-white": "#F5F5F5",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-fixed": "#ffe16d",
+                        "on-tertiary": "#00363a",
+                        "surface-tint": "#e9c400",
+                        "surface-container-highest": "#353534",
+                        "surface-container-high": "#2a2a2a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "2rem",
+                        "container-max": "1280px",
+                        "stack-lg": "3rem",
+                        "section-padding": "8rem",
+                        "stack-md": "1.5rem",
+                        "stack-sm": "0.5rem"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-caps": ["JetBrains Mono"],
+                        "display-hero-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-hero": ["Montserrat"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "display-hero-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(255, 191, 0, 0.3);
+        }
+        .gradient-button {
+            background: linear-gradient(135deg, #FFBF00 0%, #FFA504 100%);
+        }
+        .bg-mesh {
+            background-image: radial-gradient(circle at 20% 30%, rgba(255, 191, 0, 0.05) 0%, transparent 40%),
+                              radial-gradient(circle at 80% 70%, rgba(255, 191, 0, 0.05) 0%, transparent 40%);
+        }
+        .step-transition {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-on-surface font-body-md selection:bg-electric-amber selection:text-obsidian scroll-smooth">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-obsidian/80 backdrop-blur-xl border-b border-outline-variant/30">
+<nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<a class="text-headline-md font-headline-md font-black text-primary-container tracking-tighter" href="index.html">
+                Sinera Electrical
+            </a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="sinera-electrical-our-services.html">Commercial</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="sinera-electrical-our-services.html">Domestic</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="sinera-electrical-our-services.html">EICR</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="sinera-electrical-our-services.html">Projects</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="index.html">About</a>
+<button class="gradient-button text-obsidian px-6 py-2 rounded-lg font-bold hover:scale-95 transition-transform">
+                    Request Quote
+                </button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="relative pt-24 overflow-hidden bg-mesh">
+<!-- High-tech Texture Overlay -->
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none mix-blend-overlay" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLu9WqRWh7eXEiY2DTab26bxfAlz3B9IKWcPaRc5XZkOf7fzKb6CI9VwtpekwgFZmHgYv652ZGNhPIJT2u11YXQuWGDFDXKFPup3xgkeElBC3zDp_vEWmNlPkHB4-ZmeLdoHdNw98iMqHe5xq-F5mZe5dM06xBKGQ2_6HlrKf-ujbmuGyNEGvCRvI9ScX-CV7rl_92ZQdfvUN4TEvkq1CqDrQI2hW7QGNsClG2SAzU1svSktnwQd01kPsKQ')"></div>
+<!-- Hero Section -->
+<section class="relative z-10 px-gutter pt-20 pb-16 max-w-container-max mx-auto">
+<div class="max-w-3xl">
+<span class="inline-block px-4 py-1 mb-6 rounded-full border border-electric-amber/30 bg-muted-gold text-electric-amber font-label-caps text-label-caps">
+                    PREMIUM CONCIERGE SERVICE
+                </span>
+<h1 class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-voltage-white mb-8 leading-tight">
+                    Ready to Solve Your Electrical Problems? <span class="text-electric-amber">Let's Talk.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Experience London's most precise electrical engineering. From luxury domestic installs to large-scale commercial EICR testing, we are your elite technical partners.
+                </p>
+</div>
+</section>
+<!-- Booking & Contact Grid -->
+<section class="relative z-10 px-gutter pb-section-padding max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Multi-Step Form Container -->
+<div class="lg:col-span-8 bg-graphite border border-outline-variant/30 rounded-xl p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-electric-amber/5 blur-[80px] rounded-full"></div>
+<form class="relative" id="booking-form">
+<!-- Step 1: Service Type -->
+<div class="step-transition" id="step-1">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-10 h-10 rounded-full bg-electric-amber flex items-center justify-center text-obsidian font-bold">1</span>
+<h3 class="font-headline-md text-headline-md text-voltage-white">Choose Your Service</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<label class="cursor-pointer">
+<input class="hidden peer" name="service" type="radio" value="commercial">
+<div class="p-6 rounded-lg bg-obsidian border border-outline-variant/50 peer-checked:border-electric-amber peer-checked:bg-muted-gold transition-all flex items-center gap-4 group">
+<span class="material-symbols-outlined text-electric-amber">business</span>
+<span class="font-bold text-on-surface">Commercial Services</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" name="service" type="radio" value="domestic">
+<div class="p-6 rounded-lg bg-obsidian border border-outline-variant/50 peer-checked:border-electric-amber peer-checked:bg-muted-gold transition-all flex items-center gap-4 group">
+<span class="material-symbols-outlined text-electric-amber">home</span>
+<span class="font-bold text-on-surface">Domestic Rewiring</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" name="service" type="radio" value="eicr">
+<div class="p-6 rounded-lg bg-obsidian border border-outline-variant/50 peer-checked:border-electric-amber peer-checked:bg-muted-gold transition-all flex items-center gap-4 group">
+<span class="material-symbols-outlined text-electric-amber">verified</span>
+<span class="font-bold text-on-surface">EICR Testing</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" name="service" type="radio" value="emergency">
+<div class="p-6 rounded-lg bg-obsidian border border-outline-variant/50 peer-checked:border-electric-amber peer-checked:bg-muted-gold transition-all flex items-center gap-4 group">
+<span class="material-symbols-outlined text-error">bolt</span>
+<span class="font-bold text-on-surface">Emergency Response</span>
+</div>
+</label>
+</div>
+<div class="flex justify-end">
+<button class="gradient-button text-obsidian px-8 py-3 rounded-lg font-bold flex items-center gap-2 hover:scale-95 transition-transform" onclick="nextStep(2)" type="button">
+                                    Next Step <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Step 2: Details -->
+<div class="step-transition hidden opacity-0 translate-x-8" id="step-2">
+<div class="flex items-center gap-4 mb-8">
+<button class="w-10 h-10 rounded-full border border-outline-variant hover:border-electric-amber flex items-center justify-center text-on-surface-variant transition-colors" onclick="nextStep(1)" type="button">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h3 class="font-headline-md text-headline-md text-voltage-white">Project Details</h3>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">FULL NAME</label>
+<input class="w-full bg-obsidian border-b border-outline-variant focus:border-electric-amber outline-none py-3 text-voltage-white transition-all focus:bg-surface-container" placeholder="Enter your name" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">EMAIL ADDRESS</label>
+<input class="w-full bg-obsidian border-b border-outline-variant focus:border-electric-amber outline-none py-3 text-voltage-white transition-all focus:bg-surface-container" placeholder="email@example.com" type="email">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">SERVICE ADDRESS</label>
+<input class="w-full bg-obsidian border-b border-outline-variant focus:border-electric-amber outline-none py-3 text-voltage-white transition-all focus:bg-surface-container" placeholder="123 London Rd, SW1 1AA" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">HOW CAN WE HELP?</label>
+<textarea class="w-full bg-obsidian border-b border-outline-variant focus:border-electric-amber outline-none py-3 text-voltage-white transition-all focus:bg-surface-container resize-none" placeholder="Describe your electrical requirements..." rows="4"></textarea>
+</div>
+<div class="flex justify-between items-center pt-4">
+<p class="text-body-md text-on-surface-variant italic">Estimated response: 2 hours</p>
+<button class="gradient-button text-obsidian px-10 py-4 rounded-lg font-bold shadow-xl glow-hover hover:scale-95 transition-all" type="submit">
+                                        Confirm Booking
+                                    </button>
+</div>
+</div>
+</div>
+</form>
+</div>
+<!-- Sidebar Details -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- Contact Card -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/20">
+<h4 class="font-headline-md text-headline-md text-voltage-white mb-8">Direct Contact</h4>
+<div class="space-y-8">
+<div class="flex items-start gap-5">
+<div class="w-12 h-12 rounded-full bg-muted-gold flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-electric-amber">phone_in_talk</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">PHONE</p>
+<p class="text-headline-md font-bold text-voltage-white">020 3633 2995</p>
+<p class="text-body-md text-on-surface-variant">Mon - Sun, 24/7 Support</p>
+</div>
+</div>
+<div class="flex items-start gap-5">
+<div class="w-12 h-12 rounded-full bg-muted-gold flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-electric-amber">mail</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">EMAIL</p>
+<p class="text-body-lg font-bold text-voltage-white">info@sineraelectrical.co.uk</p>
+</div>
+</div>
+<div class="flex items-start gap-5">
+<div class="w-12 h-12 rounded-full bg-muted-gold flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-electric-amber">location_on</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">ADDRESS</p>
+<p class="text-body-lg font-bold text-voltage-white">56 Chilver Street</p>
+<p class="text-body-md text-on-surface-variant">London, United Kingdom</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Trusted Badges -->
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-graphite border border-outline-variant/30">
+<span class="material-symbols-outlined text-electric-amber text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caps text-label-caps">NICEIC APPROVED</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-graphite border border-outline-variant/30">
+<span class="material-symbols-outlined text-electric-amber text-sm" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-label-caps text-label-caps">FULLY INSURED</span>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<!-- Map Section -->
+<section class="bg-graphite py-24 relative overflow-hidden">
+<div class="px-gutter max-w-container-max mx-auto relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-voltage-white mb-6">Our South London <span class="text-electric-amber">Service Area</span></h2>
+<p class="text-body-lg text-on-surface-variant mb-8">
+                            Based in the heart of South London, we provide rapid response times across Greenwich, Lewisham, Dulwich, and surrounding boroughs.
+                        </p>
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-voltage-white">
+<span class="material-symbols-outlined text-electric-amber">check_circle</span>
+<span>30-Minute Emergency Response</span>
+</div>
+<div class="flex items-center gap-3 text-voltage-white">
+<span class="material-symbols-outlined text-electric-amber">check_circle</span>
+<span>Local, Licensed Master Electricians</span>
+</div>
+<div class="flex items-center gap-3 text-voltage-white">
+<span class="material-symbols-outlined text-electric-amber">check_circle</span>
+<span>Zero Call-Out Fees for Quotes</span>
+</div>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden shadow-2xl h-[400px] border border-outline-variant/30 grayscale hover:grayscale-0 transition-all duration-700">
+<!-- Map Representation -->
+<div class="absolute inset-0 bg-obsidian" data-location="South London" style="">
+<img class="w-full h-full object-cover opacity-60" data-alt="A sophisticated, high-contrast digital map interface showing the South London service area for an electrical company. The map is in a dark mode style with deep grays and blacks, featuring vibrant glowing amber outlines for the service boundaries. Clean, minimalist typography highlights key boroughs like Greenwich and Lewisham. The overall aesthetic is professional, technical, and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsf9Rd2BfKGEBoHdppnphefLwHGH9lFgFTQpLYe5GvXKG6vGu2J5sdrDcdCWYo6gEguPXyy49G6F3-sydXRwZ63-i6RoOReYZ0qceGGMkr4_2gN9UQ4QTRa75SlCW21VSz72BxLB9nmYcHOhmBbeaDDtEY4FaDqaMX9jA8rjMfXWnwF07qnZZUrQEZTs2j7vKv9P4-qztVDyviLb4TcUDLmCvCY9mK7yF9faoccENNQGsyza34Wgoy0A">
+</div>
+<!-- Area Overlay -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-48 h-48 bg-electric-amber/10 border-2 border-electric-amber border-dashed rounded-full flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-4xl text-electric-amber">electric_bolt</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-obsidian border-t border-outline-variant/30 py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-md font-headline-md font-black text-primary-container mb-6">
+                    Sinera Electrical
+                </div>
+<p class="text-on-surface-variant font-body-md">
+                    Elevating essential trade services into a premium, luxury experience for London's most discerning clients.
+                </p>
+</div>
+<div>
+<h5 class="text-electric-amber font-headline-md text-headline-md mb-6">Services</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="sinera-electrical-our-services.html">Commercial Services</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="sinera-electrical-our-services.html">Domestic Rewiring</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="sinera-electrical-our-services.html">EICR Testing</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="sinera-electrical-our-services.html">Emergency Repair</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-electric-amber font-headline-md text-headline-md mb-6">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="sinera-electrical-our-services.html">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="index.html">Cookie Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-electric-amber font-headline-md text-headline-md mb-6">Accreditation</h5>
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 bg-graphite rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-amber">security</span>
+</div>
+<div class="w-12 h-12 bg-graphite rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-amber">construction</span>
+</div>
+<div class="w-12 h-12 bg-graphite rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-amber">flash_on</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-gutter max-w-container-max mx-auto mt-20 pt-8 border-t border-outline-variant/10 text-center">
+<p class="text-on-surface-variant text-body-md">© 2024 Sinera Electrical Services. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        function nextStep(step) {
+            const step1 = document.getElementById('step-1');
+            const step2 = document.getElementById('step-2');
+
+            if (step === 2) {
+                // Animate out Step 1
+                step1.classList.add('opacity-0', '-translate-x-8');
+                setTimeout(() => {
+                    step1.classList.add('hidden');
+                    // Animate in Step 2
+                    step2.classList.remove('hidden');
+                    // Wait a frame for the display toggle to register
+                    requestAnimationFrame(() => {
+                        step2.classList.remove('opacity-0', 'translate-x-8');
+                    });
+                }, 400);
+            } else {
+                // Animate out Step 2
+                step2.classList.add('opacity-0', 'translate-x-8');
+                setTimeout(() => {
+                    step2.classList.add('hidden');
+                    // Animate in Step 1
+                    step1.classList.remove('hidden');
+                    requestAnimationFrame(() => {
+                        step1.classList.remove('opacity-0', '-translate-x-8');
+                    });
+                }, 400);
+            }
+        }
+
+        // Intercept form submission for micro-interaction
+        document.getElementById('booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">autorenew</span> Sending...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Request Received';
+                btn.classList.replace('gradient-button', 'bg-green-600');
+                btn.classList.add('text-white');
+            }, 2000);
+        });
+    </script>
+</body></html>

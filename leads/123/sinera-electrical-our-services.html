@@ -1,0 +1,386 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | Sinera Electrical</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#e9c400",
+                    "on-tertiary-container": "#006a70",
+                    "inverse-primary": "#705d00",
+                    "on-secondary-container": "#684100",
+                    "secondary-container": "#ffa504",
+                    "surface-container-low": "#1c1b1b",
+                    "primary": "#fff6df",
+                    "inverse-on-surface": "#313030",
+                    "on-secondary-fixed": "#2a1700",
+                    "tertiary-fixed": "#79f5ff",
+                    "on-secondary": "#462a00",
+                    "secondary": "#ffcb8d",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "primary-container": "#ffd700",
+                    "background": "#131313",
+                    "electric-amber": "#FFBF00",
+                    "outline-variant": "#4d4732",
+                    "tertiary": "#defcff",
+                    "surface-bright": "#3a3939",
+                    "on-secondary-fixed-variant": "#653e00",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#00dbe8",
+                    "surface-container": "#201f1f",
+                    "on-primary-fixed": "#221b00",
+                    "on-background": "#e5e2e1",
+                    "on-primary-container": "#705e00",
+                    "surface-variant": "#353534",
+                    "surface": "#131313",
+                    "secondary-fixed": "#ffddb7",
+                    "graphite": "#1A1A1A",
+                    "surface-dim": "#131313",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "muted-gold": "rgba(255, 215, 0, 0.15)",
+                    "on-primary": "#3a3000",
+                    "on-surface-variant": "#d0c6ab",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary-fixed": "#002022",
+                    "on-surface": "#e5e2e1",
+                    "obsidian": "#050505",
+                    "secondary-fixed-dim": "#ffb95c",
+                    "tertiary-container": "#00f1ff",
+                    "on-primary-fixed-variant": "#544600",
+                    "outline": "#999077",
+                    "voltage-white": "#F5F5F5",
+                    "surface-container-lowest": "#0e0e0e",
+                    "primary-fixed": "#ffe16d",
+                    "on-tertiary": "#00363a",
+                    "surface-tint": "#e9c400",
+                    "surface-container-highest": "#353534",
+                    "surface-container-high": "#2a2a2a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "2rem",
+                    "container-max": "1280px",
+                    "stack-lg": "3rem",
+                    "section-padding": "8rem",
+                    "stack-md": "1.5rem",
+                    "stack-sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "label-caps": ["JetBrains Mono"],
+                    "display-hero-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "display-hero": ["Montserrat"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "display-hero-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(255, 191, 0, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+        }
+        .bg-glass {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-electric-amber selection:text-obsidian overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-obsidian/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-xl">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-black text-primary-container tracking-tighter">
+                Sinera Electrical
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="sinera-electrical-our-services.html">Commercial</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="sinera-electrical-our-services.html">Domestic</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="sinera-electrical-our-services.html">EICR</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="sinera-electrical-our-services.html">Projects</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="index.html">About</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-bold font-label-caps text-label-caps transition-transform active:scale-95 hover:brightness-110">
+                Request Quote
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-section-padding px-gutter overflow-hidden">
+
+<div class="max-w-container-max mx-auto relative z-10">
+<span class="font-label-caps text-label-caps text-electric-amber mb-4 block">PREMIUM TRADE PARTNERS</span>
+<h1 class="font-display-hero text-display-hero max-w-4xl mb-stack-md leading-tight">
+                Expert Electrical <span class="text-primary-container italic">Solutions</span> for London.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">
+                Delivering high-precision electrical engineering with the service of a concierge. From heavy industrial infrastructure to bespoke domestic installations.
+            </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-gradient-to-r from-primary-fixed-dim to-secondary-container text-obsidian font-bold font-headline-md rounded shadow-lg glow-hover transition-all">
+                    Book Service Now
+                </button>
+<button class="px-8 py-4 border-2 border-primary-container text-primary-container font-bold font-headline-md rounded hover:bg-muted-gold transition-all">
+                    View Certifications
+                </button>
+</div>
+</div>
+</header>
+<!-- 1. Commercial Electrical Services -->
+<section class="py-section-padding px-gutter bg-obsidian">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 lg:order-1">
+<div class="absolute -inset-4 bg-electric-amber/10 blur-3xl rounded-full"></div>
+<img alt="" class="w-full h-[600px] object-cover rounded shadow-2xl relative z-10 border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida/AP1WRLtSOVvxeSq7yOw9L4FUeERvTFjqXQRxDV5NqmrszvtVTmdNHJGf6WG-PLY4w_HakSdxNgY6_zmx1ACGoRHZybhvtgyrVk_sDNBM18k4oE4XVi2e1uGfQMY2OaP3ViVcYsS87J4eRrbJYx5POZmQSepOLDpzEOAm4fkzIpZd51smyW8LYmC0nQFivNwRmkULMumaQTGJYzvUK1VxIXOiaMYA3U3wbx4NK_uJO4K5HeQRgeJQccnR2o8xTOA">
+<div class="absolute -bottom-6 -right-6 bg-graphite border border-primary-container p-8 z-20 hidden md:block">
+<p class="font-headline-md text-headline-md text-primary-container font-black mb-1">15+ Years</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant">COMMERCIAL EXPERIENCE</p>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="font-label-caps text-label-caps text-electric-amber tracking-widest mb-4 block">01 / COMMERCIAL</span>
+<h2 class="font-headline-lg text-headline-lg mb-stack-md">Industrial Power &amp; Infrastructure</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+                    Specialized solutions for London's commercial sector. We handle complex installations that require absolute precision and zero downtime.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-stack-lg">
+<div class="flex items-center gap-3 p-4 bg-graphite border border-outline-variant/20 hover:border-primary-container transition-all group">
+<span class="material-symbols-outlined text-electric-amber group-hover:scale-110 transition-transform">lightbulb</span>
+<span class="font-body-md text-body-md">Commercial Lighting</span>
+</div>
+<div class="flex items-center gap-3 p-4 bg-graphite border border-outline-variant/20 hover:border-primary-container transition-all group">
+<span class="material-symbols-outlined text-electric-amber group-hover:scale-110 transition-transform">videocam</span>
+<span class="font-body-md text-body-md">CCTV Systems</span>
+</div>
+<div class="flex items-center gap-3 p-4 bg-graphite border border-outline-variant/20 hover:border-primary-container transition-all group">
+<span class="material-symbols-outlined text-electric-amber group-hover:scale-110 transition-transform">door_front</span>
+<span class="font-body-md text-body-md">Intercom &amp; Access</span>
+</div>
+<div class="flex items-center gap-3 p-4 bg-graphite border border-outline-variant/20 hover:border-primary-container transition-all group">
+<span class="material-symbols-outlined text-electric-amber group-hover:scale-110 transition-transform">power</span>
+<span class="font-body-md text-body-md">Phase-3 Power</span>
+</div>
+<div class="flex items-center gap-3 p-4 bg-graphite border border-outline-variant/20 hover:border-primary-container transition-all group">
+<span class="material-symbols-outlined text-electric-amber group-hover:scale-110 transition-transform">construction</span>
+<span class="font-body-md text-body-md">Maintenance Contracts</span>
+</div>
+<div class="flex items-center gap-3 p-4 bg-graphite border border-outline-variant/20 hover:border-primary-container transition-all group">
+<span class="material-symbols-outlined text-electric-amber group-hover:scale-110 transition-transform">description</span>
+<span class="font-body-md text-body-md">Compliance Reports</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-3 font-headline-md text-headline-md text-electric-amber hover:underline group" href="tel:02012345678">
+                    Call Now for Commercial Support
+                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Separator -->
+<div class="w-full h-px bg-gradient-to-r from-transparent via-primary-container/30 to-transparent"></div>
+<!-- 2. Domestic Electrical Services -->
+<section class="py-section-padding px-gutter bg-surface">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<span class="font-label-caps text-label-caps text-electric-amber tracking-widest mb-4 block">02 / DOMESTIC</span>
+<h2 class="font-headline-lg text-headline-lg mb-stack-md">Bespoke Residential Care</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+                    Modernizing London homes with advanced electrical upgrades. We treat your residence with the care it deserves, ensuring safety and performance.
+                </p>
+<div class="space-y-4 mb-stack-lg">
+<div class="p-6 bg-graphite/50 border-l-4 border-primary-container relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary-container/5 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+<h4 class="font-headline-md text-headline-md mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-electric-amber">bolt</span>
+                            Full Property Rewiring
+                        </h4>
+<p class="text-on-surface-variant font-body-md">Comprehensive rewiring for period properties and modern refurbishments to the latest safety standards.</p>
+</div>
+<div class="p-6 bg-graphite/50 border-l-4 border-primary-container relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary-container/5 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+<h4 class="font-headline-md text-headline-md mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-electric-amber">settings_input_component</span>
+                            Fuse Board Upgrades
+                        </h4>
+<p class="text-on-surface-variant font-body-md">Installation of modern consumer units with Surge Protection (SPD) and RCBO protection.</p>
+</div>
+<div class="p-6 bg-graphite/50 border-l-4 border-primary-container relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary-container/5 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+<h4 class="font-headline-md text-headline-md mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-electric-amber">smartphone</span>
+                            Smart Home Integration
+                        </h4>
+<p class="text-on-surface-variant font-body-md">App-controlled lighting, heating, and power automation for the modern London lifestyle.</p>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary-container px-10 py-4 font-bold font-headline-md transition-transform active:scale-95 hover:shadow-lg hover:shadow-primary-container/20">
+                    Call Now: 020 8000 0000
+                </button>
+</div>
+<div class="order-1 lg:order-2 relative">
+
+<img alt="" class="w-full h-[600px] object-cover rounded relative z-10 grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvIttyd0aeGwTsVd_HqMefIky-eFkfUHmGraiQ93eMIBdIUFqq4cZv4tUHvqlEUnUfeipVswHHuZJAHYuTdNiyFTZvY26q2uwdVsonPpzGQPHuJErnep1nRFcvf9MRcSlNwtkY2yXOTbgwVBDJxwHka538vUN-cH8X9fsALleo317mH3bCuDBT4erch-UQCQ3bHf1nT6NjaqlxRwmgeY_HFSH8ErLo-WXeR66z4qHmBgynEN2BHx_rV0IJP">
+</div>
+</div>
+</section>
+<!-- 3. EICR & PAT Testing -->
+<section class="py-section-padding px-gutter bg-obsidian relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-primary-container/5 to-transparent"></div>
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 max-w-3xl mx-auto">
+<span class="font-label-caps text-label-caps text-electric-amber tracking-widest mb-4 block">03 / COMPLIANCE</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">Safety Certification &amp; Testing</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Electrical safety is not optional. We provide detailed, legal-grade compliance reports for landlords, business owners, and residential sales.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-stack-lg">
+<!-- EICR Card -->
+<div class="bg-graphite p-8 border border-outline-variant/30 hover:border-primary-container transition-all group">
+<div class="w-16 h-16 bg-muted-gold flex items-center justify-center mb-6 rounded">
+<span class="material-symbols-outlined text-electric-amber text-4xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-white">EICR Testing</h3>
+<p class="text-on-surface-variant font-body-md mb-6">
+                        Electrical Installation Condition Reports are mandatory for rental properties every 5 years. We provide deep-dive diagnostics of your entire system.
+                    </p>
+<ul class="space-y-2 font-label-caps text-label-caps text-primary-container">
+<li class="flex items-center gap-2">✓ FIXED WIRING CHECK</li>
+<li class="flex items-center gap-2">✓ CIRCUIT LOADING</li>
+<li class="flex items-center gap-2">✓ EARTHING CONTINUITY</li>
+</ul>
+</div>
+<!-- PAT Card -->
+<div class="bg-graphite p-8 border border-outline-variant/30 hover:border-primary-container transition-all group">
+<div class="w-16 h-16 bg-muted-gold flex items-center justify-center mb-6 rounded">
+<span class="material-symbols-outlined text-electric-amber text-4xl" style="font-variation-settings: 'FILL' 1;">power_settings_new</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-white">PAT Testing</h3>
+<p class="text-on-surface-variant font-body-md mb-6">
+                        Portable Appliance Testing for offices, workshops, and rental units. Ensure every plug-in device is safe for daily use by employees and tenants.
+                    </p>
+<ul class="space-y-2 font-label-caps text-label-caps text-primary-container">
+<li class="flex items-center gap-2">✓ VISUAL INSPECTION</li>
+<li class="flex items-center gap-2">✓ EARTH BOND TEST</li>
+<li class="flex items-center gap-2">✓ INSULATION RESISTANCE</li>
+</ul>
+</div>
+<!-- Feature Image Context -->
+<div class="relative overflow-hidden group">
+<img alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida/AP1WRLuQbmK0avt1b7wXrNRJaTC4p80lVuxeZCyS3fZC7MaRE7iMSoroLLQIJy6CVAdVIL3BvHyF0wHrrVoGke_V99PH_bM6EDsxZ2gVno84vqecElZFlsB0J5rQ4mqkgQfFamVRivOhwgnUF5f5jND7bNhB3dp31l7TE91iP56qiUgX25JV1jaQgOY8tSR823Smm1b1KB0zK72LT0pcVWtoTPe6AjJ9x2nJV-L51e9iW1GD1RVQs2_cMlh2w0iX">
+<div class="absolute inset-0 bg-obsidian/40 flex items-end p-8">
+<div class="bg-glass bg-obsidian/60 p-6 w-full border border-outline-variant/30">
+<p class="font-label-caps text-label-caps text-electric-amber mb-2">PRECISION INSTRUMENTS</p>
+<p class="font-body-md text-body-md text-white">Using the latest Megger diagnostic equipment for pinpoint accuracy.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-graphite p-10 flex flex-col md:flex-row items-center justify-between gap-8 border border-muted-gold">
+<div>
+<h4 class="font-headline-md text-headline-md text-white mb-2">Urgent Testing Required?</h4>
+<p class="text-on-surface-variant font-body-md">We offer 24-hour turnaround on EICR certificates for urgent rental move-ins.</p>
+</div>
+<button class="bg-electric-amber text-obsidian px-12 py-4 font-black font-headline-md rounded-none hover:brightness-125 transition-all uppercase tracking-widest whitespace-nowrap">
+                    Call for Inspection
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-obsidian border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-gutter max-w-container-max mx-auto py-section-padding">
+<div class="col-span-1 md:col-span-2">
+<div class="text-headline-md font-headline-md font-black text-primary-container mb-6">Sinera Electrical</div>
+<p class="text-on-surface-variant font-body-md max-w-md mb-8">
+                    Providing elite electrical solutions across the Greater London area. Fully insured, NICEIC approved, and committed to technical excellence in every project.
+                </p>
+<div class="flex gap-4">
+<div class="w-10 h-10 bg-graphite flex items-center justify-center text-electric-amber border border-outline-variant hover:border-primary-container cursor-pointer transition-all">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div class="w-10 h-10 bg-graphite flex items-center justify-center text-electric-amber border border-outline-variant hover:border-primary-container cursor-pointer transition-all">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div class="w-10 h-10 bg-graphite flex items-center justify-center text-electric-amber border border-outline-variant hover:border-primary-container cursor-pointer transition-all">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-white mb-6">Our Services</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="sinera-electrical-our-services.html">Commercial Services</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="sinera-electrical-our-services.html">Domestic Rewiring</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="sinera-electrical-our-services.html">EICR Testing</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="sinera-electrical-our-services.html">EV Charging</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-white mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="sinera-electrical-our-services.html">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="sinera-electrical-our-services.html">Accreditations</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-all font-body-md" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="px-gutter py-8 border-t border-outline-variant/10 text-center text-on-surface-variant font-label-caps text-label-caps">
+            © 2024 Sinera Electrical Services. All rights reserved. Registered in England &amp; Wales.
+        </div>
+</footer>
+<script>
+        // Micro-interactions for scrolling reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

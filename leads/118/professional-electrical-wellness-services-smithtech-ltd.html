@@ -1,0 +1,344 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Professional Services | SmithTech Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#ffdad6",
+                    "surface-container-low": "#181c23",
+                    "primary-container": "#4a8eff",
+                    "inverse-on-surface": "#2d3039",
+                    "inverse-primary": "#005bc0",
+                    "on-primary-fixed": "#001a41",
+                    "status-emergency": "#FF3B30",
+                    "on-secondary-container": "#abb9d6",
+                    "neutral-silver": "#E2E8F0",
+                    "surface-container-lowest": "#0b0e16",
+                    "on-tertiary-container": "#002f33",
+                    "secondary-container": "#3c4962",
+                    "secondary": "#b9c7e4",
+                    "outline": "#8b90a0",
+                    "on-secondary-fixed-variant": "#39475f",
+                    "secondary-fixed": "#d6e3ff",
+                    "inverse-surface": "#e0e2ed",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#272a32",
+                    "on-primary": "#002e68",
+                    "surface-dim": "#10131b",
+                    "on-error": "#690005",
+                    "surface-bright": "#363942",
+                    "on-secondary-fixed": "#0d1c32",
+                    "surface-tint": "#adc7ff",
+                    "tertiary-fixed": "#7df4ff",
+                    "tertiary-fixed-dim": "#00dbe9",
+                    "on-secondary": "#233148",
+                    "deep-navy-bg": "#050B14",
+                    "surface-container": "#1c2027",
+                    "primary-fixed-dim": "#adc7ff",
+                    "background": "#10131b",
+                    "surface-variant": "#31353d",
+                    "primary": "#adc7ff",
+                    "electric-glow": "rgba(0, 240, 255, 0.15)",
+                    "surface-container-highest": "#31353d",
+                    "on-primary-container": "#00285b",
+                    "outline-variant": "#414754",
+                    "on-surface-variant": "#c1c6d7",
+                    "on-background": "#e0e2ed",
+                    "on-primary-fixed-variant": "#004493",
+                    "on-tertiary-fixed": "#002022",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "tertiary-container": "#00a0aa",
+                    "surface": "#10131b",
+                    "tertiary": "#00dbe9",
+                    "on-surface": "#e0e2ed",
+                    "error": "#ffb4ab",
+                    "secondary-fixed-dim": "#b9c7e4",
+                    "on-tertiary": "#00363a",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-lg": "80px",
+                    "unit": "8px",
+                    "stack-sm": "8px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "stack-md": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Sora"],
+                    "headline-lg": ["Sora"],
+                    "body-md": ["Inter"],
+                    "headline-xl": ["Sora"],
+                    "label-caps": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(10, 25, 47, 0.7);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(173, 199, 255, 0.3);
+        }
+        .electric-border-gradient {
+            background: linear-gradient(90deg, #adc7ff, #050B14);
+            height: 1px;
+            width: 100%;
+        }
+        .pulse-emergency {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+    </style>
+</head>
+<body class="bg-deep-navy-bg text-on-background font-body-md selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-deep-navy-bg/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_0_20px_rgba(0,240,255,0.1)] transition-all duration-300 ease-in-out">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-20">
+<div class="font-headline-lg text-headline-lg-mobile tracking-tighter text-primary">SmithTech Ltd</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="professional-electrical-wellness-services-smithtech-ltd.html">Electrical</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="professional-electrical-wellness-services-smithtech-ltd.html">Sauna Repair</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="professional-electrical-wellness-services-smithtech-ltd.html">Commercial</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="expert-insights-safety-resources-smithtech-ltd-blog.html">Safety Compliance</a>
+</div>
+<div class="flex items-center gap-stack-sm">
+<button class="px-gutter py-2 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary/10 transition-all">Get Quote</button>
+<button class="px-gutter py-2 bg-primary text-on-primary font-label-caps text-label-caps shadow-[0_0_15px_rgba(0,240,255,0.2)] hover:scale-105 transition-all">Emergency Call</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-stack-lg">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-stack-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-20">
+
+</div>
+<div class="max-w-2xl">
+<div class="flex items-center gap-stack-sm mb-stack-sm">
+<span class="w-2 h-2 rounded-full bg-status-emergency pulse-emergency"></span>
+<span class="font-label-caps text-label-caps text-status-emergency">Live: 24/7 Response Active</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl mb-stack-md text-on-surface">Elite Engineering for Wellness &amp; Power</h1>
+<p class="text-on-surface-variant mb-stack-md max-w-lg">
+                    With over 20 years of technical expertise, SmithTech Ltd provides precision electrical repairs and luxury wellness equipment servicing across London and Surrey. NICEIC and TrustMark registered.
+                </p>
+<div class="flex gap-stack-sm">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary">Call Now</span>
+<span class="font-headline-lg text-headline-lg-mobile text-on-surface">0330 321 1551</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid (Bento Style) -->
+<section class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Emergency Electrical (Main Feature) -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl glass-card p-unit flex flex-col justify-between min-h-[500px]">
+<div class="absolute inset-0 -z-10 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-contrast cinematic shot of a professional electrician in a dark navy uniform using a glowing digital multimeter to test a complex industrial circuit breaker panel. The scene is illuminated by intense electric blue sparks and a cool cyan ambient glow, creating a high-tech, urgent engineering atmosphere. Deep shadows emphasize the precision and critical nature of the 24/7 emergency electrical service." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbW0G2mIB84ht7YmZj5GxRV1cXl_xYh_YFTYOkfpYzBmujw8AzZfhq8rwwrllGTy-1SauKhArl1wNxLwbYrnV7n0jCNJHgygxEWGZHx8qmHPnSmdz6fDy0v3vOWoSjWLmCvil-Y9hCMlEoLqzgsi-UXbNwCOHwLbDvnxb3tU05vG1-UYKJcUck9uQX-iiG0jSmWYd-T1qGwA3QzvjpCjWTvXyKZLmtdLF7Fya8Hht5fUe5ivYl6foWwg')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy-bg via-deep-navy-bg/40 to-transparent"></div>
+<div class="relative p-stack-md mt-auto">
+<div class="flex items-center gap-unit mb-unit">
+<span class="material-symbols-outlined text-primary">bolt</span>
+<span class="font-label-caps text-label-caps text-primary">Emergency Response</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">Emergency Electrical &amp; Power Cuts</h2>
+<p class="text-on-surface-variant max-w-xl mb-stack-md">
+                        Fast, efficient, and reliable emergency repairs for total power loss, faulty wiring, or consumer unit failures. Our NICEIC qualified engineers arrive within one hour to restore safety and power to your property.
+                    </p>
+<button class="group/btn flex items-center gap-unit px-gutter py-4 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:shadow-[0_0_20px_rgba(173,199,255,0.4)] transition-all">
+                        Immediate Booking
+                        <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Certified Logos / Stats -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="glass-card rounded-xl p-stack-md border border-outline-variant/30 flex-1 flex flex-col justify-center text-center">
+<div class="font-headline-lg text-primary mb-unit">20+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Years of Professional Reliability</div>
+</div>
+<div class="glass-card rounded-xl p-stack-md border border-outline-variant/30 flex-1 flex items-center justify-between">
+<div class="text-left">
+<div class="font-label-caps text-label-caps text-primary mb-unit">Registered</div>
+<div class="font-body-md font-bold">NICEIC &amp; TrustMark</div>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- Sauna Specialists -->
+<div class="md:col-span-6 glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="An ultra-luxurious modern sauna interior featuring light cedar wood planks and a sleek, minimalist Huum heater with glowing volcanic rocks. The room is bathed in a soft, warm amber glow contrasted by cool electric blue LED accent lighting along the floor. The image captures a serene, high-end wellness atmosphere with steam rising gently from the heater, emphasizing the premium quality of SmithTech's installation and repair services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQYIosNgXUx7x0OkqU4V-3wARXOzfTyru7qny1cgNVbOnveMeNo3wR-UPtBFeRK7UybbUBVftR-Vq_tG_twaP8XlSgJcyDPtYmg4sXuhGnM8N_C6fq7mMeNY3KrIHhX_EAHjaR4LlVZ_7EDanJXlXTL9kzfxiYpoUDSL85Eb65wgjoMgbtN47H9g2fGaGOAnfxTSktVqsI9Gw-HisK6UF0SYnWmwUWKbfmFcHB8YiS8hdnJgjrF6N-4Q">
+</div>
+<div class="p-stack-md flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-unit">
+<div>
+<span class="font-label-caps text-label-caps text-primary">Wellness Equipment</span>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface mt-2">Sauna Installation &amp; Repair</h3>
+</div>
+<span class="material-symbols-outlined text-primary">hot_tub</span>
+</div>
+<p class="text-on-surface-variant mb-stack-md">
+                        Authorised specialists for Vidalux, Huum, and Harvia. We provide comprehensive repair, component replacement, and bespoke supply services for residential and commercial saunas.
+                    </p>
+<div class="mt-auto pt-stack-sm border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-secondary-container">Certified: Vidalux, Harvia</span>
+<a class="text-primary font-label-caps text-label-caps hover:underline" href="professional-electrical-wellness-services-smithtech-ltd.html">Learn More</a>
+</div>
+</div>
+</div>
+<!-- Steam Room Servicing -->
+<div class="md:col-span-6 glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-64 overflow-hidden relative">
+<div class="absolute inset-0 bg-deep-navy-bg/20 z-10"></div>
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="A pristine, minimalist steam room featuring white marble tiles and a glass door, filled with thick, atmospheric white steam. The lighting is a sophisticated mix of natural daylight from a high window and vibrant cyan-blue underwater-style lighting, creating a high-tech spa aesthetic. The image focuses on the technical precision of the steam generator output, symbolizing SmithTech's expert maintenance and servicing capabilities." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1npKIXN0xEHCcOLNaH-wkX60_KPGI3VlmXDxCfpqQ-ANYOCcQbnbmL8v7L-8dMuTVHJ27Xl2aWPX0hIasDh-vAKXXzIb3MIbeIKmCq2-f6FI7UnnF_x9xwCFPgvWtH8FAFooCiznB6VlSWHz_nkVtrlGaQvzOnG438USDtcYq8BVBejFrMT8OHV_Wf2LpeJI4QoVw-o6GOwmAug30ddPHi-zBPmhc0bZrGomCiuimPtHeXjXfDG1cGg">
+</div>
+<div class="p-stack-md flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-unit">
+<div>
+<span class="font-label-caps text-label-caps text-primary">Commercial Maintenance</span>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface mt-2">Steam Room Servicing</h3>
+</div>
+<span class="material-symbols-outlined text-primary">cloudy_snowing</span>
+</div>
+<p class="text-on-surface-variant mb-stack-md">
+                        Maintain peak performance and hygiene with our scheduled steam room maintenance. We service generators, desale systems, and ensure all electrical safety protocols meet industry standards.
+                    </p>
+<div class="mt-auto pt-stack-sm border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-secondary-container">24/7 Tech Support</span>
+<button class="px-gutter py-2 border border-primary/30 text-primary font-label-caps text-label-caps rounded hover:bg-primary/5">Request Service</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mt-stack-lg">
+<div class="electric-border-gradient mb-gutter"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div>
+<h4 class="font-headline-lg text-headline-lg-mobile mb-unit">The SmithTech Promise</h4>
+<p class="text-on-surface-variant">Precision engineering meets luxury service. We treat every home and commercial facility with absolute technical rigor.</p>
+</div>
+<div class="flex flex-col gap-unit">
+<div class="flex items-center gap-unit">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="font-body-md font-bold">Fully Insured &amp; Qualified</span>
+</div>
+<div class="flex items-center gap-unit">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span class="font-body-md font-bold">7 Days a Week, 365 Days</span>
+</div>
+</div>
+<div class="bg-surface-container-high p-stack-md rounded-xl">
+<div class="text-primary font-label-caps text-label-caps mb-unit">Customer Review</div>
+<p class="italic text-on-surface-variant text-sm mb-unit">"Emergency electrician arrived within one hour to fix issues with power cut to our house. He definitely knows what he's doing!"</p>
+<div class="text-xs text-on-surface font-bold">— Martin W, London</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy-bg w-full py-stack-lg border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-lg text-headline-lg text-primary mb-stack-sm">SmithTech Ltd</div>
+<p class="text-on-surface-variant text-sm pr-4">
+                    Expert electrical and wellness equipment specialists. Serving Greater London, Surrey, Berkshire, and Kent for over two decades.
+                </p>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-primary mb-stack-md">Quick Links</h5>
+<ul class="flex flex-col gap-stack-sm text-on-surface-variant font-body-md">
+<li><a class="hover:text-tertiary transition-colors" href="professional-electrical-wellness-services-smithtech-ltd.html">Emergency Electrician</a></li>
+<li><a class="hover:text-tertiary transition-colors" href="professional-electrical-wellness-services-smithtech-ltd.html">Sauna Installation</a></li>
+<li><a class="hover:text-tertiary transition-colors" href="professional-electrical-wellness-services-smithtech-ltd.html">Our Rates</a></li>
+<li><a class="hover:text-tertiary transition-colors" href="service-areas-smithtech-ltd-coverage-map.html">Areas We Cover</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-primary mb-stack-md">Support</h5>
+<ul class="flex flex-col gap-stack-sm text-on-surface-variant font-body-md">
+<li><a class="hover:text-tertiary transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="hover:text-tertiary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-tertiary transition-colors" href="expert-insights-safety-resources-smithtech-ltd-blog.html">Warranty Info</a></li>
+<li><a class="hover:text-tertiary transition-colors" href="index.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-primary mb-stack-md">Contact</h5>
+<p class="text-on-surface-variant text-sm mb-unit">3 Longmoor Point, Norley Vale</p>
+<p class="text-on-surface-variant text-sm mb-stack-sm">London, SW15 4BU</p>
+<div class="flex items-center gap-unit text-primary mb-unit">
+<span class="material-symbols-outlined text-sm">call</span>
+<span class="font-bold">0330 321 1551</span>
+</div>
+<div class="flex gap-stack-sm mt-stack-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="service-areas-smithtech-ltd-coverage-map.html"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-stack-lg pt-stack-md border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-stack-sm opacity-60">
+<p class="text-xs">© 2024 SmithTech Ltd. NICEIC Registered. All Rights Reserved.</p>
+<div class="flex gap-gutter text-xs">
+<span>London</span>
+<span>Guildford</span>
+<span>Surrey</span>
+</div>
+</div>
+</footer>
+<!-- SideNavBar (Hidden on desktop as per instructions) -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-outline-variant hidden">
+<!-- Content for side nav if needed for mobile -->
+</aside>
+<!-- FAB for Emergency Mobile -->
+<div class="md:hidden fixed bottom-6 right-6 z-[60]">
+<button class="w-16 h-16 rounded-full bg-status-emergency text-white shadow-2xl flex items-center justify-center animate-bounce">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">emergency</span>
+</button>
+</div>
+<script>
+        // Subtle interaction script for electric glow effects
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>EV Charging Solutions | NOD-Electrical</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#5b4138",
+                    "on-tertiary-fixed": "#001e2c",
+                    "primary-fixed-dim": "#ffb59c",
+                    "primary": "#ffb59c",
+                    "status-success": "#10B981",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "surface-dim": "#101415",
+                    "tertiary-container": "#009fd6",
+                    "surface": "#101415",
+                    "tertiary-fixed-dim": "#7bd0ff",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#3f465c",
+                    "surface-tint": "#ffb59c",
+                    "on-error": "#690005",
+                    "on-secondary": "#283044",
+                    "deep-navy": "#020617",
+                    "surface-container-low": "#191c1e",
+                    "on-tertiary-container": "#003145",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "secondary": "#bec6e0",
+                    "error-container": "#93000a",
+                    "error": "#ffb4ab",
+                    "on-tertiary": "#00354a",
+                    "on-secondary-fixed": "#131b2e",
+                    "surface-container-highest": "#323537",
+                    "outline": "#aa897f",
+                    "surface-glass": "rgba(30, 41, 59, 0.7)",
+                    "secondary-fixed": "#dae2fd",
+                    "on-surface": "#e0e3e5",
+                    "inverse-on-surface": "#2d3133",
+                    "tertiary": "#7bd0ff",
+                    "surface-container-lowest": "#0b0f10",
+                    "on-primary": "#5c1900",
+                    "surface-variant": "#323537",
+                    "primary-fixed": "#ffdbcf",
+                    "surface-container-high": "#272a2c",
+                    "surface-bright": "#363a3b",
+                    "electric-orange-glow": "rgba(255, 95, 31, 0.15)",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-primary-container": "#ff5f1f",
+                    "on-primary-fixed-variant": "#832700",
+                    "on-surface-variant": "#e3bfb3",
+                    "on-background": "#e0e3e5",
+                    "inverse-surface": "#e0e3e5",
+                    "surface-container": "#1d2022",
+                    "background": "#101415",
+                    "inverse-primary": "#ab3600",
+                    "tertiary-fixed": "#c4e7ff",
+                    "on-secondary-container": "#adb4ce",
+                    "primary-container": "#ff5f1f",
+                    "on-primary-fixed": "#390c00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "section-gap-md": "80px",
+                    "section-gap-lg": "120px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "display-xl-mobile": ["Montserrat"],
+                    "display-xl": ["Montserrat"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                    "display-xl-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(255, 95, 31, 0.4);
+        }
+        .circuit-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, #ff5f1f, transparent);
+            height: 1px;
+            width: 100%;
+            opacity: 0.3;
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary">
+<!-- Header Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface-container/80 backdrop-blur-xl dark:bg-surface-container/80 border-b border-white/10 shadow-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface dark:text-on-surface">
+                NOD-Electrical
+            </div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant hover:text-primary-container transition-colors duration-300 font-label-sm text-label-sm" href="services-nod-electrical-services.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-colors duration-300 font-label-sm text-label-sm" href="services-nod-electrical-services.html">Domestic</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-colors duration-300 font-label-sm text-label-sm" href="services-nod-electrical-services.html">Commercial</a>
+<a class="text-primary-container font-bold border-b-2 border-primary-container pb-1 font-label-sm text-label-sm" href="ev-charging-solutions-nod-electrical-services.html">EV Charging</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-colors duration-300 font-label-sm text-label-sm" href="services-nod-electrical-services.html">Projects</a>
+</div>
+<button class="bg-primary-container text-on-primary font-headline-md text-label-sm px-6 py-3 rounded-DEFAULT hover:bg-opacity-90 scale-95 active:scale-90 transition-all font-bold">
+                Request a Quote
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-deep-navy via-deep-navy/80 to-transparent z-10"></div>
+<img alt="Hero background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq2ncSA7x0SjWUZAK_VMQXvfcI1nOCHnG6pLoh6u23jQDKNgAt7nMq2BLFyzqFG7nLIL8E8koAkzNuIWDE6FdLRkM6bsihBGw7mCv6l5nTcopu7nISTSUj21JhgQKbop9KuwXMGaJTIJR2XhiGaVDG9IObR5KjW1UvJn6W0BPnlyhNLI1AR3jIHFRVEs324PfEv1lmv32BwBNTl2osWkhxgnrKQFhYIdcoS9_5ieFsk6Wp90qCDRA">
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full">
+<div class="max-w-2xl">
+<span class="inline-block px-4 py-1 rounded-full bg-primary-container/20 border border-primary-container/30 text-primary-container font-label-sm text-label-sm mb-6 animate-pulse">
+                        South London's Premier Installers
+                    </span>
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl mb-6 leading-tight">
+                        Power Your <span class="text-primary-container">Journey.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                        Professional EV Charger Installations for Home and Business across London. Future-proof your property with our precision engineering.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-on-primary font-headline-md text-label-sm px-8 py-4 rounded-DEFAULT glow-hover transition-all font-bold">
+                            Get Your Quote
+                        </button>
+<button class="border border-white/20 hover:border-primary-container text-on-surface font-headline-md text-label-sm px-8 py-4 rounded-DEFAULT transition-all font-bold flex items-center gap-2">
+                            Explore Brands <span class="material-symbols-outlined text-sm">arrow_downward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Animated Circuit Decor -->
+<div class="absolute bottom-0 left-0 w-full overflow-hidden h-32 pointer-events-none opacity-20">
+<div class="circuit-line top-4 animate-[ping_3s_infinite]"></div>
+<div class="circuit-line top-16 animate-[ping_4s_infinite]"></div>
+<div class="circuit-line top-28 animate-[ping_5s_infinite]"></div>
+</div>
+</section>
+<!-- Brands Section - Bento Grid Style -->
+<section class="py-section-gap-lg bg-surface relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">Brands We Install</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We partner with the industry's most reliable and technologically advanced charging manufacturers to bring you excellence.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+<!-- Brand Cards -->
+<div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center group hover:border-primary-container transition-all cursor-pointer">
+<div class="w-16 h-16 mb-4 flex items-center justify-center bg-white/5 rounded-full group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">electric_car</span>
+</div>
+<span class="font-headline-md text-label-sm uppercase tracking-widest text-on-surface">Tesla</span>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center group hover:border-primary-container transition-all cursor-pointer">
+<div class="w-16 h-16 mb-4 flex items-center justify-center bg-white/5 rounded-full group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-3xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<span class="font-headline-md text-label-sm uppercase tracking-widest text-on-surface">Ohme</span>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center group hover:border-primary-container transition-all cursor-pointer">
+<div class="w-16 h-16 mb-4 flex items-center justify-center bg-white/5 rounded-full group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<span class="font-headline-md text-label-sm uppercase tracking-widest text-on-surface">Zappi</span>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center group hover:border-primary-container transition-all cursor-pointer">
+<div class="w-16 h-16 mb-4 flex items-center justify-center bg-white/5 rounded-full group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-3xl" style="font-variation-settings: 'FILL' 1;">sync</span>
+</div>
+<span class="font-headline-md text-label-sm uppercase tracking-widest text-on-surface">Sync EV</span>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center group hover:border-primary-container transition-all cursor-pointer">
+<div class="w-16 h-16 mb-4 flex items-center justify-center bg-white/5 rounded-full group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<span class="font-headline-md text-label-sm uppercase tracking-widest text-on-surface">Andersen</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section - Asymmetric Layout -->
+<section class="py-section-gap-lg bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid md:grid-cols-2 gap-gutter items-center">
+<div class="order-2 md:order-1 relative">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-primary-container/10 mix-blend-overlay"></div>
+<img class="w-full h-full object-cover aspect-square" data-alt="A professional electrician in high-visibility gear installing a sleek, modern electric vehicle charging unit on a contemporary brick wall at dusk. The lighting is warm and cinematic, highlighting the precision of the installation and the clean lines of the technology. The atmosphere is professional and high-tech, showcasing high-fidelity tools and meticulous craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAEXFWkPSR-ASuo5Wc1yS-vwPgDo7YVEGK5nwljiF07ztSZs16_AitvrSBkqMulOAwBZZB_X7tqpHttPhLFWcZdUSPOOnNCEjWcBHSA880I19wCso0iHUOCfiWvp2Dn0LUfLVm90ZiJyRM2WS4QE6mItFaksVenme0bmEtkJ_6ZwxeIsULWj8XbF-NSiay7k37_1TudZHgxN6CN_6tKLVQL4iYHsK8T-BgMBN-OkMN2WItLXdBoGc">
+</div>
+<!-- Floating Stats -->
+<div class="absolute -bottom-6 -right-6 glass-card p-6 rounded-xl hidden md:block">
+<p class="font-headline-md text-primary-container text-headline-md mb-1">500+</p>
+<p class="font-label-sm text-label-sm text-on-surface">Units Installed</p>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-gutter">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg">Our Precise Process</h2>
+<div class="space-y-8">
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-primary-container/30 flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-all duration-500">
+<span class="font-headline-md text-body-lg">01</span>
+</div>
+<div>
+<h3 class="font-headline-md text-body-lg mb-2">Technical Consultation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Detailed site survey to assess load capacity and optimal positioning for your unique needs.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-primary-container/30 flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-all duration-500">
+<span class="font-headline-md text-body-lg">02</span>
+</div>
+<div>
+<h3 class="font-headline-md text-body-lg mb-2">Expert Installation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Certified NICEIC installation following strict safety regulations and aesthetic excellence.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-primary-container/30 flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-all duration-500">
+<span class="font-headline-md text-body-lg">03</span>
+</div>
+<div>
+<h3 class="font-headline-md text-body-lg mb-2">App Integration</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We don't leave until you're fully connected, configured, and ready to charge smart.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Grants & Incentives - Glassmorphism Highlight -->
+<section class="py-section-gap-lg relative overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="glass-card p-gutter md:p-section-gap-md rounded-3xl max-w-4xl mx-auto text-center border-primary-container/20">
+<span class="material-symbols-outlined text-primary-container text-6xl mb-6">savings</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Save with OZEV Grants</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                        Qualifying homeowners and businesses can significantly reduce installation costs through the Office for Zero Emission Vehicles (OZEV) scheme. We are fully approved to process these grants on your behalf.
+                    </p>
+<div class="flex flex-col md:flex-row justify-center gap-gutter text-left">
+<div class="bg-white/5 p-6 rounded-xl border border-white/10 flex-1">
+<h4 class="font-headline-md text-body-lg mb-2 text-primary">EV Chargepoint Grant</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Up to £350 off installation for flat-owners and those in rented accommodation.</p>
+</div>
+<div class="bg-white/5 p-6 rounded-xl border border-white/10 flex-1">
+<h4 class="font-headline-md text-body-lg mb-2 text-primary">Workplace Scheme</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Voucher-based support for businesses to install multiple charging points.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why EV? - Dark Tech Aesthetics -->
+<section class="py-section-gap-lg bg-deep-navy relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">Why Switch to EV?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Future-proof your life with smarter, cleaner, and more efficient energy solutions.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter">
+<div class="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors border-t-2 border-primary-container/0 hover:border-primary-container duration-500">
+<div class="text-primary-container mb-6">
+<span class="material-symbols-outlined text-5xl">energy_savings_leaf</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Peak Efficiency</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Convert 90% of energy into motion, compared to only 30% in traditional combustion engines.</p>
+</div>
+<div class="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors border-t-2 border-primary-container/0 hover:border-primary-container duration-500">
+<div class="text-primary-container mb-6">
+<span class="material-symbols-outlined text-5xl">currency_exchange</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Unmatched Savings</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Slash your fuel costs by up to 70% and enjoy significant tax incentives and zero congestion charges.</p>
+</div>
+<div class="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors border-t-2 border-primary-container/0 hover:border-primary-container duration-500">
+<div class="text-primary-container mb-6">
+<span class="material-symbols-outlined text-5xl">public</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Silent Impact</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Zero tailpipe emissions and reduced noise pollution for a cleaner, quieter urban environment.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy dark:bg-surface-container-lowest w-full py-section-gap-md px-margin-mobile border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md text-primary-container font-bold">
+                    NOD-Electrical
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    NAPIT Registered &amp; Fully Insured. South London's Electric Vehicle Experts.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary-container/20 transition-all" href="contact-us-nod-electrical-services.html">
+<span class="material-symbols-outlined text-on-surface text-xl">share</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-on-surface mb-6">Services</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="services-nod-electrical-services.html">Domestic Services</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="services-nod-electrical-services.html">Commercial Maintenance</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="ev-charging-solutions-nod-electrical-services.html">EV Charging Solutions</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="services-nod-electrical-services.html">Emergency Callouts</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-on-surface mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contact-us-nod-electrical-services.html">About Us</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Recent Projects</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contact-us-nod-electrical-services.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-on-surface mb-6">Contact</h4>
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">phone</span>
+<span>020 8050 3408</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>SW16 2UN, London</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span>NAPIT Approved</span>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-16 pt-8 border-t border-white/5 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant/60">
+                © 2024 NOD-Electrical Services. NAPIT Registered &amp; Fully Insured. South London's Electric Vehicle Experts.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('scroll-reveal');
+            observer.observe(section);
+        });
+
+        // Interactive micro-effects
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

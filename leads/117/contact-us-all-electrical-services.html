@@ -1,0 +1,398 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact &amp; Booking | All Electrical Services London</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#00daf3",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "primary-container": "#ffd700",
+                    "on-error": "#690005",
+                    "deep-obsidian": "#0A0A0B",
+                    "glass-surface": "rgba(255, 255, 255, 0.03)",
+                    "on-secondary-fixed": "#001f24",
+                    "background": "#161308",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-container": "#00616d",
+                    "surface-container-low": "#1f1b10",
+                    "surface-container": "#231f14",
+                    "inverse-primary": "#705d00",
+                    "inverse-on-surface": "#343024",
+                    "surface-container-high": "#2e2a1e",
+                    "surface-variant": "#393528",
+                    "secondary-fixed": "#9cf0ff",
+                    "surface": "#161308",
+                    "on-surface-variant": "#d0c6ab",
+                    "surface-container-highest": "#393528",
+                    "primary-fixed-dim": "#e9c400",
+                    "electric-gold": "#FFD700",
+                    "on-surface": "#eae2cf",
+                    "plasma-blue": "#00E5FF",
+                    "on-secondary": "#00363d",
+                    "tertiary-fixed": "#e5e2e1",
+                    "surface-container-lowest": "#110e05",
+                    "error": "#ffb4ab",
+                    "secondary": "#bdf4ff",
+                    "on-primary": "#3a3000",
+                    "outline-variant": "#4d4732",
+                    "on-primary-fixed-variant": "#544600",
+                    "error-container": "#93000a",
+                    "surface-dim": "#161308",
+                    "on-tertiary": "#313030",
+                    "on-primary-container": "#705e00",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "on-background": "#eae2cf",
+                    "primary-fixed": "#ffe16d",
+                    "secondary-container": "#00e3fd",
+                    "primary": "#fff6df",
+                    "tertiary": "#f9f5f5",
+                    "on-tertiary-container": "#605f5e",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "surface-bright": "#3d392c",
+                    "inverse-surface": "#eae2cf",
+                    "glass-border": "rgba(255, 255, 255, 0.12)",
+                    "surface-tint": "#e9c400",
+                    "tertiary-container": "#dcd9d9",
+                    "on-secondary-fixed-variant": "#004f58",
+                    "on-primary-fixed": "#221b00",
+                    "outline": "#999077"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "margin-mobile": "20px",
+                    "section-gap": "120px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Space Grotesk"],
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"],
+                    "callout": ["Space Grotesk"],
+                    "headline-xl": ["Space Grotesk"],
+                    "display-lg": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "callout": ["20px", {"lineHeight": "30px", "fontWeight": "500"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0B;
+            color: #eae2cf;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .electric-glow {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .plasma-glow {
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.15);
+        }
+
+        .pulse-border {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; border-color: rgba(255, 215, 0, 1); }
+            50% { opacity: 0.5; border-color: rgba(255, 215, 0, 0.3); }
+        }
+
+        .skyline-motif {
+            mask-image: linear-gradient(to top, black 30%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to top, black 30%, transparent 100%);
+            opacity: 0.15;
+            filter: drop-shadow(0 0 2px #00E5FF);
+        }
+
+        .booking-input {
+            background: rgba(255, 255, 255, 0.05);
+            border: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .booking-input:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-bottom-color: #00E5FF;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-deep-obsidian/80 backdrop-blur-xl border-b border-glass-border shadow-2xl">
+<nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-electric-gold uppercase">
+                ALL ELECTRICAL SERVICES
+            </div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="text-on-surface-variant hover:text-electric-gold transition-colors font-body-md" href="homepage-all-electrical-services.html">Home</a>
+<a class="text-on-surface-variant hover:text-electric-gold transition-colors font-body-md" href="our-services-all-electrical-services.html">Services</a>
+<a class="text-on-surface-variant hover:text-electric-gold transition-colors font-body-md" href="index.html">Charges</a>
+<a class="text-electric-gold border-b-2 border-electric-gold pb-1 font-body-md" href="contact-us-all-electrical-services.html">Contact</a>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="hidden lg:block px-6 py-2 border border-glass-border text-on-surface font-label-caps uppercase hover:bg-white/10 transition-all active:scale-95">Book Now</button>
+<button class="px-6 py-2 bg-electric-gold text-deep-obsidian font-label-caps uppercase font-bold hover:shadow-[0_0_20px_rgba(255,215,0,0.4)] transition-all active:scale-95">Emergency Call</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 min-h-screen relative overflow-hidden">
+<!-- Background Animation -->
+
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-stack-lg relative z-10">
+<!-- Left Panel: Hotlines -->
+<div class="lg:col-span-5 space-y-stack-lg py-12">
+<div class="space-y-stack-sm">
+<span class="text-plasma-blue font-label-caps uppercase tracking-widest">Available 24/7/365</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-headline-xl text-on-surface leading-tight">
+                        Instant Access <br>To Expert Engineers
+                    </h1>
+<p class="font-body-lg text-on-surface-variant max-w-md">
+                        NICEIC Approved contractors delivering premium electrical excellence across the heart of London and beyond the M25.
+                    </p>
+</div>
+<div class="space-y-stack-md">
+<!-- Emergency CTA Card -->
+<div class="glass-card p-8 group hover:border-electric-gold transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl">bolt</span>
+</div>
+<div class="relative z-10">
+<span class="text-electric-gold font-label-caps uppercase mb-2 block">Emergency Hotline</span>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-electric-gold text-4xl">phone_in_talk</span>
+<a class="font-display-lg text-headline-md md:text-headline-xl text-on-surface hover:text-electric-gold transition-colors" href="tel:08002793443">0800 279 3443</a>
+</div>
+<p class="text-on-surface-variant font-body-md">Freephone response within 60 minutes for critical faults.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="glass-card p-6">
+<span class="text-on-surface-variant font-label-caps uppercase mb-2 block">Central London</span>
+<a class="font-headline-md text-on-surface hover:text-plasma-blue transition-colors" href="tel:02083765289">0208 376 5289</a>
+</div>
+<div class="glass-card p-6">
+<span class="text-on-surface-variant font-label-caps uppercase mb-2 block">Direct Mobile</span>
+<a class="font-headline-md text-on-surface hover:text-plasma-blue transition-colors" href="tel:07980647252">0798 064 7252</a>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 border border-glass-border bg-glass-surface">
+<span class="material-symbols-outlined text-on-surface-variant">mail</span>
+<a class="text-on-surface-variant hover:text-electric-gold transition-colors" href="mailto:info@aes24-7.co.uk">info@aes24-7.co.uk</a>
+</div>
+</div>
+<!-- Accreditations -->
+<div class="pt-8 flex flex-wrap gap-8 items-center opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="h-12 w-32 bg-contain bg-no-repeat bg-center" data-alt="A monochromatic silver-white NICEIC Approved Contractor logo for a premium electrical service website. The logo is minimalist and high-end, presented against a deep dark background, symbolizing professional accreditation and elite industry standards. The lighting is subtle with a metallic sheen." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXRaVxptqWFY2D4Q0vo16RpMJCYO3UThp-TqgNos3s1hYObLh7vW6_TG6sUz3Qek5yTVYSiYh_JLHZIAtGN8DI_C5v5p4K86H2Gz8jMSSYI1mcV8IfHDO_O7meLPetvmAQxrt_X_hR-SLxLk3Cuia_ORzzxNIvWc4TvlzIl6CndGGyhdjlmW_BGmE4DNoVqAPFzNZnRT1FizkA3-FsG7znwUd51LjcEcJXEok7OkqvbGnGf9TnRScI')"></div>
+<div class="h-12 w-32 bg-contain bg-no-repeat bg-center" data-alt="A premium, monochromatic white and gold logo representating safe electrical standards and trust certifications. The style is sleek, fitting for a high-end service, with clean architectural lines and a professional corporate aesthetic against a nocturnal urban backdrop." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5PA5bU0OX5kaz_B4N6bbOSHIm_OAVqSlgVa7ZipTIjLYvvjsLcMCvAw8atfWyBwTl9pzHm-3QlSd0ywhXd1x7I2GVbtuvY258gOMXviyu0fRmrVZbwm6c9PzsxyRyPapjFOCQ7810nrpA_Z1CKsr2uuJ2-EXoAf5czQr3UJLwJk3J0q2oV3LfuanbAv-4AWZmmu5jXPUIYLO7ihm1ZffBzb8pqJ9XG4eNtzTgRMy9klk8apasPF4v')"></div>
+</div>
+</div>
+<!-- Right Panel: Booking Form -->
+<div class="lg:col-span-7 py-12 lg:pl-12">
+<div class="glass-card p-8 md:p-12 relative">
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-plasma-blue/20 blur-[60px] rounded-full"></div>
+<h2 class="font-headline-md text-on-surface mb-stack-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-plasma-blue">calendar_month</span>
+                        Schedule Your Service
+                    </h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-stack-lg gap-y-stack-md">
+<!-- Service Selection -->
+<div class="md:col-span-2 group">
+<label class="font-label-caps text-on-surface-variant mb-2 block group-focus-within:text-plasma-blue transition-colors">Service Required</label>
+<select class="booking-input w-full p-4 text-on-surface">
+<option>Residential Installation</option>
+<option>Commercial Maintenance</option>
+<option>Emergency Fault Finding</option>
+<option>Consumer Unit Upgrade</option>
+<option>Landlord Safety Certificate (EICR)</option>
+<option>Full Property Rewiring</option>
+</select>
+</div>
+<!-- Contact Info -->
+<div class="group">
+<label class="font-label-caps text-on-surface-variant mb-2 block group-focus-within:text-plasma-blue transition-colors">Full Name</label>
+<input class="booking-input w-full p-4 text-on-surface" placeholder="Johnathan Sterling" type="text">
+</div>
+<div class="group">
+<label class="font-label-caps text-on-surface-variant mb-2 block group-focus-within:text-plasma-blue transition-colors">Phone Number</label>
+<input class="booking-input w-full p-4 text-on-surface" placeholder="+44 7000 000 000" type="tel">
+</div>
+<!-- Date & Location -->
+<div class="group">
+<label class="font-label-caps text-on-surface-variant mb-2 block group-focus-within:text-plasma-blue transition-colors">Preferred Date</label>
+<input class="booking-input w-full p-4 text-on-surface" type="date">
+</div>
+<div class="group">
+<label class="font-label-caps text-on-surface-variant mb-2 block group-focus-within:text-plasma-blue transition-colors">Postal Code</label>
+<input class="booking-input w-full p-4 text-on-surface" placeholder="W1J 7JZ" type="text">
+</div>
+<!-- Address -->
+<div class="md:col-span-2 group">
+<label class="font-label-caps text-on-surface-variant mb-2 block group-focus-within:text-plasma-blue transition-colors">Property Address</label>
+<textarea class="booking-input w-full p-4 text-on-surface" placeholder="Full site address and any specific access instructions..." rows="2"></textarea>
+</div>
+<div class="md:col-span-2 pt-4">
+<button class="w-full bg-electric-gold text-deep-obsidian font-label-caps py-5 text-center uppercase font-extrabold flex items-center justify-center gap-3 hover:shadow-[0_0_30px_rgba(255,215,0,0.3)] transition-all transform active:scale-95" type="submit">
+                                Confirm Booking Request
+                                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-on-surface-variant text-[11px] font-body-md mt-4 uppercase tracking-tighter">
+                                All bookings are subject to confirmation. Emergency calls are dispatched immediately.
+                            </p>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Service Area Section -->
+<section class="mt-section-gap relative pb-section-gap overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="text-center mb-stack-lg">
+<span class="text-plasma-blue font-label-caps uppercase tracking-[0.2em] mb-4 block">Operational Reach</span>
+<h2 class="font-headline-xl text-on-surface">Across the Capital &amp; Beyond</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="space-y-stack-md order-2 lg:order-1">
+<div class="glass-card p-6 flex gap-6 hover:bg-white/5 transition-all">
+<div class="bg-plasma-blue/20 p-3 rounded-full h-fit">
+<span class="material-symbols-outlined text-plasma-blue">location_city</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface mb-2">Central London</h3>
+<p class="text-on-surface-variant font-body-md">Rapid response engineering teams stationed across Mayfair, Chelsea, Kensington, and The City for immediate dispatch.</p>
+</div>
+</div>
+<div class="glass-card p-6 flex gap-6 hover:bg-white/5 transition-all">
+<div class="bg-electric-gold/20 p-3 rounded-full h-fit">
+<span class="material-symbols-outlined text-electric-gold">radar</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface mb-2">Greater London &amp; M25</h3>
+<p class="text-on-surface-variant font-body-md">Full coverage within the M25 boundary, extending to Surrey, Hertfordshire, and Essex for scheduled project works.</p>
+</div>
+</div>
+<div class="glass-card p-6 flex gap-6 hover:bg-white/5 transition-all">
+<div class="bg-white/10 p-3 rounded-full h-fit">
+<span class="material-symbols-outlined text-on-surface">home_work</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface mb-2">Outskirts &amp; Home Counties</h3>
+<p class="text-on-surface-variant font-body-md">Specialist contractors available for premium residential developments and commercial estates outside the metro area.</p>
+</div>
+</div>
+</div>
+<div class="relative order-1 lg:order-2 h-[400px] lg:h-[600px] w-full glass-card overflow-hidden">
+<div class="absolute inset-0 bg-deep-obsidian opacity-40"></div>
+<!-- Placeholder for Map -->
+<div class="w-full h-full grayscale invert opacity-60" data-alt="A high-contrast, minimalist dark-themed map of London showing the M25 orbital motorway and major city districts. The map is styled with glowing lines and points of interest in plasma blue and electric gold, creating a sophisticated data-visualization aesthetic for a high-end service area section." data-location="London" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaJsI-aqUKG_TIqoIe-OEo47bk95SIfthMWPS1eSUYIHTPyiTbMdAMzeZCU2_f09YVGCehdy8Q41dRbtqW8K206K7cAHVaZv-Zm89wOoeUdYbpSpz_jYM9RYAgENlv8mUpYGkQPezIetwyxQ5RlrG8r2HsPoewSGn-ISasKFjAWaWUbAdx0hxzudmKmHWVODPROacuNVL3sWNQR3Qe5MLYZYcyCTkIY4uYgnG368xI3sFgTwNQU-L7')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-obsidian via-transparent to-transparent"></div>
+<!-- Glow pulse on map -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-electric-gold/20 blur-[80px] rounded-full animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- London Skyline Motif -->
+<div class="absolute bottom-0 w-full h-64 overflow-hidden skyline-motif pointer-events-none">
+<div class="w-full h-full bg-contain bg-bottom bg-no-repeat" data-alt="A minimalist, glowing line-art vector illustration of the London skyline, featuring the Shard, Gherkin, and Big Ben. The lines are thin and oscillate with a subtle electric neon blue glow against a pitch-black background, symbolizing the urban territory and elite service coverage." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAQ_20mJtSfduys4JF9dY5io2b6j5qGXtj_Cko8xovMBBFJPzKR_jFvdUB2E5cy7Is6J93bE79LgV4tN9LQq0oxIQfO9k8sG3UeNVOYOaBhaS5V-dZ6GjOwE4Ela1-qsGowfTzs7lgAJ64Tvy2tjn74NI330InqkDoGE7mQTusifmjMSszFm7zZ2S2TD2tM-qCZUC1fI0nIqjLOZXUQEYwRIQpSr43KG4u4dqTVvjefqtoN_kmPSxT')"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-glass-border relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter py-section-gap grid grid-cols-1 md:grid-cols-4 gap-stack-lg relative z-10">
+<div class="md:col-span-2 space-y-stack-md">
+<div class="font-display-lg text-headline-md text-electric-gold">ALL ELECTRICAL SERVICES</div>
+<p class="font-body-md text-on-surface-variant max-w-sm">
+                    Providing premium electrical excellence for over 35 years. NICEIC Approved contractors specializing in high-end residential and commercial systems across London.
+                </p>
+<div class="pt-4">
+<p class="text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest">© 2024 All Electrical Services. Premium Electrical Excellence in London.</p>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-surface font-label-caps uppercase">Services</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-plasma-blue transition-colors font-body-md" href="our-services-all-electrical-services.html">Residential</a></li>
+<li><a class="text-on-surface-variant hover:text-plasma-blue transition-colors font-body-md" href="our-services-all-electrical-services.html">Commercial</a></li>
+<li><a class="text-on-surface-variant hover:text-plasma-blue transition-colors font-body-md" href="index.html">Emergency Call-Out</a></li>
+<li><a class="text-on-surface-variant hover:text-plasma-blue transition-colors font-body-md" href="our-services-all-electrical-services.html">Testing &amp; Inspection</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-surface font-label-caps uppercase">Information</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-plasma-blue transition-colors font-body-md" href="index.html">Pricing Guide</a></li>
+<li><a class="text-on-surface-variant hover:text-plasma-blue transition-colors font-body-md" href="index.html">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-plasma-blue transition-colors font-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-plasma-blue transition-colors font-body-md" href="our-services-all-electrical-services.html">About Our Team</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for form inputs
+        document.querySelectorAll('.booking-input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('focused');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('focused');
+            });
+        });
+
+        // Simple parallax effect for map
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const motif = document.querySelector('.skyline-motif');
+            if(motif) {
+                motif.style.transform = `translateY(${scrolled * 0.1}px)`;
+            }
+        });
+    </script>
+</body></html>

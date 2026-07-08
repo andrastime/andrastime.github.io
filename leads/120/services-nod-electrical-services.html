@@ -1,0 +1,472 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | NOD-Electrical Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#5b4138",
+                        "on-tertiary-fixed": "#001e2c",
+                        "primary-fixed-dim": "#ffb59c",
+                        "primary": "#ffb59c",
+                        "status-success": "#10B981",
+                        "on-tertiary-fixed-variant": "#004c69",
+                        "surface-dim": "#101415",
+                        "tertiary-container": "#009fd6",
+                        "surface": "#101415",
+                        "tertiary-fixed-dim": "#7bd0ff",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#3f465c",
+                        "surface-tint": "#ffb59c",
+                        "on-error": "#690005",
+                        "on-secondary": "#283044",
+                        "deep-navy": "#020617",
+                        "surface-container-low": "#191c1e",
+                        "on-tertiary-container": "#003145",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "secondary": "#bec6e0",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#00354a",
+                        "on-secondary-fixed": "#131b2e",
+                        "surface-container-highest": "#323537",
+                        "outline": "#aa897f",
+                        "surface-glass": "rgba(30, 41, 59, 0.7)",
+                        "secondary-fixed": "#dae2fd",
+                        "on-surface": "#e0e3e5",
+                        "inverse-on-surface": "#2d3133",
+                        "tertiary": "#7bd0ff",
+                        "surface-container-lowest": "#0b0f10",
+                        "on-primary": "#5c1900",
+                        "surface-variant": "#323537",
+                        "primary-fixed": "#ffdbcf",
+                        "surface-container-high": "#272a2c",
+                        "surface-bright": "#363a3b",
+                        "electric-orange-glow": "rgba(255, 95, 31, 0.15)",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-primary-container": "#561700",
+                        "on-primary-fixed-variant": "#832700",
+                        "on-surface-variant": "#e3bfb3",
+                        "on-background": "#e0e3e5",
+                        "inverse-surface": "#e0e3e5",
+                        "surface-container": "#1d2022",
+                        "background": "#101415",
+                        "inverse-primary": "#ab3600",
+                        "tertiary-fixed": "#c4e7ff",
+                        "on-secondary-container": "#adb4ce",
+                        "primary-container": "#ff5f1f",
+                        "on-primary-fixed": "#390c00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "section-gap-md": "80px",
+                        "section-gap-lg": "120px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "display-xl-mobile": ["Montserrat"],
+                        "display-xl": ["Montserrat"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                        "display-xl-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px 0 rgba(255, 95, 31, 0.4);
+        }
+        .glass-card {
+            background: rgba(29, 32, 34, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .circuit-line {
+            background: linear-gradient(90deg, transparent, #ff5f1f, transparent);
+            height: 1px;
+            width: 100%;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary">
+<!-- Header / TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-container/80 backdrop-blur-xl dark:bg-surface-container/80 border-b border-white/10 shadow-md dark:shadow-none">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<a class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface dark:text-on-surface" href="/">
+                NOD-Electrical
+            </a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-primary-container font-bold border-b-2 border-primary-container pb-1 font-label-sm text-label-sm" href="services-nod-electrical-services.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-colors duration-300 font-label-sm text-label-sm" href="services-nod-electrical-services.html">Domestic</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-colors duration-300 font-label-sm text-label-sm" href="services-nod-electrical-services.html">Commercial</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-colors duration-300 font-label-sm text-label-sm" href="ev-charging-solutions-nod-electrical-services.html">EV Charging</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-colors duration-300 font-label-sm text-label-sm" href="services-nod-electrical-services.html">Projects</a>
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded-full font-bold scale-95 active:scale-90 transition-transform hover:bg-primary-container/90 glow-hover">
+                    Request a Quote
+                </button>
+</div>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[60vh] flex items-center overflow-hidden">
+
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+<div class="relative w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter z-10">
+<div class="max-w-3xl">
+<span class="text-primary-container font-label-sm text-label-sm uppercase tracking-widest block mb-4">Precision Powered</span>
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-white mb-6 leading-tight">
+                        Expert Electrical <span class="text-primary-container">Services</span>
+</h1>
+<p class="text-on-surface-variant text-body-lg max-w-xl">
+                        Providing South London with high-quality electrical installations, from modern residential smart homes to robust commercial infrastructure.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Domestic Services: Bento Grid -->
+<section class="py-section-gap-md bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Domestic Excellence</h2>
+<p class="text-on-surface-variant text-body-md">Reliable electrical solutions for your home. Every installation is completed in line with the latest BS 7671 Wiring Regulations.</p>
+</div>
+<div class="flex gap-2 mb-1">
+<div class="w-12 h-[2px] bg-primary-container"></div>
+<div class="w-4 h-[2px] bg-primary-container/30"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Rewiring -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[400px] glass-card p-8 flex flex-col justify-end border border-white/5 hover:border-primary-container/30 transition-all duration-500">
+<div class="absolute inset-0 z-0 overflow-hidden opacity-30 group-hover:opacity-40 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Close up high-fidelity photography of modern residential electrical wiring being installed behind a sleek wall, focus on copper wires and professional cable management, dark aesthetic, electric orange accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVtde9YTNB-3UnZONmBrMV7Petv4j6-8mJsaC7wMsNFCAxJvULQllk-871czyBU8rUHxlbOghZg9Y9SFg3HBVZeEY37oJY6uI1j5vUCWaOwjFzEAjQthsiXpEB7J7IxYi4mg4faDTRJmUM-0HU5-KRbhCrQjLyIDuRsCicT72Lb3pLQ97zY95_5TZL_XIXdkHT-v1fPH0w6JD-JSVm4SypHA6T4eJTDs8a9C0-zerAmU1PjwG2dys">
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary-container mb-4 text-4xl" data-icon="cable"></span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Electrical Rewiring</h3>
+<p class="text-on-surface-variant text-body-md max-w-lg mb-6">Full and partial rewires designed for modern power demands, ensuring your home's safety and future-proofing your infrastructure.</p>
+<a class="inline-flex items-center gap-2 text-primary-container font-bold hover:gap-4 transition-all" href="services-nod-electrical-services.html">
+                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Consumer Units -->
+<div class="md:col-span-4 glass-card p-8 rounded-xl border border-white/5 hover:border-primary-container/30 transition-all">
+<span class="material-symbols-outlined text-primary-container mb-6 text-4xl" data-icon="power_settings_new"></span>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Consumer Units</h3>
+<p class="text-on-surface-variant text-body-md mb-8">Modern fuseboard upgrades with RCD protection, Surge Protection Devices (SPD), and AFDD for maximum household safety.</p>
+<div class="circuit-line mb-4 opacity-30"></div>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-on-surface"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle"></span> 18th Edition Compliant</li>
+<li class="flex items-center gap-3 text-sm text-on-surface"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle"></span> Surge Protection Included</li>
+<li class="flex items-center gap-3 text-sm text-on-surface"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle"></span> Full Certification</li>
+</ul>
+</div>
+<!-- Lighting Design -->
+<div class="md:col-span-4 glass-card p-8 rounded-xl border border-white/5 hover:border-primary-container/30 transition-all">
+<span class="material-symbols-outlined text-primary-container mb-6 text-4xl" data-icon="lightbulb"></span>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Lighting Design</h3>
+<p class="text-on-surface-variant text-body-md">Bespoke interior and garden lighting solutions that combine aesthetic beauty with energy-efficient LED technology.</p>
+</div>
+<!-- Inspection & Testing -->
+<div class="md:col-span-8 glass-card p-8 rounded-xl border border-white/5 hover:border-primary-container/30 transition-all flex flex-col md:flex-row gap-8">
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary-container mb-6 text-4xl" data-icon="fact_check"></span>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Inspection &amp; Testing</h3>
+<p class="text-on-surface-variant text-body-md">Comprehensive periodic inspections for homeowners. Identify potential hazards before they become emergencies.</p>
+</div>
+<div class="w-full md:w-64 h-48 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="High-end technical equipment, a digital multimeter and testing device resting on a clean wooden surface, blue and orange ambient lighting, technical precision feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDufEkfsuM02VN-h8dcwzN7DP9m8vo9govC9Jbg6BAekzmkF7y0i6Z9FxhjSSe_lOCFAx_QamznJEqlWTMLq-CI302-08DTY4SoYtAjcXCCXLuzDeuMAJpYxzy0RR6nPcNG87iJVwuHCb_cg5-GfDB8qOSYLZo6YZmcurKWiqwY6BHmtjZiH9nQVGK6HF89TqDo-O0shmiun9XkuPSWy_9mtwSn65ph29Cy8yQmICWW7A9iSr0TG1Q">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Commercial Section: Darker, Tech-Focused -->
+<section class="py-section-gap-lg bg-deep-navy relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-section-gap-md items-center">
+<div>
+<span class="text-tertiary font-label-sm text-label-sm uppercase tracking-widest block mb-4">Industrial Grade</span>
+<h2 class="font-headline-lg text-headline-lg text-white mb-8">Commercial Infrastructure</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center shrink-0 border border-white/10 group-hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-tertiary" data-icon="home_repair_service"></span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-2xl">Maintenance Contracts</h4>
+<p class="text-on-surface-variant">Scheduled proactive maintenance to ensure your business operations never stop due to electrical failure.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center shrink-0 border border-white/10">
+<span class="material-symbols-outlined text-tertiary" data-icon="business"></span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-2xl">Office Fit-outs</h4>
+<p class="text-on-surface-variant">Specialized LED office lighting, data cabling, and floor box installations for modern workspace environments.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center shrink-0 border border-white/10">
+<span class="material-symbols-outlined text-tertiary" data-icon="notifications_active"></span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-2xl">Fire &amp; Life Safety</h4>
+<p class="text-on-surface-variant">Aico Fire System installations and emergency lighting systems that comply with all current safety legislation.</p>
+</div>
+</div>
+</div>
+<button class="mt-12 border border-tertiary text-tertiary px-8 py-3 rounded-full font-bold hover:bg-tertiary/10 transition-all flex items-center gap-2 group">
+                            Commercial Services Portfolio
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-tertiary/10 blur-3xl rounded-full opacity-50 group-hover:opacity-80 transition-opacity animate-float"></div>
+<div class="relative aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A wide-angle professional shot of a modern, high-tech office interior with sophisticated architectural lighting and exposed circuitry design, deep navy and electric blue tones, ultra-modern and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASxRimTmrajAw01eaXV63ZMpIZRJEzV_O07pBpvzvfLtneQewBplgrETR-v-zD06LSZuDfah4f_dbOHec6tE4F1ua5-M73Md3JQ89AfTBzGnY9LT2lORdMkHd5_LGVxbWuH2Y9_F7NWqC_6DBXVVRmHlTAKWfboWsJuVsqC_4YX-nZ8MTWKC1gcqW_ybotCFYW2XlrqPp7YafN33di3JPDAWrckWQtZoXkVVX60LSPZrh-gC5pspg">
+</div>
+<!-- Floating Stat Card -->
+<div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-xl border border-tertiary/30 animate-float" style="animation-delay: 1s;">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-tertiary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="bolt"></span>
+</div>
+<div>
+<p class="text-white font-bold text-xl">24/7</p>
+<p class="text-on-surface-variant text-xs uppercase tracking-tighter">Emergency Support</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Safety & Compliance Section -->
+<section class="py-section-gap-lg bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Safety &amp; Certification</h2>
+<p class="text-on-surface-variant text-body-lg">We take compliance seriously. As NAPIT approved contractors, all our work is fully insured and Part P compliant.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-8 rounded-xl bg-surface-container-high border-b-4 border-primary-container transition-transform hover:-translate-y-2">
+<h4 class="text-primary-container font-headline-md text-2xl mb-4">EICR Reports</h4>
+<p class="text-on-surface-variant mb-6">Electrical Installation Condition Reports for landlords and homeowners to identify any safety issues.</p>
+<ul class="space-y-2 text-sm text-on-surface opacity-80">
+<li>• Mandatory for Rental Properties</li>
+<li>• Detailed Fault Finding</li>
+<li>• Digital Reports Issued</li>
+</ul>
+</div>
+<div class="p-8 rounded-xl bg-surface-container-high border-b-4 border-tertiary transition-transform hover:-translate-y-2">
+<h4 class="text-tertiary font-headline-md text-2xl mb-4">NAPIT Approved</h4>
+<p class="text-on-surface-variant mb-6">Independently assessed and certified to carry out work safely and to the highest industry standards.</p>
+<ul class="space-y-2 text-sm text-on-surface opacity-80">
+<li>• Regular Quality Audits</li>
+<li>• Professional Indemnity Insurance</li>
+<li>• Part P Competent Person Scheme</li>
+</ul>
+</div>
+<div class="p-8 rounded-xl bg-surface-container-high border-b-4 border-status-success transition-transform hover:-translate-y-2">
+<h4 class="text-status-success font-headline-md text-2xl mb-4">Landlord Certs</h4>
+<p class="text-on-surface-variant mb-6">Complete certification services for HMOs and rental portfolios to ensure legal compliance.</p>
+<ul class="space-y-2 text-sm text-on-surface opacity-80">
+<li>• Visual Inspections</li>
+<li>• Remedial Work Quotes</li>
+<li>• Compliance Guarantee</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-gap-lg bg-surface">
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-gutter">
+<div class="flex items-center gap-4 mb-12">
+<h2 class="font-headline-lg text-headline-lg text-white">Service <span class="text-primary-container">FAQs</span></h2>
+<div class="h-[1px] flex-1 bg-white/10"></div>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="glass-card rounded-lg overflow-hidden border border-white/5">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-xl text-white">How often should a home be rewired?</span>
+<span class="material-symbols-outlined text-primary-container transition-transform duration-300">expand_more</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 px-8 bg-black/20">
+<p class="py-6 text-on-surface-variant leading-relaxed">
+                                Generally, household wiring should be checked every 10 years for homeowners and every 5 years for rental properties. A full rewire is typically recommended every 25-30 years or if the existing wiring is found to be deteriorating or non-compliant with modern standards.
+                            </p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="glass-card rounded-lg overflow-hidden border border-white/5">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-xl text-white">What is an EICR and why do I need one?</span>
+<span class="material-symbols-outlined text-primary-container transition-transform duration-300">expand_more</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 px-8 bg-black/20">
+<p class="py-6 text-on-surface-variant leading-relaxed">
+                                An EICR (Electrical Installation Condition Report) is a formal document that assesses the safety of the electrical systems in a property. It's crucial for identifying potential fire hazards, shock risks, and ensuring your installation meets current BS 7671 regulations. For landlords, it is a legal requirement.
+                            </p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="glass-card rounded-lg overflow-hidden border border-white/5">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-xl text-white">Are you NAPIT registered?</span>
+<span class="material-symbols-outlined text-primary-container transition-transform duration-300">expand_more</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 px-8 bg-black/20">
+<p class="py-6 text-on-surface-variant leading-relaxed">
+                                Yes, NOD-Electrical Services is a fully NAPIT Approved electrical contractor. This means we are independently audited to ensure our work meets the highest safety and quality standards, and we can self-certify our work through the Part P Competent Person Scheme.
+                            </p>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="glass-card rounded-lg overflow-hidden border border-white/5">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-xl text-white">Do you handle EV charger installations?</span>
+<span class="material-symbols-outlined text-primary-container transition-transform duration-300">expand_more</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 px-8 bg-black/20">
+<p class="py-6 text-on-surface-variant leading-relaxed">
+                                Absolutely. We are approved installers for major brands including Tesla, Ohme, Andersen EV, and Simpson and Partners. We can provide complete installation, testing, and advice on OZEV grants where applicable.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap-lg px-margin-mobile">
+<div class="max-w-container-max mx-auto rounded-3xl overflow-hidden relative">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Abstract macro photography of glowing electrical circuits and blue light energy pulses, high-end tech aesthetic, deep navy and orange light trails." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbSlZqcn5RwscgaZy79ZPSF2AR7irK1TV1p9Hg0EHX8-af1IG_0PsWkzJZWRU884cCasizA-ZbuESdMdP20aRS5lI8X4Csx4hf2gpsdGMObIhRmK3zBkgbfVeR2fdVVjUi2ANHuU6IuzuSkiB--YJIj6Vn7tKWBWfrwrwtSCFlQq3I7B6jPnp-qwWQVU7IESd7ajcFTBTz4aTuAlpZaretxujArZvXj8twDVxtRdfcXpnPtLOtvrg">
+<div class="absolute inset-0 bg-primary-container/80 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 px-8 py-16 md:p-20 text-center flex flex-col items-center">
+<h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-white mb-6">Ready to Power Your Project?</h2>
+<p class="text-white/90 text-body-lg max-w-2xl mb-10">Get a transparent, fixed-price quote for your domestic or commercial electrical needs in South London.</p>
+<div class="flex flex-col md:flex-row gap-4">
+<button class="bg-deep-navy text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-black transition-all shadow-xl">Request a Free Quote</button>
+<button class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all">Call 020 8050 3408</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy dark:bg-surface-container-lowest w-full py-section-gap-md px-margin-mobile border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="space-y-6">
+<a class="font-headline-md text-headline-md text-primary-container" href="/">NOD-Electrical</a>
+<p class="text-on-surface-variant text-body-md">South London's specialists in modern electrical infrastructure and EV charging solutions.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Services</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="services-nod-electrical-services.html">Domestic Services</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="services-nod-electrical-services.html">Commercial Maintenance</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="ev-charging-solutions-nod-electrical-services.html">EV Charging Solutions</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="services-nod-electrical-services.html">Lighting Design</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="services-nod-electrical-services.html">Emergency Callouts</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact-us-nod-electrical-services.html">Contact Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline" href="services-nod-electrical-services.html">NAPIT Registered</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Coverage</h4>
+<p class="text-on-surface-variant text-sm mb-4">Serving Streatham, Wandsworth, Clapham, Balham, Wimbledon, and beyond.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="shield"></span>
+<span class="material-symbols-outlined text-primary-container" data-icon="verified_user"></span>
+<span class="material-symbols-outlined text-primary-container" data-icon="bolt"></span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-16 pt-8 border-t border-white/5 text-center md:text-left">
+<p class="text-on-surface-variant text-sm text-center">© 2024 NOD-Electrical Services. NAPIT Registered &amp; Fully Insured. South London's Electric Vehicle Experts.</p>
+</div>
+</footer>
+<script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.material-symbols-outlined');
+            
+            // Close all others
+            document.querySelectorAll('.glass-card div').forEach(div => {
+                if (div !== content) {
+                    div.style.maxHeight = null;
+                    div.previousElementSibling.querySelector('.material-symbols-outlined').style.transform = 'rotate(0deg)';
+                }
+            });
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body></html>

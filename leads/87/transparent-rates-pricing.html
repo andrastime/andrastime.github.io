@@ -1,0 +1,473 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Rates &amp; Pricing | PHOENIX Electricians London</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Shared Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#5e4200",
+                    "on-error-container": "#ffdad6",
+                    "border-subtle": "rgba(255, 255, 255, 0.1)",
+                    "on-secondary": "#412d00",
+                    "on-primary-fixed-variant": "#7a3000",
+                    "outline": "#a98a7d",
+                    "outline-variant": "#5a4136",
+                    "on-error": "#690005",
+                    "primary-fixed": "#ffdbcc",
+                    "primary-container": "#ff6b00",
+                    "surface-bright": "#3a3939",
+                    "tertiary": "#c8c6c5",
+                    "secondary": "#ffdb9d",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "background": "#131313",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-secondary-container": "#6b4b00",
+                    "surface-container": "#201f1f",
+                    "on-primary": "#561f00",
+                    "electric-orange": "#FF6B00",
+                    "inverse-surface": "#e5e2e1",
+                    "on-primary-container": "#572000",
+                    "success-green": "#00E676",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-fixed": "#ffdea8",
+                    "primary": "#ffb693",
+                    "surface": "#131313",
+                    "error-container": "#93000a",
+                    "on-surface-variant": "#e2bfb0",
+                    "inverse-on-surface": "#313030",
+                    "secondary-fixed-dim": "#ffba20",
+                    "primary-fixed-dim": "#ffb693",
+                    "secondary-container": "#feb700",
+                    "surface-container-highest": "#353534",
+                    "on-secondary-fixed": "#271900",
+                    "tertiary-container": "#9a9898",
+                    "surface-tint": "#ffb693",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "surface-glass": "rgba(255, 255, 255, 0.05)",
+                    "on-primary-fixed": "#351000",
+                    "on-background": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "error": "#ffb4ab",
+                    "on-tertiary-container": "#313131",
+                    "surface-variant": "#353534",
+                    "on-tertiary": "#313030",
+                    "amber-glow": "#FFB800",
+                    "inverse-primary": "#a04100",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "surface-container-low": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "stack-md": "24px",
+                    "margin-mobile": "20px",
+                    "stack-lg": "64px",
+                    "margin-desktop": "80px",
+                    "container-max": "1280px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "price-display": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "headline-xl": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Montserrat"],
+                    "headline-xl-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "price-display": ["56px", {"lineHeight": "1", "fontWeight": "900"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-xl-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: #FF6B00;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(255, 107, 0, 0.2);
+        }
+        .glow-orange {
+            box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+        }
+        .glow-text {
+            text-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+        }
+        .emergency-pulse {
+            animation: pulse-border 2s infinite;
+        }
+        @keyframes pulse-border {
+            0% { border-color: rgba(255, 107, 0, 0.4); }
+            50% { border-color: rgba(255, 107, 0, 1); }
+            100% { border-color: rgba(255, 107, 0, 0.4); }
+        }
+        body {
+            background-color: #080808;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-electric-orange selection:text-black">
+<!-- Emergency Banner -->
+<div class="w-full bg-electric-orange text-black py-2 overflow-hidden whitespace-nowrap z-[60] relative">
+<div class="flex animate-marquee items-center gap-stack-lg">
+<span class="font-label-caps text-label-caps flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">bolt</span> 
+                24/7 EMERGENCY ELECTRICIANS CALL OUTS LONDON
+            </span>
+<span class="font-label-caps text-label-caps flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span> 
+                CALL NOW: 0203 971 8370
+            </span>
+<span class="font-label-caps text-label-caps flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified</span> 
+                NO CALLOUT FEE!
+            </span>
+<!-- Repeat for loop -->
+<span class="font-label-caps text-label-caps flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">bolt</span> 
+                24/7 EMERGENCY ELECTRICIANS CALL OUTS LONDON
+            </span>
+</div>
+</div>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-flex;
+            animation: marquee 20s linear infinite;
+            width: max-content;
+        }
+    </style>
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-border-subtle shadow-[0_0_20px_rgba(255,107,0,0.15)] docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-black text-electric-orange tracking-tighter" href="/">
+                PHOENIX <span class="text-on-surface">Electricians</span>
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface hover:text-electric-orange transition-colors duration-300" href="electrical-services-london.html">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-electric-orange transition-colors duration-300" href="index.html">Emergency</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-electric-orange transition-colors duration-300" href="index.html">About</a>
+<a class="font-label-caps text-label-caps text-electric-orange border-b-2 border-electric-orange pb-1" href="transparent-rates-pricing.html">Rates</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-electric-orange transition-colors duration-300" href="#">Reviews</a>
+</div>
+<a class="bg-electric-orange text-black px-6 py-2.5 rounded-full font-label-caps text-label-caps glow-orange hover:scale-105 active:scale-95 transition-all" href="tel:02039718370">
+                Call Now 24/7
+            </a>
+</div>
+</nav>
+<main class="relative">
+<!-- Atmospheric Background Element -->
+<div class="absolute top-0 left-0 w-full h-[800px] pointer-events-none overflow-hidden -z-10">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-electric-orange/10 blur-[150px] rounded-full"></div>
+<div class="absolute bottom-0 right-[-5%] w-[30%] h-[30%] bg-electric-orange/5 blur-[120px] rounded-full"></div>
+</div>
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="space-y-stack-md">
+<span class="inline-block py-1 px-3 bg-electric-orange/10 border border-electric-orange/30 text-electric-orange rounded-full font-label-caps text-[12px]">TRANSPARENT PRICING</span>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface tracking-tighter">
+                        Competitive Rates. <br>
+<span class="text-electric-orange glow-text">Zero Callout Fees.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        High-end electrical mastery doesn't have to break the bank. We provide upfront pricing for residential and commercial services across London.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-lg border border-border-subtle">
+<span class="material-symbols-outlined text-success-green" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caps text-[12px]">NICEIC REGISTERED</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-lg border border-border-subtle">
+<span class="material-symbols-outlined text-success-green" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-[12px]">5-STAR RATED</span>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-electric-orange to-amber-glow rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative h-[400px] rounded-xl overflow-hidden glass-card">
+<img class="w-full h-full object-cover opacity-80" data-alt="A professional electrician installation of modern, high-end pendant glass globe lights in a luxury minimalist apartment. The lighting is warm and cinematic, casting elegant shadows on a pristine white ceiling and a textured wall. The atmosphere is sophisticated and highlights the precision of the electrical work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi3cvhdab3xbEjeeKyjot4fc-wtaBMstMLebrRVTT-qOStrJj9TbEJMcdZZEVCF7mfq_SfR8fpGVOTQJiIUocAskIEQGvxkKT5C3XCT4lzNaf757wYhKfVBUnU52ber7g9QgDlWOvWafRmfp7XjZ01IrJx6nfYIeRhWDEhR-q7KAXH7iMY4RCxhLb1tU5i9eh5lp1sDRRT9RId_KzNFkn3leNn4-rPqTgV8_UpzzYxRaRM5rpYm4H0">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface leading-tight">Master Installation</h3>
+<p class="text-on-surface-variant font-label-caps text-[12px]">SOUTH LONDON RESIDENCE</p>
+</div>
+<div class="bg-electric-orange text-black p-3 rounded-xl glow-orange">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Bento Grid -->
+<section class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Hourly Card -->
+<div class="glass-card p-10 rounded-xl flex flex-col justify-between min-h-[400px]">
+<div>
+<div class="w-12 h-12 bg-electric-orange/10 rounded-lg flex items-center justify-center mb-6 border border-electric-orange/20">
+<span class="material-symbols-outlined text-electric-orange">schedule</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Hourly Service</h3>
+<p class="text-on-surface-variant font-body-md mb-8">Standard maintenance, repairs, and general electrical tasks during business hours.</p>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-6">
+<span class="font-label-caps text-on-surface-variant">FROM</span>
+<span class="font-price-display text-price-display text-electric-orange">£80</span>
+<span class="font-label-caps text-on-surface-variant">/ HOUR</span>
+</div>
+<a class="inline-flex items-center gap-2 font-label-caps text-electric-orange hover:gap-4 transition-all" href="#quote">
+                            BOOK NOW <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Half Hour Card -->
+<div class="glass-card p-10 rounded-xl flex flex-col justify-between min-h-[400px] relative border-electric-orange/30 overflow-hidden">
+<div class="absolute top-0 right-0 bg-electric-orange text-black font-label-caps text-[10px] px-6 py-1 rotate-45 translate-x-6 translate-y-3">POPULAR</div>
+<div>
+<div class="w-12 h-12 bg-electric-orange/10 rounded-lg flex items-center justify-center mb-6 border border-electric-orange/20">
+<span class="material-symbols-outlined text-electric-orange">timer_10</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Quick Fix</h3>
+<p class="text-on-surface-variant font-body-md mb-8">For small tasks like socket replacements or simple light fixture swaps.</p>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-6">
+<span class="font-label-caps text-on-surface-variant">FROM</span>
+<span class="font-price-display text-price-display text-electric-orange">£40</span>
+<span class="font-label-caps text-on-surface-variant">/ 30 MIN</span>
+</div>
+<a class="inline-flex items-center gap-2 font-label-caps text-electric-orange hover:gap-4 transition-all" href="#quote">
+                            BOOK NOW <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- EICR Card -->
+<div class="glass-card p-10 rounded-xl flex flex-col justify-between min-h-[400px]">
+<div>
+<div class="w-12 h-12 bg-electric-orange/10 rounded-lg flex items-center justify-center mb-6 border border-electric-orange/20">
+<span class="material-symbols-outlined text-electric-orange">assignment_turned_in</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">EICR Reports</h3>
+<p class="text-on-surface-variant font-body-md mb-8">Electrical Installation Condition Reports for landlords and safety compliance.</p>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-6">
+<span class="font-label-caps text-on-surface-variant">FROM</span>
+<span class="font-price-display text-price-display text-electric-orange">£70</span>
+</div>
+<a class="inline-flex items-center gap-2 font-label-caps text-electric-orange hover:gap-4 transition-all" href="#quote">
+                            GET REPORT <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Image Showcase / Features -->
+<section class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 grid grid-cols-2 gap-4">
+<div class="h-[500px] rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700" data-alt="A detailed close-up of a high-end luxury crystal chandelier hanging from a vaulted ceiling. The light reflects brilliantly off the crystals, creating a radial sunburst pattern of light and shadow across the warm-toned walls. The aesthetic is premium and precise, showing the expert installation of intricate lighting fixtures in a modern London home." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAKcVh4O-XuH000RUrDzDMGlXhVQB3cHxGiN0XgPadpWSI2TcO1Wol1GqyD1gyxY-FiuuZIZN6-XBqIomVxqMC6w8liESafgFomRqu7GXj-hIwNovdRnzaw-u_slaBWiJWmThGey_nNrIQyQBZaqoEYldI8GaCb88ZaTYbHtjIBQozZEZteJbguo-4sxZqIit4PpTjJmHXzXcq4Z1_ei9URnP50JdbQ_lA1ynxmIDvDzwlQvkzhewb">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="h-[242px] rounded-xl overflow-hidden glass-card p-6 flex flex-col justify-end">
+<span class="material-symbols-outlined text-electric-orange text-[40px] mb-4">bolt</span>
+<h4 class="font-headline-md text-[24px] text-on-surface">Emergency Response</h4>
+<p class="text-on-surface-variant font-body-md">87% of emergency calls resolved within 1 hour.</p>
+</div>
+<div class="h-[242px] rounded-xl overflow-hidden glass-card p-6 flex flex-col justify-end">
+<span class="material-symbols-outlined text-electric-orange text-[40px] mb-4">verified_user</span>
+<h4 class="font-headline-md text-[24px] text-on-surface">Guaranteed Work</h4>
+<p class="text-on-surface-variant font-body-md">All workmanship is certified and fully insured.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-stack-md lg:pl-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-tight">Master Craftsmanship, <span class="text-electric-orange">Transparent Rates.</span></h2>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 text-on-surface-variant">
+<span class="w-1.5 h-1.5 bg-electric-orange rounded-full"></span>
+                            No hidden travel charges or callout fees
+                        </li>
+<li class="flex items-center gap-4 text-on-surface-variant">
+<span class="w-1.5 h-1.5 bg-electric-orange rounded-full"></span>
+                            Transparent pricing discussed upfront
+                        </li>
+<li class="flex items-center gap-4 text-on-surface-variant">
+<span class="w-1.5 h-1.5 bg-electric-orange rounded-full"></span>
+                            Over 15 years of trade excellence
+                        </li>
+<li class="flex items-center gap-4 text-on-surface-variant">
+<span class="w-1.5 h-1.5 bg-electric-orange rounded-full"></span>
+                            Detailed reports provided within 48 hours
+                        </li>
+</ul>
+<div class="pt-6">
+<p class="text-on-surface font-label-caps text-[12px] opacity-60 mb-2">*Rates apply Mon-Fri, 8am-5pm. Emergency weekend rates vary.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote Form Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto" id="quote">
+<div class="glass-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+<div class="p-stack-lg lg:p-margin-desktop space-y-stack-md bg-electric-orange/5">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Get a <span class="text-electric-orange">Free Quote</span></h2>
+<p class="text-on-surface-variant font-body-lg">Describe your project or electrical emergency and our friendly London team will respond within 2 hours.</p>
+<div class="space-y-6 pt-4">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-electric-orange flex items-center justify-center text-black">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label-caps text-[12px] text-on-surface-variant">PHONE ENQUIRIES</p>
+<p class="font-headline-md text-[20px] text-on-surface">0203 971 8370</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-electric-orange flex items-center justify-center text-black">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div>
+<p class="font-label-caps text-[12px] text-on-surface-variant">WHATSAPP / SMS</p>
+<p class="font-headline-md text-[20px] text-on-surface">07471 456 710</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-stack-lg lg:p-margin-desktop bg-surface-container">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-[12px] text-on-surface-variant">FULL NAME</label>
+<input class="w-full bg-background border border-outline-variant focus:border-electric-orange focus:ring-1 focus:ring-electric-orange rounded-lg px-4 py-3 text-on-surface transition-all" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[12px] text-on-surface-variant">EMAIL ADDRESS</label>
+<input class="w-full bg-background border border-outline-variant focus:border-electric-orange focus:ring-1 focus:ring-electric-orange rounded-lg px-4 py-3 text-on-surface transition-all" type="email">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[12px] text-on-surface-variant">PHONE NUMBER</label>
+<input class="w-full bg-background border border-outline-variant focus:border-electric-orange focus:ring-1 focus:ring-electric-orange rounded-lg px-4 py-3 text-on-surface transition-all" type="tel">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[12px] text-on-surface-variant">PROJECT DESCRIPTION</label>
+<textarea class="w-full bg-background border border-outline-variant focus:border-electric-orange focus:ring-1 focus:ring-electric-orange rounded-lg px-4 py-3 text-on-surface transition-all" placeholder="Tell us what you need help with..." rows="4"></textarea>
+</div>
+<button class="w-full bg-electric-orange text-black font-label-caps py-4 rounded-lg glow-orange hover:bg-amber-glow transition-all uppercase tracking-widest font-black" type="submit">
+                            Request My Free Quote
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-on-surface font-black tracking-tighter">PHOENIX</h3>
+<p class="text-on-surface-variant font-body-md opacity-70">Expert London electricians providing professional, certified electrical services 24/7 with a focus on safety and transparency.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-electric-orange">face_nod</span>
+<span class="material-symbols-outlined text-electric-orange">chat</span>
+<span class="material-symbols-outlined text-electric-orange">verified</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-electric-orange">SERVICES</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-electric-orange font-body-md transition-colors underline-offset-4 hover:underline" href="electrical-services-london.html">Residential Services</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-orange font-body-md transition-colors underline-offset-4 hover:underline" href="electrical-services-london.html">Commercial Services</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-orange font-body-md transition-colors underline-offset-4 hover:underline" href="index.html">Emergency Repair</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-orange font-body-md transition-colors underline-offset-4 hover:underline" href="electrical-services-london.html">Safety Inspections</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-electric-orange">AREAS COVERED</h4>
+<div class="text-on-surface-variant font-body-md opacity-70 text-[12px] leading-relaxed">
+                    North West London | North London | West London | Camden | Brent | Barnet | Paddington | Edgeware | Maida Vale | Wembley | Ealing
+                </div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-electric-orange">OPENING HOURS</h4>
+<ul class="text-on-surface-variant font-body-md space-y-1">
+<li class="flex justify-between"><span>Mon-Fri:</span> <span>08:00 - 17:00</span></li>
+<li class="flex justify-between text-electric-orange"><span>Sat-Sun:</span> <span>EMERGENCY ONLY</span></li>
+</ul>
+<div class="pt-4 p-4 rounded-lg bg-surface-container border border-outline-variant">
+<p class="font-label-caps text-[10px] text-on-surface-variant mb-1">EMERGENCY LINE</p>
+<p class="font-headline-md text-[18px] text-on-surface">07471 456 710</p>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant/30 text-center md:text-left">
+<p class="text-on-surface-variant font-label-caps text-[12px]">© 2024 Phoenix Electricians London. All rights reserved. Registered NICEIC Contractor. Company No. 15280574</p>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

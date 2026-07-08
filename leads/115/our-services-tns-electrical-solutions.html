@@ -1,0 +1,368 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | TNS Electrical Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#adc7ff",
+                    "on-primary": "#002e68",
+                    "slate-surface": "#1C2025",
+                    "on-tertiary-container": "#4c1a00",
+                    "outline": "#8b90a0",
+                    "on-secondary": "#3a3000",
+                    "on-tertiary-fixed": "#351000",
+                    "on-secondary-container": "#725f00",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#004493",
+                    "charcoal-base": "#0A0C0E",
+                    "secondary-fixed-dim": "#e9c400",
+                    "on-secondary-fixed-variant": "#544600",
+                    "inverse-primary": "#005bc0",
+                    "tertiary-container": "#ef6719",
+                    "power-gold": "#FFC107",
+                    "surface-bright": "#37393d",
+                    "secondary-container": "#ffdb3c",
+                    "surface-container-high": "#282a2d",
+                    "on-background": "#e2e2e6",
+                    "on-primary-fixed": "#001a41",
+                    "inverse-surface": "#e2e2e6",
+                    "surface-variant": "#333538",
+                    "secondary": "#fff9ef",
+                    "on-primary-container": "#00285b",
+                    "secondary-fixed": "#ffe16d",
+                    "on-tertiary": "#571e00",
+                    "surface-container": "#1e2023",
+                    "on-surface-variant": "#c1c6d7",
+                    "glass-stroke": "rgba(255, 255, 255, 0.1)",
+                    "error-container": "#93000a",
+                    "outline-variant": "#414754",
+                    "surface-container-low": "#1a1c1f",
+                    "on-tertiary-fixed-variant": "#7c2e00",
+                    "primary-fixed-dim": "#adc7ff",
+                    "surface-container-lowest": "#0c0e11",
+                    "tertiary": "#ffb695",
+                    "on-error": "#690005",
+                    "primary-fixed": "#d8e2ff",
+                    "primary-container": "#4a8eff",
+                    "surface": "#111316",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-surface": "#e2e2e6",
+                    "tertiary-fixed-dim": "#ffb695",
+                    "on-secondary-fixed": "#221b00",
+                    "primary": "#adc7ff",
+                    "surface-container-highest": "#333538",
+                    "background": "#111316",
+                    "inverse-on-surface": "#2f3034",
+                    "error": "#ffb4ab",
+                    "electric-blue": "#00E0FF",
+                    "surface-dim": "#111316"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "section-gap": "120px",
+                    "base": "8px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(28, 32, 37, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .electric-glow {
+            box-shadow: 0px 4px 20px rgba(0, 224, 255, 0.15);
+        }
+        .service-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 8px 30px rgba(0, 224, 255, 0.2);
+        }
+        .text-gradient-electric {
+            background: linear-gradient(to right, #00E0FF, #adc7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-charcoal-base text-on-surface selection:bg-electric-blue/30 overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full bg-charcoal-base/80 backdrop-blur-md border-b border-glass-stroke shadow-[0_4px_20px_rgba(0,224,255,0.15)] z-50">
+<div class="flex justify-between items-center px-margin-desktop py-base max-w-container-max mx-auto">
+<a class="font-display-lg text-headline-md font-bold text-on-surface tracking-tight" href="index.html">TNS Electrical</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-label-lg uppercase tracking-wider text-electric-blue border-b-2 border-electric-blue pb-1" href="our-services-tns-electrical-solutions.html">Services</a>
+<a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-electric-blue transition-colors" href="our-services-tns-electrical-solutions.html">Projects</a>
+<a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-electric-blue transition-colors" href="our-services-tns-electrical-solutions.html">Maintenance</a>
+<a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-electric-blue transition-colors" href="about-us-tns-electrical-solutions.html">About</a>
+<a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-electric-blue transition-colors" href="contact-quote-tns-electrical-solutions.html">Contact</a>
+</div>
+<button class="bg-electric-blue text-on-primary-container px-6 py-2 rounded font-label-lg uppercase tracking-wider active:scale-95 transition-all duration-200">
+                Get a Quote
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-48 pb-24 overflow-hidden">
+
+<div class="relative px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-3xl">
+<span class="inline-block px-4 py-1 rounded-full border border-electric-blue/30 text-electric-blue font-label-sm uppercase tracking-[0.2em] mb-6">Expert Solutions</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Precision Engineering for <span class="text-gradient-electric">Modern Power.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Delivering world-class electrical solutions across residential, commercial, and industrial sectors with a focus on safety, innovation, and master craftsmanship.
+                </p>
+</div>
+</div>
+</section>
+<!-- Services Grid (Residential, Commercial, Industrial) -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Residential Section -->
+<div class="lg:col-span-4 group h-full">
+<div class="glass-panel p-8 rounded-xl h-full flex flex-col service-card-hover transition-all duration-300">
+<div class="w-16 h-16 rounded bg-electric-blue/10 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-electric-blue text-4xl" data-icon="home">home</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4">Residential</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                        Smart home integration, bespoke lighting design, and full rewiring services tailored for luxury modern living environments.
+                    </p>
+<ul class="space-y-4 mb-10 text-on-surface-variant font-label-lg">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-sm" data-icon="check_circle">check_circle</span> Smart Lighting Control
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-sm" data-icon="check_circle">check_circle</span> EV Charging Points
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-sm" data-icon="check_circle">check_circle</span> Audio Visual Design
+                        </li>
+</ul>
+<button class="w-full border border-glass-stroke py-4 rounded font-label-lg uppercase tracking-widest hover:bg-white/5 transition-all">Request Service</button>
+</div>
+</div>
+<!-- Commercial Section -->
+<div class="lg:col-span-4 group h-full">
+<div class="glass-panel p-8 rounded-xl h-full flex flex-col service-card-hover transition-all duration-300 border-electric-blue/20">
+<div class="w-16 h-16 rounded bg-electric-blue/10 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-electric-blue text-4xl" data-icon="business_center">business_center</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4">Commercial</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                        Power distribution for office complexes, retail fit-outs, and energy-efficient lighting solutions for modern enterprises.
+                    </p>
+<ul class="space-y-4 mb-10 text-on-surface-variant font-label-lg">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-sm" data-icon="bolt">bolt</span> Backup Power Systems
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-sm" data-icon="bolt">bolt</span> Data Cabling &amp; Comms
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-sm" data-icon="bolt">bolt</span> Energy Audits
+                        </li>
+</ul>
+<button class="w-full bg-electric-blue text-on-primary-container py-4 rounded font-label-lg uppercase tracking-widest active:scale-95 transition-all">Request Service</button>
+</div>
+</div>
+<!-- Industrial Section -->
+<div class="lg:col-span-4 group h-full">
+<div class="glass-panel p-8 rounded-xl h-full flex flex-col service-card-hover transition-all duration-300">
+<div class="w-16 h-16 rounded bg-electric-blue/10 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-electric-blue text-4xl" data-icon="factory">factory</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4">Industrial</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                        Heavy-duty power systems, machinery installation, and high-voltage maintenance for manufacturing and production facilities.
+                    </p>
+<ul class="space-y-4 mb-10 text-on-surface-variant font-label-lg">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-sm" data-icon="settings_input_component">settings_input_component</span> 3-Phase Installation
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-sm" data-icon="settings_input_component">settings_input_component</span> Control Panel Design
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-sm" data-icon="settings_input_component">settings_input_component</span> Fault Diagnosis
+                        </li>
+</ul>
+<button class="w-full border border-glass-stroke py-4 rounded font-label-lg uppercase tracking-widest hover:bg-white/5 transition-all">Request Service</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Maintenance & Emergency Split Section -->
+<section class="bg-slate-surface/30 py-section-gap">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Maintenance -->
+<div class="flex flex-col md:flex-row gap-8 items-start glass-panel p-10 rounded-xl">
+<div class="md:w-1/3 w-full h-48 rounded bg-cover bg-center" data-alt="A professional electrician wearing a dark branded uniform performing a routine maintenance inspection on a sophisticated, clean electrical panel in a high-end modern building. The lighting is crisp and cool, emphasizing precision and professionalism. The color palette includes deep charcoal, white, and subtle electric blue glows from status lights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzoHJG4ULdZ7WkaJXiDf9YevkFnFsq-2WOHP4w324DSxDYSsh5-ArwthZje259nRECOJdyJ4XM4xstbBWO6F6LNSS3BgUvWGUiSnJAMJ-rAgE2PyOmV1BoYoB4wwwycGJLlGzX2rKa04fDKyYna7GFPaw0R-Y4DE3ucNs5KaAN0UFVnwXSnMJOtVEslScW3qBvX4HvEnFyQJKr7rAddo22rhg9pqVTkojk6mlrBR1yU8ZxAeMYeFUK')"></div>
+<div class="md:w-2/3">
+<h4 class="font-headline-lg text-headline-lg mb-4">Maintenance</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Scheduled preventative maintenance plans to ensure long-term reliability and compliance of your electrical infrastructure.
+                        </p>
+<div class="flex items-center gap-4 text-electric-blue font-label-lg">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span>Annual Inspections</span>
+</div>
+</div>
+</div>
+<!-- Emergency Repairs -->
+<div class="flex flex-col md:flex-row gap-8 items-start glass-panel p-10 rounded-xl border-power-gold/20">
+<div class="md:w-1/3 w-full h-48 rounded bg-cover bg-center" data-alt="A close-up shot of a high-tech electrical circuit board with a warm, amber light emanating from a component, signifying an emergency or high-power activity. The aesthetic is cinematic and high-contrast, with dark shadows and intense golden highlights. The background is blurred to focus on the intricate wiring and golden glows." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQVSp-sJr3P2yVSDeq8PfnqkW2Nq_zVrOF-bgzdt4KWu9Sjuw4wkpTbszJg8E29WEBCQbVv5dKEweYiFDwMdqntScNPb7u8tb1peGkkJnWarYr-V-sAVqwevSGkdMHwn5KhhUyFF6KTXxpkdzYVvnz-LM40pOeq21iwQFZCfgJSs8Lglml6rLVt7kOPBg5F3HEzTNYhQea_vID-VX1fw6DXm5fvrQfnCcYu4IPfpCn1feUNhrvKwbt')"></div>
+<div class="md:w-2/3">
+<h4 class="font-headline-lg text-headline-lg mb-4 text-power-gold">Emergency Repairs</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            24/7 rapid response for critical electrical failures. Our master technicians are equipped to handle any crisis immediately.
+                        </p>
+<a class="inline-flex items-center gap-4 text-power-gold font-label-lg group" href="tel:12345678">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+<span class="border-b border-power-gold pb-1 group-hover:tracking-wider transition-all">0800 24/7 SUPPORT</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Portfolio CTA -->
+<section class="relative py-section-gap px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+<div>
+<h2 class="font-display-lg text-headline-lg md:text-display-lg mb-8">Engineered for <br> Excellence</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-electric-blue/10 border border-electric-blue/20">
+<span class="material-symbols-outlined text-electric-blue" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md mb-2">Fully Certified</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">NIC/EIC Approved and fully insured for all residential and industrial projects.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-electric-blue/10 border border-electric-blue/20">
+<span class="material-symbols-outlined text-electric-blue" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md mb-2">Master Craftsmanship</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Over 20 years of technical expertise in complex electrical engineering.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-electric-blue/10 blur-3xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="h-64 rounded-xl bg-cover bg-center overflow-hidden" data-alt="A wide-angle professional photograph of a luxury smart home interior at night, showing perfectly integrated, architectural LED lighting that accentuates the modern design. The mood is calm and premium, with a palette of deep blues, greys, and warm highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5BvXUNaiBXFVNQWt9IgLJ76wsTix_N8ZpDubeuC4ymAuQFGiRHI-geMGAJRBBQFQWSTR6UgqPsPqOpK04nvgRo4LFJGn6e7vuoeiJQfsgcK65awkAMrUU9QECaLxBcesNT81u5KHHVVskV2WAK3NOK_6y-8Wp5zo-1a8xF-Us6nbyyBH60aFOwkFfSL3M3Y3fWTz_m_MvY64PHvgXXZDzqyfGQS1mNVbTPhM7JojaDaUuHZw12kOa')"></div>
+<div class="h-48 rounded-xl bg-cover bg-center overflow-hidden" data-alt="A futuristic close-up of a high-tech industrial control panel with glowing blue buttons and digital displays. The atmosphere is high-tech and precise, with sharp focus on the metallic surfaces and vibrant blue illumination reflecting off the components." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpfkuI7L48muCuHkfWEEYqWUgtJjfVa25bvBDn9AhnvAgTZvY3pn9pAM-NkAoeX05RYvTpkBEcqi4Zdgxkhn1EkI6VO-OSfHIB7OHKUUSDvwKOuGgick5PO0ZM4VsYFT2PonnDy5HbUjZcW4nM01WzEI-YwAvkUQIIoSAJw-LYYf8wKyYSwAXrVg70L58gmaU1i4HO-CXTWKcGn0VbGSIZqZ8RL9yXn_4n254_obL3fOloHOeW7M6b')"></div>
+</div>
+<div class="pt-8 space-y-4">
+<div class="h-48 rounded-xl bg-cover bg-center overflow-hidden" data-alt="The exterior of a modern, glass-fronted commercial office building at dusk. The building is illuminated by elegant linear architectural lights. The style is professional and corporate, with a clean midnight sky and crisp white light-streaks." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKD0G-TtrvfpX1Z8H_G0K0_JTRSPcEQPv5YXn7EPi8riTgdjKxtZgvMqAOYM-leUN5J_JM-GzXvb83H6gzMndgFT-pm9OqSrh10iD3bnRldKnJKr2mo4nMy5er0CPZ-QO7AjRj2elQ0ZVpKgTxLqWt75qP6ionPZP-x4GVnuVNUjq0zLQEieSxdhHBDzAVxyBwFmAGSj4yzSkKQRS_pXoR9K08ihLc3nO_HxrferItJHoAP03nlk81')"></div>
+<div class="h-64 rounded-xl bg-cover bg-center overflow-hidden" data-alt="An abstract, artistic photograph of copper wires and electrical components arranged in a neat, geometric pattern. The lighting is dramatic and localized, highlighting the metallic textures of the wires against a deep black background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4ipEFf70qgPshAQs9ZMG85JKu8OLN8PbxvayuftH_JTCcEcvCeRj7SWKfzvl4IgKaOOHU4TQ6xfI14Jne3EuNAFJyY8_eb6_22hl2thOsbYhMCZt-FkLjoXCwbA94OapP_YjHI8AH8PY92uHrO20JJVQ4Nbmae3xWKC_7MYPKP-dVdJXC1mTt53r4KGnh9zFAKlEDrFxrkQn1aaxIgfqZbD7e4oJbIH-UxTRU-XYrUDi_QvENufHO')"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact CTA Section -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-low border-y border-glass-stroke">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-display-lg text-headline-lg md:text-display-lg mb-8">Ready to Power Your Next Project?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                Consult with our expert engineers today for a bespoke solution tailored to your specific requirements.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="px-12 py-5 bg-electric-blue text-on-primary-container rounded font-label-lg uppercase tracking-widest hover:shadow-[0_0_30px_rgba(0,224,255,0.3)] transition-all">Start Your Quote</button>
+<button class="px-12 py-5 border border-glass-stroke rounded font-label-lg uppercase tracking-widest hover:bg-white/5 transition-all">View All Projects</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-charcoal-base border-t border-glass-stroke w-full py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div>
+<a class="font-display-lg text-headline-md font-bold text-on-surface mb-8 block" href="index.html">TNS Electrical</a>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 TNS Electrical Solutions. Master Craftsmanship in Every Wire.</p>
+</div>
+<div>
+<h6 class="text-power-gold font-label-lg uppercase tracking-widest mb-6">Sectors</h6>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-power-gold hover:translate-x-1 transition-all inline-block" href="our-services-tns-electrical-solutions.html">Residential</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-power-gold hover:translate-x-1 transition-all inline-block" href="our-services-tns-electrical-solutions.html">Commercial</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-power-gold hover:translate-x-1 transition-all inline-block" href="our-services-tns-electrical-solutions.html">Industrial</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-power-gold font-label-lg uppercase tracking-widest mb-6">Company</h6>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-power-gold hover:translate-x-1 transition-all inline-block" href="our-services-tns-electrical-solutions.html">Maintenance</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-power-gold hover:translate-x-1 transition-all inline-block" href="contact-quote-tns-electrical-solutions.html">Emergency</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-power-gold hover:translate-x-1 transition-all inline-block" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-power-gold font-label-lg uppercase tracking-widest mb-6">Contact</h6>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Suite 101, Power Plaza<br>London, UK</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-electric-blue transition-colors" data-icon="language">language</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-electric-blue transition-colors" data-icon="share">share</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-electric-blue transition-colors" data-icon="alternate_email">alternate_email</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for glass panels
+        document.querySelectorAll('.glass-panel').forEach(panel => {
+            panel.addEventListener('mousemove', (e) => {
+                const rect = panel.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                panel.style.setProperty('--mouse-x', `${x}px`);
+                panel.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

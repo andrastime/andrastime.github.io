@@ -1,0 +1,380 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Compliance &amp; Portfolio | Midwest City Electricals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#93000a",
+                        "outline-variant": "#424656",
+                        "on-error": "#690005",
+                        "on-primary-fixed": "#001849",
+                        "on-primary-container": "#f8f7ff",
+                        "surface-variant": "#32343e",
+                        "secondary-container": "#3f465c",
+                        "surface": "#10131c",
+                        "on-secondary-fixed": "#131b2e",
+                        "glass-white": "rgba(255, 255, 255, 0.05)",
+                        "tertiary-container": "#cc4204",
+                        "on-primary": "#002b75",
+                        "neon-cyan": "#00F2FF",
+                        "primary": "#b3c5ff",
+                        "on-primary-fixed-variant": "#003fa4",
+                        "surface-bright": "#363943",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-surface": "#e1e2ee",
+                        "surface-container-lowest": "#0b0e16",
+                        "on-tertiary-fixed-variant": "#832600",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "inverse-on-surface": "#2e303a",
+                        "secondary-fixed": "#dae2fd",
+                        "secondary": "#bec6e0",
+                        "on-secondary-container": "#adb4ce",
+                        "on-secondary": "#283044",
+                        "surface-container-low": "#191b24",
+                        "primary-container": "#0066ff",
+                        "glow-yellow": "#F9FF00",
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#0054d6",
+                        "surface-dim": "#10131c",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-tertiary": "#5d1900",
+                        "surface-container": "#1d1f28",
+                        "outline": "#8c90a1",
+                        "surface-container-high": "#272a33",
+                        "primary-fixed": "#dae1ff",
+                        "surface-container-highest": "#32343e",
+                        "background": "#10131c",
+                        "inverse-surface": "#e1e2ee",
+                        "on-background": "#e1e2ee",
+                        "tertiary-fixed": "#ffdbd0",
+                        "tertiary-fixed-dim": "#ffb59d",
+                        "on-tertiary-fixed": "#390c00",
+                        "slate-900": "#020617",
+                        "on-tertiary-container": "#fff6f4",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#ffb59d",
+                        "surface-tint": "#b3c5ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "label-caps": ["Space Mono"],
+                        "headline-lg-mobile": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.15);
+        }
+        .cyber-grid {
+            background-image: linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-neon-cyan selection:text-slate-900 font-body-md">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-glass-white shadow-md">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-neon-cyan">
+                Midwest City Electricals
+            </div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant hover:text-neon-cyan transition-all font-label-caps text-label-caps" href="our-services.html">Services</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-all font-label-caps text-label-caps" href="compliance-work.html">Our Work</a>
+<a class="text-neon-cyan font-bold border-b-2 border-neon-cyan pb-1 font-label-caps text-label-caps" href="compliance-work.html">Compliance</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-all font-label-caps text-label-caps" href="index.html">About Us</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-all font-label-caps text-label-caps" href="get-in-touch.html">Contact</a>
+</div>
+<div class="flex gap-4">
+<button class="hidden lg:block px-6 py-2 rounded-lg font-bold bg-glass-white text-on-surface border border-outline-variant hover:border-neon-cyan transition-all">Request Quote</button>
+<button class="px-6 py-2 rounded-lg font-bold bg-glow-yellow text-slate-900 shadow-lg neon-glow transform hover:scale-105 active:scale-95 transition-all">Emergency Call-out</button>
+</div>
+</nav>
+</header>
+<main class="pt-24 overflow-x-hidden">
+<!-- Hero / Header Section -->
+<section class="relative py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-neon-cyan/10 blur-[120px] rounded-full"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="inline-block px-4 py-1 rounded-full bg-neon-cyan/10 text-neon-cyan font-label-caps text-label-caps mb-6 border border-neon-cyan/20">
+                        ESTABLISHED &amp; REGISTERED
+                    </span>
+<h1 class="font-headline-lg text-headline-lg md:text-display-lg leading-tight mb-8">
+                        Electrical <span class="text-neon-cyan">Compliance</span> &amp; Specialist Portfolio
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
+                        Providing homeowners, landlords, and business owners across the West Midlands with high-voltage precision and absolute safety. Every wire, every connection, every certification handled by NAPIT experts.
+                    </p>
+<div class="flex flex-wrap gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-neon-cyan" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caps text-label-caps">NAPIT REGISTERED</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-neon-cyan" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-label-caps text-label-caps">BS7671 STANDARDS</span>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute inset-0 bg-neon-cyan/5 -rotate-3 scale-105 rounded-2xl group-hover:rotate-0 transition-transform duration-500"></div>
+<div class="relative rounded-2xl overflow-hidden glass-card p-2">
+<img class="w-full aspect-video object-cover rounded-xl transition-transform duration-700 group-hover:scale-105" data-alt="A professional electrician testing a sophisticated consumer unit with digital diagnostic tools. The lighting is dark and cinematic with neon cyan accents from the equipment screens, reflecting off polished metallic surfaces. High-end, technical aesthetic suitable for a specialist electrical contractor branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ0vP3d4PomAeCyJomQUTRS9Rq2wGhOlU4_n0tD4t5bbZduDFK7BHp0F_rWUA0-W2lQFLeZjwKH5Q180qsAN3qSzRb-TpuXFFC_evOrRNSUni_336xtg6UT9lT5YZdcN6IC9eviTUZeB1-hSLWaklgtBfriegO4ZtnZJ1j7Ji6sWEDuD5uzwLUymasN70yCQ8w4hKl5DciODKlTOVYf3itvFLNPSHCpgonMc-UvGsRQK89bKi2uM21xg">
+</div>
+</div>
+</div>
+</section>
+<!-- Why Compliance Matters (Bento Grid) -->
+<section class="py-24 bg-surface-container-lowest cyber-grid">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg mb-6">Why Compliance <span class="text-neon-cyan">Matters</span></h2>
+<p class="text-body-lg text-on-surface-variant">
+                            An independent electrical contracting company, we provide a comprehensive range of specialised services, particularly BS7671, delivered with strict attention to safety.
+                        </p>
+</div>
+<div class="font-label-caps text-neon-cyan text-headline-md tracking-widest opacity-20 hidden lg:block">
+                        HIGH VOLTAGE PRECISION
+                    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Bento Card 1 -->
+<div class="md:col-span-2 glass-card p-10 rounded-2xl relative overflow-hidden group">
+<div class="absolute -right-10 -bottom-10 w-48 h-48 bg-neon-cyan/5 rounded-full blur-3xl group-hover:bg-neon-cyan/10 transition-all"></div>
+<span class="material-symbols-outlined text-neon-cyan text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">rule</span>
+<h3 class="font-headline-md text-headline-md mb-4">BS7671 Industry Standards</h3>
+<p class="text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                            Full compliance isn't just about legality; it's about peace of mind. We ensure every installation meets the latest 18th Edition wiring regulations, protecting your property and occupants from electrical hazards.
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-neon-cyan scale-75">bolt</span>
+                                Mandatory safety inspections
+                            </li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-neon-cyan scale-75">bolt</span>
+                                Legal certification for insurance
+                            </li>
+</ul>
+</div>
+<!-- Bento Card 2 -->
+<div class="bg-surface-container-high border border-outline-variant p-8 rounded-2xl flex flex-col justify-between group hover:border-neon-cyan transition-colors">
+<div>
+<div class="w-12 h-12 bg-glow-yellow/10 rounded-lg flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-glow-yellow">safety_check</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-glow-yellow">Safety First</h3>
+<p class="text-body-md text-on-surface-variant">
+                                From minor faults to major failures—we guarantee a 24-hour response time to keep your electrics safe and running smoothly.
+                            </p>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant">
+<span class="font-label-caps text-label-caps text-on-surface-variant">EMERGENCY RESPONSE</span>
+</div>
+</div>
+<!-- Bento Card 3 -->
+<div class="glass-card p-8 rounded-2xl group border-l-4 border-neon-cyan">
+<h3 class="font-headline-md text-headline-md mb-4">Landlord Checks</h3>
+<p class="text-body-md text-on-surface-variant mb-6">
+                            Ensuring continuous functionality and legal compliance for rental properties across the Midlands.
+                        </p>
+<div class="flex items-center gap-2 text-neon-cyan font-label-caps text-label-caps group-hover:translate-x-2 transition-transform cursor-pointer">
+                            VIEW EICR SERVICES <span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- Bento Card 4 -->
+<div class="md:col-span-2 relative h-full rounded-2xl overflow-hidden glass-card p-10 flex flex-col justify-end">
+
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-2">Technical Excellence</h3>
+<p class="text-body-md text-on-surface-variant max-w-lg">
+                                Our expertise includes testing, inspection, and ensuring full compliance with the most rigorous industrial requirements.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Work / Portfolio -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-20">
+<span class="font-label-caps text-label-caps text-neon-cyan mb-4 block">PORTFOLIO</span>
+<h2 class="font-headline-lg text-headline-lg">Our Work in <span class="text-neon-cyan">Action</span></h2>
+</div>
+<div class="space-y-32">
+<!-- Project 1 -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 rounded-2xl overflow-hidden glass-card p-2 order-2 lg:order-1">
+<img class="w-full h-[500px] object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLs35cOArb50DDZhw8Scrmzy6ShechQnyvK0ZFUt11vlgu-EY6za2BuikqCl1vDu_6mbQJy2E-pdsRHDgOvdeGZBTqULD6WXiFlaeEpQRbyEws7NwEg2t6oghUEe2bN7xhs9KT1bKCUNwG5j3NLBB9hzL9GXssXI9CoS7ND-Hk5OM3Tq15Cx1IsAxo_8a7j0lqQ2qQ9SPDsxjH5F5dBtwghdwcSXY8w7EgRCYl-CKi-cN58oDbAitv_wb8Y">
+</div>
+<div class="lg:col-span-5 order-1 lg:order-2">
+<div class="mb-8">
+<h3 class="font-headline-md text-headline-md mb-4">High-End Residential Ambience</h3>
+<p class="text-body-lg text-on-surface-variant mb-6">
+                                Integrated smart lighting systems and architectural shadow-gap illumination. This project highlights our ability to combine aesthetic design with technically sound electrical engineering.
+                            </p>
+<div class="flex flex-wrap gap-3">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface text-label-caps rounded border border-outline-variant">Smart Home</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface text-label-caps rounded border border-outline-variant">LED Precision</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface text-label-caps rounded border border-outline-variant">Residential</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5">
+<div class="mb-8">
+<h3 class="font-headline-md text-headline-md mb-4">Modern Installation Integrity</h3>
+<p class="text-body-lg text-on-surface-variant mb-6">
+                                Robust exterior lighting and consumer unit upgrades. We focus on durability and weather-sealing while ensuring the visual appeal of modern brickwork and industrial materials.
+                            </p>
+<div class="flex flex-wrap gap-3">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface text-label-caps rounded border border-outline-variant">Exterior</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface text-label-caps rounded border border-outline-variant">Full Rewire</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface text-label-caps rounded border border-outline-variant">Compliance</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 rounded-2xl overflow-hidden glass-card p-2">
+<img class="w-full h-[500px] object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtlQiU6Hvt7oU9_i1dgpWQyL2FDINU2giHLoTLdewcNyed-TBsotETPYfqBH-ky8FQH0atXmws7z1MvUXbxg5OGcgBQwFpjO2XACS3lUfxDrfSuNcmCrLVwFhXHnqpLWjHV3m0i8JM3URXkPpEJ_DiC2f-Upl8sukRyUVGjQjyZHNm4uIE3Wrd6g2aJXRPXvQvZQrYyvolSuMwChAtqlhoVzaqhk_CRlVh4YrkLN5V_qA9J0vFDUseDs3Kl">
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Contact -->
+<section class="py-24 relative">
+<div class="absolute inset-0 bg-neon-cyan/5 -z-10"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<div class="glass-card p-12 md:p-24 rounded-[40px] relative overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-neon-cyan to-transparent"></div>
+<h2 class="font-headline-lg text-headline-lg mb-8 max-w-2xl mx-auto">Ready for a <span class="text-neon-cyan">Safe Upgrade?</span></h2>
+<p class="text-body-lg text-on-surface-variant mb-12 max-w-xl mx-auto">
+                        Whether it's a minor fault or a major installation, our specialists are ready to keep your property compliant and high-powered.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="px-10 py-5 bg-glow-yellow text-slate-900 rounded-xl font-bold text-lg shadow-xl hover:scale-105 active:scale-95 transition-all">
+                            GET A FREE QUOTE
+                        </button>
+<button class="px-10 py-5 border-2 border-neon-cyan text-neon-cyan rounded-xl font-bold text-lg hover:bg-neon-cyan/10 transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">call</span>
+                            07375 832 034
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full rounded-t-xl border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-sm font-headline-md text-neon-cyan mb-6">Midwest City Electricals</div>
+<p class="text-body-md font-body-md text-on-surface-variant mb-8">
+                    Specialist Electricians in West Midlands. Excellence in installation, maintenance, and compliance.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-on-surface hover:text-neon-cyan transition-colors" href="get-in-touch.html">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-on-surface hover:text-neon-cyan transition-colors" href="our-services.html">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-label-caps font-label-caps text-neon-cyan mb-6">SERVICES</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-body-md" href="our-services.html">Residential Services</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-body-md" href="our-services.html">Commercial Installations</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-body-md" href="our-services.html">EV Charging</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-caps font-label-caps text-neon-cyan mb-6">COMPLIANCE</h4>
+<ul class="space-y-3">
+<li><a class="text-neon-cyan underline text-body-md" href="compliance-work.html">NAPIT Compliance</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-body-md" href="our-services.html">Smart Home Tech</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-body-md" href="get-in-touch.html">Emergency Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-caps font-label-caps text-neon-cyan mb-6">LEGAL</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-body-md" href="get-in-touch.html">Privacy Notice</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-body-md" href="our-services.html">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-body-md" href="index.html">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-glass-white/10 px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-body-md font-body-md text-on-surface-variant opacity-60">
+                © 2024 Midwest City Electricals. All rights reserved. Specialist Electricians in West Midlands.
+            </div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-neon-cyan opacity-40">electric_bolt</span>
+<span class="material-symbols-outlined text-neon-cyan opacity-40">shield</span>
+<span class="material-symbols-outlined text-neon-cyan opacity-40">precision_manufacturing</span>
+</div>
+</div>
+</footer>
+<script>
+        // Optional subtle interactions for the portfolio images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                img.parentElement.style.boxShadow = '0 0 30px rgba(0, 242, 255, 0.3)';
+            });
+            img.addEventListener('mouseleave', () => {
+                img.parentElement.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body></html>

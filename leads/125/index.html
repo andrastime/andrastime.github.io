@@ -1,0 +1,415 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Fused Electrics Ltd | Professional Electrical Engineering</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#00344d",
+                        "inverse-primary": "#9d4300",
+                        "secondary-fixed": "#dce1ff",
+                        "on-secondary": "#05297a",
+                        "surface-bright": "#323949",
+                        "tertiary": "#89ceff",
+                        "surface": "#0c1322",
+                        "glass-border": "rgba(255, 255, 255, 0.1)",
+                        "surface-container-highest": "#2e3545",
+                        "on-primary-fixed": "#341100",
+                        "midnight-slate": "#111827",
+                        "on-tertiary-fixed": "#001e2f",
+                        "deep-navy": "#1E3A8A",
+                        "on-secondary-fixed-variant": "#264191",
+                        "inverse-surface": "#dce2f7",
+                        "secondary": "#b6c4ff",
+                        "electric-orange": "#F97316",
+                        "outline": "#a78b7d",
+                        "tertiary-fixed-dim": "#89ceff",
+                        "on-background": "#dce2f7",
+                        "on-secondary-fixed": "#00164e",
+                        "surface-variant": "#2e3545",
+                        "on-primary": "#552100",
+                        "primary-fixed": "#ffdbca",
+                        "surface-tint": "#ffb690",
+                        "on-surface": "#dce2f7",
+                        "on-tertiary-fixed-variant": "#004c6e",
+                        "error": "#ffb4ab",
+                        "background": "#0c1322",
+                        "on-primary-fixed-variant": "#783200",
+                        "secondary-fixed-dim": "#b6c4ff",
+                        "primary": "#ffb690",
+                        "outline-variant": "#584237",
+                        "glow-cyan": "#0EA5E9",
+                        "surface-container-lowest": "#070e1d",
+                        "on-surface-variant": "#e0c0b1",
+                        "on-tertiary-container": "#003650",
+                        "tertiary-fixed": "#c9e6ff",
+                        "primary-fixed-dim": "#ffb690",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#264191",
+                        "tertiary-container": "#09a4e8",
+                        "on-primary-container": "#582200",
+                        "on-secondary-container": "#9db2ff",
+                        "error-container": "#93000a",
+                        "primary-container": "#f97316",
+                        "surface-container-low": "#141b2b",
+                        "surface-container": "#191f2f",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#293040",
+                        "surface-dim": "#0c1322",
+                        "surface-container-high": "#232a3a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-gap-lg": "120px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "section-gap-sm": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "caption": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .electric-glow {
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+        }
+        .electric-glow-text {
+            text-shadow: 0 0 12px rgba(249, 115, 22, 0.4);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .technical-grid {
+            background-image: linear-gradient(rgba(249, 115, 22, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(249, 115, 22, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+        .pulse-indicator {
+            animation: pulse-glow 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-electric-orange selection:text-white">
+<!-- TopAppBar Component -->
+<header class="bg-surface/80 backdrop-blur-md dark:bg-surface/80 docked full-width top-0 z-50 sticky border-b border-glass-border shadow-md">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter py-4">
+<div class="flex items-center gap-4">
+<img alt="Fused Electrics Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLuM-Ag2Y_bsKLZ_5oA2pTfK8aOQt9VUX36kf2wIXtgY90517Vb1vPMsU6NI-7AO0lFuBVBE1m-m--QpOF5K92BmJb_-0UVdRvZbtl-jjjOJ4-4DnweqONGEEzP3Fse9c2bR667jrhAqxaO6F5OSeUhml6L-lZULBUVnNfxPfi1W47uTwMKcEwNinjNAMZJbZ8s4zUp1qcgNzT_K5gi8h1cZYja1Fog9zoAQdifHMUmbGKCMNZIf4QOgNDU">
+<span class="font-display-lg text-headline-md font-bold text-on-surface uppercase tracking-wider hidden lg:block">Fused Electrics Ltd</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-headline-md text-electric-orange border-b-2 border-electric-orange pb-1" href="index.html">Home</a>
+<a class="font-headline-md text-on-surface hover:text-electric-orange transition-colors duration-300" href="our-services-fused-electrics-ltd.html">Services</a>
+<a class="font-headline-md text-on-surface hover:text-electric-orange transition-colors duration-300" href="our-projects-fused-electrics-ltd.html">Projects</a>
+<a class="font-headline-md text-on-surface hover:text-electric-orange transition-colors duration-300 flex items-center gap-1" href="contact-us-fused-electrics-ltd.html">
+<span class="w-2 h-2 rounded-full bg-electric-orange pulse-indicator"></span>
+                    Emergency
+                </a>
+<a class="font-headline-md text-on-surface hover:text-electric-orange transition-colors duration-300" href="index.html">About</a>
+<a class="font-headline-md text-on-surface hover:text-electric-orange transition-colors duration-300" href="contact-us-fused-electrics-ltd.html">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-bold electric-glow hover:scale-105 active:scale-95 transition-all">
+                Get a Quote
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden technical-grid">
+<div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface to-surface z-10"></div>
+<div class="max-w-container-max mx-auto px-gutter relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-electric-orange/10 border border-electric-orange/30 text-electric-orange font-label-bold">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                        EXPERT ELECTRICAL SOLUTIONS
+                    </div>
+<h1 class="font-display-lg text-display-lg text-white leading-tight">
+                        Powering <span class="text-electric-orange electric-glow-text">Excellence</span> Through Precision.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Elite electrical engineering for high-end residential and commercial developments. We bridge the gap between technical rigor and cinematic design.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-electric-orange text-white px-8 py-4 rounded font-label-bold electric-glow flex items-center gap-2 hover:bg-opacity-90 transition-all">
+                            REQUEST A QUOTE
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-4 rounded font-label-bold hover:bg-white/10 transition-all">
+                            OUR PROJECTS
+                        </button>
+</div>
+</div>
+<div class="hidden lg:block relative group">
+<div class="absolute -inset-4 bg-electric-orange/20 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+<div class="relative glass-card p-1 rounded-xl overflow-hidden shadow-2xl">
+<img class="rounded-lg w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-contrast close-up of a modern circuit breaker panel with clean, organized wiring and subtle blue and orange glowing indicator lights. The lighting is dramatic, highlighting the metallic textures and precision of the engineering in a dark, professional workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb9mkHcHr2wRkZrcbs8fH8idLHWW_SSV0AcZXf2dzKTcv1kgEEdaUdpicFYCOXZf5vYaiVoCbol3QUHpugyu7smJEXYFooNjmROxNl343kjXJzDLF3DICCNLvvQmj4dOvcV_IY-WDTbd62LTXBUC1DzL74Go8IkDuJtIxjZy2py5PnjKtmMTpMSWAAyqmErJp9dD6GuHRXupa1IcU8kLy99dHVIFLOfI-cLeGYoZRozJX6J7CqGV2m">
+</div>
+<div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-lg shadow-xl border border-glass-border max-w-[240px]">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-electric-orange" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-bold">NICEIC Certified</span>
+</div>
+<p class="text-caption text-on-surface-variant">Industry-leading standards for safety and performance.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us - Bento Grid -->
+<section class="py-section-gap-lg bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-white">Engineered for <span class="text-electric-orange">Reliability</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Why Fused Electrics remains the top choice for developers and homeowners across the region.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<div class="md:col-span-2 lg:row-span-2 glass-card p-10 rounded-xl flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-4xl text-electric-orange mb-6" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Master-Level Artistry</h3>
+<p class="text-on-surface-variant font-body-md leading-relaxed">Our engineers treat every conduit and circuit as a work of precision. We don't just install systems; we design infrastructure that lasts a lifetime.</p>
+</div>
+<div class="mt-12 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-electric-orange/20 flex items-center justify-center text-electric-orange">
+<span class="material-symbols-outlined">engineering</span>
+</div>
+<span class="font-label-bold">15+ Years Experience</span>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl hover:bg-surface-container-highest transition-colors cursor-default border-t border-glass-border">
+<span class="material-symbols-outlined text-3xl text-electric-orange mb-4">timer</span>
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-lg">Fast Response</h4>
+<p class="text-caption text-on-surface-variant">Rapid deployment for urgent electrical faults and system failures.</p>
+</div>
+<div class="glass-card p-8 rounded-xl hover:bg-surface-container-highest transition-colors cursor-default border-t border-glass-border">
+<span class="material-symbols-outlined text-3xl text-electric-orange mb-4">shield_lock</span>
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-lg">Safety First</h4>
+<p class="text-caption text-on-surface-variant">Every project complies with the latest 18th Edition wiring regulations.</p>
+</div>
+<div class="md:col-span-2 glass-card p-8 rounded-xl border-t border-glass-border flex items-center gap-8">
+<div class="hidden sm:block w-24 h-24 flex-shrink-0 bg-electric-orange/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-electric-orange">monitoring</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-lg">Smart Monitoring</h4>
+<p class="text-body-md text-on-surface-variant">We integrate the latest IoT sensors for real-time energy efficiency tracking.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Services Section -->
+<section class="py-section-gap-lg bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 right-0 w-96 h-96 bg-electric-orange blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-deep-navy blur-[120px] rounded-full"></div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Professional <span class="text-electric-orange">Services</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">From high-voltage commercial installs to delicate residential lighting designs, we cover the full spectrum of electrical excellence.</p>
+</div>
+<a class="text-electric-orange font-label-bold flex items-center gap-2 hover:translate-x-1 transition-transform" href="our-services-fused-electrics-ltd.html">
+                        VIEW ALL SERVICES <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Residential Card -->
+<div class="group bg-surface-container rounded-xl overflow-hidden border border-glass-border hover:border-electric-orange/50 transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A luxury modern living room with integrated smart LED strip lighting along the ceiling and floor, creating a warm and sophisticated atmosphere. The architectural details are sharp, and the lighting highlights the high-end interior design and premium textures in a dark, moody environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZKaVG-twe8_MLYjnGh4bKgCZsk67D0vMQ4lUynMriCxLbhlONjqL1Ajvvd9J89d4bKUnujI_OUNw3fRdGpuffsYYxufrKQ3GTlN9cixtWWmNB2pD1WDdivWmTJ0VggyTvUA6bjE0adVRwdxb4q0ka8nR7Iajf7xv_mqdbVBNZqnLFg_wjNYKVsLvhuHzxbINxgrYvIPl-vAl8rSjM4JiUJTgxuGWFap_Z2giNBZ4C6LWwTJhvXNZ9">
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-electric-orange">home_work</span>
+<span class="font-label-bold tracking-widest text-on-surface-variant uppercase">Residential</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Home Electrics</h3>
+<p class="text-body-md text-on-surface-variant mb-6">Full rewires, smart home integration, and aesthetic lighting solutions for luxury residences.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-caption"><span class="material-symbols-outlined text-electric-orange text-sm">check_circle</span> Smart Home Automation</li>
+<li class="flex items-center gap-2 text-caption"><span class="material-symbols-outlined text-electric-orange text-sm">check_circle</span> EV Charger Installation</li>
+<li class="flex items-center gap-2 text-caption"><span class="material-symbols-outlined text-electric-orange text-sm">check_circle</span> Consumer Unit Upgrades</li>
+</ul>
+<button class="w-full py-3 rounded border border-electric-orange text-electric-orange font-label-bold hover:bg-electric-orange hover:text-white transition-all">LEARN MORE</button>
+</div>
+</div>
+<!-- Commercial Card -->
+<div class="group bg-surface-container rounded-xl overflow-hidden border border-glass-border hover:border-electric-orange/50 transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="The interior of a contemporary office building or data center featuring complex, perfectly aligned cable trays and industrial-grade electrical infrastructure. Glowing orange status indicators provide a high-tech vibe against the clean, metallic slate and navy background, emphasizing professional commercial electrical work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA16dMPHDcj-DeyPl8w3HuYpv3Tj0TLKx5c6AKhbW8ue8YNpQDVr4FNOJkmg2jdqw_oNb2IUo5hZedBPCTzFRBUDfRRmK6DMH7xl6OoZcVbKnVbEjb4T5nHu4hQoJlWhbYpvR6XmsKd5ebypZO_NvPy6WqJtCUQW9DTJKYvCZ7d-csopTWetwekb2J_8xQinaIs0y0RkQq1wXV6o1TyzpCQNDnuL1xRrYkpI7QYaDlDjD-xnxQddCYl">
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-electric-orange">business</span>
+<span class="font-label-bold tracking-widest text-on-surface-variant uppercase">Commercial</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Corporate Solutions</h3>
+<p class="text-body-md text-on-surface-variant mb-6">Scalable electrical infrastructure for offices, retail units, and industrial facilities.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-caption"><span class="material-symbols-outlined text-electric-orange text-sm">check_circle</span> Three-Phase Power</li>
+<li class="flex items-center gap-2 text-caption"><span class="material-symbols-outlined text-electric-orange text-sm">check_circle</span> Emergency Lighting</li>
+<li class="flex items-center gap-2 text-caption"><span class="material-symbols-outlined text-electric-orange text-sm">check_circle</span> Data &amp; Comms Cabling</li>
+</ul>
+<button class="w-full py-3 rounded border border-electric-orange text-electric-orange font-label-bold hover:bg-electric-orange hover:text-white transition-all">LEARN MORE</button>
+</div>
+</div>
+<!-- Emergency Card -->
+<div class="group bg-surface-container rounded-xl overflow-hidden border border-electric-orange/30 hover:border-electric-orange transition-all duration-300 relative">
+<div class="absolute top-4 right-4 z-20">
+<div class="flex items-center gap-2 bg-electric-orange px-3 py-1 rounded text-[10px] font-bold text-white uppercase tracking-tighter">
+<span class="w-1.5 h-1.5 bg-white rounded-full pulse-indicator"></span>
+                                Live Support
+                            </div>
+</div>
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A dramatic night shot of an emergency service vehicle parked outside a modern building, illuminated by glowing orange work lights. The scene captures a sense of urgency and professional readiness, with rain-slicked pavement reflecting the vibrant lights and creating a high-end cinematic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDksLiIs3EukGtlJaUKuuStHgxebboTHYYYMrPjEnwIj89lPDW0ahgeB0-6T5l1EK9xunHfDHhsq40KiPbxj1MJ_l_aK6p2fmiFwopY9jS0Gnsv1EJDyJuoljdrUZoYSZNNfQc2a0Xh3iSaZHJfUrCWnDYLxt_XB8QI9j5PVFt-SPatOCgAOt2uVxeV0tezwUiJt_-ejDEUMhQcj-crhdKPx2yqlXo7YjL6z8rIdPJydw2T4Cj9cZiv">
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-electric-orange">e911_emergency</span>
+<span class="font-label-bold tracking-widest text-on-surface-variant uppercase text-electric-orange">24/7 Response</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Emergency Call-Out</h3>
+<p class="text-body-md text-on-surface-variant mb-6">When things go dark, we bring the light. 24/7 emergency response for critical electrical failures.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-caption"><span class="material-symbols-outlined text-electric-orange text-sm">check_circle</span> 60-Minute Response Time</li>
+<li class="flex items-center gap-2 text-caption"><span class="material-symbols-outlined text-electric-orange text-sm">check_circle</span> Rapid Fault Diagnosis</li>
+<li class="flex items-center gap-2 text-caption"><span class="material-symbols-outlined text-electric-orange text-sm">check_circle</span> Safe System Isolation</li>
+</ul>
+<button class="w-full py-3 rounded bg-electric-orange text-white font-label-bold electric-glow hover:bg-opacity-90 transition-all">CALL NOW: 0800 FUSED</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Contact Banner -->
+<section class="max-w-container-max mx-auto px-gutter my-section-gap-sm">
+<div class="relative bg-deep-navy rounded-2xl p-8 md:p-12 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="absolute inset-0 technical-grid opacity-20"></div>
+<div class="relative z-10 max-w-lg">
+<h2 class="font-headline-lg text-headline-lg text-white mb-2">Ready to Start Your <span class="text-electric-orange">Project?</span></h2>
+<p class="text-on-surface-variant font-body-md">Connect with our engineering team for a bespoke consultation and transparent pricing.</p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<input class="bg-surface/50 border border-white/10 rounded px-6 py-4 text-white focus:border-electric-orange focus:ring-0 w-full sm:w-64 transition-all" placeholder="Enter your email" type="email">
+<button class="bg-electric-orange text-white px-8 py-4 rounded font-label-bold electric-glow whitespace-nowrap hover:scale-105 transition-transform">
+                        GET A FREE QUOTE
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-glass-border">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-container-max mx-auto px-gutter py-section-gap-sm">
+<div class="space-y-6">
+<div class="font-display-lg text-headline-md text-electric-orange font-bold uppercase tracking-wider">Fused Electrics Ltd</div>
+<p class="text-on-surface-variant text-body-md max-w-xs leading-relaxed">
+                    Setting the gold standard in electrical engineering since 2008. Fully insured, fully certified, and dedicated to precision.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:text-electric-orange transition-colors" href="our-projects-fused-electrics-ltd.html">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:text-electric-orange transition-colors" href="our-projects-fused-electrics-ltd.html">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:text-electric-orange transition-colors" href="contact-us-fused-electrics-ltd.html">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h5 class="text-white font-label-bold uppercase tracking-widest text-[12px]">Services</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-electric-orange transition-colors text-body-md" href="our-services-fused-electrics-ltd.html">Residential Services</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-orange transition-colors text-body-md" href="our-services-fused-electrics-ltd.html">Commercial Solutions</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-orange transition-colors text-body-md" href="our-services-fused-electrics-ltd.html">Emergency Call-outs</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-orange transition-colors text-body-md" href="our-services-fused-electrics-ltd.html">Safety Certificates</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-white font-label-bold uppercase tracking-widest text-[12px]">Legal</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-electric-orange transition-colors text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-orange transition-colors text-body-md" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-6">
+<h5 class="text-white font-label-bold uppercase tracking-widest text-[12px]">Direct Contact</h5>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-orange">location_on</span>
+<span class="text-on-surface-variant text-body-md">123 Voltage Way, Engineering District,<br>London, UK</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-orange">call</span>
+<span class="text-on-surface-variant text-body-md font-bold">0800 FUSED ELECTRICS</span>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-caption text-on-surface-variant">© 2024 Fused Electrics Ltd. All rights reserved. Professional Electrical Engineering.</div>
+<div class="flex gap-4">
+<img alt="Visa" class="h-6 grayscale opacity-50 hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5FTwBIOdaLy7aIk36haJLNF25jvk9yEXXPAy3Y1YpiEsSO0McQusD9DRp3m9juiuevw6yE35Et0edfjbslvDlWUOKRsNnMog-_vu7UxmXS_QhlhPGO6QocizvD7NPhNPr0AR7fskuz3T09ndkBrnd7u9bgS7VvbgQP1-pr_w1oWwQc30dISDFK0QCsSsFjMHSI_vTQ3q_lk8ucJ5K6dSJSIHDPqLCjsbtsLtlQJYgYBb3EuzQbZLm">
+<img alt="Mastercard" class="h-6 grayscale opacity-50 hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB7l4OMAQcgv7hKerA_XFyXoxdd319XaMM14uK4ezoM4rWzCBR3AHVCJhpg8MXKjZqHKmu36luj4tnSbdu14JXs_7vy4Lu8033lSkb51qnEwJSjdh7RVyf2kgOozDFGBp9OqPIYSezLDsvuFmUZyOVni380YMhMUEZr2UizNKQ8WPpNJk4tEplD5FxOXytVB7Ir3nfaT7XkTJHYftQZLEqF7vmiQ8FzuU2dPBJS3GNKMVWG30eerpJ">
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and glow effects
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

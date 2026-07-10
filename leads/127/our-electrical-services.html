@@ -1,0 +1,340 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | Your Local Electrician</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "tertiary": "#fff5de",
+                "surface": "#0d1515",
+                "secondary": "#c1c6d9",
+                "inverse-on-surface": "#2a3233",
+                "secondary-container": "#434959",
+                "surface-container": "#192122",
+                "on-primary": "#00363a",
+                "on-error": "#690005",
+                "outline-variant": "#3b494b",
+                "tertiary-container": "#fed639",
+                "on-primary-fixed": "#002022",
+                "surface-container-lowest": "#080f10",
+                "electric-blue": "#00F0FF",
+                "secondary-fixed": "#dde2f6",
+                "on-secondary-fixed-variant": "#414756",
+                "power-green": "#39FF14",
+                "surface-container-low": "#151d1e",
+                "slate-glass": "rgba(255, 255, 255, 0.05)",
+                "outline": "#849495",
+                "on-tertiary-fixed-variant": "#554500",
+                "tertiary-fixed-dim": "#eac324",
+                "surface-bright": "#333b3b",
+                "primary-container": "#00f0ff",
+                "primary": "#dbfcff",
+                "alert-orange": "#FF8A00",
+                "background": "#0d1515",
+                "inverse-surface": "#dce4e5",
+                "primary-fixed-dim": "#00dbe9",
+                "primary-fixed": "#7df4ff",
+                "error": "#ffb4ab",
+                "tertiary-fixed": "#ffe179",
+                "on-background": "#dce4e5",
+                "on-primary-fixed-variant": "#004f54",
+                "on-tertiary-fixed": "#231b00",
+                "on-secondary-fixed": "#151b29",
+                "charcoal-void": "#0B0E14",
+                "surface-variant": "#2e3637",
+                "inverse-primary": "#006970",
+                "on-surface": "#dce4e5",
+                "on-surface-variant": "#b9cacb",
+                "on-secondary-container": "#b2b8cb",
+                "surface-container-high": "#232b2c",
+                "surface-dim": "#0d1515",
+                "on-tertiary-container": "#715d00",
+                "error-container": "#93000a",
+                "secondary-fixed-dim": "#c1c6d9",
+                "on-error-container": "#ffdad6",
+                "surface-container-highest": "#2e3637",
+                "on-primary-container": "#006970",
+                "surface-tint": "#00dbe9",
+                "on-tertiary": "#3b2f00",
+                "on-secondary": "#2a303f"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "unit": "8px",
+                "section-gap": "80px",
+                "margin-mobile": "16px",
+                "container-max": "1280px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "headline-lg-mobile": ["Montserrat"],
+                "headline-md": ["Montserrat"],
+                "label-caps": ["Space Grotesk"],
+                "display-lg": ["Montserrat"],
+                "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "label-caps": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(25, 33, 34, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: #00F0FF;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+        }
+        .circuit-bg {
+            background-image: radial-gradient(#00F0FF 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-charcoal-void text-on-surface selection:bg-electric-blue selection:text-charcoal-void">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-white/10 shadow-md shadow-electric-blue/10">
+<div class="max-w-container-max mx-auto px-gutter py-4 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-electric-blue text-3xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Your Local Electrician</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-blue transition-colors" href="our-electrical-services.html">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-blue transition-colors" href="24-7-emergency-support.html">Emergency</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-blue transition-colors" href="our-electrical-services.html">Commercial</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-blue transition-colors" href="our-electrical-services.html">Residential</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-blue transition-colors" href="about-your-local-electrician.html">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Reviews</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:block font-label-caps text-label-caps text-electric-blue" href="tel:02088197772">0208 819 7772</a>
+<button class="bg-electric-blue text-charcoal-void px-6 py-2 rounded-full font-label-caps text-label-caps font-bold hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all active:scale-95">
+                    24/7 EMERGENCY
+                </button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-section-gap relative">
+<div class="absolute inset-0 circuit-bg pointer-events-none"></div>
+<!-- Header Section -->
+<header class="max-w-container-max mx-auto px-gutter mb-16 relative">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="w-2 h-2 rounded-full bg-power-green animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-power-green uppercase">Available Now • 365 Days a Year</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-white mb-6">Expert Electrical <span class="text-electric-blue glow-text">Solutions</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    With over 30 years of experience, John and the team specialize in rapid emergency response and precision installations across London.
+                </p>
+</div>
+</header>
+<!-- Services Bento Grid -->
+<section class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- 1. 24 HR Emergency Services (Featured Large) -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl glass-card p-8 flex flex-col justify-between min-h-[500px]">
+<div class="relative z-10">
+<div class="flex items-start justify-between mb-8">
+<div>
+<span class="bg-alert-orange/20 text-alert-orange px-4 py-1 rounded-full font-label-caps text-[12px] border border-alert-orange/30 mb-4 inline-block">CRITICAL CARE</span>
+<h2 class="font-headline-lg text-headline-lg text-white">24 HR Emergency Services</h2>
+</div>
+<span class="material-symbols-outlined text-alert-orange text-5xl animate-pulse">emergency_home</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mb-8">
+                            Solving emergency electrical problems quickly across City, North, East, and Central London. Beyond the M25 coverage included.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
+<span class="material-symbols-outlined text-electric-blue text-sm">check_circle</span>
+<span class="text-on-surface font-body-md text-sm">60-Min Arrival Goal</span>
+</div>
+<div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
+<span class="material-symbols-outlined text-electric-blue text-sm">check_circle</span>
+<span class="text-on-surface font-body-md text-sm">Festive Period Cover</span>
+</div>
+</div>
+</div>
+<div class="mt-12 flex flex-col sm:flex-row gap-4 items-center">
+<button class="w-full sm:w-auto bg-alert-orange text-white px-8 py-4 rounded-full font-label-caps text-label-caps font-bold hover:shadow-[0_0_20px_rgba(255,138,0,0.4)] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">call</span> CALL 0208 819 7772
+                        </button>
+<span class="text-on-surface-variant font-body-md text-sm italic">7 Days a week • 24 Hours a day</span>
+</div>
+<!-- Decorative Image Fade -->
+<div class="absolute right-0 bottom-0 w-1/2 h-full opacity-20 group-hover:opacity-40 transition-opacity">
+<div class="w-full h-full bg-cover bg-center" data-alt="A macro cinematic shot of glowing copper electrical wires being expertly connected, captured with high-contrast lighting that emphasizes the metallic textures. The style is moody and technical with deep shadows and sharp electric-blue highlights reflecting off the copper surfaces. The focus is incredibly tight on the precision work of the electrician's hands in a dark environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvZguFFBlQ8fvVC_lTctExJPTVhIyMBQbL3ap7Tycf9poOlkvTmlj-gFv60PcxOMd0GPyWyzppfWxqmnocb-HPlI2u2FLp70KWpvaJO0dffKn85-YjuQeRgyHy8p9i0T2cY0H59nHT1yksbeTstD_jGDB4vv-1BUGZq7eht6BGSznNE0U8sGcleQvg0hEd8YbDez9WXcXdztytqrOb8-o4Q1OM3RxP8sHs-ar2o1gKbdFwf-dSmWoXPQ')"></div>
+</div>
+</div>
+<!-- 2. Design & Installation -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="flex-1 glass-card p-6 rounded-xl group relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-electric-blue text-4xl mb-4">architecture</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Design &amp; Installation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                                Bespoke electrical layouts for modern homes and commercial spaces.
+                            </p>
+<button class="text-electric-blue border border-electric-blue/30 px-6 py-2 rounded-full font-label-caps text-label-caps hover:bg-electric-blue hover:text-charcoal-void transition-all">
+                                REQUEST QUOTE
+                            </button>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<img class="w-32 h-32 object-contain" data-alt="Close up of professional electrician tools laid out on a clean dark surface, featuring high-quality wire strippers, voltage testers, and screwdrivers with insulated handles. The lighting is cold and clinical with cyan accents, creating a high-tech tradesman aesthetic. Each tool reflects sharp highlights, emphasizing its industrial quality and precision engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC916nqU0_h7ohOtQMdN1hkR_H9OxLVV5eKJo8Jy5VRb0DRbM2koBHKmfBZDynsDNL60AZ4-LAREcDFY2soOdhidO5ka1OoiE3Ymd1vtG1C9W0-ad7HSx9B0npfA_mw14_zDLgW2a2qMBOB2sJFFtfB4aYlQw8i2xMge2vqIy2fMfeCeAnoteSwx3SvMFy5YDYBpDpjrCdAEDWEAxo5g_q4VFkx-wboNFrDJPJioDmLCcvLsMPY_mqVtg">
+</div>
+</div>
+<!-- 3. Testing & Certification -->
+<div class="flex-1 glass-card p-6 rounded-xl group">
+<span class="material-symbols-outlined text-power-green text-4xl mb-4">verified</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Testing &amp; Certification</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Full safety inspections and legal EICR certification for landlords and homeowners.
+                        </p>
+<button class="text-electric-blue border border-electric-blue/30 px-6 py-2 rounded-full font-label-caps text-label-caps hover:bg-electric-blue hover:text-charcoal-void transition-all">
+                            VIEW DETAILS
+                        </button>
+</div>
+</div>
+<!-- Secondary Info Cards -->
+<div class="md:col-span-4 glass-card p-6 rounded-xl border-l-4 border-l-electric-blue">
+<h4 class="font-label-caps text-label-caps text-electric-blue mb-4">CITY &amp; CENTRAL</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Rapid response teams stationed across central hubs for the fastest urban service.</p>
+</div>
+<div class="md:col-span-4 glass-card p-6 rounded-xl border-l-4 border-l-electric-blue">
+<h4 class="font-label-caps text-label-caps text-electric-blue mb-4">NORTH &amp; EAST</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Dedicated local support for North and East London residential neighborhoods.</p>
+</div>
+<div class="md:col-span-4 glass-card p-6 rounded-xl border-l-4 border-l-electric-blue">
+<h4 class="font-label-caps text-label-caps text-electric-blue mb-4">BEYOND M25</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Extended coverage areas for large-scale commercial installations and audits.</p>
+</div>
+</div>
+</section>
+<!-- Dynamic Experience Section -->
+<section class="max-w-container-max mx-auto px-gutter mt-section-gap">
+<div class="relative rounded-2xl overflow-hidden min-h-[400px] flex items-center">
+<div class="absolute inset-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A wide angle shot of a professional electrician working on a complex residential distribution board in a sleek modern white-walled room. The lighting is bright and clean, casting soft shadows. The electrician is focused and wearing high-visibility accents, representing modern professionalism and technical mastery in a high-end architectural setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCEta5NcmwvJuQy7O80ZBPYk9LdyeCTJersEsOJusWgMIGR4smsyy14DI21dpvvGYEVvYt3Tl18VsEjD1gbP1eYqvTirDwESlEAagrA1JUycVbzGoAkblcE_7SV520mYYw4OV5Pk3MSCA6YlsCA88hvB61Bw7Z1bnEdGCoY0Rqghpnv1q5nWD_iD2vndWQIqjM3G7MX4zd4y01QRLH7tdOxwll97HoNQK5QzlajISxUR_SCWcRLIWIqQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-charcoal-void via-charcoal-void/80 to-transparent"></div>
+</div>
+<div class="relative z-10 px-8 max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Competitive Rates. <br>30+ Years Experience.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        We don't just fix wires; we provide peace of mind. Every job is handled with the same precision that has made us a trusted name for three decades.
+                    </p>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<div class="text-display-lg text-electric-blue font-bold">100%</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">SATISFACTION</div>
+</div>
+<div>
+<div class="text-display-lg text-electric-blue font-bold">24/7</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">AVAILABILITY</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-charcoal-void border-t border-outline-variant">
+<div class="max-w-container-max mx-auto py-section-gap px-gutter flex flex-col md:flex-row justify-between items-start gap-gutter">
+<div class="max-w-sm">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-electric-blue text-2xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-label-caps text-label-caps text-on-surface">YOUR LOCAL ELECTRICIAN</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Specialising in solving emergency electrical problems quickly. Available through Christmas and New Year.
+                </p>
+<div class="flex flex-col gap-2">
+<a class="text-electric-blue font-body-md hover:underline transition-all" href="mailto:johnburger@iname.com">johnburger@iname.com</a>
+<p class="text-on-surface-variant font-body-md">Call John on 0208 819 7772</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-8">
+<div>
+<h5 class="text-white font-label-caps text-label-caps mb-4">COVERAGE</h5>
+<ul class="flex flex-col gap-2">
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-blue transition-colors" href="index.html">City London</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-blue transition-colors" href="index.html">North London</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-blue transition-colors" href="index.html">East London</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-blue transition-colors" href="index.html">Central London</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-label-caps text-label-caps mb-4">LEGAL</h5>
+<ul class="flex flex-col gap-2">
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-blue transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-blue transition-colors" href="our-electrical-services.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter pb-8 flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-8">
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
+                © 2024 Your Local Electrician (thewireman.co.uk). Call John on 0208 819 7772
+            </p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<span class="material-symbols-outlined text-white/20">electric_bolt</span>
+<span class="material-symbols-outlined text-white/20">shield</span>
+<span class="material-symbols-outlined text-white/20">handyman</span>
+</div>
+</div>
+</footer>
+<!-- FAB for Emergency (Mobile Only) -->
+<div class="md:hidden fixed bottom-6 right-6 z-[60]">
+<a class="w-16 h-16 bg-alert-orange rounded-full flex items-center justify-center text-white shadow-2xl shadow-alert-orange/50 animate-bounce" href="tel:02088197772">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+</a>
+</div>
+<script>
+        // Micro-interaction for glass cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

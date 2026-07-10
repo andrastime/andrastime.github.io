@@ -1,0 +1,417 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Advanced Services | Top Techs Birmingham</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#303034",
+                    "warning-amber": "#FFB800",
+                    "surface-bright": "#39393d",
+                    "on-surface": "#e4e1e7",
+                    "on-surface-variant": "#eabcb8",
+                    "on-background": "#e4e1e7",
+                    "obsidian-deep": "#050505",
+                    "tertiary": "#c9c6c5",
+                    "surface-container-highest": "#353439",
+                    "glass-stroke": "rgba(255, 255, 255, 0.12)",
+                    "outline": "#b08783",
+                    "tertiary-container": "#929090",
+                    "surface-container-low": "#1b1b1f",
+                    "outline-variant": "#5f3e3c",
+                    "on-secondary-fixed": "#002022",
+                    "background": "#131317",
+                    "primary-fixed": "#ffdad7",
+                    "primary-container": "#ff5352",
+                    "on-secondary-fixed-variant": "#004f54",
+                    "on-primary-fixed": "#410004",
+                    "inverse-primary": "#c0001e",
+                    "on-secondary": "#00363a",
+                    "secondary": "#d3fbff",
+                    "tertiary-fixed-dim": "#c9c6c5",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "secondary-fixed-dim": "#00dbe9",
+                    "on-primary": "#68000b",
+                    "on-primary-container": "#5c0009",
+                    "surface-dim": "#131317",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed": "#7df4ff",
+                    "surface-container": "#1f1f23",
+                    "primary-fixed-dim": "#ffb3ae",
+                    "diagnostic-green": "#39FF14",
+                    "tertiary-fixed": "#e5e2e1",
+                    "secondary-container": "#00eefc",
+                    "surface-container-high": "#2a2a2e",
+                    "primary": "#ffb3ae",
+                    "surface": "#131317",
+                    "on-tertiary-container": "#2a2a29",
+                    "on-secondary-container": "#00686f",
+                    "surface-tint": "#ffb3ae",
+                    "surface-container-lowest": "#0e0e12",
+                    "error-container": "#93000a",
+                    "inverse-surface": "#e4e1e7",
+                    "surface-variant": "#353439",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "on-error": "#690005",
+                    "error": "#ffb4ab",
+                    "on-tertiary": "#313030",
+                    "on-primary-fixed-variant": "#930014"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "glass-padding": "2rem",
+                    "grid-unit": "8px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "code-data": ["JetBrains Mono"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Sora"],
+                    "headline-md": ["Sora"],
+                    "label-caps": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Sora"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "code-data": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 32px 32px;
+            color: #e4e1e7;
+        }
+        .glass-panel {
+            background: rgba(26, 26, 30, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 15px rgba(255, 179, 174, 0.2);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 238, 252, 0.2);
+        }
+        .diagnostic-step-active {
+            border-color: #00eeef;
+            background: rgba(0, 238, 252, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-glass-stroke">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">Top Techs Birmingham</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="specialized-services-the-diagnostic-lab.html">Diagnostics</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="specialized-services-the-diagnostic-lab.html">Advanced Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="specialized-services-the-diagnostic-lab.html">Security</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">Booking</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="the-lab-technical-blog-updates.html">The Lab</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-on-primary-fixed font-label-caps text-label-caps px-6 py-2 uppercase tracking-widest scale-95 active:scale-90 transition-transform neon-glow-primary">
+                    Emergency Repair
+                </button>
+<span class="material-symbols-outlined text-primary cursor-pointer">verified_user</span>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-gutter max-w-container-max mx-auto">
+<!-- Hero Section: Digital Surgeons -->
+<section class="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="font-label-caps text-label-caps text-secondary-container mb-4 block">SURGICAL REPAIR CAPABILITIES</span>
+<h1 class="font-headline-lg text-headline-lg mb-6 leading-tight">Beyond The <span class="text-primary">Mechanical</span> Realm</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                    We treat vehicle architecture with the precision of a digital surgeon. Specializing in micro-level repairs, ECU virginizing, and advanced EV telemetry that dealerships simply replace.
+                </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 border border-transparent hover:border-secondary-container transition-all">START DIAGNOSIS</button>
+<button class="bg-transparent border border-secondary-container text-secondary-container font-label-caps text-label-caps px-8 py-4 hover:bg-secondary-container/10 transition-all">VIEW LAB WORK</button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary-container opacity-20 blur group-hover:opacity-40 transition duration-1000"></div>
+<div class="relative glass-panel aspect-video overflow-hidden">
+<img alt="Specialized diagnostic repair" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvq_SYvAJT2mKWXJqtR3lDnfK_urGijlaaqgAKksML7qrlEECPEsr6X8CEVVmwvLqReqK2xUHbi5k0cBfw9uWkJKt--Kb5LCDk4QGIq9EzhtQeKo9Fn24Z1Ourk2ce2mlrbwLCb_iktRdV6aQu1MuMk2HvbG1-s3DTUdbvMNmAbXsZpbBs548vFTNF5I-XIGRtTAGgpsot0yrFD-3ycpxRnf0zM_HnDW_BpWB_XlgvU-43Yx-WhjMRUUXI">
+<div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/80 to-transparent">
+<p class="font-code-data text-code-data text-diagnostic-green">SYSTEMS_CHECK: STABLE // VOLTAGE: 14.4V</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Diagnostic Tree (Symptom Finder) -->
+<section class="mb-24">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="font-label-caps text-label-caps text-primary">INTERACTIVE SYMPTOM FINDER</span>
+<h2 class="font-headline-md text-headline-md mt-2">The Diagnostic Lab</h2>
+</div>
+<div class="text-right hidden md:block">
+<p class="font-code-data text-code-data text-on-surface-variant">NODE_PATH: ROOT/VEHICLE_ELECTRICS/</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Step 1: Category -->
+<div class="glass-panel p-6 flex flex-col gap-4 diagnostic-step-active border-secondary-container">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">electric_bolt</span>
+<span class="font-label-caps text-[10px] text-secondary-container border border-secondary-container px-2 py-0.5">STEP 01</span>
+</div>
+<h3 class="font-headline-md text-[18px]">Fault Category</h3>
+<ul class="space-y-2 mt-4">
+<li class="bg-secondary-container/20 border-l-2 border-secondary-container p-3 flex justify-between items-center cursor-pointer">
+<span class="font-label-caps text-xs">Electrical System</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+</li>
+<li class="p-3 border border-glass-stroke font-label-caps text-xs hover:bg-white/5 cursor-pointer transition-colors">Digital Security</li>
+<li class="p-3 border border-glass-stroke font-label-caps text-xs hover:bg-white/5 cursor-pointer transition-colors">ADAS / Calibration</li>
+</ul>
+</div>
+<!-- Step 2: Symptom -->
+<div class="glass-panel p-6 flex flex-col gap-4 border-glass-stroke opacity-60">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-on-surface-variant">error</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant border border-glass-stroke px-2 py-0.5">STEP 02</span>
+</div>
+<h3 class="font-headline-md text-[18px]">Primary Symptom</h3>
+<ul class="space-y-2 mt-4">
+<li class="p-3 border border-glass-stroke font-label-caps text-xs">Drained Battery</li>
+<li class="p-3 border border-glass-stroke font-label-caps text-xs">No Communication</li>
+<li class="p-3 border border-glass-stroke font-label-caps text-xs">Warning Lights</li>
+</ul>
+</div>
+<!-- Step 3: Vehicle Type -->
+<div class="glass-panel p-6 flex flex-col gap-4 border-glass-stroke opacity-60">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-on-surface-variant">directions_car</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant border border-glass-stroke px-2 py-0.5">STEP 03</span>
+</div>
+<h3 class="font-headline-md text-[18px]">Vehicle Architecture</h3>
+<ul class="space-y-2 mt-4">
+<li class="p-3 border border-glass-stroke font-label-caps text-xs">Internal Combustion</li>
+<li class="p-3 border border-glass-stroke font-label-caps text-xs">Electric / Hybrid</li>
+<li class="p-3 border border-glass-stroke font-label-caps text-xs">Performance / Luxury</li>
+</ul>
+</div>
+<!-- Final Action -->
+<div class="glass-panel p-6 flex flex-col justify-center items-center gap-6 border-dashed border-primary/40 bg-primary/5">
+<span class="material-symbols-outlined text-primary text-4xl">biotech</span>
+<p class="text-center font-label-caps text-xs text-on-surface-variant">Awaiting Selection Chain Completion...</p>
+<button class="w-full border border-primary text-primary font-label-caps text-label-caps py-4 opacity-50 cursor-not-allowed">ANALYZE DATA</button>
+</div>
+</div>
+</section>
+<!-- Specialized Services Grid -->
+<section class="mb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- EV Architecture -->
+<div class="glass-panel p-8 flex flex-col gap-6 group hover:border-primary transition-all">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary-container/10 border border-secondary-container/30">
+<span class="material-symbols-outlined text-secondary-container">battery_charging_full</span>
+</div>
+<div>
+<h3 class="font-headline-md text-xl mb-2">EV Architecture</h3>
+<p class="text-on-surface-variant text-sm">High-voltage system diagnostics and thermal management calibration for next-gen electric powertrains.</p>
+</div>
+<div class="mt-auto pt-4 border-t border-glass-stroke">
+<span class="font-code-data text-[11px] text-secondary-container">#IONIC #HV_LINK #REMAP</span>
+</div>
+</div>
+<!-- ADAS Calibration -->
+<div class="glass-panel p-8 flex flex-col gap-6 group hover:border-primary transition-all">
+<div class="w-12 h-12 flex items-center justify-center bg-warning-amber/10 border border-warning-amber/30">
+<span class="material-symbols-outlined text-warning-amber">sensors</span>
+</div>
+<div>
+<h3 class="font-headline-md text-xl mb-2">ADAS Calibration</h3>
+<p class="text-on-surface-variant text-sm">Precision realignment of radar, LiDAR, and vision systems following body repair or component swaps.</p>
+</div>
+<div class="mt-auto pt-4 border-t border-glass-stroke">
+<span class="font-code-data text-[11px] text-warning-amber">#RADAR_SYMBOLOGY #LANE_ASSIST</span>
+</div>
+</div>
+<!-- ECU Virginizing -->
+<div class="glass-panel p-8 flex flex-col gap-6 group hover:border-primary transition-all">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 border border-primary/30">
+<span class="material-symbols-outlined text-primary">memory</span>
+</div>
+<div>
+<h3 class="font-headline-md text-xl mb-2">ECU Virginizing</h3>
+<p class="text-on-surface-variant text-sm">Resetting used control modules to factory state for integration, bypassing the need for brand new hardware.</p>
+</div>
+<div class="mt-auto pt-4 border-t border-glass-stroke">
+<span class="font-code-data text-[11px] text-primary">#CHIP_SURGERY #IMMO_OFF</span>
+</div>
+</div>
+<!-- Ghost II Security -->
+<div class="glass-panel p-8 flex flex-col gap-6 group hover:border-primary transition-all">
+<div class="w-12 h-12 flex items-center justify-center bg-diagnostic-green/10 border border-diagnostic-green/30">
+<span class="material-symbols-outlined text-diagnostic-green">security</span>
+</div>
+<div>
+<h3 class="font-headline-md text-xl mb-2">Ghost II Security</h3>
+<p class="text-on-surface-variant text-sm">Advanced immobilization that communicates via the vehicle's CAN bus, invisible to thief diagnostics.</p>
+</div>
+<div class="mt-auto pt-4 border-t border-glass-stroke">
+<span class="font-code-data text-[11px] text-diagnostic-green">#CAN_BUS #STEALTH #GHOST</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Proof Section -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[500px]">
+<div class="lg:col-span-2 relative glass-panel overflow-hidden">
+<img alt="Precision workshop area" class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLu27QI0QQesxidQP9KAZqM9mniaIPzPPY7X1di9KaAkftgn9K2ojpjpPxyHbiW0nJEsn-BmHBTCKQJU3HBcq9inW8VvGx_2AM3oxSu-guNljHUesFWV6G2Pouizyv2Or0oxWyhlhJQvQslmRsxYaO1zTbhpmoOmjH8L-Kz3cH1EKNEDq5NAdRBRgi47kTIYM-3eHjJwVLDCzfsyErSgKBuU__peUfvG9Bd4ApHk0rxJT7LLxDsVQfpr2CQ">
+<div class="absolute inset-0 bg-gradient-to-r from-obsidian-deep/80 via-transparent to-transparent flex items-center p-12">
+<div class="max-w-md">
+<span class="font-label-caps text-label-caps text-secondary-container mb-4 block">SURGICAL THEATER</span>
+<h3 class="font-headline-lg text-headline-md mb-4 uppercase">The Laboratory Standard</h3>
+<p class="text-on-surface text-sm leading-relaxed mb-6">Our Birmingham facility is designed for technical isolation. Clean, organized, and equipped with OE-level diagnostic hardware that allows us to perform repairs others deem impossible.</p>
+<ul class="font-code-data text-xs space-y-2 text-diagnostic-green">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-diagnostic-green rounded-full"></span> CLASS-A DIAGNOSTIC ISOLATION</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-diagnostic-green rounded-full"></span> ESD-SAFE SOLDERING STATION</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-diagnostic-green rounded-full"></span> CAN-BUS NETWORK ANALYSIS</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="glass-panel p-8 flex flex-col justify-center gap-8 border-l-4 border-primary">
+<div class="flex items-center gap-4">
+<div class="text-3xl font-headline-lg text-primary">4.8</div>
+<div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-label-caps text-[10px]">VERIFIED RATING</span>
+</div>
+</div>
+<div class="relative pl-6 border-l border-glass-stroke">
+<span class="absolute -left-3 -top-2 text-4xl text-primary/30 font-serif">“</span>
+<p class="italic text-on-surface-variant text-sm mb-4 leading-relaxed">
+                        Top Techs fixed a module that the main dealer quoted £3,000 to replace. They 'virginized' a second-hand part for a fraction of the price. True digital surgeons.
+                    </p>
+<cite class="font-label-caps text-[10px] text-primary">— LUXURY PERFORMANCE OWNER</cite>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-variant border border-glass-stroke py-4 font-label-caps text-label-caps transition-all">READ ALL CLINICAL CASE STUDIES</button>
+</div>
+</section>
+</main>
+<!-- Side Nav (Responsive Anchor) -->
+<aside class="hidden lg:flex flex-col h-full w-20 fixed left-0 top-0 pt-24 bg-surface-container-low/95 backdrop-blur-2xl border-r border-glass-stroke z-40 items-center py-8 gap-12">
+<div class="flex flex-col gap-10">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" title="Home">home</span>
+<span class="material-symbols-outlined text-primary cursor-pointer transition-colors" title="Advanced Services">precision_manufacturing</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" title="Fault Finder">account_tree</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" title="Schedule">calendar_month</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" title="Technical Blog">biotech</span>
+</div>
+<div class="mt-auto flex flex-col gap-6 pb-6">
+<span class="material-symbols-outlined text-error/50 hover:text-error cursor-pointer transition-colors" title="Emergency Support">emergency_home</span>
+</div>
+</aside>
+<footer class="bg-obsidian-deep w-full py-12 border-t border-glass-stroke">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="font-label-caps text-primary mb-6 block">Top Techs Birmingham</span>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 opacity-70">
+                    Precision Auto-Electrical Engineering. Elevating vehicle diagnostics to a laboratory standard since establishment.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">share</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">mail</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-on-surface mb-6">SERVICES</h4>
+<ul class="space-y-3 font-body-md text-sm text-on-surface-variant">
+<li class="hover:text-diagnostic-green cursor-pointer">ECU Virginizing</li>
+<li class="hover:text-diagnostic-green cursor-pointer">Ghost II Immobilizers</li>
+<li class="hover:text-diagnostic-green cursor-pointer">EV Architecture</li>
+<li class="hover:text-diagnostic-green cursor-pointer">ADAS Alignment</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-on-surface mb-6">RESOURCES</h4>
+<ul class="space-y-3 font-body-md text-sm text-on-surface-variant">
+<li class="hover:text-diagnostic-green cursor-pointer">Technical Blog</li>
+<li class="hover:text-diagnostic-green cursor-pointer">Symptom Search</li>
+<li class="hover:text-diagnostic-green cursor-pointer">Lead Times</li>
+<li class="hover:text-diagnostic-green cursor-pointer">Case Studies</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-on-surface mb-6">COMPLIANCE</h4>
+<ul class="space-y-3 font-body-md text-sm text-on-surface-variant">
+<li class="hover:text-diagnostic-green cursor-pointer">Terms of Service</li>
+<li class="hover:text-diagnostic-green cursor-pointer">Privacy Policy</li>
+<li class="hover:text-diagnostic-green cursor-pointer">SSL Certificate</li>
+<li class="hover:text-diagnostic-green cursor-pointer">Cookie Settings</li>
+</ul>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-glass-stroke text-center">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">© 2024 Top Techs Birmingham. Precision Auto-Electrical Engineering.</p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for the Diagnostic Tree
+        const steps = document.querySelectorAll('.diagnostic-step-active');
+        steps.forEach(step => {
+            step.addEventListener('mouseenter', () => {
+                step.classList.add('neon-glow-cyan');
+            });
+            step.addEventListener('mouseleave', () => {
+                step.classList.remove('neon-glow-cyan');
+            });
+        });
+
+        // Sticky Header effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('bg-background/95');
+            } else {
+                header.classList.remove('bg-background/95');
+            }
+        });
+    </script>
+</body></html>

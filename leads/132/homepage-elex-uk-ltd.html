@@ -1,0 +1,454 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Elex UK Ltd | Premium Electrical &amp; Security North London</title>
+<meta content="Elex UK Ltd: Premium NICEIC-approved electricians in North London. Experts in domestic/commercial electrical, security alarms, smart home automation &amp; EV charging. Fast, reliable service in Enfield, Palmers Green &amp; beyond." name="description">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .glow-sm {
+            text-shadow: 0 0 10px rgba(0, 250, 255, 0.5);
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 20px rgba(0, 250, 255, 0.4);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .scanning-line {
+            position: relative;
+        }
+        .scanning-line::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00FAFF;
+            transition: width 0.3s ease;
+        }
+        .scanning-line:hover::after {
+            width: 100%;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #00FAFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#00677d",
+                    "on-primary": "#003642",
+                    "on-primary-fixed-variant": "#004e5f",
+                    "tertiary-fixed": "#9feffe",
+                    "surface-container": "#1f1f24",
+                    "outline": "#869398",
+                    "on-primary-container": "#00414f",
+                    "inverse-surface": "#e3e2e8",
+                    "on-tertiary-container": "#00424a",
+                    "on-primary-fixed": "#001f27",
+                    "inverse-on-surface": "#2f3035",
+                    "surface-dim": "#121317",
+                    "on-secondary": "#212675",
+                    "industry-red": "#E63946",
+                    "tertiary-container": "#60b1bf",
+                    "surface-container-highest": "#343439",
+                    "secondary-fixed": "#e0e0ff",
+                    "primary-container": "#00b4d8",
+                    "secondary": "#bfc2ff",
+                    "surface-container-low": "#1a1b20",
+                    "surface-container-high": "#292a2e",
+                    "primary": "#4cd6fb",
+                    "error-container": "#93000a",
+                    "error": "#ffb4ab",
+                    "surface-container-lowest": "#0d0e12",
+                    "on-secondary-fixed-variant": "#393e8c",
+                    "background": "#121317",
+                    "neon-blue-glow": "rgba(0, 250, 255, 0.5)",
+                    "on-tertiary": "#00363d",
+                    "surface-dark": "#12141D",
+                    "secondary-container": "#3b418f",
+                    "surface-tint": "#4cd6fb",
+                    "on-surface": "#e3e2e8",
+                    "on-error-container": "#ffdad6",
+                    "surface-glass": "rgba(255, 255, 255, 0.03)",
+                    "on-secondary-fixed": "#070a61",
+                    "surface-variant": "#343439",
+                    "surface": "#121317",
+                    "on-surface-variant": "#bcc9ce",
+                    "secondary-fixed-dim": "#bfc2ff",
+                    "tertiary": "#83d3e1",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#004f59",
+                    "outline-variant": "#3d494d",
+                    "on-tertiary-fixed": "#001f24",
+                    "electric-cyan": "#00FAFF",
+                    "primary-fixed-dim": "#4cd6fb",
+                    "primary-fixed": "#b3ebff",
+                    "on-background": "#e3e2e8",
+                    "on-secondary-container": "#aeb2ff",
+                    "surface-bright": "#38393e",
+                    "tertiary-fixed-dim": "#83d3e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "margin-mobile": "20px",
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "label-caps": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "utility-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-caps": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "utility-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface-glass backdrop-blur-md border-b border-white/10">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Elex UK Ltd Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLt948erICytQuVnPCtGUZScivm7HmumjamoRbay6xz-3w52_ps_v8nnoDasYePyboctz7gJ9l26P5nK_fNmrjJep1CZl1vnn1GisOZycwVbKHX9beV7kEGw24aoGLgD4m8dTJj2avGTedR2Wy-GtZCla0na67E7tmH8ShaSw_9BCr3okmiov0aIqgSMZOlI9bGlWPS17YJ8ENjwb4XCxNscdiq3hs4iRpNcRP7y-wfFA_NfdxL0rb3ulwA">
+</div>
+<nav class="hidden md:flex items-center gap-8 font-label-caps text-label-caps">
+<a class="text-primary border-b-2 border-primary pb-1" href="homepage-elex-uk-ltd.html">Home</a>
+<a class="text-on-surface-variant hover:text-electric-cyan transition-colors duration-300 scanning-line" href="index.html">Services</a>
+<a class="text-on-surface-variant hover:text-electric-cyan transition-colors duration-300 scanning-line" href="homepage-elex-uk-ltd.html">Smart Home</a>
+<a class="text-on-surface-variant hover:text-electric-cyan transition-colors duration-300 scanning-line" href="homepage-elex-uk-ltd.html">Security</a>
+<a class="text-on-surface-variant hover:text-electric-cyan transition-colors duration-300 scanning-line" href="index.html">Projects</a>
+<a class="text-on-surface-variant hover:text-electric-cyan transition-colors duration-300 scanning-line" href="homepage-elex-uk-ltd.html">About</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-caps text-label-caps font-bold transition-all duration-300 glow-button hover:scale-105">
+                Get a Quote
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<!-- Animated Background Placeholder -->
+
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-primary-container/20 border border-primary/30 px-4 py-1 rounded-full text-electric-cyan font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        NICEIC Approved Contractor
+                    </div>
+<h1 class="font-display-lg text-display-lg md:text-[84px] leading-tight text-white font-extrabold tracking-tighter">
+                        Powering North London <br>
+<span class="text-electric-cyan glow-sm">with Precision</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Elite electrical engineering and smart security solutions. From luxury home automation to mission-critical commercial infrastructure.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-electric-cyan text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 glow-button transition-transform active:scale-95">
+                            Request a Quote
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-electric-cyan text-electric-cyan font-label-caps text-label-caps px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-electric-cyan/10 transition-all">
+                            Emergency Services
+                            <span class="material-symbols-outlined">bolt</span>
+</button>
+</div>
+</div>
+<div class="hidden lg:block relative h-[600px]">
+<div class="absolute inset-0 glass-card rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-electric-cyan/10">
+<img class="w-full h-full object-cover opacity-80" data-alt="A high-end, luxury North London interior featuring cinematic architectural lighting and integrated smart home control panels. The scene uses a deep dark aesthetic with electric cyan glow accents reflecting off polished surfaces. Professional photography style, wide-angle lens, sharp focus on premium technology and masterfully installed electrical fixtures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIpN9pbvNqme75Or1NmuTZcowXx70akZxOSRAeRRp5WB30qOKkXhu2Q3suz0zjjOEcrwAeuWcRmJCrtl8Jdw0j-n-1brWHi3ooo85gsWZ6hG2GXQAnUiA6AuyBTrHcuDjMSgirdZT4cuEGNCGxhx7n6yiD7mQT3hj1vrCJM7LgsZss0HqbC67KdCwCL_xsKhb_iFbLBOyZcQpMG1N9mqgnyVIihcUMyzTfuOS4geoCN5GLZDPzosqU5Q">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+</div>
+<!-- Floating Tech Badge -->
+<div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-2xl flex items-center gap-4 animate-bounce duration-[4000ms]">
+<div class="bg-electric-cyan/20 p-3 rounded-xl">
+<span class="material-symbols-outlined text-electric-cyan text-3xl" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-electric-cyan">24/7 Monitoring</p>
+<p class="font-body-md text-body-md font-bold">Elite Security Integration</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Signal Ticker -->
+<section class="py-12 bg-surface-container-low border-y border-white/5">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-wrap justify-center md:justify-between items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-white font-extrabold">20+</span>
+<span class="font-label-caps text-label-caps">Years of<br>Excellence</span>
+</div>
+<div class="h-12 w-[1px] bg-white/10 hidden md:block"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+<span class="font-label-caps text-label-caps">NICEIC APPROVED</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl">construction</span>
+<span class="font-label-caps text-label-caps">PART P REGISTERED</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl">ev_station</span>
+<span class="font-label-caps text-label-caps">OZEV CERTIFIED</span>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Precision Engineering <br><span class="text-electric-cyan">Service Highlights</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">From foundational wiring to the pinnacle of smart integration, we deliver future-proof solutions for discerning clients.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Lighting -->
+<div class="md:col-span-8 group relative overflow-hidden glass-card rounded-3xl p-10 h-[450px] flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="Close-up of high-end architectural LED lighting design in a modern North London gallery. The lighting features sharp, minimalist geometric lines and a futuristic feel, with deep blacks and vibrant cyan highlights. The mood is sophisticated and technologically advanced, emphasizing precision electrical installation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuNfcsQceBYrPQsumbe7ISjbRXvXbdTBhJUozQPfUv_797ah8EkqD543WZeGFnxsE8L6M_jFHpZWStUEoyfmuErOFaA4XBn3d-xcQEdiB8Dwz_D492lxfVOvX7Hbp8pLK-7IrIoTv9Dwzv2_G7tfCGL2mRggfXfT0zZ2TehZI9Q0DEhH5hKOMxgQZmQMh3ZZTPgKvPpS7ZBT6Rw8a4x_dEwtVygkp_-14OmCHoXKhSM_5VycVQ2PUu9A">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/40 to-transparent"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-electric-cyan text-4xl mb-4">lightbulb</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Architectural Lighting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Bespoke LED design and installation that transforms environments into immersive experiences.</p>
+</div>
+</div>
+<!-- Security -->
+<div class="md:col-span-4 group relative overflow-hidden glass-card rounded-3xl p-10 h-[450px] border-electric-cyan/20">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:rotate-3 transition-transform duration-700" data-alt="A high-tech security camera and smart motion sensor mounted on a sleek dark surface. Glowing cyan indicator lights signify an active, secure state. Minimalist industrial design, premium materials, high-key focus on reliability and modern safety technology for luxury residential properties." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYo8HcfQG2P7zkiYk4O4xpcgH8KXMdOFXEQeinhHzxjGCrPmiEJBdcwHbDyfVddnd1_FGcZ6EIjH66BE5bgI5LWdJGuzV1pFD-XXa9PVzQbCTU1aOM7oWtLhS59IVKGSYUJfzaTn0eAFPi2Qpq0qC6jfeVnkfXHCif7rLpgCsK5XCcpVjpaesLQgTx0hirDKUotN4X3N6ZBnkwpGPjbBfRc-iEMR9sseRWZJ0zniBL8vDsoZJpEa8jjw">
+<div class="relative h-full flex flex-col justify-between">
+<div class="bg-electric-cyan/10 w-16 h-16 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-cyan text-3xl">shield</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Security Alarms</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Military-grade protection and 24/7 monitoring for complete peace of mind.</p>
+</div>
+</div>
+</div>
+<!-- Smart Home -->
+<div class="md:col-span-4 group relative overflow-hidden glass-card rounded-3xl p-10 h-[450px]">
+<div class="relative h-full flex flex-col justify-between">
+<div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">home_max</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Smart Automation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Seamlessly integrate your climate, media, and security into one intuitive ecosystem.</p>
+</div>
+</div>
+</div>
+<!-- EV Charging -->
+<div class="md:col-span-8 group relative overflow-hidden glass-card rounded-3xl p-10 h-[450px] flex items-end">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000" data-alt="An elegant electric vehicle charging station installed on a clean, dark minimalist garage wall. A high-end EV is partially visible, illuminated by a soft cyan glow from the charger's indicator ring. The scene communicates high-tech convenience and premium sustainable lifestyle choices in a luxury home setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC0QJd4kcAqd-RnlHoYgpdJ26tdsrgGOc_tf0zWlOswRWoN-RIaGxi-6sY3wlpA8GEjBzhyauFWI01A4so4fboKbLi1_NkkIFeoL9CUdydNKF3dxGfrXwTj0IXumlO5XyQz9Nf5p8yVhJW9oEIYX80YKqUEPZnKYO5FASYSjSz1hAl7BMVuIAajMUL39z6D51equ-EshwZ1c6y1RIu0uiQho3v1y9fWpSsIG5oRdbMiNoxBeS2cQ1gqw">
+<div class="absolute inset-0 bg-gradient-to-r from-surface-dark via-surface-dark/60 to-transparent"></div>
+<div class="relative z-10 w-full md:w-1/2">
+<span class="material-symbols-outlined text-electric-cyan text-4xl mb-4">ev_charger</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">EV Charging</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Expert OZEV-certified installations for the next generation of transport.</p>
+<a class="text-electric-cyan font-label-caps text-label-caps flex items-center gap-2 group-hover:gap-4 transition-all" href="index.html">
+                            View Solutions <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Serving North London Section -->
+<section class="py-section-gap bg-surface-container overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-section-gap items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-8">Serving <br><span class="text-electric-cyan">North London</span></h2>
+<div class="space-y-6">
+<p class="font-body-lg text-body-lg text-on-surface-variant">Based in Enfield, we provide rapid-response electrical and security services across the region's most prestigious postcodes.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3 group">
+<div class="w-2 h-2 rounded-full bg-electric-cyan group-hover:scale-150 transition-transform"></div>
+<span class="font-label-caps text-label-caps text-white">Enfield</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="w-2 h-2 rounded-full bg-electric-cyan group-hover:scale-150 transition-transform"></div>
+<span class="font-label-caps text-label-caps text-white">Palmers Green</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="w-2 h-2 rounded-full bg-electric-cyan group-hover:scale-150 transition-transform"></div>
+<span class="font-label-caps text-label-caps text-white">Winchmore Hill</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="w-2 h-2 rounded-full bg-electric-cyan group-hover:scale-150 transition-transform"></div>
+<span class="font-label-caps text-label-caps text-white">Southgate</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="w-2 h-2 rounded-full bg-electric-cyan group-hover:scale-150 transition-transform"></div>
+<span class="font-label-caps text-label-caps text-white">Edmonton</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="w-2 h-2 rounded-full bg-electric-cyan group-hover:scale-150 transition-transform"></div>
+<span class="font-label-caps text-label-caps text-white">Muswell Hill</span>
+</div>
+</div>
+<button class="mt-8 border border-white/20 hover:border-electric-cyan text-white px-8 py-3 rounded-xl transition-all">
+                            Check Your Coverage
+                        </button>
+</div>
+</div>
+<div class="relative h-[500px] w-full rounded-3xl overflow-hidden glass-card border border-white/10">
+<!-- Map Mockup -->
+<div class="absolute inset-0 grayscale opacity-40 hover:opacity-70 transition-opacity duration-700" data-location="North London" style="">
+<img class="w-full h-full object-cover" data-alt="A stylized, high-contrast dark mode map of North London featuring glowing cyan markers on areas like Enfield, Palmers Green, and Southgate. The map has a sophisticated UI aesthetic with clean lines and minimal labels, emphasizing the service coverage area in a modern, tech-focused way." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB43k0vX5RxFf1-6SptzUcdF2jzunSdFSvLL4fEEgR82wGmGDfVxdKXdDdIZI4YuOovusEKAJUwtuSTHAmWz96tPgHHEFYdqqo8hUhABeklenvebva4DY_pjhg7NPieAg8fNCFaQcJU5csg30ZQxDyuHrE82zqLXqcIE2VzdugTECkwloWrX_JO1idrop2n9VKtuMhYmFEmFSugiI-ZbsphkaQEEg5vqxYaq2_f-6H-ka0APfRCDlPglA">
+</div>
+<!-- Overlay Info -->
+<div class="absolute top-8 right-8 glass-card p-4 rounded-xl border border-electric-cyan/30 animate-pulse">
+<div class="flex items-center gap-2 text-electric-cyan">
+<span class="material-symbols-outlined animate-ping">radio_button_checked</span>
+<span class="font-label-caps text-label-caps font-bold">Fast Response Available</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center relative py-20 rounded-[40px] overflow-hidden">
+<div class="absolute inset-0 bg-primary-container/10 backdrop-blur-3xl"></div>
+<div class="relative z-10 max-w-3xl mx-auto space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-white">Ready to <span class="text-electric-cyan">Upgrade?</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Whether it's an emergency repair or a complex home automation project, our elite engineers are ready to deliver.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-electric-cyan text-on-primary font-bold px-10 py-5 rounded-xl glow-button hover:scale-105 transition-all font-label-caps text-label-caps">
+                            Book a Consultation
+                        </button>
+<button class="bg-white/5 hover:bg-white/10 border border-white/10 px-10 py-5 rounded-xl transition-all font-label-caps text-label-caps">
+                            Call 020 XXX XXXX
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-section-gap">
+<div class="space-y-6">
+<img alt="Elex UK Ltd" class="h-8" src="https://lh3.googleusercontent.com/aida/AP1WRLt948erICytQuVnPCtGUZScivm7HmumjamoRbay6xz-3w52_ps_v8nnoDasYePyboctz7gJ9l26P5nK_fNmrjJep1CZl1vnn1GisOZycwVbKHX9beV7kEGw24aoGLgD4m8dTJj2avGTedR2Wy-GtZCla0na67E7tmH8ShaSw_9BCr3okmiov0aIqgSMZOlI9bGlWPS17YJ8ENjwb4XCxNscdiq3hs4iRpNcRP7y-wfFA_NfdxL0rb3ulwA">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">
+                    Premium Electrical &amp; Security specialists serving the residential and commercial elite of North London.
+                </p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-6">Service Areas</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li class="opacity-60 hover:opacity-100 transition-opacity hover:text-electric-cyan">Enfield</li>
+<li class="opacity-60 hover:opacity-100 transition-opacity hover:text-electric-cyan">Palmers Green</li>
+<li class="opacity-60 hover:opacity-100 transition-opacity hover:text-electric-cyan">Winchmore Hill</li>
+<li class="opacity-60 hover:opacity-100 transition-opacity hover:text-electric-cyan">Southgate</li>
+<li class="opacity-60 hover:opacity-100 transition-opacity hover:text-electric-cyan">Edmonton</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-6">Accreditations</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li class="opacity-60 hover:opacity-100 transition-opacity hover:text-electric-cyan">NICEIC Certified</li>
+<li class="opacity-60 hover:opacity-100 transition-opacity hover:text-electric-cyan">Part P Registered</li>
+<li class="opacity-60 hover:opacity-100 transition-opacity hover:text-electric-cyan">OZEV Authorised</li>
+<li class="opacity-60 hover:opacity-100 transition-opacity hover:text-electric-cyan">SafeContractor Approved</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-6">Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-electric-cyan hover:text-on-primary transition-all" href="index.html">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-electric-cyan hover:text-on-primary transition-all" href="get-a-quote-elex-uk-ltd.html">
+<span class="material-symbols-outlined">mail</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-electric-cyan hover:text-on-primary transition-all" href="get-a-quote-elex-uk-ltd.html">
+<span class="material-symbols-outlined">phone_in_talk</span>
+</a>
+</div>
+<p class="mt-8 font-label-caps text-label-caps text-electric-cyan">North London Office</p>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">Elite House, Enfield, EN1</p>
+</div>
+</div>
+<div class="border-t border-white/5 py-8 text-center font-body-md text-body-md text-on-surface-variant opacity-40 px-margin-mobile">
+            © 2024 Elex UK Ltd. Premium Electrical &amp; Security North London.
+        </div>
+</footer>
+<!-- Side Nav for Mobile (Logical Destination Anchor) -->
+<div class="fixed inset-y-0 right-0 w-64 bg-surface-dim z-[100] transform translate-x-full transition-transform duration-300 md:hidden p-6 flex flex-col gap-8 shadow-2xl shadow-electric-cyan/20" id="side-nav">
+<div class="flex justify-between items-center mb-8">
+<span class="font-headline-md text-headline-md text-electric-cyan font-bold">Menu</span>
+<button class="text-white" onclick="toggleNav()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-4">
+<a class="bg-primary-container text-on-primary-container rounded-xl p-3 flex items-center gap-3 font-label-caps text-label-caps" href="homepage-elex-uk-ltd.html">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="text-on-surface-variant p-3 flex items-center gap-3 hover:bg-surface-variant rounded-xl font-label-caps text-label-caps transition-all" href="get-a-quote-elex-uk-ltd.html">
+<span class="material-symbols-outlined">request_quote</span> Request Quote
+            </a>
+<a class="text-on-surface-variant p-3 flex items-center gap-3 hover:bg-surface-variant rounded-xl font-label-caps text-label-caps transition-all" href="areas-we-cover-north-london-electricians.html">
+<span class="material-symbols-outlined">location_on</span> Our Areas
+            </a>
+<a class="text-on-surface-variant p-3 flex items-center gap-3 hover:bg-surface-variant rounded-xl font-label-caps text-label-caps transition-all" href="get-a-quote-elex-uk-ltd.html">
+<span class="material-symbols-outlined">call</span> Contact
+            </a>
+</nav>
+<button class="mt-auto bg-industry-red text-white py-4 rounded-xl font-bold font-label-caps text-label-caps shadow-lg shadow-industry-red/20">
+            Emergency Call-Out
+        </button>
+</div>
+<!-- Mobile Menu Toggle Button -->
+<button class="md:hidden fixed bottom-8 right-8 z-[110] bg-electric-cyan text-on-primary p-4 rounded-full shadow-2xl" onclick="toggleNav()">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<script>
+        function toggleNav() {
+            const nav = document.getElementById('side-nav');
+            const isHidden = nav.classList.contains('translate-x-full');
+            if (isHidden) {
+                nav.classList.remove('translate-x-full');
+            } else {
+                nav.classList.add('translate-x-full');
+            }
+        }
+    </script>
+</body></html>

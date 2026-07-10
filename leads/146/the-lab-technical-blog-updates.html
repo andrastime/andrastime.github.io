@@ -1,0 +1,383 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Lab | Top Techs Birmingham</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Hanken+Grotesk:wght@300;400;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#303034",
+                        "warning-amber": "#FFB800",
+                        "surface-bright": "#39393d",
+                        "on-surface": "#e4e1e7",
+                        "on-surface-variant": "#eabcb8",
+                        "on-background": "#e4e1e7",
+                        "obsidian-deep": "#050505",
+                        "tertiary": "#c9c6c5",
+                        "surface-container-highest": "#353439",
+                        "glass-stroke": "rgba(255, 255, 255, 0.12)",
+                        "outline": "#b08783",
+                        "tertiary-container": "#929090",
+                        "surface-container-low": "#1b1b1f",
+                        "outline-variant": "#5f3e3c",
+                        "on-secondary-fixed": "#002022",
+                        "background": "#131317",
+                        "primary-fixed": "#ffdad7",
+                        "primary-container": "#ff5352",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "on-primary-fixed": "#410004",
+                        "inverse-primary": "#c0001e",
+                        "on-secondary": "#00363a",
+                        "secondary": "#d3fbff",
+                        "tertiary-fixed-dim": "#c9c6c5",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "secondary-fixed-dim": "#00dbe9",
+                        "on-primary": "#68000b",
+                        "on-primary-container": "#5c0009",
+                        "surface-dim": "#131317",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#7df4ff",
+                        "surface-container": "#1f1f23",
+                        "primary-fixed-dim": "#ffb3ae",
+                        "diagnostic-green": "#39FF14",
+                        "tertiary-fixed": "#e5e2e1",
+                        "secondary-container": "#00eefc",
+                        "surface-container-high": "#2a2a2e",
+                        "primary": "#ffb3ae",
+                        "surface": "#131317",
+                        "on-tertiary-container": "#2a2a29",
+                        "on-secondary-container": "#00686f",
+                        "surface-tint": "#ffb3ae",
+                        "surface-container-lowest": "#0e0e12",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#e4e1e7",
+                        "surface-variant": "#353439",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-error": "#690005",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#313030",
+                        "on-primary-fixed-variant": "#930014"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "glass-padding": "2rem",
+                        "grid-unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "code-data": ["JetBrains Mono"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Sora"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "code-data": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 32px 32px;
+            color: #e4e1e7;
+        }
+
+        .glass-panel {
+            background: rgba(26, 26, 30, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .neon-glow-red:hover {
+            box-shadow: 0 0 15px rgba(255, 179, 174, 0.3);
+            border-color: #ffb3ae;
+        }
+
+        .neon-glow-cyan:hover {
+            box-shadow: 0 0 15px rgba(0, 238, 252, 0.3);
+            border-color: #00eefc;
+        }
+
+        .mask-gradient {
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+
+        .technical-line {
+            position: relative;
+        }
+        .technical-line::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: -24px;
+            right: -24px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .scroll-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl dark:bg-background/80 border-b border-glass-stroke">
+<nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary tracking-tighter" href="index.html">
+                    Top Techs Birmingham
+                </a>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="specialized-services-the-diagnostic-lab.html">Diagnostics</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="specialized-services-the-diagnostic-lab.html">EV Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="specialized-services-the-diagnostic-lab.html">Security</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300 border-b-2 border-primary pb-1" href="the-lab-technical-blog-updates.html">The Lab</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center gap-2 bg-primary px-6 py-2 rounded-lg text-on-primary font-label-caps text-label-caps hover:bg-primary-container transition-all scale-95 active:scale-90">
+                    Emergency Repair
+                </button>
+<span class="material-symbols-outlined text-primary cursor-pointer">verified_user</span>
+</div>
+</nav>
+</header>
+<main class="pt-24 pb-12 max-w-container-max mx-auto px-gutter grid grid-cols-12 gap-gutter">
+<!-- SideNav (Visible on Desktop) -->
+<aside class="hidden lg:flex flex-col col-span-3 sticky top-24 h-[calc(100vh-8rem)]">
+<div class="glass-panel rounded-xl p-6 h-full flex flex-col">
+<div class="mb-8">
+<p class="font-label-caps text-label-caps text-primary mb-1">Status: Online</p>
+<h2 class="font-headline-md text-headline-md text-on-surface">The Diagnostic Lab</h2>
+<p class="font-body-md text-on-surface-variant text-sm">Birmingham Auto Electrical</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-white/5 transition-all duration-200 font-label-caps text-label-caps" href="index.html">
+<span class="material-symbols-outlined">home</span> Home
+                    </a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-white/5 transition-all duration-200 font-label-caps text-label-caps" href="specialized-services-the-diagnostic-lab.html">
+<span class="material-symbols-outlined">precision_manufacturing</span> Advanced Services
+                    </a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-white/5 transition-all duration-200 font-label-caps text-label-caps" href="specialized-services-the-diagnostic-lab.html">
+<span class="material-symbols-outlined">account_tree</span> Fault Finder
+                    </a>
+<a class="flex items-center gap-4 px-4 py-3 bg-primary/20 text-primary border-r-4 border-primary font-label-caps text-label-caps" href="the-lab-technical-blog-updates.html">
+<span class="material-symbols-outlined">biotech</span> Technical Blog
+                    </a>
+</nav>
+<div class="mt-auto pt-8">
+<button class="w-full py-4 border border-diagnostic-green text-diagnostic-green font-label-caps text-label-caps rounded-lg neon-glow-cyan transition-all">
+                        Book Diagnostic
+                    </button>
+</div>
+</div>
+</aside>
+<!-- Content Canvas -->
+<div class="col-span-12 lg:col-span-9 space-y-gutter">
+<!-- Hero Section -->
+<section class="relative h-96 rounded-xl overflow-hidden glass-panel group">
+
+<div class="absolute inset-0 flex flex-col justify-end p-12 bg-gradient-to-t from-obsidian-deep via-transparent to-transparent">
+<span class="font-label-caps text-label-caps text-diagnostic-green mb-4 px-3 py-1 bg-diagnostic-green/10 w-fit rounded">Featured Case Study</span>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl">ECU Repair vs Replacement: The Surgical Advantage.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Why dealerships recommend total component swap-outs and how our micro-level diagnostics save clients thousands through precision wiring repair.</p>
+</div>
+</section>
+<!-- Diagnostic Feed (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Blog Article 1 -->
+<article class="md:col-span-2 glass-panel rounded-xl overflow-hidden flex flex-col">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="A professional automotive diagnostic workshop with a high-end Audi dashboard illuminated by complex digital telemetry. Next to it, a high-performance laptop displays a sophisticated ECU remapping interface with glowing cyan lines and diagnostic data trees. The setting is dark and clinical, featuring obsidian surfaces and subtle neon red and cyan lighting, emphasizing technical expertise and surgical precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKr4VDDdDL9OMBLdruGU0bG2QnzLKB3P_m2xHvIWAqJAhtWGNdKoBx28bB6Nc9F1Hd1BCc6Lnp2t9N6WLGH7n1HTfu0kdrn7JGp1k6k5qXZVV_gQtx5hX_jN5CTc2-89oz-AUr928W8wu2SZuvtB82qgJKf4x6kMqZPs4pFtba0exqbTOjBMOI8gRjUHo_nyV5uX90iB1eF4grzzqPSwJ9Dcysm8NkCLjNwKWGjonxKh5OC4-E7n-X">
+<div class="absolute top-4 left-4 font-label-caps text-label-caps bg-obsidian-deep/80 px-2 py-1 border border-glass-stroke">01 // REPAIR_LOG</div>
+</div>
+<div class="p-8 flex-1">
+<h3 class="font-headline-md text-headline-md mb-4">Precision Loom Repair: Resolving Intermittent ADAS Failure</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Tracing a signal drop-out in a 2025 hybrid system that the dealer couldn't find. Our lab technicians identified a microscopic fracture in the master harness.</p>
+<div class="flex items-center justify-between border-t border-glass-stroke pt-6">
+<span class="font-code-data text-code-data text-diagnostic-green">VOLTAGE_STABLE: 14.2V</span>
+<a class="font-label-caps text-label-caps text-primary flex items-center gap-2 hover:gap-4 transition-all" href="the-lab-technical-blog-updates.html">
+                                READ ANALYSIS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Social Stats Sidebar -->
+<div class="flex flex-col gap-6">
+<div class="glass-panel rounded-xl p-6 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-diagnostic-green text-4xl mb-2">analytics</span>
+<div class="font-headline-md text-headline-md">1,402</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Systems Virginized</div>
+</div>
+<div class="glass-panel rounded-xl p-6 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">emergency_share</span>
+<div class="font-headline-md text-headline-md">98%</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Fault Success Rate</div>
+</div>
+<div class="glass-panel rounded-xl p-6 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-2">groups</span>
+<div class="font-headline-md text-headline-md">15k+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Community Members</div>
+</div>
+</div>
+<!-- Recent Surgical Photos (Horizontal Gallery) -->
+<div class="col-span-1 md:col-span-3">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-label-caps text-label-caps text-on-surface">LAB_GALLERY // RECENT_REPAIRS</h2>
+<div class="flex gap-2">
+<button class="p-2 glass-panel hover:bg-primary/10 transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-2 glass-panel hover:bg-primary/10 transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="flex gap-4 overflow-x-auto scroll-hide pb-4">
+<div class="min-w-[300px] h-48 rounded-lg overflow-hidden glass-panel shrink-0 group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up macro shot of a disassembled Mercedes-Benz engine bay showing intricate wiring and high-tech electrical connectors. The lighting is focused and dramatic, highlighting the surgical nature of the auto-electrical work. The color palette is dominated by dark metallic tones and obsidian blacks with subtle red accents on plastic components. Style is minimal and technical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKlxXyHvpIJDuEkUsKI5knWO1FMarju8lJ4BdSJ7Fbv9FzNF6bRnrYvy_70gb5EmcmySADksaYFN1KJtVR9Isr7S1tnzClJJVjHDDTYBLvcRjUb3rM_KZNvJDc-xY8Smnrf7WiNLJDWyucF2wHBHoAToN4XWlUsvDoV9syz1ZI19pKtTF4MI0Ibd2WVIp7ElTcah1q50EVRd7pwmRPMqdu5uWsC94bxKeaCJ6ScF1Z9G95pfLxREIM">
+</div>
+<div class="min-w-[300px] h-48 rounded-lg overflow-hidden glass-panel shrink-0 group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A technician's hand using a high-precision digital probe on a complex circuit board from an automotive ECU. The board is illuminated by a sharp cyan light, reflecting off the tiny electrical components. The background is a dark, laboratory-style workshop environment. High-contrast, sleek technical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPLakadjz8DSB54Z441fWxvc5T-8EudJFFAy36PQgX9GQI5nQzkOiDn_1fK_rof-tkdZJMhxkmTLOLg8Ix7kDIFni7oHI8zWFHau3xKa7eB6ldvLyW8lKVnFMKs1D4FwqIezjaAuNk1uKnW3SKX1Nk-0UnCBisIX35gmzEWRY_TanPI5dstYd2XHoo7gmehgg5UgPUUoe248LA7Azlm3TN-imEXnDAXQNV-WiIvbGfTNiYRNJH47BW">
+</div>
+<div class="min-w-[300px] h-48 rounded-lg overflow-hidden glass-panel shrink-0 group">
+<div class="w-full h-full flex flex-col items-center justify-center bg-obsidian-deep relative overflow-hidden">
+
+<span class="material-symbols-outlined text-4xl text-primary mb-2">videocam</span>
+<p class="font-label-caps text-label-caps">LIVE_FEED</p>
+</div>
+</div>
+<div class="min-w-[300px] h-48 rounded-lg overflow-hidden glass-panel shrink-0 group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern vehicle interior featuring a glowing digital instrument cluster during a diagnostic check. The screen shows various technical readouts and warning icons in high-contrast cyan and amber. The steering wheel and surrounding dashboard are finished in premium dark textures, creating an atmosphere of advanced technological authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAthC16lT1Jo63Ur6ZEVE0j-4C5wGVoEtW-mGWLjIZ_otaphL875_2u6FUSdxU5pQSWck77oaI-jGwWc-CfVLpanPpT1bghd8tfZGGWkUQLErLMCN0aWKdBBlsBiSe8iQmL2IzI_zxOYF7f35TMItdkWImoH2u0wMEsK21pu8VFlT0f-0DXAnFuqZLvHa0wNnXB8huJtPPr2Da3Db0VUYhfVvW0dFskOSR7rrTdb-uUgVinETv2KpKz">
+</div>
+</div>
+</div>
+<!-- Social Hub Integration -->
+<div class="col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+<!-- Instagram Preview -->
+<div class="glass-panel rounded-xl p-8 border-l-4 border-primary">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">photo_camera</span>
+</div>
+<div>
+<h4 class="font-headline-md text-sm text-on-surface">Instagram Feed</h4>
+<p class="font-label-caps text-[10px] text-on-surface-variant">@TOPTECHS_BIRMINGHAM</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="aspect-square rounded bg-surface-container-high"></div>
+<div class="aspect-square rounded bg-surface-container-high"></div>
+<div class="aspect-square rounded bg-surface-container-high"></div>
+<div class="aspect-square rounded bg-surface-container-high"></div>
+<div class="aspect-square rounded bg-surface-container-high"></div>
+<div class="aspect-square rounded bg-surface-container-high"></div>
+</div>
+<button class="w-full mt-6 py-2 border border-glass-stroke text-on-surface font-label-caps text-xs hover:bg-white/5 transition-all">VIEW_FULL_STREAM</button>
+</div>
+<!-- Community Feedback -->
+<div class="glass-panel rounded-xl p-8 border-l-4 border-diagnostic-green">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-diagnostic-green/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-diagnostic-green text-fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div>
+<h4 class="font-headline-md text-sm text-on-surface">Community Trust</h4>
+<p class="font-label-caps text-[10px] text-on-surface-variant">VERIFIED_REVIEWS</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="p-3 bg-white/5 rounded">
+<p class="font-body-md text-xs italic text-on-surface-variant mb-2">" dealership wanted £3k for a new loom. Top Techs repaired the specific wire for a fraction. Absolute surgical precision."</p>
+<span class="font-label-caps text-[10px] text-diagnostic-green">— Marcus R. (Porsche Taycan)</span>
+</div>
+<div class="p-3 bg-white/5 rounded">
+<p class="font-body-md text-xs italic text-on-surface-variant mb-2">"Found an electrical parasitic drain that three other garages missed. Legends."</p>
+<span class="font-label-caps text-[10px] text-diagnostic-green">— Sarah W. (Range Rover Sport)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-obsidian-deep py-12 border-t border-glass-stroke mt-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<a class="font-label-caps text-primary text-xl mb-4 block" href="index.html">TOP TECHS BIRMINGHAM</a>
+<p class="font-body-md text-on-surface-variant max-w-sm">Precision auto-electrical engineering. Specialists in EV architecture, ADAS calibration, and high-performance ECU diagnostics.</p>
+<div class="flex gap-4 mt-8">
+<a class="w-10 h-10 flex items-center justify-center border border-glass-stroke rounded hover:text-primary transition-colors duration-300" href="the-lab-technical-blog-updates.html">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-glass-stroke rounded hover:text-primary transition-colors duration-300" href="the-lab-technical-blog-updates.html">
+<span class="material-symbols-outlined">forum</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-label-caps text-on-surface mb-6">RESOURCES</h5>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-diagnostic-green transition-colors" href="the-lab-technical-blog-updates.html">Technical Blog</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="specialized-services-the-diagnostic-lab.html">Fault Finder Tree</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="index.html">Booking Portal</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="specialized-services-the-diagnostic-lab.html">Emergency Support</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-on-surface mb-6">COMPLIANCE</h5>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-diagnostic-green transition-colors" href="specialized-services-the-diagnostic-lab.html">Terms of Service</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="the-lab-technical-blog-updates.html">SSL Certificate</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="index.html">Cookie Settings</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-12 pt-8 border-t border-glass-stroke/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-code-data text-xs text-on-surface-variant opacity-80">© 2024 Top Techs Birmingham. Precision Auto-Electrical Engineering.</p>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-diagnostic-green animate-pulse"></span>
+<span class="font-code-data text-xs text-diagnostic-green">SYSTEMS_ACTIVE_BHM_01</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for hover effects on glass panels
+        document.querySelectorAll('.glass-panel').forEach(panel => {
+            panel.addEventListener('mousemove', (e) => {
+                const rect = panel.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                panel.style.setProperty('--mouse-x', `${x}px`);
+                panel.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

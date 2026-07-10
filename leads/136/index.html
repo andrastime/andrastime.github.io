@@ -1,0 +1,508 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>South London Electricians | Premium Electrical Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#131313",
+                        "slate-gray": "#94A3B8",
+                        "surface-container": "#201f1f",
+                        "primary-container": "#ffd700",
+                        "midnight-black": "#0A0A0A",
+                        "on-tertiary-container": "#3b6b00",
+                        "tertiary-fixed-dim": "#87dc2c",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed-dim": "#c3c6d6",
+                        "secondary-fixed": "#dfe2f3",
+                        "on-background": "#e5e2e1",
+                        "inverse-primary": "#705d00",
+                        "glass-border": "rgba(255, 255, 255, 0.12)",
+                        "surface-dim": "#131313",
+                        "outline-variant": "#4d4732",
+                        "outline": "#999077",
+                        "electric-amber": "#FFBF00",
+                        "on-primary": "#3a3000",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-highest": "#353534",
+                        "surface-variant": "#353534",
+                        "on-tertiary": "#1c3700",
+                        "surface-bright": "#393939",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-fixed": "#0e2000",
+                        "on-tertiary-fixed-variant": "#2a5000",
+                        "on-secondary-fixed-variant": "#424654",
+                        "danger-red": "#ED1C24",
+                        "on-primary-fixed": "#221b00",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary": "#e6ffc8",
+                        "primary-fixed-dim": "#e9c400",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#b1b4c5",
+                        "tertiary-fixed": "#a1fa49",
+                        "surface-tint": "#e9c400",
+                        "secondary-container": "#424654",
+                        "surface": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#544600",
+                        "on-secondary": "#2c303d",
+                        "on-primary-container": "#705e00",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-fixed": "#ffe16d",
+                        "on-surface-variant": "#d0c6ab",
+                        "on-secondary-fixed": "#171b27",
+                        "tertiary-container": "#99f141",
+                        "primary": "#fff6df",
+                        "on-error": "#690005",
+                        "glass-fill": "rgba(255, 255, 255, 0.05)",
+                        "secondary": "#c3c6d6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "4px",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1200px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(255, 191, 0, 0.4);
+        }
+
+        .energy-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #FFBF00 50%, transparent 100%);
+        }
+
+        .glow-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 191, 0, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 191, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 191, 0, 0); }
+        }
+
+        .nav-link-active {
+            color: #FFBF00;
+            border-bottom: 2px solid #FFBF00;
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+<body class="font-body-md antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-glass-border">
+<nav class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
+<div class="font-display-xl text-headline-md font-extrabold text-electric-amber tracking-tighter uppercase">
+                South London Electricians
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-electric-amber border-b-2 border-electric-amber pb-1 font-label-md text-label-md uppercase tracking-wider transition-all duration-300" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider transition-colors" href="our-services-south-london-electricians.html">Services</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider transition-colors" href="about-us-south-london-electricians.html">About Us</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider transition-colors" href="our-services-south-london-electricians.html">Coverage</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider transition-colors" href="#">Reviews</a>
+</div>
+<div class="flex gap-4">
+<button class="hidden lg:block border border-electric-amber text-electric-amber px-6 py-2 font-label-md text-label-md uppercase tracking-wider rounded transition-all hover:bg-electric-amber/10">
+                    Emergency Call
+                </button>
+<button class="bg-electric-amber text-midnight-black px-6 py-2 font-label-md text-label-md uppercase tracking-wider font-bold rounded glow-hover transition-all transform hover:scale-105">
+                    Request Quote
+                </button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+</div>
+<div class="relative z-10 max-w-4xl text-center px-margin-mobile">
+<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-electric-amber/30 bg-electric-amber/5 mb-8">
+<span class="flex h-2 w-2 rounded-full bg-electric-amber glow-pulse"></span>
+<span class="text-label-sm font-label-sm text-electric-amber uppercase tracking-widest">NICEIC Registered Specialists</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-white mb-6 leading-tight">
+                    Powering South London with <span class="text-electric-amber">Precision</span> and Care
+                </h1>
+<p class="font-body-lg text-body-lg text-slate-gray mb-10 max-w-2xl mx-auto">
+                    Your local experts for residential, commercial, and emergency electrical solutions. Fully insured, highly rated, and ready to handle any technical challenge.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-electric-amber text-midnight-black px-10 py-4 font-label-md text-label-md uppercase font-extrabold rounded-lg glow-hover transition-all transform hover:-translate-y-1">
+                        Request a Free Quote
+                    </button>
+<button class="border border-white/20 bg-white/5 backdrop-blur-md text-white px-10 py-4 font-label-md text-label-md uppercase font-bold rounded-lg hover:bg-white/10 transition-all">
+                        24/7 Emergency Support
+                    </button>
+</div>
+</div>
+</section>
+<!-- Certifications -->
+<section class="py-12 bg-midnight-black/50 border-y border-glass-border">
+<div class="max-w-container-max mx-auto px-margin-mobile flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
+<div class="h-12 w-32 flex items-center justify-center text-white font-bold text-xl border border-white/10">NICEIC</div>
+<div class="h-12 w-32 flex items-center justify-center text-white font-bold text-xl border border-white/10">TrustMark</div>
+<div class="h-12 w-32 flex items-center justify-center text-white font-bold text-xl border border-white/10">SafeContractor</div>
+<div class="h-12 w-32 flex items-center justify-center text-white font-bold text-xl border border-white/10">City &amp; Guilds</div>
+</div>
+</section>
+<!-- About Snippet -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-electric-amber/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img alt="Professional electrician at work" class="relative rounded-2xl glass-border z-10 shadow-2xl w-full" src="https://lh3.googleusercontent.com/aida/AP1WRLs1q3asp61GHt7qICbGqpBEZEKwE6xHtN2Hx23q3PFbGCUL9G27kFj46Si9FS7C0lKBpoO_VqIxQD-IpDgVV0cP0sKyFiWcDNTxxCto6JVGD3f9Jgnaoh22gmL0W93s0x8mBxCL8oLXR_2oasT4bkIJAKKPRwAN2R4H2cHg9u4zJevzotwXqpu7_pCbGJmLPzIlH8r7sBmckx3wPF0AX9nY-YgIeaE-nif9r5nPGRQukqUrWpHtRxHpQG8">
+<div class="absolute -bottom-6 -right-6 glass-card p-6 rounded-xl z-20 border-electric-amber/50">
+<div class="text-electric-amber font-display-xl text-headline-lg">15+</div>
+<div class="text-label-sm text-slate-gray uppercase">Years Experience</div>
+</div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">Expertise You Can <span class="text-electric-amber">Trust</span></h2>
+<p class="text-slate-gray text-body-lg mb-8 leading-relaxed">
+                        South London Electricians provides top-tier electrical craftsmanship for homes and businesses across the capital. We pride ourselves on transparent pricing, technical excellence, and a clean workspace policy.
+                    </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-amber">check_circle</span>
+<span class="text-on-surface">Qualified to the latest IET Wiring Regulations</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-amber">check_circle</span>
+<span class="text-on-surface">Part P Compliant installations</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-amber">check_circle</span>
+<span class="text-on-surface">Public Liability up to £5m</span>
+</li>
+</ul>
+<button class="text-electric-amber font-label-md text-label-md uppercase tracking-widest flex items-center gap-2 group">
+                        Learn more about our standards
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Our Expert Services (Bento Style) -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Our Expert Services</h2>
+<div class="energy-divider w-24 mx-auto mb-6"></div>
+<p class="text-slate-gray max-w-xl mx-auto">From light switches to industrial rewire projects, we handle it all with clinical precision.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Domestic -->
+<div class="glass-card p-8 rounded-2xl hover:border-electric-amber/40 transition-all group">
+<span class="material-symbols-outlined text-electric-amber text-4xl mb-6 block">home</span>
+<h3 class="font-headline-md text-headline-md mb-4">Domestic</h3>
+<p class="text-slate-gray mb-6">Complete home rewiring, lighting design, fuse board upgrades, and smart home integration for London homeowners.</p>
+<ul class="text-label-sm text-on-surface-variant space-y-2">
+<li>• Interior &amp; Exterior Lighting</li>
+<li>• Socket &amp; Switch Replacement</li>
+<li>• EV Charger Installation</li>
+</ul>
+</div>
+<!-- Commercial -->
+<div class="glass-card p-8 rounded-2xl hover:border-electric-amber/40 transition-all group relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-electric-amber/10 text-electric-amber text-[10px] px-2 py-1 rounded uppercase font-bold">Popular</span>
+</div>
+<span class="material-symbols-outlined text-electric-amber text-4xl mb-6 block">business</span>
+<h3 class="font-headline-md text-headline-md mb-4">Commercial</h3>
+<p class="text-slate-gray mb-6">High-spec lighting, maintenance contracts, and emergency repair services for shops, offices, and warehouses.</p>
+<ul class="text-label-sm text-on-surface-variant space-y-2">
+<li>• Emergency Lighting Tests</li>
+<li>• Three-Phase Power</li>
+<li>• PAT Testing</li>
+</ul>
+</div>
+<!-- EICR -->
+<div class="glass-card p-8 rounded-2xl hover:border-electric-amber/40 transition-all group">
+<span class="material-symbols-outlined text-electric-amber text-4xl mb-6 block">verified</span>
+<h3 class="font-headline-md text-headline-md mb-4">EICR</h3>
+<p class="text-slate-gray mb-6">Comprehensive Electrical Installation Condition Reports for landlords and home buyers. Fast, digital reporting.</p>
+<ul class="text-label-sm text-on-surface-variant space-y-2">
+<li>• Safety Certification</li>
+<li>• Fault Finding</li>
+<li>• Landlord Compliance</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-24 px-margin-mobile relative">
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<div class="absolute top-1/4 left-0 w-96 h-96 bg-electric-amber/5 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-1/4 right-0 w-96 h-96 bg-electric-amber/5 rounded-full blur-[100px]"></div>
+</div>
+<div class="max-w-container-max mx-auto">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8 leading-tight">Setting the Standard for <br><span class="text-electric-amber">Electrical Excellence</span></h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="w-12 h-12 shrink-0 bg-electric-amber/10 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-amber">schedule</span>
+</div>
+<div>
+<h4 class="font-bold text-white mb-2">24/7 Availability</h4>
+<p class="text-slate-gray">Electrical emergencies don't wait. Our rapid response team is on standby across South London around the clock.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 shrink-0 bg-electric-amber/10 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-amber">military_tech</span>
+</div>
+<div>
+<h4 class="font-bold text-white mb-2">10-Year Guarantees</h4>
+<p class="text-slate-gray">We stand by our craftsmanship. All major installations come with a decade-long workmanship guarantee.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 shrink-0 bg-electric-amber/10 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-amber">engineering</span>
+</div>
+<div>
+<h4 class="font-bold text-white mb-2">Expert Engineers</h4>
+<p class="text-slate-gray">All our staff are directly employed, DBS checked, and undergo regular technical training to stay at the industry forefront.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container p-1 rounded-xl">
+<div class="aspect-square glass-card rounded-lg flex flex-col items-center justify-center text-center p-4">
+<span class="text-4xl font-bold text-electric-amber mb-1">5.0</span>
+<div class="flex text-electric-amber text-xs mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] uppercase tracking-tighter text-slate-gray">Google Review Rating</span>
+</div>
+</div>
+<div class="pt-12">
+<div class="aspect-square glass-card rounded-lg flex flex-col items-center justify-center text-center p-4">
+<span class="text-4xl font-bold text-electric-amber mb-1">2k+</span>
+<span class="text-[10px] uppercase tracking-tighter text-slate-gray">Projects Completed</span>
+</div>
+</div>
+<div class="-mt-8">
+<div class="aspect-square glass-card rounded-lg flex flex-col items-center justify-center text-center p-4 border-electric-amber/20">
+<span class="text-4xl font-bold text-electric-amber mb-1">1hr</span>
+<span class="text-[10px] uppercase tracking-tighter text-slate-gray">Emergency Response</span>
+</div>
+</div>
+<div class="pt-4">
+<div class="aspect-square glass-card rounded-lg flex flex-col items-center justify-center text-center p-4">
+<span class="text-4xl font-bold text-electric-amber mb-1">100%</span>
+<span class="text-[10px] uppercase tracking-tighter text-slate-gray">NICEIC Compliant</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Special Offer Banner -->
+<section class="py-12 max-w-container-max mx-auto px-margin-mobile">
+<div class="relative rounded-3xl overflow-hidden min-h-[300px] flex items-center bg-midnight-black">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-midnight-black via-midnight-black/80 to-transparent z-10"></div>
+<img alt="Special Offer Promotional Graphic" class="absolute right-0 top-0 h-full w-1/2 object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtNJCIUo3e4j6iGwYMyWGsfo8U5jdokQY2yKT2NZ9PaF3LbXihZ5Z1ooGI5-o1gOaK39J7j802rCYFVkq0ePm2W5-Cp1Unvaq1IcnVZQEWQp7OiVSVU2RPZutvl60l42sfSB7yTiIGxyh96iJbiEX--qqhDI2KCVGQgyC0xyvxYusrbi-_-r1EM_w9prMpho4woknimnVJ0od970Abxx3HsYFjDmttI5E89HY1XM2u-t51Bl4x5vql9r3A">
+</div>
+<div class="relative z-20 p-12 max-w-xl">
+<h3 class="text-headline-lg font-headline-lg text-white mb-4">Limited Time <span class="text-electric-amber">Special Offer</span></h3>
+<p class="text-slate-gray mb-8 text-body-lg">Thinking about upgrading your home's safety? Get 10% off consumer unit upgrades this month for all residential customers in South London.</p>
+<button class="bg-electric-amber text-midnight-black px-8 py-3 font-bold rounded-lg glow-hover transition-all">Claim Discount</button>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-midnight-black">
+<div class="max-w-container-max mx-auto px-margin-mobile">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4">Customer Stories</h2>
+<p class="text-slate-gray">See what your neighbors in Dulwich, Clapham, and Wimbledon have to say.</p>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-glass-border flex items-center justify-center hover:bg-white/5"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="w-12 h-12 rounded-full border border-glass-border flex items-center justify-center hover:bg-white/5"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="glass-card p-8 rounded-2xl border-l-4 border-l-electric-amber">
+<div class="flex text-electric-amber mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface mb-6 italic">"Excellent service from the initial phone call to the finished job. They handled my home rewire with zero mess and total professionalisms. Highly recommend."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-electric-amber">JD</div>
+<div>
+<div class="font-bold text-white">James Dalton</div>
+<div class="text-xs text-slate-gray">Greenwich Homeowner</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-2xl">
+<div class="flex text-electric-amber mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface mb-6 italic">"Called for an emergency at 2am on a Sunday. They were here within 45 minutes and fixed the fault immediately. Life savers!"</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-electric-amber">SA</div>
+<div>
+<div class="font-bold text-white">Sarah Ahmed</div>
+<div class="text-xs text-slate-gray">Brixton Resident</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-2xl">
+<div class="flex text-electric-amber mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface mb-6 italic">"Reliable, punctual, and the quality of the commercial lighting installation was flawless. We'll be using them for all our office maintenance."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-electric-amber">MK</div>
+<div>
+<div class="font-bold text-white">Mark Knight</div>
+<div class="text-xs text-slate-gray">Facility Manager, SE1</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 text-center px-margin-mobile">
+<div class="max-w-2xl mx-auto">
+<h2 class="text-display-xl font-display-xl mb-6">Ready to <span class="text-electric-amber">Illuminate</span> Your Project?</h2>
+<p class="text-slate-gray text-body-lg mb-10">Get in touch today for a transparent, no-obligation quotation from South London's finest electrical engineers.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-electric-amber text-midnight-black px-10 py-4 font-bold rounded-lg glow-hover transition-all flex items-center justify-center gap-2" href="tel:0201234567">
+<span class="material-symbols-outlined">call</span>
+                        020 8123 4567
+                    </a>
+<button class="bg-surface-container-high text-white px-10 py-4 font-bold rounded-lg hover:bg-surface-container-highest transition-all">
+                        Request Quote Online
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-midnight-black py-20 px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter border-t border-glass-border">
+<div class="col-span-1 md:col-span-1">
+<div class="font-display-xl text-headline-md font-bold text-on-surface mb-6 uppercase tracking-tighter">South London<br>Electricians</div>
+<p class="text-slate-gray text-sm mb-6">Providing safe, reliable, and innovative electrical solutions across South London for over 15 years.</p>
+<div class="flex gap-4">
+<a class="text-slate-gray hover:text-electric-amber transition-colors" href="about-us-south-london-electricians.html"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-slate-gray hover:text-electric-amber transition-colors" href="our-services-south-london-electricians.html"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-slate-gray hover:text-electric-amber transition-colors" href="about-us-south-london-electricians.html"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Services</h4>
+<ul class="space-y-4 text-slate-gray text-body-md">
+<li><a class="hover:text-electric-amber transition-colors" href="our-services-south-london-electricians.html">Residential Services</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="our-services-south-london-electricians.html">Commercial Lighting</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="our-services-south-london-electricians.html">Emergency Repairs</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="our-services-south-london-electricians.html">EV Charging Points</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="our-services-south-london-electricians.html">Smart Home Systems</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Helpful Links</h4>
+<ul class="space-y-4 text-slate-gray text-body-md">
+<li><a class="hover:text-electric-amber transition-colors" href="about-us-south-london-electricians.html">About Us</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="our-services-south-london-electricians.html">Coverage Area</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="#">Customer Reviews</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Newsletter</h4>
+<p class="text-slate-gray text-sm mb-4">Stay updated with safety tips and seasonal offers.</p>
+<div class="flex">
+<input class="bg-surface-container-low border border-glass-border px-4 py-2 w-full focus:outline-none focus:border-electric-amber transition-colors rounded-l-lg" placeholder="Email address" type="email">
+<button class="bg-electric-amber text-midnight-black px-4 py-2 rounded-r-lg font-bold">Join</button>
+</div>
+<div class="mt-8 text-xs text-slate-gray">
+                © 2024 South London Electricians. All Rights Reserved. NICEIC Registered.
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and subtle effects
+        document.addEventListener('mousemove', (e) => {
+            const glow = document.querySelector('.hero-glow');
+            if(glow) {
+                const x = e.clientX;
+                const y = e.clientY;
+                glow.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(255, 191, 0, 0.05), transparent 80%)`;
+            }
+        });
+    </script>
+</body></html>

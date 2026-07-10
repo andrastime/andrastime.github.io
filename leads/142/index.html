@@ -1,0 +1,424 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Midwest City Electricals | Premium Electrical Specialists</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#93000a",
+                      "outline-variant": "#424656",
+                      "on-error": "#690005",
+                      "on-primary-fixed": "#001849",
+                      "on-primary-container": "#f8f7ff",
+                      "surface-variant": "#32343e",
+                      "secondary-container": "#3f465c",
+                      "surface": "#10131c",
+                      "on-secondary-fixed": "#131b2e",
+                      "glass-white": "rgba(255, 255, 255, 0.05)",
+                      "tertiary-container": "#cc4204",
+                      "on-primary": "#002b75",
+                      "neon-cyan": "#00F2FF",
+                      "primary": "#b3c5ff",
+                      "on-primary-fixed-variant": "#003fa4",
+                      "surface-bright": "#363943",
+                      "primary-fixed-dim": "#b3c5ff",
+                      "on-surface": "#e1e2ee",
+                      "surface-container-lowest": "#0b0e16",
+                      "on-tertiary-fixed-variant": "#832600",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "inverse-on-surface": "#2e303a",
+                      "secondary-fixed": "#dae2fd",
+                      "secondary": "#bec6e0",
+                      "on-secondary-container": "#adb4ce",
+                      "on-surface-variant": "#c2c6d8",
+                      "on-secondary": "#283044",
+                      "surface-container-low": "#191b24",
+                      "primary-container": "#0066ff",
+                      "glow-yellow": "#F9FF00",
+                      "error": "#ffb4ab",
+                      "inverse-primary": "#0054d6",
+                      "surface-dim": "#10131c",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "on-tertiary": "#5d1900",
+                      "surface-container": "#1d1f28",
+                      "outline": "#8c90a1",
+                      "surface-container-high": "#272a33",
+                      "primary-fixed": "#dae1ff",
+                      "surface-container-highest": "#32343e",
+                      "background": "#10131c",
+                      "inverse-surface": "#e1e2ee",
+                      "on-background": "#e1e2ee",
+                      "tertiary-fixed": "#ffdbd0",
+                      "tertiary-fixed-dim": "#ffb59d",
+                      "on-tertiary-fixed": "#390c00",
+                      "slate-900": "#020617",
+                      "on-tertiary-container": "#fff6f4",
+                      "on-error-container": "#ffdad6",
+                      "tertiary": "#ffb59d",
+                      "surface-tint": "#b3c5ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Sora"],
+                      "display-lg": ["Sora"],
+                      "label-caps": ["Space Mono"],
+                      "headline-lg-mobile": ["Sora"],
+                      "headline-lg": ["Sora"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "body-md": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.15);
+        }
+        .neon-glow-hover:hover {
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.3);
+            border-color: #00F2FF;
+        }
+        .circuit-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 242, 255, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-neon-cyan selection:text-slate-900 overflow-x-hidden">
+<!-- Header Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-glass-white shadow-md">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="flex items-center space-x-2" href="get-in-touch.html">
+<img alt="Midwest City Electricals Logo" class="h-10" src="https://lh3.googleusercontent.com/aida/AP1WRLvFeafQW8CtSQaDynkTA_XG107yz8rqLQPJQ6ry1etv8w9LOW3tWlP9ibTk7uT-W4EtVfkArkIODJoDGHSkG-fW-MaAX2BHPuEZfTZB5xLHR17xC5K8imLJwcRfPlyZkD46lSJhGSlvSbzy-yv27L5paIddsfrBokpIBrRqEZMklpPjfMvB6v0U0_2J9p1X8YVpYKxYsxQLZnKU_aK1lYuTUxTtt9QUUSowdZpREtTgUIBPL6Kk9I5f_-2d">
+</a>
+<div class="hidden lg:flex items-center space-x-8">
+<a class="text-neon-cyan font-bold border-b-2 border-neon-cyan pb-1 font-label-caps text-label-caps" href="index.html">HOME</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors duration-300 font-label-caps text-label-caps" href="our-services.html">SERVICES</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors duration-300 font-label-caps text-label-caps" href="compliance-work.html">OUR WORK</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors duration-300 font-label-caps text-label-caps" href="compliance-work.html">COMPLIANCE</a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors duration-300 font-label-caps text-label-caps" href="get-in-touch.html">CONTACT</a>
+</div>
+<div class="flex items-center space-x-4">
+<a class="hidden md:flex items-center justify-center px-6 py-2 rounded-lg bg-primary-container text-on-primary-container font-headline-md text-[14px] neon-glow active:scale-95 transition-all" href="tel:07375832034">
+                    Emergency Call-out
+                </a>
+<button class="lg:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center px-4 py-2 rounded-full glass-card border-neon-cyan/30 text-neon-cyan font-label-caps text-label-caps uppercase tracking-widest">
+<span class="material-symbols-outlined text-[16px] mr-2" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                    West Midlands Specialists
+                </div>
+<h1 class="text-headline-lg-mobile md:text-display-lg font-display-lg text-on-surface leading-tight">
+                    Premium <span class="text-neon-cyan">Electrical</span> Specialists
+                </h1>
+<p class="text-body-lg text-on-surface-variant max-w-xl">
+                    High-end electrical solutions for residential, commercial, and industrial clients. Registered with NAPIT for guaranteed compliance and expert precision.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-primary-container text-on-primary-container font-bold text-lg neon-glow active:scale-95 transition-all" href="tel:07375832034">
+                        Emergency Call-Out
+                        <span class="material-symbols-outlined ml-2">call</span>
+</a>
+<a class="inline-flex items-center justify-center px-8 py-4 rounded-lg glass-card border border-glass-white text-on-surface font-bold text-lg hover:bg-glass-white transition-all active:scale-95" href="#services">
+                        View Services
+                        <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="hidden lg:block relative h-[600px]">
+<div class="absolute inset-0 rounded-2xl overflow-hidden glass-card p-2 border-glass-white/20">
+<div class="w-full h-full rounded-xl bg-cover bg-center" data-alt="A macro photograph of professional electrical equipment featuring modern circuit breakers and glowing LED status indicators. The scene is shot with shallow depth of field in a cool midnight blue and slate-grey color palette, with sharp neon cyan lighting accents mimicking high-voltage energy. The aesthetic is clean, technological, and premium." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCE_IVutX5FfKMz_NRhizkk55G-0xp3RadWYZfFSdeyoKy8Av7iOToIBYFuFoJ1wXalyfHZfrX3-uZXTWuoEipSPkCwMl6smpXa4e2vJ-kqLLZIkSjzrvqlC29mxU0zIxqphGomJ5Mur4DzR0Fv4_aOh_Yif5cDLQJY8lNmXZDMP5C79PfvtsmaWjMu0sMEsavUMOp1CHVC_FWnfr7bdYt9eJGHGKok4fb0W_b_JkA8myaD70JVGdQ1GQ')"></div>
+</div>
+<div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-2xl max-w-xs neon-glow border-neon-cyan/20">
+<p class="text-neon-cyan font-display-lg text-[48px] leading-none mb-2">24h</p>
+<p class="text-on-surface font-bold font-headline-md text-lg">Guaranteed Response</p>
+<p class="text-on-surface-variant text-sm mt-2">Emergency repairs and fault finding when you need it most.</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Trust Ticker -->
+<div class="py-12 border-y border-glass-white bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-wrap justify-between items-center gap-8 opacity-60">
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-neon-cyan" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caps text-label-caps">NAPIT REGISTERED</span>
+</div>
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-neon-cyan" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-label-caps text-label-caps">FULLY INSURED</span>
+</div>
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-neon-cyan" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-caps text-label-caps">BS7671 COMPLIANT</span>
+</div>
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-neon-cyan" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="font-label-caps text-label-caps">24/7 EMERGENCY COVER</span>
+</div>
+</div>
+</div>
+<!-- Who Are We Section -->
+<section class="py-24 circuit-bg relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Midwest City Electricals Work" class="w-full h-auto object-cover rounded-2xl" src="https://lh3.googleusercontent.com/aida/AP1WRLs35cOArb50DDZhw8Scrmzy6ShechQnyvK0ZFUt11vlgu-EY6za2BuikqCl1vDu_6mbQJy2E-pdsRHDgOvdeGZBTqULD6WXiFlaeEpQRbyEws7NwEg2t6oghUEe2bN7xhs9KT1bKCUNwG5j3NLBB9hzL9GXssXI9CoS7ND-Hk5OM3Tq15Cx1IsAxo_8a7j0lqQ2qQ9SPDsxjH5F5dBtwghdwcSXY8w7EgRCYl-CKi-cN58oDbAitv_wb8Y">
+<div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl"></div>
+</div>
+</div>
+<div class="space-y-8 order-1 lg:order-2">
+<div>
+<h2 class="text-label-caps font-label-caps text-neon-cyan mb-2 uppercase tracking-widest">About Us</h2>
+<h3 class="text-headline-lg font-headline-lg text-on-surface mb-6">Expert Electrical Services Across the West Midlands</h3>
+</div>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                    An independent electrical contracting company registered with NAPIT, we provide a comprehensive range of specialised electrical services. Our expertise includes testing, inspection, and ensuring full compliance with industry standards, particularly BS7671.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+<div class="glass-card p-6 rounded-xl border-l-4 border-l-neon-cyan">
+<span class="material-symbols-outlined text-neon-cyan mb-4">speed</span>
+<p class="font-bold text-on-surface mb-1">Rapid Response</p>
+<p class="text-sm text-on-surface-variant">24-hour response time for all emergency electrical faults.</p>
+</div>
+<div class="glass-card p-6 rounded-xl border-l-4 border-l-glow-yellow">
+<span class="material-symbols-outlined text-glow-yellow mb-4">engineering</span>
+<p class="font-bold text-on-surface mb-1">Tailored Solutions</p>
+<p class="text-sm text-on-surface-variant">Flexible maintenance contracts for landlords and businesses.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-surface-container-low" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-label-caps font-label-caps text-neon-cyan uppercase tracking-widest">Our Expertise</h2>
+<h3 class="text-headline-lg font-headline-lg text-on-surface">Core Specialist Services</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testing & Inspection -->
+<div class="group glass-card p-10 rounded-2xl neon-glow-hover transition-all duration-500 relative flex flex-col h-full overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-neon-cyan/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-neon-cyan/20 transition-colors"></div>
+<div class="mb-8 w-16 h-16 rounded-xl bg-neon-cyan/10 flex items-center justify-center text-neon-cyan group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">task_alt</span>
+</div>
+<h4 class="text-headline-md font-headline-md text-on-surface mb-4">Testing &amp; Inspection</h4>
+<p class="text-on-surface-variant mb-8 flex-grow">Reliable electrical inspection, testing, and certification for residential and commercial properties.</p>
+<ul class="space-y-3 mb-10">
+<li class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-neon-cyan text-[18px] mr-2">check_circle</span>
+                            EICR Certification
+                        </li>
+<li class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-neon-cyan text-[18px] mr-2">check_circle</span>
+                            Landlord Safety Checks
+                        </li>
+<li class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-neon-cyan text-[18px] mr-2">check_circle</span>
+                            PAT Testing
+                        </li>
+</ul>
+<a class="inline-flex items-center text-neon-cyan font-label-caps text-label-caps group-hover:translate-x-2 transition-transform" href="our-services.html">
+                        LEARN MORE <span class="material-symbols-outlined ml-2 text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Installations -->
+<div class="group glass-card p-10 rounded-2xl neon-glow-hover transition-all duration-500 relative flex flex-col h-full overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-primary-container/20 transition-colors"></div>
+<div class="mb-8 w-16 h-16 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">construction</span>
+</div>
+<h4 class="text-headline-md font-headline-md text-on-surface mb-4">Installations</h4>
+<p class="text-on-surface-variant mb-8 flex-grow">Top-tier electrical installations ensuring safety and full compliance with industry standards.</p>
+<ul class="space-y-3 mb-10">
+<li class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] mr-2">check_circle</span>
+                            Full/Partial Rewires
+                        </li>
+<li class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] mr-2">check_circle</span>
+                            Consumer Unit Upgrades
+                        </li>
+<li class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] mr-2">check_circle</span>
+                            Garden Power &amp; Lighting
+                        </li>
+</ul>
+<a class="inline-flex items-center text-primary font-label-caps text-label-caps group-hover:translate-x-2 transition-transform" href="our-services.html">
+                        LEARN MORE <span class="material-symbols-outlined ml-2 text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Repairs -->
+<div class="group glass-card p-10 rounded-2xl neon-glow-hover transition-all duration-500 relative flex flex-col h-full overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-glow-yellow/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-glow-yellow/20 transition-colors"></div>
+<div class="mb-8 w-16 h-16 rounded-xl bg-glow-yellow/10 flex items-center justify-center text-glow-yellow group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">build</span>
+</div>
+<h4 class="text-headline-md font-headline-md text-on-surface mb-4">Electrical Repairs</h4>
+<p class="text-on-surface-variant mb-8 flex-grow">Swift repairs to ensure continuous functionality and safety of your electrical installations.</p>
+<ul class="space-y-3 mb-10">
+<li class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-glow-yellow text-[18px] mr-2">check_circle</span>
+                            Fault Finding &amp; Rectification
+                        </li>
+<li class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-glow-yellow text-[18px] mr-2">check_circle</span>
+                            Circuit Repairs
+                        </li>
+<li class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-glow-yellow text-[18px] mr-2">check_circle</span>
+                            Board Upgrades
+                        </li>
+</ul>
+<a class="inline-flex items-center text-glow-yellow font-label-caps text-label-caps group-hover:translate-x-2 transition-transform" href="our-services.html">
+                        LEARN MORE <span class="material-symbols-outlined ml-2 text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 relative">
+<div class="absolute inset-0 bg-primary-container/10"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="glass-card p-12 rounded-3xl text-center space-y-8 border-neon-cyan/20 overflow-hidden relative">
+
+<h3 class="text-headline-lg font-headline-lg text-on-surface">Need an Emergency Response?</h3>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    We offer a 24-hour response time for all urgent electrical issues across the West Midlands. Don't wait until a fault becomes a hazard.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a class="inline-flex items-center justify-center px-10 py-5 rounded-lg bg-glow-yellow text-slate-900 font-extrabold text-xl shadow-[0_0_30px_rgba(249,255,0,0.4)] hover:scale-105 active:scale-95 transition-all" href="tel:07375832034">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 1;">call</span>
+                        CALL 07375 832 034
+                    </a>
+<a class="inline-flex items-center justify-center px-10 py-5 rounded-lg border-2 border-neon-cyan text-neon-cyan font-bold text-xl hover:bg-neon-cyan/10 active:scale-95 transition-all" href="#contact">
+                        Request Quote
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant pt-24 pb-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-20">
+<div class="space-y-6">
+<img alt="Logo" class="h-10" src="https://lh3.googleusercontent.com/aida/AP1WRLvFeafQW8CtSQaDynkTA_XG107yz8rqLQPJQ6ry1etv8w9LOW3tWlP9ibTk7uT-W4EtVfkArkIODJoDGHSkG-fW-MaAX2BHPuEZfTZB5xLHR17xC5K8imLJwcRfPlyZkD46lSJhGSlvSbzy-yv27L5paIddsfrBokpIBrRqEZMklpPjfMvB6v0U0_2J9p1X8YVpYKxYsxQLZnKU_aK1lYuTUxTtt9QUUSowdZpREtTgUIBPL6Kk9I5f_-2d">
+<p class="text-on-surface-variant text-sm">
+                        West Midlands' premier choice for specialist electrical installations, inspection, and 24/7 emergency support.
+                    </p>
+<div class="flex space-x-4">
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors" href="get-in-touch.html"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors" href="compliance-work.html"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-neon-cyan transition-colors" href="get-in-touch.html"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-on-surface font-bold font-headline-md text-lg mb-6">Services</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="our-services.html">Residential Services</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="our-services.html">Commercial Installations</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="our-services.html">EV Charging</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-cyan transition-colors text-sm" href="compliance-work.html">NAPIT Compliance</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-on-surface font-bold font-headline-md text-lg mb-6">Contact</h5>
+<ul class="space-y-4">
+<li class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-neon-cyan mr-3 text-[18px]">call</span>
+                            07375 832 034
+                        </li>
+<li class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-neon-cyan mr-3 text-[18px]">mail</span>
+                            contact@midwestcityelectricals.com
+                        </li>
+<li class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-neon-cyan mr-3 text-[18px]">location_on</span>
+                            West Midlands Area
+                        </li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-on-surface font-bold font-headline-md text-lg mb-6">Expertise</h5>
+<div class="p-4 rounded-xl glass-card border-glass-white text-center">
+<p class="text-neon-cyan font-bold text-sm mb-1 uppercase tracking-widest">NAPIT REGISTERED</p>
+<p class="text-[10px] text-on-surface-variant leading-tight">Registration verifies competence and commitment to safe installation standards.</p>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-glass-white flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant text-xs font-label-caps">
+                    © 2024 Midwest City Electricals. All rights reserved. Specialist Electricians in West Midlands.
+                </p>
+<div class="flex space-x-6">
+<a class="text-on-surface-variant hover:text-neon-cyan text-xs font-label-caps" href="compliance-work.html">PRIVACY NOTICE</a>
+<a class="text-on-surface-variant hover:text-neon-cyan text-xs font-label-caps" href="our-services.html">TERMS OF SERVICE</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll micro-interactions
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
+</body></html>

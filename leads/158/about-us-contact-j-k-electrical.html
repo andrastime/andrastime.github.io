@@ -1,0 +1,328 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About &amp; Contact | JK Electrical</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "background": "#0b1326",
+                  "on-secondary-fixed-variant": "#3c475a",
+                  "tertiary": "#e5eeff",
+                  "secondary": "#bcc7de",
+                  "slate-gray": "#94A3B8",
+                  "tertiary-fixed-dim": "#b9c7e0",
+                  "primary-container": "#facc15",
+                  "primary-fixed-dim": "#eec200",
+                  "surface-container": "#171f33",
+                  "surface-tint": "#eec200",
+                  "secondary-fixed": "#d8e3fb",
+                  "on-surface-variant": "#d1c6ab",
+                  "outline-variant": "#4d4632",
+                  "surface-variant": "#2d3449",
+                  "on-primary-fixed-variant": "#574500",
+                  "primary-fixed": "#ffe083",
+                  "on-error": "#690005",
+                  "on-surface": "#dae2fd",
+                  "on-primary": "#3c2f00",
+                  "error-container": "#93000a",
+                  "surface-container-high": "#222a3d",
+                  "secondary-container": "#3e495d",
+                  "tertiary-fixed": "#d5e3fd",
+                  "tertiary-container": "#c3d2eb",
+                  "secondary-fixed-dim": "#bcc7de",
+                  "on-tertiary": "#233144",
+                  "inverse-on-surface": "#283044",
+                  "error": "#ffb4ab",
+                  "surface-container-lowest": "#060e20",
+                  "inverse-primary": "#735c00",
+                  "deep-navy": "#0F172A",
+                  "on-tertiary-container": "#4c5a6f",
+                  "surface-container-low": "#131b2e",
+                  "inverse-surface": "#dae2fd",
+                  "surface-bright": "#31394d",
+                  "surface-container-highest": "#2d3449",
+                  "surface": "#0b1326",
+                  "on-primary-fixed": "#231b00",
+                  "electric-yellow": "#FACC15",
+                  "glass-border": "rgba(255, 255, 255, 0.12)",
+                  "surface-dim": "#0b1326",
+                  "primary": "#ffecb9",
+                  "outline": "#9a9078",
+                  "on-tertiary-fixed-variant": "#3a485c",
+                  "on-background": "#dae2fd",
+                  "on-secondary": "#263143",
+                  "on-tertiary-fixed": "#0d1c2f",
+                  "on-secondary-container": "#aeb9d0",
+                  "on-error-container": "#ffdad6",
+                  "on-secondary-fixed": "#111c2d",
+                  "on-primary-container": "#6c5700"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "margin-mobile": "20px",
+                  "stack-md": "16px",
+                  "section-gap": "120px",
+                  "container-max": "1280px",
+                  "stack-lg": "32px",
+                  "gutter": "24px",
+                  "stack-sm": "8px"
+          },
+          "fontFamily": {
+                  "headline-lg": ["Montserrat"],
+                  "body-md": ["Inter"],
+                  "headline-xl": ["Montserrat"],
+                  "body-lg": ["Inter"],
+                  "headline-md": ["Montserrat"],
+                  "label-caps": ["Inter"],
+                  "headline-lg-mobile": ["Montserrat"]
+          },
+          "fontSize": {
+                  "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                  "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                  "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                  "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                  "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                  "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                  "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-card {
+      background: rgba(23, 31, 51, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .text-glow {
+      text-shadow: 0 0 15px rgba(250, 204, 21, 0.4);
+    }
+    .btn-shine {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shine::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+      transform: rotate(45deg);
+      transition: 0.5s;
+    }
+    .btn-shine:hover::after {
+      left: 100%;
+      top: 100%;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-electric-yellow selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-glass-border shadow-md">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="font-headline-md text-headline-md font-bold text-electric-yellow uppercase tracking-tighter">
+        JK Electrical
+      </div>
+<nav class="hidden md:flex items-center gap-stack-lg">
+<a class="text-on-surface-variant hover:text-electric-yellow transition-colors font-body-md" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-electric-yellow transition-colors font-body-md" href="expert-electrical-services-j-k-electrical.html">Services</a>
+<a class="text-on-surface-variant hover:text-electric-yellow transition-colors font-body-md" href="about-us-contact-j-k-electrical.html">About</a>
+<a class="text-electric-yellow font-bold border-b-2 border-electric-yellow pb-1 font-body-md" href="about-us-contact-j-k-electrical.html">Contact</a>
+</nav>
+<button class="bg-electric-yellow text-on-primary px-6 py-2 rounded font-bold hover:scale-105 active:scale-95 transition-all btn-shine">
+        Get a Quote
+      </button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero / Our Story Section -->
+<section class="relative py-section-gap overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="z-10 order-2 lg:order-1">
+<span class="font-label-caps text-label-caps text-electric-yellow mb-stack-sm block tracking-widest uppercase">Trusted for 25 Years</span>
+<h1 class="font-headline-xl text-headline-xl mb-stack-md text-white">Our <span class="text-electric-yellow">Story</span></h1>
+<div class="space-y-stack-md text-slate-gray font-body-lg">
+<p>
+              Founded on the principles of precision and safety, JK Electrical has been the leading choice for professional electrical services in Solihull and Hall Green, Birmingham for over a quarter of a century.
+            </p>
+<p>
+              Led by Jez, our team combines decades of technical mastery with modern industrial standards. Whether it's a domestic emergency or a large-scale commercial installation, we bring an unparalleled level of craftsmanship to every circuit we touch.
+            </p>
+<p>
+              We don't just fix wires; we illuminate homes and power businesses with a commitment to reliability that has stood the test of time.
+            </p>
+</div>
+<div class="mt-stack-lg flex flex-wrap gap-4">
+<div class="glass-card px-6 py-4 rounded-xl flex flex-col items-center justify-center text-center">
+<span class="text-electric-yellow font-headline-md block">25+</span>
+<span class="text-label-caps text-[10px] uppercase opacity-70">Years Experience</span>
+</div>
+<div class="glass-card px-6 py-4 rounded-xl flex flex-col items-center justify-center text-center">
+<span class="text-electric-yellow font-headline-md block">100%</span>
+<span class="text-label-caps text-[10px] uppercase opacity-70">Safety Rating</span>
+</div>
+</div>
+</div>
+<div class="relative order-1 lg:order-2 group">
+<div class="absolute -inset-4 bg-electric-yellow/10 blur-3xl rounded-full opacity-50 group-hover:opacity-80 transition-opacity"></div>
+<div class="relative overflow-hidden rounded-2xl glass-card aspect-[4/5]">
+<img alt="Jez from JK Electrical" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvtdRof9pWsgnytm4la7cQ7BaPttVN51pRyEnWkol6jF2oHpYAnTdrhvz2HySCxmaT9iVxvSsxJbAkrYY6Lggdzh3uvuO-KmqUkFdnlyCl93jgp0TaPk53pk91rte6ly4qvR4mCB0lVdDTAsOrs1OXIuYbNBHUzdi_IMh1_DbcpzzskDgTZLXPTuxEwuYDV4jqmVDhjTAwXRcyFworelPFeB8h-YMkT1tczUoXRLixOVSzVrMjW7Vst_WY">
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Map Section -->
+<section class="py-section-gap bg-surface-container-low relative">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+<!-- Contact Form -->
+<div class="lg:col-span-7 glass-card p-stack-lg rounded-2xl">
+<div class="mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-white mb-2">Ready to <span class="text-electric-yellow">Start?</span></h2>
+<p class="text-slate-gray">Tell us about your project and we'll get back to you with a professional estimate.</p>
+</div>
+<form class="space-y-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Full Name</label>
+<input class="w-full bg-surface-variant border-glass-border focus:border-electric-yellow focus:ring-0 rounded-lg text-white p-3 transition-colors" placeholder="John Doe" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Email Address</label>
+<input class="w-full bg-surface-variant border-glass-border focus:border-electric-yellow focus:ring-0 rounded-lg text-white p-3 transition-colors" placeholder="john@example.com" type="email">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Service Type</label>
+<select class="w-full bg-surface-variant border-glass-border focus:border-electric-yellow focus:ring-0 rounded-lg text-white p-3 transition-colors appearance-none">
+<option>Domestic Installation</option>
+<option>Commercial Maintenance</option>
+<option>Emergency Repair</option>
+<option>EV Charging Point</option>
+<option>Periodic Inspection (EICR)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Message</label>
+<textarea class="w-full bg-surface-variant border-glass-border focus:border-electric-yellow focus:ring-0 rounded-lg text-white p-3 transition-colors" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="w-full bg-electric-yellow text-on-primary py-4 rounded-lg font-bold text-headline-md hover:scale-[1.02] active:scale-95 transition-all btn-shine shadow-xl shadow-electric-yellow/10" type="submit">
+                Send Message
+              </button>
+</form>
+</div>
+<!-- Contact Details & Map -->
+<div class="lg:col-span-5 flex flex-col gap-stack-lg">
+<!-- Details Card -->
+<div class="glass-card p-stack-lg rounded-2xl">
+<h3 class="font-headline-md text-headline-md text-white mb-stack-md">Direct Contact</h3>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant border border-glass-border flex items-center justify-center text-electric-yellow">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-slate-gray uppercase">Call Now</p>
+<a class="text-headline-md text-white hover:text-electric-yellow transition-colors" href="tel:07763061719">07763 061719</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant border border-glass-border flex items-center justify-center text-electric-yellow">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-slate-gray uppercase">Email Us</p>
+<a class="text-body-lg text-white hover:text-electric-yellow transition-colors break-all" href="mailto:Jkelectricalsolihull@gmail.com">Jkelectricalsolihull@gmail.com</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="glass-card flex-grow rounded-2xl overflow-hidden relative min-h-[300px]">
+<div class="absolute inset-0 grayscale opacity-40 mix-blend-luminosity">
+<img class="w-full h-full object-cover" data-alt="A professional satellite or schematic style map of Solihull and Birmingham area, showing suburban streets and Hall Green area, with high contrast dark mode aesthetic using navy and yellow tones to represent electrical grid hubs." data-location="Solihull, Birmingham" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABg6PhwUiA_mkTOHrNCPb_qFzkQovsbTS3hx_z6xNlT4e4q6ma1bukIOyCpk-7YuPTtqY1l5PCxCCuWKCe2l4_2e9iqOsFjVYueTF1tNE7mDGKgNr_7vGUf9-kxq-hMIHoqBVcRVfNMGdZEEIKFUU9EnLPI8ETTCcOcSSoN5f_5AWI4TT5t5d1geOv5ac648hHNDqx-3vSAWZIw8pm6-NdPOLrM3BojmOunPFoPcrfoqvS_l6eh7c5">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 z-10">
+<div class="flex items-center gap-2 text-electric-yellow mb-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-bold">Service Area</span>
+</div>
+<p class="text-white text-body-md">Solihull, Hall Green &amp; Birmingham</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-stack-lg border-t border-glass-border">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-stack-lg">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-electric-yellow mb-4">JK Electrical</div>
+<p class="text-slate-gray font-body-md">Professional electrical services you can depend on. Serving the heart of Birmingham for 25 years.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-electric-yellow mb-2 uppercase">Company</span>
+<a class="text-slate-gray hover:text-on-surface transition-colors font-body-md" href="expert-electrical-services-j-k-electrical.html">Domestic</a>
+<a class="text-slate-gray hover:text-on-surface transition-colors font-body-md" href="expert-electrical-services-j-k-electrical.html">Commercial</a>
+<a class="text-slate-gray hover:text-on-surface transition-colors font-body-md" href="expert-electrical-services-j-k-electrical.html">Maintenance</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-electric-yellow mb-2 uppercase">Connect</span>
+<a class="text-slate-gray hover:text-on-surface transition-colors font-body-md" href="about-us-contact-j-k-electrical.html">Facebook</a>
+<a class="text-slate-gray hover:text-on-surface transition-colors font-body-md" href="about-us-contact-j-k-electrical.html">Instagram</a>
+<a class="text-slate-gray hover:text-on-surface transition-colors font-body-md" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-electric-yellow mb-2 uppercase">Location</span>
+<p class="text-slate-gray font-body-md">Solihull / Hall Green<br>Birmingham, UK</p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-12 pt-8 border-t border-white/5 text-center">
+<p class="text-slate-gray font-body-md opacity-60">© 2024 JK Electrical. All rights reserved.</p>
+</div>
+</footer>
+<script>
+    // Subtle parallax effect for the hero image
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const heroImg = document.querySelector('img[alt*="Jez"]');
+      if (heroImg) {
+        heroImg.style.transform = `translateY(${scrolled * 0.1}px)`;
+      }
+    });
+
+    // Form submission interaction
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      const originalText = btn.innerText;
+      btn.innerText = 'Transmitting...';
+      btn.classList.add('opacity-50');
+      
+      setTimeout(() => {
+        btn.innerText = 'Message Sent';
+        btn.classList.remove('bg-electric-yellow');
+        btn.classList.add('bg-green-500');
+        btn.classList.remove('opacity-50');
+      }, 1500);
+    });
+  </script>
+</body></html>

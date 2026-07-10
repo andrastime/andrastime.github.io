@@ -1,0 +1,493 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Electric Works London | Elite Electrical Concierge</title>
+<meta content="London's premier electrical concierge. Rapid response, transparent digital quoting, and certified expertise for luxury homes and high-end commercial spaces across Kensington, Mayfair, and Central London." name="description">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#6b3a25",
+                    "on-secondary-container": "#6d5000",
+                    "tertiary": "#110200",
+                    "outline": "#74777f",
+                    "inverse-on-surface": "#f2f0f3",
+                    "surface-container-high": "#e9e7eb",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#ffdbce",
+                    "on-surface": "#1a1c1e",
+                    "primary-container": "#001f3f",
+                    "inverse-surface": "#2f3033",
+                    "on-primary-fixed": "#001c3a",
+                    "compliance-muted": "#D1D5DB",
+                    "outline-variant": "#c4c6cf",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#476083",
+                    "surface-dim": "#dbd9dd",
+                    "on-secondary-fixed": "#261a00",
+                    "secondary-fixed-dim": "#fbbc00",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e3e2e5",
+                    "surface": "#faf9fc",
+                    "on-tertiary": "#ffffff",
+                    "slate-gray": "#4A5568",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#351002",
+                    "on-primary-container": "#6f88ad",
+                    "primary-fixed": "#d4e3ff",
+                    "primary-fixed-dim": "#afc8f0",
+                    "tertiary-container": "#391303",
+                    "on-secondary-fixed-variant": "#5c4300",
+                    "surface-variant": "#e3e2e5",
+                    "surface-container": "#efedf0",
+                    "surface-bright": "#faf9fc",
+                    "on-primary": "#ffffff",
+                    "primary": "#000613",
+                    "secondary-container": "#ffbf00",
+                    "on-primary-fixed-variant": "#2f486a",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#b5785f",
+                    "ice-white": "#F8FAFC",
+                    "on-background": "#1a1c1e",
+                    "secondary": "#795900",
+                    "on-surface-variant": "#43474e",
+                    "background": "#faf9fc",
+                    "tertiary-fixed-dim": "#fdb69a",
+                    "secondary-fixed": "#ffdfa0",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f4f3f6",
+                    "inverse-primary": "#afc8f0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-padding": "6rem",
+                    "stack-md": "1.5rem",
+                    "stack-lg": "3rem",
+                    "stack-sm": "0.5rem",
+                    "container-max": "1280px",
+                    "gutter": "1.5rem"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "headline-xl": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .trust-logo {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .trust-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .luxury-card {
+            background: #ffffff;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .luxury-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.15);
+        }
+
+        .mask-curved {
+            mask-image: url("data:image/svg+xml,%3Csvg width='1440' height='800' viewBox='0 0 1440 800' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H1440V800C1200 800 1100 650 900 650C700 650 600 800 0 800V0Z' fill='black'/%3E%3C/svg%3E");
+            mask-size: cover;
+            mask-repeat: no-repeat;
+        }
+
+        .gold-underline {
+            position: relative;
+        }
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #795900;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 w-full z-50 bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline shadow-sm">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold tracking-tight text-primary dark:text-primary-fixed">
+                Electric Works London
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="index.html">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="our-services-electric-works-london.html">Emergency</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="our-services-electric-works-london.html">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="our-services-electric-works-london.html">Projects</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="our-services-electric-works-london.html">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:flex items-center font-bold text-primary" href="tel:02071834006">
+<span class="material-symbols-outlined mr-2">call</span> 020 7183 4006
+                </a>
+<button class="bg-primary text-on-primary px-6 py-3 font-bold rounded-lg scale-95 active:scale-90 transition-transform duration-200">
+                    Book an Engineer
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[85vh] flex items-center overflow-hidden bg-primary text-white">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLuHSchEBPSx9gKt0I70joHTMFXW1XE6La2vZg7-97CKDYU8ZAhqj1QdvPCNRPSohp4BfHrp20Yfe4Zia7ABew8F5am5UXMOO6ZDCMY3hID9xWQtnAIcG1ewmjrV1L3GwSB1KNtHxRIkxVDOcd23XDLcFQQ6EAjpucxQgHROmnhgoEu2UpwmeMDLm9fWHJPj8mc5uDnKfUJDidn2HCQqcDpawdEIboosbhHrnXzWBPAKX_1BYZJzO8a3apNx">
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-gutter w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="space-y-stack-lg">
+<div class="inline-flex items-center gap-2 bg-secondary/20 text-secondary-fixed px-4 py-1 rounded-full border border-secondary/30">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-caps text-label-caps">Rapid 60-Min Response in Central London</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl max-w-xl">
+                    London's Tech-Enabled Electrical Concierge.
+                </h1>
+<p class="font-body-lg text-body-lg text-ice-white/80 max-w-lg">
+                    Price Certainty. Rapid Response. Certified Excellence. We redefine the trade as a high-end service for Mayfair, Kensington, and beyond.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-lg font-bold text-lg hover:bg-secondary hover:text-white transition-all duration-300">
+                        Book an Engineer
+                    </button>
+<button class="border border-white/30 backdrop-blur-md px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all duration-300">
+                        Digital Quote
+                    </button>
+</div>
+</div>
+<!-- Floating Trust/Metric Card -->
+<div class="hidden lg:flex items-end justify-end">
+<div class="bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-xl max-w-xs space-y-6">
+<div class="space-y-1">
+<div class="text-secondary-fixed font-headline-lg text-headline-lg">4.9/5</div>
+<p class="text-ice-white/70 font-body-md text-body-md">Rated by 500+ Luxury Property Managers</p>
+</div>
+<div class="h-px bg-white/20"></div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl">verified</span>
+<div>
+<div class="font-bold">NICEIC Platinum</div>
+<p class="text-ice-white/60 text-sm">Highest standard of certification</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Trust Bar -->
+<section class="bg-surface-container-low py-12 border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-12 grayscale opacity-50 transition-all duration-500 hover:grayscale-0 hover:opacity-100">
+<div class="flex flex-col items-center">
+<p class="font-label-caps text-label-caps mb-4 uppercase text-slate-gray">Certified Excellence</p>
+<div class="flex gap-12 items-center">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-1" data-icon="shield_with_heart"></span>
+<span class="font-bold text-xs">NICEIC</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-1" data-icon="construction"></span>
+<span class="font-bold text-xs">NAPIT</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-1" data-icon="school"></span>
+<span class="font-bold text-xs">City &amp; Guilds</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-1" data-icon="verified_user"></span>
+<span class="font-bold text-xs">RECC</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- UVP Section: The Shift -->
+<section class="py-section-padding bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-block">
+<p class="font-label-caps text-label-caps text-secondary mb-2 uppercase">Our Philosophy</p>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Shift from Tradie to Concierge</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        We’ve eliminated the friction of traditional maintenance. No hourly-rate anxiety, no vague arrival windows—just precision-engineered electrical support for London's most demanding estates.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-3">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="payments"></span>
+<h3 class="font-bold text-lg">Fixed-Price Transparency</h3>
+<p class="text-on-surface-variant text-sm">Know exactly what you'll pay before we even arrive. No hidden fees, ever.</p>
+</div>
+<div class="space-y-3">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="timer"></span>
+<h3 class="font-bold text-lg">60-90m Rapid Response</h3>
+<p class="text-on-surface-variant text-sm">Strategic positioning across Central London ensures we're there when it counts.</p>
+</div>
+<div class="space-y-3">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="eco"></span>
+<h3 class="font-bold text-lg">Eco-Consultancy</h3>
+<p class="text-on-surface-variant text-sm">Smart home and EV integration strategies to future-proof your luxury assets.</p>
+</div>
+<div class="space-y-3">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="devices"></span>
+<h3 class="font-bold text-lg">Digital First Portal</h3>
+<p class="text-on-surface-variant text-sm">Real-time job tracking, digital invoicing, and history at your fingertips.</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10 border-8 border-white">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist image of a high-end luxury apartment interior in London with subtle architectural lighting. An electrician dressed in a clean, branded navy blue polo shirt is using a sleek digital tablet to test a smart lighting panel. The lighting is bright and warm, emphasizing premium materials like marble and wood. The overall aesthetic is professional, modern, and elite." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpGKZ-KYzfqnTrmMrUaXX3ZnUKZfl6Kk5ssXc3EPnB4OfJoqIAwv80cZCr07dNPNPh-t-RyNss0NxvpOxfaeOd4_cfF3QFUlCdHTsC8bsRpMdKbJw-QfyPopCFG50-lZIucSK7UhYAQZaWi4Vp9fmE5QRAQ1PmksF2pLnpava17NicW4kSxWBG0uTfMpxnFZP5P0c6srWXM-kcdGJGGVN4EMU_L080kwyRdUS-KIbEOrPEwvh4bIiViQ">
+</div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-secondary-container/30 rounded-2xl -z-0"></div>
+<div class="absolute -top-8 -right-8 w-64 h-64 bg-primary/5 rounded-full -z-0"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Preview Bento -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex justify-between items-end mb-12">
+<div class="max-w-xl">
+<p class="font-label-caps text-label-caps text-secondary mb-2 uppercase">What We Offer</p>
+<h2 class="font-headline-lg text-headline-lg text-primary">Certified Expertise for Every Environment</h2>
+</div>
+<a class="hidden md:flex items-center gap-2 font-bold text-primary hover:text-secondary transition-colors" href="our-services-electric-works-london.html">
+                    View All Services <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Domestic -->
+<div class="luxury-card p-10 flex flex-col justify-between min-h-[350px]">
+<div class="space-y-6">
+<div class="w-14 h-14 bg-surface-container flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="home"></span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">Domestic</h3>
+<p class="text-on-surface-variant">Luxury residential maintenance, partial/full rewiring, and bespoke lighting design.</p>
+</div>
+</div>
+<a class="font-bold flex items-center gap-2 text-secondary group" href="our-services-electric-works-london.html">
+                        Explore Domestic <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">chevron_right</span>
+</a>
+</div>
+<!-- Commercial -->
+<div class="luxury-card p-10 flex flex-col justify-between min-h-[350px] md:scale-105 z-10 border-secondary/30 bg-primary text-white">
+<div class="space-y-6">
+<div class="w-14 h-14 bg-white/10 flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl" data-icon="corporate_fare"></span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-lg text-headline-lg">Commercial</h3>
+<p class="text-white/70">Critical maintenance for retail, office spaces, and high-end restaurants across Central London.</p>
+</div>
+</div>
+<a class="font-bold flex items-center gap-2 text-secondary-fixed group" href="our-services-electric-works-london.html">
+                        Explore Commercial <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">chevron_right</span>
+</a>
+</div>
+<!-- EV & Smart Home -->
+<div class="luxury-card p-10 flex flex-col justify-between min-h-[350px]">
+<div class="space-y-6">
+<div class="w-14 h-14 bg-surface-container flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="ev_station"></span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">EV Charging</h3>
+<p class="text-on-surface-variant">Premium charging solutions and infrastructure for luxury electric vehicles.</p>
+</div>
+</div>
+<a class="font-bold flex items-center gap-2 text-secondary group" href="our-services-electric-works-london.html">
+                        Explore EV Solutions <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">chevron_right</span>
+</a>
+</div>
+</div>
+<div class="mt-8 md:hidden text-center">
+<a class="inline-flex items-center gap-2 font-bold text-primary" href="our-services-electric-works-london.html">
+                    View All Services <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="py-section-padding bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col items-center text-center mb-16">
+<span class="material-symbols-outlined text-secondary-container text-6xl mb-4" data-icon="format_quote" style="font-variation-settings: 'FILL' 1;"></span>
+<h2 class="font-headline-lg text-headline-lg text-primary max-w-2xl">Verified Satisfaction from London’s Finest Properties</h2>
+</div>
+<div class="bg-ice-white border border-outline-variant p-12 md:p-20 rounded-3xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[200px]" data-icon="verified_user"></span>
+</div>
+<div class="max-w-3xl mx-auto space-y-10">
+<p class="font-body-lg text-body-lg text-primary italic leading-relaxed text-2xl md:text-3xl font-medium">
+                        "The level of professionalism was unlike any other electrical service I've used in 20 years of property management. From the digital quote to the white-glove finish, Electric Works London is now our only call for high-end projects."
+                    </p>
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-secondary">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a refined middle-aged man with graying hair, wearing a high-end navy business suit. He is standing in front of a blurred background of a modern glass office building. The lighting is soft and flattering, typical of corporate portraiture. The aesthetic is clean, trustworthy, and elite, fitting for a premium property manager in London." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo8xSM7d3sQuQys1pGy9cHtl-fxGt5KImkaWskWnILXadZh08HwCahnIPBdTBBua2DY-1BWqzGOxmlNS36N5xKXCyWNzBvzuBT5yErhDekA8FwBHaUjHD7Kf5LlfjqsGSd-AoOCLB9eEDy5hLySryz7Vz-EiyCuoMqPTspzHvURPtVoj7xxO_b1aQvmSdCafVOib9T4TzvN85mDCApjhR9Q3mMHRVQxMjCQjd0buc8BnWZAUO2m95lGQ">
+</div>
+<div>
+<div class="font-bold text-lg">William Wallace</div>
+<p class="text-on-surface-variant font-label-caps text-label-caps">Estate Manager, Mayfair Properties</p>
+<div class="flex text-secondary-fixed-dim mt-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-2 text-xs font-bold text-on-surface-variant">Verified Service</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding bg-primary relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10 text-center">
+<h2 class="font-headline-xl text-headline-xl text-white mb-6">Experience the Concierge Standard</h2>
+<p class="font-body-lg text-body-lg text-white/70 max-w-2xl mx-auto mb-12">
+                Use our price-certainty engine to get a guaranteed range for your project in under 60 seconds.
+            </p>
+<div class="bg-white p-2 rounded-2xl shadow-2xl max-w-2xl mx-auto flex flex-col md:flex-row gap-2">
+<div class="flex-1 flex items-center px-6 gap-3">
+<span class="material-symbols-outlined text-slate-gray">location_on</span>
+<input class="w-full border-none focus:ring-0 text-primary font-medium py-4" placeholder="Your Postcode (e.g. W1K)" type="text">
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-xl font-extrabold text-lg transition-transform active:scale-95">
+                    Start Your Digital Quote
+                </button>
+</div>
+<div class="mt-8 flex justify-center items-center gap-8 text-white/50 font-label-caps text-label-caps">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span> Instant Range</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span> No Obligation</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span> No Spam</span>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-section-padding bg-surface-container dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg max-w-container-max mx-auto px-gutter">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed">
+                    Electric Works London
+                </div>
+<p class="text-on-surface-variant font-body-md text-body-md">
+                    Elite Electrical Concierge services for London’s most discerning property owners.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface flex items-center justify-center hover:text-secondary transition-colors" href="index.html"><span class="material-symbols-outlined" data-icon="share"></span></a>
+<a class="w-10 h-10 rounded-full bg-surface flex items-center justify-center hover:text-secondary transition-colors" href="index.html"><span class="material-symbols-outlined" data-icon="work"></span></a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary font-bold">Services</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="our-services-electric-works-london.html">Emergency Callouts</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="our-services-electric-works-london.html">Domestic Services</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="our-services-electric-works-london.html">Commercial Maintenance</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="our-services-electric-works-london.html">EV Charging Installation</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary font-bold">The Company</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="our-services-electric-works-london.html">Our Process</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="our-services-electric-works-london.html">Case Studies</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="our-services-electric-works-london.html">Sustainability</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="index.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary font-bold">Contact</h4>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">phone</span>
+                        020 7183 4006
+                    </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">mail</span>
+                        concierge@electricworks.london
+                    </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+                        Mayfair, London
+                    </li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-20 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant text-sm">© 2024 Electric Works London. Elite Electrical Concierge.</p>
+<div class="flex gap-8 text-xs font-label-caps text-label-caps text-slate-gray">
+<span>NICEIC REGISTERED</span>
+<span>NAPIT PLATINUM</span>
+<span>CITY &amp; GUILDS ACCREDITED</span>
+</div>
+</div>
+</footer>
+<!-- FAB for Emergency (Contextual) -->
+<a class="fixed bottom-8 right-8 z-[100] bg-error text-white h-16 px-6 rounded-full flex items-center gap-3 shadow-2xl hover:scale-105 active:scale-95 transition-all md:hidden" href="tel:02071834006">
+<span class="material-symbols-outlined animate-pulse">emergency</span>
+<span class="font-bold">Rapid Emergency Response</span>
+</a>
+</body></html>

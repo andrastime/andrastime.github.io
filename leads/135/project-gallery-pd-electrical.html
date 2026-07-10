@@ -1,0 +1,382 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Projects &amp; Gallery | PD Electrical London Limited</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#00daf3",
+                        "on-primary-container": "#005e68",
+                        "primary-fixed-dim": "#2bdaee",
+                        "secondary-fixed-dim": "#aec6ff",
+                        "surface-variant": "#2d3449",
+                        "surface-container-low": "#131b2e",
+                        "neon-glow": "rgba(52, 222, 242, 0.4)",
+                        "tertiary-container": "#00dff8",
+                        "on-tertiary-fixed": "#001f24",
+                        "secondary": "#aec6ff",
+                        "on-tertiary": "#00363d",
+                        "on-primary-fixed": "#001f23",
+                        "surface-container-high": "#222a3d",
+                        "on-secondary-fixed": "#001a42",
+                        "on-primary": "#00363c",
+                        "background": "#0b1326",
+                        "on-secondary-fixed-variant": "#1c4587",
+                        "tertiary": "#aef2ff",
+                        "surface-dim": "#0b1326",
+                        "error-container": "#93000a",
+                        "surface": "#0b1326",
+                        "power-blue": "#174183",
+                        "pure-white": "#FFFFFF",
+                        "on-surface-variant": "#bbc9cc",
+                        "secondary-container": "#1f4789",
+                        "primary-fixed": "#93f1ff",
+                        "electric-cyan": "#34DEF2",
+                        "inverse-on-surface": "#283044",
+                        "charcoal-bg": "#0B0E14",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#97b8ff",
+                        "inverse-primary": "#006973",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-background": "#dae2fd",
+                        "outline-variant": "#3c494b",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#34def2",
+                        "surface-tint": "#2bdaee",
+                        "surface-container-highest": "#2d3449",
+                        "surface-bright": "#31394d",
+                        "outline": "#859396",
+                        "inverse-surface": "#dae2fd",
+                        "on-tertiary-fixed-variant": "#004f58",
+                        "on-secondary": "#002e6a",
+                        "on-surface": "#dae2fd",
+                        "on-primary-fixed-variant": "#004f57",
+                        "on-tertiary-container": "#005e6a",
+                        "primary": "#a7f3ff",
+                        "surface-container-lowest": "#060e20",
+                        "surface-container": "#171f33",
+                        "tertiary-fixed": "#9cf0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(23, 31, 51, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(52, 222, 242, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: #34DEF2;
+            box-shadow: 0 0 20px rgba(52, 222, 242, 0.3);
+            transform: translateY(-4px);
+        }
+        .filter-btn.active {
+            background-color: #34DEF2;
+            color: #00363c;
+        }
+        .circuit-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(52, 222, 242, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(11, 19, 38, 0) 0%, rgba(11, 19, 38, 1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md circuit-bg">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30 shadow-lg shadow-neon-glow">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-electric-cyan" href="index.html">PD Electrical</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-electric-cyan transition-colors" href="index.html">Home</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-electric-cyan transition-colors" href="index.html">Services</a>
+<a class="font-label-bold text-label-bold text-electric-cyan border-b-2 border-electric-cyan pb-1" href="project-gallery-pd-electrical.html">Projects</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-electric-cyan transition-colors" href="contact-us-pd-electrical.html">Reviews</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-electric-cyan transition-colors" href="contact-us-pd-electrical.html">Contact</a>
+<button class="bg-electric-cyan text-on-primary px-6 py-2 rounded-full font-label-bold text-label-bold hover:shadow-[0_0_20px_#34DEF2] transition-all duration-300 active:scale-95">
+                    Get a Quote
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-electric-cyan">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[60vh] flex items-center overflow-hidden">
+
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full text-center">
+<span class="inline-block text-electric-cyan font-label-bold tracking-widest uppercase mb-4">Portfolio of Excellence</span>
+<h1 class="font-display-xl text-display-xl mb-6">Our <span class="text-electric-cyan">Projects</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    From complex industrial fitouts to bespoke residential installations, explore how we deliver powerful solutions across London.
+                </p>
+</div>
+</section>
+<!-- Featured Project (Bento Style) -->
+<section class="px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Large Image Card -->
+<div class="md:col-span-8 relative group overflow-hidden rounded-xl border border-electric-cyan/20">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLuAgrV42r5TOH--fxnLyp7xbaKCLXHCwaB1CReF-ET16Zol9URYVhYJ1O9IcOXssV6kIz5A_X9iXAiHUtHz_FvlNDqj47NPnoIdLKt_OEsofv7oU4VLzvMhwFDZ_dkBhUh2WemzVgh38lcdU--sBhYvFBzT61pjVE-piL2h9up-g6by2-m4I_vsk18lZTLLOXZTSfIQbfV_1YDBFha5v4mRy6PnaJ19yY6VNXND5ABj773TC9ruOKPjgOVX">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-electric-cyan/20 text-electric-cyan border border-electric-cyan/30 rounded-full text-xs font-label-bold">COMMERCIAL</span>
+<span class="px-3 py-1 bg-electric-cyan/20 text-electric-cyan border border-electric-cyan/30 rounded-full text-xs font-label-bold">FEATURED</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-2">London Office Electrical Fitout</h2>
+<p class="font-body-md text-on-surface-variant max-w-xl">A complete turnkey electrical solution for a modern tech firm, featuring smart energy management and premium lighting architecture.</p>
+</div>
+</div>
+<!-- Featured Info Card -->
+<div class="md:col-span-4 flex flex-col gap-8">
+<div class="glass-card p-8 rounded-xl flex-1 flex flex-col justify-center">
+<span class="material-symbols-outlined text-electric-cyan text-4xl mb-4">bolt</span>
+<h3 class="font-headline-md text-headline-md mb-2">High Voltage Expertise</h3>
+<p class="text-on-surface-variant font-body-md">Our team handles complex 3-phase installations with precision and safety at the core of every connection.</p>
+</div>
+<div class="glass-card p-8 rounded-xl flex-1 flex flex-col justify-center">
+<span class="material-symbols-outlined text-electric-cyan text-4xl mb-4">verified</span>
+<h3 class="font-headline-md text-headline-md mb-2">NICEIC Certified</h3>
+<p class="text-on-surface-variant font-body-md">Guaranteed compliance with the latest BS7671 wiring regulations for total peace of mind.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Filter -->
+<section class="px-margin-desktop py-12 max-w-container-max mx-auto text-center">
+<div class="flex flex-wrap justify-center gap-4">
+<button class="filter-btn active px-8 py-2 rounded-full border border-electric-cyan font-label-bold transition-all hover:shadow-[0_0_15px_#34DEF2]">All Projects</button>
+<button class="filter-btn px-8 py-2 rounded-full border border-outline-variant font-label-bold text-on-surface-variant hover:border-electric-cyan hover:text-electric-cyan transition-all">Residential</button>
+<button class="filter-btn px-8 py-2 rounded-full border border-outline-variant font-label-bold text-on-surface-variant hover:border-electric-cyan hover:text-electric-cyan transition-all">Commercial</button>
+<button class="filter-btn px-8 py-2 rounded-full border border-outline-variant font-label-bold text-on-surface-variant hover:border-electric-cyan hover:text-electric-cyan transition-all">Industrial</button>
+</div>
+</section>
+<!-- Gallery Grid -->
+<section class="px-margin-desktop pb-24 max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="glass-card overflow-hidden group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A clean industrial warehouse interior with rows of high-performance LED high-bay lighting illuminating a polished concrete floor. The lighting creates a crisp, professional atmosphere with bright cyan highlights reflecting on metal surfaces. High-end photography style, wide angle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo2LwDbaXO_a3EDnHlvA6qtCaoYxCpsWP6NblKk_seZPIrGV2R4L1UDkQvTswStV4QTUa4zhndz6T51njY4X6R0uwaVlrKtA18piTi9JPKbEiNnUdhfIQQ7ba5Qb1fAQDO9XNqSD1AyYuHPTBx_UniMkg0Fxwy4iFn39vhtF2eylpw2zb0Dw6cE6aqLB3xiockTCJdcGzEHB33Z5SHA9o-wTPV2onN9vUGorUiP9gjeGfyj9KF8YY6aA">
+<div class="absolute inset-0 bg-electric-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-6">
+<span class="text-electric-cyan text-xs font-label-bold tracking-widest uppercase mb-2 block">Industrial</span>
+<h4 class="font-headline-md text-[20px] mb-2 leading-tight">Warehouse High Bay Lighting Replacement</h4>
+<p class="text-on-surface-variant text-body-md mb-4">Energy-efficient LED upgrade for a large distribution center.</p>
+<a class="flex items-center gap-2 text-electric-cyan font-label-bold group/link" href="project-gallery-pd-electrical.html">
+                            View Details <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="glass-card overflow-hidden group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A macro shot of a complex industrial 3-phase distribution board. The wiring is meticulously organized with bright electrical components, copper busbars, and neon-blue labels. Technical, high-precision aesthetic with soft depth of field and dramatic top lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV14mTdjls57UXG0Z4p_WTv6ImVK8SF9zas0uSI4kb6cLuJNWYTH5c1tybhimRsErfwe_Ompq-rswOqEHrT3U99Q8il3G6jmR2nmyrErlvT_ydfB4dVQx7IESJ7SPwBL7FGJaxw-zcU6FLQ5k0NnaHwine-9uO1yOAIVq5uBBd8XrcIZHdMYEWzwAx7G-uhC4XxkGDzH60zX5jHGetck1bkidTB5kiNUlMssI2uq41v7o1gO-B_V45og">
+<div class="absolute inset-0 bg-electric-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-6">
+<span class="text-electric-cyan text-xs font-label-bold tracking-widest uppercase mb-2 block">Industrial</span>
+<h4 class="font-headline-md text-[20px] mb-2 leading-tight">New Industrial 3 Phase Supply</h4>
+<p class="text-on-surface-variant text-body-md mb-4">Heavy-duty power distribution for a manufacturing plant.</p>
+<a class="flex items-center gap-2 text-electric-cyan font-label-bold group/link" href="project-gallery-pd-electrical.html">
+                            View Details <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="glass-card overflow-hidden group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A luxurious residential kitchen with integrated smart lighting. Soft ambient glow emanates from under cabinets and within ceiling alcoves. The lighting is warm yet crisp, emphasizing modern architectural lines and high-end finishes. Professional interior architectural photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtn6UWq7VzFqISCytjw_vEMK2d0eIuGtUoHZ3UuvgFECdsB3hRL4VM387CFQYfxDAo3hxtFQroOzOv90Z_T4fepwco3lfg8htlPz11R7dPl3luJ-f0UBg_NOzYTBshnfVkwCfIprquIrLQAZ_ShPFSPqpGORvd_J5W0BlMtwGFicovN15GitIj0S1hgndyPZRUpe_oMRkTvHtrNawA0sa4gl-kUwjYOtTiqiIkUvL9BMs7JLgXWMaudQ">
+<div class="absolute inset-0 bg-electric-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-6">
+<span class="text-electric-cyan text-xs font-label-bold tracking-widest uppercase mb-2 block">Residential</span>
+<h4 class="font-headline-md text-[20px] mb-2 leading-tight">Bespoke Kitchen Smart Lighting</h4>
+<p class="text-on-surface-variant text-body-md mb-4">Custom mood lighting and automation for a luxury home.</p>
+<a class="flex items-center gap-2 text-electric-cyan font-label-bold group/link" href="project-gallery-pd-electrical.html">
+                            View Details <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="glass-card overflow-hidden group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A wide view of a modern glass cutting machine in a factory setting. Precise electrical conduits and control panels are visible, neatly routed. The lighting is clean and bright, highlighting the mechanical complexity and clean installation. Industrial-chic photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrFQfDmnkM_0hj_0DAw9iPmGgoDC9CAIGUvsLgA_jI-cs2ZjFjuynrL_pL_DmnIHh7azXju3UZyjWosl_DZ6n7u6-aqI2trzMdmr8yP0qAHI4FxfjhKg1Tgli3UQ-8n7HgiVkr2S1GR_f4FdLSJv0nx6TO4M4OX0Ls9FnAjfDQi6idSAj-n_VLRtdQFtkmnuGEofeFdnK0RtIVkvSzuBsKaij46fbtZ9JTf9R9MKarqDhtnpA7jOdzIA">
+<div class="absolute inset-0 bg-electric-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-6">
+<span class="text-electric-cyan text-xs font-label-bold tracking-widest uppercase mb-2 block">Industrial</span>
+<h4 class="font-headline-md text-[20px] mb-2 leading-tight">Glass Cutting Machines Supply</h4>
+<p class="text-on-surface-variant text-body-md mb-4">Specialist machinery power installation with safety interlocks.</p>
+<a class="flex items-center gap-2 text-electric-cyan font-label-bold group/link" href="project-gallery-pd-electrical.html">
+                            View Details <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="glass-card overflow-hidden group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An exterior night shot of a modern apartment tower in London. The building is illuminated by architectural accent lighting. The sky is a deep midnight blue, contrasting with the warm golden and cyan electrical highlights of the facade. High contrast, cinematic urban lighting photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuvH9ng38w_Dyi7MV_Wz-v1XDVgpsRU3kqZGom9lHTxb3wgOTbaeTz4_7Q7TkmXEGKtF5SIjXEIa4Eocjy-5Qkn7H50SsrdSh2wCKY4OStrVD-MtEVsVSfwiRORf92ehbT-mE9pOXyWIie6DjXd0X_vyjsUr2i5bf77DBs4Ogfhmi6bRS5dcjrdqccvlJjilZFEgOTyYxmvpxkE7pR6jxx4ghBoPDojy_WT2OGnbYHYg3-z3slMfHeXA">
+<div class="absolute inset-0 bg-electric-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-6">
+<span class="text-electric-cyan text-xs font-label-bold tracking-widest uppercase mb-2 block">Residential</span>
+<h4 class="font-headline-md text-[20px] mb-2 leading-tight">Tower Block EICR &amp; Rising Mains</h4>
+<p class="text-on-surface-variant text-body-md mb-4">Comprehensive testing and infrastructure upgrade for high-rise living.</p>
+<a class="flex items-center gap-2 text-electric-cyan font-label-bold group/link" href="project-gallery-pd-electrical.html">
+                            View Details <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="glass-card overflow-hidden group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A high-tech control room with glow-in-the-dark electrical safety labels and neatly organized server racks. Subtle neon cyan light lines trace the floor and edges of the desks. Futuristic, clean, and highly technical atmosphere. Close-up detailed shot with focus on precision wiring." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEY-387FFJ6p1z3VEIMnSU4Ubm14GGUjSIWlAWW1eneMttZlQsi3naTo5by4Y2EydIdbJcx-bGd1iHK9Yft_5dqYgNYw2lNMXLi_UnQ9DyAL7U-G1qPx654wtLy3t877mN1_s1RcT5Nf_K3gbzM_f5EBPYI-fdoOsTUn022bsVNCpb8Q1CzBYNioTOPBDGs5sYTli-IF5cs4BzigQ34PvqMLvnB7Y8PLs9Sipo9GUZXTWpmD9J701KMA">
+<div class="absolute inset-0 bg-electric-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-6">
+<span class="text-electric-cyan text-xs font-label-bold tracking-widest uppercase mb-2 block">Commercial</span>
+<h4 class="font-headline-md text-[20px] mb-2 leading-tight">Data Center Infrastructure</h4>
+<p class="text-on-surface-variant text-body-md mb-4">Critical power systems and UPS installations for high-availability IT.</p>
+<a class="flex items-center gap-2 text-electric-cyan font-label-bold group/link" href="project-gallery-pd-electrical.html">
+                            View Details <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="bg-surface-container-low py-16 border-y border-outline-variant/20">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-12 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-5xl text-pure-white">verified_user</span>
+<span class="font-label-bold text-pure-white">NICEIC APPROVED</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-5xl text-pure-white">school</span>
+<span class="font-label-bold text-pure-white">CITY &amp; GUILDS</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-5xl text-pure-white">health_and_safety</span>
+<span class="font-label-bold text-pure-white">PART P REGISTERED</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-5xl text-pure-white">electric_bolt</span>
+<span class="font-label-bold text-pure-white">RECA REGISTERED</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-12 border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<h3 class="font-headline-md text-headline-md text-pure-white mb-6">PD Electrical</h3>
+<p class="text-on-surface-variant font-body-md mb-4">Residential &amp; Commercial Electrical Contractor. Professional excellence in every circuit.</p>
+</div>
+<div class="col-span-1">
+<h4 class="text-electric-cyan font-label-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-cyan transition-colors" href="index.html">About Us</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-cyan transition-colors" href="index.html">Our Services</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-cyan transition-colors" href="project-gallery-pd-electrical.html">Project Gallery</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-cyan transition-colors" href="project-gallery-pd-electrical.html">Client Reviews</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="text-electric-cyan font-label-bold mb-6">Support</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-cyan transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-cyan transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-electric-cyan transition-colors" href="contact-us-pd-electrical.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="text-electric-cyan font-label-bold mb-6">Contact</h4>
+<p class="text-on-surface-variant font-body-md mb-2">Tel: 0208 524 5981</p>
+<p class="text-on-surface-variant font-body-md mb-2">Mob: 07932 720982</p>
+<p class="text-on-surface-variant font-body-md">p.delectrical@btinternet.com</p>
+</div>
+</div>
+<div class="mt-12 px-margin-desktop max-w-container-max mx-auto pt-8 border-t border-outline-variant/10 text-center">
+<p class="text-on-surface-variant font-body-md">© 2024 PD Electrical London Limited. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple filter interaction
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => {
+                    b.classList.remove('active', 'bg-electric-cyan', 'text-on-primary');
+                    b.classList.add('text-on-surface-variant');
+                });
+                btn.classList.add('active');
+                btn.classList.remove('text-on-surface-variant');
+            });
+        });
+
+        // Interactive highlight effect
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.glass-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

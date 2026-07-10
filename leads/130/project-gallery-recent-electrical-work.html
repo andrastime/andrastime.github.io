@@ -1,0 +1,328 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Project Gallery | London Surrey Electrical</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#101415",
+                    "tertiary-fixed-dim": "#7bd0ff",
+                    "on-tertiary-fixed": "#001e2c",
+                    "tertiary": "#afe0ff",
+                    "on-tertiary-container": "#005371",
+                    "tertiary-container": "#5fc9ff",
+                    "on-primary-container": "#654800",
+                    "surface-container-lowest": "#0b0f10",
+                    "tertiary-fixed": "#c4e7ff",
+                    "electric-amber": "#EAB64E",
+                    "surface-container": "#1d2022",
+                    "primary-fixed": "#ffdea6",
+                    "primary-fixed-dim": "#f3be55",
+                    "inverse-primary": "#7b5800",
+                    "on-surface": "#e0e3e5",
+                    "outline": "#9b8f7d",
+                    "on-primary": "#412d00",
+                    "secondary": "#bec6e0",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-container": "#adb4ce",
+                    "on-tertiary": "#00354a",
+                    "surface-bright": "#363a3b",
+                    "surface-container-high": "#272a2c",
+                    "safety-red": "#EF4444",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "background": "#101415",
+                    "slate-surface": "#1E293B",
+                    "on-primary-fixed": "#271900",
+                    "on-secondary": "#283044",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "primary": "#ffd485",
+                    "surface-container-low": "#191c1e",
+                    "surface": "#101415",
+                    "surface-tint": "#f3be55",
+                    "on-surface-variant": "#d3c5b0",
+                    "primary-container": "#eab64e",
+                    "error-container": "#93000a",
+                    "secondary-container": "#3f465c",
+                    "surface-container-highest": "#323537",
+                    "secondary-fixed": "#dae2fd",
+                    "midnight-void": "#020617",
+                    "on-primary-fixed-variant": "#5d4200",
+                    "on-background": "#e0e3e5",
+                    "outline-variant": "#4f4536",
+                    "inverse-on-surface": "#2d3133",
+                    "on-secondary-fixed": "#131b2e",
+                    "inverse-surface": "#e0e3e5",
+                    "error": "#ffb4ab",
+                    "on-error": "#690005",
+                    "surface-variant": "#323537"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "section-gap": "120px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "button": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "label-caps": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { @apply bg-surface-dim text-on-surface; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+        .custom-glow:hover {
+            box-shadow: 0 0 20px rgba(234, 182, 78, 0.3);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed w-full top-0 z-50 bg-surface-dim/80 backdrop-blur-md border-b border-white/10">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">
+                London <span class="text-electric-amber">Surrey</span> Electrical
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-button text-button uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-london-surrey-electrical.html">Residential</a>
+<a class="font-button text-button uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-london-surrey-electrical.html">Commercial</a>
+<a class="font-button text-button uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-london-surrey-electrical.html">Smart Home</a>
+<a class="font-button text-button uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-london-surrey-electrical.html">EV Charging</a>
+<a class="font-button text-button uppercase tracking-wider text-electric-amber border-b-2 border-electric-amber pb-1" href="project-gallery-recent-electrical-work.html">Projects</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block font-button text-button uppercase bg-white/5 border border-white/20 px-6 py-2 rounded transition-all hover:bg-white/10 active:scale-95">
+                    Emergency Call
+                </button>
+<button class="font-button text-button uppercase bg-electric-amber text-on-primary px-6 py-2 rounded transition-all hover:brightness-110 active:scale-95">
+                    Request Quote
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-40 pb-20 px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+
+<div class="relative z-10 max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container border border-outline-variant rounded-full mb-6">
+<span class="flex h-2 w-2 rounded-full bg-electric-amber animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Portfolio of Excellence</span>
+</div>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">
+                Our Work: Where <span class="text-electric-amber">Precision</span> Meets Power.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-2xl">
+                Explore our recent electrical installations across South London and Surrey. From high-end residential lighting to mission-critical commercial upgrades.
+            </p>
+</div>
+</header>
+<!-- Filters / Service Chips -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-12">
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-2 bg-electric-amber text-on-primary font-label-caps text-label-caps rounded-full">ALL PROJECTS</button>
+<button class="px-6 py-2 bg-surface-container border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-full hover:border-electric-amber transition-colors">LIGHTING DESIGN</button>
+<button class="px-6 py-2 bg-surface-container border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-full hover:border-electric-amber transition-colors">EV INFRASTRUCTURE</button>
+<button class="px-6 py-2 bg-surface-container border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-full hover:border-electric-amber transition-colors">FUSEBOARD UPGRADES</button>
+<button class="px-6 py-2 bg-surface-container border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-full hover:border-electric-amber transition-colors">COMMERCIAL</button>
+</div>
+</section>
+<!-- Gallery Grid -->
+<main class="px-margin-desktop max-w-container-max mx-auto pb-section-gap">
+<div class="columns-1 md:columns-2 lg:columns-3 gap-6">
+<!-- Project 1: High-end Lighting -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-110" data-alt="Close up of luxury pendant lighting in a modern Kingston residence. Soft warm amber light reflects off brass fixtures and polished slate walls. Professional architectural photography style with deep shadows and high contrast, 8k resolution, premium aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0-XYJmN2-6GwdIFgS3sFy-xxRKAuAKDo7NZViWeIYLfJkRIT1PBJg-zkIF0fdcFn47xz2NhCJlvg6L1Iv1olZjA_8vvLpd0nm3TfTxNmtXuwUzGS0_Vekf947N1sOfQXHY7zmQVOGQHMzqbpjGDabzJC-FsibLokY5Sz4de3eSCs6NLfXBS_7C_RgNM3cCS8wTQwwAYh6ZQlMcMrR_P3wekxEub_bltgJc1OSSZzQCjiiBqLU_Gwk">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-label-caps text-electric-amber mb-2">KINGSTON UPON THAMES</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Residential Lighting Design</h3>
+<p class="font-body-md text-body-md text-gray-300">Intelligent Lutron system integration for a luxury riverside property.</p>
+</div>
+</div>
+</div>
+<!-- Project 2: EV Charging -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-110" data-alt="Modern dual EV charging station installed on a clean white render wall of a luxury driveway in Wimbledon. A sleek electric car is partially visible. Dusk lighting with blue and amber accents, emphasizing technical precision and clean cable management. Ultra-modern corporate electrical style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvSYMhwKxYffm_dO9mec1xcTOEi3-itM156M-dyetd0rY1imd8sSi76bCmWgLVmfAcJynAKmLDz51QQo3yAJOyujpd1aQOWra0r4SFUDgxEqduFtG4hOzDIaIj43KVUQwu0B2cCTneh0pluMK3Mv5ExIuc_1fK0cNLuroKn41Za2TNs8ZNVVtrzxDWnMBiwazI-aMjNeTC_VefaP78Fs3OviSR_FcrbVxtDY6CoMQtJjoKpw0OwYhq">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-label-caps text-electric-amber mb-2">WIMBLEDON</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">EV Charging Hub</h3>
+<p class="font-body-md text-body-md text-gray-300">Dual 22kW charging point installation for a private residential driveway.</p>
+</div>
+</div>
+</div>
+<!-- Project 3: Fuseboard Upgrade -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-110" data-alt="A meticulously wired modern consumer unit (fuseboard) with perfectly straight colored wires and labeled breakers. The lighting is bright and clinical, showcasing organized electrical engineering. Dark slate background, high tech feeling, professional electrician work in Epsom. Macro photography focusing on wiring detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFplvx6dEqMfaEAM3_Qy0HGBwtrylR4i5l07Hm7zxbKDCCLzBntCX_8Ddh9TBHeSxXkrqKwF5bJkZ0wyo51NjYTRNPDNMyqFq54ZFXEUUb1YRHrSzJa1eBBH2z-r0HTvAa3ykKcOkekrxQbVq6SHAxOu8xG9v3ENy4zI67qpWV2kF0Ml7qjDYhEYAjkCV7stKqvBk0EEkVAqlXJqzrQ7vLnt18FNzUd6bkehGDd4xqT4iHkIQ7zr38">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-label-caps text-electric-amber mb-2">EPSOM</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Full Consumer Unit Upgrade</h3>
+<p class="font-body-md text-body-md text-gray-300">Surge protection and RCD safety overhaul for a period property.</p>
+</div>
+</div>
+</div>
+<!-- Project 4: Commercial Lighting -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-110" data-alt="A wide shot of a high-tech corporate office lobby in South London. Geometric LED strip lighting recessed into the ceiling and walls creating a futuristic look. The floor is polished concrete. Evening lighting, vibrant 'Plasma Blue' and 'Electric Amber' light trails. 8k interior design photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk2UnXTx_VzCytuw-pd4iv-w3BBSaUM3TpDVZ085eOqGv_5I64uciUsGFBbeRanCIXlrFqPX0nc8tScb5PRXCnWKsM7iuw_kKYPhZcq3g8RGliR49VNwYoXkQ07bjDFVxqxT9PopPaD5s0haZ8N7ompHun_HjeirhPAQlkQ-2VBXTIXD6aHxNcNcV0Her1PDVvNbD1meXkFaCeXP2HJABL3X693QwRRB0Xvkod8k_BW9rjKonx8uif">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-label-caps text-electric-amber mb-2">CROYDON</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Commercial Office Fit-out</h3>
+<p class="font-body-md text-body-md text-gray-300">Custom LED architectural lighting for a multi-story headquarters.</p>
+</div>
+</div>
+</div>
+<!-- Project 5: Smart Home -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-110" data-alt="Hands holding a sleek wall-mounted tablet controlling a smart home interface in a dark, premium interior. In the background, the room's lighting subtly changes color. Cinematic lighting, focused on the digital interface and the warm glow of the home. Modern electrical smart technology aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF4Cv7suN7bPatZFP-aMtamvK8B3Y8Yhx3yAqeHAK0DT5xKhKS3WpLwRl32TKih1FH9JgnCCIn3py4Ctt0tZTBjcQ_Eg2wNgELTTdEG0g2HAQ2Hc2nl58JlBjUmYYqO-R43tvRMPxZ22BDTIgpEDQeaq1wa2RNdYE7aisxvCbTWY29bgM35MuCXhrzozwdEfWQ5i4UGVtmPLNd5AzHxx3N9o68Ha94v8H2-2tk48sjtNKjSqGo2TVP">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-label-caps text-electric-amber mb-2">RICHMOND</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Smart Home Ecosystem</h3>
+<p class="font-body-md text-body-md text-gray-300">Complete home automation including security, climate, and light control.</p>
+</div>
+</div>
+</div>
+<!-- Project 6: Solar & Storage -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-110" data-alt="Installation of a Tesla Powerwall battery system in a clean, organized garage. The wall is dark navy. Professional conduit work and clean mounting. Bright, even lighting. Technical, efficient, and eco-friendly aesthetic for a Surrey home. High resolution commercial photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQAHDM9qJj4E5WqZO-s68YvIG94VglDwleuIOHpD3Re6qi8FKYWwXSnGIZ7U3a0PF6fUcpTPYHoZcaCllwvwaUlSx65cPhGbPnADaJ9hSnOGum8wWEMUekGl8XaGutVCA9SWASMqOwVB4gfh7fmeY8DDyEOCHQ-YkwLa0IyIavi67uj64oNRF3s5jlUYaILZyhraRh6PZFIztWb5D2ef_ZcX4mkXOfs6yoB4IUmjxcrLlxXqRnYcWC">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-label-caps text-electric-amber mb-2">SURBITON</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Battery Storage System</h3>
+<p class="font-body-md text-body-md text-gray-300">Solar PV integration with home battery backup for energy independence.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Call to Action Section -->
+<section class="bg-surface-container-high py-24 relative overflow-hidden">
+<div class="px-margin-desktop max-w-container-max mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg mb-4">Have a Project in <span class="text-electric-amber">Surrey</span> or <span class="text-electric-amber">London?</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Our team of NICEIC-approved electricians is ready to bring your vision to life with safety and style.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<button class="bg-electric-amber text-on-primary font-button text-button uppercase px-12 py-4 rounded-lg custom-glow transition-all active:scale-95">Book a Site Survey</button>
+<button class="bg-transparent border border-outline text-on-surface font-button text-button uppercase px-12 py-4 rounded-lg hover:bg-white/5 transition-all active:scale-95">Contact Specialist</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-outline-variant bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md text-electric-amber font-bold mb-6">LSE.</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Premium electrical engineering for residential and commercial clients across London and the Home Counties.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-electric-amber cursor-pointer hover:opacity-80">bolt</span>
+<span class="material-symbols-outlined text-electric-amber cursor-pointer hover:opacity-80">shield</span>
+<span class="material-symbols-outlined text-electric-amber cursor-pointer hover:opacity-80">verified</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-white mb-2 uppercase tracking-widest">Services</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-amber transition-colors hover:translate-x-1 duration-200" href="our-services-london-surrey-electrical.html">Residential Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-amber transition-colors hover:translate-x-1 duration-200" href="our-services-london-surrey-electrical.html">Commercial Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-amber transition-colors hover:translate-x-1 duration-200" href="our-services-london-surrey-electrical.html">Emergency Electrician</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-amber transition-colors hover:translate-x-1 duration-200" href="our-services-london-surrey-electrical.html">Smart Home Tech</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-white mb-2 uppercase tracking-widest">Company</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-amber transition-colors hover:translate-x-1 duration-200" href="project-gallery-recent-electrical-work.html">Trustatrader Profile</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-amber transition-colors hover:translate-x-1 duration-200" href="our-services-london-surrey-electrical.html">About Our Team</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-amber transition-colors hover:translate-x-1 duration-200" href="contact-us-london-surrey-electrical.html">Contact Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-amber transition-colors hover:translate-x-1 duration-200" href="contact-us-london-surrey-electrical.html">Request a Quote</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-white mb-2 uppercase tracking-widest">Support</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">24/7 Emergency Response</p>
+<p class="font-headline-md text-headline-md text-electric-amber">020 8123 4567</p>
+<div class="mt-4">
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">© 2024 London Surrey Electrical Services. All rights reserved.</p>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for gallery hover
+        document.querySelectorAll('.masonry-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const overlay = item.querySelector('.opacity-0');
+                if(overlay) overlay.classList.replace('opacity-0', 'opacity-100');
+            });
+            item.addEventListener('mouseleave', () => {
+                const overlay = item.querySelector('.opacity-100');
+                if(overlay) overlay.classList.replace('opacity-100', 'opacity-0');
+            });
+        });
+
+        // Sticky Nav logic
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const nav = document.querySelector('nav');
+            
+            if (currentScroll <= 0) {
+                nav.classList.remove('shadow-lg');
+                return;
+            }
+            
+            if (currentScroll > lastScroll) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+                nav.classList.add('shadow-lg');
+            }
+            lastScroll = currentScroll;
+            nav.style.transition = 'transform 0.3s ease-in-out';
+        });
+    </script>
+</body></html>

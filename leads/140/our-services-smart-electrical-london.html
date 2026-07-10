@@ -1,0 +1,410 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#5f5e5f",
+                        "on-primary-fixed": "#1b1b1c",
+                        "on-primary-fixed-variant": "#474647",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#e6e2de",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#ebe7e7",
+                        "tertiary-fixed-dim": "#cac6c2",
+                        "surface-neutral": "#F8F9FA",
+                        "on-tertiary-fixed-variant": "#484644",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-surface-variant": "#46474a",
+                        "surface-variant": "#e5e2e1",
+                        "border-subtle": "#E5E7EB",
+                        "surface-bright": "#fdf8f8",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary": "#ffffff",
+                        "background": "#fdf8f8",
+                        "secondary-fixed": "#ffdbcb",
+                        "outline-variant": "#c7c6ca",
+                        "primary-container": "#1b1b1c",
+                        "on-background": "#1c1b1b",
+                        "secondary-container": "#fe7b29",
+                        "primary-fixed": "#e5e2e3",
+                        "tertiary": "#000000",
+                        "inverse-primary": "#c8c6c7",
+                        "tertiary-container": "#1c1b19",
+                        "surface-container": "#f1edec",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1c1b19",
+                        "outline": "#76777b",
+                        "on-secondary-container": "#602600",
+                        "on-tertiary-container": "#868380",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb691",
+                        "surface-container-low": "#f7f3f2",
+                        "surface-dim": "#ddd9d9",
+                        "surface": "#fdf8f8",
+                        "on-secondary-fixed-variant": "#783100",
+                        "primary-fixed-dim": "#c8c6c7",
+                        "text-muted": "#6B7280",
+                        "primary": "#000000",
+                        "inverse-surface": "#313030",
+                        "on-primary-container": "#858384",
+                        "secondary": "#F37321",
+                        "on-secondary-fixed": "#341100"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-gap-lg": "120px",
+                        "section-gap-sm": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "display-hero": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-hero-mobile": ["Montserrat"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-sm": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-hero": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-hero-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .btn-primary-glow:hover {
+            box-shadow: 0 0 20px rgba(243, 115, 33, 0.4);
+        }
+        .raised-card {
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .raised-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.08);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-nav h-20 shadow-sm border-none">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-container-max flex justify-between items-center h-full">
+<a class="font-headline-md text-headline-md font-bold text-primary flex items-center" href="index.html">
+                Smart Electrical London
+            </a>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="contact-us-smart-electrical-london.html">About Us</a>
+<a class="font-label-caps text-label-caps text-secondary font-bold border-b-2 border-secondary pb-1" href="our-services-smart-electrical-london.html">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="our-projects-smart-electrical-london.html">Projects</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="contact-us-smart-electrical-london.html">Contact Us</a>
+</nav>
+<button class="bg-secondary text-white font-label-caps text-label-caps px-6 py-3 rounded-lg btn-primary-glow transition-all">
+                Get a Quote
+            </button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="py-section-gap-sm md:py-section-gap-lg bg-surface-neutral overflow-hidden relative">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-container-max relative z-10 text-center">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">Professional London Electricians</span>
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-primary max-w-3xl mx-auto mb-6">
+                    Expert Electrical Services
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Precision engineering meets high-end residential luxury. We provide comprehensive electrical solutions for modern homes and commercial properties across London.
+                </p>
+</div>
+<!-- Atmospheric background element -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+</section>
+<!-- Services Bento-inspired Grid -->
+<section class="py-section-gap-lg">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-container-max">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- 1. Exterior Lighting (Featured Large) -->
+<div class="md:col-span-2 raised-card bg-white rounded-xl overflow-hidden group">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 overflow-hidden h-64 md:h-full">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A sophisticated evening shot of high-end outdoor architectural lighting illuminating a modern London garden. Warm, glowing pendant lights hang from minimalist metallic structures among lush greenery, creating a luxurious and serene atmosphere. The photography is sharp with a shallow depth of field, emphasizing the technical precision and aesthetic beauty of the installation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmUb0LGAmv43DdVz3BXxAxI-_U3F8_6sUp_Dy2H7ciG_9mhUbsInstLhBbezbluUj78c-3YdEUyCABmBwsNopwkXKSI66EMLkyh1Kh1EJDLeMhggUa-9U5rk_YxDOasAXwx9PZb5hEfwpJwdRM7ZFPe2tPFac7Lf04DxpaDuI2iV4hf7ITqbTsD3vLHNPx2bS8nokny5EW1yjlQqv1UQc4HMaa605GyIJL-F9TfL3UXLI_om0JMZjM8w">
+</div>
+<div class="p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
+<span class="text-secondary font-label-caps text-label-caps mb-4">Residential Luxury</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Exterior Lighting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                                    Transform your outdoor spaces with precision-engineered lighting designs. From architectural highlights to garden ambient lighting, we blend security with high-end aesthetics.
+                                </p>
+<button class="self-start px-8 py-3 bg-secondary text-white rounded-lg font-label-caps text-label-caps btn-primary-glow">
+                                    Request Service
+                                </button>
+</div>
+</div>
+</div>
+<!-- 2. Smart Homes -->
+<div class="raised-card bg-white rounded-xl overflow-hidden group flex flex-col">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLubnj780XIjsdqW3IfZhD9BbmH4QUSF1oowVYKToBUnNVQOZGvklwJ31xB6aVCbgIGyXVT_2AaMGVEhnFRL11n_rwwIgBDBdFJr69Kqd2WGrXje36J3YyIPonM-SeqE14TqM3yB4kmkNQzrBTbgl6UH7KM0NhsggLI1UrRe83opdZnN8WRTctIvHooVII2IV6KmPbNstvKglpeV1Bd8nqKyd8aXF1eQ5u31Jdr32AbZwh6gZ5MVqXh_UT_s">
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-3">Smart Homes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                                Integrated automation systems for lighting, climate, and security controlled from your fingertips.
+                            </p>
+<button class="w-full py-3 border border-secondary text-secondary rounded-lg font-label-caps text-label-caps hover:bg-secondary hover:text-white transition-all">
+                                Request Service
+                            </button>
+</div>
+</div>
+<!-- 3. Lighting Installation -->
+<div class="raised-card bg-white rounded-xl overflow-hidden group flex flex-col">
+<div class="h-64 overflow-hidden relative bg-black">
+<img class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" data-alt="A detailed shot of a luxury interior pendant lighting installation. A professional electrician wearing protective gloves is carefully adjusting a high-end designer chandelier in a bright, modern living room. The focus is on the intricate glass details and the soft golden light emitted by the bulbs, reflecting the premium nature of the service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXcJWMNuMuFiklt4rYQ1IjWawxYvI9VR3OVoYpFbwILQT4IRWHg30YNNWtWzIEI-13nby42z1-RACeBpfI6xsK432Ap4Kkz_uM-u6q_2QHH_W3xHHETXsIPQpL8x0ndlh7SsnMi9YFXiApLd7eLioHHfEdnDkBIU5Ne-YviOKlseG61uqWJUIAyvUKYwkOeKGlVrWRjoZ-3Myk5b0hTxecwPIaqhIq4z1AgBu7bICgrKbE3eCP8c2rjA">
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-3">Lighting Installation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                                Custom interior lighting solutions, from energy-efficient LEDs to complex bespoke designer installations.
+                            </p>
+<button class="w-full py-3 border border-secondary text-secondary rounded-lg font-label-caps text-label-caps hover:bg-secondary hover:text-white transition-all">
+                                Request Service
+                            </button>
+</div>
+</div>
+<!-- 4. Consumer Unit Upgrade -->
+<div class="raised-card bg-white rounded-xl overflow-hidden group flex flex-col">
+<div class="h-64 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A professional close-up of a modern, clean electrical consumer unit (fuse box) installation. The wiring is exceptionally neat and organized, showing high technical precision. A technician's hand is visible using a digital multimeter to test a circuit breaker. High-key lighting emphasizes safety, cleanliness, and modern standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo7Q9PlOSxXx-ML4ZLUvFOiIHIp8a8Lqf-yeLnGp1Phgt6LjvYX9NMyYCoYOrFhv5Sy8A0jXMbXQnz319NwU0aK8sfje4z0LaApRp9k4eKuh1MZ52pcZq7E9-wJlPjO9AsBdF36wy__xFRdRzAgBgULNtOOt73_UF9b65QNFcr-mWgntvfeddJ-TrbCb-fUrXWBCOfk20P9SWJpYXwKoOXd2ruDbdIKBdgLj9Nt2w8lKj-AcfcGo2f7Q">
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-3">Consumer Unit Upgrade</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                                Enhance your property's safety and capacity with modern RCD-protected consumer unit replacements.
+                            </p>
+<button class="w-full py-3 border border-secondary text-secondary rounded-lg font-label-caps text-label-caps hover:bg-secondary hover:text-white transition-all">
+                                Request Service
+                            </button>
+</div>
+</div>
+<!-- 5. PAT Testing -->
+<div class="raised-card bg-white rounded-xl overflow-hidden group flex flex-col">
+<div class="h-64 overflow-hidden bg-primary/5 p-12 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary scale-[4]">electrical_services</span>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-3">PAT Testing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                                Thorough portable appliance testing for commercial compliance and residential peace of mind.
+                            </p>
+<button class="w-full py-3 border border-secondary text-secondary rounded-lg font-label-caps text-label-caps hover:bg-secondary hover:text-white transition-all">
+                                Request Service
+                            </button>
+</div>
+</div>
+<!-- 6. Inspection & Testing -->
+<div class="raised-card bg-white rounded-xl overflow-hidden group flex flex-col">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An expert electrician in professional uniform conducting a detailed electrical inspection in a high-end commercial office space. He is using advanced diagnostic equipment and taking notes on a tablet. The setting is bright, corporate, and modern, illustrating meticulous attention to detail and safety standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1d3UPCI6RZf3KqP9-dkTrp42usaoDU2UUHAN9_OC-xqNLJk7S0Qqt1AbdDmVzcc4YGjSAmfiYje1U2tpYsgrV67bpdgGfYYVVby2X0LPBsLgDYeoofo3gdITDlBColso_W7bKxenoN-lg5FZ-QrMUbhqr2ndQfbTUH9dLmwtALr1We0_4mkyiK-UC68J5bKxGWobueCBU_4IRDRcH95MsrNiCaF-KnN8ESU0sLX06CR7QB2c3k-6SUQ">
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-3">Inspection &amp; Testing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                                Comprehensive periodic inspections to identify potential faults and ensure long-term electrical reliability.
+                            </p>
+<button class="w-full py-3 border border-secondary text-secondary rounded-lg font-label-caps text-label-caps hover:bg-secondary hover:text-white transition-all">
+                                Request Service
+                            </button>
+</div>
+</div>
+<!-- 7. Safety Certificates (EICR) -->
+<div class="raised-card bg-white rounded-xl overflow-hidden group flex flex-col">
+<div class="h-64 overflow-hidden bg-secondary/5 p-12 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary scale-[4]">verified</span>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-3">Safety Certificates</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                                Official EICR reports and safety certifications for landlords, homeowners, and business owners.
+                            </p>
+<button class="w-full py-3 border border-secondary text-secondary rounded-lg font-label-caps text-label-caps hover:bg-secondary hover:text-white transition-all">
+                                Request Service
+                            </button>
+</div>
+</div>
+<!-- 8. Data Cabling -->
+<div class="md:col-span-2 lg:col-span-1 raised-card bg-primary text-white rounded-xl overflow-hidden group flex flex-col">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="A close-up high-contrast image of perfectly organized blue and white Ethernet data cables in a server rack. The lighting is cold and clinical, highlighting the technical expertise and precision of the data cabling service. Deep shadows and vibrant cable colors create a striking, modern industrial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqVUuhqm_XBLIKsjcYr-q0qXEliIyyf56qXg-3MtnY4WOmO1EBR9ltE-dNUT2iT5Lwy9Qm0EGxuE920z0RFIybnSuBkMRlrGyzKi8VZcAWGkS0MtqonMkCh-1TLOOOuL0BwWlNqaRirMVl83FWIwqjLj2oB4LapPXbVEe0VcuNKKCbO9QDR0rzfOu6gDZoGQuc5P4xT_WhMpRn2Kn2ixFfLVj_Xw6dI9BEmrHVBIFDk9w40_qByvNlmQ">
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-3">Data Cabling</h3>
+<p class="font-body-sm text-body-sm text-white/70 mb-6 flex-grow">
+                                High-speed networking solutions and structured cabling for the modern connected property.
+                            </p>
+<button class="w-full py-3 bg-secondary text-white rounded-lg font-label-caps text-label-caps btn-primary-glow">
+                                Request Service
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-gap-lg bg-surface-container-low">
+<div class="max-w-[800px] mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4 text-primary">Common Electrical Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Expert advice on keeping your home safe and efficient.</p>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="border-b border-outline-variant bg-white p-6 rounded-lg">
+<button class="flex justify-between items-center w-full text-left font-headline-sm text-headline-sm text-primary group" onclick="this.nextElementSibling.classList.toggle('hidden');">
+                            How often should a home have an electrical inspection?
+                            <span class="material-symbols-outlined text-secondary transition-transform group-active:rotate-180">expand_more</span>
+</button>
+<div class="mt-4 font-body-md text-body-md text-on-surface-variant hidden">
+                            For homeowners, we recommend a thorough electrical inspection (EICR) every 10 years. For rental properties, it is a legal requirement every 5 years or at the start of a new tenancy.
+                        </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="border-b border-outline-variant bg-white p-6 rounded-lg">
+<button class="flex justify-between items-center w-full text-left font-headline-sm text-headline-sm text-primary group" onclick="this.nextElementSibling.classList.toggle('hidden');">
+                            What are the signs that my consumer unit needs upgrading?
+                            <span class="material-symbols-outlined text-secondary transition-transform group-active:rotate-180">expand_more</span>
+</button>
+<div class="mt-4 font-body-md text-body-md text-on-surface-variant hidden">
+                            Key indicators include frequent tripping of breakers, flickering lights, a burning smell near the panel, or if your unit still uses old-style replaceable fuse wires rather than modern circuit breakers.
+                        </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="border-b border-outline-variant bg-white p-6 rounded-lg">
+<button class="flex justify-between items-center w-full text-left font-headline-sm text-headline-sm text-primary group" onclick="this.nextElementSibling.classList.toggle('hidden');">
+                            Can you install smart lighting in an older property?
+                            <span class="material-symbols-outlined text-secondary transition-transform group-active:rotate-180">expand_more</span>
+</button>
+<div class="mt-4 font-body-md text-body-md text-on-surface-variant hidden">
+                            Absolutely. We specialize in retrofitting modern smart home technology into period London properties while preserving the building's character.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap-lg bg-primary text-white text-center">
+<div class="max-w-4xl mx-auto px-6">
+<h2 class="font-display-hero text-display-hero-mobile md:text-display-hero mb-8">Ready to start your next project?</h2>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-10 py-4 bg-secondary text-white font-label-caps text-label-caps rounded-lg btn-primary-glow text-lg">
+                        Get a Free Quote
+                    </button>
+<button class="px-10 py-4 border-2 border-white/30 text-white hover:bg-white hover:text-primary transition-all font-label-caps text-label-caps rounded-lg text-lg">
+                        Call 020 8000 0000
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-container-max py-section-gap-sm grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-secondary mb-6">Smart Electrical London</div>
+<p class="font-body-sm text-body-sm text-on-primary-container/80 mb-6">
+                    London's premier electrical specialists, delivering technical excellence for residential and commercial properties.
+                </p>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span class="font-body-sm text-body-sm">NICEIC Approved Contractor</span>
+</div>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-caps text-label-caps text-white mb-6">Our Services</h4>
+<div class="grid grid-cols-2 gap-4">
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary hover:translate-x-1 transition-all" href="our-services-smart-electrical-london.html">Exterior Lighting</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary hover:translate-x-1 transition-all" href="our-services-smart-electrical-london.html">Smart Homes</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary hover:translate-x-1 transition-all" href="our-services-smart-electrical-london.html">Lighting Installation</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary hover:translate-x-1 transition-all" href="our-services-smart-electrical-london.html">Consumer Unit Upgrade</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary hover:translate-x-1 transition-all" href="our-services-smart-electrical-london.html">PAT Testing</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary hover:translate-x-1 transition-all" href="our-services-smart-electrical-london.html">Inspection &amp; Testing</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary hover:translate-x-1 transition-all" href="our-services-smart-electrical-london.html">Safety Certificates</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary hover:translate-x-1 transition-all" href="our-services-smart-electrical-london.html">Data Cabling</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-6">Contact</h4>
+<ul class="space-y-4 font-body-sm text-body-sm text-on-primary-container/80">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">location_on</span>
+                        Mayfair, London, UK
+                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">phone</span>
+                        020 8000 0000
+                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">mail</span>
+                        hello@smartelectriclondon.co.uk
+                    </li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-8">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-container-max flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-sm text-body-sm text-on-primary-container/60">© 2024 Smart Electrical London Ltd. All rights reserved.</p>
+<div class="flex space-x-6 font-label-caps text-label-caps text-on-primary-container/60">
+<a class="hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-secondary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for FAQ icons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const icon = btn.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.style.transform = btn.nextElementSibling.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+</body></html>

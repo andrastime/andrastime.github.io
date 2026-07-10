@@ -1,0 +1,462 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Smart Booking | Top Techs Birmingham</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(26, 26, 30, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .neon-glow-red {
+            box-shadow: 0 0 15px rgba(255, 83, 82, 0.3);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 238, 252, 0.3);
+        }
+        .grid-overlay {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #00eefc !important;
+            box-shadow: 0 0 10px rgba(0, 238, 252, 0.2);
+        }
+        .step-inactive { opacity: 0.3; filter: grayscale(1); pointer-events: none; }
+        .booking-step { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#303034",
+                    "warning-amber": "#FFB800",
+                    "surface-bright": "#39393d",
+                    "on-surface": "#e4e1e7",
+                    "on-surface-variant": "#eabcb8",
+                    "on-background": "#e4e1e7",
+                    "obsidian-deep": "#050505",
+                    "tertiary": "#c9c6c5",
+                    "surface-container-highest": "#353439",
+                    "glass-stroke": "rgba(255, 255, 255, 0.12)",
+                    "outline": "#b08783",
+                    "tertiary-container": "#929090",
+                    "surface-container-low": "#1b1b1f",
+                    "outline-variant": "#5f3e3c",
+                    "on-secondary-fixed": "#002022",
+                    "background": "#131317",
+                    "primary-fixed": "#ffdad7",
+                    "primary-container": "#ff5352",
+                    "on-secondary-fixed-variant": "#004f54",
+                    "on-primary-fixed": "#410004",
+                    "inverse-primary": "#c0001e",
+                    "on-secondary": "#00363a",
+                    "secondary": "#d3fbff",
+                    "tertiary-fixed-dim": "#c9c6c5",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "secondary-fixed-dim": "#00dbe9",
+                    "on-primary": "#68000b",
+                    "on-primary-container": "#5c0009",
+                    "surface-dim": "#131317",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed": "#7df4ff",
+                    "surface-container": "#1f1f23",
+                    "primary-fixed-dim": "#ffb3ae",
+                    "diagnostic-green": "#39FF14",
+                    "tertiary-fixed": "#e5e2e1",
+                    "secondary-container": "#00eefc",
+                    "surface-container-high": "#2a2a2e",
+                    "primary": "#ffb3ae",
+                    "surface": "#131317",
+                    "on-tertiary-container": "#2a2a29",
+                    "on-secondary-container": "#00686f",
+                    "surface-tint": "#ffb3ae",
+                    "surface-container-lowest": "#0e0e12",
+                    "error-container": "#93000a",
+                    "inverse-surface": "#e4e1e7",
+                    "surface-variant": "#353439",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "on-error": "#690005",
+                    "error": "#ffb4ab",
+                    "on-tertiary": "#313030",
+                    "on-primary-fixed-variant": "#930014"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "glass-padding": "2rem",
+                    "grid-unit": "8px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "code-data": ["JetBrains Mono"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Sora"],
+                    "headline-md": ["Sora"],
+                    "label-caps": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Sora"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "code-data": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-obsidian-deep text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<div class="fixed inset-0 grid-overlay pointer-events-none z-0"></div>
+<!-- Header Navigation -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-glass-stroke">
+<nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">Top Techs Birmingham</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="specialized-services-the-diagnostic-lab.html">Diagnostics</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="specialized-services-the-diagnostic-lab.html">EV Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="specialized-services-the-diagnostic-lab.html">Security</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="index.html">Booking</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="the-lab-technical-blog-updates.html">The Lab</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-6 py-2 rounded-lg hover:scale-105 active:scale-95 transition-all neon-glow-red">
+                    Emergency Repair
+                </button>
+</div>
+</nav>
+</header>
+<main class="relative z-10 pt-32 pb-24 px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Context & Stats -->
+<div class="lg:col-span-4 space-y-8">
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-secondary font-code-data text-code-data">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                        SYSTEM STATUS: OPERATIONAL
+                    </div>
+<h1 class="font-headline-lg text-headline-lg text-white">Precision Diagnostic Scheduling</h1>
+<p class="text-on-surface-variant font-body-lg">Access our high-performance laboratory services. Our engineers specialize in advanced ECU diagnostics, electrical surgery, and technical fault-finding.</p>
+</div>
+<div class="glass-panel p-6 rounded-xl space-y-6">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps opacity-60">Lead Time Status</span>
+<span class="bg-warning-amber/20 text-warning-amber text-[10px] px-2 py-1 font-bold rounded">12-14 DAYS</span>
+</div>
+<div class="space-y-2">
+<p class="font-code-data text-code-data text-on-surface">Queue Position: <span class="text-secondary">#14</span></p>
+<div class="h-1 bg-surface-container-highest w-full rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container w-2/3"></div>
+</div>
+</div>
+<div class="flex gap-4 items-center pt-4 border-t border-glass-stroke">
+<span class="material-symbols-outlined text-diagnostic-green">lock</span>
+<div class="text-[11px] font-code-data opacity-60 uppercase tracking-widest">
+                            SSL SECURED • 256-BIT ENCRYPTION • BIRMINGHAM LAB
+                        </div>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-xl">
+<h3 class="font-label-caps text-label-caps text-primary mb-4">Technical Support</h3>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center border border-glass-stroke">
+<span class="material-symbols-outlined text-secondary">call</span>
+</div>
+<div>
+<p class="text-on-surface font-bold">07491 993 230</p>
+<p class="text-[12px] text-on-surface-variant">Direct Engineer Line</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Multi-Step Form -->
+<div class="lg:col-span-8">
+<div class="glass-panel rounded-xl overflow-hidden border border-glass-stroke">
+<!-- Progress Bar -->
+<div class="flex border-b border-glass-stroke bg-surface-container-low/50">
+<div class="flex-1 py-4 px-6 border-r border-glass-stroke flex items-center gap-3 bg-primary/10 border-b-2 border-b-primary" id="step-nav-1">
+<span class="font-code-data text-code-data text-primary">01</span>
+<span class="font-label-caps text-label-caps text-on-surface">Vehicle</span>
+</div>
+<div class="flex-1 py-4 px-6 border-r border-glass-stroke flex items-center gap-3 opacity-40" id="step-nav-2">
+<span class="font-code-data text-code-data">02</span>
+<span class="font-label-caps text-label-caps">Diagnostic</span>
+</div>
+<div class="flex-1 py-4 px-6 flex items-center gap-3 opacity-40" id="step-nav-3">
+<span class="font-code-data text-code-data">03</span>
+<span class="font-label-caps text-label-caps">Schedule</span>
+</div>
+</div>
+<form class="p-8 space-y-8" id="booking-flow">
+<!-- Step 1: Vehicle Details -->
+<div class="booking-step space-y-6" id="step-1">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-[11px] text-on-surface-variant uppercase tracking-tighter">Manufacturer / Make</label>
+<select class="w-full bg-surface-container border border-glass-stroke rounded py-3 px-4 font-code-data text-on-surface">
+<option value="">SELECT MAKE</option>
+<option value="BMW">BMW</option>
+<option value="Audi">Audi</option>
+<option value="Mercedes">Mercedes-Benz</option>
+<option value="VW">Volkswagen</option>
+<option value="Tesla">Tesla</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[11px] text-on-surface-variant uppercase tracking-tighter">Model / Chassis</label>
+<input class="w-full bg-surface-container border border-glass-stroke rounded py-3 px-4 font-code-data text-on-surface placeholder:opacity-30" placeholder="e.g. F30 3 Series" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[11px] text-on-surface-variant uppercase tracking-tighter">Registration (VRM)</label>
+<input class="w-full bg-surface-container border border-glass-stroke rounded py-3 px-4 font-code-data text-on-surface text-center font-bold tracking-widest placeholder:font-normal placeholder:tracking-normal" placeholder="BT66 XYZ" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[11px] text-on-surface-variant uppercase tracking-tighter">Fuel Type</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 border border-glass-stroke rounded font-code-data text-[12px] hover:border-secondary transition-colors" type="button">ICE</button>
+<button class="py-2 border border-secondary bg-secondary/10 rounded font-code-data text-[12px]" type="button">EV</button>
+<button class="py-2 border border-glass-stroke rounded font-code-data text-[12px] hover:border-secondary transition-colors" type="button">HYBRID</button>
+</div>
+</div>
+</div>
+<div class="flex justify-end pt-4">
+<button class="flex items-center gap-2 px-8 py-3 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps rounded-lg hover:scale-105 transition-transform neon-glow-cyan" onclick="goToStep(2)" type="button">
+                                    Continue to Diagnostic Info
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Step 2: Fault Analysis (Hidden initially) -->
+<div class="booking-step space-y-6 hidden" id="step-2">
+<div class="space-y-4">
+<label class="font-label-caps text-[11px] text-on-surface-variant uppercase tracking-tighter">System Fault Description</label>
+<textarea class="w-full bg-surface-container border border-glass-stroke rounded py-3 px-4 font-code-data text-on-surface placeholder:opacity-30" placeholder="Describe the electrical symptoms, warning lights, or intermittent failures in detail..." rows="4"></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="border border-glass-stroke rounded p-4 flex items-center gap-4 cursor-pointer hover:bg-white/5 transition-colors">
+<div class="w-10 h-10 rounded border border-warning-amber/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-warning-amber">warning</span>
+</div>
+<div>
+<p class="font-label-caps text-[12px]">Check Engine Light</p>
+<p class="text-[10px] opacity-60 font-code-data">System Critical Error</p>
+</div>
+</div>
+<div class="border border-glass-stroke rounded p-4 flex items-center gap-4 cursor-pointer hover:bg-white/5 transition-colors">
+<div class="w-10 h-10 rounded border border-secondary/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">bolt</span>
+</div>
+<div>
+<p class="font-label-caps text-[12px]">Battery/Charging</p>
+<p class="text-[10px] opacity-60 font-code-data">Voltage Fluctuations</p>
+</div>
+</div>
+</div>
+<div class="flex justify-between pt-4">
+<button class="text-on-surface-variant font-label-caps text-label-caps flex items-center gap-2" onclick="goToStep(1)" type="button">
+<span class="material-symbols-outlined">arrow_back</span>
+                                    Back
+                                </button>
+<button class="flex items-center gap-2 px-8 py-3 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps rounded-lg hover:scale-105 transition-transform neon-glow-cyan" onclick="goToStep(3)" type="button">
+                                    Select Appointment
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Step 3: Calendar (Hidden initially) -->
+<div class="booking-step space-y-6 hidden" id="step-3">
+<div class="bg-surface-container p-6 rounded-xl border border-glass-stroke">
+<div class="flex justify-between items-center mb-6">
+<h4 class="font-headline-md text-white">October 2024</h4>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-white/10 rounded"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-2 hover:bg-white/10 rounded"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center">
+<!-- Days Header -->
+<div class="text-[10px] font-label-caps opacity-40 py-2">MON</div>
+<div class="text-[10px] font-label-caps opacity-40 py-2">TUE</div>
+<div class="text-[10px] font-label-caps opacity-40 py-2">WED</div>
+<div class="text-[10px] font-label-caps opacity-40 py-2">THU</div>
+<div class="text-[10px] font-label-caps opacity-40 py-2">FRI</div>
+<div class="text-[10px] font-label-caps opacity-40 py-2">SAT</div>
+<div class="text-[10px] font-label-caps opacity-40 py-2">SUN</div>
+<!-- Simple Grid Mock -->
+<div class="py-3 text-[12px] opacity-20 cursor-not-allowed">28</div>
+<div class="py-3 text-[12px] opacity-20 cursor-not-allowed">29</div>
+<div class="py-3 text-[12px] opacity-20 cursor-not-allowed">30</div>
+<div class="py-3 text-[12px] font-code-data hover:bg-secondary/20 cursor-pointer rounded border border-glass-stroke">01</div>
+<div class="py-3 text-[12px] font-code-data hover:bg-secondary/20 cursor-pointer rounded border border-glass-stroke">02</div>
+<div class="py-3 text-[12px] font-code-data hover:bg-secondary/20 cursor-pointer rounded border border-glass-stroke">03</div>
+<div class="py-3 text-[12px] font-code-data hover:bg-secondary/20 cursor-pointer rounded border border-glass-stroke">04</div>
+<!-- Highlighted Window -->
+<div class="py-3 text-[12px] bg-primary/20 border border-primary/50 text-primary font-bold rounded">12</div>
+<div class="py-3 text-[12px] bg-primary/20 border border-primary/50 text-primary font-bold rounded">13</div>
+<div class="py-3 text-[12px] bg-primary/20 border border-primary/50 text-primary font-bold rounded">14</div>
+<div class="py-3 text-[12px] font-code-data opacity-30">15</div>
+<div class="py-3 text-[12px] font-code-data opacity-30">16</div>
+<div class="py-3 text-[12px] font-code-data opacity-30">17</div>
+<div class="py-3 text-[12px] font-code-data opacity-30">18</div>
+</div>
+<div class="mt-6 flex items-center gap-4 text-[11px] font-code-data">
+<div class="flex items-center gap-1"><span class="w-3 h-3 bg-primary/20 border border-primary/50 rounded"></span> EARLIEST SLOTS</div>
+<div class="flex items-center gap-1"><span class="w-3 h-3 border border-glass-stroke rounded"></span> AVAILABLE</div>
+</div>
+</div>
+<div class="flex justify-between pt-4">
+<button class="text-on-surface-variant font-label-caps text-label-caps flex items-center gap-2" onclick="goToStep(2)" type="button">
+<span class="material-symbols-outlined">arrow_back</span>
+                                    Back
+                                </button>
+<button class="flex items-center gap-2 px-12 py-4 bg-primary text-on-primary font-bold font-label-caps text-label-caps rounded-lg hover:scale-105 transition-transform neon-glow-red" type="submit">
+                                    CONFIRM RESERVATION
+                                    <span class="material-symbols-outlined">check_circle</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+<!-- Emergency Skip -->
+<div class="mt-8 p-6 rounded-xl bg-primary/10 border border-primary/20 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded-full animate-pulse">
+<span class="material-symbols-outlined text-white">priority_high</span>
+</div>
+<div>
+<h4 class="font-label-caps text-primary text-[14px]">Emergency Technical Breakdown?</h4>
+<p class="text-[12px] text-on-surface-variant max-w-md">Our mobile response units are prioritized for complete system failures and non-starting modern vehicles.</p>
+</div>
+</div>
+<button class="bg-white text-black font-label-caps text-[11px] px-6 py-3 rounded hover:bg-primary hover:text-white transition-colors">SKIP THE QUEUE</button>
+</div>
+</div>
+</div>
+<!-- Featured Laboratory Images (From Reference) -->
+<section class="mt-24 space-y-8">
+<div class="flex justify-between items-end border-b border-glass-stroke pb-4">
+<div>
+<span class="font-code-data text-secondary text-[12px]">GALLERY // DATA_LOGS</span>
+<h2 class="font-headline-md text-white">The Engineering Environment</h2>
+</div>
+<p class="font-body-md text-on-surface-variant hidden md:block">Real-time snapshots from our diagnostic facility in Birmingham.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="aspect-video glass-panel rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A detailed high-tech automotive diagnostic scene inside a clean workshop. A white BMW 1 series has its hood open, revealing complex engine components. A rugged professional laptop is resting on top of the engine block, displaying a complex ECU mapping software with green and red data lines. The lighting is bright and industrial, emphasizing a surgical and technical atmosphere consistent with aerospace-level maintenance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRoIDice3tutvbzc-P1vC5gRw8Dj1_EVgwK4RUDid5sYPwxDP7K-7bbUrjkze542rJGJcG0sw4f7lH1U4SLxSC5KoIzBvqFTzVy32o2ohZrZc_j_ZBK65RSzK2a1DahS0VKUQ4UKjCOJBLgl5KKv3skqZZ1AoRKKrCHUbgSl3WAMj58ZbhzXv9eMlLmeH6hREuOTVlGJIwYH1Nl1pyBvTKwbKf3GkzwngYM3aRLCrxIQJr842mLjSv">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-end items-end">
+<p class="font-code-data text-[10px] text-primary">SCAN_PHASE: ACTIVE_LINK_ESTABLISHED</p>
+</div>
+</div>
+<div class="aspect-video glass-panel rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A close-up shot of a technical electronics workbench inside an auto-electrical laboratory. Various wiring looms, circuit boards, and advanced ECU programming tools like Autotuner are laid out with extreme precision on a clean surface. The background is a crisp white wall with the Top Techs Birmingham logo. The lighting is sharp and focused, casting soft shadows that highlight the intricate nature of the micro-electrical repair work being performed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEQYd-thtCHsRKF6J0RxgHBut1bNc5ZrAfZNQ56xivkM9OuPojcyBOvPiYxIaEg3JNKr2UFfTwbIYseJwjU39f9wpX4ISEXdompkcdV5DRG64dz-8K6V7ZRpAweh7QJhUPHX_x3PF-ENRhrLBrMEpZg2wa_eCmPq0XILhaZlN_dq1utanbrm4Vgo14xteFWAysURhtyp0Ix4sdLlHKKjc9CNo6vocXf3wYlpA8HopZAAriyUKA0NWY">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-end items-end">
+<p class="font-code-data text-[10px] text-secondary">CIRCUIT_ANALYSIS: PORT_04_STABLE</p>
+</div>
+</div>
+<div class="aspect-video glass-panel rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A focused engineer with black gloves leans over a modern high-performance engine bay, carefully inspecting a complex wiring harness. The scene is shot from a low angle, emphasizing the scale of the machinery and the human precision involved. The lighting is a mix of natural workshop light and bright internal engine LEDs, creating a high-contrast look that feels professional and authoritative. The overall aesthetic is dark, moody, and technically sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWZFiuEAZQSG704j1ethOxxsuHFT44ynoYwwJmnxvhnzuPbhR7UMaczWRzed22cVT6_vdnOfKBrO-rl6ixnJPzS3T3sND1gAyPre-VOz7mWThQRX2HqqnPpd8DhLIK-WmM_F-b5nrryLmUdIv6R-_xTcAq4bp34DdcZ0G6YfjSlsXZnP19iqg15InjAWAJWRxnM0nKXTFAaSxD_7YeBUlufMdLGGXWI5LzNQw_kNK0HOt2dRL-5G1B">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-end items-end">
+<p class="font-code-data text-[10px] text-diagnostic-green">HUMAN_INTERVENTION: CALIBRATION_PHASE</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-obsidian-deep border-t border-glass-stroke mt-12 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max mx-auto">
+<div class="space-y-4">
+<span class="font-label-caps text-primary text-lg">TOP TECHS</span>
+<p class="text-body-md text-on-surface-variant">Birmingham's premier laboratory for automotive electrical engineering and precision diagnostics.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined opacity-40 hover:opacity-100 cursor-pointer">shield</span>
+<span class="material-symbols-outlined opacity-40 hover:opacity-100 cursor-pointer">memory</span>
+<span class="material-symbols-outlined opacity-40 hover:opacity-100 cursor-pointer">terminal</span>
+</div>
+</div>
+<div>
+<h5 class="font-label-caps text-[12px] mb-6 text-white opacity-60">Legal</h5>
+<ul class="space-y-2 text-body-md text-on-surface-variant">
+<li><a class="hover:text-diagnostic-green transition-colors" href="specialized-services-the-diagnostic-lab.html">Terms of Service</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="the-lab-technical-blog-updates.html">SSL Certificate</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-[12px] mb-6 text-white opacity-60">Location</h5>
+<p class="text-body-md text-on-surface-variant mb-4">Bannerley Road, Garretts Green<br>Birmingham, B33 0SL, UK</p>
+<a class="text-secondary font-code-data text-[12px] underline" href="index.html">VIEW ON GRID</a>
+</div>
+<div>
+<h5 class="font-label-caps text-[12px] mb-6 text-white opacity-60">Newsletter</h5>
+<div class="flex">
+<input class="bg-surface-container-low border border-glass-stroke rounded-l px-3 py-2 text-[12px] w-full" placeholder="Email" type="email">
+<button class="bg-primary px-4 py-2 rounded-r"><span class="material-symbols-outlined text-white">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-12 pt-8 border-t border-glass-stroke/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-code-data opacity-40">
+<p>© 2024 TOP TECHS BIRMINGHAM. ALL SYSTEMS NOMINAL.</p>
+<p>LAT: 52.4743 // LONG: -1.7714</p>
+</div>
+</footer>
+<script>
+        function goToStep(stepNumber) {
+            // Hide all steps
+            document.querySelectorAll('.booking-step').forEach(step => {
+                step.classList.add('hidden');
+            });
+            
+            // Show the target step
+            document.getElementById('step-' + stepNumber).classList.remove('hidden');
+
+            // Update Nav visual
+            for (let i = 1; i <= 3; i++) {
+                const nav = document.getElementById('step-nav-' + i);
+                if (i === stepNumber) {
+                    nav.classList.remove('opacity-40');
+                    nav.classList.add('bg-primary/10', 'border-b-2', 'border-b-primary');
+                    nav.querySelector('.font-code-data').classList.add('text-primary');
+                    nav.querySelector('.font-label-caps').classList.add('text-on-surface');
+                } else if (i < stepNumber) {
+                    nav.classList.remove('bg-primary/10', 'border-b-2', 'border-b-primary', 'opacity-40');
+                    nav.querySelector('.font-code-data').classList.remove('text-primary');
+                    nav.querySelector('.font-code-data').classList.add('text-diagnostic-green');
+                    nav.querySelector('.font-label-caps').classList.add('text-on-surface');
+                } else {
+                    nav.classList.add('opacity-40');
+                    nav.classList.remove('bg-primary/10', 'border-b-2', 'border-b-primary');
+                    nav.querySelector('.font-code-data').classList.remove('text-primary', 'text-diagnostic-green');
+                }
+            }
+        }
+
+        // Add some atmospheric console logging to match the theme
+        console.log("%c [SYSTEM]: TOP TECHS BIRMINGHAM DIAGNOSTIC INTERFACE INITIALIZED ", "background: #131317; color: #39FF14; font-family: monospace;");
+        console.log("%c [STATUS]: CONNECTION SECURE (SSL_RSA_AES_256) ", "color: #00eefc; font-family: monospace;");
+    </script>
+</body></html>

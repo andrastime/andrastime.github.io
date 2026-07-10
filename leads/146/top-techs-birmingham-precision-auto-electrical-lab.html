@@ -1,0 +1,431 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Top Techs Birmingham | Precision Auto-Electrical Lab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "inverse-on-surface": "#303034",
+                "warning-amber": "#FFB800",
+                "surface-bright": "#39393d",
+                "on-surface": "#e4e1e7",
+                "on-surface-variant": "#eabcb8",
+                "on-background": "#e4e1e7",
+                "obsidian-deep": "#050505",
+                "tertiary": "#c9c6c5",
+                "surface-container-highest": "#353439",
+                "glass-stroke": "rgba(255, 255, 255, 0.12)",
+                "outline": "#b08783",
+                "tertiary-container": "#929090",
+                "surface-container-low": "#1b1b1f",
+                "outline-variant": "#5f3e3c",
+                "on-secondary-fixed": "#002022",
+                "background": "#131317",
+                "primary-fixed": "#ffdad7",
+                "primary-container": "#ff5352",
+                "on-secondary-fixed-variant": "#004f54",
+                "on-primary-fixed": "#410004",
+                "inverse-primary": "#c0001e",
+                "on-secondary": "#00363a",
+                "secondary": "#d3fbff",
+                "tertiary-fixed-dim": "#c9c6c5",
+                "on-tertiary-fixed-variant": "#474646",
+                "secondary-fixed-dim": "#00dbe9",
+                "on-primary": "#68000b",
+                "on-primary-container": "#5c0009",
+                "surface-dim": "#131317",
+                "on-error-container": "#ffdad6",
+                "secondary-fixed": "#7df4ff",
+                "surface-container": "#1f1f23",
+                "primary-fixed-dim": "#ffb3ae",
+                "diagnostic-green": "#39FF14",
+                "tertiary-fixed": "#e5e2e1",
+                "secondary-container": "#00eefc",
+                "surface-container-high": "#2a2a2e",
+                "primary": "#ffb3ae",
+                "surface": "#131317",
+                "on-tertiary-container": "#2a2a29",
+                "on-secondary-container": "#00686f",
+                "surface-tint": "#ffb3ae",
+                "surface-container-lowest": "#0e0e12",
+                "error-container": "#93000a",
+                "inverse-surface": "#e4e1e7",
+                "surface-variant": "#353439",
+                "on-tertiary-fixed": "#1c1b1b",
+                "on-error": "#690005",
+                "error": "#ffb4ab",
+                "on-tertiary": "#313030",
+                "on-primary-fixed-variant": "#930014"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "glass-padding": "2rem",
+                "grid-unit": "8px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "container-max": "1280px"
+            },
+            "fontFamily": {
+                "code-data": ["JetBrains Mono"],
+                "body-lg": ["Hanken Grotesk"],
+                "headline-lg": ["Sora"],
+                "headline-md": ["Sora"],
+                "label-caps": ["JetBrains Mono"],
+                "headline-lg-mobile": ["Sora"],
+                "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "code-data": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #e4e1e7;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(26, 26, 30, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .technical-glow:hover {
+            box-shadow: 0 0 20px rgba(0, 238, 252, 0.2);
+            border-color: #00eefc;
+        }
+        .diagnostic-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, #ffb3ae, transparent);
+            height: 1px;
+            width: 100%;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="font-body-md">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-glass-stroke">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Top Techs Birmingham Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLthXIp3bFl01rsEK8jC98DV9YRG2yoPlYpLBqQXcQqGPS46iu_fIKbtA0BpYATX6XGii2TfSHaz71rVIuUBKOVrDbb1E8qW6s46dLwBsePh7YRwsRZex_uSx4aUFodqaCZGix_-9B5NRksf2Sq7HBgQ6Vbb1dnpkhQuInIiNfnukunaqnDiX_Xg71DkiizXBAjA4cY96FB4_ii_uUtYs2Ml1OT0miZVmm7WQFvZyie59m9NEBzgaBfBii0">
+<span class="hidden md:block font-headline-md text-primary tracking-tighter font-bold">TOP TECHS</span>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="specialized-services-the-diagnostic-lab.html">Diagnostics</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="specialized-services-the-diagnostic-lab.html">EV Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="specialized-services-the-diagnostic-lab.html">Security</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="the-lab-technical-blog-updates.html">The Lab</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center gap-2 bg-inverse-on-surface hover:bg-primary/10 text-primary border border-primary/30 px-4 py-2 rounded-lg transition-all scale-95 active:scale-90">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-caps text-label-caps">Secure Login</span>
+</button>
+<button class="bg-primary-container hover:shadow-[0_0_15px_rgba(255,83,82,0.4)] text-on-primary-container px-6 py-2 rounded-lg font-label-caps text-label-caps transition-all scale-95 active:scale-90">
+                    Emergency Repair
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden px-gutter max-w-container-max mx-auto">
+<div class="absolute inset-0 z-0 opacity-40">
+
+</div>
+<div class="grid lg:grid-cols-2 gap-12 items-center relative z-10 w-full">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 px-3 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-diagnostic-green animate-pulse"></span>
+<span class="font-code-data text-code-data text-secondary">SYSTEMS OPERATIONAL: BIRMINGHAM HUB</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg lg:text-[64px] text-on-background leading-tight">
+                        The Digital <span class="text-primary-fixed">Surgeons</span> of Auto-Electrical.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        We don't just fix cars; we recalibrate their souls. Precision diagnostics, ECU remapping, and high-performance electrical engineering for modern vehicles.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-label-caps text-label-caps text-lg technical-glow transition-all">
+                            Instant Diagnostic Booking
+                        </button>
+<button class="bg-transparent border border-secondary text-secondary px-8 py-4 rounded-lg font-label-caps text-label-caps text-lg hover:bg-secondary/10 transition-all">
+                            View Performance Blog
+                        </button>
+</div>
+<div class="flex items-center gap-6 pt-8 border-t border-glass-stroke">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-warning-amber">4.8★</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">390+ GOOGLE REVIEWS</span>
+</div>
+<div class="h-8 w-[1px] bg-glass-stroke"></div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-secondary">100%</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">EV CERTIFIED LAB</span>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+<div class="relative glass-panel rounded-xl overflow-hidden aspect-[4/3] border border-glass-stroke">
+<img class="w-full h-full object-cover" data-alt="A professional automotive technician in a high-tech diagnostic lab, looking intently at a laptop connected to a sophisticated white BMW engine bay. The workshop is pristine, with neon accents, glowing screens showing complex electrical diagrams, and professional tool benches in a dark, atmospheric setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK2eW4vO-6-MoXqj9AxWVqXg54xs1UDT4FqUzVkd6q6ND9q4xTz_BburwurWWwqe5iL1l2oSin9qr39K-EqyztITMQQiV_w-VxkykqUREvjbJlOKvs-URI5a-25EZPIvYvcSb1uYKqWikmUm3gFWROlbTDCJx3OTjwEzDC7oQXZZAZ-ZFN-isu0qoyS0528axLt16BnRFsykvsYnKnJvF0OLmSCrRZzKik9S2EGLjhtthhK-1jTsW4">
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+<div class="flex justify-between items-end">
+<div>
+<p class="font-label-caps text-[10px] text-primary">CURRENT OPERATION</p>
+<p class="font-code-data text-secondary">ECU_RECALIBRATION_09.sys</p>
+</div>
+<div class="flex gap-2">
+<div class="w-1 h-8 bg-diagnostic-green/30"></div>
+<div class="w-1 h-8 bg-diagnostic-green/60"></div>
+<div class="w-1 h-8 bg-diagnostic-green"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Authority Bento Grid -->
+<section class="py-24 px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-label-caps text-label-caps text-primary mb-2">ENGINEERING CAPABILITIES</h2>
+<h3 class="font-headline-lg text-headline-lg">Specialized Systems Control</h3>
+</div>
+<p class="font-code-data text-on-surface-variant max-w-sm text-right">
+                    Hardware: Alientech KESS3 | Autel Ultra<br>
+                    Software: ODIS / ISTA / SD Connect
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1: EV Services -->
+<div class="glass-panel p-8 rounded-xl relative overflow-hidden group hover:bg-surface-container-high transition-all">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-secondary text-4xl opacity-20 group-hover:opacity-100 transition-opacity">electric_car</span>
+</div>
+<span class="font-label-caps text-[10px] text-secondary mb-4 block">HIGH VOLTAGE</span>
+<h4 class="font-headline-md text-headline-md mb-4">EV &amp; Hybrid Diagnostics</h4>
+<p class="text-on-surface-variant font-body-md mb-6">Full isolation testing and battery health diagnostics for Tesla, BMW i, and Mercedes EQ ranges.</p>
+<div class="w-full h-1 bg-glass-stroke relative">
+<div class="absolute left-0 top-0 h-full bg-secondary w-2/3"></div>
+</div>
+</div>
+<!-- Card 2: Security -->
+<div class="glass-panel p-8 rounded-xl md:col-span-1 relative group">
+<span class="font-label-caps text-[10px] text-primary mb-4 block">CRYPTO-SECURITY</span>
+<h4 class="font-headline-md text-headline-md mb-4">Advanced Vehicle Security</h4>
+<p class="text-on-surface-variant font-body-md mb-6">Ghost Immobilisers, StarLine integrations, and encrypted key programming for high-value assets.</p>
+<div class="flex items-center gap-2 text-diagnostic-green">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-code-data text-[12px]">ENCRYPTED_PROTOCOLS_ACTIVE</span>
+</div>
+</div>
+<!-- Card 3: Performance -->
+<div class="glass-panel md:row-span-2 rounded-xl relative overflow-hidden flex flex-col">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a complex circuit board from a modern vehicle engine control unit (ECU). The image is lit with cool blue and vibrant red LEDs, highlighting the surgical precision of the solder points and microchips. The background is a dark, tech-focused workshop environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSx-gl9n_l7WOpATv99h6UkcapeLqe2Eyyk3j3OWc0novkAU0_6rrGERX66OdANOMSZ8S3MPoSA1htuNBO9t1KvZ47fU3f9P7SsdF1wDt62bT5Ojtv4EVyFLQGbF-TxU34tXSvMJQ2PblpdcYJMsXwyxZFTkR-oQ0weE99H63XjAs0C33EEkp0cc3iXu2d6ezrddt94a0e7E8CQN42VnYv9LCc9S3x0XI3B_l4fMGZ_vBavt8mysws">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+</div>
+<div class="p-8">
+<span class="font-label-caps text-[10px] text-warning-amber mb-4 block">OPTIMIZATION</span>
+<h4 class="font-headline-md text-headline-md mb-4">ECU Remapping &amp; Tuning</h4>
+<p class="text-on-surface-variant font-body-md mb-6">Unlock hidden potential through precise software recalibration. Stage 1, 2, and DPF/EGR solutions.</p>
+<button class="text-primary font-label-caps flex items-center gap-2 group">
+                            LEARN MORE <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Reviews -->
+<div class="glass-panel p-8 rounded-xl md:col-span-2 flex flex-col md:flex-row gap-8 items-center bg-obsidian-deep">
+<div class="flex-1">
+<div class="flex gap-1 text-warning-amber mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg italic mb-4">"The team at Top Techs are digital surgeons. They found an electrical ghost in my Audi that three other garages couldn't even see."</p>
+<span class="font-label-caps text-secondary">— James W., BMW M4 Owner</span>
+</div>
+<div class="text-center md:text-right">
+<div class="font-headline-lg text-on-surface">390+</div>
+<div class="font-label-caps text-on-surface-variant">VERIFIED REVIEWS</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specification Section -->
+<section class="py-24 bg-surface-container-low/50 relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-square glass-panel rounded-full p-1 border-2 border-dashed border-primary/20 animate-[spin_60s_linear_infinite]"></div>
+<div class="absolute inset-0 flex items-center justify-center p-12">
+<div class="w-full h-full glass-panel rounded-2xl overflow-hidden relative shadow-2xl">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A high-contrast, artistic photo of a modern car dashboard's digital interface in the dark. The screen shows complex telemetry, diagnostic graphs, and performance data in vibrant reds, ambers, and whites. The surrounding dashboard is sleek, dark leather and carbon fiber, suggesting a premium, high-performance vehicle environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQLLmh31b12mnUBUMMDlV_8foFvFdm4rKA1OWQ9lcST9DCRNYlY-gIOJfG7EyuiEgoFFdq7jleGmFai_PANPSQyQuu--H3ORf3CeUZpjikbiHDLgcKAQXaC4Gl6V1rS7wxNW1YonDYSFDdMLgmU5BXv1kNEmjEWGi-ZLf-kB6OyW8z_2ZDhux6S__poXZbueuRNiCle0w65CGySD4v_TvVib1pXVUMAe2B7UXaJefVgMq_iyqk6cXI">
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="font-label-caps text-label-caps text-primary">THE DIAGNOSTIC LAB</h2>
+<h3 class="font-headline-lg text-headline-lg leading-tight">Advanced Fault Finding Beyond Mechanical Limits</h3>
+<p class="text-on-surface-variant font-body-lg">Modern vehicles are rolling supercomputers. When a dashboard light appears, it's not a suggestion—it's a data point. Our lab uses dealer-level hardware to penetrate the vehicle's network and isolate the root cause.</p>
+<ul class="space-y-4 pt-4">
+<li class="flex items-center gap-4 group">
+<span class="material-symbols-outlined text-diagnostic-green group-hover:scale-125 transition-transform">memory</span>
+<span class="font-code-data">CAN-Bus Network Analysis &amp; Repair</span>
+</li>
+<li class="flex items-center gap-4 group">
+<span class="material-symbols-outlined text-diagnostic-green group-hover:scale-125 transition-transform">terminal</span>
+<span class="font-code-data">Module Component-Level Repairs</span>
+</li>
+<li class="flex items-center gap-4 group">
+<span class="material-symbols-outlined text-diagnostic-green group-hover:scale-125 transition-transform">lock_open</span>
+<span class="font-code-data">Security Gateway (SGW) Unlocking</span>
+</li>
+</ul>
+<div class="pt-8 flex items-center gap-4">
+<div class="flex -space-x-4">
+<div class="w-12 h-12 rounded-full border-2 border-background glass-panel flex items-center justify-center bg-white p-2">
+<span class="material-symbols-outlined text-obsidian-deep">shield</span>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-background glass-panel flex items-center justify-center bg-white p-2">
+<span class="material-symbols-outlined text-obsidian-deep">lock</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[12px] text-on-surface">SSL ENCRYPTED FACILITY</span>
+<span class="font-code-data text-[10px] text-on-surface-variant">VULNERABILITY SCAN: 0 ISSUES</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-gutter max-w-container-max mx-auto text-center">
+<div class="glass-panel p-16 rounded-3xl relative overflow-hidden">
+
+<div class="relative z-10 space-y-8">
+<h2 class="font-headline-lg text-headline-lg">System Failure?</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        Don't let a minor short turn into a major failure. Our emergency technicians are on standby for critical electrical repairs across Birmingham.
+                    </p>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="flex items-center gap-3 bg-white text-obsidian-deep px-8 py-4 rounded-lg font-label-caps hover:bg-secondary transition-all" href="tel:07491993230">
+<span class="material-symbols-outlined">call</span>
+                            07491 993 230
+                        </a>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-label-caps hover:shadow-[0_0_20px_rgba(255,83,82,0.4)] transition-all">
+                            Request Quote
+                        </button>
+</div>
+<div class="flex justify-center gap-4 pt-4">
+<img alt="App Store" class="h-10 opacity-70 hover:opacity-100 transition-opacity cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvWbdZZqBUK2wReS1vFUXdB2iYIBS03lL8O5w_rVdZ3SPMK0MgjcHeNi4z45J9EPyht-uaGBZ4SWnJV3rGkBq0HgkODBttiS4T4-NjWqIpK3ND7G7tbAInrcy76k8S2I0NsbGi570aIZFPWmdW4NoeRDAksxM3t4DFSR_GA2iV-I-pZ7W88U2GXqV9NFgoSTyWu0KTOtcTrARee6K8SSsfRW0kJ30LI-Y_Bs5avR284tYVIra2h2P7">
+<img alt="Play Store" class="h-10 opacity-70 hover:opacity-100 transition-opacity cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyPeMeSSyftNvfChSm1XsjIQ-L5gRQYjHKvMRHJ8RUnhoqnF3J-zGMjAC5I0CkMAz03oeiiKChQFLjgjZtPOjIUYG8FxTPLPlZb11aA-WSE3laRjY_591-i80V-qZFXYxialJ1iboHDweVZhzMCUL4tLX6ia8oMqJgelrxckd3rxoIMqWmgaVjrHSJLthSGBA3TyKqo6gWCGxXpx2uo-iLdL9c2HWCqUrANIwpyqKtBOkmJIqyt_xZ">
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-obsidian-deep py-12 border-t border-glass-stroke mt-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max mx-auto">
+<div class="space-y-4">
+<img alt="Footer Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLthXIp3bFl01rsEK8jC98DV9YRG2yoPlYpLBqQXcQqGPS46iu_fIKbtA0BpYATX6XGii2TfSHaz71rVIuUBKOVrDbb1E8qW6s46dLwBsePh7YRwsRZex_uSx4aUFodqaCZGix_-9B5NRksf2Sq7HBgQ6Vbb1dnpkhQuInIiNfnukunaqnDiX_Xg71DkiizXBAjA4cY96FB4_ii_uUtYs2Ml1OT0miZVmm7WQFvZyie59m9NEBzgaBfBii0">
+<p class="font-body-md text-on-surface-variant opacity-70">
+                    Bannerley Road, Garretts Green,<br>
+                    Birmingham, B33 0SL, UK
+                </p>
+</div>
+<div>
+<h4 class="font-label-caps text-primary mb-6">SERVICES</h4>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li><a class="hover:text-diagnostic-green transition-colors" href="specialized-services-the-diagnostic-lab.html">ECU Tuning</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="specialized-services-the-diagnostic-lab.html">EV Diagnostics</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="specialized-services-the-diagnostic-lab.html">MOT Repairs</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="specialized-services-the-diagnostic-lab.html">Air Con Re-gas</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-primary mb-6">RESOURCES</h4>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li><a class="hover:text-diagnostic-green transition-colors" href="the-lab-technical-blog-updates.html">Technical Blog</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="the-lab-technical-blog-updates.html">Case Studies</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="the-lab-technical-blog-updates.html">Maintenance Guide</a></li>
+<li><a class="hover:text-diagnostic-green transition-colors" href="specialized-services-the-diagnostic-lab.html">About Our Lab</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-primary mb-2">SECURITY FIRST</h4>
+<div class="flex flex-wrap gap-2">
+<div class="glass-panel px-3 py-2 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified_user</span>
+<span class="font-code-data text-[10px]">SSL PROTECTED</span>
+</div>
+<div class="glass-panel px-3 py-2 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px] text-secondary">lock</span>
+<span class="font-code-data text-[10px]">ISO_27001</span>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary" href="the-lab-technical-blog-updates.html"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary" href="index.html"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-glass-stroke flex flex-col md:flex-row justify-between items-center gap-4 opacity-50">
+<span class="font-body-md">© 2024 Top Techs Birmingham. Precision Auto-Electrical Engineering.</span>
+<div class="flex gap-6 font-label-caps text-[10px]">
+<a class="hover:text-primary" href="specialized-services-the-diagnostic-lab.html">TERMS OF SERVICE</a>
+<a class="hover:text-primary" href="index.html">PRIVACY POLICY</a>
+<a class="hover:text-primary" href="index.html">SSL CERTIFICATE</a>
+<a class="hover:text-primary" href="index.html">COOKIE SETTINGS</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Update a fake 'system time' or 'diagnostic hex'
+        function updateHex() {
+            const elements = document.querySelectorAll('.font-code-data');
+            elements.forEach(el => {
+                if (Math.random() > 0.98) {
+                    const originalText = el.innerText;
+                    el.classList.add('text-primary');
+                    setTimeout(() => {
+                        el.classList.remove('text-primary');
+                    }, 100);
+                }
+            });
+        }
+        setInterval(updateHex, 1000);
+    </script>
+</body></html>

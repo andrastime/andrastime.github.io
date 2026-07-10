@@ -1,0 +1,409 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services Detail | JK Electrical</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "background": "#0b1326",
+            "on-secondary-fixed-variant": "#3c475a",
+            "tertiary": "#e5eeff",
+            "secondary": "#bcc7de",
+            "slate-gray": "#94A3B8",
+            "tertiary-fixed-dim": "#b9c7e0",
+            "primary-container": "#facc15",
+            "primary-fixed-dim": "#eec200",
+            "surface-container": "#171f33",
+            "surface-tint": "#eec200",
+            "secondary-fixed": "#d8e3fb",
+            "on-surface-variant": "#d1c6ab",
+            "outline-variant": "#4d4632",
+            "surface-variant": "#2d3449",
+            "on-primary-fixed-variant": "#574500",
+            "primary-fixed": "#ffe083",
+            "on-error": "#690005",
+            "on-surface": "#dae2fd",
+            "on-primary": "#3c2f00",
+            "error-container": "#93000a",
+            "surface-container-high": "#222a3d",
+            "secondary-container": "#3e495d",
+            "tertiary-fixed": "#d5e3fd",
+            "tertiary-container": "#c3d2eb",
+            "secondary-fixed-dim": "#bcc7de",
+            "on-tertiary": "#233144",
+            "inverse-on-surface": "#283044",
+            "error": "#ffb4ab",
+            "surface-container-lowest": "#060e20",
+            "inverse-primary": "#735c00",
+            "deep-navy": "#0F172A",
+            "on-tertiary-container": "#4c5a6f",
+            "surface-container-low": "#131b2e",
+            "inverse-surface": "#dae2fd",
+            "surface-bright": "#31394d",
+            "surface-container-highest": "#2d3449",
+            "surface": "#0b1326",
+            "on-primary-fixed": "#231b00",
+            "electric-yellow": "#FACC15",
+            "glass-border": "rgba(255, 255, 255, 0.12)",
+            "surface-dim": "#0b1326",
+            "primary": "#ffecb9",
+            "outline": "#9a9078",
+            "on-tertiary-fixed-variant": "#3a485c",
+            "on-background": "#dae2fd",
+            "on-secondary": "#263143",
+            "on-tertiary-fixed": "#0d1c2f",
+            "on-secondary-container": "#aeb9d0",
+            "on-error-container": "#ffdad6",
+            "on-secondary-fixed": "#111c2d",
+            "on-primary-container": "#6c5700"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "20px",
+            "stack-md": "16px",
+            "section-gap": "120px",
+            "container-max": "1280px",
+            "stack-lg": "32px",
+            "gutter": "24px",
+            "stack-sm": "8px"
+          },
+          "fontFamily": {
+            "headline-lg": ["Montserrat"],
+            "body-md": ["Inter"],
+            "headline-xl": ["Montserrat"],
+            "body-lg": ["Inter"],
+            "headline-md": ["Montserrat"],
+            "label-caps": ["Inter"],
+            "headline-lg-mobile": ["Montserrat"]
+          },
+          "fontSize": {
+            "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+            "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+            "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+            "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+            "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-card {
+      background: rgba(45, 52, 73, 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .electric-glow:hover {
+      box-shadow: 0 0 25px rgba(250, 204, 21, 0.15);
+    }
+    .text-glow {
+      text-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+    }
+    @keyframes subtle-pulse {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+    .pulse-glow {
+      animation: subtle-pulse 3s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-electric-yellow selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-glass-border shadow-md">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="font-headline-md text-headline-md font-bold text-electric-yellow hover:scale-105 transition-transform duration-200 cursor-pointer">
+        JK Electrical
+      </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-electric-yellow transition-colors font-body-md" href="index.html">Home</a>
+<a class="text-electric-yellow font-bold border-b-2 border-electric-yellow pb-1 font-body-md" href="expert-electrical-services-j-k-electrical.html">Services</a>
+<a class="text-on-surface-variant hover:text-electric-yellow transition-colors font-body-md" href="about-us-contact-j-k-electrical.html">About</a>
+<a class="text-on-surface-variant hover:text-electric-yellow transition-colors font-body-md" href="about-us-contact-j-k-electrical.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-electric-yellow text-on-primary px-6 py-2 rounded font-bold hover:scale-105 transition-transform active:scale-95 duration-200">
+          Get a Quote
+        </button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[60vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale opacity-40" data-alt="High-resolution, cinematic photograph of a modern industrial warehouse ceiling with professional LED strip lighting installations and large industrial fans. The scene is captured in a dark, moody environment with a sharp focus on the glowing yellow-toned electrical fixtures, reflecting a high-end corporate electrical services aesthetic with deep navy shadows and sharp metallic edges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfV4cTgNZNWs52jAE0-FSdrY6ACtYse-cYRfCJA1Q6-AcwgDz78_EJ5gBtaBHMCm9Mjg81QVCrU7Lf6kPp2_G8LpESDU3KaQSyH-WN-E3-87iCNH-WhjHXBk2Add9xLicD8jfcUptgT7LBoSNiWclm8JZrvPgWIPodiOA3VtgMXAvxcyX0gj6GwjiQw08dfiCR9brp0Lp5obs2Ru7PPEcEHNrigHDTFLaIaHKon48CJ1eaGaakyINP">
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-gutter w-full">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-electric-yellow tracking-widest mb-4 block">EXPERT ELECTRICAL SOLUTIONS</span>
+<h1 class="font-headline-xl text-headline-xl mb-6 leading-none">Our Specialized <br><span class="text-electric-yellow text-glow">Services</span></h1>
+<p class="text-slate-gray font-body-lg text-body-lg max-w-lg mb-stack-lg">
+            Providing high-precision electrical engineering for residential masterworks and commercial infrastructures across the region.
+          </p>
+</div>
+</div>
+</section>
+<!-- Services Detail Grid -->
+<section class="py-section-gap max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 gap-stack-lg">
+<!-- Domestic Electrical -->
+<div class="glass-card rounded-xl overflow-hidden group hover:border-electric-yellow/30 transition-all duration-500">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="p-stack-lg lg:p-12 flex flex-col justify-center">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center border border-glass-border">
+<span class="material-symbols-outlined text-electric-yellow" data-icon="home">home</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg">Domestic Electrical</h2>
+</div>
+<p class="text-slate-gray font-body-lg mb-8 leading-relaxed">
+                Elevate your living space with smart, safe, and efficient electrical systems. We specialize in high-end residential upgrades that blend seamlessly with your home's architecture while ensuring full regulatory compliance.
+              </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-yellow mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<span class="font-bold text-on-surface block">Lighting Upgrades</span>
+<span class="text-slate-gray">Intelligent LED mood lighting and energy-efficient automation systems.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-yellow mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<span class="font-bold text-on-surface block">Socket Installations</span>
+<span class="text-slate-gray">Seamless addition of power outlets with integrated USB/Type-C ports.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-yellow mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<span class="font-bold text-on-surface block">Consumer Unit Changes</span>
+<span class="text-slate-gray">Modern RCD protection upgrades for maximum safety and reliability.</span>
+</div>
+</li>
+</ul>
+<a class="inline-flex items-center gap-2 font-bold text-electric-yellow hover:translate-x-2 transition-transform" href="#contact">
+                Book Residential Service <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="relative h-80 lg:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A luxurious modern living room with integrated smart LED strip lighting recessed into the architectural ceilings and walls. The lighting is a warm yellow glow against deep navy and slate gray interior design. The focus is on the precision and quality of the electrical finish in a high-end residential setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkRJd7bvlPS4lqmnH0rW3ODgmYhFz9538KC9DBZ9-RtkEKEw7_pfajfPK6fbnPkihpaE1GRMBefvXuVaLXVCskPeM4i_tPEsMPX_NVcRerDjgfX-4T8JIfb6tBpIri3_iad07RgJeogbga5jWErn88qsyeiw5MdL1W3RBb-AE0LuzU4qGoFI5T7qBiTWl1M922dY0m05iWLbOmopiWrWHhRSIjvTt44P-ot7JiG1-OZRvFOTxahtv9">
+</div>
+</div>
+</div>
+<!-- Commercial Services -->
+<div class="glass-card rounded-xl overflow-hidden group hover:border-electric-yellow/30 transition-all duration-500">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="order-2 lg:order-1 relative h-80 lg:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Professional commercial electrical work showing a modern retail store interior with specialized track lighting and complex circuit paneling. The environment is clean, professional, and reflects technical mastery. Lighting accents highlight the merchandise areas with industrial-grade electrical components visible but neatly managed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo4aFE9oodgvLzC3tsBwuv16NzK9Vw2gTYknmeDyk7IGW5E4K8rklWsFPsh9mUUkew7NSWB6LDBGUYpDihrLwbfmn9NfyT9Wjoda3H23zIqmWUDIGqwbgI5vfvXtMcpVvczhmrr-Bf-FvkdRFYJQdjOv2RuWJVGF1mz0PAYW9hkjifnF_E5KJ9dRDZHzo0n1S_sX_79z5yE6hLHd04gyokT8k9pP8tnnQinX7k9GKlwYzfTO3afpHo">
+</div>
+<div class="order-1 lg:order-2 p-stack-lg lg:p-12 flex flex-col justify-center">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center border border-glass-border">
+<span class="material-symbols-outlined text-electric-yellow" data-icon="business">business</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg">Commercial Services</h2>
+</div>
+<p class="text-slate-gray font-body-lg mb-8 leading-relaxed">
+                Reliable power for your business operations. We provide comprehensive electrical support for retail, hospitality, and office environments, focusing on uptime and safety.
+              </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-yellow mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<span class="font-bold text-on-surface block">Small Commercial Maintenance</span>
+<span class="text-slate-gray">Regular preventative maintenance to keep your business running smoothly.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-yellow mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<span class="font-bold text-on-surface block">Shop Fitting Electrics</span>
+<span class="text-slate-gray">Specialized fit-outs including display lighting and POS power systems.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-yellow mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<span class="font-bold text-on-surface block">Safety Testing</span>
+<span class="text-slate-gray">PAT testing and EICR reports for full insurance compliance.</span>
+</div>
+</li>
+</ul>
+<a class="inline-flex items-center gap-2 font-bold text-electric-yellow hover:translate-x-2 transition-transform" href="#contact">
+                Inquire for Business <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Rewires & Maintenance Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<!-- Rewires -->
+<div class="glass-card rounded-xl p-stack-lg flex flex-col group hover:border-electric-yellow/30 transition-all duration-500">
+<div class="w-14 h-14 rounded bg-surface-container-high flex items-center justify-center border border-glass-border mb-8">
+<span class="material-symbols-outlined text-electric-yellow text-4xl" data-icon="electrical_services">electrical_services</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-4">Rewires</h2>
+<p class="text-slate-gray font-body-md mb-8 flex-grow">
+              Full and partial rewiring projects handled with extreme care for your property. We strip back outdated, dangerous wiring and replace it with modern, high-capacity systems capable of supporting today's high-demand devices.
+            </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-variant text-electric-yellow font-label-caps text-[10px] rounded border border-glass-border">FULL HOUSE</span>
+<span class="px-3 py-1 bg-surface-variant text-electric-yellow font-label-caps text-[10px] rounded border border-glass-border">PARTIAL</span>
+<span class="px-3 py-1 bg-surface-variant text-electric-yellow font-label-caps text-[10px] rounded border border-glass-border">KITCHEN REWIRE</span>
+</div>
+<button class="w-full bg-surface-container-high border border-glass-border text-on-surface py-3 rounded font-bold hover:bg-electric-yellow hover:text-on-primary transition-all duration-300">
+              Get Rewire Quote
+            </button>
+</div>
+<!-- Maintenance -->
+<div class="glass-card rounded-xl p-stack-lg flex flex-col group hover:border-electric-yellow/30 transition-all duration-500">
+<div class="w-14 h-14 rounded bg-surface-container-high flex items-center justify-center border border-glass-border mb-8">
+<span class="material-symbols-outlined text-electric-yellow text-4xl" data-icon="construction">construction</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-4">Maintenance</h2>
+<p class="text-slate-gray font-body-md mb-8 flex-grow">
+              Prompt repair and safety checks to protect your assets. Our reactive maintenance team is equipped to handle emergency faults, tripped circuits, and routine safety inspections at a moment's notice.
+            </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-variant text-electric-yellow font-label-caps text-[10px] rounded border border-glass-border">24/7 SUPPORT</span>
+<span class="px-3 py-1 bg-surface-variant text-electric-yellow font-label-caps text-[10px] rounded border border-glass-border">FAULT FINDING</span>
+<span class="px-3 py-1 bg-surface-variant text-electric-yellow font-label-caps text-[10px] rounded border border-glass-border">EMERGENCY</span>
+</div>
+<button class="w-full bg-surface-container-high border border-glass-border text-on-surface py-3 rounded font-bold hover:bg-electric-yellow hover:text-on-primary transition-all duration-300">
+              Request Repair
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap relative" id="contact">
+<div class="absolute inset-0 bg-surface-container-low opacity-50 z-0"></div>
+<div class="max-w-4xl mx-auto px-gutter relative z-10 text-center">
+<h2 class="font-headline-lg text-headline-lg mb-6">Ready to start your next project?</h2>
+<p class="text-slate-gray font-body-lg mb-10">
+          From minor repairs to major installations, our team is ready to provide the professional electrical support you deserve.
+        </p>
+<div class="glass-card p-stack-lg rounded-xl text-left">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="col-span-1">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">FULL NAME</label>
+<input class="w-full bg-surface-container border border-glass-border rounded-lg p-3 text-on-surface focus:border-electric-yellow focus:ring-0 outline-none transition-all" placeholder="John Doe" type="text">
+</div>
+<div class="col-span-1">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">EMAIL ADDRESS</label>
+<input class="w-full bg-surface-container border border-glass-border rounded-lg p-3 text-on-surface focus:border-electric-yellow focus:ring-0 outline-none transition-all" placeholder="john@example.com" type="email">
+</div>
+<div class="col-span-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">SERVICE REQUIRED</label>
+<select class="w-full bg-surface-container border border-glass-border rounded-lg p-3 text-on-surface focus:border-electric-yellow focus:ring-0 outline-none transition-all">
+<option>Domestic Electrical</option>
+<option>Commercial Services</option>
+<option>Rewiring</option>
+<option>Maintenance</option>
+</select>
+</div>
+<div class="col-span-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">MESSAGE</label>
+<textarea class="w-full bg-surface-container border border-glass-border rounded-lg p-3 text-on-surface focus:border-electric-yellow focus:ring-0 outline-none transition-all" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<div class="col-span-2">
+<button class="w-full bg-electric-yellow text-on-primary py-4 rounded-lg font-bold hover:scale-[1.01] active:scale-95 transition-all electric-glow shadow-lg shadow-electric-yellow/10">
+                Send Inquiry
+              </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-surface-container-lowest border-t border-glass-border">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-stack-lg">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-electric-yellow mb-4">JK Electrical</div>
+<p class="text-slate-gray font-body-md">Precision electrical solutions for residential and commercial environments.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-electric-yellow mb-6">SERVICES</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-gray hover:text-electric-yellow transition-colors font-body-md" href="expert-electrical-services-j-k-electrical.html">Domestic</a></li>
+<li><a class="text-slate-gray hover:text-electric-yellow transition-colors font-body-md" href="expert-electrical-services-j-k-electrical.html">Commercial</a></li>
+<li><a class="text-slate-gray hover:text-electric-yellow transition-colors font-body-md" href="expert-electrical-services-j-k-electrical.html">Maintenance</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-electric-yellow mb-6">CONNECT</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-gray hover:text-electric-yellow transition-colors font-body-md" href="about-us-contact-j-k-electrical.html">Facebook</a></li>
+<li><a class="text-slate-gray hover:text-electric-yellow transition-colors font-body-md" href="about-us-contact-j-k-electrical.html">Instagram</a></li>
+<li><a class="text-slate-gray hover:text-electric-yellow transition-colors font-body-md" href="about-us-contact-j-k-electrical.html">LinkedIn</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-electric-yellow mb-6">LEGAL</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-gray hover:text-electric-yellow transition-colors font-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-gray hover:text-electric-yellow transition-colors font-body-md" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-stack-lg pt-stack-md border-t border-glass-border">
+<p class="text-slate-gray font-body-md text-center">© 2024 JK Electrical. All rights reserved.</p>
+</div>
+</footer>
+<script>
+    // Micro-interactions and subtle effects
+    document.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX / window.innerWidth;
+      const mouseY = e.clientY / window.innerHeight;
+      
+      // Subtle background parallax effect
+      document.querySelectorAll('.glass-card').forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const moveX = (e.clientX - centerX) / 50;
+        const moveY = (e.clientY - centerY) / 50;
+        
+        card.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+    });
+
+    // Intersection observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.glass-card').forEach(card => {
+      card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000', 'ease-out');
+      observer.observe(card);
+    });
+  </script>
+</body></html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact CES | Countrywide Electrical Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .electric-glow:hover {
+            box-shadow: 0 0 20px rgba(227, 30, 36, 0.25);
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #E31E24 !important;
+            box-shadow: 0 0 0 1px #E31E24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#e7bdb8",
+                        "surface": "#200f0d",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "surface-container-low": "#291715",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "primary-fixed": "#ffdad6",
+                        "on-tertiary-container": "#fefbfb",
+                        "surface-container-highest": "#45302d",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-background": "#fddbd7",
+                        "on-primary-fixed": "#410002",
+                        "surface-tint": "#ffb4ab",
+                        "tertiary": "#c8c6c6",
+                        "outline": "#ae8883",
+                        "on-primary-container": "#fffafa",
+                        "on-tertiary": "#303030",
+                        "surface-container-high": "#392523",
+                        "surface-bright": "#493431",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-surface": "#fddbd7",
+                        "surface-dim": "#200f0d",
+                        "primary": "#ffb4ab",
+                        "inverse-on-surface": "#402b29",
+                        "background": "#200f0d",
+                        "surface-variant": "#45302d",
+                        "on-secondary-container": "#b7b5b4",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-error": "#690005",
+                        "glass-white": "rgba(255, 255, 255, 0.05)",
+                        "inverse-primary": "#c00014",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-container": "#474746",
+                        "surface-container-lowest": "#1a0a08",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-container": "#2d1b19",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#93000d",
+                        "error": "#ffb4ab",
+                        "electric-red": "#E31E24",
+                        "primary-container": "#e31e24",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "slate-gray": "#2D2D2D",
+                        "tertiary-container": "#757474",
+                        "outline-variant": "#5d3f3c",
+                        "inverse-surface": "#fddbd7",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-secondary": "#313030",
+                        "secondary": "#c8c6c5",
+                        "on-primary": "#690006",
+                        "pure-black": "#0F0F0F"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "stack-md": "16px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-xl-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-pure-black text-on-surface font-body-md selection:bg-electric-red selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-glass-white backdrop-blur-md shadow-[0_0_20px_rgba(227,30,36,0.1)]">
+<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-[1280px] mx-auto transition-all duration-300 ease-in-out">
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface uppercase tracking-tighter">CES</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-caps text-label-caps text-on-surface hover:text-electric-red transition-colors duration-300" href="our-services-ces.html">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-electric-red transition-colors duration-300" href="our-portfolio-ces.html">Portfolio</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-electric-red transition-colors duration-300" href="index.html">About</a>
+<a class="font-label-caps text-label-caps text-electric-red border-b-2 border-electric-red pb-1" href="contact-ces.html">Contact</a>
+</div>
+<button class="bg-electric-red text-white px-6 py-2 font-label-caps text-label-caps uppercase hover:bg-on-primary-fixed-variant transition-all electric-glow">
+                Request a Quote
+            </button>
+</nav>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="px-margin-desktop max-w-[1280px] mx-auto mb-stack-lg">
+<div class="flex flex-col gap-stack-sm">
+<span class="text-electric-red font-label-caps text-label-caps tracking-widest uppercase">Expert Electrical Engineering</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-stack-md max-w-3xl">Get in touch with our specialist team.</h1>
+</div>
+</section>
+<!-- Contact Grid -->
+<section class="px-margin-desktop max-w-[1280px] mx-auto mb-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Form -->
+<div class="lg:col-span-7 glass-card p-10 rounded-lg">
+<form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Full Name</label>
+<input class="bg-slate-gray border-none text-on-surface p-4 rounded-sm focus:ring-1 focus:ring-electric-red" placeholder="John Doe" type="text">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Email Address</label>
+<input class="bg-slate-gray border-none text-on-surface p-4 rounded-sm focus:ring-1 focus:ring-electric-red" placeholder="john@example.com" type="email">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Project Type</label>
+<select class="bg-slate-gray border-none text-on-surface p-4 rounded-sm focus:ring-1 focus:ring-electric-red appearance-none">
+<option>Commercial Fit-out</option>
+<option>Industrial Maintenance</option>
+<option>Super-Prime Residential</option>
+<option>Infrastructure &amp; High-Voltage</option>
+<option>EV Charging Solutions</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Estimated Budget</label>
+<select class="bg-slate-gray border-none text-on-surface p-4 rounded-sm focus:ring-1 focus:ring-electric-red appearance-none">
+<option>£10k - £50k</option>
+<option>£50k - £250k</option>
+<option>£250k - £1M</option>
+<option>£1M+</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Project Description</label>
+<textarea class="bg-slate-gray border-none text-on-surface p-4 rounded-sm focus:ring-1 focus:ring-electric-red" placeholder="Briefly describe your requirements..." rows="5"></textarea>
+</div>
+<div class="md:col-span-2">
+<button class="w-full bg-electric-red text-white py-5 font-headline-lg text-headline-lg uppercase transition-all electric-glow flex items-center justify-center gap-4" type="submit">
+                                Send Inquiry
+                                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Right Column: Details & Accreditations -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<!-- Office Details -->
+<div class="glass-card p-10 flex flex-col gap-8">
+<div>
+<h3 class="font-headline-lg text-headline-lg mb-6 text-on-surface">Headquarters</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-red">location_on</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Warwick House, Birmingham<br>United Kingdom</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-red">call</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">0121 248 1400</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-red">mail</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">projects@ces-electrical.co.uk</p>
+</div>
+</div>
+</div>
+<!-- Accreditation Chips -->
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-4">Accreditations</h4>
+<div class="flex flex-wrap gap-4">
+<div class="px-4 py-2 border border-slate-gray grayscale hover:grayscale-0 hover:border-electric-red transition-all cursor-default">
+<span class="font-bold text-lg tracking-widest">NICEIC</span>
+</div>
+<div class="px-4 py-2 border border-slate-gray grayscale hover:grayscale-0 hover:border-electric-red transition-all cursor-default">
+<span class="font-bold text-lg tracking-widest">BAFE</span>
+</div>
+<div class="px-4 py-2 border border-slate-gray grayscale hover:grayscale-0 hover:border-electric-red transition-all cursor-default">
+<span class="font-bold text-lg tracking-widest">ECA</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Dark Map Placeholder -->
+<div class="relative h-[300px] w-full grayscale contrast-125 brightness-50 rounded-lg overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-t from-pure-black to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic, high-contrast satellite view of Birmingham city center at dusk, rendered in a dark monochromatic palette with subtle red light trails. The aesthetic is professional and industrial, with deep shadows and sharp architectural details that emphasize a high-tech engineering vibe. No text or logos, just a atmospheric urban grid." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmJ20o_3v5jd1ATqDT83SRB6JBRpS65QYoQ1TCpI1LVeV7FykD1dkNSp9MXyymJ1cghuxFTmbA368Knc1WnUcnRs6j0oJzcuX6bpJfwIpGJ0OX_uS6xqWBkCtcY4Mixj6ofYq6gD5btHh8PFFlfqy94XXXKT1oAmudzUOfbc7r3TY6bWTM1m-U6ycLqG24iaKfoHqLc129k6ewsmw5Woa_O16liAdztrzT4MRle7lpbQf2bOpsnj3B')"></div>
+<div class="absolute bottom-6 left-6 z-20 flex items-center gap-2 bg-pure-black/80 px-4 py-2 border border-electric-red">
+<span class="material-symbols-outlined text-electric-red text-sm">near_me</span>
+<span class="text-xs font-label-caps uppercase tracking-widest">Warwick House, B27</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section (Social Proof) -->
+<section class="bg-surface-container-lowest py-20 mb-section-gap border-y border-slate-gray">
+<div class="px-margin-desktop max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="flex flex-col gap-2">
+<span class="font-display-lg text-headline-xl text-electric-red">25+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Years Experience</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-display-lg text-headline-xl text-electric-red">1.2k</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Projects Completed</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-display-lg text-headline-xl text-electric-red">40+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Qualified Engineers</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-display-lg text-headline-xl text-electric-red">24/7</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Client Support</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-pure-black w-full pt-stack-lg pb-stack-md border-t border-slate-gray">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-[1280px] mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-lg text-headline-lg font-bold text-electric-red mb-4">CES</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Leading electrical services for commercial, industrial, and super-prime residential sectors across the UK.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="font-label-caps text-label-caps text-on-surface mb-2">Services</h5>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="our-services-ces.html">Commercial</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="our-portfolio-ces.html">Industrial</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="our-services-ces.html">Residential</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="our-services-ces.html">Maintenance</a>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="font-label-caps text-label-caps text-on-surface mb-2">Company</h5>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="index.html">About Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="our-portfolio-ces.html">Accreditations</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="contact-ces.html">Contact</a>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="font-label-caps text-label-caps text-on-surface mb-2">Social</h5>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-sm bg-slate-gray flex items-center justify-center text-on-surface hover:bg-electric-red transition-all" href="our-portfolio-ces.html">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-sm bg-slate-gray flex items-center justify-center text-on-surface hover:bg-electric-red transition-all" href="our-services-ces.html">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop max-w-[1280px] mx-auto mt-12 pt-8 border-t border-slate-gray/30 text-center md:text-left">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">© 2024 Countrywide Electrical Services. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for form focus states
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').style.color = '#E31E24';
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label').style.color = '';
+            });
+        });
+    </script>
+</body></html>

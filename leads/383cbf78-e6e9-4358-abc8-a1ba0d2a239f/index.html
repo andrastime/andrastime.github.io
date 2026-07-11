@@ -1,0 +1,391 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MF Electrical Solutions | Elite Engineering</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#a5eeff",
+                        "inverse-primary": "#006877",
+                        "surface": "#131315",
+                        "on-primary-fixed": "#001f25",
+                        "surface-container-highest": "#353437",
+                        "on-background": "#e5e1e4",
+                        "on-secondary-fixed-variant": "#544600",
+                        "surface-container-high": "#2a2a2c",
+                        "secondary-fixed-dim": "#e9c400",
+                        "on-tertiary-fixed-variant": "#5b4300",
+                        "on-secondary-container": "#725f00",
+                        "on-primary": "#00363f",
+                        "primary": "#baf2ff",
+                        "electric-blue": "#00E0FF",
+                        "deep-navy": "#112E4E",
+                        "on-tertiary-fixed": "#251a00",
+                        "tertiary-container": "#fec42e",
+                        "outline-variant": "#3b494c",
+                        "on-primary-container": "#005f6d",
+                        "on-tertiary": "#3f2e00",
+                        "surface-dim": "#131315",
+                        "on-primary-fixed-variant": "#004e5a",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#00daf8",
+                        "surface-container": "#201f21",
+                        "background": "#131315",
+                        "secondary-container": "#ffdb3c",
+                        "primary-container": "#00e0ff",
+                        "surface-bright": "#39393b",
+                        "tertiary-fixed": "#ffdf9d",
+                        "primary-fixed-dim": "#00daf8",
+                        "on-secondary": "#3a3000",
+                        "surface-dark": "#16161A",
+                        "on-surface": "#e5e1e4",
+                        "error-container": "#93000a",
+                        "surface-variant": "#353437",
+                        "tertiary": "#ffe6b6",
+                        "luxury-gold": "#FFD700",
+                        "outline": "#859397",
+                        "secondary-fixed": "#ffe16d",
+                        "surface-container-low": "#1c1b1d",
+                        "signal-red": "#FF0000",
+                        "on-tertiary-container": "#6f5200",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#f7be27",
+                        "on-surface-variant": "#bac9cd",
+                        "on-secondary-fixed": "#221b00",
+                        "inverse-surface": "#e5e1e4",
+                        "inverse-on-surface": "#313032",
+                        "secondary": "#fff9ef",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#0e0e10"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-lg": ["Sora"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Sora"],
+                        "label-caps": ["JetBrains Mono"],
+                        "button": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "headline-lg": ["Sora"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .electric-glow {
+            box-shadow: 0 0 15px rgba(0, 224, 255, 0.3);
+        }
+        .circuit-line {
+            background: linear-gradient(90deg, #00E0FF 0%, transparent 100%);
+            height: 1px;
+            width: 100%;
+        }
+        .glass-panel {
+            background: rgba(22, 22, 26, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 224, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-electric-blue/20 shadow-[0_0_20px_rgba(0,224,255,0.1)] h-20">
+<div class="flex justify-between items-center max-w-[1280px] mx-auto px-margin-desktop h-full">
+<div class="flex items-center gap-4">
+<img alt="MF Electrical Solutions Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLtkWADrt10etEAFs9J3WqIkUCZFWct1yB07EC5DiKxnMDpYMPEwS4uBaDHr2rQlci9M3mm1ZzVSA2rnDidKSIkuRZHWDQUtcKxwoMr5a0sZ3JsWPmMcX-1MJIZJ6_9vzOWVDT690qMwAVzRYtH37Yr6QrHQ91Y_owSFRbU4Gff4635JO3OBMslBT4jhGxVRhaVf-pHfe0mQUKHvlkbrS03VPCK3rKnM5Jk73EYTcq98hpAfZaluoIJisA">
+<span class="font-display-lg text-headline-md text-electric-blue tracking-tight">MF Electrical</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-button text-button">
+<a class="text-on-surface hover:text-electric-blue transition-colors" href="residential-services-mf-electrical.html">Residential</a>
+<a class="text-on-surface hover:text-electric-blue transition-colors" href="commercial-industrial-mf-electrical.html">Commercial</a>
+<a class="text-on-surface hover:text-electric-blue transition-colors" href="commercial-industrial-mf-electrical.html">Industrial</a>
+<a class="text-on-surface hover:text-electric-blue transition-colors" href="residential-services-mf-electrical.html">Maintenance</a>
+</div>
+<button class="bg-electric-blue text-on-primary font-button text-button px-6 py-3 rounded active:scale-95 transition-all hover:bg-primary-container shadow-[0_0_15px_rgba(0,224,255,0.4)]">
+                Emergency Call-Out
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="A cinematic, high-speed night shot of a modern city skyline pulsing with electric blue energy grids. The atmosphere is dark and sleek, with neon light trails mimicking circuitry flowing through the streets. The lighting is dramatic, high-contrast, and technical, perfectly capturing an elite engineering and power distribution aesthetic with a professional dark mode finish." src="https://lh3.googleusercontent.com/aida/AP1WRLunsh-I5wzXuPI0ZboAQYa1rk7Q46drU9glEcbsdmnAAHstn5lmjGUvI189aDlBxBykOhXvNsTYy7uQIkGn_hCh9ehAiLAe8wTY2sapGOrwFgiD9T0ImyThkOGUwW_iZNM5J6hgr_Jrw1xYWzhgPybGnIciD60Vgikbpj0EsvftQd4l47ZsdNKz5Zyn1_aGam2340vzFC2oddy2L10MqzW55Pzc3jJmdPCeNDVLnl5RFaf2YrxTII1Opo4">
+<div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background to-background"></div>
+</div>
+<div class="relative z-10 max-w-[1280px] mx-auto px-margin-desktop w-full">
+<div class="max-w-3xl space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-electric-blue/10 border border-electric-blue/30 rounded-full">
+<span class="material-symbols-outlined text-electric-blue text-[16px]">bolt</span>
+<span class="font-label-caps text-label-caps text-electric-blue">AVAILABLE 24/7 FOR EMERGENCIES</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-background leading-tight">
+                    Powering <span class="text-electric-blue">Next-Gen</span> Infrastructure
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Elite electrical engineering services for high-end residential estates and industrial complexes. Precision, power, and professional craftsmanship in every wire.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-electric-blue text-on-primary font-button text-button px-10 py-4 rounded-lg flex items-center gap-2 group transition-all hover:scale-[1.02]">
+                        RESIDENTIAL SERVICES
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border border-luxury-gold text-luxury-gold font-button text-button px-10 py-4 rounded-lg hover:bg-luxury-gold/10 transition-all">
+                        COMMERCIAL SOLUTIONS
+                    </button>
+</div>
+</div>
+</div>
+<!-- Atmospheric Elements -->
+<div class="absolute bottom-0 left-0 circuit-line opacity-30"></div>
+</header>
+<!-- Services Bento Grid -->
+<section class="py-section-gap bg-surface-lowest">
+<div class="max-w-[1280px] mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-16">
+<div class="space-y-4">
+<h2 class="font-display-lg text-headline-lg text-on-background">Our Specialisms</h2>
+<div class="h-1 w-24 bg-electric-blue"></div>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-widest">ENGINEERING EXCELLENCE</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Service Card 1 -->
+<div class="glass-panel p-8 rounded-xl group hover:border-electric-blue/40 transition-all cursor-pointer relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<span class="material-symbols-outlined text-electric-blue text-[40px] mb-6 block">home_repair_service</span>
+<h3 class="font-display-lg text-headline-md text-on-background mb-4">Residential</h3>
+<p class="text-on-surface-variant font-body-md mb-6 leading-relaxed">Smart home integration, luxury lighting design, and full high-end property rewires.</p>
+<ul class="space-y-3 font-label-caps text-label-caps text-on-surface/80">
+<li class="flex items-center gap-2"><span class="text-electric-blue">+</span> SMART AUTOMATION</li>
+<li class="flex items-center gap-2"><span class="text-electric-blue">+</span> ARCHITECTURAL LIGHTING</li>
+<li class="flex items-center gap-2"><span class="text-electric-blue">+</span> EV CHARGING POINTS</li>
+</ul>
+</div>
+<!-- Service Card 2 -->
+<div class="glass-panel p-8 rounded-xl group hover:border-electric-blue/40 transition-all cursor-pointer relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">business_center</span>
+</div>
+<span class="material-symbols-outlined text-electric-blue text-[40px] mb-6 block">apartment</span>
+<h3 class="font-display-lg text-headline-md text-on-background mb-4">Commercial</h3>
+<p class="text-on-surface-variant font-body-md mb-6 leading-relaxed">Scalable electrical infrastructure for offices, retail hubs, and multi-unit developments.</p>
+<ul class="space-y-3 font-label-caps text-label-caps text-on-surface/80">
+<li class="flex items-center gap-2"><span class="text-electric-blue">+</span> DATA CABLING</li>
+<li class="flex items-center gap-2"><span class="text-electric-blue">+</span> FIRE ALARM SYSTEMS</li>
+<li class="flex items-center gap-2"><span class="text-electric-blue">+</span> PLANNED MAINTENANCE</li>
+</ul>
+</div>
+<!-- Service Card 3 -->
+<div class="glass-panel p-8 rounded-xl group hover:border-electric-blue/40 transition-all cursor-pointer relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">factory</span>
+</div>
+<span class="material-symbols-outlined text-electric-blue text-[40px] mb-6 block">precision_manufacturing</span>
+<h3 class="font-display-lg text-headline-md text-on-background mb-4">Industrial</h3>
+<p class="text-on-surface-variant font-body-md mb-6 leading-relaxed">High-voltage installations, heavy machinery power, and industrial automation controls.</p>
+<ul class="space-y-3 font-label-caps text-label-caps text-on-surface/80">
+<li class="flex items-center gap-2"><span class="text-electric-blue">+</span> 3-PHASE SYSTEMS</li>
+<li class="flex items-center gap-2"><span class="text-electric-blue">+</span> CONTROL PANELS</li>
+<li class="flex items-center gap-2"><span class="text-electric-blue">+</span> UPS INSTALLATION</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap relative overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="relative">
+<div class="absolute -inset-4 border border-electric-blue/20 rounded-xl translate-x-4 translate-y-4 -z-10"></div>
+<img class="rounded-xl w-full shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional, high-end kitchen renovation in progress showing intricate electrical wiring and premium under-cabinet LED installations. The image captures the precision of the work with warm luxury lighting reflecting off dark high-gloss cabinetry and a wooden herringbone floor. The mood is clean, professional, and reflects a high standard of modern craftsmanship." src="https://lh3.googleusercontent.com/aida/AP1WRLsgVVA8YPQ7nxWeVEvvhETukJ7bdq2FDRmoGdsb38qNPkMEgicPG3ejlScSuHQe2EAYBkdq4XbXymRZzb4vssRLyHwoP2k56CN-6MzKSfAFATQdtkMOo7OYr2JlHlxat0kFcLHiAlu4fmPMqEoALnh2153jSoiSXpg2QZuXzzddUHk64Wr4zBDt5LaQu5cyxblK2SieJsB5o1o_ED15X7WusOHcnNNOTgRk3uR1Q2HPnlcWvuEftpvjohw">
+<div class="absolute bottom-6 left-6 bg-surface-dark border-l-4 border-electric-blue p-6 electric-glow max-w-xs">
+<p class="font-display-lg text-headline-md text-on-background">15+</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant">YEARS OF MASTER CRAFTSMANSHIP</p>
+</div>
+</div>
+<div class="lg:pl-12 space-y-8">
+<h2 class="font-display-lg text-headline-lg text-on-background leading-tight">Elite Reliability For Complex Projects</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    At MF Electrical Solutions, we don't just pull cables; we engineer environments. From the initial conceptual design to final certification, our mission is to provide an uncompromising level of technical skill and customer service.
+                </p>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="mt-1 w-6 h-6 rounded bg-electric-blue/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-blue text-[18px]">verified</span>
+</div>
+<div>
+<h4 class="font-display-lg text-[18px] text-on-background">Fully Accredited</h4>
+<p class="text-on-surface-variant font-body-md">NICEIC and CHAS certified, adhering to the strictest UK safety standards.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 w-6 h-6 rounded bg-electric-blue/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-blue text-[18px]">bolt</span>
+</div>
+<div>
+<h4 class="font-display-lg text-[18px] text-on-background">Rapid Response</h4>
+<p class="text-on-surface-variant font-body-md">Strategic dispatch for commercial and residential emergencies 24/7.</p>
+</div>
+</div>
+</div>
+<button class="group font-button text-button text-electric-blue flex items-center gap-2 hover:gap-4 transition-all">
+                    LEARN MORE ABOUT OUR MISSION
+                    <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Featured Projects Showcase -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-[1280px] mx-auto px-margin-desktop mb-16 text-center">
+<h2 class="font-display-lg text-headline-lg text-on-background mb-4">Masterwork Portfolio</h2>
+<p class="font-label-caps text-label-caps text-luxury-gold tracking-widest">SHOWCASING TECHNICAL PRECISION</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1280px] mx-auto px-margin-desktop">
+<div class="group relative overflow-hidden rounded-xl aspect-[16/9]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A sophisticated outdoor garden office or studio at twilight, featuring warm recessed exterior downlighting that accentuates the horizontal timber cladding. The large black-framed glass sliding doors reveal a modern interior. The lighting is balanced and creates a high-end, cozy architectural feel, showcasing premium external electrical work for a luxury garden building." src="https://lh3.googleusercontent.com/aida/AP1WRLso1OoJp1vyHl8NoSDNZCoxJYg0xyGP-iiNXtRxGNFDbR6_78J4A1umK0QJsxOit-IemSUMEtKiz02sotox1Jx_IyQiOC-TctobzV_6zMAxOBZ57UxB12Gwx8yiGAPUtfLBO20_hGsz4PoQK_G87vm4Mz2wBFc6Nnac1jvm2OVgNOmzwTqtY8DUPeLxpuxSGm9GsU_6cbxLr3NilhCB4K7lpreI6zUVNIJlClLe2Iey55aq-WzHddhXbeM">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<p class="font-label-caps text-label-caps text-electric-blue mb-2">EXTERIOR DESIGN</p>
+<h3 class="font-display-lg text-headline-md text-on-background">Luxury Garden Studio Wiring</h3>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl aspect-[16/9]">
+<!-- Re-using IMAGE_12 as IMAGE_2 is not in list, fallback to description context for diversity if allowed or use provided placeholder -->
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A technical interior shot of a sophisticated kitchen electrical install. Highlights include linear LED strips underneath dark cabinetry, providing a sharp amber glow onto a clean wooden floor. The overall aesthetic is sleek, modern, and high-performance, emphasizing the professional finish of luxury residential lighting solutions." src="https://lh3.googleusercontent.com/aida/AP1WRLsgVVA8YPQ7nxWeVEvvhETukJ7bdq2FDRmoGdsb38qNPkMEgicPG3ejlScSuHQe2EAYBkdq4XbXymRZzb4vssRLyHwoP2k56CN-6MzKSfAFATQdtkMOo7OYr2JlHlxat0kFcLHiAlu4fmPMqEoALnh2153jSoiSXpg2QZuXzzddUHk64Wr4zBDt5LaQu5cyxblK2SieJsB5o1o_ED15X7WusOHcnNNOTgRk3uR1Q2HPnlcWvuEftpvjohw">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<p class="font-label-caps text-label-caps text-electric-blue mb-2">SMART KITCHENS</p>
+<h3 class="font-display-lg text-headline-md text-on-background">Under-Cabinet HUD Lighting</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Accreditation & Trust Bar -->
+<section class="py-12 bg-surface-dark border-y border-electric-blue/10">
+<div class="max-w-[1280px] mx-auto px-margin-desktop flex flex-wrap justify-between items-center opacity-50 grayscale hover:grayscale-0 transition-all gap-8">
+<span class="font-display-lg text-headline-md">NICEIC</span>
+<span class="font-display-lg text-headline-md">CHAS</span>
+<span class="font-display-lg text-headline-md">NAPIT</span>
+<span class="font-display-lg text-headline-md">ISO 9001</span>
+<span class="font-display-lg text-headline-md">ECA</span>
+</div>
+</section>
+<!-- Footer Section -->
+<footer class="bg-surface-dark w-full py-section-gap border-t border-gradient-to-r from-electric-blue via-transparent to-transparent">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-[1280px] mx-auto px-margin-desktop">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<img alt="Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLtkWADrt10etEAFs9J3WqIkUCZFWct1yB07EC5DiKxnMDpYMPEwS4uBaDHr2rQlci9M3mm1ZzVSA2rnDidKSIkuRZHWDQUtcKxwoMr5a0sZ3JsWPmMcX-1MJIZJ6_9vzOWVDT690qMwAVzRYtH37Yr6QrHQ91Y_owSFRbU4Gff4635JO3OBMslBT4jhGxVRhaVf-pHfe0mQUKHvlkbrS03VPCK3rKnM5Jk73EYTcq98hpAfZaluoIJisA">
+<span class="font-display-lg text-headline-lg text-luxury-gold tracking-tight">MF</span>
+</div>
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                    Engineering safe, efficient, and intelligent electrical solutions for the UK's most demanding environments.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-electric-blue/20 flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-surface transition-all" href="project-gallery-mf-electrical-solutions.html">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-electric-blue/20 flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-surface transition-all" href="contact-us-mf-electrical-solutions.html">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-display-lg text-[18px] text-on-background mb-6">Services</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-luxury-gold transition-colors hover:translate-x-1 inline-block transition-transform" href="residential-services-mf-electrical.html">Residential Wiring</a></li>
+<li><a class="hover:text-luxury-gold transition-colors hover:translate-x-1 inline-block transition-transform" href="commercial-industrial-mf-electrical.html">Commercial Infrastructure</a></li>
+<li><a class="hover:text-luxury-gold transition-colors hover:translate-x-1 inline-block transition-transform" href="commercial-industrial-mf-electrical.html">Industrial Automation</a></li>
+<li><a class="hover:text-luxury-gold transition-colors hover:translate-x-1 inline-block transition-transform" href="residential-services-mf-electrical.html">Testing &amp; Inspections</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display-lg text-[18px] text-on-background mb-6">Resources</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-luxury-gold transition-colors hover:translate-x-1 inline-block transition-transform" href="contact-us-mf-electrical-solutions.html">Accreditations</a></li>
+<li><a class="hover:text-luxury-gold transition-colors hover:translate-x-1 inline-block transition-transform" href="index.html">Terms of Service</a></li>
+<li><a class="hover:text-luxury-gold transition-colors hover:translate-x-1 inline-block transition-transform" href="index.html">Privacy Policy</a></li>
+<li><a class="hover:text-luxury-gold transition-colors hover:translate-x-1 inline-block transition-transform" href="contact-us-mf-electrical-solutions.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display-lg text-[18px] text-on-background mb-6">Contact</h4>
+<div class="space-y-4 font-body-md text-on-surface-variant">
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-[20px]">phone_in_talk</span>
+                        0800 123 4567
+                    </p>
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-[20px]">location_on</span>
+                        London, United Kingdom
+                    </p>
+<div class="mt-6 p-4 glass-panel rounded-lg">
+<p class="text-luxury-gold font-label-caps text-label-caps mb-2">EMERGENCY STATUS</p>
+<div class="flex items-center gap-2">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-signal-red opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-signal-red"></span>
+</span>
+<span class="text-on-background font-button text-button">Response Team Active</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-desktop mt-section-gap pt-8 border-t border-white/5">
+<p class="text-center font-body-md text-on-surface-variant">
+                © 2024 MF Electrical Solutions. All Rights Reserved.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for scroll effects
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('h-16', 'bg-surface/95');
+                nav.classList.remove('h-20', 'bg-surface/80');
+            } else {
+                nav.classList.add('h-20', 'bg-surface/80');
+                nav.classList.remove('h-16', 'bg-surface/95');
+            }
+        });
+    </script>
+</body></html>

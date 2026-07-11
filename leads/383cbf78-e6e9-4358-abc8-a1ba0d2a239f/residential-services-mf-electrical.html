@@ -1,0 +1,341 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;family=Sora:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#a5eeff",
+                    "inverse-primary": "#006877",
+                    "surface": "#131315",
+                    "on-primary-fixed": "#001f25",
+                    "surface-container-highest": "#353437",
+                    "on-background": "#e5e1e4",
+                    "on-secondary-fixed-variant": "#544600",
+                    "surface-container-high": "#2a2a2c",
+                    "secondary-fixed-dim": "#e9c400",
+                    "on-tertiary-fixed-variant": "#5b4300",
+                    "on-secondary-container": "#725f00",
+                    "on-primary": "#00363f",
+                    "primary": "#baf2ff",
+                    "electric-blue": "#00E0FF",
+                    "deep-navy": "#112E4E",
+                    "on-tertiary-fixed": "#251a00",
+                    "tertiary-container": "#fec42e",
+                    "outline-variant": "#3b494c",
+                    "on-primary-container": "#005f6d",
+                    "on-tertiary": "#3f2e00",
+                    "surface-dim": "#131315",
+                    "on-primary-fixed-variant": "#004e5a",
+                    "on-error-container": "#ffdad6",
+                    "surface-tint": "#00daf8",
+                    "surface-container": "#201f21",
+                    "background": "#131315",
+                    "secondary-container": "#ffdb3c",
+                    "primary-container": "#00e0ff",
+                    "surface-bright": "#39393b",
+                    "tertiary-fixed": "#ffdf9d",
+                    "primary-fixed-dim": "#00daf8",
+                    "on-secondary": "#3a3000",
+                    "surface-dark": "#16161A",
+                    "on-surface": "#e5e1e4",
+                    "error-container": "#93000a",
+                    "surface-variant": "#353437",
+                    "tertiary": "#ffe6b6",
+                    "luxury-gold": "#FFD700",
+                    "outline": "#859397",
+                    "secondary-fixed": "#ffe16d",
+                    "surface-container-low": "#1c1b1d",
+                    "signal-red": "#FF0000",
+                    "on-tertiary-container": "#6f5200",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed-dim": "#f7be27",
+                    "on-surface-variant": "#bac9cd",
+                    "on-secondary-fixed": "#221b00",
+                    "inverse-surface": "#e5e1e4",
+                    "inverse-on-surface": "#313032",
+                    "secondary": "#fff9ef",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0e0e10"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "80px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "section-gap": "120px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Sora"],
+                    "body-md": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Sora"],
+                    "label-caps": ["JetBrains Mono"],
+                    "button": ["Sora"],
+                    "headline-md": ["Sora"],
+                    "headline-lg": ["Sora"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 224, 255, 0.1);
+        }
+        .electric-glow:hover {
+            box-shadow: 0 0 25px rgba(0, 224, 255, 0.3);
+        }
+        .circuit-line {
+            height: 1px;
+            background: linear-gradient(90deg, #00E0FF 0%, transparent 100%);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 20% 50%, rgba(0, 224, 255, 0.05) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-electric-blue selection:text-background">
+<!-- TopNavBar Shared Component -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-electric-blue/20 shadow-[0_0_20px_rgba(0,224,255,0.1)]">
+<div class="flex justify-between items-center max-w-[1280px] mx-auto px-margin-desktop h-20">
+<div class="font-display-lg text-headline-md text-electric-blue tracking-tight">MF Electrical</div>
+<div class="hidden md:flex gap-8">
+<a class="text-electric-blue border-b-2 border-electric-blue pb-1 font-button text-button" href="residential-services-mf-electrical.html">Residential</a>
+<a class="text-on-surface hover:text-electric-blue transition-colors font-button text-button" href="commercial-industrial-mf-electrical.html">Commercial</a>
+<a class="text-on-surface hover:text-electric-blue transition-colors font-button text-button" href="commercial-industrial-mf-electrical.html">Industrial</a>
+<a class="text-on-surface hover:text-electric-blue transition-colors font-button text-button" href="residential-services-mf-electrical.html">Maintenance</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 font-button text-button active:scale-95 transition-transform hover:bg-primary-container/90">
+                Emergency Call-Out
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[70vh] flex items-center overflow-hidden hero-gradient">
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute top-1/4 left-0 w-64 circuit-line"></div>
+<div class="absolute bottom-1/4 right-0 w-96 circuit-line rotate-180"></div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center py-section-gap">
+<div class="z-10">
+<span class="font-label-caps text-label-caps text-electric-blue tracking-widest uppercase mb-4 block">Domestic Excellence</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-none">Powering Your Home with <span class="text-electric-blue">Precision.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        Elite residential electrical engineering. We prioritize your home's safety and energy efficiency through modern technical craftsmanship and reliable industrial-grade standards.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-electric-blue text-surface-dark px-8 py-4 font-button text-button electric-glow transition-all">Book Service</button>
+<button class="border border-luxury-gold text-luxury-gold px-8 py-4 font-button text-button hover:bg-luxury-gold/5 transition-all">View Accreditations</button>
+</div>
+</div>
+<div class="relative hidden md:block">
+<div class="aspect-[0.76] w-full rounded-xl overflow-hidden glass-panel p-2">
+<img alt="Premium Fuse Board Installation" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLsfwaTsYvZaj1C2w3e-wg4qNC3zXDacJialIM7RZtr3mmgWB-CDYazUj6hAbBsoYwoZvysG8qp1QbPnHEy0k-m1EwGgXQPFTu3-DtMhbfFuTeC3ze-CJqfWSixZf_t8Nwzy_Lj_6PcnPqKBifSaHiFk-cstmr1908anhgxlSdKVALD1PWY4yWZnhFSY0Fv08RHfyPBcgzkOXBRvb5etPHCJ9lyGqbGCegEoJhP3rIMyAb7LTwCOBw-L7II">
+</div>
+<div class="absolute -bottom-6 -left-6 glass-panel p-6 rounded-lg border-l-4 border-electric-blue">
+<p class="font-label-caps text-label-caps text-electric-blue">STATUS</p>
+<p class="font-headline-md text-headline-md">24/7 Support</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-section-gap bg-surface-container-lowest relative">
+<div class="max-w-[1280px] mx-auto px-margin-desktop">
+<div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4">Our Residential Specialisms</h2>
+<div class="w-24 h-1 bg-electric-blue"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Comprehensive electrical solutions delivered with clinical precision and high-end finishing.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-gutter">
+<!-- Rewiring -->
+<div class="md:col-span-2 glass-panel p-10 flex flex-col justify-between group hover:border-electric-blue/40 transition-colors">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-electric-blue text-4xl">cable</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">01 / SAFETY</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Full &amp; Partial Rewiring</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Modernizing outdated electrical systems to meet current safety regulations. Our team ensures minimal disruption while installing future-proof wiring architectures.</p>
+</div>
+<a class="font-button text-button text-electric-blue flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="residential-services-mf-electrical.html">
+                            Technical Specs <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- EV Charging -->
+<div class="bg-surface-dark border border-electric-blue/10 p-10 group hover:border-luxury-gold/40 transition-colors">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-luxury-gold text-4xl">ev_station</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">02 / SMART</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">EV Charging Solutions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">High-speed charging installation for electric vehicles, integrated with smart home energy management.</p>
+<button class="bg-luxury-gold text-surface-dark px-6 py-2 font-button text-button w-full mt-4">Get Quote</button>
+</div>
+<!-- Lighting -->
+<div class="bg-surface-dark border border-electric-blue/10 p-10 group hover:border-electric-blue/40 transition-colors">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-electric-blue text-4xl">light_mode</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">03 / LUXURY</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Architectural Lighting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Bespoke lighting designs for high-end properties, focusing on ambiance and efficiency.</p>
+</div>
+<!-- Emergency -->
+<div class="md:col-span-2 glass-panel p-10 flex items-center justify-between gap-10 border-l-4 border-signal-red">
+<div class="flex-1">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-signal-red text-4xl">emergency_home</span>
+<span class="font-label-caps text-label-caps text-signal-red">CRITICAL SUPPORT</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Emergency Fault Finding</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Rapid response teams for power outages, burning smells, or dangerous electrical faults. We are on call 24/7.</p>
+</div>
+<div class="hidden sm:block">
+<div class="w-32 h-32 rounded-full border-2 border-signal-red/20 flex items-center justify-center animate-pulse">
+<span class="font-label-caps text-label-caps text-signal-red text-center">NOW<br>ACTIVE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Showcase Section -->
+<section class="py-section-gap overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-section-gap items-center">
+<div class="order-2 md:order-1">
+<div class="relative">
+<img alt="Luxury Lighting Installation" class="rounded-xl shadow-2xl" src="https://lh3.googleusercontent.com/aida/AP1WRLvZJyyTVQ6yTFgHUNuF-WoYgN3r6yD916DYfzKfwYF6hemUzW1k9lm6b76TxQ4MUnHIX18AOypWnP7bXLB7Py_iDZC7IQGdIIHAoM5urzronrmfqJIrdVZJbwVakrR9WLl1IKGFp1Pq3SUBWvkRoRenTbijXEemdoCEoBSo4brqgMgMs6IKFYd0k_DUtOJxIXiyr5Q8aBEe0FQ4Dx7UaHobLKYpKgdlm6Vbw9RNsKjk-7QuvI9qtgnKZw">
+<div class="absolute -top-10 -right-10 w-48 h-48 bg-electric-blue/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="font-label-caps text-label-caps text-luxury-gold uppercase tracking-[0.2em] mb-4 block">Quality Proof</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">Meticulous Implementation</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            Every project at MF Electrical is treated as a technical masterpiece. From the unseen wiring behind the walls to the visible luxury of bespoke lighting, we maintain a standard of precision that exceeds industry norms.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 font-body-md">
+<span class="material-symbols-outlined text-electric-blue">add</span> NICEIC Certified Work
+                            </li>
+<li class="flex items-center gap-4 font-body-md">
+<span class="material-symbols-outlined text-electric-blue">add</span> 12-Month Workmanship Guarantee
+                            </li>
+<li class="flex items-center gap-4 font-body-md">
+<span class="material-symbols-outlined text-electric-blue">add</span> High-Efficiency Component Selection
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact CTA Banner -->
+<section class="py-section-gap">
+<div class="max-w-[1280px] mx-auto px-margin-desktop">
+<div class="relative bg-surface-dark p-12 md:p-20 overflow-hidden group">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#00E0FF_1px,transparent_1px)] [background-size:20px_20px]"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+<div class="text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg mb-4">Ready to secure your home's future?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Professional consulting and transparent quotes for any residential project.</p>
+</div>
+<button class="bg-electric-blue text-surface-dark px-10 py-5 font-button text-headline-md electric-glow active:scale-95 transition-all whitespace-nowrap">
+                            Request a Quote
+                        </button>
+</div>
+<div class="absolute top-0 right-0 w-32 h-1 bg-gradient-to-l from-electric-blue to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-32 h-1 bg-gradient-to-r from-electric-blue to-transparent"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="bg-surface-dark w-full py-section-gap border-t border-gradient-to-r from-electric-blue via-transparent to-transparent">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-[1280px] mx-auto px-margin-desktop">
+<div class="col-span-1 md:col-span-1">
+<div class="font-display-lg text-headline-lg text-luxury-gold mb-6">MF Electrical</div>
+<p class="text-on-surface-variant font-body-md text-body-md mb-4">Elite electrical engineering services for residential and industrial sectors.</p>
+</div>
+<div>
+<h4 class="text-electric-blue font-bold mb-6 font-label-caps text-label-caps">SERVICES</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-luxury-gold hover:translate-x-1 transition-all duration-200 block" href="residential-services-mf-electrical.html">Residential</a></li>
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-luxury-gold hover:translate-x-1 transition-all duration-200 block" href="commercial-industrial-mf-electrical.html">Commercial</a></li>
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-luxury-gold hover:translate-x-1 transition-all duration-200 block" href="commercial-industrial-mf-electrical.html">Industrial</a></li>
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-luxury-gold hover:translate-x-1 transition-all duration-200 block" href="residential-services-mf-electrical.html">Maintenance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-electric-blue font-bold mb-6 font-label-caps text-label-caps">COMPANY</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-luxury-gold hover:translate-x-1 transition-all duration-200 block" href="contact-us-mf-electrical-solutions.html">Accreditations</a></li>
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-luxury-gold hover:translate-x-1 transition-all duration-200 block" href="contact-us-mf-electrical-solutions.html">Contact Us</a></li>
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-luxury-gold hover:translate-x-1 transition-all duration-200 block" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-electric-blue font-bold mb-6 font-label-caps text-label-caps">EMERGENCY</h4>
+<div class="p-4 border border-signal-red/30 bg-signal-red/5 rounded">
+<p class="text-on-surface font-body-md text-body-md mb-2">Need immediate assistance?</p>
+<p class="text-signal-red font-headline-md text-headline-md font-bold">0800 123 4567</p>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-desktop mt-20 pt-10 border-t border-white/5">
+<p class="text-on-surface-variant font-body-md text-body-md">© 2024 MF Electrical Solutions. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Smooth reveal logic for cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-panel, .bg-surface-dark').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

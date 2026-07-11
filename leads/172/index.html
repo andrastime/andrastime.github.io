@@ -1,0 +1,390 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>CES | Countrywide Electrical Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#e7bdb8",
+                        "surface": "#200f0d",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "surface-container-low": "#291715",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "primary-fixed": "#ffdad6",
+                        "on-tertiary-container": "#fefbfb",
+                        "surface-container-highest": "#45302d",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-background": "#fddbd7",
+                        "on-primary-fixed": "#410002",
+                        "surface-tint": "#ffb4ab",
+                        "tertiary": "#c8c6c6",
+                        "outline": "#ae8883",
+                        "on-primary-container": "#fffafa",
+                        "on-tertiary": "#303030",
+                        "surface-container-high": "#392523",
+                        "surface-bright": "#493431",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-surface": "#fddbd7",
+                        "surface-dim": "#200f0d",
+                        "primary": "#ffb4ab",
+                        "inverse-on-surface": "#402b29",
+                        "background": "#200f0d",
+                        "surface-variant": "#45302d",
+                        "on-secondary-container": "#b7b5b4",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-error": "#690005",
+                        "glass-white": "rgba(255, 255, 255, 0.05)",
+                        "inverse-primary": "#c00014",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-container": "#474746",
+                        "surface-container-lowest": "#1a0a08",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-container": "#2d1b19",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#93000d",
+                        "error": "#ffb4ab",
+                        "electric-red": "#E31E24",
+                        "primary-container": "#e31e24",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "slate-gray": "#2D2D2D",
+                        "tertiary-container": "#757474",
+                        "outline-variant": "#5d3f3c",
+                        "inverse-surface": "#fddbd7",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-secondary": "#313030",
+                        "secondary": "#c8c6c5",
+                        "on-primary": "#690006",
+                        "pure-black": "#0F0F0F"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "stack-md": "16px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-xl-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0F0F0F;
+            color: #fddbd7;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .electric-glow:hover {
+            box-shadow: 0 0 20px rgba(227, 30, 36, 0.3);
+        }
+        .bento-item {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-item:hover {
+            transform: translateY(-4px);
+            background: rgba(227, 30, 36, 0.05);
+            border-color: rgba(227, 30, 36, 0.3);
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-electric-red selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-glass-white backdrop-blur-md shadow-[0_0_20px_rgba(227,30,36,0.1)]">
+<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-[1280px] mx-auto">
+<div class="flex items-center gap-4">
+<img alt="CES Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvbNhJJXy47qt2GEHTn3g9Dng7grwA7rsnG5iwhzFVQ3pLeisbMW1MvEmvnDg7dS-_8XHw7XruY2rSwxKvAK8KAVq4jpT8WOQj41-erotYStfIVogRxIW5fN340kVgvB5zXcOcn4Hb3kQSpJkIe7SBW_4iReRg6HzaytuvzTZFx8yoTpujDggcjmjv4KPn69VZH00qOJ9xl-Ug2bHe76O5lywxgkSkBGv4O05cpLSXLupNAKJfVSENnvZU">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface uppercase tracking-tighter">CES</span>
+</div>
+<div class="hidden md:flex gap-8 items-center font-label-caps text-label-caps">
+<a class="text-electric-red border-b-2 border-electric-red pb-1" href="our-services-ces.html">Services</a>
+<a class="text-on-surface hover:text-electric-red transition-colors duration-300" href="our-portfolio-ces.html">Portfolio</a>
+<a class="text-on-surface hover:text-electric-red transition-colors duration-300" href="index.html">About</a>
+<a class="text-on-surface hover:text-electric-red transition-colors duration-300" href="contact-ces.html">Contact</a>
+</div>
+<button class="bg-electric-red text-white px-6 py-2.5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-opacity-90 transition-all duration-300 electric-glow">
+                Request a Quote
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-pure-black via-pure-black/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A high-end architectural shot of a modern, multi-story commercial building at twilight with glowing interior lights reflecting off sleek glass and gold-toned metal cladding. The lighting is crisp and cinematic, emphasizing technical precision and architectural scale. Deep blacks and warm golden reflections dominate the scene, punctuated by sharp, clean lines characteristic of super-prime urban development." src="https://lh3.googleusercontent.com/aida/AP1WRLurn-4qIXJaUsxKqse4f_lSsOcvj7NmBTXeZSbdp-ejsJEO5DbsgeXQ5l3xcSTVd9Q33jGCiFM8X1NrQt6SY95uEg6QgU2p6FNsm58qdHw8ILFAqjdopI7ym11VoGQBJYIj1kJu_5S4QG4ZcOyHRh5do8Rc5c6gggTRPoEIZXv0ySK9tD2srjAMgnTQGHogEhcET-rPsQ693bWRNuhski2EAm9KacBbHI5eyjNhryx6UllOZVAkPnhcmw">
+</div>
+<div class="relative z-20 w-full max-w-[1280px] px-margin-desktop mx-auto">
+<div class="max-w-4xl space-y-stack-lg">
+<div class="inline-block px-4 py-1 border border-electric-red/50 bg-electric-red/10">
+<span class="font-label-caps text-label-caps text-electric-red uppercase tracking-widest">Est. 1996 | National Coverage</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-white">
+                        Powering Precision: <br>
+<span class="text-electric-red">National Electrical</span> <br>
+                        Solutions.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                        From concept to completion, we deliver high-end industrial, commercial, and retail electrical infrastructure for the UK's most ambitious architectural projects.
+                    </p>
+<div class="pt-stack-md flex gap-gutter">
+<button class="bg-electric-red text-white px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:scale-105 transition-all duration-300 electric-glow">
+                            Request a Consultation
+                        </button>
+<button class="border border-white/20 hover:bg-white/10 text-white px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest transition-all duration-300">
+                            View Our Portfolio
+                        </button>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-on-surface-variant/40">
+<span class="font-label-caps text-[10px] uppercase tracking-widest">Scroll to explore</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-electric-red to-transparent"></div>
+</div>
+</section>
+<!-- Our Expertise: Bento Grid -->
+<section class="py-section-gap max-w-[1280px] mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-gutter">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-electric-red mb-4 block">SERVICES</span>
+<h2 class="font-headline-xl text-headline-xl text-white">Our Technical Expertise</h2>
+</div>
+<div class="h-[1px] flex-grow bg-slate-gray/30 mb-6 hidden md:block"></div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Specialized solutions tailored to the unique demands of high-spec environments.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[600px]">
+<!-- Commercial -->
+<div class="md:col-span-8 group relative overflow-hidden bento-item bg-surface-container-low border border-white/5 p-stack-lg flex flex-col justify-end">
+<div class="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity">
+<div class="w-full h-full bg-cover bg-center" data-alt="A detailed wide shot of a modern open-plan commercial office space with industrial lighting fixtures and visible electrical trunking. The atmosphere is professional and tech-forward, with cool blue and neutral grey tones. The high-ceiling architecture features exposed metallic conduits, highlighting the electrical installation quality and precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCE3Inhe1WwmpZ2ATDQiCjJiP0tc2ZEs9K6zabeq9UaUtpy4BafHeV0ghuYzVjCvBxR1WGNm0Pe84DEq6o2zkBix397vJFb7rRnavxG4X_aGLi19kVmYwVctLHLmfLQkNSWPPI-84G6-rdW3dDfnMv4xH54_MDhPaCspiRCHzxjSd0qfjpkdw2j02vcSuSieyw53aCD3LMZasBJVh9sF489yrJ1SQkzC-WXWCmvcv-FXdjq0GVAndmF')"></div>
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-electric-red text-4xl mb-4">corporate_fare</span>
+<h3 class="font-headline-lg text-headline-lg mb-2">Commercial</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">Large-scale office fit-outs, intelligent lighting control systems, and robust data infrastructure for the modern workspace.</p>
+</div>
+</div>
+<!-- Retail -->
+<div class="md:col-span-4 group relative overflow-hidden bento-item bg-surface-container-low border border-white/5 p-stack-lg flex flex-col justify-end">
+<div class="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity">
+<div class="w-full h-full bg-cover bg-center" data-alt="A luxury retail environment with high-end recessed spotlighting and accent lights illuminating designer products on display. The aesthetic is clean, minimalist, and expensive, featuring polished surfaces and sharp lighting contrasts that showcase the electrical design's role in premium retail branding." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJNvQ8IY5mbioV6etRgoQwZn8E979tL8b-DfzWpXYX8o0Y603K026bWVnFGVc5SsIwqBJv6qQC4dFkYDlEySWMyd9yyjAQ22jE-EeGqmkjhwpfWEN0vnx3JtbPOtSonUoeDRPvvfrnbCllfzA98PlQ_fa0QvStAq2UZS0x9k2wDpoN6wYQ9rsgEppQFu9XdBZ7rEGrktk2iBbuabW4Q070lalnGdGTgnODzgFwzswtQruEX-AUAIL4')"></div>
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-electric-red text-4xl mb-4">shopping_bag</span>
+<h3 class="font-headline-lg text-headline-lg mb-2">Retail</h3>
+<p class="font-body-md text-on-surface-variant">Precision lighting and power distribution for flagship stores and high-footfall shopping centers.</p>
+</div>
+</div>
+<!-- Residential -->
+<div class="md:col-span-5 group relative overflow-hidden bento-item bg-surface-container-low border border-white/5 p-stack-lg flex flex-col justify-end min-h-[300px]">
+<div class="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity">
+<div class="w-full h-full bg-cover bg-center" data-alt="Interior of a super-prime residential penthouse with integrated smart home technology and architectural lighting. Warm, atmospheric glows emanate from hidden LED strips along coffered ceilings and stairways. The style is ultra-modern luxury, blending deep wood textures with high-tech electrical integration." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTT30i2g3iyjHFgN3qnaPyQ7Gq1TWt1Ot2lqM8-ahXxdWlJp-moHzdxW_zQKvVxBTrW2N5rjYGFdurq0vYdaioJgk3-TPsmAXFwdg5DKMVLZdLvgzb7O5aQDGbTTvL09sb5p1y5XFXYFqX2J_hkpNeW_7o4RFkDoMPhboMv6fC4Qzxzgjh8Wf56FwzXlQwdJrNj3P50rlyMiX1RWfCS0hhpkBhY3d1vnTo1eviMKoTo9s-AZMHP3Yt')"></div>
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-electric-red text-4xl mb-4">domain</span>
+<h3 class="font-headline-lg text-headline-lg mb-2">Residential</h3>
+<p class="font-body-md text-on-surface-variant">High-spec electrical systems for super-prime developments and luxury apartment complexes.</p>
+</div>
+</div>
+<!-- Maintenance -->
+<div class="md:col-span-7 group bento-item bg-surface-container border border-white/5 p-stack-lg flex items-center gap-8">
+<div class="bg-electric-red/10 p-6 rounded-full">
+<span class="material-symbols-outlined text-electric-red text-5xl">engineering</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg mb-2">Ongoing Maintenance</h3>
+<p class="font-body-md text-on-surface-variant">24/7 reactive support and planned preventative maintenance schedules to ensure zero downtime for your facilities.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose CES Section -->
+<section class="bg-surface-container-lowest py-section-gap relative overflow-hidden">
+<!-- Subtle background animation -->
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-electric-red/5 rounded-full blur-[120px] -mr-64 -mt-64"></div>
+<div class="max-w-[1280px] mx-auto px-margin-desktop relative z-10">
+<div class="text-center mb-20">
+<h2 class="font-headline-xl text-headline-xl text-white mb-6">Why Partner With CES?</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Uncompromising standards in safety, efficiency, and engineering excellence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="flex flex-col items-center text-center p-stack-lg border border-white/5 bg-pure-black/50 backdrop-blur-sm">
+<div class="text-display-lg text-electric-red font-display-lg mb-4">01.</div>
+<h4 class="font-headline-lg text-headline-lg mb-4">Premium Quality</h4>
+<p class="font-body-md text-on-surface-variant">We source only the highest grade components and employ time-served specialists to ensure every install exceeds industry benchmarks.</p>
+</div>
+<div class="flex flex-col items-center text-center p-stack-lg border border-white/5 bg-pure-black/50 backdrop-blur-sm transform md:translate-y-12">
+<div class="text-display-lg text-electric-red font-display-lg mb-4">02.</div>
+<h4 class="font-headline-lg text-headline-lg mb-4">Total Reliability</h4>
+<p class="font-body-md text-on-surface-variant">Our national reach and decentralized logistics mean we deliver on schedule, no matter the scale or location of the project.</p>
+</div>
+<div class="flex flex-col items-center text-center p-stack-lg border border-white/5 bg-pure-black/50 backdrop-blur-sm">
+<div class="text-display-lg text-electric-red font-display-lg mb-4">03.</div>
+<h4 class="font-headline-lg text-headline-lg mb-4">Fully Accredited</h4>
+<p class="font-body-md text-on-surface-variant">NICEIC, BAFE, and CHAS certified. Our rigorous adherence to safety and compliance protects your investment and your people.</p>
+</div>
+</div>
+<!-- Accreditation Bar -->
+<div class="mt-section-gap pt-10 border-t border-slate-gray/20 flex flex-wrap justify-center gap-12 opacity-50 hover:opacity-100 transition-opacity">
+<!-- Symbolic placeholders for accreditation icons -->
+<div class="flex items-center gap-2 font-label-caps text-[12px] tracking-widest text-on-surface grayscale hover:grayscale-0 transition-all cursor-pointer">
+<span class="w-8 h-8 bg-white/10 rounded flex items-center justify-center">N</span> NICEIC APPROVED
+                    </div>
+<div class="flex items-center gap-2 font-label-caps text-[12px] tracking-widest text-on-surface grayscale hover:grayscale-0 transition-all cursor-pointer">
+<span class="w-8 h-8 bg-white/10 rounded flex items-center justify-center">B</span> BAFE CERTIFIED
+                    </div>
+<div class="flex items-center gap-2 font-label-caps text-[12px] tracking-widest text-on-surface grayscale hover:grayscale-0 transition-all cursor-pointer">
+<span class="w-8 h-8 bg-white/10 rounded flex items-center justify-center">C</span> CHAS ACCREDITED
+                    </div>
+<div class="flex items-center gap-2 font-label-caps text-[12px] tracking-widest text-on-surface grayscale hover:grayscale-0 transition-all cursor-pointer">
+<span class="w-8 h-8 bg-white/10 rounded flex items-center justify-center">S</span> SAFE CONTRACTOR
+                    </div>
+</div>
+</div>
+</section>
+<!-- Client Logos Section -->
+<section class="py-24 bg-pure-black">
+<div class="max-w-[1280px] mx-auto px-margin-desktop text-center">
+<p class="font-label-caps text-label-caps text-on-surface-variant/40 mb-12 uppercase tracking-[0.2em]">Trusted by Industry Leaders</p>
+<div class="flex justify-center items-center overflow-hidden">
+<img class="max-w-full h-auto opacity-70 hover:opacity-100 transition-opacity" data-alt="A clean layout of prestigious corporate logos for high-end hospitality and retail brands including Hilton, Marriott, Crowne Plaza, and Westfield. The logos are presented in a monochromatic or minimalist style to maintain a sophisticated industrial aesthetic, emphasizing a track record of serving elite commercial clients." src="https://lh3.googleusercontent.com/aida/AP1WRLsUg2ZGX9RbZCTAE5YXVz7zDyyww74ayQRZkmaUSSOm0BjheVZnrWy7eJavU4f2qomJBmS1ooNfBVVejEe0G0j0UcFYWXQpgOTLppUqpB2l6k-2H97yDS_ujfhGXx8t3yFDWzskCHNYMy4U65J5NHYu-pPwCwa1mCoyhyw52rS8XMEVPZ0rUsth6HIMwNEMIVBs1G8WHVo8aOYUJTpQH9JeCvZowQNLL6g7uADMDe6lN0lBRZDSMXJFig">
+</div>
+</div>
+</section>
+<!-- Contact Teaser Section -->
+<section class="py-section-gap px-margin-desktop max-w-[1280px] mx-auto">
+<div class="glass-panel p-16 relative overflow-hidden border-electric-red/20">
+<div class="absolute top-0 right-0 p-12">
+<span class="material-symbols-outlined text-[120px] text-electric-red opacity-10">contact_support</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter relative z-10">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-6">Ready to Power Your Next Project?</h2>
+<p class="font-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                            Our team of engineers is ready to provide technical consultation for your project. Whether it's a nationwide rollout or a single high-spec installation, we deliver excellence.
+                        </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-electric-red">call</span>
+<span class="font-body-md">0800 123 4567</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-electric-red">mail</span>
+<span class="font-body-md">consultations@ces-uk.com</span>
+</div>
+</div>
+</div>
+<form class="space-y-stack-md bg-surface-container p-stack-lg border border-white/5">
+<div class="grid grid-cols-2 gap-4">
+<input class="bg-pure-black border-slate-gray focus:border-electric-red focus:ring-0 text-white p-3 font-body-md outline-none" placeholder="Full Name" type="text">
+<input class="bg-pure-black border-slate-gray focus:border-electric-red focus:ring-0 text-white p-3 font-body-md outline-none" placeholder="Email Address" type="email">
+</div>
+<input class="w-full bg-pure-black border-slate-gray focus:border-electric-red focus:ring-0 text-white p-3 font-body-md outline-none" placeholder="Project Type (e.g. Retail Fit-out)" type="text">
+<textarea class="w-full bg-pure-black border-slate-gray focus:border-electric-red focus:ring-0 text-white p-3 font-body-md outline-none" placeholder="Tell us about your requirements..." rows="4"></textarea>
+<button class="w-full bg-electric-red text-white py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-opacity-90 transition-all electric-glow">
+                            Send Request
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-pure-black border-t border-slate-gray w-full pt-stack-lg pb-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-[1280px] mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-lg text-headline-lg font-bold text-electric-red mb-4">CES</div>
+<p class="font-body-md text-on-surface-variant text-sm leading-relaxed">
+                    Setting the standard for technical excellence in national electrical services since 1996.
+                </p>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-caps text-label-caps text-white mb-6">SERVICES</h5>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-electric-red transition-colors" href="our-services-ces.html">Commercial</a></li>
+<li><a class="hover:text-electric-red transition-colors" href="our-services-ces.html">Residential</a></li>
+<li><a class="hover:text-electric-red transition-colors" href="our-portfolio-ces.html">Industrial</a></li>
+<li><a class="hover:text-electric-red transition-colors" href="our-services-ces.html">Retail Lighting</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-caps text-label-caps text-white mb-6">COMPANY</h5>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-electric-red transition-colors" href="our-services-ces.html">Maintenance</a></li>
+<li><a class="hover:text-electric-red transition-colors" href="our-services-ces.html">Accreditations</a></li>
+<li><a class="hover:text-electric-red transition-colors" href="our-portfolio-ces.html">Portfolio</a></li>
+<li><a class="hover:text-electric-red transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-caps text-label-caps text-white mb-6">LEGAL</h5>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-electric-red transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-electric-red transition-colors" href="index.html">Terms of Service</a></li>
+<li><a class="hover:text-electric-red transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-desktop mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-[12px] text-on-surface-variant/40">© 2024 Countrywide Electrical Services. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-electric-red transition-all" href="our-portfolio-ces.html"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="text-on-surface-variant hover:text-electric-red transition-all" href="index.html"><span class="material-symbols-outlined text-lg">link</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Header blur adjustment on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'bg-pure-black/90');
+                header.classList.remove('py-4', 'bg-glass-white');
+            } else {
+                header.classList.remove('py-2', 'bg-pure-black/90');
+                header.classList.add('py-4', 'bg-glass-white');
+            }
+        });
+    </script>
+</body></html>

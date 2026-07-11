@@ -1,0 +1,331 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>CES Portfolio | Major Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#e7bdb8",
+                        "surface": "#200f0d",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "surface-container-low": "#291715",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "primary-fixed": "#ffdad6",
+                        "on-tertiary-container": "#fefbfb",
+                        "surface-container-highest": "#45302d",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-background": "#fddbd7",
+                        "on-primary-fixed": "#410002",
+                        "surface-tint": "#ffb4ab",
+                        "tertiary": "#c8c6c6",
+                        "outline": "#ae8883",
+                        "on-primary-container": "#fffafa",
+                        "on-tertiary": "#303030",
+                        "surface-container-high": "#392523",
+                        "surface-bright": "#493431",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-surface": "#fddbd7",
+                        "surface-dim": "#200f0d",
+                        "primary": "#ffb4ab",
+                        "inverse-on-surface": "#402b29",
+                        "background": "#200f0d",
+                        "surface-variant": "#45302d",
+                        "on-secondary-container": "#b7b5b4",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-error": "#690005",
+                        "glass-white": "rgba(255, 255, 255, 0.05)",
+                        "inverse-primary": "#c00014",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-container": "#474746",
+                        "surface-container-lowest": "#1a0a08",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-container": "#2d1b19",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#93000d",
+                        "error": "#ffb4ab",
+                        "electric-red": "#E31E24",
+                        "primary-container": "#e31e24",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "slate-gray": "#2D2D2D",
+                        "tertiary-container": "#757474",
+                        "outline-variant": "#5d3f3c",
+                        "inverse-surface": "#fddbd7",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-secondary": "#313030",
+                        "secondary": "#c8c6c5",
+                        "on-primary": "#690006",
+                        "pure-black": "#0F0F0F"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "stack-md": "16px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-xl-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .filter-btn.active {
+            background-color: #E31E24;
+            color: white;
+            box-shadow: 0 0 15px rgba(227, 30, 36, 0.3);
+        }
+        .project-image-zoom {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .project-card:hover .project-image-zoom {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-pure-black text-on-surface font-body-md selection:bg-electric-red selection:text-white overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-glass-white backdrop-blur-md shadow-[0_0_20px_rgba(227,30,36,0.1)] transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-[1280px] mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface uppercase tracking-tighter">
+                CES
+            </div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="our-services-ces.html">Services</a>
+<a class="font-label-caps text-label-caps text-electric-red border-b-2 border-electric-red pb-1" href="our-portfolio-ces.html">Portfolio</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="index.html">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="contact-ces.html">Contact</a>
+</div>
+<button class="bg-electric-red text-white font-label-caps text-label-caps px-6 py-3 hover:brightness-110 transition-all duration-300">
+                Request a Quote
+            </button>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<header class="px-margin-desktop max-w-[1280px] mx-auto mb-20">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-electric-red tracking-[0.2em] uppercase">Excellence in Engineering</span>
+<h1 class="font-display-lg text-display-lg text-on-surface leading-none max-w-4xl">Our Projects Portfolio.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">
+                    Explore our track record of delivering complex electrical solutions for the UK's most prestigious commercial, industrial, and super-prime residential developments.
+                </p>
+</div>
+</header>
+<!-- Filter Bar -->
+<section class="px-margin-desktop max-w-[1280px] mx-auto mb-12">
+<div class="flex flex-wrap gap-4 items-center border-b border-white/10 pb-8">
+<button class="filter-btn active font-label-caps text-label-caps px-8 py-3 transition-all duration-300 border border-white/10" onclick="filterProjects('all')">ALL PROJECTS</button>
+<button class="filter-btn font-label-caps text-label-caps px-8 py-3 transition-all duration-300 border border-white/10 hover:bg-white/5" onclick="filterProjects('hotel')">HOTEL &amp; LEISURE</button>
+<button class="filter-btn font-label-caps text-label-caps px-8 py-3 transition-all duration-300 border border-white/10 hover:bg-white/5" onclick="filterProjects('retail')">RETAIL</button>
+<button class="filter-btn font-label-caps text-label-caps px-8 py-3 transition-all duration-300 border border-white/10 hover:bg-white/5" onclick="filterProjects('residential')">RESIDENTIAL</button>
+</div>
+</section>
+<!-- Projects Grid -->
+<section class="px-margin-desktop max-w-[1280px] mx-auto mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter" id="projects-grid">
+<!-- Project Card: Crowne Plaza (Large) -->
+<div class="project-item lg:col-span-8 group relative overflow-hidden aspect-[16/9] cursor-pointer" data-category="hotel">
+<img class="project-image-zoom w-full h-full object-cover grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida/AP1WRLurn-4qIXJaUsxKqse4f_lSsOcvj7NmBTXeZSbdp-ejsJEO5DbsgeXQ5l3xcSTVd9Q33jGCiFM8X1NrQt6SY95uEg6QgU2p6FNsm58qdHw8ILFAqjdopI7ym11VoGQBJYIj1kJu_5S4QG4ZcOyHRh5do8Rc5c6gggTRPoEIZXv0ySK9tD2srjAMgnTQGHogEhcET-rPsQ693bWRNuhski2EAm9KacBbHI5eyjNhryx6UllOZVAkPnhcmw">
+<div class="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-stack-lg w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label-caps text-label-caps text-electric-red mb-2 block">Hotel &amp; Leisure</span>
+<h3 class="font-headline-xl text-headline-xl text-white mb-2">Crowne Plaza London</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Comprehensive electrical installation and intelligent lighting design for the luxury Albert Embankment location, ensuring seamless guest experiences and operational efficiency.
+                        </p>
+</div>
+<div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="material-symbols-outlined text-white text-4xl">arrow_outward</span>
+</div>
+</div>
+<!-- Project Card: Westfield (Medium) -->
+<div class="project-item lg:col-span-4 group relative overflow-hidden aspect-[4/5] cursor-pointer" data-category="retail">
+<div class="w-full h-full bg-cover bg-center project-image-zoom grayscale group-hover:grayscale-0" data-alt="A cinematic architectural shot of a massive, brightly lit modern shopping mall interior. The scene features sleek glass balconies, high-end retail storefronts with glowing signage, and intricate steel ceiling structures. Warm amber lighting contrasts with deep industrial shadows, reflecting the CES brand's focus on high-scale commercial electrical precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1FPukt3hvwHfqtAcqeYT0LmRLacg25wcw2iiGYCSGkAUPK-VSB2BHpg2wCeeabjg-ib8U023knoAQ3EgL5jv1SVyzIWXDVX7y-VFt7WIOx62gn23kqhdYkbWTDLqyGpVLFYSh6qiQehMr3Gf-hjherOxxV3y98iSHLqt9i4GRlF1LMq5svoBBBPPVFMuE6E9-D21OSvBMnqLNU1rNECQvtIpRIpAY5Bq0UslruPx4TC6r0BVkRu2x')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-stack-lg w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label-caps text-label-caps text-electric-red mb-2 block">Retail</span>
+<h3 class="font-headline-lg text-headline-lg text-white mb-2">Westfield London</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Large-scale infrastructure maintenance and bespoke power distribution for premium retail units across the expansion phase.
+                        </p>
+</div>
+</div>
+<!-- Project Card: Hilton (Medium) -->
+<div class="project-item lg:col-span-4 group relative overflow-hidden aspect-[4/5] cursor-pointer" data-category="hotel">
+<div class="w-full h-full bg-cover bg-center project-image-zoom grayscale group-hover:grayscale-0" data-alt="A sophisticated shot of a luxury hotel lobby at dusk, showing polished marble floors and complex architectural lighting fixtures. The light is soft and inviting, with deep red accents reflecting on glass surfaces. The style is premium, industrial-minimalist, showcasing the technical expertise of Countrywide Electrical Services in hospitality." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDezmrkB-djBxmCyLLMemqEI99ReFj79SP2GsOPCPiJ9lKxz1iNpRXMFA5sSYqKnph4CC-owUgXxdvTH-pNtsvAiFQjEhraFUXBiB7Eqg-M_RQiPQyfTlowsjSdkUgcF8j64DpeI8HKNNo6Q2GdgX2TP0RzOHZS5DGqb6DSBUSqVtE1YAO0ljIhrg5hwL-jyfv0cel_OGiDyBtVRlkYxyWUuZ03kwuLkHeYQO2K0wVtodE3OLiYURw2')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-stack-lg w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label-caps text-label-caps text-electric-red mb-2 block">Hotel &amp; Leisure</span>
+<h3 class="font-headline-lg text-headline-lg text-white mb-2">Hilton Park Lane</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Upgrade of mission-critical life safety systems and luxury penthouse suite automation for one of London's most iconic hotels.
+                        </p>
+</div>
+</div>
+<!-- Project Card: Super-Prime Residential (Large) -->
+<div class="project-item lg:col-span-8 group relative overflow-hidden aspect-[16/9] cursor-pointer" data-category="residential">
+<div class="w-full h-full bg-cover bg-center project-image-zoom grayscale group-hover:grayscale-0" data-alt="An ultra-modern, high-end residential living space featuring floor-to-ceiling glass walls and integrated smart home technology. The lighting is seamlessly embedded into the architectural lines, creating a glowing 'electric' feel against the dark evening sky visible through the windows. The aesthetic is clean, precise, and technologically advanced." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuoRcuZFk7abQnMrcm7qRVeBTe2cug5npV-RdVHZO4rqLY5A7_XFNZ_zoxRxSSbzuIaQYLZlIiCksuL5qcGBvmwHPAVstajA56bdR-Ilj4MpW9_mW14i4w-JQnUT-qwi6YCLMYLQcE1nKHIce7xol7fcTeslt8w3pRj-vG6V277MoUFsw1HL1iaMvSbc41OGt2P37j6hHdqxVro2mgL9hY_46_93pT9Synt04HPa6Zhj99iMgaH0nl')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-stack-lg w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label-caps text-label-caps text-electric-red mb-2 block">Residential</span>
+<h3 class="font-headline-xl text-headline-xl text-white mb-2">Mayfair Private Estate</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Implementation of full home automation, bespoke AV integration, and discreet electrical engineering for a £40m private residence.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-margin-desktop max-w-[1280px] mx-auto mb-section-gap">
+<div class="bg-surface-container border border-white/5 p-16 flex flex-col items-center text-center relative overflow-hidden">
+<!-- Background Subtle Glow -->
+<div class="absolute -top-32 -left-32 w-64 h-64 bg-electric-red/10 rounded-full blur-[100px]"></div>
+<h2 class="font-headline-xl text-headline-xl text-white mb-6 relative z-10">Have a project in mind?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10 relative z-10">
+                    From initial design to final accreditation, we provide the technical expertise needed to power your next vision.
+                </p>
+<div class="flex flex-wrap gap-4 justify-center relative z-10">
+<button class="bg-electric-red text-white font-label-caps text-label-caps px-10 py-4 hover:shadow-[0_0_20px_rgba(227,30,36,0.3)] transition-all duration-300">
+                        START A CONSULTATION
+                    </button>
+<button class="border border-white/20 text-white font-label-caps text-label-caps px-10 py-4 hover:bg-white/5 transition-all duration-300">
+                        VIEW SERVICES
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-pure-black w-full pt-stack-lg pb-stack-md border-t border-slate-gray">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-[1280px] mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col gap-4">
+<div class="font-headline-lg text-headline-lg font-bold text-electric-red">CES</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Leading electrical solutions for high-end commercial and residential sectors since 1996.
+                </p>
+<div class="flex gap-4 mt-2">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-electric-red cursor-pointer transition-colors">hub</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-electric-red cursor-pointer transition-colors">lan</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-electric-red cursor-pointer transition-colors">share</span>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-white">SERVICES</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-ces.html">Commercial</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-ces.html">Residential</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-ces.html">Industrial</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-ces.html">Maintenance</a></li>
+</ul>
+</div>
+<!-- Support Links -->
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-white">RESOURCES</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-ces.html">Accreditations</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<!-- Contact/HQ -->
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-white">OFFICE</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Headquarters Unit 12,<br>Industrial Plaza, London,<br>United Kingdom
+                </p>
+<a class="font-body-md text-body-md text-electric-red hover:underline" href="mailto:info@ces.co.uk">info@ces.co.uk</a>
+</div>
+</div>
+<div class="px-margin-desktop max-w-[1280px] mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant/50">© 2024 Countrywide Electrical Services. All rights reserved.</p>
+<div class="flex gap-8 items-center grayscale opacity-30 hover:opacity-100 transition-all duration-500">
+<div class="text-[12px] font-bold border border-white/20 px-2 py-1">NICEIC</div>
+<div class="text-[12px] font-bold border border-white/20 px-2 py-1">BAFE</div>
+<div class="text-[12px] font-bold border border-white/20 px-2 py-1">CHAS</div>
+</div>
+</div>
+</footer>
+<script>
+        function filterProjects(category) {
+            const items = document.querySelectorAll('.project-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Header scroll effect
+        window.onscroll = function() {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 50) {
+                nav.classList.add('bg-pure-black/90', 'py-2');
+                nav.classList.remove('bg-glass-white', 'py-4');
+            } else {
+                nav.classList.remove('bg-pure-black/90', 'py-2');
+                nav.classList.add('bg-glass-white', 'py-4');
+            }
+        };
+    </script>
+</body></html>

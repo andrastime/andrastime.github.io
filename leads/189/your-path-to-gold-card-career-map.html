@@ -1,0 +1,393 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Electrician Career Map | VoltAcademy Birmingham</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .circuit-line {
+            background: linear-gradient(90deg, transparent 0%, #00E0FF 50%, transparent 100%);
+            height: 1px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.3;
+        }
+        .glow-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px #00E0FF); }
+            50% { opacity: .7; filter: drop-shadow(0 0 15px #00E0FF); }
+        }
+        .gold-card-glow {
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004e5a",
+                        "secondary-fixed": "#ffdad4",
+                        "surface-dim": "#101415",
+                        "tertiary-fixed-dim": "#00daf8",
+                        "on-error": "#690005",
+                        "on-primary": "#163152",
+                        "tertiary-fixed": "#a5eeff",
+                        "on-secondary-container": "#5c0000",
+                        "inverse-primary": "#476083",
+                        "on-tertiary-container": "#0094a9",
+                        "surface-container": "#1d2022",
+                        "electric-navy": "#001F3F",
+                        "on-tertiary-fixed": "#001f25",
+                        "inverse-on-surface": "#2d3133",
+                        "glass-white": "rgba(255, 255, 255, 0.08)",
+                        "tertiary": "#00daf8",
+                        "surface-dark": "#000B18",
+                        "inverse-surface": "#e0e3e5",
+                        "surface-container-highest": "#323537",
+                        "primary-fixed": "#d4e3ff",
+                        "on-primary-fixed": "#001c3a",
+                        "surface-tint": "#afc8f0",
+                        "primary": "#afc8f0",
+                        "on-secondary-fixed": "#410000",
+                        "surface-variant": "#323537",
+                        "outline-variant": "#43474e",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#ffb4a8",
+                        "cyber-cyan": "#00E0FF",
+                        "on-secondary-fixed-variant": "#930100",
+                        "surface": "#101415",
+                        "on-surface": "#e0e3e5",
+                        "voltage-red": "#FF0000",
+                        "surface-container-lowest": "#0b0f10",
+                        "on-background": "#e0e3e5",
+                        "secondary-fixed-dim": "#ffb4a8",
+                        "on-secondary": "#690100",
+                        "on-primary-container": "#6f88ad",
+                        "tertiary-container": "#002329",
+                        "on-tertiary": "#00363f",
+                        "surface-container-low": "#191c1e",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "secondary-container": "#ff5540",
+                        "background": "#101415",
+                        "surface-bright": "#363a3b",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "primary-container": "#001f3f",
+                        "outline": "#8e9198",
+                        "surface-container-high": "#272a2c",
+                        "primary-fixed-dim": "#afc8f0",
+                        "on-surface-variant": "#c4c6cf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.5rem",
+                        "section-padding": "5rem",
+                        "stack-lg": "2rem",
+                        "container-max": "1280px",
+                        "gutter": "1.5rem",
+                        "stack-md": "1rem"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface-dark text-on-surface font-body-md overflow-x-hidden">
+<header class="fixed top-0 w-full z-50 bg-glass-white backdrop-blur-md border-b border-glass-white shadow-lg shadow-electric-navy/15">
+<div class="flex justify-between items-center px-gutter py-stack-sm max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-voltage-red text-headline-md" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<a class="font-headline-md text-headline-md font-bold text-on-surface" href="index.html">VoltAcademy Birmingham</a>
+</div>
+<nav class="hidden md:flex gap-stack-lg items-center">
+<a class="font-label-md text-label-md text-on-surface hover:text-cyber-cyan transition-colors" href="index.html">Courses</a>
+<a class="font-label-md text-label-md text-cyber-cyan font-bold border-b-2 border-cyber-cyan pb-1" href="your-path-to-gold-card-career-map.html">Career Map</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-cyber-cyan transition-colors" href="index.html">Why Us</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-cyber-cyan transition-colors" href="index.html">Contact</a>
+<button class="bg-voltage-red text-white px-6 py-2 rounded-lg font-label-md text-label-md hover:scale-105 transition-transform duration-300 shadow-[0px_0px_20px_rgba(255,0,0,0.3)]">Enquire Now</button>
+</nav>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-32 pb-section-padding">
+<section class="max-w-container-max mx-auto px-gutter relative">
+<div class="absolute -top-20 -left-20 w-96 h-96 bg-voltage-red/10 blur-[100px] rounded-full"></div>
+<div class="absolute -bottom-20 -right-20 w-96 h-96 bg-cyber-cyan/10 blur-[100px] rounded-full"></div>
+<div class="text-center mb-stack-lg relative z-10">
+<h1 class="font-display-lg text-display-lg mb-stack-sm tracking-tight">Electrician’s <span class="text-voltage-red">Career Map</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    The structured journey from a novice to a fully qualified JIB Gold Card Approved Electrician. Follow the path to premium trade excellence.
+                </p>
+</div>
+<div class="relative mt-20">
+<!-- Desktop Roadmap Connecting Line -->
+<div class="hidden md:block circuit-line"></div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-stack-lg relative z-10">
+<!-- Stage 1 -->
+<div class="relative group cursor-pointer">
+<div class="glass-card p-6 rounded-xl hover:border-cyber-cyan transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+<div class="w-12 h-12 rounded-full bg-electric-navy border border-cyber-cyan flex items-center justify-center mb-6 glow-pulse">
+<span class="text-cyber-cyan font-bold">01</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2 text-cyber-cyan">Stage 1</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-4 uppercase tracking-widest">Level 2 Diploma</p>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Your starting point. C&amp;G 2365-02 covers domestic wiring, health &amp; safety, and core electrical science fundamentals.
+                            </p>
+<div class="mt-6 flex items-center gap-2 text-cyber-cyan group-hover:gap-4 transition-all">
+<span class="font-label-md text-label-md">Learn More</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Stage 2 -->
+<div class="relative group cursor-pointer">
+<div class="glass-card p-6 rounded-xl hover:border-cyber-cyan transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+<div class="w-12 h-12 rounded-full bg-electric-navy border border-glass-white flex items-center justify-center mb-6">
+<span class="text-on-surface-variant font-bold">02</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Stage 2</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-4 uppercase tracking-widest">Level 3 Diploma</p>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Advanced expertise. C&amp;G 2366-03 dives into inspection, testing, and complex industrial fault-finding.
+                            </p>
+<div class="mt-6 flex items-center gap-2 text-on-surface-variant group-hover:text-cyber-cyan transition-all">
+<span class="font-label-md text-label-md">Learn More</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Stage 3 -->
+<div class="relative group cursor-pointer">
+<div class="glass-card p-6 rounded-xl hover:border-cyber-cyan transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+<div class="w-12 h-12 rounded-full bg-electric-navy border border-glass-white flex items-center justify-center mb-6">
+<span class="text-on-surface-variant font-bold">03</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Stage 3</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-4 uppercase tracking-widest">NVQ Portfolio</p>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                C&amp;G 2357 Level 3. On-site assessments where you prove your skills in real-world professional environments.
+                            </p>
+<div class="mt-6 flex items-center gap-2 text-on-surface-variant group-hover:text-cyber-cyan transition-all">
+<span class="font-label-md text-label-md">Learn More</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Stage 4 -->
+<div class="relative group cursor-pointer">
+<div class="glass-card p-6 rounded-xl hover:border-cyber-cyan transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+<div class="w-12 h-12 rounded-full bg-electric-navy border border-glass-white flex items-center justify-center mb-6">
+<span class="text-on-surface-variant font-bold">04</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Stage 4</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-4 uppercase tracking-widest">AM2 Assessment</p>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                The ultimate test. A 2.5-day intensive assessment of your practical knowledge at an independent center.
+                            </p>
+<div class="mt-6 flex items-center gap-2 text-on-surface-variant group-hover:text-cyber-cyan transition-all">
+<span class="font-label-md text-label-md">Learn More</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Stage 5 (Gold Card) -->
+<div class="relative group cursor-pointer">
+<div class="glass-card p-6 rounded-xl gold-card-glow border-voltage-red/50 hover:bg-voltage-red/5 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+<div class="w-12 h-12 rounded-full bg-voltage-red flex items-center justify-center mb-6 shadow-[0px_0px_15px_rgba(255,0,0,0.5)]">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2 text-voltage-red">FINAL STEP</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-4 uppercase tracking-widest">ECS Gold Card</p>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Approved Electrician status. Work independently in Domestic, Commercial, and Industrial settings. The gold standard.
+                            </p>
+<div class="mt-6 flex items-center gap-2 text-voltage-red group-hover:scale-105 transition-all">
+<span class="font-label-md text-label-md">GET QUALIFIED</span>
+<span class="material-symbols-outlined text-sm">verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 18th Edition Interstitial Section -->
+<section class="mt-section-padding px-gutter">
+<div class="max-w-container-max mx-auto glass-card p-stack-lg rounded-xl flex flex-col md:flex-row items-center gap-stack-lg border-l-4 border-voltage-red">
+<div class="flex-shrink-0">
+<div class="w-20 h-20 bg-voltage-red/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-voltage-red text-4xl" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md mb-2">Mandatory: 18th Edition Course (C&amp;G 2382-26)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+                        Essential for any practicing electrician. This course covers the brand-new Amendment 4 regulations. You must remain compliant to work legally on UK sites.
+                    </p>
+</div>
+<div class="ml-auto">
+<button class="bg-white text-surface-dark px-8 py-3 rounded font-label-md text-label-md hover:bg-cyber-cyan hover:text-surface-dark transition-colors whitespace-nowrap">Check Dates</button>
+</div>
+</div>
+</section>
+<!-- Feature Bento Grid -->
+<section class="mt-section-padding max-w-container-max mx-auto px-gutter">
+<h2 class="font-headline-lg text-headline-lg mb-stack-lg text-center">Why Map Your Career With <span class="text-cyber-cyan">VoltAcademy</span>?</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-md h-auto md:h-[600px]">
+<div class="md:col-span-8 glass-card rounded-xl overflow-hidden relative group">
+<div class="absolute inset-0 z-0 opacity-40 group-hover:opacity-60 transition-opacity">
+
+</div>
+<div class="relative z-10 p-stack-lg h-full flex flex-col justify-end bg-gradient-to-t from-surface-dark via-surface-dark/40 to-transparent">
+<span class="font-label-md text-label-md text-cyber-cyan mb-2">GUARANTEED PLACEMENT</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Paid Work While You Train</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                            We don't just teach—we employ. Get guaranteed placement with Birmingham's top electrical contractors and start earning in as little as 6 weeks.
+                        </p>
+</div>
+</div>
+<div class="md:col-span-4 glass-card rounded-xl p-stack-lg flex flex-col justify-center border-b-4 border-cyber-cyan">
+<span class="material-symbols-outlined text-cyber-cyan text-4xl mb-4">shield</span>
+<h3 class="font-headline-md text-headline-md mb-2">AI-Proof Your Future</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        AI can't wire a house or crawl through a loft. Protect your livelihood from the automation boom with manual skills that will always be in demand.
+                    </p>
+</div>
+<div class="md:col-span-4 glass-card rounded-xl p-stack-lg flex flex-col justify-center">
+<div class="flex items-center gap-4 mb-4">
+<span class="font-headline-lg text-headline-lg text-voltage-red font-extrabold">£38k+</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">High-Earning Potential</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Fully qualified electricians in the West Midlands earn between £32k and £38k, with overtime pushing earnings much higher.
+                    </p>
+</div>
+<div class="md:col-span-8 glass-card rounded-xl overflow-hidden relative group">
+<div class="absolute inset-0 p-stack-lg flex items-center justify-between z-10">
+<div class="max-w-md">
+<h3 class="font-headline-md text-headline-md mb-2">Modern Birmingham HQ</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Train in our state-of-the-art facility in the Jewellery Quarter. Real industry gear, small classes, and expert mentors.
+                            </p>
+</div>
+<div class="hidden md:block w-32 h-32 rounded-full border-2 border-glass-white overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of a high-tech electrical testing device with glowing digital screen and multi-colored wires, professional workshop setting, neon lighting highlights, industrial luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsaHO5HefVk_LES5ly77vbLjnUZ27DzjG1cC9S_KEabEKXtXzBhnFD-PyzL88C0FGXPJ3FNLjbC1URQzJ6yvk96NIgAX4DOJ564lxxTzvVRdDO4j2SSiDIqbg5srTuG5ZWBrMCzrMx3pBXd_JnLbThO59jzLuiOOyBh46tuONnHqsVIazN_98uwXN5rrJtG1YvpPq9xi5QaXxkEm9OLwJevrtu6YsO3sNX3You2x0YrqS5_UPFglNv">
+</div>
+</div>
+<div class="absolute inset-0 bg-electric-navy/20"></div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-section-padding px-gutter">
+<div class="max-w-container-max mx-auto bg-electric-navy rounded-2xl p-12 text-center relative overflow-hidden border border-glass-white">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-voltage-red via-cyber-cyan to-voltage-red"></div>
+<h2 class="font-display-lg text-display-lg mb-stack-md">Ready to start <span class="text-cyber-cyan">Stage 1</span>?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl mx-auto">
+                    Our next cohort starts next month. Secure your spot and your future income today.
+                </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-voltage-red text-white px-10 py-4 rounded-lg font-headline-md text-headline-md hover:scale-105 transition-transform shadow-[0px_0px_30px_rgba(255,0,0,0.4)]">Apply Now</button>
+<button class="bg-transparent border-2 border-glass-white text-on-surface px-10 py-4 rounded-lg font-headline-md text-headline-md backdrop-blur-md hover:bg-glass-white transition-colors">Call 0121 285 2840</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-dark border-t border-glass-white w-full py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg max-w-container-max mx-auto px-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-voltage-red text-headline-md" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">VoltAcademy</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Premium Trade Excellence in the heart of Birmingham. Training the next generation of electrical engineers.
+                </p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-cyber-cyan uppercase mb-6 tracking-widest">Qualifications</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-voltage-red transition-colors" href="your-path-to-gold-card-career-map.html">C&amp;G 2365 Level 2</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-voltage-red transition-colors" href="your-path-to-gold-card-career-map.html">C&amp;G 2365 Level 3</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-voltage-red transition-colors" href="your-path-to-gold-card-career-map.html">NVQ Portfolio</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-voltage-red transition-colors" href="your-path-to-gold-card-career-map.html">18th Edition</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-cyber-cyan uppercase mb-6 tracking-widest">Support</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-voltage-red transition-colors" href="index.html">FAQ's</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-voltage-red transition-colors" href="your-path-to-gold-card-career-map.html">Employment Support</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-voltage-red transition-colors" href="index.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-cyber-cyan uppercase mb-6 tracking-widest">Legal</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-voltage-red transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-voltage-red transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-stack-lg pt-stack-lg border-t border-glass-white/10 text-center">
+<p class="font-label-md text-label-md text-on-surface-variant">
+                © 2024 VoltAcademy Birmingham. Premium Trade Excellence.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for roadmap hover
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('.w-12');
+                if (icon) icon.classList.add('scale-110');
+            });
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('.w-12');
+                if (icon) icon.classList.remove('scale-110');
+            });
+        });
+    </script>
+</body></html>

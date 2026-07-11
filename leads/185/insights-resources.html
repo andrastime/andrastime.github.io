@@ -1,0 +1,440 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Insights &amp; Resources | YES Electrical Services Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#131314",
+                    "on-secondary-container": "#432100",
+                    "secondary-fixed-dim": "#ffb77c",
+                    "primary-fixed-dim": "#c2c6d6",
+                    "on-secondary-fixed": "#2e1500",
+                    "secondary": "#ffb77c",
+                    "secondary-container": "#d47a20",
+                    "surface-variant": "#353435",
+                    "tertiary-fixed-dim": "#ffb4ab",
+                    "on-tertiary-fixed": "#410002",
+                    "outline": "#909096",
+                    "tertiary-fixed": "#ffdad6",
+                    "surface-tint": "#c2c6d6",
+                    "primary": "#c2c6d6",
+                    "surface-container-highest": "#353435",
+                    "background": "#131314",
+                    "secondary-fixed": "#ffdcc2",
+                    "surface-dim": "#131314",
+                    "surface-bright": "#39393a",
+                    "on-primary": "#2b303d",
+                    "outline-variant": "#45464c",
+                    "neon-accent": "#FF7A00",
+                    "tertiary": "#ffb4ab",
+                    "on-primary-fixed-variant": "#424754",
+                    "on-primary-container": "#828696",
+                    "surface-container-lowest": "#0e0e0f",
+                    "electric-amber": "#FFB800",
+                    "primary-container": "#1a1f2b",
+                    "inverse-primary": "#595e6c",
+                    "primary-fixed": "#dee2f3",
+                    "surface-container-low": "#1c1b1c",
+                    "on-surface-variant": "#c6c6cc",
+                    "surface-container-high": "#2a2a2b",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-container": "#480003",
+                    "surface-glass": "rgba(255, 255, 255, 0.05)",
+                    "surface-container": "#201f20",
+                    "on-tertiary-container": "#f8423c",
+                    "on-surface": "#e5e2e3",
+                    "inverse-on-surface": "#313031",
+                    "on-error": "#690005",
+                    "on-tertiary": "#690006",
+                    "on-background": "#e5e2e3",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#93000d",
+                    "error-container": "#93000a",
+                    "on-secondary": "#4d2700",
+                    "inverse-surface": "#e5e2e3",
+                    "on-primary-fixed": "#161b27",
+                    "on-secondary-fixed-variant": "#6d3900"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "2rem",
+                    "container-max": "1280px",
+                    "margin-mobile": "1rem",
+                    "section-gap": "5rem",
+                    "stack-md": "1rem",
+                    "gutter": "1.5rem",
+                    "stack-sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-top: 1px solid #FFB800;
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
+        }
+        .glow-button {
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 20px rgba(255, 184, 0, 0.4);
+        }
+        .active-dot {
+            position: relative;
+        }
+        .active-dot::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background: #FFB800;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-electric-amber/30">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface-glass backdrop-blur-xl border-b border-white/10 shadow-md">
+<nav class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex items-center justify-between h-20">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">YES Electrical</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="commercial-industrial-services.html">Commercial</a>
+<a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="commercial-industrial-services.html">Industrial</a>
+<a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="residential-landlord-services.html">Residential</a>
+<a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="insights-resources.html">Projects</a>
+<a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="index.html">About</a>
+<a class="text-electric-amber border-b-2 border-electric-amber pb-1" href="insights-resources.html">Blog</a>
+</div>
+<button class="glow-button bg-electric-amber text-on-secondary-container px-6 py-2 rounded-lg font-label-bold text-label-bold active:scale-95 transition-transform">
+                Get a Quote
+            </button>
+</nav>
+</header>
+<!-- Hero Section with Shader -->
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+
+<div class="relative max-w-container-max mx-auto px-margin-mobile md:px-gutter z-10">
+<div class="max-w-3xl">
+<span class="inline-block bg-primary-container text-electric-amber px-4 py-1 rounded-full font-label-bold text-label-bold mb-6">Expert Insights</span>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-white mb-6 leading-tight">Industry Knowledge &amp; Electrical Resources</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Stay updated with the latest in electrical safety, energy efficiency, and industrial standards from the heart of Birmingham's leading electrical experts.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-surface-glass border border-white/20 backdrop-blur-md px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-white/10 transition-all">
+<span class="material-symbols-outlined text-electric-amber">search</span>
+<span class="font-label-bold text-label-bold">Search Articles</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-section-gap">
+<!-- Featured Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap">
+<!-- Main Featured Post -->
+<article class="md:col-span-8 group cursor-pointer">
+<div class="glass-card h-full rounded-2xl overflow-hidden flex flex-col">
+<div class="relative h-[400px] overflow-hidden">
+<div class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-700" data-alt="A professional high-angle shot of a licensed electrician in high-visibility gear conducting an EICR inspection on a complex industrial control panel. The scene is lit with clinical, cool-toned professional lighting, emphasizing technical precision. The background is a clean, modern facility in Birmingham, featuring deep navy and metallic silver tones with soft amber highlights reflecting off the technical equipment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAoJ5coHWgaKtQUN4LsbsoVk_o3gG9SXs7QSG0busp4cipSLy7EGu6G0bDoKg76Y1gt5Vpbgq4lePSDZvP7lXMQhJ8MSQJO1KiyOYVKMgY3ADi97jFcPcbbC95f8bzLaly_hI67T1tshZ8BeDH7-OjeZ7ngDJ6hVzhuRFI0UQ37Zj-9k2JthdFtPjcgM5vaFiHw86aCvjMIAVapQjnqvPPM2-ihWYefONqAjHxLj3sQmHYw93FNbLXV')"></div>
+<div class="absolute top-6 left-6">
+<span class="bg-electric-amber text-on-secondary-container px-3 py-1 rounded-full font-label-bold text-label-bold">Mandatory Compliance</span>
+</div>
+</div>
+<div class="p-8 flex-1">
+<div class="flex items-center gap-4 text-on-surface-variant font-label-bold text-label-bold mb-4">
+<span>Jan 15, 2025</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span>12 min read</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-4 group-hover:text-electric-amber transition-colors">EICR Requirements for 2025: What Landlords &amp; Businesses Need to Know</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Stay ahead of changing regulations. We break down the updated Electrical Installation Condition Report standards for the upcoming year to ensure your properties remain fully compliant and safe.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-electric-amber">engineering</span>
+</div>
+<span class="font-label-bold text-label-bold">Technical Team</span>
+</div>
+<span class="material-symbols-outlined text-electric-amber group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Secondary Featured Posts Stack -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<article class="glass-card rounded-2xl p-6 group cursor-pointer">
+<span class="text-electric-amber font-label-bold text-label-bold mb-3 block">Energy Efficiency</span>
+<h3 class="font-headline-md text-headline-md text-white mb-4 group-hover:text-electric-amber transition-colors">Saving Energy with LED Upgrades</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">How modern lighting solutions can slash industrial overheads by up to 60%.</p>
+<div class="flex items-center justify-between">
+<span class="font-label-bold text-label-bold text-on-surface-variant">8 min read</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-electric-amber">open_in_new</span>
+</div>
+</article>
+<article class="glass-card rounded-2xl p-6 group cursor-pointer">
+<span class="text-electric-amber font-label-bold text-label-bold mb-3 block">Sustainability</span>
+<h3 class="font-headline-md text-headline-md text-white mb-4 group-hover:text-electric-amber transition-colors">EV Charger Installation Guide</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Everything you need to know about OZEV grants and home charging infrastructure.</p>
+<div class="flex items-center justify-between">
+<span class="font-label-bold text-label-bold text-on-surface-variant">15 min read</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-electric-amber">open_in_new</span>
+</div>
+</article>
+</div>
+</div>
+<!-- Newsletter & Social Section -->
+<section class="mb-section-gap">
+<div class="glass-card rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center gap-12 border border-white/5 shadow-2xl relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-electric-amber/10 blur-[100px] rounded-full"></div>
+<div class="flex-1 z-10">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Stay Powered Up</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Get the latest electrical safety tips, regulatory updates, and exclusive energy-saving guides delivered straight to your inbox.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-xl">
+<input class="flex-1 bg-surface-container-highest border-outline-variant text-on-surface rounded-xl px-6 py-4 focus:ring-2 focus:ring-electric-amber focus:border-transparent outline-none transition-all" placeholder="your@email.com" type="email">
+<button class="glow-button bg-electric-amber text-on-secondary-container font-label-bold text-label-bold px-8 py-4 rounded-xl whitespace-nowrap" type="submit">Subscribe to our Newsletter</button>
+</form>
+</div>
+<div class="w-px h-32 bg-white/10 hidden md:block"></div>
+<div class="flex flex-col items-center gap-6 z-10">
+<span class="font-label-bold text-label-bold text-on-surface-variant">Follow Our Updates</span>
+<div class="flex gap-4">
+<a class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center border border-white/10 hover:border-electric-amber hover:text-electric-amber transition-all group" href="insights-resources.html">
+<span class="material-symbols-outlined text-2xl">face_nod</span>
+</a>
+<a class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center border border-white/10 hover:border-electric-amber hover:text-electric-amber transition-all group" href="insights-resources.html">
+<span class="material-symbols-outlined text-2xl">share</span>
+</a>
+<a class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center border border-white/10 hover:border-electric-amber hover:text-electric-amber transition-all group" href="insights-resources.html">
+<span class="material-symbols-outlined text-2xl">mail</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Filter -->
+<div class="flex flex-wrap items-center gap-4 mb-stack-lg border-b border-white/5 pb-6">
+<button class="bg-electric-amber text-on-secondary-container px-6 py-2 rounded-full font-label-bold text-label-bold">All Resources</button>
+<button class="text-on-surface-variant hover:text-white px-6 py-2 rounded-full font-label-bold text-label-bold transition-colors">Commercial</button>
+<button class="text-on-surface-variant hover:text-white px-6 py-2 rounded-full font-label-bold text-label-bold transition-colors">Residential</button>
+<button class="text-on-surface-variant hover:text-white px-6 py-2 rounded-full font-label-bold text-label-bold transition-colors">Industrial</button>
+<button class="text-on-surface-variant hover:text-white px-6 py-2 rounded-full font-label-bold text-label-bold transition-colors">Testing</button>
+</div>
+<!-- Article Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Article 1 -->
+<article class="glass-card rounded-2xl overflow-hidden group cursor-pointer flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<div class="bg-cover bg-center w-full h-full group-hover:scale-110 transition-transform duration-500" data-alt="A futuristic, macro close-up of a high-speed EV charging port with glowing blue and orange LED status rings. The image is stylized with a tech-focused, cinematic quality, featuring sharp focus on the metallic textures and soft bokeh in the background. The color palette centers on deep navy blues and vibrant electric amber highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYh15NtgKDlrceK9AwjNspCgSkNUnnBGrjpBeKcUnKK3X_1vrPB6RUbGdeakNQ_0Ilzf9gpvWUs_tVd-0qYXEkVzC_MSlru9P_nzG5Kk7R_3WBUXL1_VyI-eNin5WffRg4xcw2GTnJjF-di6OOMc7d4dQHjIls9LAkGYi00gngf3YpmjIgfTau4xDuSplO9gycR_0QwP92k8Eam_1mgHOvqkBuWm51JSFIJv-_58JCrV29kT8F_MVI')"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] font-bold uppercase tracking-wider text-electric-amber px-2 py-0.5 bg-primary-container rounded">Residential</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-3 group-hover:text-electric-amber transition-colors">Paxton Door Access: A Complete Setup Guide</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Securing your premises with smart entry solutions. Learn the basics of Paxton integration.</p>
+<div class="pt-4 border-t border-white/5 flex items-center justify-between">
+<span class="text-on-surface-variant font-label-bold text-label-bold">Mar 02, 2024</span>
+<div class="flex items-center gap-2 text-electric-amber font-label-bold text-label-bold">
+                            Read More <span class="material-symbols-outlined text-sm">trending_flat</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="glass-card rounded-2xl overflow-hidden group cursor-pointer flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<div class="bg-cover bg-center w-full h-full group-hover:scale-110 transition-transform duration-500" data-alt="An artistic shot of a sprawling industrial facility at dusk, illuminated by high-efficiency LED floodlights that cast a warm, golden glow against the deep twilight sky. The architecture of the pipes and structures creates a strong rhythmic pattern. The overall mood is powerful and secure, utilizing the electric amber brand color as the primary light source." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDW9vS4sMT-Bq90vKbXAvpFURvBR9BwWaUc-XbTvPTFL86ISWTBSZmVTq0AVgGTW_VQR_wIFRtndMEW1aflScjLGDMkk0tBJERoitv-pxvTNR8sgHlsa093ElaVdF3bUY40F1b2Awi8vh1tQk9NsBWDvzfFOaE--dHn9vj_E-Hemid5ww7qkFz8_DuNWml545riHAPZIckn4CslD5viN6y4erf0-eWOTy4t7zkYY1iX38nK9Q9mBJ-i')"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] font-bold uppercase tracking-wider text-electric-amber px-2 py-0.5 bg-primary-container rounded">Industrial</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-3 group-hover:text-electric-amber transition-colors">3-Phase Power: Does Your Business Need It?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Understanding the benefits of upgraded power systems for growing manufacturing facilities.</p>
+<div class="pt-4 border-t border-white/5 flex items-center justify-between">
+<span class="text-on-surface-variant font-label-bold text-label-bold">Feb 28, 2024</span>
+<div class="flex items-center gap-2 text-electric-amber font-label-bold text-label-bold">
+                            Read More <span class="material-symbols-outlined text-sm">trending_flat</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Article 3 -->
+<article class="glass-card rounded-2xl overflow-hidden group cursor-pointer flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<div class="bg-cover bg-center w-full h-full group-hover:scale-110 transition-transform duration-500" data-alt="A clean, minimalist home office setup featuring a desk with a laptop and architectural plans. Soft, natural daylight mixes with warm accent lighting. The focus is on a sleek, modern electrical consumer unit installed on a pristine white wall. The style is contemporary interior design, highlighting high-end residential electrical craftsmanship." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBnYLAuxkbPigCJHVqiUYPHMxEiHdbvslmrWduvg6DF8hyS6yUDdlyux8-jWLvGG3uvk4xU0VM2C3IrGAUfGWO8ATGBosmveIQAul6NdvK7vdrAdVxs3ShEv8eAxtlgbdQUEOIVQAkepXu3exTeLZ-zw23yfNT8HDFZc9Dnamv-by-vwr5Xwv0sjcrUnUOP0A8ZYZcv4UgMyOcMWaVuIoQaOz-VhcOkBO6lzIPo4LvUkUQepoR0MOr')"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] font-bold uppercase tracking-wider text-electric-amber px-2 py-0.5 bg-primary-container rounded">Residential</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-3 group-hover:text-electric-amber transition-colors">Garden Office Power &amp; Connectivity Guide</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Safe and efficient ways to run power and high-speed data to your new home workspace.</p>
+<div class="pt-4 border-t border-white/5 flex items-center justify-between">
+<span class="text-on-surface-variant font-label-bold text-label-bold">Feb 15, 2024</span>
+<div class="flex items-center gap-2 text-electric-amber font-label-bold text-label-bold">
+                            Read More <span class="material-symbols-outlined text-sm">trending_flat</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Load More CTA -->
+<div class="mt-section-gap text-center">
+<button class="bg-surface-glass border border-white/10 px-12 py-4 rounded-xl font-label-bold text-label-bold text-on-surface hover:bg-white/5 transition-all">
+                Load More Articles
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant w-full">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap grid grid-cols-1 md:grid-cols-4 gap-stack-lg">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-6">YES Electrical</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Our experienced electricians are highly trained in all aspects of electrical service, from office lighting to emergency repairs.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-electric-amber">bolt</span>
+<span class="material-symbols-outlined text-electric-amber">verified</span>
+<span class="material-symbols-outlined text-electric-amber">security</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-white mb-6 uppercase tracking-wider">Quick Links</h4>
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-electric-amber transition-colors" href="commercial-industrial-services.html">Commercial Services</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="residential-landlord-services.html">Residential Services</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="commercial-industrial-services.html">Industrial Services</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="insights-resources.html">Case Studies</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-white mb-6 uppercase tracking-wider">Contact Us</h4>
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-amber">location_on</span>
+<span>Kings Road, Tyseley, Birmingham, West Midlands</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-amber">phone_in_talk</span>
+<span>0121 439 4790</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-amber">mail</span>
+<span>info@yeselectrical.co.uk</span>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-white mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-electric-amber transition-colors" href="insights-resources.html">Privacy Policy</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="insights-resources.html">Terms of Service</a></li>
+<li><a class="hover:text-electric-amber transition-colors" href="insights-resources.html">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-body-md text-body-md text-on-surface-variant">© 2024 YES Electrical Services Ltd. All rights reserved.</span>
+<div class="flex gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-amber transition-colors" href="insights-resources.html">Facebook</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-amber transition-colors" href="insights-resources.html">LinkedIn</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Nav -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface-glass backdrop-blur-2xl border-t border-white/10 flex justify-around items-center px-4 pb-4 pt-2 shadow-2xl rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2" href="commercial-industrial-services.html">
+<span class="material-symbols-outlined">bolt</span>
+<span class="font-label-bold text-[10px]">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-electric-amber bg-primary-container/30 rounded-xl p-2 active-dot" href="insights-resources.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">article</span>
+<span class="font-label-bold text-[10px]">Blog</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2" href="index.html">
+<span class="material-symbols-outlined">phone_in_talk</span>
+<span class="font-label-bold text-[10px]">Call Back</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for form submission
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Subscribed!';
+            btn.classList.replace('bg-electric-amber', 'bg-green-500');
+            btn.classList.replace('text-on-secondary-container', 'text-white');
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.replace('bg-green-500', 'bg-electric-amber');
+                btn.classList.replace('text-white', 'text-on-secondary-container');
+                e.target.reset();
+            }, 3000);
+        });
+
+        // Simple scroll reveal effect
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('article').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

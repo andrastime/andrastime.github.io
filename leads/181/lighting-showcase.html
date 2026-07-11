@@ -1,0 +1,401 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Robinson &amp; Rushe | Luxury &amp; Outdoor Lighting</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdad7",
+                        "surface-container-highest": "#e4e2e1",
+                        "surface-container-low": "#f5f3f2",
+                        "outline-variant": "#c2c7d0",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#9ccaff",
+                        "on-secondary-fixed-variant": "#544600",
+                        "surface-container-high": "#eae8e7",
+                        "primary": "#003d68",
+                        "surface-container": "#f0eded",
+                        "on-tertiary-container": "#ffb2ad",
+                        "on-background": "#1b1c1c",
+                        "on-tertiary-fixed-variant": "#930017",
+                        "on-surface-variant": "#42474f",
+                        "background": "#fbf9f8",
+                        "primary-container": "#1f5584",
+                        "inverse-surface": "#303030",
+                        "electric-yellow": "#FFD700",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#9bcaff",
+                        "on-secondary-fixed": "#221b00",
+                        "cool-gray": "#ECECEC",
+                        "secondary-fixed": "#ffe16d",
+                        "surface-bright": "#fbf9f8",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#fcd400",
+                        "surface-variant": "#e4e2e1",
+                        "primary-fixed-dim": "#9ccaff",
+                        "outline": "#727780",
+                        "surface-tint": "#2e6191",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed-variant": "#0c4978",
+                        "on-secondary-container": "#6e5c00",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#7c0011",
+                        "inverse-on-surface": "#f3f0f0",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#410005",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#a8001b",
+                        "on-error": "#ffffff",
+                        "surface": "#fbf9f8",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d0e4ff",
+                        "secondary-fixed-dim": "#e9c400",
+                        "deep-navy": "#1F5584",
+                        "surface-dim": "#dcd9d9",
+                        "secondary": "#705d00",
+                        "power-red": "#E32835",
+                        "ink-black": "#121212",
+                        "tertiary-fixed-dim": "#ffb3af",
+                        "on-primary-fixed": "#001d35"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-md": ["JetBrains Mono"],
+                        "display-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .electric-glow:hover {
+            box-shadow: 0 0 20px 0px rgba(255, 215, 0, 0.35);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            gap: 24px;
+        }
+        .luxury-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(0, 61, 104, 0.8), transparent);
+            z-index: 1;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-cool-gray/20 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-base">
+<span class="text-headline-md font-headline-md font-bold text-primary tracking-tight">Robinson &amp; Rushe</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="shop-all-departments.html">Electrical</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="shop-all-departments.html">Showers</a>
+<a class="text-label-md font-label-md text-primary border-b-2 border-secondary-container pb-1 transition-colors" href="lighting-showcase.html">Lighting</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="shop-all-departments.html">CCTV/Security</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="shop-all-departments.html">Heaters</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Plumbing</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined text-primary cursor-pointer transition-all duration-300 active:scale-95 group-hover:bg-surface-container-low p-2 rounded-full">search</span>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer transition-all duration-300 active:scale-95 hover:bg-surface-container-low p-2 rounded-full">person</span>
+<div class="relative">
+<span class="material-symbols-outlined text-primary cursor-pointer transition-all duration-300 active:scale-95 hover:bg-surface-container-low p-2 rounded-full">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-secondary-container text-on-secondary-container text-[10px] font-bold px-1.5 py-0.5 rounded-full">0</span>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section: Editorial Elegance -->
+<section class="relative h-[85vh] flex items-center overflow-hidden bg-ink-black">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="An expansive, high-angle shot of a minimalist luxury interior at twilight. The room features architectural lighting with warm ambient glows and sharp geometric shadows. In the center, a monumental contemporary light installation acts as a focal point. The color palette is dominated by deep blues, charcoal grays, and brilliant golden highlights, reflecting a premium corporate aesthetic with electrical precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGss_qW03FSnbq8tjWYApQiy8q6U-fjDEtlcSfwA70KXCCmLD9CJYxHwTFMX6cVaKXL08w_A5gO0OXDkEtW-ajuM8jIT42e4Ghyt2F8H_ao3yLfLkAIOThdTCX6X3iSYkQZTqry5Yk7zh_9-Yf2f9M4eh8085MOpsbJ7hecLcknwGbGexX2glAA25NV9lccy_svV4Pb-VJrMSAXcSePVsKAFSYvJTrUQB85p0BT3tMR654mLJYgcOu">
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="text-label-md font-label-md text-electric-yellow mb-4 block tracking-[0.2em] uppercase">The Art of Illumination</span>
+<h1 class="text-display-lg font-display-lg text-white mb-6 leading-tight">Mastering Light &amp; Atmosphere</h1>
+<p class="text-body-lg font-body-lg text-cool-gray/80 mb-10 max-w-lg">From industrial-grade outdoor fixtures to bespoke luxury chandeliers, discover lighting solutions that define architecture and enhance life.</p>
+<div class="flex gap-4">
+<button class="bg-electric-yellow text-primary font-headline-md px-8 py-4 electric-glow transition-all duration-300 flex items-center gap-2">
+                            Explore Collections <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-white text-white font-headline-md px-8 py-4 hover:bg-white/10 transition-all duration-300">
+                            Trade Catalog
+                        </button>
+</div>
+</div>
+</div>
+<!-- Decorative Gradient -->
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent"></div>
+</section>
+<!-- Luxury Lighting Section (Secondary Hero with Chandelier) -->
+<section class="py-24 bg-background overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl"></div>
+<div class="relative border-l-4 border-primary p-8">
+<span class="text-label-sm font-label-sm text-primary mb-2 block font-bold">PREMIUM SERIES</span>
+<h2 class="text-display-lg font-display-lg text-primary mb-6">Luxury Lighting</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                                Our bespoke luxury collection caters to prestigious residential and commercial projects. Featuring lead crystals, hand-finished metals, and integrated smart-dimming technology, these pieces are engineered for the discerning eye.
+                            </p>
+<div class="grid grid-cols-2 gap-8 mb-8">
+<div class="border-t border-cool-gray pt-4">
+<span class="text-display-lg font-display-lg text-primary block">99.9%</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant">Crystal Purity</span>
+</div>
+<div class="border-t border-cool-gray pt-4">
+<span class="text-display-lg font-display-lg text-primary block">IP20+</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant">Safety Rating</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<div class="bg-white p-12 shadow-2xl relative group overflow-hidden">
+<img class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700" data-alt="A close-up, high-definition photograph of a cascading crystal chandelier. The prisms catch the light, creating a spectrum of prismatic flares. The metal frame is polished chrome, reflecting a modern and luxurious aesthetic. The background is a soft, dark blur to emphasize the intricate details and brilliance of the lighting fixture." src="https://lh3.googleusercontent.com/aida/AP1WRLvTewIjT2LZ0URKvZXfEJbeded0V9rmaRsSHCLfYsKckn3sDIPLhvaEpG8gmI63clR1insQmdyo4qTZQV1i63ZsSM83VPGYo8LWi7c2qeVEL9YoHCMXLrpR_xtcEZWnFytE6uh1ZMkyMXbN-E7jhTEZZAKOOQuQya5BJoTvbo_EsfKaRgNZs_2NwLbDEkZ-mk7uDDe_S_gh6GBCu99bdJ65f3s9pegHUc2BGfkTww9xuiReyiocgNyls_k">
+<div class="absolute inset-0 border-[16px] border-background pointer-events-none"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Outdoor Lighting Section (Bento Grid) -->
+<section class="py-24 bg-ink-black text-white relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="flex justify-between items-end mb-16">
+<div class="max-w-2xl">
+<h2 class="text-headline-lg font-headline-lg mb-4 text-electric-yellow">Outdoor &amp; Security</h2>
+<p class="text-body-lg font-body-lg text-cool-gray/60">Built for the elements. High-lumen, IP65-rated solutions for perimeters, landscapes, and architectural facades.</p>
+</div>
+<a class="text-label-md font-label-md border-b border-electric-yellow pb-1 hover:text-electric-yellow transition-colors flex items-center gap-2" href="lighting-showcase.html">View All Outdoor <span class="material-symbols-outlined">open_in_new</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-gutter h-auto md:h-[700px]">
+<!-- Main Feature -->
+<div class="md:col-span-2 md:row-span-2 bg-primary relative group overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-1000" data-alt="A professional-grade outdoor floodlight mounted on a sleek dark brick wall. The fixture is casting a powerful, wide-angle beam of cool white light across a modern patio. Raindrops are visible in the beam, highlighting the IP65 weather resistance. The overall mood is secure and technologically advanced, with deep blues and crisp whites." src="https://lh3.googleusercontent.com/aida/AP1WRLvA-BinPUQ7_7Gu2GluUtt4H_znkW1F34ToUVp-B6CP5T61P8vPOr3LqltsNJNQHAKKjMoGT-I8qfFqkhqW5aWpahotmjLRoeS02N_BvEgwEtoGHhd1oDKP_Ck5XrroSUgm-EMkU6sQEwNM_OcejdNskZMEY7R5HpKnCO03o70amgYIja83eydF0hfQunDbTaHCBmSmJUMzhUqsu7g0c-2Am7JsfLkkn6P_Y7S73BdnNG9l_58KBuXOuRc">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-8">
+<span class="bg-electric-yellow text-primary px-3 py-1 text-label-sm font-bold mb-4 inline-block">BEST SELLER</span>
+<h3 class="text-headline-md font-headline-md mb-2">Titan Perimeter Floodlight</h3>
+<p class="text-body-md text-cool-gray mb-4">5000 Lumens | IP66 | Dusk-to-Dawn Sensor</p>
+<button class="text-label-md font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all">Enquire Now <span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<!-- Sub Features -->
+<div class="md:col-span-2 bg-surface-container-highest/10 border border-white/10 p-8 flex flex-col justify-between group hover:bg-surface-container-highest/20 transition-colors">
+<div>
+<span class="material-symbols-outlined text-electric-yellow text-4xl mb-4">tsunami</span>
+<h3 class="text-headline-md font-headline-md mb-2">Maritime Grade</h3>
+<p class="text-body-md text-cool-gray">Anti-corrosion fixtures specifically designed for coastal installations and high-salinity environments.</p>
+</div>
+<div class="text-label-sm font-label-sm text-electric-yellow tracking-widest">SERIES 9 - SALINE READY</div>
+</div>
+<div class="bg-primary-container p-8 flex flex-col justify-center items-center text-center group transition-all duration-300">
+<span class="material-symbols-outlined text-white text-5xl mb-4 group-hover:rotate-12 transition-transform">security</span>
+<h4 class="font-headline-md text-headline-md mb-1">Smart Guard</h4>
+<p class="text-label-sm opacity-70">App Integrated</p>
+</div>
+<div class="bg-deep-navy p-8 flex flex-col justify-center items-center text-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-electric-yellow opacity-0 group-hover:opacity-10 transition-opacity"></div>
+<span class="material-symbols-outlined text-electric-yellow text-5xl mb-4">landscape</span>
+<h4 class="font-headline-md text-headline-md mb-1">Landscaping</h4>
+<p class="text-label-sm opacity-70">Low Voltage Kits</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Energy Saving LEDs (Technical Specs Table Feel) -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="text-display-lg font-display-lg text-primary">Energy Efficiency Solutions</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto mt-4">Upgrade your commercial space with our latest LED technology, reducing overheads by up to 85%.</p>
+</div>
+<div class="bg-white border border-cool-gray shadow-xl overflow-hidden">
+<div class="p-8 border-b border-cool-gray flex justify-between items-center bg-surface-container-low">
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 object-contain" data-alt="A sleek, ultra-thin LED panel light presented on a clean white background. The image highlights the minimalist design and smooth surface. Soft light is emanating from the edges, suggesting a high-quality, flicker-free output. The style is technical and clean, suitable for a professional wholesaler catalog." src="https://lh3.googleusercontent.com/aida/AP1WRLsNC8vuW1Bm_y2n35lYxX_2hiuqyA-X_vwtbbIodDnmgOmoPhdcYS7QRvyBfIvJhwl1wR7-VvJt33ybUc16u6FaUBeDprt87GJtnD6WXHb5d3Zpva2dc0fQZzJ0rT9AMFKPqWtGonEgIqK1X2W5xu7yxybxPKEX-YMV_iH4ox66GBO0aXJErY18LRbMkS7DC19auLKgi-FWwd3Ob8Qp913b2QiMof8T0eIA8bKZ6kmPDPROO37xfe08_W0">
+<h3 class="text-headline-md font-headline-md text-primary">Ultra-Slim LED Panels</h3>
+</div>
+<span class="text-label-md font-label-md bg-green-100 text-green-800 px-4 py-1">IN STOCK</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-primary text-white font-headline-md text-sm uppercase tracking-widest">
+<tr>
+<th class="px-8 py-4">SKU Code</th>
+<th class="px-8 py-4">Dimensions</th>
+<th class="px-8 py-4">Power Rating</th>
+<th class="px-8 py-4">Color Temp</th>
+<th class="px-8 py-4">Unit Price</th>
+<th class="px-8 py-4">Action</th>
+</tr>
+</thead>
+<tbody class="text-on-surface-variant font-body-md">
+<tr class="border-b border-cool-gray hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-6 font-label-sm">RR-LED-6060-4K</td>
+<td class="px-8 py-6">600 x 600mm</td>
+<td class="px-8 py-6">40W / 4000lm</td>
+<td class="px-8 py-6">4000K (Cool)</td>
+<td class="px-8 py-6 font-bold text-primary">£24.99</td>
+<td class="px-8 py-6"><button class="bg-primary text-white px-4 py-2 text-sm hover:bg-deep-navy transition-colors">Add to Quote</button></td>
+</tr>
+<tr class="border-b border-cool-gray bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-6 font-label-sm">RR-LED-6060-6K</td>
+<td class="px-8 py-6">600 x 600mm</td>
+<td class="px-8 py-6">40W / 4200lm</td>
+<td class="px-8 py-6">6000K (Daylight)</td>
+<td class="px-8 py-6 font-bold text-primary">£26.50</td>
+<td class="px-8 py-6"><button class="bg-primary text-white px-4 py-2 text-sm hover:bg-deep-navy transition-colors">Add to Quote</button></td>
+</tr>
+<tr class="border-b border-cool-gray hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-6 font-label-sm">RR-LED-1230-4K</td>
+<td class="px-8 py-6">1200 x 300mm</td>
+<td class="px-8 py-6">45W / 4500lm</td>
+<td class="px-8 py-6">4000K (Cool)</td>
+<td class="px-8 py-6 font-bold text-primary">£31.00</td>
+<td class="px-8 py-6"><button class="bg-primary text-white px-4 py-2 text-sm hover:bg-deep-navy transition-colors">Add to Quote</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- Catalog CTA -->
+<section class="bg-primary py-20 relative overflow-hidden">
+<div class="absolute right-0 top-0 w-1/3 h-full bg-electric-yellow skew-x-[-20deg] translate-x-20 opacity-20"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10 flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="text-white">
+<h2 class="text-headline-lg font-headline-lg mb-4">Request Our Lighting Catalog</h2>
+<p class="text-body-lg opacity-80">Access over 5,000 professional lighting products for your next project.</p>
+</div>
+<div class="flex gap-4">
+<input class="px-6 py-4 bg-white/10 border border-white/20 text-white placeholder:text-white/50 w-full md:w-80 outline-none focus:border-electric-yellow" placeholder="Enter your business email" type="email">
+<button class="bg-electric-yellow text-primary px-8 py-4 font-headline-md electric-glow">Request</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary w-full border-t-4 border-secondary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-16 px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<span class="text-headline-lg font-headline-lg text-secondary-fixed">Robinson &amp; Rushe</span>
+<p class="text-body-md opacity-80 pr-8">
+                    Since 1985, providing Birmingham with the highest quality electrical components and lighting solutions.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">face_nod</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">alternate_email</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">distance</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-label-md font-bold text-white uppercase tracking-widest border-b border-white/20 pb-2">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-on-primary/80 hover:text-secondary-fixed hover:translate-x-1 transition-all duration-200 inline-block" href="contact-support.html">About Us</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed hover:translate-x-1 transition-all duration-200 inline-block" href="contact-support.html">Trade Accounts</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed hover:translate-x-1 transition-all duration-200 inline-block" href="contact-support.html">Technical Support</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed hover:translate-x-1 transition-all duration-200 inline-block" href="contact-support.html">Branch Finder</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-label-md font-bold text-white uppercase tracking-widest border-b border-white/20 pb-2">Our Branches</h4>
+<ul class="space-y-2 text-on-primary/80">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-sm">location_on</span>
+<span>Birmingham Central (HQ)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-sm">location_on</span>
+<span>West Bromwich Branch</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-sm">location_on</span>
+<span>Solihull Distribution Center</span>
+</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-label-md font-bold text-white uppercase tracking-widest border-b border-white/20 pb-2">Newsletter</h4>
+<p class="text-label-sm text-on-primary/60">Get industry updates and trade clearance alerts.</p>
+<div class="flex flex-col gap-2">
+<input class="bg-primary-container border-none text-white p-3 text-sm" placeholder="Your Name" type="text">
+<button class="bg-secondary-fixed text-primary font-bold py-3 text-sm hover:bg-electric-yellow transition-colors">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-white/10 text-label-sm text-on-primary/50 flex flex-col md:flex-row justify-between items-center gap-4">
+<p>© 2024 Robinson &amp; Rushe Electrical Wholesalers. Birmingham's Premier Supplier.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="contact-support.html">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="contact-support.html">Terms of Sale</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('h-16', 'shadow-lg');
+                nav.classList.remove('h-20');
+            } else {
+                nav.classList.add('h-20');
+                nav.classList.remove('h-16', 'shadow-lg');
+            }
+        });
+    </script>
+</body></html>

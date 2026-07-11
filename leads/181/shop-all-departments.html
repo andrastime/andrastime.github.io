@@ -1,0 +1,361 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Shop Overview | Robinson &amp; Rushe Electrical Wholesalers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdad7",
+                        "surface-container-highest": "#e4e2e1",
+                        "surface-container-low": "#f5f3f2",
+                        "outline-variant": "#c2c7d0",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#9ccaff",
+                        "on-secondary-fixed-variant": "#544600",
+                        "surface-container-high": "#eae8e7",
+                        "primary": "#003d68",
+                        "surface-container": "#f0eded",
+                        "on-tertiary-container": "#ffb2ad",
+                        "on-background": "#1b1c1c",
+                        "on-tertiary-fixed-variant": "#930017",
+                        "on-surface-variant": "#42474f",
+                        "background": "#fbf9f8",
+                        "primary-container": "#1f5584",
+                        "inverse-surface": "#303030",
+                        "electric-yellow": "#FFD700",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#9bcaff",
+                        "on-secondary-fixed": "#221b00",
+                        "cool-gray": "#ECECEC",
+                        "secondary-fixed": "#ffe16d",
+                        "surface-bright": "#fbf9f8",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#fcd400",
+                        "surface-variant": "#e4e2e1",
+                        "primary-fixed-dim": "#9ccaff",
+                        "outline": "#727780",
+                        "surface-tint": "#2e6191",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed-variant": "#0c4978",
+                        "on-secondary-container": "#6e5c00",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#7c0011",
+                        "inverse-on-surface": "#f3f0f0",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#410005",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#a8001b",
+                        "on-error": "#ffffff",
+                        "surface": "#fbf9f8",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d0e4ff",
+                        "secondary-fixed-dim": "#e9c400",
+                        "deep-navy": "#1F5584",
+                        "surface-dim": "#dcd9d9",
+                        "secondary": "#705d00",
+                        "power-red": "#E32835",
+                        "ink-black": "#121212",
+                        "tertiary-fixed-dim": "#ffb3af",
+                        "on-primary-fixed": "#001d35"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "label-md": ["JetBrains Mono"],
+                        "display-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .electric-glow:hover {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+        .card-shadow {
+            border: 1px solid rgba(236, 236, 236, 0.5);
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            border-color: #003d68;
+            transform: translateY(-4px);
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .bento-item-large { grid-column: span 8; }
+        .bento-item-medium { grid-column: span 4; }
+        .bento-item-small { grid-column: span 6; }
+        
+        @media (max-width: 768px) {
+            .bento-item-large, .bento-item-medium, .bento-item-small {
+                grid-column: span 12;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-ink-black/80 backdrop-blur-md shadow-sm border-b border-cool-gray/20">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary tracking-tight" href="index.html">Robinson &amp; Rushe</a>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-label-md font-label-md text-primary border-b-2 border-secondary-container pb-1 transition-all duration-300" href="shop-all-departments.html">Electrical</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="shop-all-departments.html">Showers</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="lighting-showcase.html">Lighting</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="shop-all-departments.html">CCTV/Security</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="shop-all-departments.html">Heaters</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="shop-all-departments.html">Plumbing</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-lg border border-cool-gray/30">
+<span class="material-symbols-outlined text-outline mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-48" placeholder="Search components..." type="text">
+</div>
+<button class="p-2 transition-all duration-300 active:scale-95 hover:bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+</button>
+<button class="p-2 transition-all duration-300 active:scale-95 hover:bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined text-primary">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+<div class="max-w-2xl">
+<span class="text-label-md font-label-md text-primary uppercase tracking-widest mb-4 block">Professional Inventory</span>
+<h1 class="text-display-lg font-display-lg text-primary leading-tight">Expert Electrical Supplies.</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-4">Direct access to our comprehensive trade inventory. Browse by department for industry-standard components and technical systems.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 bg-primary text-on-primary font-label-md flex items-center gap-2 electric-glow transition-all">
+                        REQUEST TRADE QUOTE
+                        <span class="material-symbols-outlined">request_quote</span>
+</button>
+</div>
+</div>
+<!-- Department Bento Grid -->
+<div class="bento-grid">
+<!-- Switches & Sockets -->
+<div class="bento-item-large group relative overflow-hidden bg-white p-8 card-shadow">
+<div class="flex flex-col md:flex-row h-full gap-8">
+<div class="flex-1 z-10">
+<span class="text-label-sm font-label-sm text-primary/60 mb-2 block">POWER CONTROLS</span>
+<h2 class="text-headline-lg font-headline-lg text-primary mb-4">Switches &amp; Sockets</h2>
+<ul class="space-y-2 mb-8 text-on-surface-variant font-body-md">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-electric-yellow"></span>Decorative Screwless</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-electric-yellow"></span>Industrial Metalclad</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-electric-yellow"></span>USB Integrated Outlets</li>
+</ul>
+<button class="px-6 py-3 bg-secondary-container text-on-secondary-container font-label-md hover:bg-electric-yellow transition-colors inline-flex items-center gap-2">
+                                SHOP NOW <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="flex-1 flex items-center justify-center relative">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img alt="Modern chrome double wall socket with USB ports" class="w-full max-w-[300px] object-contain transition-transform duration-500 group-hover:scale-105" data-alt="A premium close-up studio shot of a high-end brushed chrome double electrical socket featuring integrated USB charging ports. The lighting is crisp and professional, highlighting the metallic texture and sharp edges. The composition is clean and minimalist, set against a neutral light gray background, embodying a corporate modern and technologically advanced aesthetic." src="https://lh3.googleusercontent.com/aida/AP1WRLt3l8RqIw0vhef2aA2PAuSEg4BvXVXd-S5FcRrMX-0DKnKowMfDwryfUGZiRRtLT8cb6Jpsmk-0AjOTlteKf6-LDz5nUeq8P3bUkuzFuBJbWUrbriAlMn-82GF3xws1rmIrnzpRDz3CXirhFm4q98qYSY--8-ew5hzUcZ1L2WW52ScUY-VmOkGyAZklyn7Dm9nvYOuv7NRgm2d37TnV4Ykjm9OxrL2WIficIGPt2V3qt9rMfjuP9TT4x7E">
+</div>
+</div>
+</div>
+<!-- Security -->
+<div class="bento-item-medium group bg-ink-black text-white p-8 card-shadow overflow-hidden relative">
+<div class="z-10 relative">
+<span class="text-label-sm font-label-sm text-electric-yellow/80 mb-2 block">PROTECTION SYSTEMS</span>
+<h2 class="text-headline-md font-headline-md mb-4">Security &amp; CCTV</h2>
+<ul class="text-outline-variant space-y-2 mb-8 font-body-md">
+<li>IP Cameras &amp; NVRs</li>
+<li>Intruder Alarms</li>
+<li>Access Control</li>
+</ul>
+<button class="px-5 py-2 border border-electric-yellow text-electric-yellow font-label-md hover:bg-electric-yellow hover:text-ink-black transition-all">
+                            VIEW RANGE
+                        </button>
+</div>
+<div class="absolute -right-8 -bottom-8 opacity-40 group-hover:opacity-60 transition-opacity">
+<img alt="Professional CCTV camera and monitor set" class="w-48 object-contain" data-alt="A professional security camera system featuring a high-definition dome camera and a multi-channel monitoring screen displaying various surveillance angles. The hardware is sleek and black, reflecting a high-contrast industrial style. The image is captured with professional studio lighting on a reflective white surface, suggesting advanced security technology and reliability." src="https://lh3.googleusercontent.com/aida/AP1WRLu7e4YbDefsWQvOuX3i2ctF_p7pPfVSP2X042Y4T0sF1Nnjm4IdkJlwvS3SwcaENcqSuWfQSV9tw2lxkLETe2-o2lQFnb36B1iYhBJ7xKEAYPhL6Bv3Gmxltj1HONcLB5XF6XWGsr20IWNmgeNG7OviMRodbGJuzQk0wv7OOziWiOMCbd1lYlo4QLzkKJ3W1mA5pjQfVPulUXbIEGusMNLnuKch9dyfOBMh2HejfoHwx8x9zHpBDs8YT2M">
+</div>
+</div>
+<!-- Heating -->
+<div class="bento-item-medium bg-surface-container-low p-8 card-shadow group">
+<div class="flex flex-col h-full">
+<div class="mb-6">
+<span class="text-label-sm font-label-sm text-primary/60 mb-2 block">CLIMATE CONTROL</span>
+<h2 class="text-headline-md font-headline-md text-primary">Heating</h2>
+<p class="text-body-md text-on-surface-variant mt-2">Smart thermostats, radiators and underfloor systems.</p>
+</div>
+<div class="mt-auto">
+<img alt="Modern electric heater unit" class="w-full h-32 object-contain mb-6 transition-transform group-hover:scale-110" data-alt="A modern, wall-mounted electric panel heater with a minimalist white finish and digital control interface. The image emphasizes energy efficiency and clean engineering. The lighting is soft and even, highlighting the sleek profile of the heating unit against a bright, professional background in a high-key light mode style." src="https://lh3.googleusercontent.com/aida/AP1WRLvDcW4MGilVVJL3p357z6Re71zSoX3xPwlEVTsK6lJAm7r433XBYi0J3aIRCe0C-XLdMqPEebdAH4PlSqrlVmHRHsl7Ef1xMNS-sIwF4OuviqgxKsu3rESAI255U9iSEuKq3QHslzevYhKFonLpBlUhXogRekOTVnl8qlz9nyD1gKZWm18mAdWieOK5lwHlfoTVn-b9AKbsr_RJ--57zs46bV2KKV-4d0FxtjmMqvLFFMmwWsJmLeGrKWQ">
+<button class="w-full py-3 bg-primary text-on-primary font-label-md hover:bg-primary-container transition-colors">
+                                EXPLORE HEATING
+                            </button>
+</div>
+</div>
+</div>
+<!-- Fire Protection -->
+<div class="bento-item-small group bg-white p-8 card-shadow border-l-4 border-power-red">
+<div class="flex gap-6 items-start">
+<div class="flex-1">
+<span class="text-label-sm font-label-sm text-power-red mb-2 block">SAFETY COMPLIANCE</span>
+<h2 class="text-headline-md font-headline-md text-primary mb-4">Fire Protection</h2>
+<p class="text-body-md text-on-surface-variant mb-6">Commercial grade smoke, heat, and CO detection kits for trade installers.</p>
+<button class="text-primary font-bold hover:underline flex items-center gap-1">
+                                Shop Fire Safety <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="w-1/3">
+<img alt="Fire alarm kit box" class="w-full object-contain" data-alt="A comprehensive commercial fire alarm kit packaged in a professional white and red box. The kit includes multiple smoke detectors, a control panel, and emergency sounders. The image is rendered in a sharp, high-contrast corporate style, focusing on the essential safety equipment needed for industrial and commercial fire protection systems." src="https://lh3.googleusercontent.com/aida/AP1WRLsujSfH2GFIN_JU17kkh9b0ezRpA8bNoAFGYlD9V6LGfq009egUmJ-g2jDCoRgyMUvruSG6wOHJZzZUjofqrC0wkUp3aiX6PwK-sncRzNOQrEJBGBuu8flcspo2KolAOFpCBrJ6joVkTBFfnnyz7dlZVz8HLOFrMZhLiqnow39NLZJWBhRiclveXH97dvQ4q8bP_VNniqNfcnlaiIN2WxVCcl_hkDwuXbDnZKHFGBjEicsL5_8RbTW6VhQ">
+</div>
+</div>
+</div>
+<!-- Cable Management -->
+<div class="bento-item-small bg-primary p-8 card-shadow text-white relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">cable</span>
+</div>
+<div class="relative z-10">
+<span class="text-label-sm font-label-sm text-secondary-fixed mb-2 block">INFRASTRUCTURE</span>
+<h2 class="text-headline-md font-headline-md mb-4">Cable Management</h2>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="text-body-md text-outline-variant">• PVC Trunking</div>
+<div class="text-body-md text-outline-variant">• Steel Conduit</div>
+<div class="text-body-md text-outline-variant">• Tray Systems</div>
+<div class="text-body-md text-outline-variant">• Floor Boxes</div>
+</div>
+<img alt="Cable management accessories" class="h-16 object-contain mb-4 filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity" data-alt="A collection of technical cable management components, including conduits and fittings, displayed in a structured layout. The visual style is highly technical and precise, utilizing deep navy and white tones to emphasize industrial utility and engineering excellence in electrical infrastructure." src="https://lh3.googleusercontent.com/aida/AP1WRLuJE5Oa0qUYELoil4YcF4umORv04FCRlgIT-xljP_QblksgRoChokufy2cYHgvc5bsLwKqcmGyN0Vn_VxvIPQ-58yX5T30nJuJjY4M8-3fg2kdyFYXhv8ssvOGV0BZYtT0b5P9f1qYJRZIc2EwkWVEmqfTNI9kL66OqTmEwEJPiuF6kv1RH5A4kJ2VJ9oigbcDFIgGxNjmeOyJmXFbs4PBssX9jUM42v_Iq7Ch2It3YjdCSoALCTVtFkw">
+<button class="px-6 py-2 bg-white text-primary font-label-md hover:bg-cool-gray transition-colors">
+                            BROWSE FITTINGS
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specs / Secondary Categories -->
+<section class="mt-20">
+<h3 class="text-headline-md font-headline-md text-primary mb-8 flex items-center gap-3">
+<span class="w-8 h-1 bg-electric-yellow"></span>
+                Specialist Categories
+            </h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="p-6 border border-cool-gray/50 hover:border-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary mb-4 group-hover:scale-110 transition-transform">lightbulb</span>
+<h4 class="text-body-lg font-bold text-primary mb-2">Lighting Solutions</h4>
+<p class="text-label-sm text-on-surface-variant uppercase">LED, Outdoor, Emergency</p>
+</div>
+<div class="p-6 border border-cool-gray/50 hover:border-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary mb-4 group-hover:scale-110 transition-transform">plumbing</span>
+<h4 class="text-body-lg font-bold text-primary mb-2">Industrial Plumbing</h4>
+<p class="text-label-sm text-on-surface-variant uppercase">Pumps, Valves, Showers</p>
+</div>
+<div class="p-6 border border-cool-gray/50 hover:border-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary mb-4 group-hover:scale-110 transition-transform">electrical_services</span>
+<h4 class="text-body-lg font-bold text-primary mb-2">Cable &amp; Wiring</h4>
+<p class="text-label-sm text-on-surface-variant uppercase">Twin &amp; Earth, Armoured</p>
+</div>
+<div class="p-6 border border-cool-gray/50 hover:border-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary mb-4 group-hover:scale-110 transition-transform">construction</span>
+<h4 class="text-body-lg font-bold text-primary mb-2">Tools &amp; Fixings</h4>
+<p class="text-label-sm text-on-surface-variant uppercase">Power Tools, Screws, Bolts</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary w-full border-t-4 border-secondary-container mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-16 px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-lg font-headline-lg text-secondary-fixed mb-6">Robinson &amp; Rushe</div>
+<p class="text-body-md text-on-primary/70 pr-8">Providing the highest quality electrical components to trade professionals in Birmingham and across the UK since 1994.</p>
+</div>
+<div>
+<h5 class="text-label-md font-bold mb-6 uppercase tracking-wider text-secondary-fixed">Quick Links</h5>
+<ul class="space-y-3">
+<li class="hover:translate-x-1 transition-transform duration-200 cursor-pointer text-on-primary/80 hover:text-secondary-fixed">About Us</li>
+<li class="hover:translate-x-1 transition-transform duration-200 cursor-pointer text-on-primary/80 hover:text-secondary-fixed">Trade Accounts</li>
+<li class="hover:translate-x-1 transition-transform duration-200 cursor-pointer text-on-primary/80 hover:text-secondary-fixed">Technical Support</li>
+<li class="hover:translate-x-1 transition-transform duration-200 cursor-pointer text-on-primary/80 hover:text-secondary-fixed">Branch Finder</li>
+</ul>
+</div>
+<div>
+<h5 class="text-label-md font-bold mb-6 uppercase tracking-wider text-secondary-fixed">Resources</h5>
+<ul class="space-y-3">
+<li class="hover:translate-x-1 transition-transform duration-200 cursor-pointer text-on-primary/80 hover:text-secondary-fixed">Privacy Policy</li>
+<li class="hover:translate-x-1 transition-transform duration-200 cursor-pointer text-on-primary/80 hover:text-secondary-fixed">Terms of Sale</li>
+<li class="hover:translate-x-1 transition-transform duration-200 cursor-pointer text-on-primary/80 hover:text-secondary-fixed">Delivery Info</li>
+<li class="hover:translate-x-1 transition-transform duration-200 cursor-pointer text-on-primary/80 hover:text-secondary-fixed">Returns Portal</li>
+</ul>
+</div>
+<div>
+<h5 class="text-label-md font-bold mb-6 uppercase tracking-wider text-secondary-fixed">Connect</h5>
+<div class="flex gap-4 mb-6">
+<span class="material-symbols-outlined p-2 border border-on-primary/20 rounded-full hover:bg-secondary-fixed hover:text-primary transition-all cursor-pointer">face_nod</span>
+<span class="material-symbols-outlined p-2 border border-on-primary/20 rounded-full hover:bg-secondary-fixed hover:text-primary transition-all cursor-pointer">alternate_email</span>
+<span class="material-symbols-outlined p-2 border border-on-primary/20 rounded-full hover:bg-secondary-fixed hover:text-primary transition-all cursor-pointer">location_on</span>
+</div>
+<div class="text-label-sm font-label-sm text-on-primary/60">
+                    © 2024 Robinson &amp; Rushe Electrical Wholesalers. Birmingham's Premier Supplier.
+                </div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for the header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.add('shadow-sm');
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

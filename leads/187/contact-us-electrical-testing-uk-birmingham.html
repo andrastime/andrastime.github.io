@@ -1,0 +1,402 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact Us | Electrical Testing UK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "deep-charcoal": "#192730",
+                  "industrial-gray": "#F4F4F4",
+                  "tertiary-fixed-dim": "#b0cae0",
+                  "on-error": "#690005",
+                  "inverse-on-surface": "#2f3131",
+                  "on-surface-variant": "#e8bcb8",
+                  "surface-tint": "#ffb4ac",
+                  "on-primary": "#690006",
+                  "primary-container": "#ff544c",
+                  "surface": "#121414",
+                  "inverse-surface": "#e2e2e2",
+                  "error-container": "#93000a",
+                  "on-secondary-container": "#a8b7c3",
+                  "surface-container-highest": "#333535",
+                  "secondary-fixed-dim": "#bac8d4",
+                  "error": "#ffb4ab",
+                  "background": "#121414",
+                  "outline-variant": "#5e3f3c",
+                  "on-primary-container": "#5c0005",
+                  "surface-container-low": "#1a1c1c",
+                  "primary": "#ffb4ac",
+                  "surface-container-high": "#282a2b",
+                  "surface-dim": "#121414",
+                  "safety-red": "#EC1F26",
+                  "on-tertiary-container": "#112c3e",
+                  "on-secondary-fixed": "#0f1d26",
+                  "tertiary-fixed": "#cbe6fd",
+                  "surface-variant": "#333535",
+                  "secondary": "#bac8d4",
+                  "primary-fixed-dim": "#ffb4ac",
+                  "on-primary-fixed": "#410002",
+                  "on-secondary-fixed-variant": "#3a4952",
+                  "surface-container-lowest": "#0c0f0f",
+                  "surface-bright": "#37393a",
+                  "outline": "#ae8883",
+                  "surface-container": "#1e2020",
+                  "on-tertiary": "#193345",
+                  "on-error-container": "#ffdad6",
+                  "on-surface": "#e2e2e2",
+                  "primary-fixed": "#ffdad6",
+                  "secondary-container": "#3a4952",
+                  "tertiary-container": "#7a94a9",
+                  "on-primary-fixed-variant": "#93000d",
+                  "on-background": "#e2e2e2",
+                  "inverse-primary": "#c00015",
+                  "on-tertiary-fixed": "#011e2f",
+                  "on-tertiary-fixed-variant": "#30495c",
+                  "secondary-fixed": "#d5e4f1",
+                  "on-secondary": "#24323b",
+                  "steel-blue": "#1A3446",
+                  "tertiary": "#b0cae0"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.125rem",
+                  "lg": "0.25rem",
+                  "xl": "0.5rem",
+                  "full": "0.75rem"
+          },
+          "spacing": {
+                  "margin-mobile": "1rem",
+                  "stack-sm": "0.5rem",
+                  "stack-lg": "4rem",
+                  "container-max": "1280px",
+                  "gutter": "1.5rem",
+                  "stack-md": "1.5rem"
+          },
+          "fontFamily": {
+                  "label-bold": ["Inter"],
+                  "body-lg": ["Inter"],
+                  "headline-lg-mobile": ["Montserrat"],
+                  "display-lg": ["Montserrat"],
+                  "headline-lg": ["Montserrat"],
+                  "body-md": ["Inter"],
+                  "headline-md": ["Montserrat"],
+                  "caption": ["Inter"]
+          },
+          "fontSize": {
+                  "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                  "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                  "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                  "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                  "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                  "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                  "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                  "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-card {
+      background: rgba(26, 52, 70, 0.4);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(244, 244, 244, 0.1);
+      border-left: 1px solid rgba(244, 244, 244, 0.05);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(236, 31, 38, 0.2);
+    }
+    body {
+      background-color: #121414;
+    }
+  </style>
+</head>
+<body class="text-on-background selection:bg-safety-red selection:text-white">
+<!-- TopNavBar Navigation Shell -->
+<header class="docked full-width top-0 sticky z-50 bg-steel-blue/50 backdrop-blur-xl border-b border-industrial-gray/10 transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+<div class="font-display-lg text-headline-md uppercase tracking-tighter text-safety-red">
+        Electrical Testing UK
+      </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-industrial-gray font-medium hover:text-safety-red transition-colors duration-200" href="index.html">Home</a>
+<a class="text-industrial-gray font-medium hover:text-safety-red transition-colors duration-200" href="services-electrical-testing-uk.html">Services</a>
+<a class="text-industrial-gray font-medium hover:text-safety-red transition-colors duration-200" href="birmingham-branch-electrical-testing-uk.html">Birmingham</a>
+<a class="text-industrial-gray font-medium hover:text-safety-red transition-colors duration-200" href="index.html">About Us</a>
+<a class="text-safety-red font-bold border-b-2 border-safety-red pb-1" href="contact-us-electrical-testing-uk-birmingham.html">Contact</a>
+</nav>
+<button class="bg-safety-red text-white font-headline-md text-headline-md px-6 py-2 rounded-lg hover:brightness-110 transition-all font-bold">
+        Get Quote
+      </button>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section with Animation -->
+<section class="relative w-full h-[60vh] flex items-center overflow-hidden">
+
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="relative z-10 w-full px-gutter max-w-container-max mx-auto">
+<div class="max-w-3xl">
+<span class="text-safety-red font-label-bold text-label-bold uppercase tracking-widest block mb-4">Precision Engineering &amp; Safety</span>
+<h1 class="font-display-lg text-headline-lg md:text-display-lg text-industrial-gray mb-6 leading-tight">
+            Connect with Our <span class="text-safety-red">Technical Experts</span>
+</h1>
+<p class="font-body-lg text-body-lg text-industrial-gray/80 max-w-xl">
+            Whether you require a comprehensive EICR, solar installation, or hazardous area testing, our regional teams are ready to ensure your compliance and safety.
+          </p>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<section class="px-gutter max-w-container-max mx-auto -mt-32 pb-stack-lg relative z-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Inquiry Form -->
+<div class="lg:col-span-7 glass-card p-8 md:p-12 rounded-xl shadow-2xl border border-industrial-gray/5">
+<h2 class="font-headline-lg text-headline-lg text-industrial-gray mb-8">Technical Inquiry</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-industrial-gray/60 uppercase">Full Name</label>
+<input class="w-full bg-deep-charcoal border border-industrial-gray/20 text-industrial-gray px-4 py-3 rounded-lg focus:border-safety-red transition-colors" placeholder="John Doe" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-industrial-gray/60 uppercase">Business Email</label>
+<input class="w-full bg-deep-charcoal border border-industrial-gray/20 text-industrial-gray px-4 py-3 rounded-lg focus:border-safety-red transition-colors" placeholder="john@company.com" type="email">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-industrial-gray/60 uppercase">Service Category</label>
+<select class="w-auto min-w-full bg-deep-charcoal border border-industrial-gray/20 text-industrial-gray px-4 py-3 rounded-lg focus:border-safety-red transition-colors appearance-none">
+<option>Electrical Testing (EICR)</option>
+<option>Solar PV &amp; Battery</option>
+<option>EV Charging Infrastructure</option>
+<option>Hazardous Area Services</option>
+<option>Fire &amp; Safety Systems</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-industrial-gray/60 uppercase">Phone Number</label>
+<input class="w-full bg-deep-charcoal border border-industrial-gray/20 text-industrial-gray px-4 py-3 rounded-lg focus:border-safety-red transition-colors" placeholder="+44 1234 567890" type="tel">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-industrial-gray/60 uppercase">Project Details</label>
+<textarea class="w-full bg-deep-charcoal border border-industrial-gray/20 text-industrial-gray px-4 py-3 rounded-lg focus:border-safety-red transition-colors" placeholder="Briefly describe your requirements..." rows="4"></textarea>
+</div>
+<button class="w-full bg-safety-red text-white font-headline-md text-headline-md py-4 rounded-lg font-bold hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-3" type="submit">
+<span>Submit Request</span>
+<span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+<!-- Regional Offices List -->
+<div class="lg:col-span-5 space-y-6">
+<div class="glass-card p-8 rounded-xl border border-industrial-gray/5">
+<h3 class="font-headline-md text-headline-md text-safety-red mb-6 uppercase tracking-tighter">Regional Offices</h3>
+<div class="space-y-8">
+<!-- Office Entry -->
+<div class="group cursor-pointer">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-safety-red/10 rounded-lg flex items-center justify-center text-safety-red group-hover:bg-safety-red group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-industrial-gray mb-1">Birmingham Central</h4>
+<p class="font-caption text-industrial-gray/50 mb-2">Lewis Building, 35 Bull Street, B4 6AF</p>
+<a class="font-label-bold text-label-bold text-safety-red hover:underline" href="tel:01205616169">01205 616169</a>
+</div>
+</div>
+</div>
+<!-- Office Entry -->
+<div class="group cursor-pointer">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-steel-blue/40 rounded-lg flex items-center justify-center text-tertiary group-hover:bg-safety-red group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-industrial-gray mb-1">Boston (Head Office)</h4>
+<p class="font-caption text-industrial-gray/50 mb-2">Unit 2 Avalon Business Park, PE20 1QR</p>
+<a class="font-label-bold text-label-bold text-industrial-gray/60 hover:text-safety-red transition-colors" href="tel:01205616169">01205 616169</a>
+</div>
+</div>
+</div>
+<!-- Office Entry -->
+<div class="group cursor-pointer">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-steel-blue/40 rounded-lg flex items-center justify-center text-tertiary group-hover:bg-safety-red group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-industrial-gray mb-1">Cambridge Office</h4>
+<p class="font-caption text-industrial-gray/50 mb-2">Wellington House, East Road, CB1 1BH</p>
+<a class="font-label-bold text-label-bold text-industrial-gray/60 hover:text-safety-red transition-colors" href="tel:01223606036">01223 606036</a>
+</div>
+</div>
+</div>
+<!-- Office Entry -->
+<div class="group cursor-pointer">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-steel-blue/40 rounded-lg flex items-center justify-center text-tertiary group-hover:bg-safety-red group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-industrial-gray mb-1">Nottingham Hub</h4>
+<p class="font-caption text-industrial-gray/50 mb-2">15 Wheeler Gate, NG1 2NA</p>
+<a class="font-label-bold text-label-bold text-industrial-gray/60 hover:text-safety-red transition-colors" href="mailto:sales@electricaltestinguk.co.uk">Email Support</a>
+</div>
+</div>
+</div>
+<!-- Office Entry -->
+<div class="group cursor-pointer">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-steel-blue/40 rounded-lg flex items-center justify-center text-tertiary group-hover:bg-safety-red group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-industrial-gray mb-1">Peterborough</h4>
+<p class="font-caption text-industrial-gray/50 mb-2">Stuart House, PE1 5DD</p>
+<p class="font-label-bold text-label-bold text-industrial-gray/40 italic">Regional Distribution Center</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="w-full h-[600px] bg-deep-charcoal relative overflow-hidden">
+<div class="absolute inset-0 bg-background/20 z-10 pointer-events-none shadow-[inset_0_0_100px_rgba(0,0,0,0.5)]"></div>
+<div class="w-full h-full grayscale brightness-[0.4] contrast-[1.2]">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast satellite view map of downtown Birmingham UK at night, focusing on the Bull Street area. The map is stylized with glowing red lines representing major thoroughfares and industrial infrastructure. The aesthetic is deep charcoal and steel blue with bright safety red accents for landmarks. Lighting is dramatic, highlighting the grid-like precision of the city planning in a futuristic industrial tech style." data-location="Birmingham, UK" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCbwKt9UtBbPMZnaW_DTxmNQ9NeTFu5IrMqniSF2sSBLm7fMajfO_cH_kmRjNSXoOuPkOfLHaNarG_2STqfGvmtp5aoeN-gTbsZuiGqHKe9AqAP9s3SDz7bFx8rfQZ3gdksYiKoIEq6rgCkYUfQO9UOaWtprBPxyC9WvB4KfAZ1DOrrlnMSQJPshhlAZ2TiJchdZJbqbUcdzQm9st5rO_B8Yckit9GzLPulw7unBWqtWK3_ptlCRiB">
+</div>
+<!-- Map Overlay Card -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-full max-w-sm">
+<div class="glass-card p-6 border border-safety-red/30 relative">
+<div class="absolute -top-3 -left-3">
+<span class="relative flex h-6 w-6">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-safety-red opacity-75"></span>
+<span class="relative inline-flex rounded-full h-6 w-6 bg-safety-red"></span>
+</span>
+</div>
+<h4 class="font-headline-md text-industrial-gray mb-2">Birmingham Office</h4>
+<p class="font-body-md text-industrial-gray/70 mb-4">
+            Lewis Building, 35 Bull Street, Birmingham, B4 6AF
+          </p>
+<button class="w-full bg-white/10 border border-white/20 text-white font-label-bold py-3 rounded-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 18px;">directions</span>
+            Get Directions
+          </button>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-stack-lg bg-deep-charcoal border-t border-industrial-gray/5">
+<div class="px-gutter max-w-container-max mx-auto text-center">
+<h2 class="font-display-lg text-headline-lg text-industrial-gray mb-8">Need Urgent Assistance?</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8">
+<a class="flex items-center gap-4 group" href="tel:01205616169">
+<div class="w-16 h-16 rounded-full bg-safety-red flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div class="text-left">
+<p class="font-label-bold text-caption text-industrial-gray/50 uppercase">Call Main Line</p>
+<p class="font-headline-md text-headline-md text-industrial-gray">01205 616169</p>
+</div>
+</a>
+<div class="hidden md:block w-px h-12 bg-industrial-gray/10"></div>
+<a class="flex items-center gap-4 group" href="mailto:sales@electricaltestinguk.co.uk">
+<div class="w-16 h-16 rounded-full border-2 border-industrial-gray/20 flex items-center justify-center text-industrial-gray text-2xl group-hover:border-safety-red group-hover:text-safety-red transition-all">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div class="text-left">
+<p class="font-label-bold text-caption text-industrial-gray/50 uppercase">Email Sales</p>
+<p class="font-headline-md text-headline-md text-industrial-gray">sales@electricaltestinguk.co.uk</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Navigation Shell -->
+<footer class="full-width bg-deep-charcoal border-t border-industrial-gray/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-gutter py-stack-lg max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md text-safety-red">Electrical Testing UK</div>
+<p class="font-body-md text-industrial-gray/60">
+          Industrial compliance and electrical engineering specialists serving Birmingham and the East Midlands with precision and safety.
+        </p>
+</div>
+<div>
+<h5 class="text-white font-label-bold mb-6 uppercase tracking-wider">Quick Links</h5>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-industrial-gray/60 hover:text-industrial-gray hover:underline transition-opacity duration-200" href="index.html">About</a></li>
+<li><a class="text-industrial-gray/60 hover:text-industrial-gray hover:underline transition-opacity duration-200" href="services-electrical-testing-uk.html">Projects</a></li>
+<li><a class="text-industrial-gray/60 hover:text-industrial-gray hover:underline transition-opacity duration-200" href="services-electrical-testing-uk.html">EICR Calculator</a></li>
+<li><a class="text-industrial-gray/60 hover:text-industrial-gray hover:underline transition-opacity duration-200" href="index.html">Blog</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-label-bold mb-6 uppercase tracking-wider">Compliance</h5>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-industrial-gray/60 hover:text-industrial-gray hover:underline transition-opacity duration-200" href="#">Privacy Policy</a></li>
+<li><a class="text-industrial-gray/60 hover:text-industrial-gray hover:underline transition-opacity duration-200" href="services-electrical-testing-uk.html">Terms of Service</a></li>
+<li><a class="text-industrial-gray/60 hover:text-industrial-gray hover:underline transition-opacity duration-200" href="services-electrical-testing-uk.html">Safety Standards</a></li>
+<li><a class="text-industrial-gray/60 hover:text-industrial-gray hover:underline transition-opacity duration-200" href="index.html">Sitemap</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-label-bold mb-6 uppercase tracking-wider">Connect</h5>
+<div class="flex gap-4 mb-6">
+<a class="w-10 h-10 rounded bg-white/5 flex items-center justify-center hover:bg-safety-red transition-colors" href="index.html"><span class="material-symbols-outlined text-white">share</span></a>
+<a class="w-10 h-10 rounded bg-white/5 flex items-center justify-center hover:bg-safety-red transition-colors" href="index.html"><span class="material-symbols-outlined text-white">link</span></a>
+</div>
+<div class="text-industrial-gray/40 text-caption font-caption">
+          © 2024 Electrical Testing UK &amp; Installations Birmingham. All Rights Reserved.
+        </div>
+</div>
+</div>
+</footer>
+<script>
+    // Subtle parallax effect for map or background
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const map = document.querySelector('[data-location="Birmingham, UK"]');
+      if(map) {
+        map.style.transform = `translateY(${scrolled * 0.1}px)`;
+      }
+    });
+
+    // Form submission animation logic
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Sending...';
+      btn.disabled = true;
+      
+      setTimeout(() => {
+        btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Sent Successfully';
+        btn.classList.replace('bg-safety-red', 'bg-green-600');
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.classList.replace('bg-green-600', 'bg-safety-red');
+          btn.disabled = false;
+          form.reset();
+        }, 3000);
+      }, 1500);
+    });
+  </script>
+</body></html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Professional Services | DGC Electrical Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#0b1326",
+                        "secondary-container": "#00a572",
+                        "surface-bright": "#31394d",
+                        "error-container": "#93000a",
+                        "power-yellow": "#FBBF24",
+                        "on-tertiary": "#68000a",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "surface-container-low": "#131b2e",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-container-high": "#222a3d",
+                        "on-surface-variant": "#c3c6d7",
+                        "primary-container": "#2563eb",
+                        "error": "#ffb4ab",
+                        "outline": "#8d90a0",
+                        "on-error-container": "#ffdad6",
+                        "outline-variant": "#434655",
+                        "surface-variant": "#2d3449",
+                        "on-secondary-fixed": "#002113",
+                        "secondary": "#4edea3",
+                        "obsidian": "#020617",
+                        "primary": "#b4c5ff",
+                        "on-primary-container": "#eeefff",
+                        "on-secondary": "#003824",
+                        "tertiary-container": "#cf2c30",
+                        "surface": "#0b1326",
+                        "on-surface": "#dae2fd",
+                        "on-secondary-fixed-variant": "#005236",
+                        "secondary-fixed-dim": "#4edea3",
+                        "surface-container-lowest": "#060e20",
+                        "on-background": "#dae2fd",
+                        "tertiary": "#ffb3ad",
+                        "electric-blue": "#3B82F6",
+                        "inverse-surface": "#dae2fd",
+                        "on-tertiary-fixed": "#410004",
+                        "inverse-on-surface": "#283044",
+                        "surface-tint": "#b4c5ff",
+                        "on-primary-fixed": "#00174b",
+                        "surface-container-highest": "#2d3449",
+                        "primary-fixed": "#dbe1ff",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "on-error": "#690005",
+                        "surface-dim": "#0b1326",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "on-tertiary-container": "#ffecea",
+                        "inverse-primary": "#0053db",
+                        "live-red": "#F43F5E",
+                        "surface-container": "#171f33",
+                        "on-secondary-container": "#00311f",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-primary": "#002a78",
+                        "circuit-green": "#10B981"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap-lg": "120px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "section-gap-md": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-md": ["JetBrains Mono"],
+                        "label-sm": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .electric-glow:hover {
+            box-shadow: 0 0 40px -5px rgba(59, 130, 246, 0.4);
+        }
+        .circuit-line {
+            background: linear-gradient(90deg, transparent, #3B82F6, transparent);
+            height: 1px;
+            width: 100%;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hud-border {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-electric-blue selection:text-white overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-obsidian/80 backdrop-blur-xl border-b border-white/10 shadow-2xl">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-electric-blue text-3xl">bolt</span>
+<span class="font-headline-md text-headline-md font-extrabold tracking-tighter text-on-surface">DGC Electrical</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-dgc-electrical.html">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="project-gallery-dgc-electrical.html">Projects</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Reviews</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="dgc-electrical-home.html">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="dgc-electrical-home.html">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded font-label-md text-label-md hover:scale-95 transition-all duration-200 shadow-[0_0_20px_rgba(37,99,235,0.3)]">
+                Request Quote
+            </button>
+</div>
+</nav>
+<!-- Hero Section / Header -->
+<header class="relative pt-32 pb-20 overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block font-label-md text-label-md text-electric-blue mb-4 tracking-widest uppercase">Expert Solutions</span>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">Elite Electrical Services in <span class="text-electric-blue">Solihull</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                    Napit approved, fully insured, and dedicated to technical excellence. From high-end kitchen lighting to full commercial rewires, we power your world with precision.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-electric-blue text-white px-8 py-4 rounded-lg font-headline-md text-headline-md flex items-center gap-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-all" href="#quote">
+                        Enquire Now <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Decorative Background Element -->
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+
+</div>
+</header>
+<main>
+<!-- 1. Consumer Unit Upgrades -->
+<section class="py-section-gap-lg bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6">
+<div class="relative group">
+<div class="absolute -inset-4 bg-electric-blue/10 rounded-xl blur-2xl transition duration-1000 group-hover:duration-200 opacity-50 group-hover:opacity-100"></div>
+<img alt="A close-up photograph of a modern, sleek consumer unit installation on a clean wall. The wiring is exceptionally neat and organized, reflecting the professional standards of DGC Electrical. Subtle electrical blue lighting highlights the technical details and industrial aesthetic of the components." class="relative rounded-xl border border-white/10 w-full object-cover aspect-[4/3] shadow-2xl" src="https://lh3.googleusercontent.com/aida/AP1WRLuLW8dqkY82CeV5ENYVHELS7y0g7enoJztEDisFPqvJqJ0FlSXBme6wWW-6FzfGBuVPBIzkrWxXIL1L4IcgUS1tLql0NiwGOE0wGprtfzhi50QGryViJrtyQOiiR-uaO9g73YOk3pURcSmgpX9FTa_gdB2VKrgaMOVgn4mg4r9lElerHtAKZzcfZnjgGb0JvE38Icf12EZglsufC1eIS-QBj3RBYprHAmo3qXmgrWqN-FbZPM0JwkUra-4">
+</div>
+</div>
+<div class="md:col-span-6">
+<span class="font-label-md text-label-md text-circuit-green mb-2 block">Safety &amp; Compliance</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">Consumer Unit Upgrades</h2>
+<div class="space-y-4 text-on-surface-variant font-body-md text-body-md">
+<p>If your current fuse box is outdated or overloaded, it's time for a safety-first upgrade. We specialise in Solihull replacements that meet the latest UK regulations.</p>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-circuit-green mt-1">check_circle</span>
+<span>Advanced RCBO and Surge Protection for maximum fire safety.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-circuit-green mt-1">check_circle</span>
+<span>Improved load management for modern high-power appliances.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-circuit-green mt-1">check_circle</span>
+<span>Full testing and certification included with every install.</span>
+</li>
+</ul>
+</div>
+<button class="mt-8 border border-electric-blue text-electric-blue px-8 py-3 rounded hover:bg-electric-blue/10 transition-colors font-label-md text-label-md">Enquire Now</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Full & Partial Rewiring -->
+<section class="py-section-gap-lg border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center flex-row-reverse">
+<div class="md:col-span-6 md:order-2">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/10 rounded-xl blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<img alt="Technical shot of a residential rewiring project in progress. High-quality electrical cables are precisely routed through masonry channels in a renovated space. The lighting is crisp, highlighting the clean, expert execution of DGC Electrical's domestic work in a modern Solihull property." class="relative rounded-xl border border-white/10 w-full object-cover aspect-[4/3] shadow-2xl" src="https://lh3.googleusercontent.com/aida/AP1WRLvTi8EdDUpHeYcKvMM7nUoPTZRgmKGb3us7SGO2ymaEK3cRf_v0uwrSaNYFeSrsjtR-si_8bIpOBeaTZ5VKj_J9HUdg5aipbHFeMv8xWlefsqVyTgm3fTdAkOPTLrJoVdm3qNx2_s-1JHsM0aQkljeARWm7vyxoiZ-nfWNJecxDe6qauIYr12NqFZTBpon6KKUpZO6ujJZRMYNYc0WiWOwY_xVYNoi8OmJ8ssKYJaKjg6_9pFoQcOjxXg">
+</div>
+</div>
+<div class="md:col-span-6 md:order-1">
+<span class="font-label-md text-label-md text-electric-blue mb-2 block">Infrastructure Excellence</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">Full &amp; Partial Rewiring</h2>
+<div class="space-y-4 text-on-surface-variant font-body-md text-body-md">
+<p>Old or faulty wiring isn’t just inconvenient — it’s a severe hazard. Whether you’re renovating a Grade 2 listed manor or extending a modern home, we provide safe, reliable power.</p>
+<div class="grid grid-cols-2 gap-4 mt-6">
+<div class="bg-surface-container-high p-4 rounded border border-white/5">
+<h4 class="font-label-md text-label-md text-on-surface mb-2">Residential</h4>
+<p class="text-sm">Whole-house updates with minimal disruption to your lifestyle.</p>
+</div>
+<div class="bg-surface-container-high p-4 rounded border border-white/5">
+<h4 class="font-label-md text-label-md text-on-surface mb-2">Extension</h4>
+<p class="text-sm">Seamlessly integrate new circuits with your existing system.</p>
+</div>
+</div>
+</div>
+<button class="mt-8 bg-electric-blue text-white px-8 py-3 rounded-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all font-label-md text-label-md">Book a Consultation</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Lighting & Power - Bento Layout -->
+<section class="py-section-gap-lg bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<span class="font-label-md text-label-md text-electric-blue uppercase tracking-widest">Aesthetic Integration</span>
+<h2 class="font-headline-lg text-headline-lg mt-4">Lighting &amp; Power Installations</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 relative group overflow-hidden rounded-xl h-[400px]">
+<img alt="A wide, cinematic shot of a luxury kitchen featuring bespoke lighting designed and installed by DGC Electrical. The room glows with warm LED strip lighting under cabinets and elegant pendant lights over a central island, creating an atmosphere of sophisticated modern comfort and technological precision." class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLtcjYpY6mSS5HN1cP214_ZxJl4CyIUc3cbaNopWg-oOAlE5BmY7Ax2EvcI8d3HwbV_H4eFLPD0UxfKVIXQrwLRe6kqC2OmLr9g4YFvDtMLYChE74NezAD3fROL3sz7QeGXUwdjI_TEmhEswsiJFYkE-TTAwlcAJUI3xRbV50-0sxN8DWlMZX9A8r75l8ciOXkaOdFooC_5YZw0Ylj9_zu44hajXzoGmVfYCoDou1RxsY5YiwOAdPBVfkeY">
+<div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent p-8 flex flex-col justify-end">
+<h3 class="font-headline-md text-headline-md text-white">Smart Kitchen Lighting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Bespoke LED upgrades and mood lighting designed for premium living spaces.</p>
+</div>
+</div>
+<div class="glass-panel p-8 flex flex-col justify-between group">
+<span class="material-symbols-outlined text-electric-blue text-4xl mb-4 group-hover:scale-110 transition-transform">ev_station</span>
+<div>
+<h3 class="font-headline-md text-headline-md mb-2">EV Charging</h3>
+<p class="text-on-surface-variant mb-6">Expert installation of home and commercial electric vehicle chargers.</p>
+<a class="text-electric-blue font-label-md text-label-md flex items-center gap-2 group-hover:translate-x-1 transition-transform" href="project-gallery-dgc-electrical.html">Explore Chargers <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="glass-panel p-8 flex flex-col justify-between group">
+<span class="material-symbols-outlined text-circuit-green text-4xl mb-4 group-hover:scale-110 transition-transform">power</span>
+<div>
+<h3 class="font-headline-md text-headline-md mb-2">Smart Sockets</h3>
+<p class="text-on-surface-variant mb-6">USB socket upgrades and dedicated outdoor power solutions.</p>
+<a class="text-electric-blue font-label-md text-label-md flex items-center gap-2 group-hover:translate-x-1 transition-transform" href="our-services-dgc-electrical.html">View Options <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="md:col-span-2 glass-panel p-8 flex items-center gap-8 group">
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md mb-2">Security Lighting</h3>
+<p class="text-on-surface-variant">Intelligent dusk-to-dawn sensors and robust floodlight systems for peace of mind.</p>
+<button class="mt-4 border border-outline-variant text-on-surface px-6 py-2 rounded font-label-sm text-label-sm hover:bg-white/5">Request Quote</button>
+</div>
+<div class="hidden md:block w-32 h-32 rounded-full border border-electric-blue/30 flex items-center justify-center bg-electric-blue/5">
+<span class="material-symbols-outlined text-electric-blue text-5xl">shield</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. EICR Reports -->
+<section class="py-section-gap-lg overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="bg-surface-container-high rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl border border-white/5">
+<div class="p-12 md:w-1/2 flex flex-col justify-center">
+<span class="font-label-md text-label-md text-power-yellow mb-4 uppercase tracking-[0.2em]">Mandatory Compliance</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">EICR Safety Inspections</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                            Official safety checks for homeowners, landlords, and businesses. We identify hidden faults before they become dangerous hazards.
+                        </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-obsidian/30 p-4 rounded border border-white/5">
+<span class="font-label-md text-label-md text-electric-blue">01</span>
+<span class="text-on-surface">Legal 5-year landlord requirements</span>
+</div>
+<div class="flex items-center gap-4 bg-obsidian/30 p-4 rounded border border-white/5">
+<span class="font-label-md text-label-md text-electric-blue">02</span>
+<span class="text-on-surface">Pre-purchase property inspections</span>
+</div>
+</div>
+<button class="mt-10 bg-primary-container text-white px-10 py-4 rounded-lg font-headline-md text-headline-md hover:bg-primary-container/90 transition-all w-fit">Enquire Now</button>
+</div>
+<div class="md:w-1/2 relative min-h-[400px]">
+<!-- Visual placeholder for EICR/Technical shot -->
+<img alt="A professional electrician performing an EICR inspection on a complex industrial control panel. He is using high-precision testing equipment with a focused expression. The environment is clean and professional, with cool-toned lighting that emphasizes technical authority and electrical safety." class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtcjYpY6mSS5HN1cP214_ZxJl4CyIUc3cbaNopWg-oOAlE5BmY7Ax2EvcI8d3HwbV_H4eFLPD0UxfKVIXQrwLRe6kqC2OmLr9g4YFvDtMLYChE74NezAD3fROL3sz7QeGXUwdjI_TEmhEswsiJFYkE-TTAwlcAJUI3xRbV50-0sxN8DWlMZX9A8r75l8ciOXkaOdFooC_5YZw0Ylj9_zu44hajXzoGmVfYCoDou1RxsY5YiwOAdPBVfkeY">
+<div class="absolute inset-0 bg-electric-blue/10 mix-blend-overlay"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Commercial & Fault Finding -->
+<section class="py-section-gap-lg bg-obsidian relative">
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Commercial Section -->
+<div class="p-10 rounded-2xl bg-surface-container-low border border-white/5 flex flex-col justify-between group hover:border-electric-blue/30 transition-colors">
+<div>
+<span class="material-symbols-outlined text-electric-blue text-5xl mb-6">business</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Commercial Services</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8">
+                                From retail fit-outs to industrial workshop maintenance, we provide flexible, expert support for businesses across the West Midlands.
+                            </p>
+</div>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-electric-blue"></span> Emergency Lighting Systems</li>
+<li class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-electric-blue"></span> Three Phase Power Supplies</li>
+<li class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-electric-blue"></span> Planned Maintenance</li>
+</ul>
+<button class="w-full py-4 border border-outline-variant rounded font-label-md text-label-md hover:border-electric-blue transition-colors uppercase tracking-widest">Enquire Now</button>
+</div>
+<!-- Fault Finding Section -->
+<div class="p-10 rounded-2xl bg-surface-container-low border border-white/5 flex flex-col justify-between group hover:border-live-red/30 transition-colors">
+<div>
+<span class="material-symbols-outlined text-live-red text-5xl mb-6">diagnosis</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Fault Finding &amp; Repair</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8">
+                                Flickering lights? Tripping RCDs? We use precision diagnostic equipment to trace faults and restore safety instantly.
+                            </p>
+</div>
+<div class="bg-live-red/5 p-6 rounded-lg mb-8 border border-live-red/10">
+<h4 class="font-label-md text-label-md text-live-red mb-2 uppercase">Urgent Callouts</h4>
+<p class="text-sm text-on-surface-variant">Immediate expert response for critical electrical failures in Solihull.</p>
+</div>
+<button class="w-full py-4 border border-outline-variant rounded font-label-md text-label-md hover:border-live-red transition-colors uppercase tracking-widest">Request Emergency Repair</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Highlight -->
+<section class="py-section-gap-lg">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-power-yellow text-4xl mb-6">grade</span>
+<blockquote class="font-headline-md text-headline-md italic text-on-surface mb-8 leading-relaxed">
+                        "A thorough survey revealed the appalling state of the existing wiring... Daniel and Max arrived punctually, worked through with meticulous care, and recommended up-to-date technological solutions. We have no hesitation in recommending DGC Electrical."
+                    </blockquote>
+<cite class="font-label-md text-label-md not-italic text-electric-blue">Stephen Oliver-Jones KC — Grade 2 Manor House Rewire</cite>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-obsidian w-full py-section-gap-md border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max mx-auto">
+<div class="md:col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-electric-blue text-2xl">bolt</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface uppercase tracking-tighter">DGC Electrical</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-6">
+                    Solihull’s premier electrical contractor. Delivering high-precision solutions for domestic, commercial, and industrial clients since 2019.
+                </p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-electric-blue" href="project-gallery-dgc-electrical.html"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-on-surface-variant hover:text-electric-blue" href="project-gallery-dgc-electrical.html"><span class="material-symbols-outlined">camera</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-6 uppercase tracking-widest">Quick Links</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-electric-blue transition-colors" href="our-services-dgc-electrical.html">Emergency Callouts</a></li>
+<li><a class="hover:text-electric-blue transition-colors" href="our-services-dgc-electrical.html">EICR Inspection</a></li>
+<li><a class="hover:text-electric-blue transition-colors" href="our-services-dgc-electrical.html">EV Charging</a></li>
+<li><a class="hover:text-electric-blue transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-6 uppercase tracking-widest">Contact Info</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-blue text-sm">call</span> 07581 430293</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-blue text-sm">mail</span> info@dgc-electrical.co.uk</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-blue text-sm">schedule</span> 08:00 - 18:00 Mon-Fri</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-white/5 flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 DGC Electrical Solutions Limited. All rights reserved.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">NAPIT Approved Electrician</span>
+</div>
+</footer>
+<script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple reveal animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

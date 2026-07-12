@@ -1,0 +1,428 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Get Your Free Quote Today | The Electrical Folks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-border-red {
+            border: 1px solid rgba(227, 30, 36, 0.5);
+            box-shadow: 0 0 15px rgba(227, 30, 36, 0.2);
+        }
+        .pulse-red {
+            animation: pulse-red 2s infinite;
+        }
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(227, 30, 36, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(227, 30, 36, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(227, 30, 36, 0); }
+        }
+        .form-step-active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        input:focus {
+            box-shadow: 0 0 10px rgba(227, 30, 36, 0.3);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-surface-variant": "#e7bdb8",
+                "primary": "#ffb4ab",
+                "secondary": "#b6c4ff",
+                "on-tertiary-fixed-variant": "#3f465c",
+                "background": "#051424",
+                "secondary-container": "#0356ff",
+                "on-primary-fixed": "#410002",
+                "deep-navy": "#003366",
+                "on-error": "#690005",
+                "on-primary": "#690006",
+                "on-error-container": "#ffdad6",
+                "surface-container-low": "#0d1c2d",
+                "surface-dim": "#051424",
+                "surface-variant": "#273647",
+                "outline-variant": "#5d3f3c",
+                "surface-container-highest": "#273647",
+                "on-background": "#d4e4fa",
+                "surface": "#051424",
+                "inverse-primary": "#c00014",
+                "on-surface": "#d4e4fa",
+                "surface-tint": "#ffb4ab",
+                "tertiary": "#bec6e0",
+                "electric-red": "#E31E24",
+                "surface-container-high": "#1c2b3c",
+                "primary-fixed": "#ffdad6",
+                "secondary-fixed": "#dce1ff",
+                "on-secondary": "#002780",
+                "on-secondary-fixed-variant": "#0039b3",
+                "surface-bright": "#2c3a4c",
+                "on-tertiary-fixed": "#131b2e",
+                "neon-glow-blue": "rgba(0, 85, 255, 0.4)",
+                "tertiary-container": "#6c738a",
+                "error": "#ffb4ab",
+                "on-secondary-fixed": "#001551",
+                "outline": "#ae8883",
+                "on-tertiary": "#283044",
+                "surface-container": "#122131",
+                "inverse-surface": "#d4e4fa",
+                "surface-container-lowest": "#010f1f",
+                "tertiary-fixed-dim": "#bec6e0",
+                "primary-container": "#e31e24",
+                "charcoal-surface": "#1E293B",
+                "inverse-on-surface": "#233143",
+                "on-tertiary-container": "#fcfaff",
+                "neon-glow-red": "rgba(227, 30, 36, 0.4)",
+                "error-container": "#93000a",
+                "on-primary-container": "#fffafa",
+                "primary-fixed-dim": "#ffb4ab",
+                "secondary-fixed-dim": "#b6c4ff",
+                "midnight-bg": "#020617",
+                "tertiary-fixed": "#dae2fd",
+                "on-primary-fixed-variant": "#93000d",
+                "on-secondary-container": "#e4e7ff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "container-max": "1280px",
+                "component-gap": "16px",
+                "section-gap": "80px",
+                "margin-mobile": "16px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "headline-md": ["Barlow"],
+                "display-lg": ["Barlow"],
+                "body-lg": ["Inter"],
+                "display-lg-mobile": ["Barlow"],
+                "label-tech": ["JetBrains Mono"],
+                "headline-lg": ["Barlow"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "display-lg-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                "label-tech": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-background/70 backdrop-blur-md border-b border-white/10 docked full-width top-0 sticky z-50">
+<nav class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20 w-full">
+<div class="font-display-lg text-headline-md font-bold text-on-surface tracking-tight">
+                THE ELECTRICAL FOLKS
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-headline-md text-body-md text-on-surface-variant hover:text-electric-red transition-all duration-300" href="the-electrical-folks-home.html">Home</a>
+<a class="font-headline-md text-body-md text-on-surface-variant hover:text-electric-red transition-all duration-300" href="index.html">Services</a>
+<a class="font-headline-md text-body-md text-on-surface-variant hover:text-electric-red transition-all duration-300" href="ev-charger-installation-the-electrical-folks.html">EV Charging</a>
+<a class="font-headline-md text-body-md text-on-surface-variant hover:text-electric-red transition-all duration-300" href="the-electrical-folks-home.html">About Us</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden lg:flex items-center px-6 py-2 border border-secondary text-secondary rounded-lg font-headline-md text-body-md hover:bg-secondary/10 transition-all duration-300">
+                    Emergency Call
+                </button>
+<button class="bg-electric-red text-white px-6 py-2 rounded-lg font-headline-md text-body-md pulse-red hover:scale-105 transition-all">
+                    Get Quote
+                </button>
+</div>
+</nav>
+</header>
+<main class="relative min-h-[calc(100vh-80px)] overflow-hidden">
+<!-- Background Animation -->
+
+<div class="relative z-10 max-w-container-max mx-auto px-gutter py-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-component-gap lg:gap-16 items-start">
+<!-- Left Column: Trust Markers & Header -->
+<div class="lg:col-span-5 space-y-8">
+<div>
+<div class="inline-flex items-center px-3 py-1 bg-secondary-container/20 border border-secondary/30 rounded-full mb-6">
+<span class="material-symbols-outlined text-secondary mr-2 text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-tech text-label-tech text-secondary uppercase tracking-widest">NICEIC Approved Contractor</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6 leading-none">
+                            Get Your Free <span class="text-electric-red">Quote</span> Today
+                        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                            Fast-track your electrical solutions with our streamlined booking engine. Precision engineering meets rapid response.
+                        </p>
+</div>
+<div class="space-y-6">
+<!-- Trust Marker 1 -->
+<div class="glass-panel p-6 rounded-xl flex items-center space-x-6 border-l-4 border-l-electric-red">
+<div class="w-16 h-16 rounded-lg bg-surface-container-highest flex items-center justify-center text-electric-red">
+<span class="material-symbols-outlined text-[40px]">timer</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">5-minute response time</h3>
+<p class="font-body-md text-on-surface-variant">Our team is on standby for all emergency requests.</p>
+</div>
+</div>
+<!-- Trust Marker 2 -->
+<div class="glass-panel p-6 rounded-xl flex items-center space-x-6 border-l-4 border-l-secondary">
+<div class="w-16 h-16 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[40px]">handyman</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">90% parts carried</h3>
+<p class="font-body-md text-on-surface-variant">Fully stocked mobile workshops for immediate fixes.</p>
+</div>
+</div>
+<!-- Technical Badge Cluster -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container p-4 rounded-lg flex items-center space-x-3">
+<span class="material-symbols-outlined text-secondary">shield_with_heart</span>
+<span class="font-label-tech text-label-tech text-on-surface">Insured £10M</span>
+</div>
+<div class="bg-surface-container p-4 rounded-lg flex items-center space-x-3">
+<span class="material-symbols-outlined text-secondary">history</span>
+<span class="font-label-tech text-label-tech text-on-surface">30+ Years Exp.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Multi-step Form Container -->
+<div class="lg:col-span-7">
+<div class="glass-panel p-8 lg:p-12 rounded-2xl relative overflow-hidden">
+<!-- Form Progress Bar -->
+<div class="flex justify-between mb-12 relative">
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-surface-variant -translate-y-1/2 z-0"></div>
+<div class="absolute top-1/2 left-0 w-1/3 h-[2px] bg-electric-red -translate-y-1/2 z-0 transition-all duration-500" id="progress-bar"></div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-electric-red text-white flex items-center justify-center font-bold transition-all border-4 border-background" id="step-dot-1">1</div>
+<span class="font-label-tech text-[10px] mt-2 uppercase tracking-tighter text-on-surface">Service</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-bold transition-all border-4 border-background" id="step-dot-2">2</div>
+<span class="font-label-tech text-[10px] mt-2 uppercase tracking-tighter text-on-surface-variant">Details</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-bold transition-all border-4 border-background" id="step-dot-3">3</div>
+<span class="font-label-tech text-[10px] mt-2 uppercase tracking-tighter text-on-surface-variant">Contact</span>
+</div>
+</div>
+<!-- Step 1: Service Type -->
+<div class="form-step-active" id="form-step-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">What do you need help with?</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<button class="group p-6 rounded-xl border border-white/10 bg-surface-container-low hover:border-electric-red transition-all flex flex-col items-start text-left" onclick="nextStep(2)" type="button">
+<span class="material-symbols-outlined text-electric-red mb-4 text-[32px] group-hover:scale-110 transition-transform">bolt</span>
+<h4 class="font-headline-md text-on-surface mb-2">Emergency Repair</h4>
+<p class="text-on-surface-variant text-sm">Fault finding, power cuts, or dangerous sparking.</p>
+</button>
+<button class="group p-6 rounded-xl border border-white/10 bg-surface-container-low hover:border-secondary transition-all flex flex-col items-start text-left" onclick="nextStep(2)" type="button">
+<span class="material-symbols-outlined text-secondary mb-4 text-[32px] group-hover:scale-110 transition-transform">ev_station</span>
+<h4 class="font-headline-md text-on-surface mb-2">EV Charger</h4>
+<p class="text-on-surface-variant text-sm">Domestic or commercial vehicle charging solutions.</p>
+</button>
+<button class="group p-6 rounded-xl border border-white/10 bg-surface-container-low hover:border-on-surface transition-all flex flex-col items-start text-left" onclick="nextStep(2)" type="button">
+<span class="material-symbols-outlined text-on-surface mb-4 text-[32px] group-hover:scale-110 transition-transform">home_repair_service</span>
+<h4 class="font-headline-md text-on-surface mb-2">Installation</h4>
+<p class="text-on-surface-variant text-sm">Rewiring, lighting, or consumer unit upgrades.</p>
+</button>
+<button class="group p-6 rounded-xl border border-white/10 bg-surface-container-low hover:border-on-surface transition-all flex flex-col items-start text-left" onclick="nextStep(2)" type="button">
+<span class="material-symbols-outlined text-on-surface mb-4 text-[32px] group-hover:scale-110 transition-transform">checklist_rtl</span>
+<h4 class="font-headline-md text-on-surface mb-2">Certification</h4>
+<p class="text-on-surface-variant text-sm">EICR reports, safety checks, or landlord testing.</p>
+</button>
+</div>
+</div>
+<!-- Step 2: Property Details -->
+<div class="hidden" id="form-step-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Property Information</h2>
+<div class="space-y-6">
+<div>
+<label class="font-label-tech text-label-tech text-on-surface-variant uppercase mb-2 block">Property Type</label>
+<div class="grid grid-cols-2 gap-4">
+<label class="cursor-pointer">
+<input class="hidden peer" name="property" type="radio">
+<div class="p-4 bg-surface-container border border-white/10 rounded-lg text-center peer-checked:border-electric-red peer-checked:bg-electric-red/10 transition-all">Domestic</div>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" name="property" type="radio">
+<div class="p-4 bg-surface-container border border-white/10 rounded-lg text-center peer-checked:border-electric-red peer-checked:bg-electric-red/10 transition-all">Commercial</div>
+</label>
+</div>
+</div>
+<div>
+<label class="font-label-tech text-label-tech text-on-surface-variant uppercase mb-2 block">Describe the issue / project</label>
+<textarea class="w-full bg-midnight-bg border border-white/10 rounded-lg focus:border-electric-red focus:ring-0 text-on-surface p-4" placeholder="Briefly describe what you need..." rows="4"></textarea>
+</div>
+<div class="flex space-x-4 pt-4">
+<button class="flex-1 py-4 border border-surface-variant text-on-surface font-headline-md rounded-lg hover:bg-white/5 transition-all" onclick="nextStep(1)">Back</button>
+<button class="flex-[2] py-4 bg-electric-red text-white font-headline-md rounded-lg hover:brightness-110 transition-all shadow-lg shadow-electric-red/20" onclick="nextStep(3)">Continue</button>
+</div>
+</div>
+</div>
+<!-- Step 3: Contact Info -->
+<div class="hidden" id="form-step-3">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Contact Information</h2>
+<div class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="font-label-tech text-label-tech text-on-surface-variant uppercase mb-2 block">Full Name</label>
+<input class="w-full bg-midnight-bg border border-white/10 rounded-lg focus:border-electric-red focus:ring-0 text-on-surface p-4" placeholder="John Smith" type="text">
+</div>
+<div>
+<label class="font-label-tech text-label-tech text-on-surface-variant uppercase mb-2 block">Phone Number</label>
+<input class="w-full bg-midnight-bg border border-white/10 rounded-lg focus:border-electric-red focus:ring-0 text-on-surface p-4" placeholder="07123 456 789" type="tel">
+</div>
+</div>
+<div>
+<label class="font-label-tech text-label-tech text-on-surface-variant uppercase mb-2 block">Email Address</label>
+<input class="w-full bg-midnight-bg border border-white/10 rounded-lg focus:border-electric-red focus:ring-0 text-on-surface p-4" placeholder="john@example.com" type="email">
+</div>
+<div>
+<label class="font-label-tech text-label-tech text-on-surface-variant uppercase mb-2 block">Postcode</label>
+<input class="w-full bg-midnight-bg border border-white/10 rounded-lg focus:border-electric-red focus:ring-0 text-on-surface p-4" placeholder="SW1A 1AA" type="text">
+</div>
+<div class="flex space-x-4 pt-6">
+<button class="flex-1 py-4 border border-surface-variant text-on-surface font-headline-md rounded-lg hover:bg-white/5 transition-all" onclick="nextStep(2)">Back</button>
+<button class="flex-[2] py-4 bg-electric-red text-white font-headline-md rounded-lg hover:brightness-110 transition-all shadow-lg shadow-electric-red/20 flex items-center justify-center space-x-3" onclick="submitForm()">
+<span>Submit Request</span>
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<p class="text-[12px] text-center text-on-surface-variant pt-4">
+                                    By clicking submit, you agree to our privacy policy. One of our engineers will call you within 5 minutes.
+                                </p>
+</div>
+</div>
+<!-- Success State -->
+<div class="hidden text-center py-12" id="form-success">
+<div class="w-24 h-24 bg-secondary-container/20 border-2 border-secondary rounded-full flex items-center justify-center mx-auto mb-8">
+<span class="material-symbols-outlined text-secondary text-[48px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h2 class="font-display-lg text-headline-lg text-on-surface mb-4">Request Received!</h2>
+<p class="font-body-lg text-on-surface-variant mb-8">Your enquiry reference is <span class="font-label-tech text-secondary">#EF-99218</span>. Hang tight, we're checking engineer availability now.</p>
+<div class="p-6 bg-surface-container rounded-xl inline-block border border-secondary/30">
+<div class="flex items-center space-x-3 text-secondary">
+<div class="w-2 h-2 rounded-full bg-secondary animate-ping"></div>
+<span class="font-label-tech uppercase tracking-widest text-xs">Estimated call in 4m 20s</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-surface-variant full-width py-section-gap">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-component-gap">
+<div class="md:col-span-1">
+<div class="font-headline-lg text-headline-lg text-on-surface mb-6">THE ELECTRICAL FOLKS</div>
+<p class="font-body-md text-on-surface-variant text-sm mb-6">Master electricians serving your local area with rapid response and technical excellence since 1993.</p>
+<div class="flex space-x-4">
+<a class="text-on-surface-variant hover:text-electric-red transition-colors" href="index.html"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-on-surface-variant hover:text-electric-red transition-colors" href="get-a-quote-the-electrical-folks.html"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-on-surface mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="index.html">Emergency Repair</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="ev-charger-installation-the-electrical-folks.html">EV Installation</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="index.html">Full Rewires</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="index.html">Smart Home</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-on-surface mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="the-electrical-folks-home.html">Accreditations</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="get-a-quote-the-electrical-folks.html">Contact Us</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="index.html">Terms of Service</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-electric-red transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border border-white/5">
+<h4 class="font-headline-md text-on-surface mb-4">Urgent Issue?</h4>
+<p class="text-on-surface-variant text-sm mb-4">Call our emergency hotline available 24/7/365.</p>
+<a class="flex items-center space-x-3 text-electric-red font-bold text-lg hover:underline transition-all" href="tel:0800123456">
+<span class="material-symbols-outlined">call</span>
+<span>0800 123 4567</span>
+</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-surface-variant">
+<p class="font-body-md text-body-md text-on-surface-variant text-center opacity-60">
+                © 1993-2024 The Electrical Folks. NICEIC Approved Contractor. All Rights Reserved.
+            </p>
+</div>
+</footer>
+<script>
+        function nextStep(step) {
+            // Hide all steps
+            document.getElementById('form-step-1').classList.add('hidden');
+            document.getElementById('form-step-2').classList.add('hidden');
+            document.getElementById('form-step-3').classList.add('hidden');
+            
+            // Show target step
+            const currentStep = document.getElementById('form-step-' + step);
+            currentStep.classList.remove('hidden');
+            currentStep.classList.add('form-step-active');
+
+            // Update Progress Bar
+            const bar = document.getElementById('progress-bar');
+            const dots = [
+                document.getElementById('step-dot-1'),
+                document.getElementById('step-dot-2'),
+                document.getElementById('step-dot-3')
+            ];
+
+            if(step === 1) bar.style.width = '33%';
+            if(step === 2) bar.style.width = '66%';
+            if(step === 3) bar.style.width = '100%';
+
+            dots.forEach((dot, index) => {
+                if(index + 1 <= step) {
+                    dot.classList.remove('bg-surface-variant', 'text-on-surface-variant');
+                    dot.classList.add('bg-electric-red', 'text-white');
+                } else {
+                    dot.classList.add('bg-surface-variant', 'text-on-surface-variant');
+                    dot.classList.remove('bg-electric-red', 'text-white');
+                }
+            });
+        }
+
+        function submitForm() {
+            document.getElementById('form-step-3').classList.add('hidden');
+            document.getElementById('form-success').classList.remove('hidden');
+            document.getElementById('form-success').classList.add('form-step-active');
+            
+            // Scroll to success message
+            window.scrollTo({ top: 100, behavior: 'smooth' });
+        }
+    </script>
+</body></html>

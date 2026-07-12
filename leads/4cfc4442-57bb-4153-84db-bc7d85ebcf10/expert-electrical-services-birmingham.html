@@ -1,0 +1,356 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | City Electrical Services (Midlands)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#fdf8f8",
+                    "electric-blue": "#2563EB",
+                    "on-primary-container": "#858383",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-container-high": "#ebe7e6",
+                    "on-error": "#ffffff",
+                    "primary": "#000000",
+                    "tertiary": "#000000",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-tertiary-fixed": "#1c1b1a",
+                    "primary-fixed": "#e5e2e1",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#1c1b1b",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#313030",
+                    "on-background": "#1c1b1b",
+                    "surface-dim": "#ddd9d8",
+                    "on-tertiary-fixed-variant": "#484645",
+                    "surface-container": "#f1edec",
+                    "secondary-fixed-dim": "#ffb3ad",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#868382",
+                    "inverse-primary": "#c8c6c5",
+                    "outline": "#747878",
+                    "inverse-on-surface": "#f4f0ef",
+                    "tertiary-fixed-dim": "#cac6c4",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "surface-container-low": "#f7f3f2",
+                    "premium-gold": "#D4AF37",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary-container": "#1c1b1a",
+                    "surface-tint": "#5f5e5e",
+                    "on-surface": "#1c1b1b",
+                    "secondary": "#b71f24",
+                    "on-primary-fixed": "#1c1b1b",
+                    "tertiary-fixed": "#e6e2df",
+                    "on-secondary-container": "#5c0007",
+                    "emergency-red": "#CE3131",
+                    "on-surface-variant": "#444748",
+                    "charcoal-black": "#121212",
+                    "on-secondary-fixed": "#410003",
+                    "surface-variant": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#930011",
+                    "surface": "#fdf8f8",
+                    "secondary-container": "#ff544f",
+                    "background": "#fdf8f8",
+                    "surface-neutral": "#F7F7F7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "container-max": "1280px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "section-gap-desktop": "120px",
+                    "margin-mobile": "16px",
+                    "section-gap-mobile": "64px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "display-hero-mobile": ["Montserrat"],
+                    "caption": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-hero": ["Montserrat"],
+                    "label-bold": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-hero-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-hero": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .backdrop-glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .service-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card-hover:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body class="bg-surface-neutral font-body-md text-on-surface">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant shadow-sm h-20">
+<nav class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-full">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                City Electrical Services
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-primary font-label-bold transition-colors" href="index.html">Home</a>
+<a class="text-primary border-b-2 border-secondary pb-1 font-label-bold" href="expert-electrical-services-birmingham.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary font-label-bold transition-colors" href="expert-electrical-services-birmingham.html">Projects</a>
+<a class="text-on-surface-variant hover:text-primary font-label-bold transition-colors" href="index.html">Reviews</a>
+<a class="text-on-surface-variant hover:text-primary font-label-bold transition-colors" href="about-shakeel-the-team.html">About</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden lg:block px-6 py-2 border-2 border-primary text-primary font-label-bold hover:bg-primary hover:text-white transition-all active:scale-95">
+                    Request a Quote
+                </button>
+<button class="px-6 py-2 bg-emergency-red text-white font-label-bold hover:bg-red-800 transition-all shadow-md active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">emergency</span>
+                    Emergency Call Out
+                </button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[60vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="High-resolution, wide-angle interior photograph of a pristine, modern architectural space with clean white walls and sophisticated recessed LED lighting installations. The atmosphere is professional and high-end, representing premium electrical contracting work. A sense of expert reliability and precision engineering is conveyed through sharp lines and bright, balanced lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFg24EA5mwZT6V32IIuEniIQTJDrwuBMshjrbwmxt2iKTKFVZRVXqm9EWl1itxHfN4y7xxl2B4_TCR4FbCwq0C48O7ScrxuPM7HuUeRcMwXHiIY2kkWOK1AU9n_cxgC78Pc1mf5dZgGSZqKL_E0PPcnTQPUHjUtbkQjLWEGrQjiOr03dxemt8lIidN0uN7QJ535XN-MeTQ3SnXG3U-iYl3e-bRPH95xP9sK_uqKfAsvwKV6AwGB0H5">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-10 px-gutter max-w-container-max mx-auto w-full">
+<div class="max-w-2xl text-white">
+<span class="inline-block px-3 py-1 bg-premium-gold text-primary font-label-bold mb-4">NAPIT REGISTERED &amp; CERTIFIED</span>
+<h1 class="font-display-hero text-display-hero mb-6">Expert Electrical Engineering</h1>
+<p class="font-body-lg text-body-lg text-surface-variant mb-8">From precision domestic rewiring to large-scale commercial installations, we provide the Midlands with certified, safe, and premium electrical solutions.</p>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-section-gap-desktop px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg mb-4">Comprehensive Solutions</h2>
+<p class="font-body-md text-on-surface-variant">We deliver end-to-end electrical services backed by 18th Edition certification and a commitment to impeccable safety standards.</p>
+</div>
+<div class="hidden md:block">
+<span class="text-premium-gold flex items-center gap-2 font-label-bold">
+<span class="material-symbols-outlined">verified</span>
+                        COMPLIANCE GUARANTEED
+                    </span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Rewires -->
+<div class="bg-white border border-outline-variant service-card-hover group flex flex-col">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro shot of organized electrical wiring inside a modern junction box, showcasing clean cable runs and professional labeling. The lighting highlights the precision and care taken in complex rewiring projects. The color palette is clinical and clean, emphasizing safety and order in high-end domestic installations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxVKvmHXr33V0wZQoKznPcr0ofbEOp1-mXxNVLpBx0ZgEOKimATlX4PxzTRtvrw18RL879pyV8EEFt3c8BqL_d2V7x41KU5TbfbMAubmdvo6cnyLaDvE0qFC13nYY6XvSrUYm18jtpwbqflsxb42eF3hzHoVV5g5wNL-dx2bZuZhPEw4skUmdfegZiYmjgOxcKfo-lthvoZ9C29V2r5Jf4Mc7zevk-QpvdtuVNUxfGRW_5iAg3dtOj">
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md mb-3">Full &amp; Partial Rewires</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Modernizing your property's electrical infrastructure for safety, efficiency, and future-proofing. Minimum disruption, maximum reliability.</p>
+<button class="w-full py-3 bg-primary text-white font-label-bold hover:bg-neutral-800 transition-colors">Get a Quote</button>
+</div>
+</div>
+<!-- Fuseboards -->
+<div class="bg-white border border-outline-variant service-card-hover group flex flex-col">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a state-of-the-art metal clad consumer unit with neatly arranged circuit breakers. The lighting is bright and industrial, focusing on the high-contrast red and white switches. This image conveys modern safety standards and professional fuseboard upgrades for high-end properties." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvgj7uKTvFY5lobOLeksYKOV71MSJpNBsxjV_2hlis9LRz29kxHd-lHXE1NQ-zC7vspXgxFubDiHIZm2RkeSILa2qGOl2QiNFNqaApqeTt99DIVFHwaJeV1gC80QnGarDOp5UxRxYeqbsfHZxIcQfZuyrGar9-mlkw29FDd1HY3f24lJSQk5_qfPYYa-drFYtm5pnDiz3yTL90-xX_xPNCo5XQXlORz7CdUw7NkuYmrAdzCMH7wFsH">
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md mb-3">Fuseboard Upgrades</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Installation of 18th Edition compliant consumer units with full RCD protection and surge protection devices (SPD) for ultimate peace of mind.</p>
+<button class="w-full py-3 bg-primary text-white font-label-bold hover:bg-neutral-800 transition-colors">Get a Quote</button>
+</div>
+</div>
+<!-- EICR -->
+<div class="bg-white border border-outline-variant service-card-hover group flex flex-col">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional electrician using a digital multimeter to test a socket in a high-end kitchen with marble countertops. The image focus is on the testing equipment, symbolizing landlord compliance and EICR safety testing. The aesthetic is clean, corporate, and trustworthy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT0KHC24tn6cAw_ffvXOH32R4nfwOmlTpU6Lmncx-VTJqhERLI00MlZKS6e8CCBG9I7nsyZjJeDaLD6F6On6wWDE0BUXwRKrYPMI7WtC5p3ClbMx57Tlk-j6oLyPk98lxYVzfugFiPX8efBTAkIhxtACg30WAZ0mvieunEF-0kyK-enPWS7BQJHZer80oOWbvple0WIlyI309XoaAvckejp40HL-UbkCNZ_B7bP--oUZa-Wn3PryF6">
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md mb-3">EICR &amp; Testing</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Essential landlord compliance certificates and detailed safety inspections for domestic and commercial property sales or rentals.</p>
+<button class="w-full py-3 bg-primary text-white font-label-bold hover:bg-neutral-800 transition-colors">Get a Quote</button>
+</div>
+</div>
+<!-- EV Charger -->
+<div class="bg-white border border-outline-variant service-card-hover group flex flex-col">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek, wall-mounted electric vehicle charging station on a modern dark charcoal exterior wall. High-quality materials and a minimalist design. Soft evening lighting highlights the premium finish of the EV charger. This represents professional EV installation services for modern homes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBpSF-azqDjqH5zQbD5dVJo9vLF6UmsCFTg8V7D44eMZBrUH1dwSQKpTGjlSHHOolPlgDFr9X68Z9qyMknmRnnKjemCbVELgG48Lbo6f3h2MqJ1er8inAuYdLyd9_-7bAN7MIK24BHM56nE_1Z-k75bqcIW8YABtgMogZ4a524OdRdvmU8dOAFaoeGmmS0I8DVrPZtKUi2oOpJGvNCiw5bvteokrGQbz1TW0z3e3G9PZPd9BkZPxKx">
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md mb-3">EV Charger Install</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Smart home charging solutions for all electric vehicles. Certified OZEV installers providing fast, safe, and efficient home charging hubs.</p>
+<button class="w-full py-3 bg-primary text-white font-label-bold hover:bg-neutral-800 transition-colors">Get a Quote</button>
+</div>
+</div>
+<!-- Security -->
+<div class="bg-white border border-outline-variant service-card-hover group flex flex-col">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Low angle shot of a modern security camera mounted on a high-tech building facade. The blue sky and sharp architectural lines emphasize security and protection. The image should feel professional and technologically advanced, representing high-end CCTV and alarm installations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-l-JUo00huaX1mS82SsabNBrtZgSnwNHTIGm0r5w7i6r8ikeYpnZJ27zmMB0f50Q7W1VsvyVxC-IwPPrqoJ6UkMeulFP7U4oCfRB9H8Ejyj14VEdrUFzvzgWTW6UsR5uGHiui22B2R1zsLuONQBJ9vg9A9DngEui6NpkhQZA0qwSsw4GOBak8LaKBtCymQLY4UInVGI-3-S4lnVEKig7fTvcevNntPCmC8rIJwIUWn_HabJqbSF2e">
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md mb-3">Security &amp; CCTV</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Smart alarm systems and 4K CCTV installations. Integration with mobile devices for real-time monitoring and 24/7 site protection.</p>
+<button class="w-full py-3 bg-primary text-white font-label-bold hover:bg-neutral-800 transition-colors">Get a Quote</button>
+</div>
+</div>
+<!-- Emergency -->
+<div class="bg-primary text-white border border-primary service-card-hover flex flex-col">
+<div class="h-64 overflow-hidden bg-charcoal-black flex items-center justify-center p-12">
+<span class="material-symbols-outlined text-[120px] text-emergency-red" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md mb-3 text-premium-gold">Emergency Call-outs</h3>
+<p class="font-body-md text-surface-variant mb-6 flex-grow">Rapid response electrical fault finding available 7 days a week across the Midlands. Power outages, sparking, or critical failures.</p>
+<button class="w-full py-3 bg-emergency-red text-white font-label-bold hover:bg-red-800 transition-colors shadow-lg">Call 0800-CITY-ELEC</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Scale Section: Commercial vs Domestic -->
+<section class="bg-charcoal-black text-white py-section-gap-desktop overflow-hidden">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<span class="text-premium-gold font-label-bold uppercase tracking-widest mb-4 block">Unmatched Scale</span>
+<h2 class="font-headline-lg text-headline-lg mb-8">Commercial Precision. Domestic Care.</h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="bg-white/10 p-3 h-fit">
+<span class="material-symbols-outlined text-premium-gold">business</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">Commercial &amp; Industrial</h4>
+<p class="font-body-md text-surface-variant">From restaurant fit-outs like the one shown here to industrial warehouses, we handle high-capacity three-phase power systems and integrated lighting design.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-white/10 p-3 h-fit">
+<span class="material-symbols-outlined text-premium-gold">home</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">Domestic Excellence</h4>
+<p class="font-body-md text-surface-variant">Premium smart home integration and safety-first residential rewiring. We treat every home with the respect and cleanliness it deserves.</p>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<button class="px-10 py-4 bg-premium-gold text-primary font-label-bold hover:bg-yellow-500 transition-all active:scale-95 shadow-xl">
+                                Discuss Your Project
+                            </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square border-8 border-white/5 relative z-10">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtPiOJqQI1APo8_CwTXnCm3DipSwVNjNJQoCvR64LMgUggu4_LoTNOMrSMbChKxX7WGKHOHz9BOhs-AZ7QdDgWQWL3_Ricr23Jwrlw5hNlp8V_0G2HXTn9q40zveu1wbgPJSJSRF7CUPFJ9DUHaoil3MIywjHkJqyWteUbkLQd1yYoZa0lovP5r2YQJLP_2_32aPbLDudby69vV6a1LuO7ohKpIpRZx1R-nvfvtf_PGE_ym96itJ9_hVSs">
+</div>
+<div class="absolute -bottom-10 -right-10 w-2/3 aspect-video z-20 border-8 border-charcoal-black bg-white/10 backdrop-blur-xl p-4 flex items-center justify-center">
+<div class="text-center">
+<span class="block text-4xl font-extrabold text-premium-gold">100%</span>
+<span class="text-sm font-label-bold">NAPIT APPROVED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Compliance Bar -->
+<section class="py-16 bg-surface-container border-y border-outline-variant">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="flex flex-wrap justify-between items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl">verified_user</span>
+<span class="font-label-bold text-xl uppercase tracking-tighter">NAPIT Registered</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl">construction</span>
+<span class="font-label-bold text-xl uppercase tracking-tighter">18th Edition Certified</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl">security</span>
+<span class="font-label-bold text-xl uppercase tracking-tighter">Fully Insured</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl">workspace_premium</span>
+<span class="font-label-bold text-xl uppercase tracking-tighter">Which? Trusted Trader</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white w-full pt-section-gap-desktop pb-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max mx-auto">
+<div class="md:col-span-2">
+<h2 class="font-headline-lg text-headline-lg text-surface-bright mb-6">City Electrical Services</h2>
+<p class="font-body-md text-surface-variant max-w-md mb-8">Premium electrical engineering for the Midlands. Expert reliability in every wire.</p>
+<div class="flex space-x-6">
+<a class="text-surface-variant hover:text-premium-gold transition-all" href="about-shakeel-the-team.html"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-surface-variant hover:text-premium-gold transition-all" href="index.html"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h3 class="font-label-bold uppercase text-premium-gold mb-6">Quick Links</h3>
+<ul class="space-y-4 font-body-md">
+<li><a class="text-surface-variant hover:text-premium-gold transition-colors underline" href="expert-electrical-services-birmingham.html">Emergency Services</a></li>
+<li><a class="text-surface-variant hover:text-premium-gold transition-colors underline" href="expert-electrical-services-birmingham.html">Domestic</a></li>
+<li><a class="text-surface-variant hover:text-premium-gold transition-colors underline" href="expert-electrical-services-birmingham.html">Commercial</a></li>
+<li><a class="text-surface-variant hover:text-premium-gold transition-colors underline" href="expert-electrical-services-birmingham.html">Industrial</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-bold uppercase text-premium-gold mb-6">Legal</h3>
+<ul class="space-y-4 font-body-md">
+<li><a class="text-surface-variant hover:text-premium-gold transition-colors underline" href="index.html">Privacy Policy</a></li>
+<li><a class="text-surface-variant hover:text-premium-gold transition-colors underline" href="expert-electrical-services-birmingham.html">Terms of Service</a></li>
+<li><a class="text-surface-variant hover:text-premium-gold transition-colors underline" href="about-shakeel-the-team.html">Accreditations</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-white/10 px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-surface-variant text-sm">© 2024 City Electrical Services (Midlands). NAPIT Registered &amp; 18th Edition Certified.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-premium-gold" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-label-bold text-premium-gold">ISO 9001 COMPLIANT</span>
+</div>
+</div>
+</footer>
+<!-- Fixed Contact Bar (Mobile/Tablet) -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-primary p-4 grid grid-cols-2 gap-4 z-50 shadow-[0_-10px_20px_rgba(0,0,0,0.2)]">
+<button class="bg-emergency-red text-white py-3 font-label-bold active:scale-95">EMERGENCY</button>
+<button class="bg-premium-gold text-primary py-3 font-label-bold active:scale-95">FREE QUOTE</button>
+</div>
+</body></html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Electrical Folks | Electrician Birmingham since 1993</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#e7bdb8",
+                        "primary": "#ffb4ab",
+                        "secondary": "#b6c4ff",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "background": "#051424",
+                        "secondary-container": "#0356ff",
+                        "on-primary-fixed": "#410002",
+                        "deep-navy": "#003366",
+                        "on-error": "#690005",
+                        "on-primary": "#690006",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-low": "#0d1c2d",
+                        "surface-dim": "#051424",
+                        "surface-variant": "#273647",
+                        "outline-variant": "#5d3f3c",
+                        "surface-container-highest": "#273647",
+                        "on-background": "#d4e4fa",
+                        "surface": "#051424",
+                        "inverse-primary": "#c00014",
+                        "on-surface": "#d4e4fa",
+                        "surface-tint": "#ffb4ab",
+                        "tertiary": "#bec6e0",
+                        "electric-red": "#E31E24",
+                        "surface-container-high": "#1c2b3c",
+                        "primary-fixed": "#ffdad6",
+                        "secondary-fixed": "#dce1ff",
+                        "on-secondary": "#002780",
+                        "on-secondary-fixed-variant": "#0039b3",
+                        "surface-bright": "#2c3a4c",
+                        "on-tertiary-fixed": "#131b2e",
+                        "neon-glow-blue": "rgba(0, 85, 255, 0.4)",
+                        "tertiary-container": "#6c738a",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed": "#001551",
+                        "outline": "#ae8883",
+                        "on-tertiary": "#283044",
+                        "surface-container": "#122131",
+                        "inverse-surface": "#d4e4fa",
+                        "surface-container-lowest": "#010f1f",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "primary-container": "#e31e24",
+                        "charcoal-surface": "#1E293B",
+                        "inverse-on-surface": "#233143",
+                        "on-tertiary-container": "#fcfaff",
+                        "neon-glow-red": "rgba(227, 30, 36, 0.4)",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#fffafa",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "secondary-fixed-dim": "#b6c4ff",
+                        "midnight-bg": "#020617",
+                        "tertiary-fixed": "#dae2fd",
+                        "on-primary-fixed-variant": "#93000d",
+                        "on-secondary-container": "#e4e7ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "component-gap": "16px",
+                        "section-gap": "80px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Barlow"],
+                        "display-lg": ["Barlow"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Barlow"],
+                        "label-tech": ["JetBrains Mono"],
+                        "headline-lg": ["Barlow"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "label-tech": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(227, 30, 36, 0.5);
+            box-shadow: 0 0 20px rgba(227, 30, 36, 0.2);
+        }
+        .pulse-red {
+            animation: pulse-red 2s infinite;
+        }
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(227, 30, 36, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(227, 30, 36, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(227, 30, 36, 0); }
+        }
+        .circuit-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, #E31E24, transparent);
+            height: 1px;
+            width: 100%;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation -->
+<nav class="bg-background/70 backdrop-blur-md border-b border-white/10 sticky top-0 z-50 w-full h-20">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-full">
+<div class="flex items-center gap-4">
+<img alt="The Electrical Folks Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLuaIkyXrW4cj7VReuxv86KIbvMfcHiUTGkqhCNNimqgDRBpxVI0g1FwGcBSMaEF9yBm4iIztnxZfj2dwA9_qrb-ij48JceChEDWDjFaonJyRyDDpW3jEi1gw4ExjkxbzujiIzbYjsudyYbzgWcNsDvka88_BGSXezxJ_Y1E4MHHvPj0iI6WcZKEOard4CKPs1_IoJ6Nc1adU0yLTx_7BwoblJP00KbMAZ9Y_64lkzuE-7ybfCpOCGxDYKo">
+<span class="font-display-lg text-headline-md font-bold text-on-surface hidden sm:block">The Electrical Folks</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline-md text-headline-md text-electric-red border-b-2 border-electric-red pb-1" href="the-electrical-folks-home.html">Home</a>
+<a class="font-headline-md text-headline-md text-on-surface-variant hover:text-electric-red transition-all duration-300" href="index.html">Services</a>
+<a class="font-headline-md text-headline-md text-on-surface-variant hover:text-electric-red transition-all duration-300" href="ev-charger-installation-the-electrical-folks.html">EV Charging</a>
+<a class="font-headline-md text-headline-md text-on-surface-variant hover:text-electric-red transition-all duration-300" href="the-electrical-folks-home.html">About Us</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block border border-secondary text-secondary font-headline-md px-6 py-2 rounded-lg hover:bg-secondary/10 transition-all duration-300">Get Quote</button>
+<button class="bg-electric-red text-white font-headline-md px-6 py-2 rounded-lg pulse-red flex items-center gap-2">
+<span class="material-symbols-outlined text-base">emergency_home</span>
+                    Emergency Call
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden pt-10">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="A high-resolution industrial photography shot of a professional electrician in modern workwear performing high-precision maintenance on a complex electrical panel. The scene is set in a dark, atmospheric environment with cinematic lighting featuring electric red and cool blue accents. The focus is sharp on the technician's hands and tools, highlighting technical mastery and industrial precision consistent with a premium service brand." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIrWQKTHia6hSDPF3XdWsB7LAuf7jGms9y_-FHxrE1BXMeJ3aMfRzvwFFblu5MlDathjpPYKX1YV8LDz9naPzRIKhT1wUlYa4ekw1j_9q0oEV4ZdjfihD7TxVuOVUiAGg41ssu4bYNlAWQCt6r_jAOdVV4XKvflvdvq5ya2jjWkvDpNP4wYC1I-II72DiZxFHYahXnxItw_FAWQaHLrQ0pEn5eKHLgDBfe3VHjz9BKE5N8-FpskvYb')"></div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-surface-container-high px-4 py-1.5 rounded-full border border-white/5">
+<span class="w-2 h-2 rounded-full bg-electric-red pulse-red"></span>
+<span class="font-label-tech text-label-tech uppercase tracking-widest text-on-surface-variant">Live in Birmingham &amp; West Midlands</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight text-white">
+                    Electrician <span class="text-electric-red">Birmingham</span>,<br>Trusted Since 1993
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Expert service from fully qualified 18th edition electricians with over 32 years of experience. We provide high-voltage solutions with domestic care.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-electric-red hover:bg-red-700 text-white font-headline-md text-lg px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg shadow-electric-red/20">
+                        Request a Quote
+                    </button>
+<button class="glass-card text-white font-headline-md text-lg px-10 py-4 rounded-xl flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">call</span>
+                        0121 555 0123
+                    </button>
+</div>
+<div class="flex items-center gap-8 pt-8">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg text-white">4.9</span>
+<div class="flex gap-0.5 text-electric-red">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-tech text-label-tech text-on-surface-variant mt-1">3407+ REVIEWS</span>
+</div>
+<div class="w-px h-12 bg-white/10"></div>
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg text-white">32+</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant mt-1 uppercase">Years Exp.</span>
+</div>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="glass-card p-8 rounded-3xl relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-electric-red to-transparent opacity-50"></div>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-electric-red">SYSTEM STATUS: OPTIMAL</span>
+<span class="material-symbols-outlined text-on-surface-variant">bolt</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-white">Recent Work Success</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl">
+<span class="material-symbols-outlined text-electric-red">check_circle</span>
+<div class="flex-1">
+<p class="text-sm font-semibold text-white">Commercial Rewire</p>
+<p class="text-xs text-on-surface-variant">Jewellery Quarter, Birmingham</p>
+</div>
+<span class="text-xs font-label-tech text-on-surface-variant">2H AGO</span>
+</div>
+<div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl">
+<span class="material-symbols-outlined text-electric-red">ev_station</span>
+<div class="flex-1">
+<p class="text-sm font-semibold text-white">Zappi EV Install</p>
+<p class="text-xs text-on-surface-variant">Sutton Coldfield</p>
+</div>
+<span class="text-xs font-label-tech text-on-surface-variant">5H AGO</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<div class="bg-surface-container-lowest border-y border-white/5 py-8">
+<div class="max-w-container-max mx-auto px-gutter flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-3xl">verified</span>
+<span class="font-headline-md text-white">NICEIC APPROVED</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-3xl">task_alt</span>
+<span class="font-headline-md text-white">CHECKATRADE VERIFIED</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-3xl">shield</span>
+<span class="font-headline-md text-white">CITY &amp; GUILDS</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-3xl">workspace_premium</span>
+<span class="font-headline-md text-white">TRUSTMARK</span>
+</div>
+</div>
+</div>
+<!-- Services Section -->
+<section class="py-section-gap relative">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+<div class="space-y-4">
+<span class="font-label-tech text-label-tech text-electric-red tracking-[0.3em] uppercase">What We Do</span>
+<h2 class="font-display-lg text-headline-lg md:text-5xl text-white">Electrical Expertise<br>For Every Need</h2>
+</div>
+<p class="font-body-lg text-on-surface-variant max-w-md">
+                    From emergency repairs to large-scale commercial installations, we bring three decades of precision to every wire.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- EICR Card -->
+<div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl">description</span>
+</div>
+<div class="w-12 h-12 bg-electric-red/10 border border-electric-red/20 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-electric-red">assignment_turned_in</span>
+</div>
+<h3 class="font-headline-lg text-white mb-4">EICR Testing</h3>
+<p class="text-on-surface-variant mb-6">Mandatory safety inspections for landlords and homeowners to ensure full compliance and peace of mind.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-electric-red text-base">bolt</span> Landlord Certifications
+                        </li>
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-electric-red text-base">bolt</span> Commercial Safety Audits
+                        </li>
+</ul>
+<a class="text-electric-red font-semibold inline-flex items-center gap-2 group" href="get-a-quote-the-electrical-folks.html">
+                        Book Inspection <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- EV Card -->
+<div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 border-t-2 border-t-secondary/30 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl">ev_station</span>
+</div>
+<div class="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary">electric_car</span>
+</div>
+<h3 class="font-headline-lg text-white mb-4">EV Chargers</h3>
+<p class="text-on-surface-variant mb-6">Future-proof your home with smart EV charging solutions. Authorised installers for Zappi, Ohme, and Tesla.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-base">bolt</span> Smart App Integration
+                        </li>
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-base">bolt</span> OZEV Grant Assistance
+                        </li>
+</ul>
+<a class="text-secondary font-semibold inline-flex items-center gap-2 group" href="index.html">
+                        View Solutions <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- Rewiring Card -->
+<div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl">cable</span>
+</div>
+<div class="w-12 h-12 bg-electric-red/10 border border-electric-red/20 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-electric-red">construction</span>
+</div>
+<h3 class="font-headline-lg text-white mb-4">Full Rewiring</h3>
+<p class="text-on-surface-variant mb-6">Complete property rewires to modern standards. Minimal disruption, maximum safety and longevity.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-electric-red text-base">bolt</span> Fuse Box Upgrades
+                        </li>
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-electric-red text-base">bolt</span> 10 Year Guarantee
+                        </li>
+</ul>
+<a class="text-electric-red font-semibold inline-flex items-center gap-2 group" href="get-a-quote-the-electrical-folks.html">
+                        Get Estimate <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed "Difference" Section with Bento Grid -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Large Feature -->
+<div class="lg:col-span-8 bg-background rounded-3xl p-10 border border-white/5 relative overflow-hidden min-h-[400px] flex flex-col justify-end">
+
+<div class="relative z-10 space-y-6">
+<h2 class="font-display-lg text-4xl md:text-5xl text-white">The Electrical Folks Difference</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">
+                            We don't just fix wires; we engineer safety. Our 18th Edition certification is more than a badge—it's a commitment to the highest technical standards in the UK today.
+                        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6 border-t border-white/10">
+<div class="space-y-2">
+<h4 class="text-white font-bold">Rapid Response</h4>
+<p class="text-sm text-on-surface-variant">Emergency calls within Birmingham usually attended within 60 minutes.</p>
+</div>
+<div class="space-y-2">
+<h4 class="text-white font-bold">Direct Communication</h4>
+<p class="text-sm text-on-surface-variant">Speak directly to an engineer, not a call center. Personal service is our hallmark.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Small Features -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="flex-1 bg-electric-red rounded-3xl p-8 group overflow-hidden relative">
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl text-white/10 rotate-12">history</span>
+<div class="relative z-10 space-y-4">
+<h3 class="font-display-lg text-3xl text-white">32+ Years</h3>
+<p class="text-white/80 font-medium">Serving the West Midlands since 1993. Experience you can trust.</p>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-high rounded-3xl p-8 border border-white/5 group">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl">star</span>
+</div>
+<span class="font-headline-md text-white">Rated 4.9/5</span>
+</div>
+<p class="text-on-surface-variant italic">"Fast, clean, and professional. The best electrical company I've used in 20 years of property management."</p>
+<p class="text-xs font-label-tech text-secondary mt-4">— DAVID R., MOSELEY</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap relative overflow-hidden">
+<div class="circuit-line top-0"></div>
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="glass-card p-12 md:p-20 rounded-3xl text-center space-y-8 relative overflow-hidden">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-electric-red/10 blur-[100px]"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary/10 blur-[100px]"></div>
+<div class="space-y-4">
+<h2 class="font-display-lg text-headline-lg md:text-5xl text-white">Ready to Secure Your Home?</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        Join thousands of Birmingham residents who trust us for their electrical safety and modernization projects.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-electric-red text-white font-headline-md text-lg px-12 py-5 rounded-xl hover:scale-105 transition-all duration-300 shadow-xl shadow-electric-red/30">
+                        Get a Free Quote
+                    </button>
+<button class="border border-secondary text-secondary font-headline-md text-lg px-12 py-5 rounded-xl hover:bg-secondary/10 transition-all duration-300">
+                        Our Accreditations
+                    </button>
+</div>
+<p class="text-sm font-label-tech text-on-surface-variant">NICEIC APPROVED CONTRACTOR • FULLY INSURED UP TO £5M</p>
+</div>
+</div>
+<div class="circuit-line bottom-0"></div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-surface-variant py-section-gap">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-component-gap">
+<div class="space-y-6 md:col-span-1">
+<div class="flex flex-col gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">The Electrical Folks</span>
+<p class="text-on-surface-variant text-sm">Professional electrical services across Birmingham and the surrounding regions since 1993.</p>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center hover:text-electric-red transition-colors" href="get-a-quote-the-electrical-folks.html">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center hover:text-electric-red transition-colors" href="get-a-quote-the-electrical-folks.html">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Our Services</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-electric-red transition-colors" href="index.html">Domestic Wiring</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-red transition-colors" href="index.html">Commercial Fit-outs</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-red transition-colors" href="index.html">EICR Reports</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-red transition-colors" href="ev-charger-installation-the-electrical-folks.html">EV Charging Points</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-electric-red transition-colors" href="the-electrical-folks-home.html">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-red transition-colors" href="the-electrical-folks-home.html">Accreditations</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-red transition-colors" href="index.html">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-red transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Contact</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-red">location_on</span>
+<span class="text-on-surface-variant text-sm">Birmingham Business Park,<br>Solihull, B37 7YN</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-red">phone</span>
+<span class="text-on-surface-variant text-sm font-bold">0121 555 0123</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-red">mail</span>
+<span class="text-on-surface-variant text-sm">help@electricalfolks.co.uk</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant text-sm">© 1993-2024 The Electrical Folks. NICEIC Approved Contractor.</p>
+<div class="flex gap-8">
+<img class="h-8 opacity-50 grayscale" data-alt="Official NICEIC logo with approved contractor status, crisp white on a dark background for brand credibility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBSnWpqZp6XWvoMBraemx8w9ZugfCTbbZnzG-1yMl5fNAHMIkTEUoSGC6k-YvXAxGEeXUpwWh_v2Jegh0l-zm5Ela0-U0mtONQRC43LdymTbK9PMfG5EvnjXEP-IpPGzLeFft5SYQs39S0kNRsAyEKnhDd5OO0JGQ9kuKSVU2XDhOpo0i3vN-KBx7kl2XutLOF4AxTlwDj_iN-lCAR9bVFtOKZ8IUx3ryvB3_yf33ItobRp8VG88_t">
+<img class="h-8 opacity-50 grayscale" data-alt="Official Checkatrade verified badge, displayed cleanly for high-trust user signaling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcGZg8uWxd0WsvwqdIeLkaa_z_2hb96dY5DB9pxPcQWxeJ6amysYiHOlNRcgClZGeMauseu79hWCeqB0BYN0PZS3oZri74iY0ZoPNxstJ344WMQ9uYMYfLlsfXctquctyrrWlAQRt_NbkAhV0vNNMRFbUIWvloRmp8_RpVWkwy-p89Nc6EMopY5ZyeTKppnGdcvic3bp0JH3npHQv3ew10ezzP_dGw8igLtuzPGO0LMOmVkZJeWtGj">
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and animations
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>R S S Electrical | Precision Electrical Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        @keyframes pulse-cyan {
+            0%, 100% { box-shadow: 0 0 15px rgba(0, 227, 253, 0.2); }
+            50% { box-shadow: 0 0 25px rgba(0, 227, 253, 0.5); }
+        }
+        .glow-secondary {
+            text-shadow: 0 0 10px rgba(189, 244, 255, 0.6);
+        }
+        .circuit-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 227, 253, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .neon-flicker:hover {
+            animation: flicker 0.2s infinite;
+            color: #bdf4ff;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.9; }
+        }
+        .glass-panel {
+            background: rgba(16, 20, 21, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(189, 244, 255, 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#4c3f00",
+                        "outline": "#8f9097",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#00363d",
+                        "on-primary-fixed": "#0d1c32",
+                        "outline-variant": "#44474d",
+                        "on-surface-variant": "#c5c6cd",
+                        "secondary": "#bdf4ff",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#c9a900",
+                        "surface-container-lowest": "#0b0f10",
+                        "on-tertiary": "#3a3000",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#00616d",
+                        "on-error": "#690005",
+                        "surface-variant": "#323537",
+                        "primary-fixed": "#d6e3ff",
+                        "primary-container": "#0a192f",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "surface-container-low": "#191c1e",
+                        "on-surface": "#e0e3e5",
+                        "tertiary-fixed-dim": "#e9c400",
+                        "tertiary": "#e9c400",
+                        "secondary-container": "#00e3fd",
+                        "surface-container-high": "#272a2c",
+                        "background": "#101415",
+                        "on-primary-fixed-variant": "#39475f",
+                        "on-secondary-fixed-variant": "#004f58",
+                        "surface-container-highest": "#323537",
+                        "tertiary-fixed": "#ffe16d",
+                        "surface-tint": "#b9c7e4",
+                        "inverse-on-surface": "#2d3133",
+                        "secondary-fixed": "#9cf0ff",
+                        "on-background": "#e0e3e5",
+                        "surface-dim": "#101415",
+                        "on-tertiary-fixed": "#221b00",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "surface-bright": "#363a3b",
+                        "on-primary": "#233148",
+                        "secondary-fixed-dim": "#00daf3",
+                        "surface-container": "#1d2022",
+                        "primary": "#b9c7e4",
+                        "surface": "#101415",
+                        "inverse-surface": "#e0e3e5",
+                        "on-primary-container": "#74829d",
+                        "inverse-primary": "#515f78",
+                        "on-secondary-fixed": "#001f24"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Montserrat"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant/20 shadow-[0_0_15px_rgba(0,227,253,0.1)]">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-display-lg-mobile md:text-display-lg font-bold text-secondary tracking-tighter">
+                R S S Electrical
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1 hover:glow-secondary hover:scale-105 transition-all duration-300" href="r-s-s-electrical-home.html">Home</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="our-services-r-s-s-electrical.html">Services</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="index.html">About Us</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="contact-us-r-s-s-electrical.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary hidden md:block">electric_bolt</span>
+<button class="bg-secondary-container text-on-secondary-container font-label-sm px-6 py-2 rounded-lg hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,227,253,0.3)]">
+                    Emergency Call
+                </button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden circuit-pattern">
+
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-tertiary/10 border border-tertiary text-tertiary font-label-sm uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px] mr-2" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        Certified Excellence
+                    </div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight">
+                        Powering Your World <br>
+<span class="text-secondary glow-secondary">With Precision</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Leading the charge in high-end residential and commercial electrical solutions. From smart home automation to industrial power systems, we deliver elite craftsmanship.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-headline-md hover:scale-105 transition-all duration-300 flex items-center gap-2 group">
+                            Get a Quote
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border border-outline-variant text-secondary px-8 py-4 rounded-xl font-headline-md hover:bg-secondary/10 transition-all duration-300">
+                            Emergency Service
+                        </button>
+</div>
+</div>
+<div class="hidden md:block relative">
+<div class="relative w-full aspect-square rounded-full border border-secondary/20 p-8">
+<div class="absolute inset-0 rounded-full border border-secondary/10 animate-pulse"></div>
+<div class="w-full h-full rounded-full overflow-hidden border-2 border-secondary/30 shadow-[0_0_50px_rgba(0,227,253,0.2)]">
+<img class="w-full h-full object-cover" data-alt="Close-up shot of a modern, high-tech electrical control panel with glowing indicators and perfectly organized wiring. The scene is shot in a dark, sleek industrial environment with vibrant cyan and electric blue light highlights, conveying precision and reliability. The shallow depth of field keeps the focus on the intricate electrical components." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA78KtG_XQ2gLt1Xxh8EqcMNg6d3IvoR_Dhm3f-MopzSSkc59jiFzkcdQ7DKRXcggoZh1_kNL5sc7h1Cw1d4OtaAFWcUHh1bmG2BvhvEJtafMkWrPLrzzLASqSXa8ylnFqcrRm9icW167SgpsOp45nysCL8SKFwr_GZqqxDukQQxpCjePbd_-NUUp-2H9GFRI7SKYw_B74-3n6eFmPeiWE0Jj58CndQVFU32GKb2dNBh6NDxQdiYbmH">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Highlights -->
+<section class="py-24 bg-surface-container-low relative">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="space-y-4">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-secondary uppercase tracking-widest">Our Services</h2>
+<p class="font-display-lg text-display-lg-mobile md:text-display-lg">Technical Mastery <br> Across Sectors</p>
+</div>
+<p class="max-w-md text-on-surface-variant mb-4">
+                        We specialize in complex electrical infrastructures, providing future-proof solutions for every environment.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Residential Card -->
+<div class="group relative overflow-hidden glass-panel rounded-2xl p-8 hover:-translate-y-2 transition-all duration-500">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-secondary text-5xl mb-6 block" style="font-variation-settings: 'FILL' 0;">home_work</span>
+<h3 class="font-headline-md text-headline-md text-secondary mb-4">Residential</h3>
+<p class="text-on-surface-variant mb-6">Smart home integration, full rewiring, and bespoke lighting designs for premium homes.</p>
+<ul class="space-y-3 mb-8 text-on-surface/80">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">bolt</span> EV Charging Points</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">bolt</span> Home Automation</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">bolt</span> Safety Inspections</li>
+</ul>
+<a class="text-secondary font-bold inline-flex items-center group-hover:gap-3 transition-all" href="our-services-r-s-s-electrical.html">
+                            Learn More <span class="material-symbols-outlined ml-2">chevron_right</span>
+</a>
+</div>
+<!-- Commercial Card -->
+<div class="group relative overflow-hidden bg-primary-container rounded-2xl p-8 border border-secondary/20 hover:-translate-y-2 transition-all duration-500">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary shadow-[0_0_15px_rgba(0,227,253,0.8)]"></div>
+<span class="material-symbols-outlined text-secondary text-5xl mb-6 block" style="font-variation-settings: 'FILL' 1;">business</span>
+<h3 class="font-headline-md text-headline-md text-secondary mb-4">Commercial</h3>
+<p class="text-on-surface-variant mb-6">High-efficiency electrical fit-outs for retail, offices, and large-scale commercial units.</p>
+<ul class="space-y-3 mb-8 text-on-surface/80">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">bolt</span> Office Fit-outs</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">bolt</span> Maintenance Contracts</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">bolt</span> Emergency Lighting</li>
+</ul>
+<a class="text-secondary font-bold inline-flex items-center group-hover:gap-3 transition-all" href="our-services-r-s-s-electrical.html">
+                            Learn More <span class="material-symbols-outlined ml-2">chevron_right</span>
+</a>
+</div>
+<!-- Industrial Card -->
+<div class="group relative overflow-hidden glass-panel rounded-2xl p-8 hover:-translate-y-2 transition-all duration-500">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-secondary text-5xl mb-6 block" style="font-variation-settings: 'FILL' 0;">factory</span>
+<h3 class="font-headline-md text-headline-md text-secondary mb-4">Industrial</h3>
+<p class="text-on-surface-variant mb-6">Robust electrical systems for manufacturing plants, warehouses, and heavy machinery.</p>
+<ul class="space-y-3 mb-8 text-on-surface/80">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">bolt</span> Three-Phase Systems</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">bolt</span> Power Distribution</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">bolt</span> Fault Finding</li>
+</ul>
+<a class="text-secondary font-bold inline-flex items-center group-hover:gap-3 transition-all" href="our-services-r-s-s-electrical.html">
+                            Learn More <span class="material-symbols-outlined ml-2">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof / Certifications -->
+<section class="py-24 border-y border-outline-variant/10">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Trusted by the <br> <span class="text-secondary">Best in the Industry</span></h2>
+<div class="grid grid-cols-2 gap-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+<div class="h-20 flex items-center justify-center border border-outline-variant/20 rounded-lg p-4">
+<span class="material-symbols-outlined text-4xl mr-2">verified</span>
+<span class="font-bold">NICEIC APPROVED</span>
+</div>
+<div class="h-20 flex items-center justify-center border border-outline-variant/20 rounded-lg p-4">
+<span class="material-symbols-outlined text-4xl mr-2">security</span>
+<span class="font-bold">TRUSTMARK</span>
+</div>
+<div class="h-20 flex items-center justify-center border border-outline-variant/20 rounded-lg p-4">
+<span class="material-symbols-outlined text-4xl mr-2">gavel</span>
+<span class="font-bold">ECA MEMBER</span>
+</div>
+<div class="h-20 flex items-center justify-center border border-outline-variant/20 rounded-lg p-4">
+<span class="material-symbols-outlined text-4xl mr-2">check_circle</span>
+<span class="font-bold">RECC COMPLIANT</span>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="p-8 bg-primary-container border border-secondary/10 rounded-2xl relative">
+<span class="material-symbols-outlined absolute -top-4 -left-4 text-5xl text-secondary opacity-50">format_quote</span>
+<p class="font-body-lg text-on-surface mb-6 italic leading-relaxed">
+                                "The level of professionalism displayed by R S S Electrical was outstanding. They completely transformed our commercial facility with minimal downtime. Their technical knowledge is unrivaled."
+                            </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container"></div>
+<div>
+<h4 class="font-bold text-on-surface">James Harrison</h4>
+<p class="text-sm text-secondary">Facility Manager, TechCorp UK</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-32 relative overflow-hidden">
+<div class="absolute inset-0 bg-secondary/5 skew-y-3 translate-y-12"></div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Ready to Start Your Project?</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                    Experience electrical services redefined by precision and modern engineering. Contact our expert team today for a comprehensive consultation.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a class="bg-secondary text-on-secondary-container px-10 py-5 rounded-full font-bold text-lg hover:scale-110 transition-transform flex items-center justify-center gap-3" href="tel:+1234567890">
+<span class="material-symbols-outlined">call</span>
+                        0800-RSS-ELEC
+                    </a>
+<button class="border-2 border-secondary text-secondary px-10 py-5 rounded-full font-bold text-lg hover:bg-secondary hover:text-on-secondary transition-all">
+                        Request a Callback
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-12 border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md text-secondary mb-6">R S S Electrical</div>
+<p class="text-on-surface-variant mb-6">Providing high-end electrical engineering and maintenance solutions across the UK.</p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="index.html"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="index.html"><span class="material-symbols-outlined">public</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-sm">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary-fixed transition-colors neon-flicker" href="our-services-r-s-s-electrical.html">Residential</a></li>
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary-fixed transition-colors neon-flicker" href="our-services-r-s-s-electrical.html">Commercial</a></li>
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary-fixed transition-colors neon-flicker" href="our-services-r-s-s-electrical.html">Industrial</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-sm">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary-fixed transition-colors neon-flicker" href="our-services-r-s-s-electrical.html">Safety Standards</a></li>
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary-fixed transition-colors neon-flicker" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary-fixed transition-colors neon-flicker" href="our-services-r-s-s-electrical.html">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-sm">Location</h4>
+<div class="w-full h-32 rounded-lg overflow-hidden grayscale opacity-50 hover:grayscale-0 transition-all cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="A minimalist map visualization showing the city of London, UK, styled in deep dark navy and vibrant cyan tones to match the futuristic electrical theme of the website." data-location="London, UK" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL_b5nK4BZF5VVMCjkZaCehFgEDnzSNl2lYmFp0rUsvBEGRxyfmH2tUKhQgrqkjZkgTWfLL-BVWkDIBbWa5QR7V9A-5vNaY54CtoLxmzKkqFDH3d734w3DkgjP_N8Cvmyl0GhN-NKmHZkayDuFEeOaGeotGvnDRaLG8xKiRxJJlt-v9DpNPVLDzjsgqUSz0_zuxdH44nXh65WSg3lidFF-QWdS3JNtQ2dCdeHmGddcVCo2WdnSCFZ6">
+</div>
+<p class="mt-4 text-sm text-on-surface-variant">Central London Operations Center</p>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-12 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant text-sm">
+<div>© 2024 R S S Electrical Services Ltd. All rights reserved.</div>
+<div class="flex gap-6">
+<span>NICEIC Registered #1234567</span>
+<span>VAT #GB987654321</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for buttons and glow effects
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('mousedown', () => {
+                el.style.transform = 'scale(0.95)';
+            });
+            el.addEventListener('mouseup', () => {
+                el.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simple scroll reveal for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-panel, .bg-primary-container').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

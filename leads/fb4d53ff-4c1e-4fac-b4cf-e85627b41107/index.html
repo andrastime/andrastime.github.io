@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Midwest City Electricals | Professional West Midlands Electricians</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#261a00",
+                    "surface-tint": "#4059aa",
+                    "surface-variant": "#d3e4fe",
+                    "secondary-container": "#ffc329",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#444651",
+                    "outline": "#757682",
+                    "inverse-surface": "#213145",
+                    "on-tertiary-fixed": "#131b2e",
+                    "tertiary": "#222a3e",
+                    "on-primary-fixed": "#00164e",
+                    "primary-container": "#1e3a8a",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#cbdbf5",
+                    "on-secondary-fixed-variant": "#5c4300",
+                    "on-surface": "#0b1c30",
+                    "secondary": "#795900",
+                    "inverse-primary": "#b6c4ff",
+                    "secondary-fixed": "#ffdf9f",
+                    "background": "#f8f9ff",
+                    "secondary-fixed-dim": "#f9bd22",
+                    "on-secondary-container": "#6f5100",
+                    "surface": "#f8f9ff",
+                    "on-background": "#0b1c30",
+                    "primary-fixed": "#dce1ff",
+                    "tertiary-fixed": "#dae2fd",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#bec6e0",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "outline-variant": "#c5c5d3",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#a4acc5",
+                    "on-primary-fixed-variant": "#264191",
+                    "primary": "#00236f",
+                    "tertiary-container": "#384055",
+                    "surface-container-highest": "#d3e4fe",
+                    "surface-container-low": "#eff4ff",
+                    "on-primary-container": "#90a8ff",
+                    "surface-container-high": "#dce9ff",
+                    "surface-container": "#e5eeff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-tertiary-fixed-variant": "#3f465c",
+                    "surface-bright": "#f8f9ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "base": "4px",
+                    "container-max": "1280px",
+                    "margin-desktop": "48px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-xl": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card:hover {
+            border-color: #795900; /* Safety Gold */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar Shell -->
+<nav class="bg-surface sticky top-0 z-50 border-b border-outline-variant shadow-sm h-20 px-margin-desktop flex justify-between items-center max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-extrabold text-primary">
+            Midwest City Electricals
+        </div>
+<div class="hidden md:flex gap-stack-lg items-center">
+<a class="text-on-surface-variant font-label-bold hover:text-primary transition-colors duration-200" href="#services">Services</a>
+<a class="text-on-surface-variant font-label-bold hover:text-primary transition-colors duration-200" href="#testimonials">Testimonials</a>
+<a class="text-on-surface-variant font-label-bold hover:text-primary transition-colors duration-200" href="#news">News</a>
+<a class="text-on-surface-variant font-label-bold hover:text-primary transition-colors duration-200" href="#areas">Service Areas</a>
+<button class="bg-primary text-on-primary px-6 py-2 font-label-bold rounded transition-all active:scale-95 active:opacity-80">
+                Book Now
+            </button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A professional electrician in a crisp navy blue uniform meticulously inspecting a complex, modern industrial fuse box. The lighting is focused and cinematic, highlighting the precision of the copper wiring and high-quality circuit breakers. The setting is a clean, contemporary commercial space with cool blue and grey tones. The mood is expert, reliable, and authoritative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlVBJEvhQ8KVD79as4QwHOTyegsq269edGjso3enmQ1nmzuJT5K-XTok3YNQMb1UVK3TBCmHxKSIF9LkuWjr9NjzBej9vBxoY8C2SPyfWzPms_Kd9DuT6XHJ-eRFfAShpYlOrLAtHN9nlbPRccVGpgYJTZ6LPWF2nEUJS00vaKM8kNsUlGNG1amN3yMVF4PaWYVth_s95hSHtKw_k9_D8e6zuLV9H22b2gWv4wT1i-8a9mE-fgH06F"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl text-white">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 font-label-bold rounded-sm mb-stack-md inline-block">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-600 animate-pulse"></span>
+                            Ready for Dispatch 24/7
+                        </span>
+</span>
+<h1 class="font-headline-xl text-headline-xl mb-stack-md leading-tight">
+                        Reliable Electrical Services for the West Midlands
+                    </h1>
+<p class="font-body-lg text-body-lg text-primary-fixed mb-stack-lg opacity-90">
+                        Domestic &amp; Commercial Experts. NAPIT Certified. 
+                        Safe, efficient, and locally trusted electrical engineering for your home and business.
+                    </p>
+<div class="flex flex-wrap gap-stack-md">
+<button class="bg-secondary-fixed text-on-secondary-fixed font-label-bold px-8 py-4 rounded-lg shadow-lg hover:bg-secondary-fixed-dim transition-all active:scale-95">
+                            Get a Free Quote
+                        </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/30 text-white font-label-bold px-8 py-4 rounded-lg hover:bg-white/20 transition-all active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined">call</span>
+                            Emergency Call
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Style) -->
+<section class="py-stack-lg px-margin-desktop max-w-container-max mx-auto" id="services">
+<div class="mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-sm">Expert Solutions</h2>
+<div class="w-20 h-1 bg-secondary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Domestic -->
+<div class="service-card group bg-white border border-outline-variant p-stack-lg rounded-xl transition-all duration-300">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg mb-stack-md group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">home</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Domestic Services</h3>
+<p class="text-on-surface-variant font-body-md mb-stack-md">From complete rewiring to smart home installations. We ensure your family's safety with modern electrical standards.</p>
+<ul class="space-y-2 mb-stack-lg">
+<li class="flex items-center gap-2 text-label-bold text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Lighting &amp; Switches
+                        </li>
+<li class="flex items-center gap-2 text-label-bold text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Fuse Box Upgrades
+                        </li>
+</ul>
+<a class="text-primary font-label-bold flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Commercial -->
+<div class="service-card group bg-white border border-outline-variant p-stack-lg rounded-xl transition-all duration-300">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg mb-stack-md group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">business</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Commercial Solutions</h3>
+<p class="text-on-surface-variant font-body-md mb-stack-md">Bespoke electrical infrastructure for offices, retail, and industrial units. Minimizing downtime, maximizing efficiency.</p>
+<ul class="space-y-2 mb-stack-lg">
+<li class="flex items-center gap-2 text-label-bold text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> PAT Testing
+                        </li>
+<li class="flex items-center gap-2 text-label-bold text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Industrial 3-Phase
+                        </li>
+</ul>
+<a class="text-primary font-label-bold flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Emergency -->
+<div class="service-card group bg-white border border-outline-variant p-stack-lg rounded-xl transition-all duration-300">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg mb-stack-md group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">emergency</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Emergency Repairs</h3>
+<p class="text-on-surface-variant font-body-md mb-stack-md">Power cut? Faulty wiring? Our rapid response team is available 24/7 across the West Midlands for urgent repairs.</p>
+<ul class="space-y-2 mb-stack-lg">
+<li class="flex items-center gap-2 text-label-bold text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> 60-Min Response
+                        </li>
+<li class="flex items-center gap-2 text-label-bold text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Fault Finding
+                        </li>
+</ul>
+<a class="text-primary font-label-bold flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="bg-surface-container-low py-stack-lg overflow-hidden" id="testimonials">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary">What Our Customers Say</h2>
+<p class="text-on-surface-variant mt-2">Trusted by hundreds of local residents and businesses</p>
+</div>
+<div class="flex flex-col md:flex-row gap-gutter">
+<div class="flex-1 bg-white p-stack-lg rounded-xl shadow-sm border border-outline-variant">
+<div class="flex text-secondary-fixed-dim mb-stack-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-stack-md">"Exceptional service. They arrived within 45 minutes for our emergency power failure in Birmingham. Professional and very tidy workers."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center font-bold text-primary">SJ</div>
+<div>
+<p class="font-label-bold text-on-surface">Sarah Johnson</p>
+<p class="text-label-sm text-on-surface-variant">Solihull Resident</p>
+</div>
+</div>
+</div>
+<div class="flex-1 bg-white p-stack-lg rounded-xl shadow-sm border border-outline-variant">
+<div class="flex text-secondary-fixed-dim mb-stack-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-stack-md">"Used for our warehouse lighting upgrade in Coventry. Competitive pricing and the team was knowledgeable about commercial compliance."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center font-bold text-primary">MR</div>
+<div>
+<p class="font-label-bold text-on-surface">Mark Roberts</p>
+<p class="text-label-sm text-on-surface-variant">Logistics Manager, Coventry</p>
+</div>
+</div>
+</div>
+<div class="flex-1 bg-white p-stack-lg rounded-xl shadow-sm border border-outline-variant">
+<div class="flex text-secondary-fixed-dim mb-stack-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-stack-md">"Re-wired our Victorian home in Wolverhampton. They respected the property and provided all the necessary safety certificates promptly."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center font-bold text-primary">DT</div>
+<div>
+<p class="font-label-bold text-on-surface">David Thompson</p>
+<p class="text-label-sm text-on-surface-variant">Wolverhampton Homeowner</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- News & Tips -->
+<section class="py-stack-lg px-margin-desktop max-w-container-max mx-auto" id="news">
+<div class="flex justify-between items-end mb-stack-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Latest from the Circuit</h2>
+<p class="text-on-surface-variant">Electrical safety advice and industry updates</p>
+</div>
+<button class="hidden md:block text-primary font-label-bold hover:underline">View All Posts</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Article 1 -->
+<article class="group cursor-pointer">
+<div class="aspect-video rounded-lg overflow-hidden mb-stack-md relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro photograph of high-quality electrical safety equipment including a modern voltage tester and insulated screwdrivers on a clean wooden workbench. The lighting is warm and clear, emphasizing safety and professional preparation. The style is crisp, clean, and modern with a focus on precision tools. Subtle industrial background textures add depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3cS8WZN5fp-1VoRBDn9P4evGNoBs9IxGaUxSwda2bpLKcLu-9GuArz09a-rFBFcOUY5xZk-OtrWKpshnVsKoSdTi_ENt2ut1C5YhbrC2IzKSrc79-9ur6_6PLvEjM1bQaYEYGeobbCOMy5xrmO5uimLrhttIMysFlAf_zJqpXDuiLc0cLGzbH8MKnS_kuQJdiL1bo4M1F2OBhRbPwugWQA4Ez-zGsdanwghVx1J6ah75BXwN_0uEC"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-label-sm px-2 py-1 rounded">Safety</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mb-2">5 Tips for Home Electrical Safety</h3>
+<p class="text-on-surface-variant line-clamp-2">Protect your home and family with these essential checks that every homeowner should perform annually...</p>
+</article>
+<!-- Article 2 -->
+<article class="group cursor-pointer">
+<div class="aspect-video rounded-lg overflow-hidden mb-stack-md relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A detailed, high-contrast shot of a newly installed, high-efficiency electrical consumer unit with labeled switches and neat wiring. The lighting is bright and architectural, highlighting the orderly and safe installation. The image conveys modern technology and home improvement. The background is a minimalist utility wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnfm6opFuT1v0w7nD2fIqVtWUZv87O_nDc6nGTrRlQsiQoMXxlBOsY1Sl7Jl9ycX7UMYWGhnTAPYmzSiGJ9nvPUAC6ykGYXvdpDLxPGhnXItwKa8kDl3w5DqbuC_xNeb6jcy3ygalQQ2s6Vl7BcdHbI0vDyVZtjzxtjXZPJaUXOxDAfLdjCR0Hbt1ksRsO614KQbDvt-wuh-iRjQcDUIE4p3jOXMfFmgKtYyOK1gYhER9GFil4iuwQ"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-label-sm px-2 py-1 rounded">Upgrades</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mb-2">Why Upgrade Your Fuse Box?</h3>
+<p class="text-on-surface-variant line-clamp-2">Older consumer units may not meet current fire safety regulations. Learn when it's time for an RCD protection upgrade...</p>
+</article>
+<!-- Article 3 -->
+<article class="group cursor-pointer">
+<div class="aspect-video rounded-lg overflow-hidden mb-stack-md relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern electric vehicle charging point installed on a sleek, grey exterior wall of a contemporary home. The setting is twilight, with a warm glow from the charger's LED indicator and the home's exterior architectural lighting. The mood is futuristic, eco-friendly, and technologically sophisticated. High-end suburban aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUO4DxpfGAE0Xval_nW8usJEHntreoi42Uuw_ozITumpza3iyMwHjMDzziG4jg0Tqtu2vxtNVMQinD_4AgUhfiHMChDZOT89KxXq-Vo0eg71uE3qbLVOcCiKPueBGl93XVa28eddNZgmtv4OSx-FhbUYmtt0m80GwlAgCftHNvlrbyRirT6uaSkjlGljAqrT63N_WPDiuOa1ch8p__S9ZI3ATujCEsaa-HLJ8VRxjT6-yDFyJFrg9c"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-label-sm px-2 py-1 rounded">Innovation</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mb-2">Electric Vehicle Charging at Home</h3>
+<p class="text-on-surface-variant line-clamp-2">Making the switch to EV? Find out what's required for a professional home charging installation in the West Midlands...</p>
+</article>
+</div>
+</section>
+<!-- Service Areas Section -->
+<section class="bg-primary text-white py-stack-lg" id="areas">
+<div class="px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row gap-gutter items-center">
+<div class="flex-1">
+<h2 class="font-headline-lg text-headline-lg mb-stack-md">Serving the West Midlands</h2>
+<p class="text-primary-fixed opacity-80 mb-stack-lg text-body-lg">We provide lightning-fast dispatch across the entire region. No matter where you are in the Midlands, our engineers are never far away.</p>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="flex items-center gap-2 font-label-bold"><span class="material-symbols-outlined text-secondary-fixed">location_on</span> Birmingham</div>
+<div class="flex items-center gap-2 font-label-bold"><span class="material-symbols-outlined text-secondary-fixed">location_on</span> Coventry</div>
+<div class="flex items-center gap-2 font-label-bold"><span class="material-symbols-outlined text-secondary-fixed">location_on</span> Wolverhampton</div>
+<div class="flex items-center gap-2 font-label-bold"><span class="material-symbols-outlined text-secondary-fixed">location_on</span> Solihull</div>
+<div class="flex items-center gap-2 font-label-bold"><span class="material-symbols-outlined text-secondary-fixed">location_on</span> Dudley</div>
+<div class="flex items-center gap-2 font-label-bold"><span class="material-symbols-outlined text-secondary-fixed">location_on</span> Walsall</div>
+</div>
+</div>
+<div class="flex-1 w-full h-[400px] rounded-2xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+<div class="bg-cover bg-center w-full h-full" data-location="Birmingham, UK" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCS9yEr4RhCOUrDsOJHhgPazPoa8eE6tlcG7ux8uxFHcirqHd7kNNOwUWB5LOKad1D4jkM9lxUxz0ISAb_PgN0Np_Vze8brAi0rjRZINJrWHVQD4esdPe4GAFCe872drCGuN-6z-flYl8wJP-95766WNga4SsvlehGOysW06blDv5wMIMiQ-wZ2zjxHPeCzo5FK50mWcNUvfTKdbodSkZFHsCsZKx7QKCUSD-R8EU5N7GRFNXBmkiCO')"></div>
+</div>
+</div>
+</section>
+<!-- Contact/CTA Section -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-surface-container-highest rounded-[2rem] p-stack-lg md:p-24 text-center border border-outline-variant relative overflow-hidden">
+<div class="absolute top-0 left-0 w-32 h-32 bg-secondary-container/20 rounded-full -translate-x-16 -translate-y-16"></div>
+<div class="absolute bottom-0 right-0 w-64 h-64 bg-primary/5 rounded-full translate-x-32 translate-y-32"></div>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-stack-md">Ready to Start Your Project?</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-stack-lg">
+                    Whether it's a quick socket repair or a major commercial overhaul, we're here to help. Get in touch for a non-obligatory, transparent quote today.
+                </p>
+<div class="flex flex-col md:flex-row justify-center gap-stack-lg">
+<div class="bg-white p-stack-md rounded-xl border border-outline-variant flex items-center gap-4 shadow-sm">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">phone_in_talk</span>
+</div>
+<div class="text-left">
+<p class="text-label-sm text-on-surface-variant">Call Anytime</p>
+<p class="font-headline-md text-primary">0121 555 0123</p>
+</div>
+</div>
+<div class="bg-white p-stack-md rounded-xl border border-outline-variant flex items-center gap-4 shadow-sm">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container">mail</span>
+</div>
+<div class="text-left">
+<p class="text-label-sm text-on-surface-variant">Email Us</p>
+<p class="font-headline-md text-primary">hello@midwest-electricals.co.uk</p>
+</div>
+</div>
+</div>
+<button class="mt-stack-lg bg-primary text-on-primary font-label-bold px-12 py-4 rounded-lg shadow-xl hover:opacity-90 active:scale-95 transition-all">
+                    Request Call Back
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-inverse-surface text-on-tertiary-fixed border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg py-stack-lg px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="text-headline-md font-headline-md font-bold text-surface-bright mb-stack-md">
+                    Midwest City Electricals
+                </div>
+<p class="text-on-tertiary-container text-body-md">
+                    The West Midlands' first choice for reliable, certified electrical excellence. Available 24/7.
+                </p>
+</div>
+<div>
+<h4 class="text-white font-label-bold mb-stack-md">Navigation</h4>
+<ul class="space-y-2">
+<li><a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors font-label-sm" href="#">Services</a></li>
+<li><a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors font-label-sm" href="#">Case Studies</a></li>
+<li><a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors font-label-sm" href="#">About Us</a></li>
+<li><a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors font-label-sm" href="#">Emergency Protocol</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-label-bold mb-stack-md">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors font-label-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors font-label-sm" href="#">Terms of Service</a></li>
+<li><a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors font-label-sm" href="#">Safety Certifications</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-label-bold mb-stack-md">Accreditations</h4>
+<div class="flex gap-4 opacity-70 grayscale contrast-125">
+<!-- Hypothetical accreditation badges -->
+<div class="w-12 h-12 bg-white/20 rounded flex items-center justify-center font-bold text-[10px]">NAPIT</div>
+<div class="w-12 h-12 bg-white/20 rounded flex items-center justify-center font-bold text-[10px]">CHAS</div>
+<div class="w-12 h-12 bg-white/20 rounded flex items-center justify-center font-bold text-[10px]">TRUSTMARK</div>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto py-stack-md border-t border-white/10 flex flex-col md:row justify-between items-center gap-stack-md">
+<p class="text-on-tertiary-container text-label-sm">© 2024 Midwest City Electricals. All rights reserved.</p>
+<div class="flex gap-stack-md">
+<span class="material-symbols-outlined text-on-tertiary-container cursor-pointer hover:text-white transition-colors">face_nod</span>
+<span class="material-symbols-outlined text-on-tertiary-container cursor-pointer hover:text-white transition-colors">alternate_email</span>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for the Navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('shadow-sm');
+            } else {
+                nav.classList.add('shadow-sm');
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        // Add active state to nav links
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(l => {
+                    l.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                    l.classList.add('text-on-surface-variant');
+                });
+                link.classList.add('text-primary', 'border-b-2', 'border-primary');
+                link.classList.remove('text-on-surface-variant');
+            });
+        });
+    </script>
+</body></html>

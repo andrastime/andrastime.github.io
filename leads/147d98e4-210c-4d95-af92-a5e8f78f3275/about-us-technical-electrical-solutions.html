@@ -1,0 +1,332 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us | Technical Electrical Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Hanken+Grotesk:wght@300;400;600&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#e9c400",
+                    "surface-container": "#1d2022",
+                    "surface-dim": "#101415",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "inverse-on-surface": "#2d3133",
+                    "tertiary-fixed": "#d5e3fd",
+                    "on-surface-variant": "#d0c6ab",
+                    "secondary-fixed": "#dae2fd",
+                    "on-error-container": "#ffdad6",
+                    "on-error": "#690005",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-primary": "#3a3000",
+                    "on-surface": "#e0e3e5",
+                    "secondary": "#bec6e0",
+                    "tertiary": "#f4f6ff",
+                    "surface-container-high": "#272a2c",
+                    "error": "#ffb4ab",
+                    "outline-variant": "#4d4732",
+                    "tertiary-fixed-dim": "#b9c7e0",
+                    "surface-container-highest": "#323537",
+                    "on-tertiary-fixed-variant": "#3a485c",
+                    "on-tertiary": "#233144",
+                    "on-primary-fixed": "#221b00",
+                    "on-secondary-container": "#adb4ce",
+                    "on-tertiary-fixed": "#0d1c2f",
+                    "surface-variant": "#323537",
+                    "inverse-surface": "#e0e3e5",
+                    "inverse-primary": "#705d00",
+                    "primary": "#fff6df",
+                    "on-tertiary-container": "#526075",
+                    "on-primary-fixed-variant": "#544600",
+                    "surface-tint": "#e9c400",
+                    "surface-container-low": "#191c1e",
+                    "background": "#101415",
+                    "secondary-container": "#3f465c",
+                    "primary-container": "#ffd700",
+                    "on-secondary": "#283044",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-background": "#e0e3e5",
+                    "surface-container-lowest": "#0b0f10",
+                    "primary-fixed": "#ffe16d",
+                    "tertiary-container": "#ccdbf4",
+                    "surface-bright": "#363a3b",
+                    "outline": "#999077",
+                    "surface": "#101415",
+                    "error-container": "#93000a",
+                    "on-primary-container": "#705e00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Libre Caslon Text"],
+                    "headline-xl": ["Libre Caslon Text"],
+                    "label-caps": ["JetBrains Mono"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Libre Caslon Text"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Libre Caslon Text"]
+            },
+            "fontSize": {
+                    "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["30px", {"lineHeight": "38px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["36px", {"lineHeight": "44px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #101415;
+            color: #e0e3e5;
+            overflow-x: hidden;
+        }
+        .electric-glow:hover {
+            box-shadow: 0px 0px 25px rgba(233, 196, 0, 0.4);
+        }
+        .glass-surface {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(233, 196, 0, 0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(233, 196, 0, 0.3);
+        }
+        .mesh-gradient {
+            background: radial-gradient(at 0% 0%, rgba(233, 196, 0, 0.05) 0px, transparent 50%),
+                        radial-gradient(at 100% 100%, rgba(30, 41, 59, 0.2) 0px, transparent 50%);
+        }
+        .line-accent {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e9c400, transparent);
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface-dim/80 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-[0px_10px_30px_rgba(233,196,0,0.08)]">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary-fixed-dim tracking-tight">
+                Technical Electrical Solutions
+            </div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="home-technical-electrical-solutions.html">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="our-services-technical-electrical-solutions.html">Services</a>
+<a class="font-label-caps text-label-caps text-primary-fixed-dim border-b-2 border-primary-fixed-dim pb-1" href="about-us-technical-electrical-solutions.html">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="index.html">Blog</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="about-us-technical-electrical-solutions.html">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden lg:block font-label-caps text-label-caps px-4 py-2 border-1.5 border-primary-fixed-dim text-primary-fixed-dim border-2 hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all active:scale-95">Get a Quote</button>
+<button class="font-label-caps text-label-caps px-4 py-2 bg-primary-fixed-dim text-on-primary-fixed font-bold electric-glow hover:scale-[1.02] transition-transform duration-200 active:scale-95">Emergency Call</button>
+</div>
+</div>
+</nav>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative min-h-[60vh] flex items-center overflow-hidden mesh-gradient">
+<div class="absolute inset-0 z-0">
+
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-2 gap-gutter items-center py-20">
+<div class="space-y-6">
+<div class="inline-flex items-center bg-primary-fixed-dim/10 px-4 py-1.5 rounded-full border border-primary-fixed-dim/20">
+<span class="font-label-caps text-label-caps text-primary-fixed-dim">Engineered Precision</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary text-glow">Decades of Powering Professional Excellence.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Since our inception, Technical Electrical Solutions has stood as a beacon of reliability and innovation in the electrical industry. We don't just fix circuits; we engineer environments where safety meets high-voltage performance.
+                    </p>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary-fixed-dim/10 blur-2xl group-hover:bg-primary-fixed-dim/20 transition-all duration-500 rounded-full"></div>
+<div class="relative aspect-square overflow-hidden border border-outline-variant/30 rounded-xl glass-surface">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast close-up of a professional electrician in a dark navy uniform focusing intently on a complex electrical control panel. The scene is illuminated by dramatic golden light reflecting off metallic components, creating a high-end corporate atmosphere. Sparks of light catch on industrial tools, emphasizing technical precision and a sophisticated midnight-navy and electric-gold color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM2rSToGIW6XRTpJtmirltjhK0RM1TOE-e83vqN8jGdPUuMzJl2jkPtXXwMt2q1mNTIpG25cHQ1Mn4fnt_dpAeCwXKJ-pOa7Rd9XRwt6Y5s7z2yZ3oSmaUqy2zILidQO4gdpfTthLqMZwKiWAS1WG6gcBw1VR8Uq25fhW8BbVxcTcKY7P8ptcP7XZholWfzQJDQ2S1jPddzeODkWEvXf8HB4wHQT0MXarHrSIzouQalQLXhLTbM_fH">
+</div>
+</div>
+</div>
+</section>
+<div class="line-accent"></div>
+<!-- History & Mission: Bento Grid -->
+<section class="py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 p-10 glass-surface rounded-xl hover:border-primary-fixed-dim/40 transition-all duration-500">
+<span class="material-symbols-outlined text-primary-fixed-dim mb-4" style="font-size: 48px;">history</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">Our Legacy</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Founded on the principles of technical rigor and uncompromised safety, Technical Electrical Solutions began as a small boutique consultancy. Over twenty years, we have evolved into a market leader, delivering complex electrical infrastructure for commercial skyscrapers, industrial plants, and luxury residential estates. Our history is written in every wire we lay and every connection we secure.
+                    </p>
+</div>
+<div class="md:col-span-4 p-10 bg-surface-container rounded-xl flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-primary-fixed-dim mb-4" style="font-size: 48px;">bolt</span>
+<h2 class="font-headline-md text-headline-md mb-4">Mission</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">To energize progress through intelligent design and safest-in-class electrical execution.</p>
+</div>
+<div class="mt-8 border-t border-outline-variant pt-4 font-label-caps text-label-caps text-primary-fixed-dim opacity-60">
+                        Status: Active Performance
+                    </div>
+</div>
+<div class="md:col-span-4 p-10 bg-surface-container-high rounded-xl hover:scale-[1.02] transition-transform duration-300">
+<h3 class="font-label-caps text-label-caps text-primary-fixed-dim mb-2">Team Expertise</h3>
+<p class="font-headline-md text-headline-md leading-tight">Master Electricians. Visionary Engineers.</p>
+</div>
+<div class="md:col-span-8 bg-surface-dim border border-outline-variant/30 rounded-xl p-10 flex items-center gap-10 overflow-hidden relative">
+<div class="absolute right-0 top-0 h-full w-1/2 opacity-20 pointer-events-none">
+
+</div>
+<div class="z-10 max-w-md">
+<h2 class="font-headline-md text-headline-md mb-4">Unrivaled Standards</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Every member of our team is hand-picked for their specialized technical knowledge, undergoing continuous rigorous training to stay at the vanguard of electrical code and smart-technology integration.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="bg-surface-container-lowest py-24 border-y border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary-fixed-dim mb-8">Why Trust Us?</h2>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<div class="bg-primary-fixed-dim/10 p-3 rounded-lg border border-primary-fixed-dim/20">
+<span class="material-symbols-outlined text-primary-fixed-dim">verified</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] mb-2">NICEIC Approved Contractor</h4>
+<p class="font-body-md text-on-surface-variant">As a top-tier NICEIC Approved Contractor, we are independently audited to ensure our work meets the highest safety and technical standards in the United Kingdom.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="bg-primary-fixed-dim/10 p-3 rounded-lg border border-primary-fixed-dim/20">
+<span class="material-symbols-outlined text-primary-fixed-dim">security</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] mb-2">Full Liability Protection</h4>
+<p class="font-body-md text-on-surface-variant">Complete peace of mind with comprehensive insurance and iron-clad warranties on every installation and repair service we perform.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-[4/5] bg-surface-dim rounded-2xl overflow-hidden shadow-2xl border border-outline-variant/20 p-8 flex flex-col items-center justify-center space-y-8 group">
+<img alt="NICEIC Logo" class="w-full max-w-xs object-contain filter drop-shadow-[0_0_15px_rgba(233,196,0,0.2)] transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLvNB4te1dLo0nXrFQ6a4j3EEQ3zLySzLw4KhWazHRJpflrQGk4NQqc58B4nFtfoJx6tKfMVkvz4ZDyEE_kpqd8AXY3qGBZ8VEIGhAiQNWQXkvULco8MPRBVl1m6_Ei_FXLpVibzc46_9zjCYoswr39jvaDbZdObDlkQJxdWS_99Sqz2Tr8-EW8I3EMXVV-j6oV3J3cH3JHF-sD-McM8J_XHRo37zKzXimZmitYuTo7lRpfEOusXKacQwg">
+<div class="text-center">
+<p class="font-label-caps text-label-caps text-primary-fixed-dim mb-2">Accreditation ID: TES-99421</p>
+<div class="flex justify-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-pulse"></span>
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-pulse delay-75"></span>
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-pulse delay-150"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary-fixed-dim/5 blur-3xl rounded-full translate-y-1/2"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<h2 class="font-headline-xl text-headline-xl mb-8">Ready to Power Your Next Project?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    Experience the difference that technical expertise and meticulous engineering can make. Let's build something brilliant together.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="px-10 py-5 bg-primary-fixed-dim text-on-primary-fixed font-bold font-label-caps text-label-caps electric-glow hover:scale-105 transition-all">
+                        Work With Us
+                    </button>
+<button class="px-10 py-5 border-2 border-primary-fixed-dim text-primary-fixed-dim font-bold font-label-caps text-label-caps hover:bg-primary-fixed-dim/10 transition-all">
+                        Meet the Team
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md text-primary-fixed-dim font-bold tracking-tight">Technical Electrical Solutions</div>
+<p class="font-body-md text-body-md text-on-surface-variant">The definitive standard in modern electrical engineering and infrastructure maintenance.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-on-surface">Solutions</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="our-services-technical-electrical-solutions.html">Electrical Repairs</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="our-services-technical-electrical-solutions.html">Lighting Installation</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="our-services-technical-electrical-solutions.html">Fuse Box Replacement</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-on-surface">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-primary-fixed-dim underline" href="about-us-technical-electrical-solutions.html">About Us</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="our-services-technical-electrical-solutions.html">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps text-on-surface">Emergency Support</h4>
+<div class="font-label-caps text-[20px] text-primary-fixed-dim bg-primary-fixed-dim/5 p-4 rounded-lg border border-primary-fixed-dim/10 inline-block">
+                    0800 123 4567
+                </div>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="about-us-technical-electrical-solutions.html"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="our-services-technical-electrical-solutions.html"><span class="material-symbols-outlined">distance</span></a>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<p class="font-label-caps text-[10px] text-on-surface-variant text-center opacity-60 uppercase tracking-[0.2em]">
+                © 2024 Technical Electrical Solutions. All rights reserved. Professional Electrical Excellence.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Subtle parallax on scroll for cards
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.pageYOffset;
+            const glassCards = document.querySelectorAll('.glass-surface');
+            glassCards.forEach(card => {
+                const speed = 0.05;
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    card.style.transform = `translateY(${(rect.top - window.innerHeight / 2) * speed}px)`;
+                }
+            });
+        });
+
+        // Hover Effect Logic for Gold Glow tracking
+        document.querySelectorAll('.glass-surface').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kitchen Appliances | A M Electrical Installations Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#462f2d",
+                        "on-background": "#ffdad7",
+                        "on-surface-variant": "#eabcb8",
+                        "primary-fixed": "#ffdad7",
+                        "on-primary-fixed": "#410005",
+                        "pure-white": "#FFFFFF",
+                        "silver-metallic": "#94A3B8",
+                        "secondary-container": "#47494e",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c2c6d4",
+                        "surface-container-lowest": "#1b0908",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#45474b",
+                        "on-tertiary-fixed": "#171c26",
+                        "error": "#ffb4ab",
+                        "primary-container": "#ff5353",
+                        "obsidian-deep": "#08090A",
+                        "surface-container-low": "#2a1615",
+                        "on-secondary-container": "#b7b8be",
+                        "background": "#210e0d",
+                        "secondary": "#c6c6cc",
+                        "inverse-primary": "#c00020",
+                        "surface-bright": "#4b3331",
+                        "on-secondary-fixed": "#1a1c20",
+                        "surface-tint": "#ffb3ae",
+                        "glass-surface": "rgba(255, 255, 255, 0.03)",
+                        "on-tertiary": "#2b303b",
+                        "inverse-on-surface": "#422a29",
+                        "tertiary": "#c2c6d4",
+                        "on-tertiary-fixed-variant": "#424752",
+                        "secondary-fixed": "#e2e2e8",
+                        "primary-fixed-dim": "#ffb3ae",
+                        "on-primary-fixed-variant": "#930016",
+                        "secondary-fixed-dim": "#c6c6cc",
+                        "inverse-surface": "#ffdad7",
+                        "error-container": "#93000a",
+                        "outline-variant": "#5f3e3c",
+                        "surface-container": "#2f1a19",
+                        "on-tertiary-container": "#252a34",
+                        "primary": "#ffb3ae",
+                        "surface": "#210e0d",
+                        "electric-red-glow": "rgba(255, 0, 46, 0.4)",
+                        "on-surface": "#ffdad7",
+                        "on-primary": "#68000c",
+                        "tertiary-container": "#8c919e",
+                        "outline": "#b08784",
+                        "surface-dim": "#210e0d",
+                        "tertiary-fixed": "#dee2f1",
+                        "on-secondary": "#2f3035",
+                        "surface-container-highest": "#462f2d",
+                        "surface-container-high": "#3a2423",
+                        "on-primary-container": "#5c0009"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-red {
+            box-shadow: 0 0 40px -10px rgba(255, 0, 46, 0.3);
+        }
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-obsidian-deep text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-obsidian-deep/80 backdrop-blur-xl font-body-md text-body-md docked full-width top-0 z-50 sticky border-b border-white/10 shadow-lg shadow-electric-red-glow/20">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md font-extrabold text-on-surface tracking-tighter">
+                A M Electrical
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:scale-105 transition-all duration-200" href="home-a-m-electrical-installations-ltd.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:scale-105 transition-all duration-200" href="index.html">Services</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:scale-105 transition-all duration-200" href="shop-appliances-a-m-electrical-installations-ltd.html">Shop</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:scale-105 transition-all duration-200" href="contact-us-a-m-electrical-installations-ltd.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-full font-bold hover:scale-105 transition-all active:opacity-80 active:scale-95" href="tel:07785781652">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+                    Emergency Call
+                </a>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Banner Section -->
+<section class="relative h-[60vh] md:h-[80vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida/AP1WRLuB21anIffux5xsb0DMozJZP481AAD4ts1jDSGY5fvV29RLdWdVYLVUkQH1D717xfDF2zICXXP8wcdqegETNcuJ763TzXTvvWOHfQvTumJPwvz6mFWOyiF7fvYVmYBywS7E0b0npeDYVelOBwo1IAlIiCmbCl2PI6cmpL2dTdpNLV8K9FerdMOPd9Pp61LTUy9Gsa5vl9BKCYi6l-nQVVW5p3WiarDailG5-zAH0k8RPKS6N2CkzGp5wQ">
+<div class="absolute inset-0 bg-gradient-to-r from-obsidian-deep via-obsidian-deep/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full">
+<div class="max-w-3xl space-y-6">
+<span class="font-label-caps text-label-caps text-primary tracking-widest bg-primary/10 px-4 py-1 rounded-full border border-primary/20">PREMIUM INSTALLATIONS</span>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface">
+                        New &amp; Replacement <span class="text-primary">Kitchen Appliances</span>
+</h1>
+<p class="text-body-lg text-on-surface-variant max-w-xl">
+                        Expert electrical disconnection, inspection, and high-precision installation for all your kitchen hardware. Reliable service established since 1998.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-8 py-4 bg-primary text-on-primary font-bold rounded-full hover:scale-105 transition-all glow-red active:scale-95">
+                            Browse Online Shop
+                        </button>
+<button class="px-8 py-4 glass text-on-surface font-bold rounded-full hover:bg-white/10 transition-all active:scale-95 border border-white/20">
+                            Request Installation
+                        </button>
+</div>
+</div>
+</div>
+<!-- Kinetic Background Element -->
+<div class="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-20 pointer-events-none">
+
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Primary Action Card -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl glass p-12 flex flex-col justify-end min-h-[400px]">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 group-hover:scale-110 transition-transform duration-700" data-alt="A professional electrician carefully aligning a sleek modern black glass induction hob into a light wood kitchen countertop. High-end residential setting with soft natural morning light and sharp focus on the installation technique. Cinematic dark mode aesthetic with obsidian shadows and electric red glow accents from the brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJGvP8QtmB4d7cdniLU8rZSuVMqfwPnlLhwnDQo6Ns_Qk_iHjQJPL9-5DPZt_fj-31D89ozsh5gQLP3g0oipJZZZGBWv2FOa_WpCOpRMXQu8uKB-rY8IE4ij49gOYpOGAQ--B_x0ExrC0Cn2sz6P_Ss83AnwuVoCmyWxhF40F-EL-rrHuxMjTiiHEKD7R4Ix167J2W1JRYZQ3eAr1eW1ep7b8GP1dAmR5H1UnBj1WUCQtEabMAu-4u">
+<div class="absolute inset-0 bg-gradient-to-t from-obsidian-deep to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Oven and Hob Packages</h2>
+<p class="text-on-surface-variant text-body-lg max-w-lg">
+                            Complete kitchen upgrades with our bundled packages. We supply, deliver, and professionally install high-performance kitchen technology.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="index.html">
+                            View All Packages <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Secondary Info Card -->
+<div class="md:col-span-4 glass rounded-xl p-8 flex flex-col gap-6 border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary text-4xl">build</span>
+<h3 class="font-headline-md text-headline-md">Installation Only</h3>
+<p class="text-on-surface-variant">
+                        Already bought your appliance? Our NIC EIC approved contractors will handle the complex wiring and certification for you.
+                    </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            Old unit disconnection
+                        </li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            Wiring safety inspection
+                        </li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            Certified connection
+                        </li>
+</ul>
+<div class="mt-auto pt-6">
+<img class="w-full h-32 object-cover rounded-lg grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/AP1WRLtbzfXcfd5PeH_3GVNhx07yVrEeK5i9fWms5LFF-6bmEEspWGVkN6pTysHBJsK4AFdR8xxaQx0cF8lOyUwG0acc4wLNUTJCGMzae8hq8ylLcBmpdf7WXX-Kd0Pf_qraLHjwDwmdwtMMSKixlBpxEoX2IgtLKJNI3H9jDdCIZNM7HuOnnNdhZRD3NW_FAIjASskBc8CATpmEC2aYcTz7wNQehFiB9B9PFPgNx7J9tk4n9CBObWyXcbjgVhk">
+</div>
+</div>
+</div>
+</section>
+<!-- Product Preview Grid -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="space-y-4">
+<span class="font-label-caps text-label-caps text-primary tracking-widest">CURRENT OFFERS</span>
+<h2 class="font-headline-lg text-headline-lg">Top-Rated Appliances</h2>
+</div>
+<button class="px-6 py-3 border border-outline text-on-surface rounded-full hover:bg-white/5 transition-all font-bold">
+                        Visit Full Online Shop
+                    </button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="glass rounded-xl overflow-hidden hover-lift group">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="Close up of a premium built-in electric double oven with a brushed stainless steel finish and digital interface. The oven is set in a dark minimalist kitchen cabinet. The lighting is dramatic and moody, highlighting the high-tech precision. Obsidian deep shadows with subtle electric red highlights on the control dials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9qZ5gZBPuXcs9tQ8BBEOcygrUXwVCwpWMYeKDDrK8lDhx2nHCImkEksGiqor52l-9WL5IJjTmvrqvh6mcHSLvHukVDuNErLn7roPDmNNVHGz-FI3ejsa8_0RBQ-axPDzH7Jz4IwGfVmyWvYBJNv4BbLG3EQe0owBlhPYtbAp7ofidXS0PuaTGQw-lk60FV-IJEGC7gnzcldU5h_iidJdpm-pU6qUN9X6FLrAfiU5bsJ-kUnCpAlBl">
+<div class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded text-xs font-bold font-label-caps">TOP CHOICE</div>
+</div>
+<div class="p-8 space-y-4">
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Built-in Double Oven</h3>
+<p class="text-on-surface-variant text-sm">Professional grade multifunction double oven including full installation and removal of old unit.</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-on-surface">£549.00</span>
+<button class="p-3 bg-white/10 rounded-full hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="glass rounded-xl overflow-hidden hover-lift group">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="A sleek black glass induction hob reflecting architectural kitchen lighting. Minimalist touch controls visible. The image is crisp and professional, emphasizing the high-tech surface. Atmospheric dark UI style with deep blacks and cool silver metallic highlights, punctuated by the brand's kinetic red energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzBKOp5E6GCW_c-CCwAkDkBAFjxl-lNRCoyg36Oq_tR37V1BmGqUuZHyjwkkbdx_pfPRPDmahUkjGoHIrrc1-hwDc7mDBrhCOCGIP9nq0W3D9MHoC5rIpFaEMfR0mv00Ycy7vDqDpu3iZ5AYCDzgFlB8I6UVoqO7ylB7WMbdzAd8eMnY8pxWQEKY7dayHFD6kMILIknA_L3oP5tszcP-BDSnHKYVtf3X_e-YJjOTEa5pqRThzQZ7uj">
+</div>
+<div class="p-8 space-y-4">
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Digital Induction Hob</h3>
+<p class="text-on-surface-variant text-sm">4-zone ultra-fast induction hob with touch control. Includes specialized circuit inspection for high-load appliances.</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-on-surface">£325.00</span>
+<button class="p-3 bg-white/10 rounded-full hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="glass rounded-xl overflow-hidden hover-lift group">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="A combined kitchen appliance package featuring a matching stainless steel oven and induction hob. The composition is modern and elegant, presented in a high-end designer kitchen environment. Soft, diffused red glow emanating from behind the appliances. Premium, kinetic, and reliable visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC9uWS9678FZ3OO-JxSB6WsN0UHKykP7aKlqsq1TOoOH1XVtYs6t-hH983IyT5D8eKZG5FRuFGWFWavzMpLZpm-_XXKzTPwD0NAjBn3-IgIV7iXLNSA8tom6ZiN4vg2Wu9QhOzSL3ITIB_g65RGiQuo74P8EFduO59Iw6w3bNgl_29wSewnEqJBgPPJzTCSUu60IV4OqPX5MqiycpVUxoKDYO-InhDS0fivC-iAAs9xP9ofhLJhNcx">
+<div class="absolute top-4 right-4 bg-error-container text-on-error-container px-3 py-1 rounded text-xs font-bold font-label-caps">BEST VALUE</div>
+</div>
+<div class="p-8 space-y-4">
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Premium Package A</h3>
+<p class="text-on-surface-variant text-sm">Full Oven &amp; Hob combo. Includes professional fitting, safety testing, and 2-year electrical guarantee.</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-on-surface">£799.00</span>
+<button class="p-3 bg-white/10 rounded-full hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="py-section-gap relative overflow-hidden">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto text-center relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-8 flex flex-col items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">verified_user</span>
+</div>
+<h4 class="font-headline-md text-headline-md">NICEIC Certified</h4>
+<p class="text-on-surface-variant">Fully approved contractors since 1998 ensuring absolute safety and compliance.</p>
+</div>
+<div class="p-8 flex flex-col items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">schedule</span>
+</div>
+<h4 class="font-headline-md text-headline-md">Fast Service</h4>
+<p class="text-on-surface-variant">Quick turnaround on replacements to get your kitchen back in action immediately.</p>
+</div>
+<div class="p-8 flex flex-col items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">payments</span>
+</div>
+<h4 class="font-headline-md text-headline-md">Fixed Pricing</h4>
+<p class="text-on-surface-variant">Competitive, transparent pricing for both appliance packages and installation services.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="pb-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="glass p-12 md:p-20 rounded-3xl relative overflow-hidden group">
+<div class="absolute inset-0 z-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 group-hover:opacity-100 opacity-50 transition-opacity"></div>
+<div class="relative z-10 flex flex-col items-center text-center space-y-8">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg max-w-4xl">
+                        Upgrade your kitchen with <span class="text-primary">Reliable Electrical Expertise.</span>
+</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl">
+                        Whether you need a full package or just a professional installation for your own appliance, we are ready to help. Contact us for a bespoke quote or browse our shop.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<a class="px-10 py-5 bg-primary text-on-primary font-bold rounded-full text-lg hover:scale-105 transition-all glow-red text-center" href="shop-appliances-a-m-electrical-installations-ltd.html">Visit Online Shop</a>
+<a class="px-10 py-5 glass border border-white/20 text-on-surface font-bold rounded-full text-lg hover:bg-white/10 transition-all text-center" href="contact-us-a-m-electrical-installations-ltd.html">Request A Quote</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest full-width pt-section-gap pb-12 border-t border-outline-variant flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-display-lg text-headline-md text-on-background font-extrabold tracking-tighter">
+                    A M Electrical
+                </div>
+<p class="text-on-surface-variant text-sm">
+                    NIC EIC Accredited and providing electrical services in the West Midlands and Birmingham for over 23 years.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full glass flex items-center justify-center hover:text-primary transition-colors" href="home-a-m-electrical-installations-ltd.html"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="w-10 h-10 rounded-full glass flex items-center justify-center hover:text-primary transition-colors" href="contact-us-a-m-electrical-installations-ltd.html"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-primary font-bold mb-6">Our Services</h5>
+<ul class="space-y-3 text-body-md">
+<li><a class="text-on-surface-variant hover:text-on-surface hover:text-primary transition-all underline-offset-4" href="index.html">Commercial Services</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface hover:text-primary transition-all underline-offset-4" href="index.html">Domestic Installations</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface hover:text-primary transition-all underline-offset-4" href="index.html">EV Charging Solutions</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface hover:text-primary transition-all underline-offset-4" href="index.html">Solar Energy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-primary font-bold mb-6">Contact Us</h5>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>8 Islington Row Middleway, Birmingham B15 1LD</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>0121 369 2370</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span>Mon-Fri: 8:00-19:00</span>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-primary font-bold mb-6">Quick Links</h5>
+<ul class="space-y-3 text-body-md">
+<li><a class="text-on-surface-variant hover:text-on-surface hover:text-primary transition-all underline-offset-4" href="contact-us-a-m-electrical-installations-ltd.html">Reviews</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface hover:text-primary transition-all underline-offset-4" href="home-a-m-electrical-installations-ltd.html">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface hover:text-primary transition-all underline-offset-4" href="index.html">Terms &amp; Conditions</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface hover:text-primary transition-all underline-offset-4" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 px-margin-mobile md:px-gutter max-w-container-max mx-auto text-center text-on-surface-variant text-sm opacity-50">
+            © 2024 A M Electrical Installations Ltd. All rights reserved. NICEIC Approved Contractor.
+        </div>
+</footer>
+<script>
+        // Micro-interaction: Header scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-2xl');
+            } else {
+                nav.classList.remove('shadow-2xl');
+            }
+        });
+    </script>
+</body></html>

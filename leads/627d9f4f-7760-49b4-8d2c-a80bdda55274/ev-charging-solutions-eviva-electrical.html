@@ -1,0 +1,414 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>EV Charging Services | Eviva Electrical</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#31302e",
+                        "on-tertiary-fixed-variant": "#474745",
+                        "tertiary-container": "#d9d7d4",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#c8cf00",
+                        "on-background": "#e2e2e2",
+                        "secondary-fixed-dim": "#c8c6c3",
+                        "on-error": "#690005",
+                        "surface-variant": "#333535",
+                        "primary-container": "#d9e021",
+                        "secondary-container": "#474744",
+                        "on-primary-fixed-variant": "#474a00",
+                        "error-container": "#93000a",
+                        "graphite-surface": "#2C2C2A",
+                        "secondary-fixed": "#e5e2de",
+                        "on-primary-container": "#5e6100",
+                        "inverse-primary": "#5f6200",
+                        "surface-container-low": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#b7b5b1",
+                        "glass-border": "rgba(255, 255, 255, 0.15)",
+                        "on-tertiary": "#30302f",
+                        "surface-container-highest": "#333535",
+                        "on-primary": "#313300",
+                        "surface-dim": "#121414",
+                        "inverse-surface": "#e2e2e2",
+                        "secondary": "#c8c6c3",
+                        "tertiary-fixed": "#e4e2df",
+                        "on-surface": "#e2e2e2",
+                        "tertiary": "#f6f3f0",
+                        "surface-container-lowest": "#0c0f0f",
+                        "primary": "#f6fd42",
+                        "background": "#121414",
+                        "on-secondary-fixed-variant": "#474744",
+                        "on-tertiary-container": "#5e5d5b",
+                        "surface-tint": "#c8cf00",
+                        "outline-variant": "#484833",
+                        "deep-charcoal": "#1D1D1B",
+                        "inverse-on-surface": "#2f3131",
+                        "on-primary-fixed": "#1c1d00",
+                        "electric-lime": "#D9E021",
+                        "on-surface-variant": "#c9c8ad",
+                        "surface-container-high": "#282a2b",
+                        "soft-gray": "#E2E2E2",
+                        "primary-fixed": "#e4eb2f",
+                        "tertiary-fixed-dim": "#c8c6c3",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "on-tertiary-fixed": "#1b1c1a",
+                        "outline": "#929279",
+                        "surface": "#121414",
+                        "surface-bright": "#38393a",
+                        "surface-container": "#1e2020"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "8rem",
+                        "grid-gutter": "2rem",
+                        "stack-sm": "0.5rem",
+                        "stack-lg": "3rem",
+                        "grid-margin": "4rem",
+                        "stack-md": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "mono-technical": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-caps": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "mono-technical": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(44, 44, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(217, 224, 33, 0.3);
+        }
+        .technical-dash::before {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 2px;
+            background-color: #D9E021;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-deep-charcoal text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-md border-b border-glass-border">
+<div class="flex justify-between items-center px-grid-margin py-4 max-w-[1440px] mx-auto">
+<a class="font-display-hero text-headline-md font-extrabold text-primary" href="index.html">
+                Eviva Electrical
+            </a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-display-hero text-label-caps text-soft-gray hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="font-display-hero text-label-caps text-soft-gray hover:text-primary transition-colors" href="our-services-eviva-electrical.html">Services</a>
+<a class="font-display-hero text-label-caps text-primary border-b-2 border-primary pb-1" href="ev-charging-solutions-eviva-electrical.html">EV Charging</a>
+<a class="font-display-hero text-label-caps text-soft-gray hover:text-primary transition-colors" href="led-lighting-systems-eviva-electrical.html">LED Lighting</a>
+<a class="font-display-hero text-label-caps text-soft-gray hover:text-primary transition-colors" href="contact-us-eviva-electrical.html">Contact</a>
+</div>
+<button class="bg-electric-lime text-deep-charcoal px-6 py-3 font-display-hero text-label-caps font-bold hover:brightness-110 transition-all active:scale-95">
+                Get a Quote
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center px-grid-margin py-section-padding">
+<div class="absolute inset-0 z-0">
+
+</div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-grid-gutter max-w-[1440px] mx-auto w-full items-center">
+<div class="md:col-span-7">
+<span class="font-mono-technical text-electric-lime tracking-[0.2em] uppercase mb-4 block">ECO RENEWABLES</span>
+<h1 class="font-display-hero text-display-hero text-white mb-6">
+                        Future-Proof Your <span class="text-primary">Property</span>
+</h1>
+<p class="font-body-lg text-soft-gray max-w-xl mb-stack-lg">
+                        Specialist EV Charging installation services for residential and commercial environments. Delivering high-speed, reliable infrastructure for the electric revolution.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-electric-lime text-deep-charcoal px-8 py-4 font-display-hero text-headline-md flex items-center justify-center gap-2 group transition-all active:scale-95">
+                            Request a Quote 
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<button class="border-2 border-white text-white px-8 py-4 font-display-hero text-headline-md flex items-center justify-center gap-2 hover:bg-white hover:text-deep-charcoal transition-all active:scale-95">
+                            View Commercial Solutions
+                        </button>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="relative aspect-square rounded-none overflow-hidden border-2 border-glass-border">
+<img alt="EV Charging" class="w-full h-full object-cover grayscale contrast-125 brightness-90 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvaNXIO1ZQoBJ-Q5qw8iqPWAQj62rsaXsJlMCB2LWPvdXjcRFv3qbH0ZKTpvCyq7svOnJ6uhzPbI8u6oozwPrMtcnwXxrbx4_mER176RtdK0JS-YE5ln59H52w2c4yQEprluse58Q4XjiXNYInaKK1jLdqFcur9c2eCm1bxcGAj-qY6_4m_paFz_KfQ05littKzWmQVFi2wRa2gd0caVVAL8XC_caLJM7KuL7iFHPO4dC9hwPfQhUlPiw">
+<div class="absolute inset-0 bg-gradient-to-tr from-deep-charcoal/80 to-transparent"></div>
+</div>
+<!-- Technical Block Overlay -->
+<div class="absolute -bottom-8 -left-8 glass-panel p-6 max-w-xs hidden lg:block">
+<span class="font-mono-technical text-electric-lime text-label-caps block mb-2">SYSTEM STATUS</span>
+<div class="flex items-center gap-3 mb-2">
+<div class="w-2 h-2 rounded-full bg-electric-lime animate-pulse"></div>
+<span class="font-mono-technical text-white text-sm">OZEV AUTHORISED INSTALLER</span>
+</div>
+<p class="font-body-md text-soft-gray text-xs leading-relaxed">
+                            Certified under the government's Office for Zero Emission Vehicles for domestic and workplace grants.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="px-grid-margin py-section-padding bg-surface-container-low">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-display-hero text-headline-lg text-white mb-4 technical-dash">Charging Solutions</h2>
+<p class="font-body-lg text-on-surface-variant">We provide end-to-end expertise across multiple environments, ensuring your infrastructure is scaled for tomorrow's demands.</p>
+</div>
+<div class="text-right">
+<span class="font-display-hero text-display-hero text-on-surface/5 font-extrabold leading-none">01</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Home Charging -->
+<div class="bg-graphite-surface p-8 border border-glass-border group hover:border-electric-lime transition-all duration-300">
+<div class="w-12 h-12 bg-white/5 flex items-center justify-center mb-8 group-hover:bg-electric-lime group-hover:text-deep-charcoal transition-colors">
+<span class="material-symbols-outlined">home</span>
+</div>
+<h3 class="font-display-hero text-headline-md text-white mb-4">Home Charging</h3>
+<p class="font-body-md text-on-surface-variant mb-8">
+                            Seamless smart charging solutions for residential properties. Fast, safe, and integrated with your home energy management.
+                        </p>
+<ul class="space-y-3 font-mono-technical text-sm text-soft-gray">
+<li class="flex items-center gap-2"><span class="text-electric-lime">/</span> 7kW Smart Chargers</li>
+<li class="flex items-center gap-2"><span class="text-electric-lime">/</span> App Integration</li>
+<li class="flex items-center gap-2"><span class="text-electric-lime">/</span> Load Balancing</li>
+</ul>
+</div>
+<!-- Commercial Charging -->
+<div class="bg-graphite-surface p-8 border border-glass-border group hover:border-electric-lime transition-all duration-300">
+<div class="w-12 h-12 bg-white/5 flex items-center justify-center mb-8 group-hover:bg-electric-lime group-hover:text-deep-charcoal transition-colors">
+<span class="material-symbols-outlined">corporate_fare</span>
+</div>
+<h3 class="font-display-hero text-headline-md text-white mb-4">Commercial Charging</h3>
+<p class="font-body-md text-on-surface-variant mb-8">
+                            High-capacity infrastructure for workplaces, fleet depots, and public parking facilities. Scalable and robust.
+                        </p>
+<ul class="space-y-3 font-mono-technical text-sm text-soft-gray">
+<li class="flex items-center gap-2"><span class="text-electric-lime">/</span> 22kW+ Rapid Charging</li>
+<li class="flex items-center gap-2"><span class="text-electric-lime">/</span> Payment Gateways</li>
+<li class="flex items-center gap-2"><span class="text-electric-lime">/</span> Back-office Management</li>
+</ul>
+</div>
+<!-- Fleet Solutions -->
+<div class="bg-graphite-surface p-8 border border-glass-border group hover:border-electric-lime transition-all duration-300">
+<div class="w-12 h-12 bg-white/5 flex items-center justify-center mb-8 group-hover:bg-electric-lime group-hover:text-deep-charcoal transition-colors">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<h3 class="font-display-hero text-headline-md text-white mb-4">Fleet Electrification</h3>
+<p class="font-body-md text-on-surface-variant mb-8">
+                            Strategic transition planning for corporate fleets. Maximizing uptime with intelligent power distribution.
+                        </p>
+<ul class="space-y-3 font-mono-technical text-sm text-soft-gray">
+<li class="flex items-center gap-2"><span class="text-electric-lime">/</span> Depot Assessment</li>
+<li class="flex items-center gap-2"><span class="text-electric-lime">/</span> Multi-site Monitoring</li>
+<li class="flex items-center gap-2"><span class="text-electric-lime">/</span> Energy Storage Integration</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits & Process Section -->
+<section class="px-grid-margin py-section-padding">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
+<!-- Benefits (Interactive Cards) -->
+<div>
+<h2 class="font-display-hero text-headline-lg text-white mb-12 technical-dash">The Eviva Advantage</h2>
+<div class="space-y-6">
+<div class="glass-panel p-8 group hover:bg-electric-lime/5 transition-all">
+<div class="flex items-start gap-6">
+<span class="font-mono-technical text-electric-lime text-lg font-bold">01</span>
+<div>
+<h4 class="font-display-hero text-headline-md text-white mb-2">Maximum Sustainability</h4>
+<p class="font-body-md text-on-surface-variant">Reduce carbon footprint significantly by integrating charging with solar PV and battery storage systems.</p>
+</div>
+</div>
+</div>
+<div class="glass-panel p-8 group hover:bg-electric-lime/5 transition-all">
+<div class="flex items-start gap-6">
+<span class="font-mono-technical text-electric-lime text-lg font-bold">02</span>
+<div>
+<h4 class="font-display-hero text-headline-md text-white mb-2">Cost Optimization</h4>
+<p class="font-body-md text-on-surface-variant">Intelligent scheduling allows charging during off-peak hours, slashing operational fuel costs by up to 70%.</p>
+</div>
+</div>
+</div>
+<div class="glass-panel p-8 group hover:bg-electric-lime/5 transition-all">
+<div class="flex items-start gap-6">
+<span class="font-mono-technical text-electric-lime text-lg font-bold">03</span>
+<div>
+<h4 class="font-display-hero text-headline-md text-white mb-2">Turnkey Convenience</h4>
+<p class="font-body-md text-on-surface-variant">From initial feasibility studies to ongoing maintenance, we handle the entire technical lifecycle.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Process (Technical Vertical Timeline) -->
+<div>
+<h2 class="font-display-hero text-headline-lg text-white mb-12 technical-dash">Our Methodology</h2>
+<div class="relative pl-12 border-l-2 border-glass-border space-y-16">
+<div class="relative">
+<div class="absolute -left-[60px] top-0 w-6 h-6 bg-electric-lime border-4 border-deep-charcoal"></div>
+<h4 class="font-display-hero text-headline-md text-white mb-2">Consultation &amp; Design</h4>
+<p class="font-body-md text-on-surface-variant">Site assessment, electrical load calculations, and hardware recommendation tailored to your usage profile.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[60px] top-0 w-6 h-6 bg-secondary border-4 border-deep-charcoal"></div>
+<h4 class="font-display-hero text-headline-md text-white mb-2">Precision Installation</h4>
+<p class="font-body-md text-on-surface-variant">Expert installation by NICEIC approved contractors, ensuring compliance with BS 7671 standards.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[60px] top-0 w-6 h-6 bg-secondary border-4 border-deep-charcoal"></div>
+<h4 class="font-display-hero text-headline-md text-white mb-2">Handover &amp; Testing</h4>
+<p class="font-body-md text-on-surface-variant">System commissioning, safety certification, and user training on software management tools.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[60px] top-0 w-6 h-6 bg-secondary border-4 border-deep-charcoal"></div>
+<h4 class="font-display-hero text-headline-md text-white mb-2">Support &amp; Maintenance</h4>
+<p class="font-body-md text-on-surface-variant">Annual inspections and remote technical support to ensure your uptime is never compromised.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative px-grid-margin py-section-padding bg-electric-lime text-deep-charcoal overflow-hidden">
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
+<span class="text-[300px] font-extrabold leading-none select-none">EV</span>
+</div>
+<div class="max-w-[1440px] mx-auto relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-display-hero text-display-hero leading-[1] mb-6">Ready to <br>Electrify?</h2>
+<p class="font-body-lg text-deep-charcoal/80 max-w-md">Contact our engineering team today for a comprehensive site assessment and detailed proposal.</p>
+</div>
+<div class="flex justify-start md:justify-end">
+<a class="bg-deep-charcoal text-electric-lime px-12 py-6 font-display-hero text-headline-md flex items-center gap-4 hover:scale-105 transition-all" href="contact.html">
+                            Get Your Free Quote
+                            <span class="material-symbols-outlined">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-charcoal border-t border-secondary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter px-grid-margin py-section-padding max-w-[1440px] mx-auto">
+<div class="col-span-1">
+<div class="font-display-hero text-headline-md font-bold text-primary mb-6">Eviva Electrical</div>
+<p class="font-body-md text-on-surface-variant mb-6">Expert electrical solutions for industrial, commercial, and heritage sectors across Birmingham and the UK.</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 border border-glass-border flex items-center justify-center hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div class="w-10 h-10 border border-glass-border flex items-center justify-center hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">mail</span>
+</div>
+</div>
+</div>
+<div>
+<h5 class="font-display-hero text-label-caps text-white mb-6 uppercase tracking-widest">Services</h5>
+<ul class="space-y-3">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="our-services-eviva-electrical.html">Electrical Installations</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="our-services-eviva-electrical.html">Electrical Testing</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="ev-charging-solutions-eviva-electrical.html">EV Charging</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="led-lighting-systems-eviva-electrical.html">LED Lighting</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-display-hero text-label-caps text-white mb-6 uppercase tracking-widest">Company</h5>
+<ul class="space-y-3">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">About Us</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="our-services-eviva-electrical.html">Sectors</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Accreditations</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-display-hero text-label-caps text-white mb-6 uppercase tracking-widest">Contact</h5>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-lime">location_on</span>
+<p class="font-body-md text-on-surface-variant text-sm">Viscount House, Birmingham Airport, B26 3QJ</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-lime">phone</span>
+<p class="font-body-md text-on-surface-variant text-sm">0121 371 0436</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-lime">mail</span>
+<p class="font-body-md text-on-surface-variant text-sm">hello@evivaservices.co.uk</p>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-glass-border px-grid-margin py-8">
+<div class="max-w-[1440px] mx-auto flex flex-col md:row justify-between items-center gap-4">
+<p class="font-body-md text-on-surface-variant text-sm text-center">© 2024 Eviva Electrical Services. All rights reserved.</p>
+<div class="font-mono-technical text-[10px] text-on-surface-variant/40 tracking-widest uppercase">Precision Engineering • Sustainable Power</div>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle scroll animation for elements
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'ease-out', 'translate-y-8', 'opacity-0');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

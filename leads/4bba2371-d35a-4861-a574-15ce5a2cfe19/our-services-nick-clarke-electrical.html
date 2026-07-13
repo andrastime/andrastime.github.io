@@ -1,0 +1,348 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | Nick Clarke Electrical</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&amp;family=Inter:wght@400;500&amp;family=Geist:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#313030",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-container": "#004970",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-dim": "#131313",
+                    "surface-variant": "#353534",
+                    "outline-variant": "#3d4a3e",
+                    "surface-container-highest": "#353534",
+                    "on-background": "#e5e2e1",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#006d37",
+                    "surface": "#131313",
+                    "on-surface": "#e5e2e1",
+                    "on-primary-container": "#005027",
+                    "primary-fixed-dim": "#4ae183",
+                    "surface-tint": "#4ae183",
+                    "tertiary": "#a3d3ff",
+                    "secondary-fixed-dim": "#ffb961",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary-fixed": "#cce5ff",
+                    "on-primary-fixed-variant": "#005228",
+                    "primary-fixed": "#6bfe9c",
+                    "on-secondary-container": "#563400",
+                    "secondary-fixed": "#ffddb9",
+                    "on-secondary": "#472a00",
+                    "on-surface-variant": "#bbcbbb",
+                    "primary": "#54e98a",
+                    "on-secondary-fixed-variant": "#663e00",
+                    "surface-bright": "#393939",
+                    "on-tertiary-fixed": "#001d31",
+                    "secondary": "#ffb961",
+                    "on-tertiary-fixed-variant": "#004b73",
+                    "tertiary-container": "#5fbaff",
+                    "error": "#ffb4ab",
+                    "background": "#131313",
+                    "secondary-container": "#e89300",
+                    "on-primary-fixed": "#00210c",
+                    "on-secondary-fixed": "#2b1700",
+                    "outline": "#869486",
+                    "on-tertiary": "#003351",
+                    "surface-container": "#201f1f",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error": "#690005",
+                    "tertiary-fixed-dim": "#92ccff",
+                    "primary-container": "#2ecc71",
+                    "on-primary": "#003919"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Montserrat"],
+                    "label-sm": ["Geist"],
+                    "headline-xl": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-primary {
+            box-shadow: 0 0 20px rgba(84, 233, 138, 0.15);
+        }
+        .glow-secondary {
+            box-shadow: 0 0 20px rgba(255, 185, 97, 0.15);
+        }
+        .luminous-border {
+            position: relative;
+        }
+        .luminous-border::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(84,233,138,0.15)] h-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<div class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg font-black text-primary uppercase tracking-tighter">
+                Nick Clarke Electrical
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1" href="our-services-nick-clarke-electrical.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-secondary font-bold hover:scale-95 transition-transform duration-150">Emergency Call</button>
+<button class="bg-primary text-on-primary font-bold px-6 py-2 rounded-lg glow-primary hover:scale-95 transition-all duration-150">Book Now</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-24 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card border border-primary/20 mb-6">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase text-primary">High-Voltage Expertise</span>
+</div>
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl mb-6">Precision Engineering. <br><span class="text-primary">Reliable Power.</span></h1>
+<p class="max-w-2xl mx-auto text-on-surface-variant text-lg">Comprehensive electrical solutions for premium residential and commercial projects. Certified, safe, and built to last.</p>
+</section>
+<!-- Domestic Services -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-32">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-12 h-[2px] bg-secondary"></span>
+<span class="text-secondary font-bold tracking-widest uppercase text-sm">Domestic Services</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Elevating Your Home's Infrastructure</h2>
+<div class="space-y-8">
+<div class="glass-card p-6 rounded-xl luminous-border">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<h3 class="font-bold text-xl mb-2">Full &amp; Partial Rewiring</h3>
+<p class="text-on-surface-variant">Modernize aging systems with future-proof wiring, ensuring safety and compliance with the latest regulations.</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl luminous-border">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div>
+<h3 class="font-bold text-xl mb-2">Architectural Lighting</h3>
+<p class="text-on-surface-variant">Smart lighting design and installation that transforms interiors through mood, function, and energy efficiency.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 h-[500px] rounded-2xl overflow-hidden glass-card luminous-border relative">
+<img class="w-full h-full object-cover opacity-80" data-alt="A high-contrast, professional close-up of a modern electrical consumer unit with neatly organized wires and green indicator lights. The lighting is moody and cinematic with cool blue tones and vibrant green accents reflecting off the metallic surfaces. The style is sleek, clean, and highlights technical precision in a dark-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEzB7iQhPFbn-ueiRLRC6KVpLwJevh5-SO7WX4KjKpKNzpyOArp04CYL5KqFJBJfPNIQUzLzqCr59RSRIJPtvt1TcbHYDfp7Zg45F8j4-4F745KUR-WLNAPpnpZD1TENhzSC54JHQ2ZaZaV3fEmSxFF2jsTBAS-frd-O24TimjBPThbZwNfJm4jOtyHqTLRX4ZUtfE_SoTjEtqfXlfBbFEyIX1CFlxepQ1B4h7k0Kabaijnhiz-nfdXg">
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Commercial Services -->
+<section class="bg-surface-container-low py-24 mb-32">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="h-[500px] rounded-2xl overflow-hidden glass-card luminous-border relative">
+<img class="w-full h-full object-cover opacity-80" data-alt="An expansive view of a large commercial office space or industrial facility featuring high-end exposed conduit runs and professional industrial lighting. The atmosphere is professional and high-tech, with deep charcoal ceilings and glowing orange and green accent lights. The image conveys scale and complex electrical engineering expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDztU3s5Aufzf-EKz8TEKn0ob9U7DSfCm9ZMoOXXlr7lECeSQuFlqy0nF9yLM9IBrSuuuBeFovejHa9sQpcIxJXHQUJlKuZH3ShvsoLYDzrMR7odfExO-Kb-PArFx3j6A7lF_xsDe5YOXyXV3YTWK5Bg4iakpG8SO8SOJFLJld0sixrOamEZ_hh7j65k2spEyGMkeEk8fA-UYHGI3Gsd-QwRtx80Yhj-ul4YuBdtkiBLY9gW2HVn2aXww">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="w-12 h-[2px] bg-secondary"></span>
+<span class="text-secondary font-bold tracking-widest uppercase text-sm">Commercial Excellence</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Scalable Solutions for Enterprise</h2>
+<div class="space-y-8">
+<div class="glass-card p-6 rounded-xl luminous-border">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">settings_input_component</span>
+</div>
+<div>
+<h3 class="font-bold text-xl mb-2">Industrial Installations</h3>
+<p class="text-on-surface-variant">Three-phase power distribution, heavy machinery hookups, and specialized industrial control systems.</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl luminous-border">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<h3 class="font-bold text-xl mb-2">Maintenance &amp; Testing</h3>
+<p class="text-on-surface-variant">Scheduled EICR inspections, PAT testing, and preventative maintenance to keep your business running safely.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Emergency Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-32">
+<div class="relative rounded-3xl p-8 md:p-16 overflow-hidden glass-card luminous-border">
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-secondary/10 blur-[100px] rounded-full -mr-20 -mt-20"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+<div class="lg:col-span-2">
+<div class="inline-block px-4 py-1 rounded bg-secondary/20 text-secondary border border-secondary/30 font-bold mb-6">
+                            24/7 SUPPORT
+                        </div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Critical Support When You Need It Most</h2>
+<p class="text-xl text-on-surface-variant mb-8 max-w-2xl">Sudden power failure? Safety hazard? Our emergency response team is on standby to restore your power and ensure your property's safety around the clock.</p>
+<div class="flex flex-wrap gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">timer</span>
+<span class="font-bold uppercase tracking-tight">Rapid Response</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">health_and_safety</span>
+<span class="font-bold uppercase tracking-tight">Certified Safety</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center text-center">
+<div class="w-24 h-24 rounded-full bg-secondary flex items-center justify-center mb-6 glow-secondary">
+<span class="material-symbols-outlined text-black text-4xl" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+</div>
+<div class="font-headline-lg text-secondary mb-2">0800 123 4567</div>
+<p class="text-on-surface-variant">Priority Hotline</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center py-20 relative">
+<div class="absolute inset-0 flex items-center justify-center -z-10 opacity-10">
+<span class="font-black text-[20vw] leading-none pointer-events-none select-none">NICK</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Ready to Start Your Project?</h2>
+<p class="text-on-surface-variant mb-12 max-w-lg mx-auto">Get a tailored quote for your residential or commercial electrical needs from an NICEIC Approved Contractor.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-primary text-on-primary font-bold text-lg px-12 py-5 rounded-full glow-primary hover:scale-105 transition-all">Get a Free Quote</button>
+<button class="glass-card text-on-surface font-bold text-lg px-12 py-5 rounded-full hover:bg-white/10 transition-all luminous-border">View Past Work</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-lowest w-full py-12 border-t border-white/5">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-secondary font-bold mb-4">Nick Clarke</div>
+<p class="text-on-surface-variant text-sm mb-6">Premium electrical services for the modern world. Precision, safety, and innovation.</p>
+<div class="flex gap-4">
+<span class="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined">public</span></span>
+<span class="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined">share</span></span>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-xs">Services</h4>
+<ul class="space-y-4 text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="our-services-nick-clarke-electrical.html">Commercial Services</a></li>
+<li><a class="hover:text-secondary transition-colors" href="our-services-nick-clarke-electrical.html">Domestic Services</a></li>
+<li><a class="hover:text-secondary transition-colors" href="our-services-nick-clarke-electrical.html">Emergency Support</a></li>
+<li><a class="hover:text-secondary transition-colors" href="our-services-nick-clarke-electrical.html">EICR Inspections</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-xs">Quick Links</h4>
+<ul class="space-y-4 text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="hover:text-secondary transition-colors" href="our-services-nick-clarke-electrical.html">Terms of Service</a></li>
+<li><a class="hover:text-secondary transition-colors" href="index.html">About Us</a></li>
+<li><a class="hover:text-secondary transition-colors" href="index.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-xs">Accreditation</h4>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded glass-card flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+</div>
+<div class="text-xs text-on-surface-variant leading-tight">
+<span class="block font-bold text-on-surface">NICEIC Approved</span>
+                        Contractor Number: 12345678
+                    </div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-12 pt-12 border-t border-white/5 text-center text-sm text-on-surface-variant">
+            © 2024 Nick Clarke Electrical. All rights reserved. NICEIC Approved Contractor.
+        </div>
+</footer>
+<script>
+        // Simple scroll animation for the navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('bg-surface/95');
+            } else {
+                nav.classList.remove('bg-surface/95');
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Top Techs Birmingham | Elite Auto Engineering &amp; Diagnostics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface-container-lowest": "#0c0f0f",
+                    "on-tertiary": "#303030",
+                    "on-secondary-fixed-variant": "#474746",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "surface-variant": "#333535",
+                    "secondary-container": "#474746",
+                    "surface-container-high": "#282a2b",
+                    "on-background": "#e2e2e2",
+                    "surface-gray": "#121212",
+                    "on-primary-fixed": "#410004",
+                    "on-primary": "#68000b",
+                    "primary-fixed-dim": "#ffb3ae",
+                    "tertiary": "#c8c6c6",
+                    "surface-container": "#1e2020",
+                    "surface-bright": "#38393a",
+                    "background": "#121414",
+                    "error-container": "#93000a",
+                    "on-surface-variant": "#eabcb8",
+                    "on-surface": "#e2e2e2",
+                    "tertiary-container": "#929090",
+                    "surface-tint": "#ffb3ae",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#930014",
+                    "inverse-on-surface": "#2f3131",
+                    "tertiary-fixed": "#e4e2e1",
+                    "primary": "#ffb3ae",
+                    "surface-container-low": "#1a1c1c",
+                    "surface-container-highest": "#333535",
+                    "electric-blue": "#00D1FF",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-tertiary-container": "#2a2a2a",
+                    "secondary-fixed": "#e5e2e1",
+                    "outline": "#b08783",
+                    "inverse-primary": "#c0001e",
+                    "on-primary-container": "#5c0009",
+                    "primary-fixed": "#ffdad7",
+                    "on-secondary": "#313030",
+                    "primary-container": "#ff5352",
+                    "inverse-surface": "#e2e2e2",
+                    "secondary": "#c8c6c5",
+                    "on-error": "#690005",
+                    "surface-dim": "#121414",
+                    "outline-variant": "#5f3e3c",
+                    "on-secondary-container": "#b7b5b4",
+                    "glow-red": "rgba(255, 0, 44, 0.4)",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "surface": "#121414"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-md": "24px",
+                    "container-max": "1280px",
+                    "unit": "4px",
+                    "margin-mobile": "16px",
+                    "stack-sm": "8px",
+                    "stack-lg": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 15px theme('colors.primary-container');
+        }
+        .glass-card {
+            background: rgba(18, 20, 20, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid #2D2D2D;
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255, 83, 82, 0.5);
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+            display: flex;
+            width: max-content;
+            animation: scroll 30s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary selection:text-on-primary-container overflow-x-hidden">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-surface/80 border-b border-surface-variant shadow-lg h-20">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-4">
+<img alt="Top Techs Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLuUw2J3lZyUdUBjWjSftaR7PNxPgm8X8qc5zi2m44AJDYTU5n8zqp-wlNTtyflJOT61uesw6U8sorYWFauxdOUqGg2qbIac97B1QoCas-QVvdRxT63_mXLG2iFCiwF3ATeNiapndYUmE2wqpSQgUlwB62ZcbuOKs2bqc32ZDRepEc99n_Hr6wzvtBeJYMImIJdRvIHEJ59FS5RjxN9O65uGEPts6NzMciStHfrg9p0d6X9sH16x3OAvnZHr">
+<span class="hidden lg:block text-headline-md font-display-lg font-extrabold tracking-tighter text-on-surface">Top Techs Birmingham</span>
+</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-sm text-label-sm uppercase" href="expert-services-top-techs-birmingham.html">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-sm text-label-sm uppercase" href="expert-services-top-techs-birmingham.html">MOT</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-sm text-label-sm uppercase" href="index.html">About</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-sm text-label-sm uppercase" href="book-your-appointment-top-techs-birmingham.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">call</span>
+<span class="font-label-sm text-label-sm">07491 993 230</span>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-label-sm text-label-sm uppercase tracking-widest font-bold scale-105 active:scale-95 transition-transform hover:shadow-[0_0_20px_rgba(255,83,82,0.6)]">
+                    Book Now
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center brightness-50" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLvxfthuEX6pdxN69nAVZI7eXAmT5qZwWcwjMpZ6o29KUoBZWjEY87okoRoZ7QKOIKJRlDXkMu8gzaEsXpMmOpMaZV85Kn3xCiE1aNyvDJmiDarARaLfAYTrmxMUm03OwWW4uVnE7dQgC21JhlfZ1-nvynn2nf_hHLT5qATAPOMXBJJIqRzC7L-Sw8PxLb7OFgbSrLxlYoh8cq2RpzdDmxEwMxBrSfyaxLdf1uJ0S6DKF-qPn1ZCjThi71M')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 mb-6">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">5.0 Rating • 390+ Reviews</span>
+</div>
+<h1 class="font-display-lg text-[48px] md:text-display-lg text-on-surface mb-stack-md">
+                        The Future of <span class="text-primary italic">Auto Engineering</span> &amp; Electrical Diagnostics.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-lg">
+                        Birmingham's premier laboratory for advanced ECU tuning, precision mechanical repairs, and high-performance engineering.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-container text-on-primary-container px-10 py-4 font-label-sm text-label-sm uppercase font-extrabold tracking-widest flex items-center justify-center gap-2 hover:scale-105 active:scale-95 transition-all glow-hover">
+                            Book a Service
+                            <span class="material-symbols-outlined">calendar_month</span>
+</button>
+<button class="border border-on-surface text-on-surface px-10 py-4 font-label-sm text-label-sm uppercase font-extrabold tracking-widest flex items-center justify-center gap-2 hover:bg-on-surface hover:text-background transition-all">
+                            Call Now
+                            <span class="material-symbols-outlined">call</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Booking Bar -->
+<section class="relative z-20 -mt-12 px-margin-mobile">
+<div class="max-w-container-max mx-auto glass-card p-6 md:p-8 flex flex-col md:flex-row items-center gap-gutter shadow-2xl">
+<div class="flex-1 w-full">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-2 block">Registration Number</label>
+<div class="flex">
+<div class="bg-[#FCD116] text-black font-bold px-3 py-4 text-2xl flex items-center border-l-4 border-blue-700">UK</div>
+<input class="w-full bg-black border-2 border-[#2D2D2D] text-white text-2xl font-bold uppercase tracking-widest px-6 focus:border-primary-container focus:ring-0" placeholder="ENTER REG" type="text">
+</div>
+</div>
+<div class="flex-1 w-full grid grid-cols-2 gap-4">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-2 block">Service Type</label>
+<select class="w-full bg-black border border-[#2D2D2D] text-on-surface py-4 px-4 font-body-md focus:border-primary-container focus:ring-0">
+<option>MOT Testing</option>
+<option>Full Service</option>
+<option>ECU Tuning</option>
+<option>Diagnostics</option>
+</select>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-2 block">Select Date</label>
+<input class="w-full bg-black border border-[#2D2D2D] text-on-surface py-4 px-4 font-body-md focus:border-primary-container focus:ring-0" type="date">
+</div>
+</div>
+<button class="w-full md:w-auto h-full bg-primary-container text-on-primary-container px-12 py-5 font-label-sm text-label-sm uppercase font-extrabold tracking-widest self-end">
+                    Check Prices
+                </button>
+</div>
+</section>
+<!-- Service Highlights -->
+<section class="py-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-display-lg text-headline-lg mb-4">Precision <span class="text-primary">Performance</span> Services</h2>
+<div class="h-1 w-24 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- ECU Tuning -->
+<div class="group relative overflow-hidden h-[400px] border border-outline-variant hover:border-primary transition-all duration-500">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700 brightness-[0.3]" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLushhj-jbgpRYhI10-PGrnYHZJ2UZYcdgB8YpeN3i-OmNo6DOEQ6__Kk_ST0voPPWvLoBu-myC4eHXqF6fqHgEdpIUr5Rjpi6EYHzJBK1-yKvu_Eb2hwkScBnRjkvg_7QF08oWK9obsNF-3kL215RBnn2qBJ8N8nqcaF2J7r8NdCCPLdQFUuX-fGWMi5MPDqc2MZMvHNpfEqa37LSH-MBmDhV-b6FC2485Sd7b0Q4CkwkvgMS6hKjkbA4Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="relative h-full p-8 flex flex-col justify-end">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">settings_input_component</span>
+<h3 class="font-display-lg text-headline-md mb-2">ECU Tuning</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Optimizing your engine's brain for peak power, efficiency, and torque through custom software remaps.</p>
+<a class="text-primary font-label-sm text-label-sm uppercase tracking-widest font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="expert-services-top-techs-birmingham.html">
+                            View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Advanced Diagnostics -->
+<div class="group relative overflow-hidden h-[400px] border border-outline-variant hover:border-primary transition-all duration-500">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700 brightness-[0.3]" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLvgDv0aF5Why3kE-U5JBIPCWhKUQP621YWbFnWzRUyOYPsfvJat2m76PLh5qrwgn7-HA-aBzNFj37ORBIe9ngZpB0t-xPoSTTWbHBpTi7nPzcxLpsuQ5AdPVHApE2kJQKDC56TZmR97CO4ayv2KwKRmJzKD12ighFgaNC_JiOu_X0LOzMibTSomnx9muwkODcxtGV2i8mtx8laLtr4TF9cym5kWhXzfUXJjFTaoBPciPYqtu984X9IFJyD8')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="relative h-full p-8 flex flex-col justify-end">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">analytics</span>
+<h3 class="font-display-lg text-headline-md mb-2">Advanced Diagnostics</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Main-dealer level electrical diagnostics using the industry's latest scanning and oscilloscope technology.</p>
+<a class="text-primary font-label-sm text-label-sm uppercase tracking-widest font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="expert-services-top-techs-birmingham.html">
+                            View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- MOT Testing -->
+<div class="group relative overflow-hidden h-[400px] border border-outline-variant hover:border-primary transition-all duration-500">
+<div class="absolute inset-0 bg-surface-container-high group-hover:bg-surface-container transition-colors duration-500"></div>
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 50% 50%, theme('colors.primary'), transparent 70%);"></div>
+<div class="relative h-full p-8 flex flex-col justify-end">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">verified</span>
+<h3 class="font-display-lg text-headline-md mb-2">MOT Testing</h3>
+<p class="text-on-surface-variant font-body-md mb-6">DVSA approved Class 4, 5, and 7 MOT testing center. Fast, fair, and comprehensive safety inspections.</p>
+<a class="text-primary font-label-sm text-label-sm uppercase tracking-widest font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="book-your-appointment-top-techs-birmingham.html">
+                            Book Test <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Us Section -->
+<section class="bg-surface-container-low py-stack-lg border-y border-outline-variant overflow-hidden relative">
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div>
+<h2 class="font-display-lg text-headline-lg mb-stack-md">Why Top Techs is the <span class="text-primary">Professionals' Choice</span></h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="bg-surface-container p-3 border border-outline-variant shrink-0">
+<span class="material-symbols-outlined text-primary">engineering</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[18px] mb-1">Master Electrical Lab</h4>
+<p class="text-on-surface-variant font-body-md">We solve the electrical gremlins that other garages can't find, using specialist lab equipment.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container p-3 border border-outline-variant shrink-0">
+<span class="material-symbols-outlined text-primary">precision_manufacturing</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[18px] mb-1">Elite OEM Standards</h4>
+<p class="text-on-surface-variant font-body-md">All work is carried out to manufacturer specifications, preserving your vehicle's warranty and value.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container p-3 border border-outline-variant shrink-0">
+<span class="material-symbols-outlined text-primary">reviews</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[18px] mb-1">5.0 Star Reputation</h4>
+<p class="text-on-surface-variant font-body-md">Over 390+ verified Google reviews from satisfied customers across Birmingham and the West Midlands.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square bg-surface-container-highest flex flex-col items-center justify-center border border-outline-variant group hover:border-primary transition-all">
+<span class="font-display-lg text-[48px] text-primary">390+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Reviews</span>
+</div>
+<div class="aspect-square bg-surface-container-highest flex flex-col items-center justify-center border border-outline-variant group hover:border-primary transition-all mt-8">
+<span class="font-display-lg text-[48px] text-primary">5.0</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Rating</span>
+</div>
+<div class="aspect-square bg-surface-container-highest flex flex-col items-center justify-center border border-outline-variant group hover:border-primary transition-all -mt-8">
+<span class="font-display-lg text-[48px] text-primary">15+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Years Exp</span>
+</div>
+<div class="aspect-square bg-surface-container-highest flex flex-col items-center justify-center border border-outline-variant group hover:border-primary transition-all">
+<span class="font-display-lg text-[48px] text-primary">24h</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Support</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Trust Scrolling Bar -->
+<section class="py-12 bg-black border-b border-outline-variant">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto mb-6">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-on-surface-variant block text-center">Specialized Engineering For</span>
+</div>
+<div class="overflow-hidden whitespace-nowrap">
+<div class="animate-scroll">
+<!-- Brand Items (Duplicated for seamless loop) -->
+<div class="flex gap-20 items-center px-10">
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">BMW</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">MERCEDES-BENZ</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">AUDI</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">PORSCHE</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">LAND ROVER</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">JAGUAR</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">VOLKSWAGEN</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">ABARTH</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">TESLA</span>
+</div>
+<div class="flex gap-20 items-center px-10">
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">BMW</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">MERCEDES-BENZ</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">AUDI</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">PORSCHE</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">LAND ROVER</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">JAGUAR</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">VOLKSWAGEN</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">ABARTH</span>
+<span class="font-display-lg text-headline-md opacity-30 hover:opacity-100 transition-opacity cursor-default">TESLA</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full pt-stack-lg pb-stack-md bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-display-lg text-headline-md text-on-surface flex items-center gap-3">
+<img alt="Logo" class="h-8" src="https://lh3.googleusercontent.com/aida/AP1WRLuUw2J3lZyUdUBjWjSftaR7PNxPgm8X8qc5zi2m44AJDYTU5n8zqp-wlNTtyflJOT61uesw6U8sorYWFauxdOUqGg2qbIac97B1QoCas-QVvdRxT63_mXLG2iFCiwF3ATeNiapndYUmE2wqpSQgUlwB62ZcbuOKs2bqc32ZDRepEc99n_Hr6wzvtBeJYMImIJdRvIHEJ59FS5RjxN9O65uGEPts6NzMciStHfrg9p0d6X9sH16x3OAvnZHr">
+<span class="font-extrabold tracking-tighter">Top Techs</span>
+</div>
+<p class="text-on-secondary-container font-body-md">Professional Auto Engineering &amp; Electrical Lab. Specializing in high-end vehicle maintenance and performance tuning.</p>
+<div class="flex gap-4">
+<a class="p-2 border border-outline-variant text-on-surface hover:border-primary hover:text-primary transition-all" href="index.html">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="p-2 border border-outline-variant text-on-surface hover:border-primary hover:text-primary transition-all" href="expert-services-top-techs-birmingham.html">
+<span class="material-symbols-outlined">video_camera_back</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-6">Expert Services</h4>
+<ul class="space-y-3">
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors duration-200 font-body-md" href="expert-services-top-techs-birmingham.html">ECU Tuning</a></li>
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors duration-200 font-body-md" href="index.html">Diagnostics</a></li>
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors duration-200 font-body-md" href="expert-services-top-techs-birmingham.html">Air Con Re-gas</a></li>
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors duration-200 font-body-md" href="expert-services-top-techs-birmingham.html">MOT Testing</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-6">Information</h4>
+<ul class="space-y-3">
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors duration-200 font-body-md" href="index.html">About Us</a></li>
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors duration-200 font-body-md" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors duration-200 font-body-md" href="index.html">Terms &amp; Conditions</a></li>
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors duration-200 font-body-md" href="index.html">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-6">Our Location</h4>
+<div class="space-y-4">
+<p class="text-on-secondary-container font-body-md">
+                        Bannerley Road, Garretts Green<br>
+                        Birmingham, B33 0SL, UK
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary hover:underline font-label-sm text-label-sm uppercase font-bold" href="index.html">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        View on Map
+                    </a>
+</div>
+</div>
+</div>
+<div class="mt-stack-lg pt-stack-sm border-t border-outline-variant/30 px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-on-secondary-container/60">© 2024 Top Techs Birmingham. All Rights Reserved.</p>
+<div class="flex gap-6">
+<img alt="App Store" class="h-8 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRGmQVIqZBPWbxVsIO3_MhKOvyAvKvqClhqEaxAvq6_NpAmX60AkL9SOtCAMAvW0QJe0ZHFVhFq5Zgn0sDkBREw8Et2wIk0q4vsDTiKOLZ0JfSffpF2I47F2YvN9FxUl0plCgtZdiLjEs6FbC3oB9GdrtABu_Ewa7rDTEF16921S_9x-4c5W9YBnrLuSL2h78AMy7awDVE7h3kwmoNGROJYTZIVsdPuhZqwsUKIpH9IwME3ThdOsDuFQ">
+<img alt="Play Store" class="h-8 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqwTp9v-K_q0_8r0lLvH4Iz6Q-BAYTbsdl402oLgQWJ8Sgz208p3O-D3i914_1oK9UYp2mNIaKqAa261itdKc0DDY-nR0-PV-zeE1rcOn_2XEHwldKLbM6uCOMeeCQCCqqJ2fPexQyE2ZZDiK3v_H3ug6xS0wJuPH1tPBBp6Ba-sDPPqRir1y_jKgyZgY802iCFNba7dtQgMJ6iatnAyG5U8pf7HEPlKA1-4K-p0yEw6CBRy8ysEIJ7g">
+</div>
+</div>
+</footer>
+<!-- FAB for Quick Call -->
+<a class="fixed bottom-8 right-8 z-[100] bg-primary-container text-on-primary-container p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all glow-hover" href="tel:07491993230">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">call</span>
+</a>
+<script>
+        // Micro-interactions and subtle scroll effects
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('h-16', 'bg-surface/95');
+                nav.classList.remove('h-20', 'bg-surface/80');
+            } else {
+                nav.classList.add('h-20', 'bg-surface/80');
+                nav.classList.remove('h-16', 'bg-surface/95');
+            }
+        });
+    </script>
+</body></html>

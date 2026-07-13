@@ -1,0 +1,543 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | FFR Electrical Services LTD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#ffd799",
+                        "surface-glass": "rgba(30, 41, 59, 0.7)",
+                        "primary-fixed": "#9cf0ff",
+                        "surface-deep": "#020617",
+                        "on-primary-fixed-variant": "#004f58",
+                        "background": "#0b1326",
+                        "tertiary-container": "#fec931",
+                        "inverse-on-surface": "#283044",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#ffdeac",
+                        "primary-container": "#00e5ff",
+                        "outline": "#849396",
+                        "surface-container-lowest": "#060e20",
+                        "on-tertiary-container": "#6f5500",
+                        "surface-variant": "#2d3449",
+                        "on-primary-fixed": "#001f24",
+                        "inverse-surface": "#dae2fd",
+                        "on-tertiary-fixed-variant": "#594400",
+                        "on-surface-variant": "#bac9cc",
+                        "surface-container-high": "#222a3d",
+                        "on-secondary": "#432c00",
+                        "on-tertiary-fixed": "#251a00",
+                        "on-primary": "#00363d",
+                        "on-secondary-fixed": "#281900",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#dae2fd",
+                        "surface": "#0b1326",
+                        "tertiary-fixed": "#ffdf96",
+                        "secondary-fixed-dim": "#ffba38",
+                        "on-secondary-fixed-variant": "#604100",
+                        "primary": "#c3f5ff",
+                        "on-background": "#dae2fd",
+                        "inverse-primary": "#006875",
+                        "surface-container-low": "#131b2e",
+                        "on-primary-container": "#00626e",
+                        "on-secondary-container": "#6a4800",
+                        "error-container": "#93000a",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#00daf3",
+                        "status-emergency": "#F87171",
+                        "electric-glow": "rgba(0, 229, 255, 0.4)",
+                        "tertiary-fixed-dim": "#f3bf26",
+                        "surface-dim": "#0b1326",
+                        "surface-bright": "#31394d",
+                        "on-tertiary": "#3e2e00",
+                        "surface-tint": "#00daf3",
+                        "tertiary": "#ffeac0",
+                        "surface-container": "#171f33",
+                        "surface-container-highest": "#2d3449",
+                        "outline-variant": "#3b494c",
+                        "secondary-container": "#feb300"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-sm": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "label-sm": ["13px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+            transform: translateY(-1px);
+        }
+        .emergency-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(248, 113, 113, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .marquee-badges {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: 40px;
+        }
+        .marquee-content {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: space-around;
+            min-width: 100%;
+            gap: 40px;
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body class="bg-surface-deep text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Header Navigation -->
+<header class="bg-surface-glass backdrop-blur-xl border-b border-white/10 sticky top-0 z-50 h-20 shadow-2xl">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-4">
+<img alt="FFR Electrical Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLtWSa406x7Mden9ilSqofaZBp3YAZ1kCw8e1OVKWLa9Yh_9vzf5qZPxfQTBBoHWsQDhhzpARLvc7i9Bm3Qse8W--X-0T92JNMQWOboSSG1btR09GpKq6_7TbEbSnFvDlfSTQmXnFRgYFg-aygx9MtCbS6vc8SSzqksYQN85I1FRNFfnkIroRhUPESJi967A2S7xCjQsJGzMWbSVmbonV5MXtQbmQdUWARS6ga5HE5j8DwYfVLeIIh4JfTwd">
+<span class="font-display-lg text-headline-md font-extrabold text-primary-fixed tracking-tighter hidden lg:block">FFR Electrical</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="index.html">Services</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="ffr-electrical-home.html">Projects</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="index.html">Commercial</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="ffr-electrical-home.html">Domestic</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="ffr-electrical-home.html">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden sm:flex items-center bg-status-emergency text-white px-6 py-2 rounded-full font-label-sm text-label-sm font-bold emergency-pulse transition-transform active:scale-95" href="tel:01215170633">
+                    Emergency 24/7
+                </a>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-sm text-label-sm font-bold btn-glow transition-transform active:scale-95">
+                    Get a Quote
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[60vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 grayscale" data-alt="A cinematic wide shot of a modern, high-tech electrical distribution panel with intricate wiring and blue indicator lights glowing in a dimly lit industrial setting. The image uses a cool, professional color palette of deep blues and cyans, reflecting the advanced engineering and electrical precision of FFR Electrical. Soft light streaks emphasize the technological sophistication and safety of the installation." src="https://lh3.googleusercontent.com/aida/AP1WRLsAemGFlmUN0A_qS3FPc1rez5GTuytEQM2QBo6vM2tuGZB0rzPiF8Ua3Q22yOe-__XggAzdZiiC6b_Itdqm6AqLxbJ-64MIZQS1XfvsapAFKslTkQ6FFgUfMgO7uLpjqGedH5XfNy-Tc5-j5Dbs_msEKnT9LGCDY6PCaGsjms8_ygiCvioZAlID5TzmYIR1ERxZ6SdFJMAEH1x-E70l0O_51-Bvji8frZUZYUxeAAXzrzVcnoxRJpcyE416">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-deep via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 w-full px-gutter max-w-container-max mx-auto py-20">
+<div class="max-w-2xl">
+<span class="inline-block px-3 py-1 mb-6 border border-primary-fixed/30 rounded-full font-label-sm text-label-sm text-primary-fixed tracking-widest uppercase">Certified Specialists</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Expert Electrical <span class="text-primary-fixed">Solutions</span> for Birmingham</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                        Precision engineering, safety compliance, and 24/7 emergency readiness. From EICR landlord certifications to complex commercial installations.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-headline-md text-headline-md btn-glow flex items-center gap-2">
+<span class="material-symbols-outlined">electric_bolt</span>
+                            Book an Inspection
+                        </button>
+<button class="border border-primary-fixed text-primary-fixed px-8 py-4 rounded-xl font-headline-md text-headline-md hover:bg-primary-fixed/10 transition-colors">
+                            Our Services
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-section-gap w-full px-gutter max-w-container-max mx-auto">
+<div class="mb-16 text-center">
+<h2 class="font-display-lg text-headline-md mb-4 uppercase tracking-tighter">What We Do</h2>
+<div class="h-1 w-20 bg-primary-container mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Domestic -->
+<div class="md:col-span-8 glass-card rounded-2xl p-8 flex flex-col md:flex-row gap-8 items-center group overflow-hidden">
+<div class="flex-1 space-y-4">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-widest">Residential</span>
+<h3 class="font-display-lg text-headline-md">Domestic Excellence</h3>
+<p class="text-on-surface-variant leading-relaxed">Expert residential electrical works with a friendly approach. From full bespoke rewiring projects to simple switch replacements, we handle every detail with precision.</p>
+<button class="text-primary-fixed font-label-sm text-label-sm flex items-center gap-2 hover:translate-x-2 transition-transform">
+                            View Domestic Services <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="w-full md:w-72 h-64 rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A professional electrician with focused concentration working on a modern domestic consumer unit. The scene is brightly lit with high-key lighting, emphasizing cleanliness and precision. The aesthetic matches the corporate modern style with glassmorphic accents, showcasing a variety of colored wires organized neatly within the electrical panel. The mood is one of safety, expertise, and high-quality residential service." src="https://lh3.googleusercontent.com/aida/AP1WRLt2U-bNc3kmsVhcVNCwHH8-68ee-f_pjjjsIV7gKerUOrMGJvpbvZeRnlRd5RrT8uWhTZc0mbZhtGjOnO2Yc7vL-Q67_aM4mj_nonxRdWgarkvy9gI1CfYnaso-jUE82-VftZsm9AT4yLhjqtnscSDOMJqf-vxVfZ7nnblc5r-i2IaJap5QlDkhcniPr4vy8z-B1VuQiLGb4-R5NyEk_nEluay1ef-xI24AZGlKkrtLxac2VJ5fgbt64cyJ">
+</div>
+</div>
+<!-- Landlord Certification -->
+<div class="md:col-span-4 bg-gradient-to-br from-primary-container to-on-primary-fixed-variant rounded-2xl p-8 text-on-primary-fixed flex flex-col justify-between shadow-2xl">
+<div>
+<div class="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h3 class="font-display-lg text-headline-md mb-2">Landlord EICR</h3>
+<p class="text-on-primary-fixed/80 mb-6">Certified inspections from only <span class="font-bold text-white text-2xl">£99</span>. Stay compliant with 2024 regulations.</p>
+</div>
+<button class="w-full bg-white text-on-primary-fixed font-bold py-3 rounded-xl hover:shadow-lg transition-shadow">
+                        Book EICR Now
+                    </button>
+</div>
+<!-- Commercial -->
+<div class="md:col-span-4 glass-card rounded-2xl p-8 flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-widest mb-4 block">Industrial &amp; Business</span>
+<h3 class="font-display-lg text-headline-md mb-4">Commercial Services</h3>
+<ul class="space-y-3 text-on-surface-variant text-sm">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-sm">check_circle</span>
+                                Energy assessments &amp; LED retrofits
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-sm">check_circle</span>
+                                Emergency lighting maintenance
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-sm">check_circle</span>
+                                Fault find &amp; rectification
+                            </li>
+</ul>
+</div>
+<button class="mt-8 border border-white/10 bg-white/5 py-3 rounded-xl hover:bg-white/10 transition-colors">
+                        Enquire Commercial
+                    </button>
+</div>
+<!-- Security -->
+<div class="md:col-span-8 glass-card rounded-2xl p-8 flex flex-col md:flex-row gap-8 relative overflow-hidden">
+<div class="flex-1 z-10">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-widest mb-2 block">Peace of Mind</span>
+<h3 class="font-display-lg text-headline-md mb-4">CCTV &amp; Intruder Alarms</h3>
+<p class="text-on-surface-variant mb-6">Protect your assets with 24/7 monitored security systems. We install everything from simple domestic cameras to fully functional industrial dome systems.</p>
+<div class="flex gap-4">
+<div class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed">videocam</span>
+</div>
+<span class="text-[10px] font-label-sm">CCTV</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed">notification_important</span>
+</div>
+<span class="text-[10px] font-label-sm">Alarms</span>
+</div>
+</div>
+</div>
+<div class="flex-1 flex items-center justify-center relative">
+<!-- Decorative elements -->
+<div class="absolute w-40 h-40 bg-primary-container/10 rounded-full blur-3xl"></div>
+<img class="rounded-xl shadow-2xl relative z-10 w-full max-w-sm" data-alt="A set of high-end, sleek white security cameras including a dome and bullet camera, set against a clean, dark backdrop with subtle blue light accents. The style is professional and tech-focused, representing the high quality of security installations offered by FFR Electrical. The lighting is focused and crisp, emphasizing the precision and modern design of the hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUNhbsq8ug160SFJdo7t5sqIWZPsZ48D6SZ6q9pHkXz77fmDx8O6lfXLY-oPMvvSLR-x8v_Jpwyn-UlDz_xmfOf7K6SLwIcuV2-f4cQcrm1wrLo4W_YpiGOhfGyxAnaLnigEJhWiBvHVWtTVEnrqWrjRYWDraI-ay0yDkQL3mdZGp2lGVTAh-7_ziXrVBGVDAQVfVMdPOh1jol3n9rUrajaWjThn4QKLVREeLqfkCkhahvyvvsRlf3VA">
+</div>
+</div>
+</div>
+</section>
+<!-- EICR FAQ/Info Section -->
+<section class="bg-surface-container py-section-gap">
+<div class="w-full px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-display-lg text-headline-md mb-8">EICR Compliance <span class="text-primary-fixed">&amp; Safety</span></h2>
+<div class="space-y-6">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-fixed/10 flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h4 class="font-headline-md text-sm mb-2">5-Year Renewal Cycle</h4>
+<p class="text-on-surface-variant text-sm">All EICR certificates under current legislation must be renewed every five years or at each change of tenancy.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-fixed/10 flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined">report_problem</span>
+</div>
+<div>
+<h4 class="font-headline-md text-sm mb-2">28-Day Rectification</h4>
+<p class="text-on-surface-variant text-sm">If deviations are found, you have 28 days to rectify faults and notify the local authority to remain compliant.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-fixed/10 flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<h4 class="font-headline-md text-sm mb-2">Approved Contractors</h4>
+<p class="text-on-surface-variant text-sm">As an NICEIC Approved Contractor, we are part of the Competent Persons Register for the private sector.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-1 rounded-3xl">
+<div class="bg-surface-deep rounded-[1.4rem] p-10">
+<h3 class="font-headline-md mb-6">Request Your Inspection</h3>
+<form class="space-y-4">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Property Type</label>
+<select class="w-full bg-surface-variant border-none rounded-xl text-on-surface focus:ring-2 focus:ring-primary-fixed">
+<option>Studio / 1-Bed Flat</option>
+<option>2-3 Bed House</option>
+<option>Commercial Premises</option>
+<option>Other</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Contact Name</label>
+<input class="w-full bg-surface-variant border-none rounded-xl text-on-surface focus:ring-2 focus:ring-primary-fixed" placeholder="Your name" type="text">
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Email Address</label>
+<input class="w-full bg-surface-variant border-none rounded-xl text-on-surface focus:ring-2 focus:ring-primary-fixed" placeholder="email@example.com" type="email">
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-bold py-4 rounded-xl btn-glow mt-4">
+                                    Send Inquiry
+                                </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Credentials Marquee -->
+<section class="py-20 border-y border-white/5 overflow-hidden">
+<div class="w-full px-gutter max-w-container-max mx-auto mb-10 text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Our Credentials &amp; Trusted Partners</span>
+</div>
+<div class="marquee-badges">
+<div class="marquee-content grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
+<img alt="City &amp; Guilds" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnO0z25jVZaInBjL-NTLLc6KV1tsZrYJDmQlsoBXunOGgkOM0DnvhUYpiTwpEX7WoKyIjQ_zlsf0EY322KdUsf4RceogYngxMNKibk017Rremaxuc8QZ-Hcwf---zPN1SaVrZ5PSTapKuOycTRWD6U7HAs_CImY4OYHiiRsBp5v4FHlXjlGmkXxJDiWnOTrQPImppfQ4gAXe08hlIuqaDRJrCAWpAJiuQ1KzNe_EnuZ4-RaXUYDXyTNQ">
+<img alt="NICEIC" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA34Bj5bdATGZ3HbpCTCUOJe9vsWRqXVKjWh0xkgFIcLlE7DYQjGcI_9abn7frPRLdVVB9mOHpFyn0rDd2KQ14KEWLmBr0iiLnAOnj-P0iDbdxrn95p90AzwkXWfePiE8vf9TIrE4iQXI1DoBaAS2NiT0Z01Bn5m6MKLRcDQ7N9sfc-x03Z9t3teKYoqxyGtRM2omSfC_5KoLqEcbYNTnI-wBXCt8uvXAYB3PJ3YeS8M9TPd5yHyaFt6Q">
+<img alt="Trustpilot" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXo7KPme2tHmewFpoeo7F4o0G_ry0-UB0eYUVGLJG9gKg1Y_vdWLFbMPKSwccsotXeue9_5k8Vnf-SQsMx-ndbrYSsme3hAbshoQysmr4seBEaYMd0xJ2yDmY34fUDrIingodNQ0IY6e-LiXEt-Dq5R3b8oyy6d4eNoeMPFDpv6nVi6UBIiWZovN_iqdvoMD0_38gvfb8R8vYMWWsJ9gYmtplMtoZRLVia-Wxm-YeILDO44CuzoIJutw">
+<img alt="Checkatrade" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTA2Dj5kJQhxAbrxEIBm5kC3ZnQ7ldrAMLALuaxjbbsTGOZUYuVXk8-U_6PBu-3KZdVJTgNJwqK3LVHLDOwssHuVWYPMZ8x4KxeOYi-XbO5qmtEjKNoLHmHiUeZeMx7Jb53HWDmQBCkmtWJSHopCh9W8IjpfMXlyrf2BRRlNeg3D9J3bI0nDN0gvn5NUgBJBJC6cUFvqu7uGPDyidiBY_M5InHccRuHzZsFNMz4MLP7W7Ojn0QgldL2w">
+<img alt="Part P" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW9A6OuBH6xunQ5EnLKf7CfvbfewVi-ydT_-5cJXZVneJkuMorc_09tsu9a0muoP_12HOeeGDJuJPklXmQRem94j1-DnvKjRyJrVlAPP6Lt6Nq_vd7UwTdy1GYGFiYGqytn_n0K3AE9tkuyQ3L5Xkrsz3pqOuP_eC5JqxnsXSpp1Bgs2GqNqH2H-t4987oliqAKjZEtD88WRhI5XCpGj1a4DzS_aC2o0Wmr4wvLwYaGWrkayWyo2jLrw">
+<img alt="Google" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpoRFA-hhmq4Q5cg3gjRPGd62MyX2EOonQdBaxlZOZVGyOT9ciy12BzsYw-P7N88vCgGcTxn6oxjC-BJkzNOMvCOKZck9XbCDt1D1UEUMAjlMyspfQ5QzAtRq3zIjBmrwdI1NJHMom70OelsTEtbqn8fcUXQ3PNg6uahqfIEUBWt7xOcDRe1MrIF1W_kFzHnIOoLsoQ5SDfvXKULCCdXEmXZ9Au09F8bGEw7Zn7sQICKg-LeJxV9ih5g">
+</div>
+<div class="marquee-content grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
+<img alt="City &amp; Guilds" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoitZiGAVS5GsG5iUzhtffd307BqRviHW8cUehPT0P-nwAk5m_dlcfJ3xaLpkCAM2EwZFRb9HB9eIqmeKnBbyKgGuxe6aCqEbxdwphMxuCfgp4ut-ko3yklQjz1_NutUBhGKVFoWRiNAcmVTpU4MJKxSkwGz3pHRqIHF8oyf7KfpW1CwP324FSI_r66c3_3mTFyqB4sM-VU6HOWxiYme7S_MSF-2hs7UNbDr1LfIeCNSY1UIT7OZPcvw">
+<img alt="NICEIC" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXAfQ9i_SGVHwQirqkHXv5G1nuAGTHCy-4Ifqvvcbv6PJIL_C6DXuH9sw8LjVo71_hmQ25qa9G6ohBBDFx3w5lqGQuoXQOgzm0PJiOE777Vw5uPcBASMvSq0bmGT-SG7jr6gvCFkSpfd8-VzXVk0nPE91T1md5C-0PZ-UQjHn-vS5n_m6zjPXDWmaTGD-GMBSgnfBfa2cJZJeoSiaZ8Cujlse6yb5mmMztbRFEn8uJNY6ys6j1-Uh7sg">
+<img alt="Trustpilot" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-SILG6tjbmlk87wjOpIHwRVvN3hgfw4nWe1MRyeIXaD6pQgnb0lF4GUB3rFhe9OO7pkhqHBz1DXjmmxch8CuBV-y1zUmnxy1BX5KEd6ZPEGV1ji8YQF1fKeg_GbeWIXzHz2h0_2t4TNGO-al7d17ZuCemS9MuH9afcpjXvgTE29ymLUTL522equKS8hQLW-EpFoXTLlnYezayGSybU6feDsjZ5aZ5fpd4l82QdgxJij0EQvwiJhoCZA">
+<img alt="Checkatrade" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb3_fTuzvAXdlpdEumNfcS8bwvGUBlNCFYn8NWFpZnT1anIAG_ddRSeqUYXd49VwdyyQPswasyDP-9W6GaqNuAKfVQBUPbOSFIPDAjildPf5VfklenK3vuaDod09Hu314QcWfw-EuwuqlHSlHJZbkv78wm5GcyfYV5tsdPo-ZXqWwYsQHFmas4OFOPVC2LDsywMNvjRgAbs-x4V50bgheifB4T5oGtxU1JVIdGfTOxf5ZR-x9kdIAWAA">
+<img alt="Part P" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaztkzUCv2AI6QsAxwm-khUoMI6stbB1gY4gxVcZOgytinKWaLj_idqx7fvpPYAZQhCVvJFQzbXx2ah76wW-FwpycuBGVS8kvfvtqFkiTYd85UUwBz6t3hwY1xa1DmUd2ki8iKxnPJZUeeurqavlGasHreft2Q3LtGJzFvwNkgkQlmab385wd3ejp6pLGJH45H6DWA5D_THDvNkQGb45nOUQb7EIhQhAKp18xqRAyresN_PSFiEOgBVg">
+<img alt="Google" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHUJYjnr0IQZHIne9b48MLN5we7vi25YlF6OF1uxxU2Q5fT3yY9v3Q_x6z3y5VSkCUdbwOyWxygA32I9CdpWdpJRcEGQb_aI5ayfNV2ar34eMqxSBnzkf6OVqk7_qvw44HXAMQ1uTbnPK6N4M8pmb2LiK5cKwjw13SfDqNuZWjvgmmcZvAIy2-Gx_SSWkdUm0l6dUVSQ3ZLfRSrtQKS24ZQRLOxUMQtgOJbM56eYYNibwbeQlfDXAuGw">
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-gap bg-surface-deep relative">
+<div class="w-full px-gutter max-w-container-max mx-auto text-center relative z-10">
+<h2 class="font-display-lg text-headline-md mb-12">Client Feedback</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="glass-card p-8 rounded-2xl text-left">
+<div class="text-primary-fixed mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-6 text-sm">"Lovely guys. Concerned that I was happy with the work at every stage. Clean and tidy. Polite and friendly. Very good advice too."</p>
+<p class="font-bold">Javed Aslam</p>
+</div>
+<div class="glass-card p-8 rounded-2xl text-left">
+<div class="text-primary-fixed mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-6 text-sm">"Good prompt service. Accurate diagnosis of the fault. Advice on safety issues. Fair pricing."</p>
+<p class="font-bold">Keith Hodgson</p>
+</div>
+<div class="glass-card p-8 rounded-2xl text-left">
+<div class="text-primary-fixed mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-6 text-sm">"Excellent job. I have used this company many times, always perfect, on time, excellent technical advice and work."</p>
+<p class="font-bold">Trevor Bailey</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap">
+<div class="w-full px-gutter max-w-container-max mx-auto">
+<div class="glass-card rounded-3xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+<div class="p-12 space-y-8">
+<h2 class="font-display-lg text-headline-md">Get in touch</h2>
+<p class="text-on-surface-variant">Have questions? We're here to help. Reach out for a free consultation or 24/7 emergency support.</p>
+<div class="space-y-6">
+<a class="flex items-center gap-4 group" href="tel:01215170633">
+<div class="w-10 h-10 rounded-full bg-primary-fixed/10 flex items-center justify-center text-primary-fixed group-hover:bg-primary-fixed group-hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<span class="block text-xs font-label-sm text-on-surface-variant uppercase tracking-widest">Phone</span>
+<span class="font-bold">0121 517 0633</span>
+</div>
+</a>
+<a class="flex items-center gap-4 group" href="mailto:info@ffrelectricalservices.co.uk">
+<div class="w-10 h-10 rounded-full bg-primary-fixed/10 flex items-center justify-center text-primary-fixed group-hover:bg-primary-fixed group-hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<span class="block text-xs font-label-sm text-on-surface-variant uppercase tracking-widest">Email</span>
+<span class="font-bold">info@ffrelectricalservices.co.uk</span>
+</div>
+</a>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-primary-fixed/10 flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<span class="block text-xs font-label-sm text-on-surface-variant uppercase tracking-widest">Location</span>
+<span class="font-bold">11 Deakind Rd, Birmingham, B25 8DX</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-full min-h-[400px]">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional satellite view and map integration of the Birmingham area, centered on the location of FFR Electrical Services. The map features modern UI accents, clean typography, and a highlighted zone for service coverage. The color palette is customized to match the website's dark corporate theme with cyan and neon blue highlights for streets and landmarks, maintaining a high-tech and precise engineering aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAcfaIv_sxl4q7Q4kpy_IzOzL09QvN3-PSS_3xfsNhgcMVNtlBI2jWrlNT6b7yWPlQ4D0R6Io40BWU8k31AvdwvUiGtGyfkRW21EEIM7qOh4DYIxF0NxKi15Er4Br5mBqNBQvSnrvROHtIChQx1pdr411spIII8M_sJKGs6bq4N4ZGE_-nANydR_vlRNsMIKYxMA8KLtgLB6AVyWdbbN_A0BbYyThxOC410VzSuBPzhA0DsfHT9omQhLA')"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-deep border-t border-white/5 py-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-section-gap w-full px-gutter max-w-container-max mx-auto">
+<div class="space-y-6">
+<img alt="FFR Electrical" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLtWSa406x7Mden9ilSqofaZBp3YAZ1kCw8e1OVKWLa9Yh_9vzf5qZPxfQTBBoHWsQDhhzpARLvc7i9Bm3Qse8W--X-0T92JNMQWOboSSG1btR09GpKq6_7TbEbSnFvDlfSTQmXnFRgYFg-aygx9MtCbS6vc8SSzqksYQN85I1FRNFfnkIroRhUPESJi967A2S7xCjQsJGzMWbSVmbonV5MXtQbmQdUWARS6ga5HE5j8DwYfVLeIIh4JfTwd">
+<p class="text-on-surface-variant text-sm">Professional electrical contracting based in the heart of Birmingham. NICEIC Certified excellence since inception.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-primary-fixed/20 transition-colors" href="ffr-electrical-home.html">
+<span class="material-symbols-outlined text-sm">face_nod</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-primary-fixed/20 transition-colors" href="ffr-electrical-home.html">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-6">Services</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary-fixed text-sm transition-colors" href="ffr-electrical-home.html">Domestic Installations</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed text-sm transition-colors" href="ffr-electrical-home.html">Commercial Testing</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed text-sm transition-colors" href="ffr-electrical-home.html">EICR Reports</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed text-sm transition-colors" href="ffr-electrical-home.html">Security Systems</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-6">Contact</h4>
+<ul class="space-y-3 text-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                        Mon - Fri: 24 hrs
+                    </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                        Sat: 8am - 2pm
+                    </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                        Sun: Closed
+                    </li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-6">Newsletter</h4>
+<p class="text-on-surface-variant text-sm mb-4">Get safety tips and regulatory updates.</p>
+<div class="flex bg-surface-variant p-1 rounded-xl">
+<input class="bg-transparent border-none focus:ring-0 text-sm flex-1" placeholder="Email" type="email">
+<button class="bg-primary-fixed text-on-primary-fixed px-4 py-2 rounded-lg font-bold text-xs">Join</button>
+</div>
+</div>
+</div>
+<div class="w-full px-gutter max-w-container-max mx-auto pt-20 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/5 mt-20 opacity-50 text-[10px] uppercase tracking-widest">
+<p>© 2024 FFR ELECTRICAL SERVICES LTD. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8">
+<a class="hover:text-primary-fixed" href="#">Privacy Policy</a>
+<a class="hover:text-primary-fixed" href="index.html">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple smooth scroll and intersection observer for glass reveal
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add a subtle glow following the mouse on glass cards (optional interaction)
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

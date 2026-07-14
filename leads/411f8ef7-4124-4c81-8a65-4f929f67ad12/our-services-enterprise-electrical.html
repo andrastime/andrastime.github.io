@@ -1,0 +1,373 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | Enterprise Electrical Services Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-container": "#7594cb",
+                      "tertiary-container": "#4c1f00",
+                      "on-primary-fixed": "#001b3e",
+                      "on-secondary": "#ffffff",
+                      "caution-orange": "#E36C09",
+                      "surface-variant": "#e0e3e5",
+                      "secondary-fixed": "#7df4ff",
+                      "secondary": "#006970",
+                      "outline": "#747780",
+                      "on-surface": "#181c1e",
+                      "tertiary-fixed-dim": "#ffb68c",
+                      "on-secondary-container": "#00686f",
+                      "on-tertiary-fixed-variant": "#753400",
+                      "surface-container-highest": "#e0e3e5",
+                      "deep-navy": "#002B5C",
+                      "on-tertiary-container": "#ea7111",
+                      "on-tertiary-fixed": "#321200",
+                      "surface-tint": "#3f5f92",
+                      "secondary-fixed-dim": "#00dbe9",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#43474f",
+                      "primary-container": "#002b5c",
+                      "inverse-on-surface": "#eef1f3",
+                      "error": "#ba1a1a",
+                      "primary-fixed": "#d6e3ff",
+                      "on-secondary-fixed-variant": "#004f54",
+                      "surface-container-high": "#e5e9eb",
+                      "surface-bright": "#f7fafc",
+                      "tertiary-fixed": "#ffdbc9",
+                      "inverse-primary": "#aac7ff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#181c1e",
+                      "primary": "#001736",
+                      "surface": "#f7fafc",
+                      "surface-container": "#ebeef0",
+                      "obsidian": "#0A0D12",
+                      "surface-container-low": "#f1f4f6",
+                      "outline-variant": "#c4c6d0",
+                      "secondary-container": "#00eefc",
+                      "on-tertiary": "#ffffff",
+                      "steel-gray": "#4A5568",
+                      "background": "#f7fafc",
+                      "on-primary-fixed-variant": "#264779",
+                      "surface-dim": "#d7dadc",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#002022",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#2c0f00",
+                      "inverse-surface": "#2d3133",
+                      "electric-cyan": "#00F0FF",
+                      "primary-fixed-dim": "#aac7ff",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "section-padding-lg": "120px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "body-md": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["Montserrat"],
+                      "display-lg": ["Montserrat"],
+                      "label-caps": ["JetBrains Mono"],
+                      "body-lg": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .circuit-line {
+            background: linear-gradient(90deg, transparent, #00F0FF, transparent);
+            height: 1px;
+            width: 100%;
+        }
+        .service-card-hover:hover .service-icon {
+            transform: scale(1.1);
+            color: #00F0FF;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-electric-cyan selection:text-deep-navy">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface/80 backdrop-blur-xl border-b border-outline-variant sticky top-0 z-50 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+<div class="flex items-center space-x-4">
+<img alt="Enterprise Electrical Services Ltd Logo" class="h-10 md:h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvh2GgagnDlchhyXuAkhjQCUzPzz5WZU1BDhfRDZ4fV7qiKszLcNYXShOaKeB4acy1Rh1-BpOVnx2513eIXlSNu8SG3z2TGFokJpgDygIqfCAtOHAz1Z_6SjnIYxXkPhMq7sNdgF2CypeFNnpP-nD9IBA61h0u9EbIQiqRQR8yX3v3hFRjfuhzqLkAIJoTs8WynRoQd7kCBhCSTK7uuL28pe8q4Tq9io62vHHkTmaHWStZHNUKEiyjXnZA">
+</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-deep-navy transition-colors" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-electric-cyan border-b-2 border-electric-cyan pb-1" href="our-services-enterprise-electrical.html">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-deep-navy transition-colors" href="featured-projects-enterprise-electrical.html">Projects</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-deep-navy transition-colors" href="blog-news-enterprise-electrical.html">Blog</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-deep-navy transition-colors" href="index.html">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-deep-navy transition-colors" href="index.html">Contact</a>
+<button class="bg-deep-navy text-white px-6 py-2 rounded-lg font-label-caps text-label-caps hover:bg-electric-cyan hover:text-deep-navy transition-all duration-300">
+                    Request a Quote
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden flex items-center p-2 text-deep-navy">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-primary overflow-hidden py-24 md:py-32">
+<div class="absolute inset-0 opacity-10">
+
+</div>
+<div class="relative max-w-container-max mx-auto px-gutter text-center">
+<div class="inline-block px-3 py-1 bg-electric-cyan/20 border border-electric-cyan/40 mb-6">
+<span class="font-label-caps text-label-caps text-electric-cyan tracking-widest">TECHNICAL EXCELLENCE</span>
+</div>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-white mb-8 max-w-4xl mx-auto uppercase">
+                    Precision Engineering <br class="hidden md:block"> For Modern Environments
+                </h1>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto mb-12">
+                    Providing high-end electrical contracting services across industrial, commercial, and heritage sectors with an unwavering focus on safety and technical innovation.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="w-full sm:w-auto bg-electric-cyan text-deep-navy px-10 py-4 rounded-lg font-label-caps text-label-caps font-bold hover:bg-white transition-all duration-300" href="#services-grid">Explore Services</a>
+<a class="w-full sm:w-auto border border-white/30 text-white px-10 py-4 rounded-lg font-label-caps text-label-caps hover:bg-white/10 transition-all duration-300" href="our-services-enterprise-electrical.html">Consult Our Experts</a>
+</div>
+</div>
+<!-- Circuit Decoration -->
+<div class="absolute bottom-0 left-0 w-full h-1 circuit-line opacity-50"></div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-section-padding-lg bg-surface relative" id="services-grid">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Industrial Installations -->
+<div class="md:col-span-8 group relative overflow-hidden bg-white border border-outline-variant p-10 service-card-hover transition-all duration-500 hover:border-electric-cyan">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-1">
+<span class="material-symbols-outlined text-deep-navy text-4xl mb-6 service-icon transition-transform duration-300">factory</span>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Industrial Installations</h3>
+<p class="font-body-md text-body-md text-steel-gray mb-6 leading-relaxed">
+                                    Specializing in high-voltage distribution, plant automation, and large-scale industrial infrastructure. We design and install robust electrical systems that power manufacturing excellence with minimal downtime.
+                                </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center text-sm font-label-caps"><span class="material-symbols-outlined text-electric-cyan mr-2 text-lg">bolt</span> Power Distribution</li>
+<li class="flex items-center text-sm font-label-caps"><span class="material-symbols-outlined text-electric-cyan mr-2 text-lg">bolt</span> Control Panel Design</li>
+<li class="flex items-center text-sm font-label-caps"><span class="material-symbols-outlined text-electric-cyan mr-2 text-lg">bolt</span> Automation Systems</li>
+</ul>
+</div>
+<div class="w-full md:w-1/3 aspect-square relative overflow-hidden rounded-lg">
+<img class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700" data-alt="Close-up of a complex industrial electrical control panel with neatly organized wires, colorful terminal blocks, and circuit breakers in a high-tech manufacturing facility. The lighting is crisp and cool, highlighting the metallic surfaces and the intricate engineering detail. Cinematic macro photography with shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANndFL2_sf448_GU2DQPBFgUv7qdvOka-08CuAF8rklrGzPILTkAGzFMyzYpWJ9i3X01k5Z7Q3ZGL9KEt4VZUhyOudvU0XfPTf2KJyuOcbLsFdVfaMKH76Xg5W_GWnM3nqrXjy-GZEUKnaz1X8quNIkBwX_EvWZecrf3JH9c1I0TJqhJpA78BQrVNlFA4DIE-bzEOGZ9heLWOpyv2Ph4M2ZU9R1HPlx6zWTZOlML51Exe2oaqQJshG">
+</div>
+</div>
+</div>
+<!-- Health & Safety Audits (Side Bento) -->
+<div class="md:col-span-4 bg-primary text-white p-10 flex flex-col justify-between relative overflow-hidden group">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-electric-cyan text-4xl mb-6">verified_user</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-white">Health &amp; Safety Audits</h3>
+<p class="font-body-md text-body-md text-on-primary-container leading-relaxed">
+                                Rigorous technical inspections and compliance reporting to ensure your facilities meet the latest UK regulatory standards.
+                            </p>
+</div>
+<div class="mt-8 z-10">
+<a class="inline-flex items-center font-label-caps text-label-caps text-electric-cyan hover:gap-3 transition-all duration-300" href="#safety-section">
+                                COMPLIANCE DETAILS <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[180px]">security</span>
+</div>
+</div>
+<!-- Commercial Refurbishments -->
+<div class="md:col-span-4 border border-outline-variant bg-surface-container-low p-10 service-card-hover hover:border-electric-cyan transition-all">
+<span class="material-symbols-outlined text-deep-navy text-4xl mb-6 service-icon transition-transform duration-300">domain</span>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Commercial Refurbishments</h3>
+<p class="font-body-md text-body-md text-steel-gray mb-6">
+                            Modernizing office spaces with smart lighting, data cabling, and energy-efficient power solutions tailored for agile working environments.
+                        </p>
+<div class="h-48 w-full bg-slate-200 overflow-hidden relative mb-6">
+<img class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Modern open-plan office space featuring minimalist hanging linear LED lights and sleek workstation power modules. The environment is bright and airy with polished concrete floors and glass partitions, reflecting a high-end architectural finish. Professional interior photography in a contemporary light-mode style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKOL7kGUphh2Ul-_2VWfyY0NY6bEQHkT7L8qZM_9hmidbOyEenDEOVNaGR1c1Bg7ZjBL2QHSl2K6KvMU3twB8xRsiU1ngEx-lDC4sZCikHQYRGjSwbBfjAsdKYPswwS1-HKoERQbOQce4k8txTh69Ye4V9WycJTKEdnKUjM41-9a6v3FUzgbq9f4rf-DG_5u02vx40P8iOIy4W31GhqAr40rCtkQ1pNUsFKzohMefqE2_WLYwQrqFo">
+</div>
+</div>
+<!-- Heritage Restorations -->
+<div class="md:col-span-4 border border-outline-variant bg-white p-10 service-card-hover hover:border-electric-cyan transition-all">
+<span class="material-symbols-outlined text-deep-navy text-4xl mb-6 service-icon transition-transform duration-300">account_balance</span>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Heritage Restorations</h3>
+<p class="font-body-md text-body-md text-steel-gray mb-6">
+                            Delicate integration of modern electrical systems into Grade I and II listed buildings, preserving historical integrity while upgrading functionality.
+                        </p>
+<div class="h-48 w-full bg-slate-200 overflow-hidden relative mb-6">
+<img class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Interior of a historic stone building with vaulted ceilings where modern accent lighting has been subtly integrated into the architecture. The scene captures the contrast between old-world craftsmanship and contemporary technical lighting design. Warm spotlighting on ancient textures, elegant and respectful restoration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd8SQtU2283oIEYD3Q6KgwoJVxzPiLExVwoEK-1I_KMb8NV7zx4vxGcquG2-mRAbYC2o3_Hqz6ImxZr0c33WpdwW_Rew_bpqzivGZAispqthiCuNk7U9UzWs63f7gk0Os1rqWH5IljQLoPgms-HSearFmSn6ttTJUpbMEqgaRypo5eGIzEmFk8zY_4861r37ZHTwvf7qW06rVJxM16zCYr3n35bKPybB91438I3zpN_w6P3Vtnxoyo">
+</div>
+</div>
+<!-- Medical School Upgrades -->
+<div class="md:col-span-4 border border-outline-variant bg-white p-10 service-card-hover hover:border-electric-cyan transition-all">
+<span class="material-symbols-outlined text-deep-navy text-4xl mb-6 service-icon transition-transform duration-300">medical_services</span>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Medical School Upgrades</h3>
+<p class="font-body-md text-body-md text-steel-gray mb-6">
+                            Highly specialized electrical infrastructure for medical training facilities, including lab power, clinical lighting, and backup systems.
+                        </p>
+<div class="h-48 w-full bg-slate-200 overflow-hidden relative mb-6">
+<img class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A sterile, high-tech medical simulation laboratory with bright, flicker-free ceiling lighting and integrated power hubs for medical equipment. The space looks professional and ultra-clean, with medical monitors and stainless steel surfaces. A focus on precision and clinical excellence in a modern setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwWd_wUCyF-tUARUIYPP6u1u2wqu4q0tSZdrXopta89_KeGl-aXfmLu6eL0RJPpIq0LZRDozjabQWbAZzezhxurcBhLNxkueQ09oiM69V3Z8EVPTgGgJUvF9nZVNEzo_CYad_R5qpyjCgYf-5RjEd2NOL8Qom149oSGWukP2FRWIZ299eBGT_pcs0vxY_yNJ9oboUqnxBmUvoTpEPEAZLAhDAqnrnq4bFfvmDIQHUm0SSo_N_3zPSs">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Health and Safety Consultancy Section -->
+<section class="py-section-padding-lg bg-obsidian text-white relative overflow-hidden" id="safety-section">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col lg:flex-row items-center gap-16 relative z-10">
+<div class="lg:w-1/2">
+<div class="inline-block px-3 py-1 bg-electric-cyan/20 border border-electric-cyan/40 mb-6">
+<span class="font-label-caps text-label-caps text-electric-cyan">INTERNAL CONSULTANCY</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-8 leading-tight">Safety Excellence as a <br> Core Technical Pillar</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-8 leading-relaxed">
+                        At Enterprise Electrical, Health &amp; Safety is not an afterthought; it is an integrated engineering discipline. Our dedicated internal consultancy team provides expert guidance across all project phases, ensuring that safety is designed into the circuit from the very first blueprint.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+<div class="border-l-2 border-electric-cyan pl-6 py-2">
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-xl">Risk Management</h4>
+<p class="text-on-primary-container text-sm">Comprehensive proactive assessments for complex industrial environments.</p>
+</div>
+<div class="border-l-2 border-electric-cyan pl-6 py-2">
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-xl">Accreditation</h4>
+<p class="text-on-primary-container text-sm">NICEIC Approved Contractor status and rigorous internal auditing protocols.</p>
+</div>
+</div>
+<button class="bg-white text-deep-navy px-10 py-4 rounded-lg font-label-caps text-label-caps font-bold hover:bg-electric-cyan hover:text-deep-navy transition-all duration-300">
+                        Download Safety Brochure
+                    </button>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="aspect-video w-full border border-white/20 bg-primary-container p-4">
+<div class="w-full h-full bg-deep-navy relative flex items-center justify-center overflow-hidden">
+<img class="object-cover w-full h-full opacity-60" data-alt="A professional electrical engineer wearing a high-visibility vest and a white hard hat, inspecting a large electrical distribution board with a digital tablet. The setting is a clean, modern industrial site. The engineer looks focused and expert, representing high standards of health and safety compliance. Professional corporate photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkOo3-EHgDp7u-8y8h2xObJhwmfYjl4pJy56Ltg45Uhe71gLRXYd-BVYCG4xVaJmu_Z8S1p1zBrVXt8_EMbtB1k2hjBUcONz66_z7dnUkmbYdssodMEkpOSPnxqOCTUi-ukRydHR4qTUhiop8serRgOCNZLRU60Ckh9RdymH6o3fjMTfTcOvLwTWDcnpFoSBE6BLXnm5dNSot9Vu8ragKuxBQvDKj-OFUjUEQD4bt3KP9n1ZY200_W">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full border-2 border-electric-cyan flex items-center justify-center cursor-pointer hover:bg-electric-cyan transition-colors group">
+<span class="material-symbols-outlined text-white group-hover:text-deep-navy text-4xl">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-6 -right-6 w-32 h-32 border-r border-t border-electric-cyan/30"></div>
+<div class="absolute -bottom-6 -left-6 w-32 h-32 border-l border-b border-electric-cyan/30"></div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-electric-cyan/5 -skew-x-12 translate-x-1/2"></div>
+</section>
+<!-- Secondary CTA -->
+<section class="py-24 bg-electric-cyan">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-2">Need a Technical Consultation?</h2>
+<p class="font-body-lg text-body-lg text-deep-navy/80">Our experts are ready to assist with your next engineering challenge.</p>
+</div>
+<button class="bg-deep-navy text-white px-12 py-5 rounded-lg font-label-caps text-label-caps font-extrabold hover:bg-obsidian transition-all duration-300 shadow-xl scale-102 hover:scale-105">
+                    Consult Our Experts
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-section-padding-lg px-gutter max-w-container-max mx-auto">
+<div class="space-y-6">
+<img alt="Enterprise Electrical Services Ltd Logo" class="h-10 brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AP1WRLvh2GgagnDlchhyXuAkhjQCUzPzz5WZU1BDhfRDZ4fV7qiKszLcNYXShOaKeB4acy1Rh1-BpOVnx2513eIXlSNu8SG3z2TGFokJpgDygIqfCAtOHAz1Z_6SjnIYxXkPhMq7sNdgF2CypeFNnpP-nD9IBA61h0u9EbIQiqRQR8yX3v3hFRjfuhzqLkAIJoTs8WynRoQd7kCBhCSTK7uuL28pe8q4Tq9io62vHHkTmaHWStZHNUKEiyjXnZA">
+<p class="font-body-md text-body-md text-on-primary-container">
+                    Delivering technical excellence in electrical engineering across the UK for over two decades.
+                </p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-electric-cyan mb-8">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-cyan transition-colors" href="index.html">Home</a></li>
+<li><a class="font-body-md text-body-md text-electric-cyan underline" href="our-services-enterprise-electrical.html">Services</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-cyan transition-colors" href="featured-projects-enterprise-electrical.html">Projects</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-cyan transition-colors" href="index.html">About Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-electric-cyan mb-8">Resources</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-cyan transition-colors" href="our-services-enterprise-electrical.html">NICEIC Accreditation</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-cyan transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-cyan transition-colors" href="our-services-enterprise-electrical.html">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-cyan transition-colors" href="blog-news-enterprise-electrical.html">Safety Data</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-electric-cyan mb-8">Connect</h4>
+<div class="flex space-x-4">
+<a class="text-on-primary-container hover:text-electric-cyan transition-colors" href="blog-news-enterprise-electrical.html"><span class="material-symbols-outlined">share</span> LinkedIn</a>
+</div>
+<div class="mt-8">
+<p class="text-xs font-label-caps text-on-primary-container/60">
+                        Technical HQ:<br>
+                        Enterprise House, London Road<br>
+                        United Kingdom
+                    </p>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 py-8 text-center px-gutter">
+<p class="font-label-caps text-label-caps text-on-primary-container/40">
+                © 2024 Enterprise Electrical Services Ltd. Technical Excellence in Engineering.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-sm');
+                nav.classList.remove('py-0');
+            } else {
+                nav.classList.remove('py-2', 'shadow-sm');
+                nav.classList.add('py-0');
+            }
+        });
+
+        // Hover animation logic for service cards
+        const cards = document.querySelectorAll('.service-card-hover');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

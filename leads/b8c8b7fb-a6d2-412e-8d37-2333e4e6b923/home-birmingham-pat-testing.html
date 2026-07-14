@@ -1,0 +1,397 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Birmingham PAT Testing | Expert Electrical Safety</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "warning-glow": "rgba(255, 193, 7, 0.15)",
+                    "on-background": "#e2e2e6",
+                    "secondary": "#bfc2ff",
+                    "on-tertiary-container": "#005e6c",
+                    "error-container": "#93000a",
+                    "on-primary-fixed-variant": "#5b4300",
+                    "primary-fixed": "#ffdf9e",
+                    "surface-container-highest": "#333538",
+                    "primary-container": "#ffc107",
+                    "surface-tint": "#fabd00",
+                    "on-tertiary": "#00363f",
+                    "surface-container-lowest": "#0c0e11",
+                    "inverse-surface": "#e2e2e6",
+                    "outline-variant": "#4f4632",
+                    "error": "#ffb4ab",
+                    "on-secondary-container": "#a9afff",
+                    "surface": "#111316",
+                    "primary-fixed-dim": "#fabd00",
+                    "on-primary-fixed": "#261a00",
+                    "surface-dim": "#111316",
+                    "on-primary": "#3f2e00",
+                    "on-surface": "#e2e2e6",
+                    "inverse-primary": "#785900",
+                    "on-primary-container": "#6d5100",
+                    "safety-white": "#FFFFFF",
+                    "surface-container-high": "#282a2d",
+                    "surface-variant": "#333538",
+                    "on-error-container": "#ffdad6",
+                    "surface-container": "#1e2023",
+                    "electric-amber": "#FFC107",
+                    "on-secondary-fixed": "#00006e",
+                    "primary": "#ffe4af",
+                    "background": "#111316",
+                    "charcoal-surface": "#1A1D21",
+                    "on-secondary": "#181d8c",
+                    "tertiary": "#b4f0ff",
+                    "tertiary-fixed": "#a5eeff",
+                    "on-error": "#690005",
+                    "deep-navy": "#000080",
+                    "secondary-container": "#3239a3",
+                    "on-tertiary-fixed": "#001f25",
+                    "on-tertiary-fixed-variant": "#004e5a",
+                    "tertiary-container": "#00defd",
+                    "secondary-fixed": "#e0e0ff",
+                    "tertiary-fixed-dim": "#00daf8",
+                    "surface-container-low": "#1a1c1f",
+                    "secondary-fixed-dim": "#bfc2ff",
+                    "outline": "#9c8f78",
+                    "on-secondary-fixed-variant": "#3239a3",
+                    "inverse-on-surface": "#2f3034",
+                    "surface-bright": "#37393d",
+                    "on-surface-variant": "#d4c5ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "cta-text": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "cta-text": ["16px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .warning-glow-hover:hover {
+            box-shadow: 0 0 20px 5px rgba(255, 193, 7, 0.15);
+        }
+        .glass-panel {
+            background: rgba(26, 29, 33, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-electric-amber selection:text-black">
+<!-- Header / Navigation Shell -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Birmingham PAT Testing" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLvI5evFBRcWV9Qv2t-IduPqS0WG3p6Te9bZv1XxJWrFcpPbTOmZeIhgjoOC7SnhBVcR4rRgF-k6IHJmSHGYzt4cJQLQqOOkYYiZA3ClLwCMxjvr6hs7ceh3xZSvRaDKP1-Eg_eSuyKPN0-7Eesw5aNg7kBMYStkUwBtnsCNibNUU4tukRwC5y7p-S5wk7_7HtrywR6o99KeYLe8ejCztaq6SS7xpix9_Kkcvj0F4Z9L-HFBSqsX3VdtbEhu">
+<span class="font-headline-md text-headline-md font-bold text-electric-amber uppercase tracking-tight hidden sm:block">Birmingham PAT Testing</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-cta-text text-cta-text text-electric-amber border-b-2 border-electric-amber pb-1" href="home-birmingham-pat-testing.html">Home</a>
+<a class="font-cta-text text-cta-text text-on-surface hover:text-electric-amber transition-colors duration-300" href="our-services-birmingham-pat-testing.html">Services</a>
+<a class="font-cta-text text-cta-text text-on-surface hover:text-electric-amber transition-colors duration-300" href="index.html">FAQ</a>
+<a class="font-cta-text text-cta-text text-on-surface hover:text-electric-amber transition-colors duration-300" href="index.html">Blog</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block font-cta-text text-cta-text text-on-surface border border-deep-navy px-6 py-2 rounded-lg hover:bg-deep-navy/20 transition-all duration-300">Book a Test</button>
+<button class="font-cta-text text-cta-text bg-electric-amber text-black px-6 py-2 rounded-lg hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(255,193,7,0.3)]">Get a Quote</button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+<!-- Animated Background -->
+<div class="absolute inset-0 z-0">
+
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-24">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-deep-navy/30 border border-electric-amber/30 mb-6">
+<span class="material-symbols-outlined text-electric-amber text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caps text-label-caps text-electric-amber">Certified Safety Standards</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-display-lg mb-6 leading-tight">
+                        Expert <span class="text-electric-amber">PAT Testing</span> <br> in Birmingham
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed max-w-xl">
+                        Ensuring your workplace remains safe and compliant with the latest IET Code of Practice. Professional, reliable, and thorough electrical appliance testing for businesses across the West Midlands.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="group relative flex items-center justify-center gap-3 bg-electric-amber text-black font-cta-text text-cta-text px-8 py-4 rounded-lg warning-glow-hover transition-all duration-300 active:scale-95">
+                            Get a Quote
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="flex items-center justify-center gap-3 border border-deep-navy text-on-surface font-cta-text text-cta-text px-8 py-4 rounded-lg hover:bg-deep-navy/10 transition-all duration-300">
+                            Book a Test
+                            <span class="material-symbols-outlined">event</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Floating Tech Decoration -->
+<div class="absolute bottom-10 right-margin-desktop hidden lg:block">
+<div class="glass-panel p-6 rounded-xl shadow-2xl border-l-4 border-electric-amber">
+<div class="flex items-center gap-4 mb-2">
+<div class="h-3 w-3 rounded-full bg-electric-amber animate-pulse"></div>
+<span class="font-label-caps text-label-caps text-on-surface">Live Status</span>
+</div>
+<p class="font-headline-md text-headline-md text-electric-amber">15,000+</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Appliances Tested in 2024</p>
+</div>
+</div>
+</section>
+<!-- Social Proof Strip -->
+<section class="py-12 bg-charcoal-surface border-y border-deep-navy">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<p class="text-center font-label-caps text-label-caps text-on-surface-variant mb-8 opacity-60">TRUSTED BY LEADING BIRMINGHAM INSTITUTIONS</p>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Placeholder logos with diverse shapes -->
+<div class="h-8 w-32 bg-on-surface-variant/20 rounded"></div>
+<div class="h-10 w-24 bg-on-surface-variant/20 rounded"></div>
+<div class="h-6 w-40 bg-on-surface-variant/20 rounded"></div>
+<div class="h-12 w-28 bg-on-surface-variant/20 rounded"></div>
+<div class="h-8 w-36 bg-on-surface-variant/20 rounded"></div>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Why Choose Birmingham PAT Testing?</h2>
+<div class="h-1 w-20 bg-electric-amber mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Feature -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-container rounded-xl p-10 border border-white/5 hover:border-electric-amber/30 transition-all duration-500">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-electric-amber text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">security</span>
+<h3 class="font-headline-md text-headline-md mb-4">Safety Compliance &amp; Legal Protection</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                            Our comprehensive testing regime ensures you meet all health and safety obligations, protecting your employees and your insurance validly. We provide full documentation and digital logs for every item tested.
+                        </p>
+</div>
+<div class="absolute bottom-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[120px]">fact_check</span>
+</div>
+</div>
+<!-- Secondary Feature -->
+<div class="md:col-span-4 bg-surface-container-high rounded-xl p-10 border border-white/5 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-electric-amber text-4xl mb-6">bolt</span>
+<h3 class="font-headline-md text-headline-md mb-4">Rapid Response</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Minimize downtime with our efficient on-site testing. We work around your schedule to ensure zero disruption to your daily operations.
+                        </p>
+</div>
+<a class="mt-8 font-cta-text text-cta-text text-electric-amber flex items-center gap-2 group" href="our-services-birmingham-pat-testing.html">
+                        Learn More <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+<!-- Expert Card -->
+<div class="md:col-span-4 bg-surface-container-high rounded-xl p-10 border border-white/5 hover:bg-surface-container-highest transition-colors duration-300">
+<span class="material-symbols-outlined text-electric-amber text-4xl mb-6">workspace_premium</span>
+<h3 class="font-headline-md text-headline-md mb-4">Expert Certification</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Our technicians are City &amp; Guilds qualified, providing a level of expertise that generic testing services simply can't match.
+                    </p>
+</div>
+<!-- Efficiency Card -->
+<div class="md:col-span-8 bg-surface-container rounded-xl p-10 border border-white/5 flex items-center gap-10">
+<div class="hidden sm:block h-32 w-32 flex-shrink-0 bg-charcoal-surface rounded-lg flex items-center justify-center border border-deep-navy shadow-inner">
+<span class="material-symbols-outlined text-electric-amber text-5xl">speed</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-4">Digital Reporting Excellence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Say goodbye to messy paperwork. Receive clear, organized PDF reports within 24 hours of your test completion, ready for audit or insurance review.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section with Image -->
+<section class="py-24 bg-surface relative overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full object-cover opacity-20 bg-cover bg-center" data-alt="A macro cinematic shot of a professional PAT testing device connected to a computer server rack in a modern Birmingham office. Industrial aesthetic with blue and amber lighting highlights, shallow depth of field, and high-tech feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhu7m6RY9Esjd8PeYrktRRsh0Bfbzj0ReX2k84xkOImWRhNlcRe2hGlJ0Ly97_eHlv-LpMcmdY92n-0vKBqC2JxWtn-NOZe0CXp1VwDcV8GlT2YD04iAhE9SHLo1k7xXUQVKCMfy-RdKdNdTW2o4cNC3_aVPrqy_5tP0kaGI9SVwhftho3Fe6zq83EQxMxkrbEhhzdHnrne2gGpcSTRUtSHphr6ZP7wRxggFdQ2_KxyVuKAyIg0t9mMw')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Ready to secure your workplace?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                        Get a no-obligation quote today. We offer competitive rates for small offices to large industrial complexes across the Birmingham metropolitan area.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-electric-amber">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">No hidden travel fees in Birmingham</span>
+</div>
+<div class="flex items-center gap-4 text-electric-amber">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Digital certificates included as standard</span>
+</div>
+<div class="flex items-center gap-4 text-electric-amber">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Free minor repairs &amp; fuse replacements</span>
+</div>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-2xl shadow-2xl">
+<h3 class="font-headline-md text-headline-md mb-6">Quick Quote Request</h3>
+<form class="space-y-4" onsubmit="event.preventDefault()">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant">NAME</label>
+<input class="w-full bg-charcoal-surface border border-deep-navy rounded-lg p-3 text-on-surface focus:border-electric-amber focus:ring-1 focus:ring-electric-amber outline-none transition-all" placeholder="John Doe" type="text">
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant">EMAIL</label>
+<input class="w-full bg-charcoal-surface border border-deep-navy rounded-lg p-3 text-on-surface focus:border-electric-amber focus:ring-1 focus:ring-electric-amber outline-none transition-all" placeholder="john@company.com" type="email">
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant">ESTIMATED APPLIANCES</label>
+<select class="w-full bg-charcoal-surface border border-deep-navy rounded-lg p-3 text-on-surface focus:border-electric-amber focus:ring-1 focus:ring-electric-amber outline-none transition-all">
+<option>1 - 50 Items</option>
+<option>51 - 200 Items</option>
+<option>201 - 500 Items</option>
+<option>500+ Items</option>
+</select>
+</div>
+<button class="w-full bg-electric-amber text-black font-cta-text text-cta-text py-4 rounded-lg mt-4 hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-electric-amber/10">
+                            Submit Request
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-charcoal-surface border-t border-deep-navy">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<img alt="Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLvI5evFBRcWV9Qv2t-IduPqS0WG3p6Te9bZv1XxJWrFcpPbTOmZeIhgjoOC7SnhBVcR4rRgF-k6IHJmSHGYzt4cJQLQqOOkYYiZA3ClLwCMxjvr6hs7ceh3xZSvRaDKP1-Eg_eSuyKPN0-7Eesw5aNg7kBMYStkUwBtnsCNibNUU4tukRwC5y7p-S5wk7_7HtrywR6o99KeYLe8ejCztaq6SS7xpix9_Kkcvj0F4Z9L-HFBSqsX3VdtbEhu">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Birmingham PAT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Your local partner in electrical safety excellence. Proudly serving the Birmingham community and beyond.
+                </p>
+<div class="flex gap-4">
+<a class="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-electric-amber hover:text-black transition-all" href="index.html">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-electric-amber hover:text-black transition-all" href="home-birmingham-pat-testing.html">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+</a>
+<a class="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-electric-amber hover:text-black transition-all" href="index.html">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-electric-amber mb-6">QUICK LINKS</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="our-services-birmingham-pat-testing.html">Services</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="index.html">Testimonials</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="our-services-birmingham-pat-testing.html">Pricing Guide</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="index.html">Health &amp; Safety Blog</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="book-a-test-birmingham-pat-testing.html">Book a Test</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-electric-amber mb-6">LEGAL</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="our-services-birmingham-pat-testing.html">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="#">Careers</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="home-birmingham-pat-testing.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps text-electric-amber mb-6">CONTACT</h4>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-amber">location_on</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Birmingham PAT Testing LLP<br>
+                        123 Innovation Way, Jewellery Quarter<br>
+                        Birmingham, B1 2HS
+                    </p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-electric-amber">phone</span>
+<p class="font-body-md text-body-md text-on-surface-variant">0121 555 0123</p>
+</div>
+</div>
+</div>
+<div class="border-t border-deep-navy py-6 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">
+                © 2024 Birmingham PAT Testing LLP. All rights reserved.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for navigation
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-[0_10px_30px_-10px_rgba(0,0,128,0.3)]');
+            } else {
+                header.classList.remove('shadow-[0_10px_30px_-10px_rgba(0,0,128,0.3)]');
+            }
+        });
+
+        // Hover animation for buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'scale(0.95)';
+            });
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = 'scale(1)';
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

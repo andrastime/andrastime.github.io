@@ -1,0 +1,405 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | Evolution Electrics UK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#1d2022",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-low": "#191c1e",
+                    "on-tertiary-container": "#797c88",
+                    "secondary-fixed-dim": "#00daf8",
+                    "on-error": "#690005",
+                    "on-secondary-container": "#005f6d",
+                    "on-surface": "#e0e3e5",
+                    "surface-container-highest": "#323537",
+                    "on-tertiary-fixed-variant": "#434751",
+                    "on-secondary-fixed": "#001f25",
+                    "primary-fixed": "#e2e2e8",
+                    "surface-container-high": "#272a2c",
+                    "surface-dim": "#101415",
+                    "surface-tint": "#c6c6cc",
+                    "background": "#101415",
+                    "secondary-container": "#00e0ff",
+                    "error": "#ffb4ab",
+                    "outline": "#909095",
+                    "on-primary": "#2f3035",
+                    "tertiary-fixed": "#dfe2ef",
+                    "error-container": "#93000a",
+                    "on-tertiary": "#2c303a",
+                    "surface": "#101415",
+                    "secondary": "#b9f1ff",
+                    "on-secondary": "#00363f",
+                    "inverse-on-surface": "#2d3133",
+                    "tertiary": "#c3c6d2",
+                    "on-tertiary-fixed": "#181c24",
+                    "primary-container": "#0f1115",
+                    "on-surface-variant": "#c6c6cb",
+                    "primary": "#c6c6cc",
+                    "secondary-fixed": "#a5eeff",
+                    "on-primary-fixed": "#1a1c20",
+                    "inverse-primary": "#5d5e63",
+                    "tertiary-container": "#0d1119",
+                    "primary-fixed-dim": "#c6c6cc",
+                    "on-background": "#e0e3e5",
+                    "on-primary-container": "#7b7c82",
+                    "outline-variant": "#45474b",
+                    "surface-bright": "#363a3b",
+                    "tertiary-fixed-dim": "#c3c6d2",
+                    "surface-container-lowest": "#0b0f10",
+                    "inverse-surface": "#e0e3e5",
+                    "on-secondary-fixed-variant": "#004e5a",
+                    "on-primary-fixed-variant": "#45474b",
+                    "surface-variant": "#323537"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "stack-sm": "8px",
+                    "section-gap": "120px",
+                    "stack-md": "16px",
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Sora"],
+                    "headline-lg": ["Sora"],
+                    "headline-xl": ["Sora"],
+                    "headline-lg-mobile": ["Sora"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #101415;
+            color: #e0e3e5;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-panel {
+            background: rgba(30, 34, 43, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .electric-glow:hover {
+            box-shadow: 0 0 25px rgba(0, 218, 248, 0.15);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #b9f1ff 0%, #00daf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-blur {
+            background: rgba(16, 20, 21, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .active-dot::after {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            background-color: #00daf8;
+            border-radius: 50%;
+            margin: 4px auto 0;
+            box-shadow: 0 0 8px #00daf8;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/10 shadow-[0_0_20px_rgba(0,218,248,0.1)]">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md">
+<div class="flex items-center gap-3">
+<img alt="Evolution Electrics Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb3H6TQ3nRl-mBnJm8F4cnEb3qj5GEcggFQAcgtXYKhVUnglP6MpNeWGSHAICCShYNCU9J6KQxsl7XqJVfFeAmCHVroZ7FFwiWip-xQX74GW7uPhu2WzczR0hc_AG8OWAU4o3gphhQp4lU8NoVBpPmMcEQPYYDe86Z8nOvi9NzNNG6CeDpmtr1a1gvdQMIr2nIpgYJd6YLKgekbDpaSFzR4NGEMFmULIt_Wk-dKCsbsAgHaPTgFzsGCQ">
+<span class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">Evolution Electrics UK</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="smart-home-ev-solutions.html">Smart Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="smart-home-ev-solutions.html">EV Charging</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="residential-commercial-services.html">Residential</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="residential-commercial-services.html">Commercial</a>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-2.5 font-label-md text-label-md rounded-sm hover:scale-105 active:scale-95 transition-all duration-300 electric-glow">
+                Get a Quote
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[70vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+<div>
+<span class="inline-block border border-secondary/30 bg-secondary/5 px-4 py-1 rounded-full text-secondary font-label-sm text-label-sm uppercase tracking-widest mb-6">
+                        The Future of Power
+                    </span>
+<h1 class="font-headline-xl text-headline-xl mb-6 leading-tight">
+                        The Electrician as a <span class="gradient-text">Systems Integrator</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">
+                        Bridging the gap between traditional craftsmanship and future-tech. We integrate smart ecosystems, clean energy, and high-velocity charging into a singular, intelligent backbone for your home.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 font-label-md text-label-md rounded-sm hover:opacity-90 transition-all">Explore Services</button>
+<button class="border border-white/20 px-8 py-4 font-label-md text-label-md rounded-sm hover:border-secondary hover:text-secondary transition-all">Our Process</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Services Integration -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg mb-4">Integrated Ecosystems</h2>
+<div class="h-1 w-24 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Smart Lighting (Lutron/Hue) -->
+<div class="md:col-span-8 group relative overflow-hidden glass-panel p-stack-lg rounded-xl electric-glow transition-all duration-500">
+<div class="flex flex-col md:flex-row gap-gutter h-full">
+<div class="flex-1 order-2 md:order-1">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="light_group">light_group</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Intelligent Lighting</h3>
+<p class="text-on-surface-variant mb-6">
+                                Precision control through <strong>Lutron Palladiom</strong> and <strong>Philips Hue</strong>. We design lighting scenes that adapt to your circadian rhythm, controlled via voice, presence, or architectural keypads.
+                            </p>
+<ul class="space-y-3 font-label-md text-label-md text-secondary/80">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span> Circadian Lighting Sequences</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span> Architectural Keypad Integration</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span> Energy Harvesting Wireless Switches</li>
+</ul>
+</div>
+<div class="flex-1 min-h-[300px] order-1 md:order-2 rounded-lg overflow-hidden relative">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A ultra-modern living room interior at dusk with integrated Lutron lighting strips in the ceiling. The lighting is a soft, warm amber glow that complements the charcoal grey walls and high-end furniture. The aesthetic is professional, clean, and technologically advanced, with a subtle blue atmospheric tint typical of a luxury tech interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEtWv65iDHnscy8_AY6mDJx1dWTV5uVN8EAgnZ0bC6PzECPytGHlSsHc6Fr1SaereJf3OKXdNaSzLdX3VjJ3X3hWK25RSXtgdQ-42mnc0SO7FK7UaBkOnNoJ3Hq_aB5hJCEjDtV3IlNKeRlBQcWi4EYp11B7A_z8_XeGKhi-aMrfMKwMh9RAYUUjtBcvmnLuxAi10VKLKexle_GvalzRBsgPKDWRXlrYyr9AqZtKFTORoZX6qZEzBlfA">
+</div>
+</div>
+</div>
+<!-- OZEV Auth Badge / Micro Card -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="flex-1 glass-panel p-stack-lg rounded-xl flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4" data-icon="verified">verified</span>
+<h4 class="font-headline-md text-headline-md mb-2">OZEV Authorized</h4>
+<p class="text-label-sm text-on-tertiary-container uppercase tracking-widest font-label-sm">Certified Excellence</p>
+<p class="mt-4 text-on-surface-variant text-body-md">Eligible for residential and workplace EV charging grants.</p>
+</div>
+<div class="flex-1 bg-secondary-container p-stack-lg rounded-xl text-on-secondary-container flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-3xl" data-icon="bolt">bolt</span>
+<h4 class="font-headline-md text-headline-md mt-2">Rapid Install</h4>
+</div>
+<p class="font-label-md text-label-md">Standard installations completed within 10 working days from survey.</p>
+</div>
+</div>
+<!-- EV Charging Deep Dive -->
+<div class="md:col-span-12 glass-panel rounded-xl overflow-hidden group">
+<div class="grid grid-cols-1 md:grid-cols-2">
+<div class="relative min-h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" data-alt="Close-up of a sleek, minimalist electric vehicle charging station mounted on a dark textured wall in a modern garage. The charging cable is neatly coiled, and an electric blue light ring on the charger indicates it is active. The lighting is high-key and futuristic, focusing on the precision engineering of the EV technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMbMKU-I-x2mZVYZfmwdqYQQj1if8pnrfPUuEBUuabN4LSBX9zXR9L7dWbIAJUX_Ayx0qDuBWXXjjVKR62lmv3OwXyNhgRuwfsZ34yIm9mBu8MOUp_yHVk69eAiT6DhuxLVK0CphSmi9p6aWjqwfwfmurja1Q0NuiLqUDuclTYhtWCOJRc1H67TGlavWHrR-MyrCVRxXFCPoKVQlt5aDWESJLneXnln8n2fb-A1o9X_jSSya-BKdmyjA">
+<div class="absolute inset-0 bg-gradient-to-r from-background/40 to-transparent"></div>
+</div>
+<div class="p-stack-lg md:p-16 flex flex-col justify-center">
+<h3 class="font-headline-lg text-headline-lg mb-6">Smart EV Mobility</h3>
+<p class="text-body-lg text-on-surface-variant mb-8">
+                                Beyond the charger. We integrate your EV into your home’s power grid. Utilizing <strong>Zappi</strong> or <strong>Tesla Wall Connectors</strong>, we ensure your vehicle charges when energy is cleanest and cheapest.
+                            </p>
+<div class="grid grid-cols-2 gap-stack-lg">
+<div>
+<h5 class="text-secondary font-headline-md mb-2">Dynamic Balancing</h5>
+<p class="text-on-surface-variant text-body-md">Protect your main fuse with automatic load management.</p>
+</div>
+<div>
+<h5 class="text-secondary font-headline-md mb-2">Solar Integration</h5>
+<p class="text-on-surface-variant text-body-md">Charge your car directly from your rooftop PV array.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Solar & Storage -->
+<div class="md:col-span-5 glass-panel p-stack-lg rounded-xl flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="battery_charging_full">battery_charging_full</span>
+<h3 class="font-headline-md text-headline-md mb-4">Battery Storage</h3>
+<p class="text-on-surface-variant mb-6">
+                            Independent power through <strong>GivEnergy</strong> and <strong>Tesla Powerwall</strong>. Capture every watt of solar generation.
+                        </p>
+</div>
+<div class="relative h-48 rounded-lg overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A sleek home battery storage system installed in a pristine, modern utility room. The units are wall-mounted, featuring a minimalist industrial design in matte black and silver. Soft electric blue LED indicators show the state of charge, set against a background of high-end architectural materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP4L33aGGs4kxWgRNMJZVFmfQ0nvPEpWKgSvpviHcjQgg3hhcdvmwZKmsoh2fxwPejSgvMIdRKKXzGt7WcRCshO6X0Ts-JS7fhphXrFzVip3iPn5FVBuZ8KnXhUbBONE1w_XJsDGXlJ16onfE3T7Jd0G8b982zayc_iwOAsZ0dGfkQASy7dcywHeZQW27H5R3SpatxLBc863g6u2eY7t7o3FMNO_S4NgG4_PpBFzN5bFK_BtSdTIQdtA">
+</div>
+</div>
+<!-- The "Integrator" USP -->
+<div class="md:col-span-7 bg-surface-container-high p-stack-lg rounded-xl relative overflow-hidden flex flex-col justify-center border border-white/5">
+<div class="relative z-10">
+<h3 class="font-headline-lg text-headline-lg mb-6">The Integrator Philosophy</h3>
+<p class="text-body-lg text-on-surface-variant mb-8">
+                            Most electricians install wires. We install ecosystems. By viewing your home as a single software-defined entity, we ensure your lighting, heating, security, and power generation speak the same language. 
+                        </p>
+<div class="flex flex-wrap gap-4">
+<span class="bg-surface-container-lowest border border-white/10 px-4 py-2 text-label-sm font-label-sm rounded-full text-secondary">IEEE STANDARDS</span>
+<span class="bg-surface-container-lowest border border-white/10 px-4 py-2 text-label-sm font-label-sm rounded-full text-secondary">KNX CERTIFIED</span>
+<span class="bg-surface-container-lowest border border-white/10 px-4 py-2 text-label-sm font-label-sm rounded-full text-secondary">SMART-HOME FIRST</span>
+</div>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[200px]" data-icon="hub">hub</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Tech Feed / Micro Interactions -->
+<section class="py-section-gap bg-surface-container-lowest relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Seamless Control</h2>
+<p class="text-body-lg text-on-surface-variant mb-8">
+                        Whether it’s a dedicated touch panel in the kitchen or your smartphone while on holiday, you remain in absolute control of your environment.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors cursor-default">
+<span class="material-symbols-outlined text-secondary" data-icon="app_shortcut">app_shortcut</span>
+<div>
+<h4 class="font-label-md text-label-md mb-1 text-on-surface">Unified Interface</h4>
+<p class="text-on-surface-variant text-body-md">One app for lighting, power, and security.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors cursor-default">
+<span class="material-symbols-outlined text-secondary" data-icon="settings_input_component">settings_input_component</span>
+<div>
+<h4 class="font-label-md text-label-md mb-1 text-on-surface">Auto-Logic</h4>
+<p class="text-on-surface-variant text-body-md">If you leave home, the car begins charging and lights go to ECO mode.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square glass-panel rounded-full flex items-center justify-center p-12 border-secondary/20 border-dashed border-2 animate-[spin_20s_linear_infinite]">
+<div class="w-full h-full rounded-full border border-secondary/10 flex items-center justify-center">
+<div class="w-3/4 h-3/4 bg-secondary/5 rounded-full blur-3xl absolute"></div>
+</div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<img alt="Integration Core" class="w-32 h-32 object-contain drop-shadow-[0_0_15px_rgba(0,218,248,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb3H6TQ3nRl-mBnJm8F4cnEb3qj5GEcggFQAcgtXYKhVUnglP6MpNeWGSHAICCShYNCU9J6KQxsl7XqJVfFeAmCHVroZ7FFwiWip-xQX74GW7uPhu2WzczR0hc_AG8OWAU4o3gphhQp4lU8NoVBpPmMcEQPYYDe86Z8nOvi9NzNNG6CeDpmtr1a1gvdQMIr2nIpgYJd6YLKgekbDpaSFzR4NGEMFmULIt_Wk-dKCsbsAgHaPTgFzsGCQ">
+</div>
+<!-- Orbiting Icons -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 bg-surface-container border border-white/10 p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="ev_station">ev_station</span>
+</div>
+<div class="absolute bottom-10 right-0 bg-surface-container border border-white/10 p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="solar_power">solar_power</span>
+</div>
+<div class="absolute bottom-10 left-0 bg-surface-container border border-white/10 p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="home_app_lite">home_app_logo</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-section-gap">
+<div class="max-w-4xl mx-auto px-margin-mobile text-center glass-panel p-16 rounded-2xl relative overflow-hidden border-secondary/20">
+<div class="absolute inset-0 -z-10 opacity-10">
+
+</div>
+<h2 class="font-headline-xl text-headline-xl mb-6">Ready to Evolve?</h2>
+<p class="text-body-lg text-on-surface-variant mb-10">
+                    Transform your property into a high-performance smart environment. Schedule a consultation with our system integrators today.
+                </p>
+<button class="bg-secondary text-on-secondary px-10 py-5 font-headline-md text-headline-md rounded-sm hover:scale-105 transition-all shadow-[0_0_30px_rgba(0,218,248,0.2)]">
+                    Request a Site Survey
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full mt-section-gap border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<div class="md:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<img alt="Logo" class="h-8 w-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb3H6TQ3nRl-mBnJm8F4cnEb3qj5GEcggFQAcgtXYKhVUnglP6MpNeWGSHAICCShYNCU9J6KQxsl7XqJVfFeAmCHVroZ7FFwiWip-xQX74GW7uPhu2WzczR0hc_AG8OWAU4o3gphhQp4lU8NoVBpPmMcEQPYYDe86Z8nOvi9NzNNG6CeDpmtr1a1gvdQMIr2nIpgYJd6YLKgekbDpaSFzR4NGEMFmULIt_Wk-dKCsbsAgHaPTgFzsGCQ">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">Evolution</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    NAPIT Accredited electrical engineering specialists in the South West.
+                </p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-4 uppercase tracking-widest">Services</h5>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-secondary transition-colors" href="smart-home-ev-solutions.html">Smart Lighting</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-secondary transition-colors" href="smart-home-ev-solutions.html">EV Charging</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-secondary transition-colors" href="smart-home-ev-solutions.html">Solar Storage</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-4 uppercase tracking-widest">Company</h5>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-secondary transition-colors" href="index.html">About Us</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-secondary transition-colors" href="residential-commercial-services.html">Terms of Service</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-secondary transition-colors" href="index.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-4 uppercase tracking-widest">Contact</h5>
+<p class="font-label-sm text-label-sm text-on-tertiary-container mb-2">T: 01234 567 890</p>
+<p class="font-label-sm text-label-sm text-on-tertiary-container">E: hello@evolution-electrics.co.uk</p>
+</div>
+</div>
+<div class="border-t border-white/5 py-stack-md text-center">
+<p class="font-label-sm text-label-sm text-on-tertiary-container opacity-50">© 2024 Evolution Electrics UK. All Rights Reserved. NAPIT Accredited.</p>
+</div>
+</footer>
+<script>
+        // Simple scroll observer for fade-in effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-panel').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

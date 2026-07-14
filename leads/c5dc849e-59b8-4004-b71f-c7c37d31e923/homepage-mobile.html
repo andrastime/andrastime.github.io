@@ -1,0 +1,369 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>VOLTAGE | Mobile Electrical Wholesaler</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#58dbff",
+                    "deep-navy": "#002B36",
+                    "safety-yellow": "#FFD60A",
+                    "surface-tint": "#15667e",
+                    "on-surface": "#1b1b1c",
+                    "inverse-primary": "#8cd0eb",
+                    "surface-container": "#f0edee",
+                    "tertiary": "#004554",
+                    "primary-fixed": "#b8eaff",
+                    "on-tertiary-fixed": "#001f27",
+                    "surface-bright": "#fcf8f9",
+                    "surface": "#fcf8f9",
+                    "tertiary-fixed": "#b3ebff",
+                    "secondary": "#a04100",
+                    "on-secondary-container": "#5d2300",
+                    "primary-container": "#005e75",
+                    "surface-container-high": "#eae7e8",
+                    "surface-container-low": "#f6f3f4",
+                    "background": "#fcf8f9",
+                    "on-secondary-fixed-variant": "#7a3000",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#91d5f0",
+                    "on-primary": "#ffffff",
+                    "primary": "#004557",
+                    "surface-variant": "#e5e2e3",
+                    "on-primary-fixed": "#001f28",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#005e72",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#341000",
+                    "inverse-on-surface": "#f3f0f1",
+                    "secondary-fixed-dim": "#ffb693",
+                    "on-secondary": "#ffffff",
+                    "outline": "#70787d",
+                    "on-tertiary": "#ffffff",
+                    "live-orange": "#FF8A00",
+                    "inverse-surface": "#303031",
+                    "outline-variant": "#bfc8cc",
+                    "on-primary-fixed-variant": "#004d61",
+                    "circuit-gray": "#E2E8F0",
+                    "surface-container-highest": "#e5e2e3",
+                    "surface-dim": "#dcd9da",
+                    "tertiary-fixed-dim": "#4cd6fb",
+                    "secondary-container": "#fc7728",
+                    "primary-fixed-dim": "#8cd0eb",
+                    "on-surface-variant": "#3f484c",
+                    "on-background": "#1b1b1c",
+                    "on-tertiary-fixed-variant": "#004e5f",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#ffdbcb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "margin-x": "32px",
+                    "container-max": "1280px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"],
+                    "label-md": ["JetBrains Mono"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .btn-gradient {
+            background: linear-gradient(180deg, #a04100 0%, #8a3800 100%);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+        .card-circuit {
+            border: 1px solid #E2E8F0;
+            transition: all 0.3s ease;
+        }
+        .card-circuit:hover {
+            border-color: #004557;
+            box-shadow: 0 4px 20px rgba(0, 69, 87, 0.08);
+        }
+        .menu-overlay {
+            transform: translateX(100%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .menu-overlay.active {
+            transform: translateX(0);
+        }
+        .technical-inset {
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Mobile Navigation Drawer Overlay -->
+<div class="fixed inset-0 z-[100] menu-overlay md:hidden" id="mobileMenu">
+<div class="absolute inset-0 bg-deep-navy/80 backdrop-blur-sm" onclick="toggleMenu()"></div>
+<nav class="absolute right-0 top-0 h-full w-4/5 bg-deep-navy p-margin-x flex flex-col gap-6 shadow-xl">
+<div class="flex justify-between items-center mb-8">
+<span class="text-headline-md font-headline-md font-extrabold text-white tracking-tighter">VOLTAGE</span>
+<button class="text-white" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+</div>
+<a class="text-secondary font-label-md text-label-md border-b-2 border-secondary pb-2" href="products-services-desktop.html">Industrial Supplies</a>
+<a class="text-white font-label-md text-label-md opacity-80 hover:opacity-100 transition-opacity" href="products-services-desktop.html">EV Charging</a>
+<a class="text-white font-label-md text-label-md opacity-80 hover:opacity-100 transition-opacity" href="products-services-desktop.html">Lighting Solutions</a>
+<a class="text-white font-label-md text-label-md opacity-80 hover:opacity-100 transition-opacity" href="products-services-desktop.html">Renewables</a>
+<a class="text-white font-label-md text-label-md opacity-80 hover:opacity-100 transition-opacity" href="careers-apprenticeships-desktop.html">Careers</a>
+<div class="mt-auto flex flex-col gap-4 border-t border-outline-variant pt-8">
+<button class="w-full btn-gradient py-4 text-white font-label-md text-label-md rounded-none uppercase tracking-widest">Trade Login</button>
+<button class="w-full border-2 border-secondary py-4 text-secondary font-label-md text-label-md rounded-none uppercase tracking-widest">Branch Finder</button>
+</div>
+</nav>
+</div>
+<!-- Top Navigation Bar -->
+<header class="bg-deep-navy sticky top-0 z-50 border-b border-outline-variant shadow-md">
+<div class="flex justify-between items-center w-full px-4 py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-extrabold text-white tracking-tighter">VOLTAGE</div>
+<div class="flex items-center gap-4">
+<button class="text-white md:hidden">
+<span class="material-symbols-outlined text-3xl">search</span>
+</button>
+<button class="text-white md:hidden p-1" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-4xl">menu</span>
+</button>
+</div>
+<!-- Desktop Nav (Hidden on mobile) -->
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md" href="products-services-desktop.html">Industrial Supplies</a>
+<a class="text-white font-medium hover:text-secondary-container transition-colors duration-200 font-label-md text-label-md" href="products-services-desktop.html">EV Charging</a>
+<a class="text-white font-medium hover:text-secondary-container transition-colors duration-200 font-label-md text-label-md" href="products-services-desktop.html">Lighting Solutions</a>
+<a class="text-white font-medium hover:text-secondary-container transition-colors duration-200 font-label-md text-label-md" href="products-services-desktop.html">Renewables</a>
+</nav>
+<div class="hidden md:flex gap-4">
+<button class="text-white font-medium px-4 py-2 hover:bg-white/10">Branch Finder</button>
+<button class="btn-gradient text-white font-bold px-6 py-2 uppercase text-label-md">Trade Login</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Mobile Hero Section -->
+<section class="relative bg-deep-navy overflow-hidden">
+<div class="relative w-full h-[500px]">
+<img class="w-full h-full object-cover opacity-60" data-alt="A professional vertical portrait of a modern electrical wholesaler warehouse exterior with large glass panels and deep navy architectural cladding. The lighting is bright and clear, reflecting a high-performance industrial aesthetic under a crisp morning sky. The image emphasizes reliability, scale, and technical precision in the electrical trade sector, featuring a clean and authoritative visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw9WzugvIjSr_L6kGgncWB7-kiY4VysYyshh-f-leaPRhonFX1f2Vyo9Jx65BOND6jESjR2bQ-zrUuFOf0H12AgNeqhxzI2SinGwEKk4SWi52oEGTriKl_I1REwOUFM9M4wlHg8_g1FKpo1gj31t50wF4fPfob2GUoeIFrx1sGkadoFtsgAjsPAqlE0tuB0naQnru1qrqAbK1Ib8SfRo18tADd1IOuBxA5mHCs3Lig0UwzrRXzEc2F">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy via-deep-navy/40 to-transparent"></div>
+</div>
+<div class="absolute inset-0 flex flex-col justify-end p-margin-x pb-12">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em] mb-4">Professional Grade Power</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-white leading-none mb-6">
+                    POWERING THE<br><span class="text-live-orange">UK TRADE</span>
+</h1>
+<p class="font-body-md text-body-md text-circuit-gray opacity-90 mb-8 max-w-[280px]">
+                    The UK's leading electrical wholesaler. 1,000+ branches. 24/7 technical support.
+                </p>
+<div class="flex flex-col gap-3">
+<button class="btn-gradient py-5 text-white font-label-md text-label-md rounded-none uppercase tracking-widest flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">map</span> Branch Finder
+                    </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 py-5 text-white font-label-md text-label-md rounded-none uppercase tracking-widest flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">login</span> Trade Account
+                    </button>
+</div>
+</div>
+</section>
+<!-- Search Bar Quick Access -->
+<div class="px-4 -mt-6 relative z-10">
+<div class="bg-white p-2 border border-circuit-gray shadow-xl flex items-center technical-inset">
+<span class="material-symbols-outlined text-outline px-3">search</span>
+<input class="w-full border-none focus:ring-0 font-label-sm text-label-sm text-on-surface placeholder:opacity-50 py-3" placeholder="Search 50k+ products..." type="text">
+<button class="bg-primary text-white p-3">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Core Service Highlights - Vertical Bento -->
+<section class="py-12 px-4 flex flex-col gap-6">
+<div class="flex justify-between items-end border-b-2 border-primary pb-4">
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">Core Services</h2>
+<a class="font-label-sm text-label-sm text-secondary uppercase font-bold flex items-center gap-1" href="products-services-desktop.html">All <span class="material-symbols-outlined text-sm">north_east</span></a>
+</div>
+<!-- EV Charging Card -->
+<div class="card-circuit bg-white overflow-hidden group">
+<div class="aspect-square relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLs2Nz9JeXHVjV4mMbMu6_-PdxpeQYvMsFcaOlBkvmCgkYQlfF1VtdzHULUvdNkB4_wClzdnqZu-eo7me1D7TStcvMfT8syeKXjrw6SZFAOyLtLLizgeSPyfki_4TdcdoK8Y6NJBoNspJzNWX-YByF3st2r0H-V0PMSdS-1nDYz0sxSgfzZUcNsDEMnal3cyVi8uRE4A6z9rU30Q6Q0zgwzN4GxiBuywNy42hVXgc7ho7w2D8KyPp2qsgA">
+<div class="absolute top-4 right-4 bg-safety-yellow px-3 py-1 font-label-sm text-label-sm text-deep-navy font-bold">NEXT DAY</div>
+</div>
+<div class="p-6">
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-2 block">Innovation</span>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-3">EV Charging Solutions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Commercial and residential charging hardware from leading global manufacturers.</p>
+<button class="w-full border-2 border-primary py-3 text-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">Explore EV</button>
+</div>
+</div>
+<!-- Industrial Card -->
+<div class="card-circuit bg-deep-navy p-6 flex flex-col justify-between min-h-[300px] relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[200px] text-white">factory</span>
+</div>
+<div class="relative z-10">
+<span class="font-label-sm text-label-sm text-on-tertiary-container uppercase mb-2 block">Trade Heavy</span>
+<h3 class="font-headline-md text-headline-md text-white mb-3 leading-tight">Industrial<br>Supplies</h3>
+<p class="font-body-md text-body-md text-circuit-gray opacity-80 mb-6">From heavy-duty cable to switchgear. Built for high-capacity performance.</p>
+</div>
+<button class="relative z-10 w-full bg-white/10 border border-white/20 py-3 text-white font-label-md text-label-md uppercase tracking-wider">View Catalog</button>
+</div>
+<!-- Lighting Card -->
+<div class="card-circuit bg-white p-6 relative group overflow-hidden">
+<div class="flex items-start justify-between mb-8">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-2 block">Precision</span>
+<h3 class="font-headline-md text-headline-md text-deep-navy">Lighting Solutions</h3>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary opacity-20">lightbulb</span>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-4 no-scrollbar">
+<div class="min-w-[120px] bg-surface-container aspect-square flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-outline">emergency_home</span>
+</div>
+<div class="min-w-[120px] bg-surface-container aspect-square flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-outline">wb_sunny</span>
+</div>
+<div class="min-w-[120px] bg-surface-container aspect-square flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-outline">straighten</span>
+</div>
+</div>
+<button class="w-full btn-gradient py-3 text-white font-label-md text-label-md uppercase mt-4">Order Lighting</button>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-surface-container-high py-12 px-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-4 border-l-4 border-primary shadow-sm">
+<div class="font-headline-md text-headline-md text-primary">50k+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">SKUs In Stock</div>
+</div>
+<div class="bg-white p-4 border-l-4 border-secondary shadow-sm">
+<div class="font-headline-md text-headline-md text-secondary">24h</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Express Delivery</div>
+</div>
+<div class="bg-white p-4 border-l-4 border-primary shadow-sm">
+<div class="font-headline-md text-headline-md text-primary">1k+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Local Branches</div>
+</div>
+<div class="bg-white p-4 border-l-4 border-secondary shadow-sm">
+<div class="font-headline-md text-headline-md text-secondary">08:00</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Trade Opening</div>
+</div>
+</div>
+</section>
+<!-- Newsletter CTA -->
+<section class="py-16 px-margin-x text-center bg-white border-y border-outline-variant">
+<span class="material-symbols-outlined text-5xl text-secondary mb-4" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h2 class="font-headline-md text-headline-md text-deep-navy mb-4">Stay Connected</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 px-4">Join 20k+ electrical professionals receiving weekly trade insights and exclusive offers.</p>
+<div class="flex flex-col gap-3">
+<input class="bg-surface-container border-none focus:ring-2 focus:ring-primary py-4 px-6 text-center font-label-md text-label-md technical-inset" placeholder="professional@email.com" type="email">
+<button class="btn-gradient py-4 text-white font-label-md text-label-md uppercase tracking-widest">Sign Up Now</button>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-deep-navy border-t-4 border-secondary">
+<div class="grid grid-cols-1 gap-12 px-margin-x py-16 max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div>
+<div class="text-headline-md font-headline-md font-black text-white mb-6">VOLTAGE</div>
+<p class="text-circuit-gray opacity-80 font-body-md text-body-md mb-8 max-w-xs">
+                    Professional grade electrical equipment. Delivering excellence to the trade since 1980. Reliable. Precise. Powerful.
+                </p>
+<div class="flex gap-4">
+<a class="w-12 h-12 bg-white/5 flex items-center justify-center hover:bg-secondary transition-colors group" href="#">
+<span class="material-symbols-outlined text-white opacity-80 group-hover:opacity-100">share</span>
+</a>
+<a class="w-12 h-12 bg-white/5 flex items-center justify-center hover:bg-secondary transition-colors group" href="#">
+<span class="material-symbols-outlined text-white opacity-80 group-hover:opacity-100">mail</span>
+</a>
+<a class="w-12 h-12 bg-white/5 flex items-center justify-center hover:bg-secondary transition-colors group" href="homepage-mobile.html">
+<span class="material-symbols-outlined text-white opacity-80 group-hover:opacity-100">call</span>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold uppercase text-label-md tracking-wider mb-2">Company</h4>
+<a class="text-circuit-gray opacity-80 hover:text-white transition-opacity text-label-sm font-label-sm" href="index.html">Privacy Policy</a>
+<a class="text-circuit-gray opacity-80 hover:text-white transition-opacity text-label-sm font-label-sm" href="products-services-desktop.html">Terms of Service</a>
+<a class="text-circuit-gray opacity-80 hover:text-white transition-opacity text-label-sm font-label-sm" href="products-services-desktop.html">Health &amp; Safety</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold uppercase text-label-md tracking-wider mb-2">Support</h4>
+<a class="text-circuit-gray opacity-80 hover:text-white transition-opacity text-label-sm font-label-sm" href="#">Sustainability</a>
+<a class="text-circuit-gray opacity-80 hover:text-white transition-opacity text-label-sm font-label-sm" href="index.html">Cookie Settings</a>
+<a class="text-secondary underline text-label-sm font-label-sm" href="#">Help Center</a>
+</div>
+</div>
+<!-- Copyright -->
+<div class="border-t border-white/10 pt-12 text-center md:text-left">
+<p class="text-on-tertiary-container font-label-sm text-label-sm">
+                    © 2024 Voltage Electrical Wholesalers Ltd. All Rights Reserved. Professional Grade Power.
+                </p>
+</div>
+</div>
+</footer>
+<!-- Back to top micro-interaction -->
+<button class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white shadow-2xl flex items-center justify-center z-40 focus:outline-none focus:ring-2 focus:ring-secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+<script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Search bar interaction
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('ring-2', 'ring-primary');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('ring-2', 'ring-primary');
+        });
+    </script>
+</body></html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Request a Quote | VOLTWORKS Electrical Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#394760",
+                        "outline-variant": "#c5c6ce",
+                        "primary-fixed-dim": "#b8c7e5",
+                        "primary-fixed": "#d6e3ff",
+                        "secondary-fixed-dim": "#ffba20",
+                        "primary-container": "#0c1c33",
+                        "on-tertiary-container": "#798499",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "background": "#f8f9fa",
+                        "surface-variant": "#e1e3e4",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "electric-white": "#FFFFFF",
+                        "safety-red": "#EC1F26",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#bcc7dd",
+                        "secondary": "#7c5800",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "tertiary-fixed": "#d8e3fa",
+                        "outline": "#75777e",
+                        "deep-slate": "#1A202C",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container": "#edeeef",
+                        "tertiary": "#000000",
+                        "surface-dim": "#d9dadb",
+                        "on-primary-container": "#7684a0",
+                        "primary": "#000000",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-fixed": "#111c2c",
+                        "inverse-primary": "#b8c7e5",
+                        "on-secondary-container": "#6b4b00",
+                        "inverse-surface": "#2e3132",
+                        "surface-bright": "#f8f9fa",
+                        "secondary-fixed": "#ffdea8",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#0c1c33",
+                        "secondary-container": "#feb700",
+                        "on-tertiary-fixed-variant": "#3c475a",
+                        "on-background": "#191c1d",
+                        "on-surface": "#191c1d",
+                        "tertiary-container": "#111c2c",
+                        "on-secondary-fixed": "#271900",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#44474d",
+                        "surface-tint": "#505f79"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "stack-lg": "64px"
+                    },
+                    "fontFamily": {
+                        "button": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "button": ["14px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active { color: var(--tw-secondary-container); }
+        .form-step { display: none; }
+        .form-step.active { display: block; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-primary-container/90 backdrop-blur-md shadow-sm border-b border-outline-variant dark:border-on-tertiary-container">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="VoltWorks Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfF04kozkfDJ6a63yDXZycIPcVj6qEFm1q2w56ent2dwpOGHDl89L1K8IXPIzNkYkwAN_2qeHlWczJ9zGlCGZtlRkttx3r5PGTa61nacKL7Z9392ZuEAmhD2oe26X6Es6s7zo5dLDLZpw-8PaI58Flt7bxnyU9ScWMzMonne9pykCFTeIIoNEWy-lDYO_BfmQMjLCOXV_oAfg3RaLOAmHiEdJq4XqTaZ-7Z9Lv4d-m2v0-MB_TxLH2">
+<span class="font-headline-md text-headline-md font-extrabold text-primary dark:text-electric-white">VOLTWORKS</span>
+</div>
+<div class="hidden md:flex items-center gap-stack-md">
+<a class="font-button text-button uppercase tracking-wider text-on-surface dark:text-surface-variant hover:text-secondary-container dark:hover:text-secondary-fixed transition-colors" href="home-electrical-testing-uk-installations.html">Home</a>
+<a class="font-button text-button uppercase tracking-wider text-on-surface dark:text-surface-variant hover:text-secondary-container dark:hover:text-secondary-fixed transition-colors" href="index.html">About</a>
+<a class="font-button text-button uppercase tracking-wider text-on-surface dark:text-surface-variant hover:text-secondary-container dark:hover:text-secondary-fixed transition-colors" href="our-services-electrical-testing-uk-installations.html">Services</a>
+<a class="font-button text-button uppercase tracking-wider text-on-surface dark:text-surface-variant hover:text-secondary-container dark:hover:text-secondary-fixed transition-colors" href="our-services-electrical-testing-uk-installations.html">Projects</a>
+<button class="ml-4 bg-secondary-container text-on-secondary-fixed px-6 py-3 font-button text-button uppercase tracking-wider rounded-sm hover:brightness-110 transition-all">Request a Quote</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-32 pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Form Section -->
+<div class="lg:col-span-8">
+<div class="mb-stack-md">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Inquiry Portal</span>
+<h1 class="font-headline-lg text-headline-lg mt-2 mb-4">Request a Technical Quote</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Precision engineering requires accurate data. Please provide the details of your commercial or industrial project below.</p>
+</div>
+<!-- Multi-Step Form Container -->
+<div class="bg-surface-container-lowest border border-outline-variant p-stack-md md:p-10 rounded-sm shadow-sm relative overflow-hidden">
+<!-- Progress Bar -->
+<div class="flex justify-between mb-10 relative">
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-outline-variant -translate-y-1/2 z-0"></div>
+<div class="relative z-10 flex flex-col items-center gap-2 group cursor-pointer" onclick="goToStep(1)">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-electric-white text-xs font-bold transition-colors" id="dot-1">1</div>
+<span class="font-label-md text-[10px] uppercase tracking-tighter text-primary">Service</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2 group cursor-pointer" onclick="goToStep(2)">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant text-xs font-bold transition-colors" id="dot-2">2</div>
+<span class="font-label-md text-[10px] uppercase tracking-tighter text-on-surface-variant">Scope</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2 group cursor-pointer" onclick="goToStep(3)">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant text-xs font-bold transition-colors" id="dot-3">3</div>
+<span class="font-label-md text-[10px] uppercase tracking-tighter text-on-surface-variant">Location</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2 group cursor-pointer" onclick="goToStep(4)">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant text-xs font-bold transition-colors" id="dot-4">4</div>
+<span class="font-label-md text-[10px] uppercase tracking-tighter text-on-surface-variant">Details</span>
+</div>
+</div>
+<form id="quote-form">
+<!-- Step 1: Service Type -->
+<div class="form-step active" id="step-1">
+<h2 class="font-headline-md text-headline-md mb-6">Select Primary Service</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="border border-outline-variant p-6 rounded-sm cursor-pointer hover:border-primary transition-all flex items-start gap-4 has-[:checked]:bg-surface-container-low has-[:checked]:border-primary">
+<input class="mt-1 text-primary focus:ring-primary" name="service" type="radio" value="industrial">
+<div>
+<div class="font-button text-button uppercase mb-1">Industrial Installation</div>
+<p class="text-sm text-on-surface-variant">High-voltage systems, manufacturing plants, and factory infrastructure.</p>
+</div>
+</label>
+<label class="border border-outline-variant p-6 rounded-sm cursor-pointer hover:border-primary transition-all flex items-start gap-4 has-[:checked]:bg-surface-container-low has-[:checked]:border-primary">
+<input class="mt-1 text-primary focus:ring-primary" name="service" type="radio" value="commercial">
+<div>
+<div class="font-button text-button uppercase mb-1">Commercial Maintenance</div>
+<p class="text-sm text-on-surface-variant">Testing, compliance reports (EICR), and planned facility maintenance.</p>
+</div>
+</label>
+<label class="border border-outline-variant p-6 rounded-sm cursor-pointer hover:border-primary transition-all flex items-start gap-4 has-[:checked]:bg-surface-container-low has-[:checked]:border-primary">
+<input class="mt-1 text-primary focus:ring-primary" name="service" type="radio" value="emergency">
+<div>
+<div class="font-button text-button uppercase mb-1">Emergency Support</div>
+<p class="text-sm text-on-surface-variant">24/7 reactive repairs for critical infrastructure failures.</p>
+</div>
+</label>
+<label class="border border-outline-variant p-6 rounded-sm cursor-pointer hover:border-primary transition-all flex items-start gap-4 has-[:checked]:bg-surface-container-low has-[:checked]:border-primary">
+<input class="mt-1 text-primary focus:ring-primary" name="service" type="radio" value="testing">
+<div>
+<div class="font-button text-button uppercase mb-1">Specialist Testing</div>
+<p class="text-sm text-on-surface-variant">Thermal imaging, PAT testing, and load monitoring services.</p>
+</div>
+</label>
+</div>
+</div>
+<!-- Step 2: Project Size -->
+<div class="form-step" id="step-2">
+<h2 class="font-headline-md text-headline-md mb-6">Project Scope &amp; Size</h2>
+<div class="space-y-6">
+<div>
+<label class="font-label-md text-label-md block mb-2 uppercase">Estimated Project Value (£)</label>
+<select class="w-full border-outline-variant rounded-sm focus:border-primary focus:ring-primary h-12">
+<option>Under £5,000</option>
+<option>£5,000 - £25,000</option>
+<option>£25,000 - £100,000</option>
+<option>£100,000+</option>
+</select>
+</div>
+<div>
+<label class="font-label-md text-label-md block mb-2 uppercase">Project Urgency</label>
+<div class="flex flex-wrap gap-4">
+<button class="px-6 py-2 border border-outline-variant rounded-sm text-sm hover:border-primary transition-colors" type="button">Immediate</button>
+<button class="px-6 py-2 border border-outline-variant rounded-sm text-sm hover:border-primary transition-colors" type="button">1-3 Months</button>
+<button class="px-6 py-2 border border-outline-variant rounded-sm text-sm hover:border-primary transition-colors" type="button">Future Planning</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3: Location -->
+<div class="form-step" id="step-3">
+<h2 class="font-headline-md text-headline-md mb-6">Site Location</h2>
+<div class="space-y-4">
+<div>
+<label class="font-label-md text-label-md block mb-2 uppercase">Street Address</label>
+<input class="w-full border-outline-variant rounded-sm focus:border-primary focus:ring-primary" placeholder="Site Address Line 1" type="text">
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="font-label-md text-label-md block mb-2 uppercase">City</label>
+<input class="w-full border-outline-variant rounded-sm focus:border-primary focus:ring-primary" placeholder="e.g. Birmingham" type="text">
+</div>
+<div>
+<label class="font-label-md text-label-md block mb-2 uppercase">Postcode</label>
+<input class="w-full border-outline-variant rounded-sm focus:border-primary focus:ring-primary" placeholder="e.g. B1 1AA" type="text">
+</div>
+</div>
+</div>
+</div>
+<!-- Step 4: Contact Info -->
+<div class="form-step" id="step-4">
+<h2 class="font-headline-md text-headline-md mb-6">Final Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div>
+<label class="font-label-md text-label-md block mb-2 uppercase">Full Name</label>
+<input class="w-full border-outline-variant rounded-sm focus:border-primary focus:ring-primary" type="text">
+</div>
+<div>
+<label class="font-label-md text-label-md block mb-2 uppercase">Company Name</label>
+<input class="w-full border-outline-variant rounded-sm focus:border-primary focus:ring-primary" type="text">
+</div>
+<div>
+<label class="font-label-md text-label-md block mb-2 uppercase">Email Address</label>
+<input class="w-full border-outline-variant rounded-sm focus:border-primary focus:ring-primary" type="email">
+</div>
+<div>
+<label class="font-label-md text-label-md block mb-2 uppercase">Phone Number</label>
+<input class="w-full border-outline-variant rounded-sm focus:border-primary focus:ring-primary" type="tel">
+</div>
+</div>
+<div>
+<label class="font-label-md text-label-md block mb-2 uppercase">Project Description / Requirements</label>
+<textarea class="w-full border-outline-variant rounded-sm focus:border-primary focus:ring-primary" rows="4"></textarea>
+</div>
+</div>
+<!-- Form Navigation -->
+<div class="mt-10 flex justify-between items-center border-t border-outline-variant pt-6">
+<button class="hidden text-on-surface-variant font-button text-button uppercase tracking-wider flex items-center gap-2" id="prev-btn" onclick="prevStep()" type="button">
+<span class="material-symbols-outlined text-base">arrow_back</span> Back
+                            </button>
+<div class="flex-1"></div>
+<button class="bg-primary text-electric-white px-8 py-3 font-button text-button uppercase tracking-wider rounded-sm hover:brightness-125 transition-all flex items-center gap-2" id="next-btn" onclick="nextStep()" type="button">
+                                Next Step <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+<button class="hidden bg-secondary-container text-on-secondary-fixed px-8 py-3 font-button text-button uppercase tracking-wider rounded-sm hover:brightness-110 transition-all" id="submit-btn" type="submit">
+                                Submit Request
+                            </button>
+</div>
+</form>
+</div>
+<!-- Locations Grid -->
+<section class="mt-stack-lg">
+<h2 class="font-headline-md text-headline-md mb-8 flex items-center gap-3">
+<span class="w-8 h-[2px] bg-secondary-container"></span>
+                        Our Regional Offices
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Location Cards -->
+<div class="group border border-outline-variant p-6 rounded-sm bg-surface-container-low hover:bg-primary-container hover:text-electric-white transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary-container">location_on</span>
+<span class="font-label-md text-[10px] text-on-surface-variant group-hover:text-primary-fixed uppercase">HQ</span>
+</div>
+<h3 class="font-headline-md text-lg mb-2">Birmingham</h3>
+<p class="text-sm opacity-80 mb-4">Innovation Square, B1 2BH<br>Midlands Technical Hub</p>
+<a class="text-xs font-bold border-b border-secondary-container group-hover:text-secondary-fixed transition-colors" href="tel:0121000000">0121 555 0192</a>
+</div>
+<div class="group border border-outline-variant p-6 rounded-sm bg-surface-container-low hover:bg-primary-container hover:text-electric-white transition-all duration-300">
+<span class="material-symbols-outlined text-secondary-container mb-4">apartment</span>
+<h3 class="font-headline-md text-lg mb-2">Boston</h3>
+<p class="text-sm opacity-80 mb-4">Marsh Lane Industrial Estate<br>PE21 7ST</p>
+<a class="text-xs font-bold border-b border-secondary-container group-hover:text-secondary-fixed transition-colors" href="index.html">Contact Office</a>
+</div>
+<div class="group border border-outline-variant p-6 rounded-sm bg-surface-container-low hover:bg-primary-container hover:text-electric-white transition-all duration-300">
+<span class="material-symbols-outlined text-secondary-container mb-4">settings_input_component</span>
+<h3 class="font-headline-md text-lg mb-2">Nottingham</h3>
+<p class="text-sm opacity-80 mb-4">NG2 Business Park<br>Nottingham, NG2 1AE</p>
+<a class="text-xs font-bold border-b border-secondary-container group-hover:text-secondary-fixed transition-colors" href="index.html">Contact Office</a>
+</div>
+<div class="group border border-outline-variant p-6 rounded-sm bg-surface-container-low hover:bg-primary-container hover:text-electric-white transition-all duration-300">
+<span class="material-symbols-outlined text-secondary-container mb-4">precision_manufacturing</span>
+<h3 class="font-headline-md text-lg mb-2">Cambridge</h3>
+<p class="text-sm opacity-80 mb-4">Cambridge Science Park<br>CB4 0WN</p>
+<a class="text-xs font-bold border-b border-secondary-container group-hover:text-secondary-fixed transition-colors" href="index.html">Contact Office</a>
+</div>
+<div class="group border border-outline-variant p-6 rounded-sm bg-surface-container-low hover:bg-primary-container hover:text-electric-white transition-all duration-300">
+<span class="material-symbols-outlined text-secondary-container mb-4">foundation</span>
+<h3 class="font-headline-md text-lg mb-2">Peterborough</h3>
+<p class="text-sm opacity-80 mb-4">Lynch Wood Business Park<br>PE2 6FY</p>
+<a class="text-xs font-bold border-b border-secondary-container group-hover:text-secondary-fixed transition-colors" href="index.html">Contact Office</a>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar -->
+<aside class="lg:col-span-4 space-y-gutter">
+<!-- Contact Methods -->
+<div class="bg-primary-container text-electric-white p-8 rounded-sm">
+<h3 class="font-headline-md text-headline-md mb-6">Direct Support</h3>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-fixed flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-xs uppercase tracking-widest text-on-primary-container">24/7 Hotline</p>
+<p class="text-lg font-bold">+44 (0) 121 555 0192</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-fixed flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs uppercase tracking-widest text-on-primary-container">Email Inquiries</p>
+<p class="text-lg font-bold">quotes@voltworks.co.uk</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Certifications / Why Choose Us -->
+<div class="border border-outline-variant p-8 rounded-sm bg-white">
+<h3 class="font-headline-md text-headline-md mb-6">Why Choose Us</h3>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div>
+<span class="font-button text-button uppercase block mb-1">NICEIC Approved</span>
+<p class="text-sm text-on-surface-variant leading-relaxed">Fully accredited contractor meeting the highest UK safety standards.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">engineering</span>
+<div>
+<span class="font-button text-button uppercase block mb-1">Expert Engineering</span>
+<p class="text-sm text-on-surface-variant leading-relaxed">All technicians are Level 3 NVQ qualified with specialized industrial training.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">security</span>
+<div>
+<span class="font-button text-button uppercase block mb-1">Full Compliance</span>
+<p class="text-sm text-on-surface-variant leading-relaxed">Strict adherence to BS 7671 (IET Wiring Regulations) standards.</p>
+</div>
+</li>
+</ul>
+<div class="mt-8 pt-8 border-t border-outline-variant">
+<div class="flex items-center justify-center gap-6 grayscale opacity-60">
+<!-- Placeholder for certification logos -->
+<div class="w-12 h-12 border border-outline-variant flex items-center justify-center text-[8px] font-bold text-center">NICEIC</div>
+<div class="w-12 h-12 border border-outline-variant flex items-center justify-center text-[8px] font-bold text-center">CHAS</div>
+<div class="w-12 h-12 border border-outline-variant flex items-center justify-center text-[8px] font-bold text-center">ISO 9001</div>
+<div class="w-12 h-12 border border-outline-variant flex items-center justify-center text-[8px] font-bold text-center">SafeContractor</div>
+</div>
+</div>
+</div>
+<!-- Emergency Banner -->
+<div class="relative overflow-hidden bg-safety-red text-electric-white p-8 rounded-sm">
+<div class="relative z-10">
+<h3 class="font-headline-md text-xl mb-2">Electrical Emergency?</h3>
+<p class="text-sm opacity-90 mb-4">Our rapid response units are on standby 24 hours a day for critical failures.</p>
+<a class="inline-block bg-electric-white text-safety-red px-6 py-2 font-button text-button uppercase rounded-sm hover:bg-opacity-90 transition-all" href="tel:0121000000">Call Now</a>
+</div>
+<!-- Decorative circuit pattern via CSS -->
+<div class="absolute -right-4 -bottom-4 opacity-10 rotate-12">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'wght' 700;">bolt</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-tertiary-container w-full py-stack-lg border-t-4 border-secondary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-4">
+<span class="font-headline-md text-headline-md text-secondary-fixed block">VOLTWORKS</span>
+<p class="font-body-md text-body-md text-on-primary-container">Engineering Tomorrow's Electrical Infrastructure with Precision and Integrity.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-button text-button uppercase text-electric-white">Regional Hubs</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-white transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="electrical-services-birmingham-etuk.html">Birmingham</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-white transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="#">Boston</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-white transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="electrical-services-birmingham-etuk.html">Nottingham</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-white transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="electrical-services-birmingham-etuk.html">Cambridge</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-button text-button uppercase text-electric-white">Operations</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-white transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="electrical-services-birmingham-etuk.html">Peterborough</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-white transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="our-services-electrical-testing-uk-installations.html">Safety Standards</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-white transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="our-services-electrical-testing-uk-installations.html">Technical Resources</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-white transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="index.html">Careers</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-button text-button uppercase text-electric-white">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-white transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="index.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-electric-white transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-stack-lg px-margin-desktop max-w-container-max mx-auto text-center border-t border-on-tertiary-container pt-8">
+<p class="font-body-md text-body-md text-on-primary-container">© 2024 VoltWorks Electrical Services. Engineering Tomorrow.</p>
+</div>
+</footer>
+<script>
+        let currentStep = 1;
+        const totalSteps = 4;
+
+        function updateStepUI() {
+            // Update Visibility
+            document.querySelectorAll('.form-step').forEach(step => {
+                step.classList.remove('active');
+            });
+            document.getElementById(`step-${currentStep}`).classList.add('active');
+
+            // Update Dots
+            for (let i = 1; i <= totalSteps; i++) {
+                const dot = document.getElementById(`dot-${i}`);
+                const span = dot.nextElementSibling;
+                if (i <= currentStep) {
+                    dot.classList.remove('bg-surface-variant', 'text-on-surface-variant');
+                    dot.classList.add('bg-primary', 'text-electric-white');
+                    span.classList.remove('text-on-surface-variant');
+                    span.classList.add('text-primary');
+                } else {
+                    dot.classList.add('bg-surface-variant', 'text-on-surface-variant');
+                    dot.classList.remove('bg-primary', 'text-electric-white');
+                    span.classList.add('text-on-surface-variant');
+                    span.classList.remove('text-primary');
+                }
+            }
+
+            // Update Buttons
+            document.getElementById('prev-btn').classList.toggle('hidden', currentStep === 1);
+            if (currentStep === totalSteps) {
+                document.getElementById('next-btn').classList.add('hidden');
+                document.getElementById('submit-btn').classList.remove('hidden');
+            } else {
+                document.getElementById('next-btn').classList.remove('hidden');
+                document.getElementById('submit-btn').classList.add('hidden');
+            }
+        }
+
+        function nextStep() {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                updateStepUI();
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateStepUI();
+            }
+        }
+
+        function goToStep(step) {
+            currentStep = step;
+            updateStepUI();
+        }
+
+        document.getElementById('quote-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Request Sent Successfully. An engineer will contact you within 24 hours.');
+        });
+    </script>
+</body></html>

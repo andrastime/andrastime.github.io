@@ -1,0 +1,337 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Book a Test | Birmingham PAT Testing LLP</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active { @apply text-electric-amber; }
+        .form-input-focus:focus {
+            outline: none;
+            border-color: #FFC107;
+            box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.2);
+        }
+        /* Custom scrollbar for a tech feel */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #111316; }
+        ::-webkit-scrollbar-thumb { background: #333538; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FFC107; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-electric-amber selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 backdrop-blur-md dark:bg-surface/90 shadow-[0_10px_30px_-10px_rgba(0,0,128,0.3)] docked full-width top-0 z-50 fixed w-full">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-electric-amber uppercase tracking-tight">
+                Birmingham PAT Testing
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-cta-text text-cta-text text-on-surface hover:text-electric-amber transition-colors duration-300" href="home-birmingham-pat-testing.html">Home</a>
+<a class="font-cta-text text-cta-text text-on-surface hover:text-electric-amber transition-colors duration-300" href="our-services-birmingham-pat-testing.html">Services</a>
+<a class="font-cta-text text-cta-text text-on-surface hover:text-electric-amber transition-colors duration-300" href="index.html">FAQ</a>
+<a class="font-cta-text text-cta-text text-on-surface hover:text-electric-amber transition-colors duration-300" href="index.html">Blog</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden lg:block font-cta-text text-cta-text bg-transparent border border-deep-navy text-on-surface px-6 py-2 rounded-lg hover:scale-105 hover:shadow-warning-glow transition-all duration-300 active:scale-95">
+                    Get a Quote
+                </button>
+<button class="font-cta-text text-cta-text bg-electric-amber text-on-primary px-6 py-2 rounded-lg hover:scale-105 hover:shadow-warning-glow transition-all duration-300 active:scale-95 uppercase">
+                    Book a Test
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto min-h-screen">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Booking Form -->
+<div class="lg:col-span-8">
+<header class="mb-12">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-4">Book Your Compliance Test</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Professional Portable Appliance Testing for businesses across the West Midlands. Ensure safety, remain compliant, and protect your staff.</p>
+</header>
+<!-- Multi-Step Progress -->
+<div class="mb-12 flex items-center justify-between relative">
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-surface-container-highest -z-10"></div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-10 h-10 rounded-full bg-electric-amber text-on-primary flex items-center justify-center font-bold shadow-lg shadow-warning-glow" id="step-1-circle">1</div>
+<span class="font-label-caps text-label-caps text-electric-amber">Contact</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-bold border border-outline transition-colors" id="step-2-circle">2</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Requirements</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-bold border border-outline transition-colors" id="step-3-circle">3</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Schedule</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-bold border border-outline transition-colors" id="step-4-circle">4</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Confirm</span>
+</div>
+</div>
+<!-- Form Container -->
+<form class="space-y-8" id="booking-form">
+<!-- Step 1: Contact Details -->
+<div class="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500" id="step-1">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Full Name</label>
+<input class="w-full bg-charcoal-surface border border-deep-navy rounded-lg p-4 text-on-surface form-input-focus transition-all" placeholder="John Doe" required="" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Company Name</label>
+<input class="w-full bg-charcoal-surface border border-deep-navy rounded-lg p-4 text-on-surface form-input-focus transition-all" placeholder="Birmingham Tech Hub" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Email Address</label>
+<input class="w-full bg-charcoal-surface border border-deep-navy rounded-lg p-4 text-on-surface form-input-focus transition-all" placeholder="john@example.com" required="" type="email">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Phone Number</label>
+<input class="w-full bg-charcoal-surface border border-deep-navy rounded-lg p-4 text-on-surface form-input-focus transition-all" placeholder="0121 000 0000" required="" type="tel">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Site Address</label>
+<textarea class="w-full bg-charcoal-surface border border-deep-navy rounded-lg p-4 text-on-surface form-input-focus transition-all" placeholder="Full postal address of the site to be tested" required="" rows="3"></textarea>
+</div>
+</div>
+<!-- Step 2: Testing Requirements (Hidden initially) -->
+<div class="hidden space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500" id="step-2">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Estimated Number of Items</label>
+<select class="w-full bg-charcoal-surface border border-deep-navy rounded-lg p-4 text-on-surface form-input-focus transition-all">
+<option>1 - 50 items</option>
+<option>51 - 200 items</option>
+<option>201 - 500 items</option>
+<option>500+ items</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Premises Type</label>
+<select class="w-full bg-charcoal-surface border border-deep-navy rounded-lg p-4 text-on-surface form-input-focus transition-all">
+<option>Office</option>
+<option>Retail</option>
+<option>Industrial / Warehouse</option>
+<option>Education</option>
+<option>Construction Site</option>
+</select>
+</div>
+</div>
+<div class="p-6 bg-surface-container rounded-lg border border-outline-variant">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4">Additional Services</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-deep-navy text-electric-amber focus:ring-electric-amber bg-charcoal-surface" type="checkbox">
+<span class="text-on-surface group-hover:text-electric-amber transition-colors">Microwave Emission Testing</span>
+</label>
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-deep-navy text-electric-amber focus:ring-electric-amber bg-charcoal-surface" type="checkbox">
+<span class="text-on-surface group-hover:text-electric-amber transition-colors">Emergency Light Testing</span>
+</label>
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-deep-navy text-electric-amber focus:ring-electric-amber bg-charcoal-surface" type="checkbox">
+<span class="text-on-surface group-hover:text-electric-amber transition-colors">Socket Testing</span>
+</label>
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-deep-navy text-electric-amber focus:ring-electric-amber bg-charcoal-surface" type="checkbox">
+<span class="text-on-surface group-hover:text-electric-amber transition-colors">Out-of-Hours Service</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Navigation Buttons -->
+<div class="pt-8 flex justify-between">
+<button class="hidden font-cta-text text-cta-text px-8 py-4 bg-surface-container-high text-on-surface rounded-lg hover:bg-surface-variant transition-all" id="prev-btn" type="button">
+                            Back
+                        </button>
+<button class="ml-auto font-cta-text text-cta-text px-10 py-4 bg-electric-amber text-on-primary rounded-lg shadow-lg hover:shadow-warning-glow hover:scale-105 transition-all" id="next-btn" type="button">
+                            Next Step
+                        </button>
+</div>
+</form>
+</div>
+<!-- Right Column: Sidebar -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- Trust Sidebar Card -->
+<div class="bg-charcoal-surface border border-deep-navy rounded-lg p-8 shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: 'wght' 200;">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-electric-amber mb-6">Why Book With Us?</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-amber" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-bold text-on-surface">NIC/EIC Approved</p>
+<p class="text-sm text-on-surface-variant">Qualified engineers following the latest IET Code of Practice.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-amber" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<div>
+<p class="font-bold text-on-surface">Same-Day Certification</p>
+<p class="text-sm text-on-surface-variant">Digital PDF certificates issued immediately after testing.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-amber" style="font-variation-settings: 'FILL' 1;">history</span>
+<div>
+<p class="font-bold text-on-surface">Asset Register Included</p>
+<p class="text-sm text-on-surface-variant">Detailed log of every item tested for your safety records.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-amber" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div>
+<p class="font-bold text-on-surface">Birmingham Local</p>
+<p class="text-sm text-on-surface-variant">Quick response times across Birmingham &amp; the Black Country.</p>
+</div>
+</li>
+</ul>
+<div class="mt-8 pt-8 border-t border-outline-variant flex justify-center gap-6">
+<!-- Trust Badges Placeholders -->
+<div class="w-16 h-16 bg-surface-container flex items-center justify-center rounded grayscale hover:grayscale-0 transition-all cursor-help" title="NICEIC Certified">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<div class="w-16 h-16 bg-surface-container flex items-center justify-center rounded grayscale hover:grayscale-0 transition-all cursor-help" title="SafeContractor Approved">
+<span class="material-symbols-outlined text-3xl">safety_check</span>
+</div>
+<div class="w-16 h-16 bg-surface-container flex items-center justify-center rounded grayscale hover:grayscale-0 transition-all cursor-help" title="ISO 9001">
+<span class="material-symbols-outlined text-3xl">workspace_premium</span>
+</div>
+</div>
+</div>
+<!-- Support Card -->
+<div class="p-8 bg-deep-navy/20 border border-deep-navy rounded-lg backdrop-blur-sm">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Need Help?</h4>
+<p class="text-on-surface-variant mb-6">Our experts are ready to assist with custom requirements or large-scale site surveys.</p>
+<div class="space-y-4">
+<a class="flex items-center gap-3 text-electric-amber hover:underline group" href="tel:01210000000">
+<span class="material-symbols-outlined">call</span>
+<span class="font-bold">0121 234 5678</span>
+</a>
+<a class="flex items-center gap-3 text-electric-amber hover:underline group" href="mailto:info@birminghampattesting.co.uk">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-bold">info@birminghampattesting.co.uk</span>
+</a>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-charcoal-surface dark:bg-charcoal-surface border-t border-deep-navy">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-4">Birmingham PAT Testing</div>
+<p class="text-on-surface-variant text-body-md mb-6">Industry-leading electrical safety testing for professional environments.</p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-electric-amber transition-colors" href="index.html">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-electric-amber transition-colors" href="our-services-birmingham-pat-testing.html">
+<span class="material-symbols-outlined">linked_camera</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-electric-amber mb-6 uppercase">Quick Links</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="our-services-birmingham-pat-testing.html">Services</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="our-services-birmingham-pat-testing.html">Pricing Guide</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="our-services-birmingham-pat-testing.html">Our Clients</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="book-a-test-birmingham-pat-testing.html">Request a Callback</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-electric-amber mb-6 uppercase">Company</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="our-services-birmingham-pat-testing.html">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="index.html">Careers</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-amber transition-colors" href="home-birmingham-pat-testing.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-electric-amber mb-6 uppercase">Newsletter</h5>
+<p class="text-on-surface-variant text-sm mb-4">Get the latest safety regulation updates.</p>
+<div class="flex">
+<input class="bg-background border border-deep-navy rounded-l-lg p-2 flex-grow focus:outline-none focus:border-electric-amber" placeholder="Email" type="email">
+<button class="bg-electric-amber text-on-primary px-4 rounded-r-lg hover:opacity-90">Join</button>
+</div>
+</div>
+</div>
+<div class="border-t border-deep-navy/30 py-6 text-center text-on-surface-variant text-sm">
+            © 2024 Birmingham PAT Testing LLP. All rights reserved.
+        </div>
+</footer>
+<script>
+        const step1 = document.getElementById('step-1');
+        const step2 = document.getElementById('step-2');
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const circles = [
+            document.getElementById('step-1-circle'),
+            document.getElementById('step-2-circle'),
+            document.getElementById('step-3-circle'),
+            document.getElementById('step-4-circle')
+        ];
+        
+        let currentStep = 1;
+
+        nextBtn.addEventListener('click', () => {
+            if (currentStep === 1) {
+                step1.classList.add('hidden');
+                step2.classList.remove('hidden');
+                prevBtn.classList.remove('hidden');
+                updateStepIndicator(2);
+                currentStep = 2;
+            } else if (currentStep === 2) {
+                // Placeholder for future steps
+                alert('In a live environment, this would proceed to Preferred Date selection.');
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentStep === 2) {
+                step2.classList.add('hidden');
+                step1.classList.remove('hidden');
+                prevBtn.classList.add('hidden');
+                updateStepIndicator(1);
+                currentStep = 1;
+            }
+        });
+
+        function updateStepIndicator(step) {
+            circles.forEach((circle, index) => {
+                const label = circle.nextElementSibling;
+                if (index + 1 === step) {
+                    circle.classList.add('bg-electric-amber', 'text-on-primary', 'shadow-warning-glow');
+                    circle.classList.remove('bg-surface-container', 'text-on-surface-variant', 'border-outline');
+                    label.classList.add('text-electric-amber');
+                    label.classList.remove('text-on-surface-variant');
+                } else if (index + 1 < step) {
+                    circle.classList.add('bg-deep-navy', 'text-safety-white');
+                    circle.classList.remove('bg-electric-amber', 'text-on-primary', 'shadow-warning-glow', 'bg-surface-container', 'text-on-surface-variant');
+                    circle.innerHTML = '<span class="material-symbols-outlined text-sm">done</span>';
+                    label.classList.add('text-on-surface');
+                } else {
+                    circle.classList.add('bg-surface-container', 'text-on-surface-variant', 'border-outline');
+                    circle.classList.remove('bg-electric-amber', 'text-on-primary', 'shadow-warning-glow', 'bg-deep-navy', 'text-safety-white');
+                    circle.innerText = index + 1;
+                    label.classList.remove('text-electric-amber', 'text-on-surface');
+                    label.classList.add('text-on-surface-variant');
+                }
+            });
+        }
+    </script>
+</body></html>

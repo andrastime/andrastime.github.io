@@ -1,0 +1,395 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Our Electrical Services | Allsafe Electrical Services Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#849495",
+                    "on-tertiary": "#3a3000",
+                    "surface": "#131313",
+                    "surface-dim": "#131313",
+                    "secondary-container": "#d20117",
+                    "secondary-fixed-dim": "#ffb4ab",
+                    "on-surface": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#544600",
+                    "on-secondary-container": "#ffe2de",
+                    "on-error": "#690005",
+                    "safety-red": "#FF3231",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#93000c",
+                    "on-primary-fixed-variant": "#004f54",
+                    "outline-variant": "#3b494b",
+                    "primary": "#dbfcff",
+                    "on-primary-fixed": "#002022",
+                    "tertiary-container": "#ffd602",
+                    "inverse-primary": "#006970",
+                    "on-background": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "on-secondary": "#690006",
+                    "tertiary": "#fff5dc",
+                    "secondary": "#ffb4ab",
+                    "warning-yellow": "#FFD600",
+                    "on-surface-variant": "#b9cacb",
+                    "on-primary": "#00363a",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#ffe170",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed": "#7df4ff",
+                    "on-secondary-fixed": "#410002",
+                    "surface-tint": "#00dbe9",
+                    "background": "#131313",
+                    "on-tertiary-container": "#705d00",
+                    "surface-container-highest": "#353534",
+                    "electric-cyan": "#00F0FF",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container": "#201f1f",
+                    "surface-variant": "#353534",
+                    "on-primary-container": "#006970",
+                    "surface-container-lowest": "#0e0e0e",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-bright": "#3a3939",
+                    "tertiary-fixed-dim": "#e9c400",
+                    "surface-raised": "#161616",
+                    "secondary-fixed": "#ffdad6",
+                    "primary-fixed-dim": "#00dbe9",
+                    "surface-deep": "#050505",
+                    "on-tertiary-fixed": "#221b00",
+                    "primary-container": "#00f0ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "section-gap": "120px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "label-md": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+        }
+        .glow-red {
+            box-shadow: 0 0 25px rgba(255, 50, 49, 0.25);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+        .service-card-hover:hover .overlay-color-burn {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-white/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-electric-cyan" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-headline-md text-headline-md font-extrabold text-on-surface tracking-tighter">ALLSAFE ELECTRICAL</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-electric-cyan transition-colors duration-300" href="index.html">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-electric-cyan font-bold border-b-2 border-electric-cyan pb-1" href="services-allsafe-electrical.html">Services</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-electric-cyan transition-colors duration-300" href="about-contact-allsafe-electrical.html">About</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-electric-cyan transition-colors duration-300" href="about-contact-allsafe-electrical.html">Contact</a>
+</nav>
+<button class="bg-safety-red text-white px-6 py-2 rounded-DEFAULT font-label-md uppercase tracking-wider glow-red transition-transform active:scale-95">
+                Emergency 24/7
+            </button>
+</div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[60vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-40" data-alt="A professional close up of electrical wiring and modern circuit breakers inside a residential fuse box, with sharp technical lighting and a high-tech atmosphere using electric cyan highlights on dark charcoal surfaces." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPhlsg6UXHsMT3gKx6r7sDLXA8y4GZnVslvyIMeKjcsIlGYZlyJyyxjV74JmgMS_1R5snwts-4ZD_TkQ9LEuuq3aj-q8xjrUETVfrfug5C0RROV_xZs75HLlkjYtXd8UwNhelvoebeSjZM_BIzmMB64hl9lyoPSiFna3LU2fB-HOWGMe2wwUyyZOgjcFPUCm-r-ZRK2KC_epNH7nTHyKBeIcnxVhKgUAxp3waXk0rsMgIlXPbQdwWp')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-deep via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="max-w-2xl">
+<p class="font-label-md text-label-md text-electric-cyan tracking-[0.2em] mb-4 uppercase">Reliability &amp; Safety First</p>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg mb-6 leading-tight">Our Professional <br><span class="text-electric-cyan">Electrical Services</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-8">
+                        Comprehensive solutions for domestic and commercial properties across Solihull and Birmingham, delivered by NICEIC approved experts.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Domestic Solutions Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-gutter items-center mb-16">
+<div class="flex-1">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Domestic <span class="text-electric-cyan">Solutions</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            From minor repairs to major installations, we ensure your home is safe, compliant, and powered for the modern age. Our experts specialize in complex rewiring and energy-efficient upgrades.
+                        </p>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<div class="bg-surface-container p-3 rounded-lg">
+<span class="material-symbols-outlined text-electric-cyan">settings_input_component</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-lg">Fuse Box Rewiring</h4>
+<p class="text-on-surface-variant">Modern upgrades to current regulations for maximum safety and efficiency.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-surface-container p-3 rounded-lg">
+<span class="material-symbols-outlined text-electric-cyan">ev_station</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-lg">EV Charging Points</h4>
+<p class="text-on-surface-variant">Certified installation of domestic EV chargers for your sustainable future.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full relative group">
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square overflow-hidden rounded-xl border border-white/5 relative">
+<img class="w-full h-full object-cover" data-alt="Close up detail of a professional electrician's hand working on circuit breakers in a domestic fuse box, highlighting precision and safety protocols in a modern dark-themed home environment." src="https://lh3.googleusercontent.com/aida/AP1WRLvTW51wqSvMSeb-N8izP6PlPfFN6Kw7ua7nIyXj_EXPEchbEPquE5LwGAgoEANXC6NOVOSWtANqiRsWGgu8RX550WT1f4JOhI1PHpQaeBPnOuBirIfLFR4VW-OxT2VFgpXGl0zMmfg6a2QVO2EftH9YnPgdHX_De5gFH3bhUoizFGIPa78ZKj1zcvA44jKgR9uyu-MQtDsXIVy9z94KaBCjPMeOmflxFiJwlUb92GMierseLv5NzLWFYo0">
+<div class="absolute inset-0 bg-surface-deep/40 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="aspect-square overflow-hidden rounded-xl border border-white/5 relative mt-12">
+<img class="w-full h-full object-cover" data-alt="A macro photography shot of modern electrical components and wiring inside a distribution board, showing intricate connections and technical excellence under clean industrial lighting." src="https://lh3.googleusercontent.com/aida/AP1WRLt3iEA830ubJs_2NXb-5w-Fw2XCnc8f8audzglODWiIs-cyhH1aUyfnKOeFmSjDE_dEYtSXz_W1dNOYM3TnNUkhUTIvlVyLPeguK_teRsfVlsQabqoDfg--s-pfh0VbDuD9E1GIaC28aCNaGNtRiLxSs2Bw2E9rYW_06TFr478LnKT5KW4YcjDLFuHa2gOeh8T-Bq9pYkYzIZm2Y5nbgEOg7Nz_g9OIVeMJgQjVnu4FvIKSsUquew9JQIc">
+<div class="absolute inset-0 bg-surface-deep/40 group-hover:bg-transparent transition-colors"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Safety & Compliance Bento Grid -->
+<section class="py-section-gap bg-surface-container-low/50 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full pointer-events-none opacity-10">
+
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">Safety &amp; <span class="text-electric-cyan">Compliance</span></h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Ensuring your property meets all legal and safety standards with rigorous testing and certification.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- EICR Card -->
+<div class="bg-surface-raised p-8 rounded-xl border border-white/5 hover:border-electric-cyan/30 transition-all duration-500 group">
+<span class="material-symbols-outlined text-electric-cyan text-4xl mb-6 block group-hover:scale-110 transition-transform">verified_user</span>
+<h3 class="font-headline-md text-2xl mb-4">EICR Inspections</h3>
+<p class="text-on-surface-variant mb-6">Comprehensive Electrical Installation Condition Reports to ensure your wiring is safe for continued use.</p>
+<ul class="space-y-3 font-label-sm text-sm opacity-80">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-electric-cyan rounded-full"></span> Mandatory for Landlords</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-electric-cyan rounded-full"></span> 5-Year Compliance Checks</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-electric-cyan rounded-full"></span> Thorough Visual &amp; Functional Testing</li>
+</ul>
+</div>
+<!-- Testing Focus Image -->
+<div class="md:col-span-1 h-full rounded-xl overflow-hidden border border-white/5 relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-quality image of a professional electrician's multimeter and technical tools laying on a clean surface, used for PAT testing and electrical inspections, reflecting precision and technical authority." src="https://lh3.googleusercontent.com/aida/AP1WRLtxsd_-vcSR2aIfhqMybpJ0VD5QCNVWV0ysITcYQV5TLNrkN5IjMkwkZJKhbr25YsZ6TSkHGjl7OemChtgttzBmHtrNACnPWkT7MfTeqlK0Q62To3I-tnuqBhW-jn_0y8TQ4ppfcoKFOD7bGBTeowUGwNAtgNSr8BpNMn_ey1HoiKazBPSSlQvIJaPpQWAH259v2j_ky_QvKv4Pe3ZOaXOkO1dXwa7pXSxV-w6sS69YwtZVnudX53xpNQ">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-deep via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6">
+<p class="font-label-md text-electric-cyan uppercase">Testing Equipment</p>
+<h4 class="font-headline-md text-white">Precision Diagnostics</h4>
+</div>
+</div>
+<!-- Certificates Card -->
+<div class="bg-surface-raised p-8 rounded-xl border border-white/5 hover:border-electric-cyan/30 transition-all duration-500 group flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-electric-cyan text-4xl mb-6 block group-hover:scale-110 transition-transform">description</span>
+<h3 class="font-headline-md text-2xl mb-4">Safety Certificates</h3>
+<p class="text-on-surface-variant">Fast, professional PAT testing and landlord safety certificates issued upon completion of testing.</p>
+</div>
+<div class="mt-8 pt-8 border-t border-white/5 flex items-center justify-between">
+<span class="font-label-sm text-electric-cyan">NICEIC APPROVED</span>
+<span class="material-symbols-outlined opacity-40">approval</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<p class="font-label-md text-electric-cyan tracking-[0.2em] mb-4 uppercase">How it works</p>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Our Seamless <span class="text-electric-cyan">Process</span></h2>
+</div>
+<p class="text-on-surface-variant max-w-sm">From initial enquiry to final certification, we make every step effortless.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+<!-- Connector line for desktop -->
+<div class="hidden md:block absolute top-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent -z-10"></div>
+<!-- Step 1 -->
+<div class="text-center group">
+<div class="w-16 h-16 bg-surface-raised border border-white/10 rounded-full flex items-center justify-center mx-auto mb-8 relative z-10 group-hover:border-electric-cyan transition-colors duration-500">
+<span class="font-headline-md text-electric-cyan">1</span>
+</div>
+<h4 class="font-headline-md text-xl mb-4">Initial Consultation</h4>
+<p class="text-on-surface-variant">Discuss your requirements with an expert. We provide transparent quotes and expert recommendations.</p>
+</div>
+<!-- Step 2 -->
+<div class="text-center group">
+<div class="w-16 h-16 bg-surface-raised border border-white/10 rounded-full flex items-center justify-center mx-auto mb-8 relative z-10 group-hover:border-electric-cyan transition-colors duration-500">
+<span class="font-headline-md text-electric-cyan">2</span>
+</div>
+<h4 class="font-headline-md text-xl mb-4">Expert Execution</h4>
+<p class="text-on-surface-variant">Our qualified electricians complete the work with minimal disruption, adhering to strict safety standards.</p>
+</div>
+<!-- Step 3 -->
+<div class="text-center group">
+<div class="w-16 h-16 bg-surface-raised border border-white/10 rounded-full flex items-center justify-center mx-auto mb-8 relative z-10 group-hover:border-electric-cyan transition-colors duration-500">
+<span class="font-headline-md text-electric-cyan">3</span>
+</div>
+<h4 class="font-headline-md text-xl mb-4">Final Certification</h4>
+<p class="text-on-surface-variant">Receive your compliance certificates and final sign-off. We ensure you are 100% satisfied with the work.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact CTA Section -->
+<section class="py-section-gap overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="relative bg-surface-raised p-12 md:p-24 rounded-xl border border-white/5 overflow-hidden text-center">
+<!-- Background ambient glow -->
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-electric-cyan/10 blur-[100px] rounded-full"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-electric-cyan/5 blur-[100px] rounded-full"></div>
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Ready to Start Your <span class="text-electric-cyan">Electrical Project?</span></h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto mb-12 text-lg">
+                            Get in touch today for a free, no-obligation quote from our TrustMark registered team. We respond quickly to all enquiries.
+                        </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<a class="bg-electric-cyan text-surface-deep px-10 py-4 rounded-DEFAULT font-label-md uppercase tracking-widest font-bold glow-cyan transition-all hover:scale-105 active:scale-95" href="index.html">
+                                Get a Free Quote
+                            </a>
+<a class="border border-white/20 text-white px-10 py-4 rounded-DEFAULT font-label-md uppercase tracking-widest hover:bg-white/5 transition-all" href="tel:07545435003">
+                                Call 07545435003
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-deep border-t border-outline-variant pt-section-gap pb-12 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">ALLSAFE</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 text-sm">
+                    Premium electrical services for Solihull and surrounding areas. Trusted for over 40 years.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-electric-cyan hover:opacity-80 cursor-pointer">face_nod</span>
+<span class="material-symbols-outlined text-electric-cyan hover:opacity-80 cursor-pointer">contact_page</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-white uppercase tracking-widest mb-6">Services</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-sm text-on-surface-variant hover:text-electric-cyan transition-colors" href="services-allsafe-electrical.html">Domestic</a></li>
+<li><a class="font-body-md text-sm text-on-surface-variant hover:text-electric-cyan transition-colors" href="services-allsafe-electrical.html">Commercial</a></li>
+<li><a class="font-body-md text-sm text-on-surface-variant hover:text-electric-cyan transition-colors" href="services-allsafe-electrical.html">Emergency</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-white uppercase tracking-widest mb-6">Contact</h4>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li>70 Brays Rd, Birmingham, B26 1NS</li>
+<li>07545435003</li>
+<li>edward@allsafe-electrical-services.co.uk</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-white uppercase tracking-widest mb-6">Accreditations</h4>
+<div class="grid grid-cols-2 gap-2 opacity-50">
+<div class="h-8 bg-white/10 rounded flex items-center justify-center text-[10px]">NICEIC</div>
+<div class="h-8 bg-white/10 rounded flex items-center justify-center text-[10px]">TRUSTMARK</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2024 Allsafe Electrical Services Ltd. NICEIC &amp; TrustMark Approved.
+            </p>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-cyan" href="about-contact-allsafe-electrical.html">Terms</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-cyan" href="about-contact-allsafe-electrical.html">Privacy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth reveal on scroll interaction
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10', 'opacity-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'translate-y-10', 'opacity-0');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

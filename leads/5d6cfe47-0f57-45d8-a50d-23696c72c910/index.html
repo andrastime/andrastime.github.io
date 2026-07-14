@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RJ Energy Electrical Solutions | Professional Electricians</title>
+<meta content="Certified, reliable electrical solutions for residential and commercial needs. Available 24/7 for emergencies." name="description"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Typography: Montserrat & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#d9dadb",
+                    "surface-variant": "#e1e3e4",
+                    "tertiary-fixed-dim": "#abc7ff",
+                    "tertiary-fixed": "#d7e2ff",
+                    "error": "#ba1a1a",
+                    "surface": "#f8f9fa",
+                    "on-surface": "#191c1d",
+                    "on-secondary-container": "#6e5c00",
+                    "outline": "#75777e",
+                    "inverse-surface": "#2e3132",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#091b37",
+                    "on-primary-fixed-variant": "#374765",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#1b2b48",
+                    "inverse-primary": "#b7c7eb",
+                    "secondary": "#705d00",
+                    "on-background": "#191c1d",
+                    "primary": "#041632",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f8f9fa",
+                    "secondary-fixed-dim": "#e9c400",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f8f9fa",
+                    "secondary-fixed": "#ffe16d",
+                    "on-primary-container": "#8393b5",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-tint": "#4f5e7e",
+                    "primary-fixed": "#d7e2ff",
+                    "primary-fixed-dim": "#b7c7eb",
+                    "outline-variant": "#c5c6ce",
+                    "surface-container": "#edeeef",
+                    "on-tertiary-container": "#7593cb",
+                    "on-secondary-fixed": "#221b00",
+                    "inverse-on-surface": "#f0f1f2",
+                    "tertiary": "#001637",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#fcd400",
+                    "on-secondary-fixed-variant": "#544600",
+                    "on-tertiary-fixed-variant": "#27467a",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#012a5d",
+                    "on-tertiary-fixed": "#001b3f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "section-gap-desktop": "120px",
+                    "gutter": "24px",
+                    "container-max-width": "1280px",
+                    "section-gap-mobile": "64px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "caption": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "label-bold": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .safety-accent {
+            border-left: 4px solid #fcd400;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(27, 43, 72, 0.1);
+        }
+        .btn-transition {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* Industrial texture overlay */
+        .industrial-pattern {
+            background-image: radial-gradient(#c5c6ce 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm border-b border-outline-variant">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max-width mx-auto">
+<a class="font-headline-sm text-headline-sm font-bold text-primary" href="#">
+                RJ Energy Electrical Solutions
+            </a>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#services">Services</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#about">About</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#testimonials">Testimonials</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#blog">Blog</a>
+<a class="bg-secondary-container text-on-secondary-container px-6 py-3 font-label-bold text-label-bold rounded-lg btn-transition hover:scale-105 active:scale-95 shadow-sm" href="#contact">
+                    Get a Quote
+                </a>
+</nav>
+<!-- Mobile Menu Toggle (Simplified for demo) -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center overflow-hidden bg-primary text-on-primary">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, high-contrast photograph of a professional electrician in safety gear working on a complex industrial control panel. The scene is lit with dramatic blue and orange lighting, highlighting the technical precision and modern tools. The background is a clean, organized electrical utility room with metallic surfaces and high-end engineering equipment. The mood is powerful, efficient, and technologically advanced." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOiSYFDXwHQLPe_RDO1R2IIiMIMhb7tZE1yGnfhIgMrSwqftq6lgHPS2i6naWo2puLsATmim37iuSXnSc299fqAbyRQl6Gdzxg8OgozPKMitTMkPvDtT3m8aS0c__Ah7t5NaUvXPastaycwS1i305my-e7nQal7m3HaUOW0kqgcvLykXrX7U102AGKYP715z8meljRHG7-Zq90rhN5PdHJx1ULoYPdmbmHm-oILdD46PGb44jX5fsu7A')"></div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent z-10"></div>
+<div class="container mx-auto px-gutter relative z-20 max-w-container-max-width">
+<div class="max-w-2xl">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 text-label-bold font-label-bold rounded-full mb-6 uppercase tracking-wider">
+                        24/7 Emergency Support
+                    </span>
+<h1 class="font-display-lg text-display-lg md:text-display-lg mb-6 leading-tight">
+                        Powering Your Home &amp; Business <span class="text-secondary-fixed">with Excellence</span>
+</h1>
+<p class="font-body-lg text-body-lg mb-10 text-on-primary-container max-w-lg">
+                        Certified, reliable electrical solutions for residential and commercial needs in London and surrounding areas. Available 24/7 for emergencies.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary-container text-on-secondary-container px-8 py-4 font-label-bold text-label-bold rounded-lg text-center btn-transition hover:shadow-lg hover:-translate-y-1" href="#contact">
+                            Get Your Free Quote
+                        </a>
+<a class="border-2 border-on-primary text-on-primary px-8 py-4 font-label-bold text-label-bold rounded-lg text-center btn-transition hover:bg-on-primary hover:text-primary" href="#services">
+                            Explore Services
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid Style) -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface industrial-pattern" id="services">
+<div class="container mx-auto px-gutter max-w-container-max-width">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-4 safety-accent pl-6">Our Specialist Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">From emergency callouts to full commercial installations, our certified team handles every project with industrial-grade precision.</p>
+</div>
+<a class="text-primary font-label-bold text-label-bold flex items-center gap-2 group" href="#">
+                        View All Services <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Service 1: Repairs -->
+<div class="md:col-span-8 bg-white p-8 border border-outline-variant rounded-xl card-hover transition-all flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed bg-primary p-4 rounded-lg mb-6" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Electrical Repairs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Rapid diagnostics and safe fixes for all domestic issues. We restore your power and peace of mind with minimal disruption.</p>
+<ul class="space-y-2 mb-6 font-label-bold text-label-bold text-primary">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Fault Finding</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Appliance Wiring</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Outlet Repairs</li>
+</ul>
+<a class="text-primary font-label-bold text-label-bold underline decoration-secondary-fixed decoration-4 underline-offset-4" href="#">Learn More</a>
+</div>
+<div class="w-full md:w-64 h-48 bg-cover bg-center rounded-lg shadow-sm" data-alt="A macro photograph showing a detailed close-up of a modern electrical circuit breaker board. The image features crisp details of wiring, switches, and safety labels. The lighting is bright and technical, emphasizing the cleanliness and professional organization of the installation. The color palette consists of cool grays, bright whites, and subtle primary color accents on the wires." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXetEGFhjYcE68S6h_CpL09laXHb6s9fB5TucHJ5I-oym0oUmfOnKQCnoOvffY08B3IUnK3FHK-HIUuIHZOvsScEyJ5mLRmYWt0UaV-INZvSA9YOFxQShG6UdeIbm_AiymFTb_8X59vpk3XLXtEAMZbxr1hiFsmfoNLdFNHhf4K1MWmzP1t4W2vQxiTYwn1qBxEJqx6MwTKeBJYeZ86QP6B6PWTLiVFWvnP8PLbeUcyF_Cq8XwoKeVeA')"></div>
+</div>
+<!-- Service 2: Upgrades -->
+<div class="md:col-span-4 bg-primary text-on-primary p-8 border border-primary-container rounded-xl card-hover transition-all flex flex-col">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed mb-6" style="font-variation-settings: 'FILL' 1;">security</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Fuse Board Upgrades</h3>
+<p class="font-body-md text-body-md text-on-primary-container mb-8">Modernize your home's safety with full RCD protection and fire-rated units.</p>
+<div class="mt-auto">
+<a class="inline-block bg-on-primary text-primary px-6 py-3 font-label-bold text-label-bold rounded-lg btn-transition hover:bg-secondary-fixed" href="#">Request Quote</a>
+</div>
+</div>
+<!-- Service 3: Lighting -->
+<div class="md:col-span-4 bg-white p-8 border border-outline-variant rounded-xl card-hover transition-all flex flex-col">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed bg-primary p-4 rounded-lg mb-6" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Lighting Installations</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Interior, exterior, and smart lighting solutions designed for efficiency.</p>
+<a class="text-primary font-label-bold text-label-bold underline decoration-secondary-fixed decoration-4 underline-offset-4 mt-auto" href="#">Learn More</a>
+</div>
+<!-- Service 4: Commercial -->
+<div class="md:col-span-8 bg-surface-container-high p-8 border border-outline-variant rounded-xl card-hover transition-all flex flex-col md:flex-row gap-8 items-center">
+<div class="w-full md:w-64 h-48 bg-cover bg-center rounded-lg shadow-sm order-2 md:order-1" data-alt="An expansive wide shot of a modern, high-tech commercial office space featuring architectural lighting and integrated energy systems. The image shows a professional environment with exposed industrial ceilings, glass partitions, and clean, ergonomic workspaces. The lighting is a mix of natural daylight and warm artificial LEDs, creating an inviting and productive atmosphere. The visual style is corporate, clean, and forward-thinking." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDe2sgtjDwGpUdpQZCGhjTks6eDdODP9l0AdHRY8fmvo-cldt3KfkIn0paRXvqww_MxPNISGbb8xorPDTVtV5AyaE8O5F0pA4c7Cml1MUeWzgOJbM9zdrTIVflqFAKUfstDzOBCILRcrJgoQufDJwCCwpp7WH_dKkiUACiCeCM7gUGj3N8sWky4Jg-EU-fwKHQCeltunmINXX1PBahSI8BNpBVLOdal_Qmy5PwYfpQjYbXMWbITdx6vUA')"></div>
+<div class="flex-1 order-1 md:order-2">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed bg-primary p-4 rounded-lg mb-6" style="font-variation-settings: 'FILL' 1;">business</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Commercial Services</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Comprehensive electrical maintenance, testing, and periodic inspections (EICR) for businesses of all sizes.</p>
+<a class="text-primary font-label-bold text-label-bold underline decoration-secondary-fixed decoration-4 underline-offset-4" href="#">Enterprise Solutions</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-primary text-on-primary overflow-hidden" id="about">
+<div class="container mx-auto px-gutter max-w-container-max-width">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-square bg-cover bg-center rounded-2xl shadow-2xl relative z-10" data-alt="A portrait of a group of professional, diverse electricians standing proudly in front of a service van. They are wearing high-visibility vests and carrying professional toolbags. The setting is a clean, urban environment during the golden hour, casting a warm, trustworthy glow on the team. The image exudes confidence, expertise, and a strong commitment to service excellence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAoKNe5MPcTgBOSg-uCrgUxO2d6w2podCqhA7hIe5T5W2Gjn6FV5LnSZGAnh08f63zO-t_MRAqWt3D0Jn849_s5l2dWaKMNheMEZcIYHvZri3QUduNXTShCVJjOlMQAHpYsKAw4SUPyW4hl16Qcwjqr101vyGMtarLNg5B0Q5dAyrs7hmIKmUzDCpDgKUwDJSe06W41--KRq_3XSwSO8Idc1hg3VUB7WZAlygREaASjo0wdU3j_ts20Zg')"></div>
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-secondary-container rounded-lg -z-0 flex items-center justify-center p-4">
+<div class="text-center text-on-secondary-container">
+<p class="text-3xl font-bold">15+</p>
+<p class="text-[10px] uppercase font-bold tracking-tighter">Years Exp</p>
+</div>
+</div>
+<div class="absolute -bottom-10 -left-10 w-full h-full border-2 border-secondary-fixed rounded-2xl -z-10"></div>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md mb-6 text-secondary-fixed">Trusted Experts Since 2008</h2>
+<h3 class="font-headline-sm text-headline-sm mb-6 leading-tight">Committed to Electrical Excellence and Safety Across the Region.</h3>
+<p class="font-body-md text-body-md text-on-primary-container mb-8 leading-relaxed">
+                            At RJ Energy Electrical Solutions, we believe that power should be reliable, safe, and efficient. Our mission is to provide sustainable energy solutions that modern businesses and homeowners can depend on. Our team of fully qualified, NICEIC-approved electricians brings decades of combined experience to every task.
+                        </p>
+<div class="grid grid-cols-2 gap-6 mb-10">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-fixed">verified_user</span>
+<div>
+<h4 class="font-label-bold text-label-bold mb-1">Safety First</h4>
+<p class="text-caption text-on-primary-container">Exceeding all UK safety standards.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-fixed">eco</span>
+<div>
+<h4 class="font-label-bold text-label-bold mb-1">Sustainable</h4>
+<p class="text-caption text-on-primary-container">Energy-efficient LED &amp; smart tech.</p>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-3 bg-on-primary text-primary px-8 py-4 font-label-bold text-label-bold rounded-lg btn-transition hover:bg-secondary-fixed" href="#contact">
+                            Meet Our Team <span class="material-symbols-outlined">groups</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface" id="testimonials">
+<div class="container mx-auto px-gutter max-w-container-max-width text-center">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">What Our Customers Say</h2>
+<div class="w-20 h-1 bg-secondary-fixed mx-auto mb-16"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="bg-white p-8 border border-outline-variant rounded-lg text-left relative shadow-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl absolute -top-4 left-8 bg-white px-2">format_quote</span>
+<div class="flex text-secondary-fixed mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic italic text-on-surface">"RJ Energy handled our full office rewire. The team was professional, punctual, and the quality of work was exceptional. Highly recommended for commercial projects."</p>
+<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
+<div class="w-12 h-12 rounded-full bg-surface-dim flex items-center justify-center font-bold text-primary">MS</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Michael Stevenson</h4>
+<p class="text-caption text-on-surface-variant">Office Manager, TechCorp</p>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-white p-8 border border-outline-variant rounded-lg text-left relative shadow-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl absolute -top-4 left-8 bg-white px-2">format_quote</span>
+<div class="flex text-secondary-fixed mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic text-on-surface">"Emergency callout on a Sunday night—they were here in 40 minutes and fixed our fuse board immediately. Incredible service when we needed it most!"</p>
+<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
+<div class="w-12 h-12 rounded-full bg-surface-dim flex items-center justify-center font-bold text-primary">SB</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Sarah Benson</h4>
+<p class="text-caption text-on-surface-variant">Homeowner</p>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-white p-8 border border-outline-variant rounded-lg text-left relative shadow-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl absolute -top-4 left-8 bg-white px-2">format_quote</span>
+<div class="flex text-secondary-fixed mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic text-on-surface">"Fantastic LED lighting upgrade for our garden. It has completely transformed the space. Knowledgeable team and very tidy work."</p>
+<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
+<div class="w-12 h-12 rounded-full bg-surface-dim flex items-center justify-center font-bold text-primary">DJ</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">David Jones</h4>
+<p class="text-caption text-on-surface-variant">Residential Client</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low border-y border-outline-variant" id="blog">
+<div class="container mx-auto px-gutter max-w-container-max-width">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Latest Electrical Insights</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">Expert tips and industry news to keep your systems safe and efficient.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Post 1 -->
+<article class="bg-white rounded-lg overflow-hidden border border-outline-variant card-hover transition-all">
+<div class="h-48 bg-cover bg-center" data-alt="A clean, instructional image of an old, outdated fuse box next to a modern, sleek consumer unit. The image highlights the differences in safety features and construction. The lighting is neutral and informative, similar to a technical DIY guide. The aesthetic is practical, emphasizing clarity and safety standards." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdJlb0e4qmZJiRrkgtvzGKdPpCXF2yoakN6OQEZdwruZhxg1Xy_EUAN8YlvwEI4E1qa8T4sgDGVYXZSFFTmpVmPRebKy9YW6wKZ25FA4luNikRMDcz44Lcar6ZyoIi72tRJLW6fjQKTkbzKodxvRUTtsugmjyDWAa1vQWJUn7F7KaxSCN4cw3cMq4XMnj5rTQwRKkuAlozqnNkX9M1gN6BD3SDw1UOKH9GSwq2opGfV0-408U7FtalqQ')"></div>
+<div class="p-6">
+<span class="text-caption text-secondary font-label-bold uppercase mb-2 block">Safety Guides</span>
+<h3 class="font-headline-sm text-[20px] text-primary mb-3 leading-tight">5 Signs Your Fuse Board Needs an Upgrade</h3>
+<p class="text-body-md text-on-surface-variant mb-4">Ignoring these warning signs could compromise your home's safety and fire protection...</p>
+<a class="text-primary font-label-bold text-label-bold flex items-center gap-2" href="#">Read Article <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+</div>
+</article>
+<!-- Post 2 -->
+<article class="bg-white rounded-lg overflow-hidden border border-outline-variant card-hover transition-all">
+<div class="h-48 bg-cover bg-center" data-alt="A beautifully lit modern living room at night, showcasing architectural LED lighting integrated into the ceiling and furniture. The lighting creates a warm, layered effect that is both functional and aesthetically pleasing. The photo uses high dynamic range to capture the subtle nuances of the light levels. The style is modern, cozy, and energy-efficient." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTDgHENGwYe3psTgZ8-GglVe5Z1HkmyOQIp0HIZ7zPijPGVIKf6Gy-AqrMmYIT0NCJK7WIBARkZ-QkIe7bHz4jK3ylj_R-hQzmZnFF4CQqJXQxokVAKoNQKSHZYO2HZyZan1X5_EIleZL2nZ0udo1XTOMTKmNICh39YGpjJXnPr-nxTs9GU-_aT3oPUGvT4TEbh3cS7qYRGvHp6mR7gJAMcIPGbvcRiMarDlbkhB9mU1BcrB5XP0987Q')"></div>
+<div class="p-6">
+<span class="text-caption text-secondary font-label-bold uppercase mb-2 block">Energy Efficiency</span>
+<h3 class="font-headline-sm text-[20px] text-primary mb-3 leading-tight">The Financial Benefits of LED Lighting</h3>
+<p class="text-body-md text-on-surface-variant mb-4">Discover how much you can save annually by switching to energy-efficient LED solutions...</p>
+<a class="text-primary font-label-bold text-label-bold flex items-center gap-2" href="#">Read Article <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+</div>
+</article>
+<!-- Post 3 -->
+<article class="bg-white rounded-lg overflow-hidden border border-outline-variant card-hover transition-all">
+<div class="h-48 bg-cover bg-center" data-alt="A professional close-up of a digital electrical tester displaying a high-resolution reading on a complex circuit board. The image features shallow depth of field, focusing on the precision equipment. The lighting is sharp and industrial, suggesting a high level of technical expertise and diagnostic accuracy. The color palette is composed of high-tech blues and grays." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABfUB7SlW1u11Fdg_R8-apgUx_HSXaPSsxlo2gq5ohDJf1Wtj4osH7eNdwWdJ3X0JZDfHHlUS5xxuF6_FZRHHDvVdMb6XEKBVxHuQKNHQc3Ag85f5tGPJboz_Q7ejJoa9B3JtRlr5uiDVUXOTNA6fYcURHIA0TasUG6EOMwN_hOkcgSIOXNiHU6ztJlgP7PHsjr89jHJWtUA48199NvlXtlne4rA_ZvY8rmQK1PoWq26Q8LWw9sRUi7A')"></div>
+<div class="p-6">
+<span class="text-caption text-secondary font-label-bold uppercase mb-2 block">Maintenance</span>
+<h3 class="font-headline-sm text-[20px] text-primary mb-3 leading-tight">What is an EICR and Why Does Your Business Need One?</h3>
+<p class="text-body-md text-on-surface-variant mb-4">Understanding your legal requirements for electrical safety testing in commercial spaces...</p>
+<a class="text-primary font-label-bold text-label-bold flex items-center gap-2" href="#">Read Article <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Final CTA / Contact Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface overflow-hidden relative" id="contact">
+<div class="container mx-auto px-gutter max-w-container-max-width">
+<div class="bg-primary-container rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+<div class="p-12 md:p-20 flex-1">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">Ready to Power Up?</h2>
+<p class="text-body-lg text-on-primary-container mb-10">Get a free, no-obligation quote for your electrical project today. Our experts are standing by to help.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-white uppercase tracking-wider">Full Name</label>
+<input class="w-full bg-white border border-outline rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary-fixed focus:border-transparent outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-white uppercase tracking-wider">Email Address</label>
+<input class="w-full bg-white border border-outline rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary-fixed focus:border-transparent outline-none transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-white uppercase tracking-wider">Service Required</label>
+<select class="w-full bg-white border border-outline rounded-lg px-4 py-3 focus:ring-2 focus:ring-secondary-fixed focus:border-transparent outline-none transition-all">
+<option>Electrical Repair</option>
+<option>Fuse Board Upgrade</option>
+<option>Lighting Installation</option>
+<option>Commercial Maintenance</option>
+<option>Emergency Service</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-white uppercase tracking-wider">Message</label>
+<textarea class="w-full bg-white border border-outline rounded-lg px-4 py-3 h-32 focus:ring-2 focus:ring-secondary-fixed focus:border-transparent outline-none transition-all" placeholder="Tell us about your project..."></textarea>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-container py-4 font-label-bold text-label-bold rounded-lg btn-transition hover:scale-[1.02] active:scale-[0.98] shadow-lg flex items-center justify-center gap-2" type="submit">
+                                Send Quote Request <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+<div class="w-full md:w-1/3 bg-secondary-container p-12 md:p-20 flex flex-col justify-center">
+<div class="space-y-12">
+<div>
+<h4 class="font-headline-sm text-primary mb-4">Direct Contact</h4>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined bg-white p-2 rounded-full shadow-sm" style="font-variation-settings: 'FILL' 1;">phone</span>
+<span class="font-label-bold">+44 (0) 123 456 7890</span>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined bg-white p-2 rounded-full shadow-sm" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="font-label-bold">info@rjenergy.co.uk</span>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined bg-white p-2 rounded-full shadow-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-bold">Industrial Estate, London, E1 6AN</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-headline-sm text-primary mb-4">Emergency Hotline</h4>
+<div class="bg-primary text-white p-6 rounded-xl border-l-8 border-white shadow-xl">
+<p class="text-caption uppercase tracking-widest font-bold mb-2">Available 24/7</p>
+<p class="text-2xl font-bold">+44 (0) 800 999 1234</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-primary border-t-4 border-secondary-fixed text-on-primary">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-gutter max-w-container-max-width mx-auto">
+<div class="md:col-span-4">
+<a class="font-headline-sm text-headline-sm font-bold text-secondary-fixed block mb-6" href="#">
+                    RJ Energy Electrical Solutions
+                </a>
+<p class="font-body-md text-body-md text-on-primary-container mb-8 pr-8">
+                    Providing high-performance electrical solutions since 2008. Your safety and satisfaction are our top priorities.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center hover:bg-secondary-fixed hover:text-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]">face_nod</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center hover:bg-secondary-fixed hover:text-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center hover:bg-secondary-fixed hover:text-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]">emergency</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-bold text-label-bold text-secondary-fixed uppercase mb-6 tracking-widest">Quick Links</h5>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors" href="#services">Services</a></li>
+<li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors" href="#about">About Us</a></li>
+<li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors" href="#testimonials">Testimonials</a></li>
+<li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors" href="#blog">Latest News</a></li>
+</ul>
+</div>
+<div class="md:col-span-3">
+<h5 class="font-label-bold text-label-bold text-secondary-fixed uppercase mb-6 tracking-widest">Information</h5>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors" href="#">Safety Standards</a></li>
+<li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="md:col-span-3">
+<h5 class="font-label-bold text-label-bold text-secondary-fixed uppercase mb-6 tracking-widest">Certifications</h5>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-16 bg-primary-container rounded border border-on-primary-container/20 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
+<span class="font-bold text-xs opacity-50">NICEIC Approved</span>
+</div>
+<div class="h-16 bg-primary-container rounded border border-on-primary-container/20 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
+<span class="font-bold text-xs opacity-50">SafeContractor</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-12 border-t border-on-primary-container/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-primary-container text-sm">
+                    © 2024 RJ Energy Electrical Solutions. All rights reserved.
+                </p>
+<div class="flex gap-6 text-sm font-label-bold text-on-primary-container">
+<span>Designed with Engineering Precision</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal or micro-interactions can go here
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header shadow on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

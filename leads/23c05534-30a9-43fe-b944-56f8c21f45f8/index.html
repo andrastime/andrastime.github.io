@@ -1,0 +1,446 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ECNM BHM | Earn While You Learn Electrician Courses</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#e9c400",
+                        "on-secondary-container": "#725f00",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "zinc-surface": "#1E1E1E",
+                        "outline": "#849396",
+                        "surface": "#131313",
+                        "on-tertiary": "#313030",
+                        "surface-dim": "#131313",
+                        "secondary-container": "#ffdb3c",
+                        "on-primary-fixed": "#001f24",
+                        "obsidian-base": "#0A0A0A",
+                        "primary": "#c3f5ff",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#d2d0cf",
+                        "inverse-primary": "#006875",
+                        "secondary": "#fff9ef",
+                        "tertiary": "#efeceb",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary": "#3a3000",
+                        "on-surface-variant": "#bac9cc",
+                        "on-secondary-fixed-variant": "#544600",
+                        "on-primary-fixed-variant": "#004f58",
+                        "outline-variant": "#3b494c",
+                        "on-tertiary-container": "#5a5959",
+                        "electric-cyan": "#00E5FF",
+                        "surface-container-highest": "#353534",
+                        "surface-container": "#201f1f",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#00363d",
+                        "error": "#ffb4ab",
+                        "vat-muted": "#888888",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#e5e2e1",
+                        "safety-yellow": "#FFD700",
+                        "on-secondary-fixed": "#221b00",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#9cf0ff",
+                        "background": "#131313",
+                        "surface-tint": "#00daf3",
+                        "secondary-fixed": "#ffe16d",
+                        "primary-fixed-dim": "#00daf3",
+                        "primary-container": "#00e5ff",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "surface-variant": "#353534",
+                        "on-primary-container": "#00626e",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-bright": "#3a3939",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Inter"],
+                        "price-display": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "price-display": ["32px", {"lineHeight": "32px", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-cyan {
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+        }
+        .glass-panel {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-electric-cyan selection:text-black">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl dark:bg-surface/70 border-b border-white/10 shadow-lg shadow-electric-cyan/10 h-20">
+<div class="flex justify-between items-center h-full px-margin-desktop max-w-container-max mx-auto">
+<div class="text-body-lg font-headline-md font-bold text-electric-cyan tracking-tighter hover:scale-105 transition-transform duration-200 cursor-pointer">
+                ECNM BHM
+            </div>
+<div class="hidden md:flex gap-8">
+<a class="text-electric-cyan border-b-2 border-electric-cyan pb-1 font-label-bold text-label-bold" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-electric-cyan transition-colors font-label-bold text-label-bold" href="index.html">Courses</a>
+<a class="text-on-surface-variant hover:text-electric-cyan transition-colors font-label-bold text-label-bold" href="career-roadmap-from-novice-to-gold-card.html">Career Map</a>
+<a class="text-on-surface-variant hover:text-electric-cyan transition-colors font-label-bold text-label-bold" href="career-roadmap-from-novice-to-gold-card.html">Birmingham Hub</a>
+<a class="text-on-surface-variant hover:text-electric-cyan transition-colors font-label-bold text-label-bold" href="index.html">About</a>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block text-electric-cyan font-label-bold text-label-bold hover:scale-105 transition-transform" href="tel:01215550123">0121 555 0123</a>
+<button class="bg-electric-cyan text-black font-label-bold text-label-bold px-6 py-2 rounded-lg hover:scale-105 active:scale-95 transition-all shadow-lg shadow-electric-cyan/20">
+                    Enquire Now
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="A cinematic, high-contrast shot of a modern electrical training facility in Birmingham. Professional instructors in branded gear are demonstrating wiring techniques on complex control panels to diverse, focused students. The scene is illuminated by cool white overhead studio lighting and vibrant electric cyan LED strips accentuating the technical workspace. The atmosphere is professional, elite, and high-tech." src="https://lh3.googleusercontent.com/aida/AP1WRLvil8TcpTWgciUDhNsqhHnA8v4FaIf-2Nr3kH58OKUgBGBDbw7hwngtIVY5zBudDa4MwBDV_9R0Jcp11R_15L1s-DSpq8mGACh0_X6XGGzH02E_UfAiZN22Ac6LjWTZUQfEmMTsirB_e1crLTsuaKXOqEnSSOdrhaNi4gt7wmYHEGHlJiLLIBu80zUFVDGkJRO4RHiYs-8rNTAy1-NZyUKaHT_uIuoTWPemDchtlP7w0J6gga3svU-f2cQ">
+<div class="absolute inset-0 bg-gradient-to-r from-obsidian-base via-obsidian-base/80 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl">
+<span class="inline-block text-electric-cyan font-label-bold text-label-bold uppercase tracking-widest mb-4">Birmingham Center of Excellence</span>
+<h1 class="font-display-lg text-display-lg text-white mb-6 leading-tight">
+                        EARN WHILE <br><span class="text-electric-cyan text-glow">YOU LEARN</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                        The quickest way for adult learners to become fully qualified competent electricians in the West Midlands. Start earning in as little as 6 weeks.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-electric-cyan text-black font-label-bold text-label-bold px-8 py-4 rounded-lg hover:scale-105 active:scale-95 transition-all glow-cyan">
+                            Start Training Now
+                        </button>
+<button class="border-2 border-safety-yellow text-safety-yellow font-label-bold text-label-bold px-8 py-4 rounded-lg hover:bg-safety-yellow/10 transition-all">
+                            0% Finance Available
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Props Bento Grid -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-panel p-8 rounded-xl group hover:border-electric-cyan/50 transition-colors">
+<div class="w-12 h-12 bg-electric-cyan/10 rounded-lg flex items-center justify-center mb-6 text-electric-cyan">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">handshake</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Guaranteed Placement</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Earn a competitive wage from day one with our trusted network of Birmingham-based employers.</p>
+</div>
+<div class="glass-panel p-8 rounded-xl group hover:border-electric-cyan/50 transition-colors">
+<div class="w-12 h-12 bg-electric-cyan/10 rounded-lg flex items-center justify-center mb-6 text-electric-cyan">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Fast-Track Results</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Intensive training modules designed to get you on-site and earning within just 6 weeks of starting.</p>
+</div>
+<div class="glass-panel p-8 rounded-xl group hover:border-electric-cyan/50 transition-colors">
+<div class="w-12 h-12 bg-electric-cyan/10 rounded-lg flex items-center justify-center mb-6 text-electric-cyan">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">ECS Gold Card</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Full path to JIB/ECS Gold Card status, ensuring you are recognized as a fully qualified professional.</p>
+</div>
+</div>
+</section>
+<!-- Trust Signal Section -->
+<section class="bg-surface-container py-16">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-2">The UK's Trusted Choice</h2>
+<div class="flex items-center gap-2 text-safety-yellow">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="text-white ml-2 font-label-bold">Excellent on Trustpilot</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-zinc-surface p-4 rounded-lg border border-white/5">
+<div class="text-electric-cyan font-headline-md text-headline-md">1,500+</div>
+<div class="text-on-surface-variant font-label-bold text-sm">Graduates</div>
+</div>
+<div class="bg-zinc-surface p-4 rounded-lg border border-white/5">
+<div class="text-electric-cyan font-headline-md text-headline-md">98%</div>
+<div class="text-on-surface-variant font-label-bold text-sm">Pass Rate</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Review Card 1 -->
+<div class="bg-zinc-surface p-6 rounded-xl border border-white/5 relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-white/10 scale-150">format_quote</span>
+<div class="flex items-center gap-1 text-safety-yellow mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-6">"Within 3-4 weeks, I managed to land myself a job as an entry level electrician. Josh has been excellent, he’s helped me through every step."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-electric-cyan/20 flex items-center justify-center font-bold text-electric-cyan">Z</div>
+<div class="text-on-surface-variant font-label-bold text-sm">Z, 02 July 2026</div>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-zinc-surface p-6 rounded-xl border border-white/5 relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-white/10 scale-150">format_quote</span>
+<div class="flex items-center gap-1 text-safety-yellow mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-6">"Tutors were supportive and professional. The combination of classroom learning and practical activities made it easy to follow."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-electric-cyan/20 flex items-center justify-center font-bold text-electric-cyan">L</div>
+<div class="text-on-surface-variant font-label-bold text-sm">Luke Davis, 13 June 2026</div>
+</div>
+</div>
+<!-- Review Card 3 -->
+<div class="bg-zinc-surface p-6 rounded-xl border border-white/5 relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-white/10 scale-150">format_quote</span>
+<div class="flex items-center gap-1 text-safety-yellow mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-6">"Josh from the recruitment team helped me find work placement instantly. Very happy with the service and the training provided."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-electric-cyan/20 flex items-center justify-center font-bold text-electric-cyan">A</div>
+<div class="text-on-surface-variant font-label-bold text-sm">Ajit Singh, 26 June 2026</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Course Cards Selection -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Most Popular Courses</h2>
+<p class="text-on-surface-variant font-body-lg max-w-2xl mx-auto">Flexible programs catering for both complete novices and experienced tradespeople looking to upgrade their skills.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Course Card 1 -->
+<div class="group bg-zinc-surface rounded-xl overflow-hidden border border-white/10 hover:border-electric-cyan/40 transition-all">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A clean, professional macro shot of high-quality electrical tools—insulated screwdrivers and wire strippers—resting on a schematic diagram. The lighting is crisp and cool, featuring an electric cyan hue against a dark charcoal background. The composition is artistic and minimalist, emphasizing precision and professionalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0QGC6jKYYUNa1jVSAHmvRo0JXa8rGCjjvN_fDi2v0lG_RsdaQZc5TVsZBpTVi4DgTWtkXbnRSI3jrSvf2s-5-LhN68O4B0_honsOeXwDct4leceXt1BFcUGVtFDkplRUL9zIr057iBYzpixEkMklSREfZfU-Eo5uGuAoIUgiNAEt0bB07ntfq8YizQorQjtttcqsEVl0lmcM-Y7yjNg8ZPxkfN_t7y0oUk48oU3zeGMDRLyoz4Ug">
+<div class="absolute top-4 left-4 bg-safety-yellow text-black text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Most Popular</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-white leading-tight">Level 2 Diploma <br>C&amp;G 2365-02</h3>
+<div class="text-right">
+<p class="text-electric-cyan font-price-display text-price-display">£3249</p>
+<p class="text-xs text-on-surface-variant">inc VAT</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">The essential first step on the ladder to becoming a fully qualified electrician. No prior experience needed.</p>
+<button class="w-full py-3 border border-electric-cyan text-electric-cyan rounded hover:bg-electric-cyan hover:text-black transition-colors font-label-bold">View Course</button>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="group bg-zinc-surface rounded-xl overflow-hidden border border-white/10 hover:border-electric-cyan/40 transition-all">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A close-up of a modern electrical distribution board with neatly organized wiring, circuit breakers, and copper components. The scene uses high-contrast lighting with a dark aesthetic, highlighted by a subtle cyan glow emanating from the technical elements. The style is professional, industrial, and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqq2BK8LvRLcAjLnzvOIWK-OLh84P7YYh90vEIBU9H3_8ZXbvt0sCSBp49y2_eBckvFbxIlgbvHpYILgOuGd8r6D8x39Nzi8jugWJLwPoPFMuZVD0FsfyYY3nV2jiSH5QvAmxKZA5fVNoFwEfHh-8CofCb83oFuc9hI7ciKYFTfLJpkMA1Moj1xeZjBYoCeu43itSmgBO7PyiSEe-eFSFxCg0aOK0L6oKnlPgcaVNh3uA9IrWhs5v9">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-white leading-tight">NVQ Level 3 <br>Electrical C&amp;G 2357</h3>
+<div class="text-right">
+<p class="text-electric-cyan font-price-display text-price-display">£2249</p>
+<p class="text-xs text-on-surface-variant">inc VAT</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Designed to transfer skills into practical solutions. Includes work placement support for your portfolio.</p>
+<button class="w-full py-3 border border-electric-cyan text-electric-cyan rounded hover:bg-electric-cyan hover:text-black transition-colors font-label-bold">View Course</button>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="group bg-zinc-surface rounded-xl overflow-hidden border border-white/10 hover:border-electric-cyan/40 transition-all">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A futuristic rendering of an electric vehicle charging station at night. The sleek, modern design is illuminated by vibrant electric cyan light strips and safety yellow indicators. The background is a dark, minimalist city environment. The overall mood is technologically advanced and sustainable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXUHV0MVDyyVfF26cnhNNE4EVBC9fKKc0dC5jg5bf0IKZcGMNexFU4Kni0O8P-5GD9VMuyV5uYQEnvhk_YtBL4ebFZzOF-oiJr4ei_LvgBvC_eEOvVE2Wk4Rhl3o2ZUmj-QUdqwxDorlqfXN_fns5CqoXngU-nouNZvVvU6cOFC8saeeZo_AE2QMtdMXk5iApaS8EsuKRpsKkyAyHUgWvyeydRjTDYB4c76toK7VWjW2kdcs4VCtMv">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-white leading-tight">EV Charging <br>C&amp;G 2921-34</h3>
+<div class="text-right">
+<p class="text-electric-cyan font-price-display text-price-display">£395</p>
+<p class="text-xs text-on-surface-variant">inc VAT</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Master the design and installation of domestic and commercial EV charging points. Future-proof your career.</p>
+<button class="w-full py-3 border border-electric-cyan text-electric-cyan rounded hover:bg-electric-cyan hover:text-black transition-colors font-label-bold">View Course</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Birmingham Facility Location -->
+<section class="bg-obsidian-base py-24">
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">Train in the Heart of Birmingham</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Our Birmingham Centre of Excellence is located at Regent Place, just minutes from the Jewellery Quarter and the City Centre. Featuring state-of-the-art training bays and real-world equipment.</p>
+<div class="space-y-6 mb-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-cyan">location_on</span>
+<div>
+<h4 class="text-white font-label-bold">Address</h4>
+<p class="text-on-surface-variant">24-26 Regent Place, Birmingham B1 3NJ</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-cyan">directions_walk</span>
+<div>
+<h4 class="text-white font-label-bold">Accessibility</h4>
+<p class="text-on-surface-variant">Easy access via Snow Hill Station and local bus routes. Parking available.</p>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-electric-cyan hover:underline font-label-bold" href="career-roadmap-from-novice-to-gold-card.html">
+                        Get Directions on Google Maps
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-electric-cyan to-safety-yellow rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+<div class="relative bg-surface rounded-xl overflow-hidden border border-white/10 h-[400px]">
+<img class="w-full h-full object-cover" data-alt="A stylized digital map visualization of Birmingham's Jewellery Quarter. The map uses a dark mode palette with roads and icons highlighted in glowing electric cyan. A prominent pin marks 'Regent Place' with a technical, high-resolution aesthetic." data-location="Birmingham, Regent Place" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgQJC7at1a76r9DFXHu37DALkuxM1t91ZErrXpeParY7WcJhG7YgxKCnwEDuuMxFDYwSz-0xVENjLFO8LssuMuYX7tW_QbEb66deFQMbIjSPpmpvnm7LF-mNlnJNHNUFSVSr1QqLeie2Rh8Np-wZKMIlPopb8B2a-T8OCoV9BIVO2LPVl1TO7LFOHyOCjB-AM4EQNiEkhqm8vn6LzlYXECUH1-C24HfOwrocYNBT2UsRG3pIDOkoDQ">
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 bg-gradient-to-b from-surface to-obsidian-base">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center glass-panel p-16 rounded-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-electric-cyan/5 blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">Ready to secure your future?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">Join the 1,500+ successful graduates who have transformed their careers with our Birmingham-based training.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-electric-cyan text-black font-label-bold text-label-bold px-10 py-5 rounded-lg hover:scale-105 active:scale-95 transition-all glow-cyan">
+                            Enquire Now for Course Information
+                        </button>
+<a class="flex items-center justify-center gap-3 border border-white/20 text-white font-label-bold text-label-bold px-10 py-5 rounded-lg hover:bg-white/5 transition-all" href="tel:03308225337">
+<span class="material-symbols-outlined">call</span>
+                            0330 822 5337
+                        </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-obsidian-base dark:bg-obsidian-base w-full py-16 border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="text-headline-md font-headline-md text-electric-cyan">ECNM BHM</div>
+<p class="text-body-md font-body-md text-vat-muted">Specially designed electrical training courses for high-stakes professional mastery in the West Midlands.</p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded bg-white/5 flex items-center justify-center hover:text-electric-cyan transition-colors" href="career-roadmap-from-novice-to-gold-card.html"><span class="material-symbols-outlined text-lg">face_nod</span></a>
+<a class="w-8 h-8 rounded bg-white/5 flex items-center justify-center hover:text-electric-cyan transition-colors" href="index.html"><span class="material-symbols-outlined text-lg">link</span></a>
+<a class="w-8 h-8 rounded bg-white/5 flex items-center justify-center hover:text-electric-cyan transition-colors" href="index.html"><span class="material-symbols-outlined text-lg">public</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-label-bold text-label-bold mb-6">Fast Links</h4>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="text-vat-muted hover:text-white transition-colors" href="career-roadmap-from-novice-to-gold-card.html">Level 3 NVQ</a></li>
+<li><a class="text-vat-muted hover:text-white transition-colors" href="index.html">18th Edition</a></li>
+<li><a class="text-vat-muted hover:text-white transition-colors" href="career-roadmap-from-novice-to-gold-card.html">Gold Card Route</a></li>
+<li><a class="text-vat-muted hover:text-white transition-colors" href="career-roadmap-from-novice-to-gold-card.html">Career Map</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-label-bold text-label-bold mb-6">Legal</h4>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="text-vat-muted hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-vat-muted hover:text-white transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="text-vat-muted hover:text-white transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-vat-muted hover:text-white transition-colors" href="#">Complaints Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-label-bold text-label-bold mb-6">Contact</h4>
+<ul class="space-y-4 font-body-md text-body-md text-vat-muted">
+<li class="flex gap-3"><span class="material-symbols-outlined text-electric-cyan">call</span> 0121 555 0123</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-electric-cyan">mail</span> info@elec.training</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-electric-cyan">pin_drop</span> Regent Place, Birmingham</li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto mt-16 pt-8 border-t border-white/5">
+<p class="text-vat-muted text-sm text-center">© 2024 Electrician Courses Near Me Limited. Birmingham Centre of Excellence.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions and glow effects
+        document.querySelectorAll('.glass-panel').forEach(panel => {
+            panel.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = panel.getBoundingClientRect();
+                const x = (e.clientX - left) / width;
+                const y = (e.clientY - top) / height;
+                panel.style.setProperty('--mouse-x', x);
+                panel.style.setProperty('--mouse-y', y);
+            });
+        });
+    </script>
+</body></html>

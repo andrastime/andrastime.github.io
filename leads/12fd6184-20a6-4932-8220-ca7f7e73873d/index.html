@@ -1,0 +1,437 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>T.H. Electrical | Expert Electricians in Sutton Coldfield</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration Verbatim -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#001a41",
+                    "tertiary-fixed": "#e1e3e4",
+                    "on-secondary-container": "#bab8b9",
+                    "surface-container-lowest": "#0b0e16",
+                    "on-primary": "#002e69",
+                    "primary-fixed-dim": "#adc6ff",
+                    "deep-charcoal": "#121213",
+                    "surface-container-low": "#181c23",
+                    "secondary": "#c8c6c7",
+                    "tertiary-container": "#8f9192",
+                    "on-surface": "#e0e2ed",
+                    "surface-tint": "#adc6ff",
+                    "surface": "#10131b",
+                    "secondary-container": "#49494a",
+                    "on-secondary-fixed-variant": "#474647",
+                    "background": "#10131b",
+                    "on-surface-variant": "#c1c6d7",
+                    "surface-variant": "#31353d",
+                    "on-secondary-fixed": "#1b1b1c",
+                    "surface-container-high": "#272a32",
+                    "on-error": "#690005",
+                    "surface-container-highest": "#31353d",
+                    "outline-variant": "#414755",
+                    "primary": "#adc6ff",
+                    "surface-bright": "#363942",
+                    "on-error-container": "#ffdad6",
+                    "electric-blue": "#00E0FF",
+                    "on-primary-container": "#00285c",
+                    "circuit-gray": "#2C2C2E",
+                    "power-glow": "rgba(0, 224, 255, 0.15)",
+                    "on-secondary": "#303031",
+                    "on-tertiary-container": "#272a2b",
+                    "secondary-fixed": "#e5e2e3",
+                    "outline": "#8b90a0",
+                    "inverse-primary": "#005bc1",
+                    "secondary-fixed-dim": "#c8c6c7",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#c5c7c8",
+                    "inverse-on-surface": "#2d3039",
+                    "primary-fixed": "#d8e2ff",
+                    "inverse-surface": "#e0e2ed",
+                    "error": "#ffb4ab",
+                    "primary-container": "#4b8eff",
+                    "on-tertiary": "#2e3132",
+                    "tertiary": "#c5c7c8",
+                    "on-tertiary-fixed": "#191c1d",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-container": "#1c2028",
+                    "on-tertiary-fixed-variant": "#454748",
+                    "on-background": "#e0e2ed",
+                    "surface-dim": "#10131b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "stack-md": "32px",
+                    "gutter": "24px",
+                    "stack-lg": "64px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Sora"],
+                    "stat-number": ["Sora"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "display-lg": ["Sora"],
+                    "display-lg-mobile": ["Sora"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "stat-number": ["36px", {"lineHeight": "44px", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .power-glow-hover:hover {
+            box-shadow: 0 0 20px rgba(0, 224, 255, 0.4);
+        }
+        .chamfer-edge {
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .circuit-line {
+            position: relative;
+        }
+        .circuit-line::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #00E0FF, transparent);
+        }
+        .glow-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00E0FF;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00E0FF;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.4; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-deep-charcoal/80 backdrop-blur-md border-b border-circuit-gray shadow-sm">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="T.H. Electrical Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLt8blwq4u5xdc055R1u6tl2ghssuyiltKAudYzJsMiy9-1aU5kfEF6s7tBYHF2qfJtI3ltIqB5WOIrozMSfTjULgv12rU1aVXUCNTjfS2PIIYXI_BtooUcLavXoRCm7MF1XVO9vGOUxBibd3WKMF9JhwWD7rNSptZT5NP4b7ZlmKFBCgpEDF_U5rHWxzpQbXR8oX-O373OAbNd0wDETxqXInavydXHSYbmnvJv49Hygj3hElx4PhYOgdsM">
+<span class="font-display-lg text-headline-md tracking-tighter text-on-surface">T.H. Electrical</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-electric-blue border-b-2 border-electric-blue pb-1" href="our-services-t-h-electrical.html">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-all duration-300" href="our-services-t-h-electrical.html">Projects</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-all duration-300" href="our-services-t-h-electrical.html">Areas Served</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-all duration-300" href="index.html">About</a>
+</nav>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-electric-blue">electric_bolt</span>
+<button class="bg-electric-blue text-on-primary-fixed font-label-caps text-label-caps px-6 py-2.5 rounded-lg font-bold hover:scale-95 transition-all duration-100 power-glow-hover">
+                    Get a Quote
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-deep-charcoal via-deep-charcoal/70 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLuPtMze8wMTR2P5uMprSNOc3E4pHe-d325OmyYd3Tf7VXM9yw6u2k3FwLPIe4Z4AQ8CurGtSHkaE0rwSt6NWGFBBv_xdqfKh6LpC83n8SIuVMgWsVtLaFA_twU-U3uST7_mjjrW60c25rrIyukCZLgCKamI8AM0iKBMD2ZIc5ELtdgeCTaoiYltbo5j5Noj4JOjUjKPFaSbQrpOiUW1jYZoMZr-RMjzyGRM4Wl-xos-N2jbrxV3wAeKlxc')"></div>
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-gutter w-full">
+<div class="max-w-2xl">
+<div class="flex items-center gap-3 mb-6">
+<div class="glow-dot"></div>
+<span class="font-label-caps text-label-caps text-electric-blue tracking-widest">NICEIC REGISTERED ELECTRICIAN</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 leading-tight">
+                        Expert Electrical Solutions in <span class="text-electric-blue">Sutton Coldfield</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                        Providing professional, reliable, and safe electrical installations with over 25 years of specialist experience across the West Midlands.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-electric-blue text-on-primary-fixed px-10 py-4 rounded-lg font-bold text-label-caps hover:scale-95 transition-all duration-100 shadow-[0_0_20px_rgba(0,224,255,0.3)]">
+                            REQUEST A QUOTE
+                        </button>
+<button class="border-2 border-on-surface-variant text-on-surface px-10 py-4 rounded-lg font-bold text-label-caps hover:bg-on-surface-variant/10 transition-all">
+                            VIEW SERVICES
+                        </button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden md:block">
+<div class="flex flex-col items-center gap-2">
+<span class="text-on-surface-variant text-label-caps">SCROLL TO EXPLORE</span>
+<div class="w-px h-12 bg-circuit-gray relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1/2 bg-electric-blue animate-bounce"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Highlights (Bento Grid Style) -->
+<section class="py-stack-lg bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Precision Engineering for Every Space</h2>
+<p class="text-on-surface-variant max-w-xl">From high-end domestic renovations to mission-critical commercial power systems, we bring technical excellence to every wire.</p>
+</div>
+<div class="flex gap-12">
+<div class="text-center">
+<span class="font-stat-number text-stat-number text-electric-blue block">25+</span>
+<span class="font-label-caps text-label-caps text-on-secondary-container">YEARS EXP</span>
+</div>
+<div class="text-center">
+<span class="font-stat-number text-stat-number text-electric-blue block">100%</span>
+<span class="font-label-caps text-label-caps text-on-secondary-container">RELIABLE</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Feature Large -->
+<div class="md:col-span-7 bg-surface-container-low rounded-xl overflow-hidden flex flex-col md:flex-row chamfer-edge hover:border-electric-blue/30 transition-all duration-500 group">
+<div class="md:w-1/2 p-8 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-electric-blue mb-4 text-4xl">home_repair_service</span>
+<h3 class="font-headline-md text-headline-md mb-3">Domestic &amp; Commercial</h3>
+<p class="text-on-surface-variant text-body-md mb-6">Complete electrical services from full rewires to minor repairs, ensuring safety and compliance in every project.</p>
+</div>
+<ul class="space-y-3 font-label-caps text-label-caps text-on-surface mb-8">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-blue text-sm">check_circle</span> NICEIC PART P REGISTERED</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-blue text-sm">check_circle</span> EMERGENCY REPAIRS</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-blue text-sm">check_circle</span> SMART HOME INSTALLS</li>
+</ul>
+<a class="text-electric-blue flex items-center gap-2 font-bold group-hover:gap-4 transition-all" href="our-services-t-h-electrical.html">LEARN MORE <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="md:w-1/2 relative overflow-hidden h-64 md:h-auto">
+<img alt="Professional Electrical Installation" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLt8iQSaFeUTRDyKnxxpczzayQqoN0y_AlnVUCJNArhV8mL46gt5Q6N_uIM8c6cV1vYiUpirijCcLqnbefGSNJbzeatVsRbtj8JH_fqCU2SWvfcRtVAiLkGxv9KG4lGk-K7_8ibLlZOLj7jg3NvZEJgYsgIBCuO_wokPaSLKZORDT1BkxvWfGxNSEV79F74bcnRa8zAFZ1e28BRXGtuiPwB22tucRoPwUgCtqnpss0Y9zjiK8zZyi5htDRM">
+</div>
+</div>
+<!-- Side Grid -->
+<div class="md:col-span-5 grid grid-rows-2 gap-6">
+<div class="bg-surface-container-high p-8 rounded-xl chamfer-edge relative group">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-outline text-3xl opacity-20 group-hover:opacity-100 transition-opacity">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Accredited Excellence</h3>
+<p class="text-on-surface-variant text-body-md">Fully NICEIC registered domestic installer ensuring all work meets the latest UK safety standards and regulations.</p>
+</div>
+<div class="bg-circuit-gray p-8 rounded-xl chamfer-edge flex flex-col justify-center items-center text-center group hover:bg-electric-blue/5 transition-colors">
+<div class="w-16 h-16 rounded-full bg-deep-charcoal flex items-center justify-center mb-4 power-glow-hover transition-all">
+<span class="material-symbols-outlined text-electric-blue text-3xl">analytics</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Free Technical Audit</h3>
+<p class="text-on-surface-variant text-body-md">Detailed quotations with clear breakdown of costs and timelines. No hidden fees, just honest advice.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-stack-lg bg-deep-charcoal border-y border-circuit-gray relative overflow-hidden">
+<div class="absolute top-0 right-0 w-96 h-96 bg-electric-blue/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="text-center mb-16">
+<span class="font-label-caps text-label-caps text-electric-blue mb-2 block">CLIENT FEEDBACK</span>
+<h2 class="font-headline-md text-headline-md">Trusted by Hundreds</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Testimonial 1 -->
+<div class="circuit-line pl-8 py-4">
+<p class="font-body-lg text-on-surface mb-6 italic leading-relaxed">
+                            "Quality service delivered in a friendly way would definitely use again. Fitted replacement fan in bathroom, put vents for the fans outside and fitted burglar alarm in under 2 days."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-circuit-gray rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">OrangeClothes91</p>
+<div class="flex text-electric-blue text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="circuit-line pl-8 py-4">
+<p class="font-body-lg text-on-surface mb-6 italic leading-relaxed">
+                            "Tim is a 1st class electrician who takes great care in your home, leaving everything clean and tidy. He does everything with precision and is very through. Thank you for an excellent job."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-circuit-gray rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">JackieH-138</p>
+<div class="flex text-electric-blue text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map/Areas Section -->
+<section class="py-stack-lg bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-md text-headline-md mb-6">Serving Sutton Coldfield &amp; Beyond</h2>
+<p class="text-on-surface-variant mb-8">Based in Sutton Coldfield, we provide expert electrical services across the entire West Midlands region. From Four Oaks to Birmingham City Centre, we are your local engineering partner.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg border border-circuit-gray">
+<span class="material-symbols-outlined text-electric-blue">location_on</span>
+<span class="font-label-caps text-label-caps">FOUR OAKS</span>
+</div>
+<div class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg border border-circuit-gray">
+<span class="material-symbols-outlined text-electric-blue">location_on</span>
+<span class="font-label-caps text-label-caps">BOLDMERE</span>
+</div>
+<div class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg border border-circuit-gray">
+<span class="material-symbols-outlined text-electric-blue">location_on</span>
+<span class="font-label-caps text-label-caps">WYLDE GREEN</span>
+</div>
+<div class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg border border-circuit-gray">
+<span class="material-symbols-outlined text-electric-blue">location_on</span>
+<span class="font-label-caps text-label-caps">WEST MIDLANDS</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden h-[400px] bg-circuit-gray border border-circuit-gray shadow-2xl relative">
+<!-- Map Placeholder -->
+<div class="absolute inset-0 bg-deep-charcoal flex items-center justify-center">
+<div class="text-center">
+<span class="material-symbols-outlined text-electric-blue text-6xl mb-4 animate-bounce">location_pin</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant">INTERACTIVE SERVICE MAP</p>
+</div>
+</div>
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="A stylized dark mode architectural map of Sutton Coldfield and the surrounding West Midlands areas, featuring minimalist glowing lines for main roads and a vibrant electric blue pulse marking the central service hub. The design matches a high-tech corporate trade aesthetic with deep charcoal backgrounds and circuit-like visual motifs." data-location="Sutton Coldfield" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLwpX1MwrKqHZ751RGyxuUihLipcs_1wAYMCwAdMOOgJ5_rRNHt8biE3OTkyBdGpYNw04Rxq4HLVhknw59V7I6nYXYDIjiaFcXWjoTTWSQsOjbhbKlapZVVTKJhAkmU7zxlmqc9-KMKdurLbvMFzhWByQHBkcgSTW7HbYER2yPR-F46rd4pW3S4AyGtvNu-OX9VoY7wdhEMY_s1eSdTEPIkcn_5bdLJFxxAsWhVSGvXhvXbQv7V10L">
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-stack-lg bg-electric-blue text-on-primary-fixed overflow-hidden relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg height="100%" preserveAspectRatio="none" viewBox="0 0 100 100" width="100%">
+<path d="M0 50 Q 25 20, 50 50 T 100 50" fill="none" stroke="white" stroke-width="0.5"></path>
+<path d="M0 60 Q 25 30, 50 60 T 100 60" fill="none" stroke="white" stroke-width="0.5"></path>
+</svg>
+</div>
+<div class="max-w-container-max mx-auto px-gutter text-center relative z-10">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 text-on-primary-fixed">Ready to power up your project?</h2>
+<p class="font-body-lg text-on-primary-fixed/80 mb-10 max-w-2xl mx-auto">Contact Tim today for a no-obligation quote and professional electrical advice tailored to your needs.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a class="flex items-center justify-center gap-3 bg-on-primary-fixed text-white px-10 py-5 rounded-lg font-bold text-label-caps hover:scale-105 transition-all" href="tel:01213534492">
+<span class="material-symbols-outlined">call</span> 0121 353 4492
+                    </a>
+<button class="bg-white text-on-primary-fixed px-10 py-5 rounded-lg font-bold text-label-caps hover:bg-opacity-90 transition-all border border-transparent shadow-lg">
+                        EMAIL US TODAY
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-deep-charcoal border-t border-circuit-gray py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-md max-w-container-max mx-auto px-gutter">
+<div class="col-span-1 md:col-span-1">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">T.H. Electrical</h3>
+<p class="text-on-surface-variant text-body-md mb-6">Professional NICEIC Registered Electricians serving Sutton Coldfield and the West Midlands for over 25 years.</p>
+<img alt="Logo" class="h-16 grayscale opacity-50" src="https://lh3.googleusercontent.com/aida/AP1WRLt8blwq4u5xdc055R1u6tl2ghssuyiltKAudYzJsMiy9-1aU5kfEF6s7tBYHF2qfJtI3ltIqB5WOIrozMSfTjULgv12rU1aVXUCNTjfS2PIIYXI_BtooUcLavXoRCm7MF1XVO9vGOUxBibd3WKMF9JhwWD7rNSptZT5NP4b7ZlmKFBCgpEDF_U5rHWxzpQbXR8oX-O373OAbNd0wDETxqXInavydXHSYbmnvJv49Hygj3hElx4PhYOgdsM">
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-electric-blue mb-6">CONTACT</h4>
+<ul class="space-y-4 text-on-surface-variant font-body-md">
+<li class="hover:text-electric-blue transition-all"><a href="tel:01213534492">0121 353 4492</a></li>
+<li class="hover:text-electric-blue transition-all"><a href="tel:07767457170">07767 457 170</a></li>
+<li class="hover:text-electric-blue transition-all truncate"><a href="mailto:info@thelectrical-suttoncoldfield.co.uk">info@thelectrical-suttoncoldfield.co.uk</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-electric-blue mb-6">HOURS</h4>
+<ul class="space-y-4 text-on-surface-variant font-body-md">
+<li>Mon-Fri: 08:00 - 18:00</li>
+<li>Sat: By Appointment</li>
+<li>Sun: Closed</li>
+<li class="text-electric-blue flex items-center gap-2"><span class="glow-dot"></span> 24/7 Emergencies</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-electric-blue mb-6">CERTIFICATION</h4>
+<div class="bg-circuit-gray p-4 rounded-lg flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2 text-on-surface-variant">verified</span>
+<p class="font-label-caps text-center text-[10px] text-on-surface-variant">NICEIC PART P REGISTERED INSTALLER</p>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-circuit-gray flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-caps text-label-caps text-on-surface-variant text-center">© 2024 T. H. Electrical Services. Sutton Coldfield &amp; West Midlands.</p>
+<div class="flex gap-6">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-electric-blue transition-all" href="#">PRIVACY</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-electric-blue transition-all" href="#">TERMS</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header transparency scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-deep-charcoal/95', 'shadow-lg');
+                header.classList.remove('bg-deep-charcoal/80');
+            } else {
+                header.classList.remove('bg-deep-charcoal/95', 'shadow-lg');
+                header.classList.add('bg-deep-charcoal/80');
+            }
+        });
+    </script>
+</body></html>

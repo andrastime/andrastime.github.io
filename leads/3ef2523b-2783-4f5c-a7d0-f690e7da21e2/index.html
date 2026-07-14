@@ -1,0 +1,554 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: #00E0FF;
+            box-shadow: 0px 4px 20px rgba(0, 224, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #414754;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "error-container": "#93000a",
+                "on-tertiary-container": "#4e3e00",
+                "neon-green": "#22C55E",
+                "background": "#10131b",
+                "on-secondary-fixed": "#131b2e",
+                "surface-container-highest": "#31353d",
+                "surface-tint": "#adc7ff",
+                "primary-fixed-dim": "#adc7ff",
+                "secondary-fixed": "#dae2fd",
+                "on-tertiary": "#3c2f00",
+                "on-primary-fixed-variant": "#004493",
+                "primary": "#adc7ff",
+                "secondary": "#bec6e0",
+                "on-background": "#e0e2ed",
+                "surface": "#10131b",
+                "on-secondary-container": "#adb4ce",
+                "secondary-fixed-dim": "#bec6e0",
+                "surface-glass": "rgba(30, 41, 59, 0.7)",
+                "outline-variant": "#414754",
+                "error": "#ffb4ab",
+                "surface-dim": "#10131b",
+                "outline": "#8b90a0",
+                "surface-container-lowest": "#0b0e16",
+                "on-primary-container": "#00285b",
+                "on-secondary-fixed-variant": "#3f465c",
+                "on-surface": "#e0e2ed",
+                "tertiary-fixed": "#ffe083",
+                "deep-slate": "#1E293B",
+                "tertiary-container": "#cea700",
+                "tertiary-fixed-dim": "#eec200",
+                "on-tertiary-fixed-variant": "#574500",
+                "inverse-surface": "#e0e2ed",
+                "on-error-container": "#ffdad6",
+                "on-tertiary-fixed": "#231b00",
+                "surface-bright": "#363942",
+                "on-primary-fixed": "#001a41",
+                "on-secondary": "#283044",
+                "primary-container": "#4a8eff",
+                "surface-container-low": "#181c23",
+                "surface-container-high": "#272a32",
+                "inverse-on-surface": "#2d3039",
+                "secondary-container": "#3f465c",
+                "electric-blue": "#00E0FF",
+                "on-error": "#690005",
+                "surface-variant": "#31353d",
+                "surface-container": "#1c2027",
+                "on-primary": "#002e68",
+                "primary-fixed": "#d8e2ff",
+                "on-surface-variant": "#c1c6d7",
+                "inverse-primary": "#005bc0",
+                "tertiary": "#efc200"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "stack-lg": "32px",
+                "stack-md": "16px",
+                "stack-xs": "4px",
+                "container-max": "1280px",
+                "stack-sm": "8px",
+                "margin-mobile": "16px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "headline-md": ["Space Grotesk"],
+                "label-code": ["JetBrains Mono"],
+                "headline-lg": ["Space Grotesk"],
+                "body-lg": ["Hanken Grotesk"],
+                "headline-lg-mobile": ["Space Grotesk"],
+                "body-md": ["Hanken Grotesk"],
+                "label-caps": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "label-code": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "label-caps": ["12px", {"lineHeight": "1.0", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen selection:bg-electric-blue/30 selection:text-white overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface-glass backdrop-blur-md border-b border-outline-variant/10 shadow-[0px_4px_20px_rgba(0,224,255,0.15)] transition-all duration-300">
+<div class="max-w-container-max mx-auto px-gutter flex items-center justify-between h-20">
+<div class="flex items-center gap-10">
+<h1 class="font-headline-md text-headline-md font-bold text-electric-blue uppercase tracking-tighter">YESSS Electrical Birmingham</h1>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-label-caps text-label-caps text-on-surface hover:text-electric-blue transition-colors duration-200" href="index.html">Cable</a>
+<a class="font-label-caps text-label-caps text-electric-blue border-b-2 border-electric-blue pb-1" href="index.html">Lighting</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-electric-blue transition-colors duration-200" href="index.html">Tools</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-electric-blue transition-colors duration-200" href="index.html">Switchgear</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-electric-blue transition-colors duration-200" href="homepage-yesss-electrical-birmingham-1.html">EV Charging</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-electric-blue transition-colors duration-200" href="#">Security</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container-high/40 rounded px-4 py-2 border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md font-body-md w-48 text-on-surface" placeholder="Search components..." type="text">
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-electric-blue transition-colors">location_on</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-electric-blue transition-colors">shopping_cart</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-electric-blue transition-colors">account_circle</button>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-stack-lg max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-8 relative">
+<!-- Sidebar Filter -->
+<aside class="md:col-span-3 space-y-8 sticky top-32 h-[calc(100vh-160px)] overflow-y-auto custom-scrollbar pr-2">
+<section>
+<h3 class="font-headline-md text-headline-md mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-electric-blue">filter_list</span>
+                    Filters
+                </h3>
+<!-- Category Drilldown -->
+<div class="space-y-4 mb-8">
+<label class="font-label-caps text-label-caps text-electric-blue uppercase tracking-widest block mb-2">Category</label>
+<ul class="space-y-2">
+<li><a class="text-body-md font-body-md text-on-surface hover:text-electric-blue flex justify-between items-center" href="homepage-yesss-electrical-birmingham-1.html">Indoor Lighting <span class="text-on-surface-variant text-xs">124</span></a></li>
+<li><a class="text-body-md font-body-md text-electric-blue flex justify-between items-center" href="index.html">Outdoor Lighting <span class="bg-electric-blue/10 px-2 py-0.5 rounded text-xs">42</span></a></li>
+<li><a class="text-body-md font-body-md text-on-surface hover:text-electric-blue flex justify-between items-center" href="index.html">Emergency Lighting <span class="text-on-surface-variant text-xs">18</span></a></li>
+<li><a class="text-body-md font-body-md text-on-surface hover:text-electric-blue flex justify-between items-center" href="index.html">Lamps &amp; Tubes <span class="text-on-surface-variant text-xs">89</span></a></li>
+</ul>
+</div>
+<!-- Brand Filter -->
+<div class="space-y-4 mb-8">
+<label class="font-label-caps text-label-caps text-electric-blue uppercase tracking-widest block mb-2">Brands</label>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant bg-surface-container-high checked:bg-electric-blue focus:ring-electric-blue text-electric-blue transition-all" type="checkbox">
+<span class="text-body-md font-body-md text-on-surface-variant group-hover:text-on-surface">Ansell Lighting</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-outline-variant bg-surface-container-high checked:bg-electric-blue focus:ring-electric-blue text-electric-blue transition-all" type="checkbox">
+<span class="text-body-md font-body-md text-on-surface-variant group-hover:text-on-surface">Sylvania</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant bg-surface-container-high checked:bg-electric-blue focus:ring-electric-blue text-electric-blue transition-all" type="checkbox">
+<span class="text-body-md font-body-md text-on-surface-variant group-hover:text-on-surface">Thorn</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant bg-surface-container-high checked:bg-electric-blue focus:ring-electric-blue text-electric-blue transition-all" type="checkbox">
+<span class="text-body-md font-body-md text-on-surface-variant group-hover:text-on-surface">Philips Professional</span>
+</label>
+</div>
+</div>
+<!-- Price Slider Simulation -->
+<div class="space-y-4 mb-8">
+<label class="font-label-caps text-label-caps text-electric-blue uppercase tracking-widest block mb-2">Price (Ex VAT)</label>
+<input class="w-full h-1 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-electric-blue" type="range">
+<div class="flex justify-between text-label-code font-label-code text-on-surface-variant">
+<span>£0.00</span>
+<span>£1,500.00</span>
+</div>
+</div>
+<!-- Technical Specs -->
+<div class="space-y-4 mb-8">
+<label class="font-label-caps text-label-caps text-electric-blue uppercase tracking-widest block mb-2">Protection Rating</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1 bg-surface-container-high border border-outline-variant rounded text-label-code font-label-code text-on-surface-variant hover:border-electric-blue hover:text-electric-blue transition-all">IP20</button>
+<button class="px-3 py-1 bg-electric-blue border border-electric-blue rounded text-label-code font-label-code text-background font-bold">IP65</button>
+<button class="px-3 py-1 bg-surface-container-high border border-outline-variant rounded text-label-code font-label-code text-on-surface-variant hover:border-electric-blue hover:text-electric-blue transition-all">IP67</button>
+<button class="px-3 py-1 bg-surface-container-high border border-outline-variant rounded text-label-code font-label-code text-on-surface-variant hover:border-electric-blue hover:text-electric-blue transition-all">IP44</button>
+</div>
+</div>
+<!-- Availability -->
+<div class="space-y-4">
+<label class="font-label-caps text-label-caps text-electric-blue uppercase tracking-widest block mb-2">Availability</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-outline-variant bg-surface-container-high checked:bg-electric-blue focus:ring-electric-blue text-electric-blue transition-all" type="checkbox">
+<span class="text-body-md font-body-md text-on-surface-variant group-hover:text-on-surface">In Stock (Birmingham)</span>
+</label>
+</div>
+</section>
+</aside>
+<!-- Product Grid -->
+<div class="md:col-span-9">
+<header class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-caps text-label-caps uppercase mb-2">
+<a class="hover:text-electric-blue" href="index.html">Home</a>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<a class="hover:text-electric-blue" href="index.html">Lighting</a>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-electric-blue">Lamps &amp; Luminaires</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg">Lighting &amp; Lamps</h2>
+<p class="text-on-surface-variant font-body-md text-body-md max-w-2xl mt-2">Professional-grade lighting solutions for industrial, commercial, and domestic installations. Stocked and ready for collection in Birmingham.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-label-caps font-label-caps text-on-surface-variant whitespace-nowrap">Sort By:</span>
+<select class="bg-surface-container-high border-outline-variant text-on-surface font-body-md text-body-md rounded focus:ring-electric-blue focus:border-electric-blue px-4 py-2">
+<option>Most Popular</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Arrivals</option>
+</select>
+</div>
+</header>
+<!-- Bento Grid Pattern -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<article class="glass-card flex flex-col p-4">
+<div class="relative group aspect-square mb-4 overflow-hidden rounded bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A studio photograph of a high-performance LED Batten fixture against a dark, industrial concrete wall. The product is sleek and white, with intense cool white light emanating from its long diffuser. The lighting is dramatic and technical, highlighting the high-quality aluminum casing and industrial design. The overall mood is professional and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx3b6AgMf6QNUGmrhhK89mCE8dPpWcYU0gjPCMcMZ4krQMwIBuxFzstGfmUpB80k4yLwjXQOVBdafOuYluKnNwwx3VSQxvaBH61UyvMYcYtyC6-17Ff3e9_TRUFcUSW4c0XPgwLReWE6v3aQRCIVjJFUtunYlRlpZYT424atgnteo_Eerv_e2TjT02KVteiHtMAI_V5Eww8wdVzUqLjSmeBg0csWUmUa3r361wtQp68157jaYdktWF">
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-neon-green text-background font-label-caps text-[10px] px-2 py-0.5 rounded-sm">IN STOCK</span>
+<span class="bg-electric-blue text-background font-label-caps text-[10px] px-2 py-0.5 rounded-sm">BEST SELLER</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<p class="text-label-caps font-label-caps text-on-surface-variant">ANSELL LIGHTING</p>
+<p class="text-label-code font-label-code text-electric-blue">ALEB4/1</p>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-surface mb-2 leading-tight">Elite LED Batten 4ft 24W</h4>
+<div class="flex items-center gap-4 mb-4 text-label-code font-label-code text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">wb_sunny</span>
+                                2800lm
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">palette</span>
+                                4000K
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span>
+                                IP20
+                            </div>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline-md text-headline-md text-on-surface">£34.20</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">Ex VAT</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-transparent border border-electric-blue text-electric-blue font-label-caps text-label-caps py-3 rounded hover:bg-electric-blue/10 transition-colors uppercase tracking-wider">Details</button>
+<button class="bg-electric-blue text-background font-label-caps text-label-caps py-3 rounded hover:brightness-110 transition-all uppercase tracking-wider font-bold">Add to Quote</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="glass-card flex flex-col p-4">
+<div class="relative group aspect-square mb-4 overflow-hidden rounded bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional product shot of a rugged black LED Outdoor Floodlight designed for industrial security. The unit features a tempered glass lens and a heavy-duty adjustable mounting bracket. It is shown in a dark environment with a subtle blue atmospheric glow, emphasizing its IP65 durability and powerful beam potential. The lighting emphasizes the technical textures of the die-cast metal housing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXH7yWZ-GSdh-RhbQJr13KzK8m7LGFwsI91IolKPtgbeJD12jNvBAiqvQns6pq8Bzv-VRRS-z6rmYMJkzutPhuN5lKo35A81UW4DPMFjORXwvf4R03yAvi_CrjZJOpQ8AS8DIjc8IuLRWFGT7LCYDWO7e1akFpYQQd2APiaC3iP-F8C4zCava4Rly4UL3hII2RhiZdu6Bz_Axeom2odYf8P6kQYOCWO7KEoivn5mB1JKlSBX_XSoPB">
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-neon-green text-background font-label-caps text-[10px] px-2 py-0.5 rounded-sm">IN STOCK</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<p class="text-label-caps font-label-caps text-on-surface-variant">SYLVANIA</p>
+<p class="text-label-code font-label-code text-electric-blue">SYL-50W-EXT</p>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-surface mb-2 leading-tight">Start Floodlight LED 50W</h4>
+<div class="flex items-center gap-4 mb-4 text-label-code font-label-code text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">wb_sunny</span>
+                                6000lm
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">palette</span>
+                                5000K
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span>
+                                IP65
+                            </div>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline-md text-headline-md text-on-surface">£58.90</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">Ex VAT</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-transparent border border-electric-blue text-electric-blue font-label-caps text-label-caps py-3 rounded hover:bg-electric-blue/10 transition-colors uppercase tracking-wider">Details</button>
+<button class="bg-electric-blue text-background font-label-caps text-label-caps py-3 rounded hover:brightness-110 transition-all uppercase tracking-wider font-bold">Add to Quote</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="glass-card flex flex-col p-4 lg:row-span-2">
+<div class="relative group aspect-[4/5] mb-4 overflow-hidden rounded bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A premium close-up of a designer architectural pendant light with an exposed filament LED bulb. The fixture features a brushed copper socket and a braided black cord. The lighting is warm and moody, creating a high-end luxury atmosphere. The background is a dark navy textured surface that makes the copper and warm amber filament pop. Professional interior design photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl2J6g8l2rNnWASjU_4Yi9nHIQaBjFZRAmZjqJ2bYzOSdt6fIR5TiqtNDx0H6OqCdTQcK-lkkaSiBdj5EBaLbRuFOFxAfJsRdf_hc8zDwpIA2hew4i04TSbHcgBDmPgP-sJBj5PsnZEgzLWlYYU0DdGX24D6_5SbIbNjqOByXfqR5NQQ-I72rUYAM_lQbeRhFq_4Dsrdt9oMD_A7M8iZmzsdwFmp5js7y5g6sZUIkup-j03rx-Sg1N">
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-primary text-background font-label-caps text-[10px] px-2 py-0.5 rounded-sm">PREMIUM CHOICE</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<p class="text-label-caps font-label-caps text-on-surface-variant">BELL LIGHTING</p>
+<p class="text-label-code font-label-code text-electric-blue">BEL-ARCH-8W</p>
+</div>
+<h4 class="font-headline-md text-[24px] text-on-surface mb-2 leading-tight">Architectural Vintage Filament LED</h4>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">High-efficiency vintage aesthetic lamp with dimmable flicker-free technology. Ideal for high-end hospitality and domestic installations.</p>
+<div class="flex flex-wrap gap-4 mb-4 text-label-code font-label-code text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">light_mode</span>
+                                850lm
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">settings_input_component</span>
+                                E27
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">brightness_medium</span>
+                                Dimmable
+                            </div>
+</div>
+</div>
+<div class="mt-auto">
+<div class="bg-surface-container-low p-4 rounded-lg mb-4 border border-outline-variant/10">
+<div class="flex justify-between items-center mb-1">
+<span class="text-label-caps font-label-caps text-on-surface-variant">PRICE EACH</span>
+<span class="font-headline-md text-[20px] text-on-surface">£14.50</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-label-caps font-label-caps text-neon-green">BULK RATE (10+)</span>
+<span class="font-label-code font-label-code text-neon-green">£12.75</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-2">
+<button class="bg-electric-blue text-background font-label-caps text-label-caps py-4 rounded hover:brightness-110 transition-all uppercase tracking-wider font-bold">Request Bulk Quote</button>
+</div>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="glass-card flex flex-col p-4">
+<div class="relative group aspect-square mb-4 overflow-hidden rounded bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A technical product view of a modern emergency LED exit sign. The sign is illuminated with a vibrant green 'Running Man' icon and features a slim, silver aluminum housing. The image highlights the battery backup indicator light and the clear acrylic panel. Lighting is flat and clinical to emphasize product clarity for safety specifications." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVJaVncPfsv70IIDXfnIwncY_OncrS5WsbepYhFIBzuzpGLfgIoaqWBONcJwvzmpCUgKt9W4V7RBMKvWTfpn-MxJZfjG8sRL9ne_oX2CfotfBZGyABJ2tc9Ao2667Z8N7hLD5amz9FiZYFZPEIuc1aFNqO9JqRz-jFuGjLXV5Q4U2nxNOez2WVl1El-nfz8C7QXDfiovtfW16GdQ9JegvK27GVwbR_Zyn65oamEaggnG5FqgF8fyS_">
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-error-container text-on-error-container font-label-caps text-[10px] px-2 py-0.5 rounded-sm">ESSENTIAL</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<p class="text-label-caps font-label-caps text-on-surface-variant">THORN</p>
+<p class="text-label-code font-label-code text-electric-blue">TH-EM-LX</p>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-surface mb-2 leading-tight">LED Slim Exit Sign - 3H Maintained</h4>
+<div class="flex items-center gap-4 mb-4 text-label-code font-label-code text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">battery_charging_full</span>
+                                3 Hour
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                25m
+                            </div>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline-md text-headline-md text-on-surface">£42.15</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">Ex VAT</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-transparent border border-electric-blue text-electric-blue font-label-caps text-label-caps py-3 rounded hover:bg-electric-blue/10 transition-colors uppercase tracking-wider">Details</button>
+<button class="bg-electric-blue text-background font-label-caps text-label-caps py-3 rounded hover:brightness-110 transition-all uppercase tracking-wider font-bold">Add to Quote</button>
+</div>
+</div>
+</article>
+<!-- Product Card 5 -->
+<article class="glass-card flex flex-col p-4">
+<div class="relative group aspect-square mb-4 overflow-hidden rounded bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A sharp, detailed image of an industrial High-Bay LED light fixture for warehouse use. The light features a distinctive ribbed heat sink and a clear high-impact lens. It is shown suspended from a steel chain against a dark, out-of-focus warehouse ceiling. The lighting is cool and technical, showcasing the high-power LEDs within the circular fixture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKRlq0yKJSJzp1TMEXZw5WfIO_EibMnLtrq4My9_PYk63E-3lZA684LC0m8wQrZwyC7Tpfrl0PQOOPfHRw1WxNKDvxa8qWEC6b2YGqKTnLQ5m5A8Hguzzn8J3wBAX4TDUZvcTjS3a6oBEIe4ckPJX6R9INikJrqESIe8HaRh5MUxG2GHAUwXWYC_IiOiQHioxmSiqhuhvsKfVWhYpL8J5-4R-HyAuXDyEOcZP3mR-Jj-gr2gbsSA-Q">
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-surface-bright text-on-surface font-label-caps text-[10px] px-2 py-0.5 rounded-sm">SPECIAL ORDER</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<p class="text-label-caps font-label-caps text-on-surface-variant">PHILIPS</p>
+<p class="text-label-code font-label-code text-electric-blue">PH-HB-200W</p>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-surface mb-2 leading-tight">CoreLine Highbay LED 200W</h4>
+<div class="flex items-center gap-4 mb-4 text-label-code font-label-code text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">wb_sunny</span>
+                                25,000lm
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span>
+                                IP65
+                            </div>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline-md text-headline-md text-on-surface">£189.00</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">Ex VAT</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-transparent border border-electric-blue text-electric-blue font-label-caps text-label-caps py-3 rounded hover:bg-electric-blue/10 transition-colors uppercase tracking-wider">Details</button>
+<button class="bg-electric-blue text-background font-label-caps text-label-caps py-3 rounded hover:brightness-110 transition-all uppercase tracking-wider font-bold">Add to Quote</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<footer class="mt-12 flex justify-center">
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant/30 text-on-surface-variant hover:border-electric-blue hover:text-electric-blue transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded bg-electric-blue text-background font-bold font-label-code">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant/30 text-on-surface-variant hover:border-electric-blue hover:text-electric-blue transition-all font-label-code">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant/30 text-on-surface-variant hover:border-electric-blue hover:text-electric-blue transition-all font-label-code">3</button>
+<span class="text-on-surface-variant mx-2">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant/30 text-on-surface-variant hover:border-electric-blue hover:text-electric-blue transition-all font-label-code">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant/30 text-on-surface-variant hover:border-electric-blue hover:text-electric-blue transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</footer>
+</div>
+</main>
+<!-- Site Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full pt-stack-lg pb-stack-md border-t border-outline-variant/20 mt-20">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="space-y-6">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold text-electric-blue uppercase tracking-tighter">YESSS Birmingham</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Your premier partner for electrical supplies and professional lighting design in the Midlands.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-electric-blue cursor-pointer hover:opacity-80">face_nod</span>
+<span class="material-symbols-outlined text-electric-blue cursor-pointer hover:opacity-80">public</span>
+<span class="material-symbols-outlined text-electric-blue cursor-pointer hover:opacity-80">alternate_email</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-electric-blue mb-6 uppercase tracking-widest">Company</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">About Us</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="contact-location-birmingham-branch.html">Contact Birmingham</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Trade Account</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Career Opportunities</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-electric-blue mb-6 uppercase tracking-widest">Resources</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Blog</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">News</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Technical Data</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="contact-location-birmingham-branch.html">Catalogue Download</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-electric-blue mb-6 uppercase tracking-widest">Legal</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms of Sale</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Cookie Settings</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">© 2024 YESSS Electrical Birmingham. All rights reserved.</p>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">verified_user</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">SGS Certified</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">electric_bolt</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">ECA Member</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating Action Button (FAB) - Suppression Logic Applied: Only on main categories -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-electric-blue text-background rounded-full shadow-[0px_4px_20px_rgba(0,224,255,0.4)] flex items-center justify-center group hover:scale-110 transition-all z-50">
+<span class="material-symbols-outlined text-3xl font-bold group-hover:rotate-90 transition-transform">chat_bubble</span>
+<span class="absolute right-full mr-4 bg-surface-bright px-4 py-2 rounded text-on-surface font-label-caps text-label-caps whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Expert Advice</span>
+</button>
+<script>
+        // Micro-interaction for scroll depth
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('py-2');
+                header.classList.remove('h-20');
+                header.classList.add('h-16');
+            } else {
+                header.classList.remove('py-2');
+                header.classList.add('h-20');
+                header.classList.remove('h-16');
+            }
+        });
+
+        // Price range visual feedback
+        const range = document.querySelector('input[type="range"]');
+        if (range) {
+            range.addEventListener('input', (e) => {
+                const val = e.target.value;
+                const max = document.querySelector('.font-label-code span:last-child');
+                max.innerText = `£${(val * 15).toFixed(2)}`;
+            });
+        }
+    </script>
+</body></html>

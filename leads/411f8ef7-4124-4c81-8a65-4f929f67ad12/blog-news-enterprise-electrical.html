@@ -1,0 +1,426 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Blog &amp; News | Enterprise Electrical Services Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .circuit-line {
+            background: linear-gradient(90deg, transparent, #00F0FF, transparent);
+            height: 1px;
+            width: 100%;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .hover-circuit:hover .circuit-line {
+            animation: circuit-flow 2s infinite linear;
+        }
+        @keyframes circuit-flow {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .font-label-caps { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#7594cb",
+                        "tertiary-container": "#4c1f00",
+                        "on-primary-fixed": "#001b3e",
+                        "on-secondary": "#ffffff",
+                        "caution-orange": "#E36C09",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-fixed": "#7df4ff",
+                        "secondary": "#006970",
+                        "outline": "#747780",
+                        "on-surface": "#181c1e",
+                        "tertiary-fixed-dim": "#ffb68c",
+                        "on-secondary-container": "#00686f",
+                        "on-tertiary-fixed-variant": "#753400",
+                        "surface-container-highest": "#e0e3e5",
+                        "deep-navy": "#002B5C",
+                        "on-tertiary-container": "#ea7111",
+                        "on-tertiary-fixed": "#321200",
+                        "surface-tint": "#3f5f92",
+                        "secondary-fixed-dim": "#00dbe9",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#43474f",
+                        "primary-container": "#002b5c",
+                        "inverse-on-surface": "#eef1f3",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "surface-container-high": "#e5e9eb",
+                        "surface-bright": "#f7fafc",
+                        "tertiary-fixed": "#ffdbc9",
+                        "inverse-primary": "#aac7ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#181c1e",
+                        "primary": "#001736",
+                        "surface": "#f7fafc",
+                        "surface-container": "#ebeef0",
+                        "obsidian": "#0A0D12",
+                        "surface-container-low": "#f1f4f6",
+                        "outline-variant": "#c4c6d0",
+                        "secondary-container": "#00eefc",
+                        "on-tertiary": "#ffffff",
+                        "steel-gray": "#4A5568",
+                        "background": "#f7fafc",
+                        "on-primary-fixed-variant": "#264779",
+                        "surface-dim": "#d7dadc",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#002022",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#2c0f00",
+                        "inverse-surface": "#2d3133",
+                        "electric-cyan": "#00F0FF",
+                        "primary-fixed-dim": "#aac7ff",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "section-padding-lg": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-xl border-b border-outline-variant sticky top-0 z-50 h-20">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-4">
+<img alt="Enterprise Electrical Services Ltd Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLvh2GgagnDlchhyXuAkhjQCUzPzz5WZU1BDhfRDZ4fV7qiKszLcNYXShOaKeB4acy1Rh1-BpOVnx2513eIXlSNu8SG3z2TGFokJpgDygIqfCAtOHAz1Z_6SjnIYxXkPhMq7sNdgF2CypeFNnpP-nD9IBA61h0u9EbIQiqRQR8yX3v3hFRjfuhzqLkAIJoTs8WynRoQd7kCBhCSTK7uuL28pe8q4Tq9io62vHHkTmaHWStZHNUKEiyjXnZA">
+</div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="font-label-caps text-on-surface-variant hover:text-deep-navy transition-colors" href="index.html">Home</a>
+<a class="font-label-caps text-on-surface-variant hover:text-deep-navy transition-colors" href="our-services-enterprise-electrical.html">Services</a>
+<a class="font-label-caps text-on-surface-variant hover:text-deep-navy transition-colors" href="featured-projects-enterprise-electrical.html">Projects</a>
+<a class="font-label-caps text-electric-cyan border-b-2 border-electric-cyan pb-1" href="blog-news-enterprise-electrical.html">Blog</a>
+<a class="font-label-caps text-on-surface-variant hover:text-deep-navy transition-colors" href="index.html">About</a>
+<a class="font-label-caps text-on-surface-variant hover:text-deep-navy transition-colors" href="index.html">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary font-label-caps px-6 py-3 hover:bg-electric-cyan hover:text-deep-navy transition-all duration-200 transform hover:scale-102">
+                Request a Quote
+            </button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-gutter pt-12">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-8 text-on-surface-variant font-label-caps text-[10px]">
+<a class="hover:text-electric-cyan" href="index.html">Home</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-deep-navy font-bold">News &amp; Insights</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Content Column -->
+<div class="lg:col-span-8 space-y-16">
+<!-- Hero Article -->
+<article class="group relative overflow-hidden bg-deep-navy text-on-primary">
+<div class="grid md:grid-cols-2 min-h-[480px]">
+<div class="relative h-full min-h-[300px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A futuristic industrial electrical control room with glowing blue holographic displays and high-precision machinery. The scene is shot in a clean, high-contrast light-mode style with sharp lines and deep navy shadows, highlighting technical excellence and kinetic energy. Vibrant electric cyan circuits trace along the walls and equipment, symbolizing the future of electrical systems." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5389yQt28PKCZ3vf_7AzOtQYDlzx2FKnmc6whiF1Mq57-PeRrhZCStwI7ntM2-4wGVBOPLPWJq2D-SEAipbMYHP0KofZBwlGh2DBJbvDSvBUiPR6vywx-McbcmMWnkcUqL4tgKeVtZzi_a2P-uZpH2WYpS36_Wj_q-9xOQvH8SpisQa9YHOaLixAJWJQ5bApm2PuYHBL6VpfkVjbMljcEvZsTEXAugFuTbb1GdXIQUl3qD0KpWxmS')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-deep-navy/40 to-transparent"></div>
+</div>
+<div class="p-8 md:p-12 flex flex-col justify-center space-y-6">
+<span class="font-label-caps text-electric-cyan inline-flex items-center gap-2">
+<span class="w-8 h-[1px] bg-electric-cyan"></span> Featured Article
+                            </span>
+<h1 class="font-headline-lg text-headline-lg text-white">The Future of Industrial Electrical Systems</h1>
+<p class="text-on-primary-container font-body-lg leading-relaxed">
+                                Exploring how smart integration, IoT, and high-efficiency power distribution are redefining the modern industrial landscape. Technical precision meets innovative scale.
+                            </p>
+<div class="pt-4">
+<a class="inline-flex items-center gap-3 font-label-caps text-white group-hover:text-electric-cyan transition-colors" href="blog-news-enterprise-electrical.html">
+                                    READ FULL ARTICLE <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Grid of Recent Posts -->
+<section class="space-y-8">
+<div class="flex items-center justify-between border-b border-outline-variant pb-4">
+<h2 class="font-headline-md text-headline-md text-deep-navy">Recent Posts</h2>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant hover:border-electric-cyan hover:text-electric-cyan transition-colors">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<button class="p-2 border border-outline-variant hover:border-electric-cyan hover:text-electric-cyan transition-colors">
+<span class="material-symbols-outlined">list</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Post 1 -->
+<div class="group border border-outline-variant hover-circuit overflow-hidden bg-white hover:border-electric-cyan transition-all">
+<div class="h-48 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="A professional electrician in high-visibility safety gear inspecting a complex industrial circuit breaker panel. The image is bright and airy with a modern light-mode aesthetic, utilizing deep navies and steel grays for a clean architectural feel. Intense electric cyan highlights catch the eye on digital diagnostic tools, emphasizing technical precision and safety." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNyGgRaZqV_wvVVFZXuTu9W9h0R5FCjSMHHnLCAKKwumkD09g9wYECCTh9ov2JBgZqxH9SNjUUCBqr8tWSwhrdxcOF1c-a9abbdSFyHOHfQYFyBtJHLWYN6dpE02xabU-A4O8vY4oXLG90o9ZCJ8VNnpJrJd-ek9svyws79Gf0dEruAztPO77T0v6f-yJ9Pognhfg2uumoPc3rwFBxSB-aigpd8wdQLdGW-Ft5ArTmwsE4bCqmfAQN')"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-caution-orange text-white font-label-caps text-[10px] px-3 py-1">Regulation Update</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="font-label-caps text-[10px] text-on-surface-variant">JANUARY 12, 2024</div>
+<h3 class="font-headline-md text-xl text-deep-navy leading-tight">Safety First: New Health &amp; Safety Regulations 2024</h3>
+<p class="text-on-surface-variant text-sm line-clamp-3">A comprehensive guide to the latest safety standards for commercial electrical installations in the UK.</p>
+<div class="circuit-line opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<a class="inline-flex items-center gap-2 font-label-caps text-deep-navy group-hover:text-electric-cyan transition-colors text-[10px]" href="our-services-enterprise-electrical.html">
+                                    LEARN MORE <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Post 2 -->
+<div class="group border border-outline-variant hover-circuit overflow-hidden bg-white hover:border-electric-cyan transition-all">
+<div class="h-48 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="A wide-angle, cinematic shot of a modern city skyline at dusk with lights beginning to twinkle. The architecture is sharp and geometric, reflecting a minimalist and professional brand identity. A subtle electric cyan line traces across the horizon, connecting major industrial buildings, symbolizing thirty-five years of technical excellence and service in electrical engineering." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrtUtsn_opYtZfzfaAX48yx0MQdVVM5LBE_tU6HRcLd0b422lkPCjOm5izIDVFGimiUDAzTaktjA4ojng-MzthiHx1SAqXlcs8pPVzv3hkuudI5bORgMjeqt5vWlTfuqfNKhevDhlvPJ2vyRBIxztOQjWmczw7hIxDUYt8-yqMsMfUXNe5cAGBjMVlHG74UQQnERIvzw3RzYwejCqwH3WPIfGjGYk9U_Q3mjpXm9eLg3PQkQBPFl1d')"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-deep-navy text-white font-label-caps text-[10px] px-3 py-1">Milestone</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="font-label-caps text-[10px] text-on-surface-variant">NOVEMBER 05, 2023</div>
+<h3 class="font-headline-md text-xl text-deep-navy leading-tight">Celebrating 35+ Years of Service</h3>
+<p class="text-on-surface-variant text-sm line-clamp-3">Reflecting on over three decades of engineering excellence, technical precision, and client trust across the UK.</p>
+<div class="circuit-line opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<a class="inline-flex items-center gap-2 font-label-caps text-deep-navy group-hover:text-electric-cyan transition-colors text-[10px]" href="index.html">
+                                    OUR STORY <span class="material-symbols-outlined text-sm">history</span>
+</a>
+</div>
+</div>
+<!-- Post 3 -->
+<div class="group border border-outline-variant hover-circuit overflow-hidden bg-white hover:border-electric-cyan transition-all md:col-span-2">
+<div class="grid md:grid-cols-5 h-full">
+<div class="md:col-span-2 h-64 md:h-auto relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="The exterior of a beautifully restored Victorian-era building with intricate stone carvings and modern, subtle architectural lighting. The lighting design emphasizes the historical details while using cutting-edge, energy-efficient LED technology. The mood is sophisticated and authoritative, showing the perfect blend of technical heritage and modern innovation in a light-mode aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDf-GWlQEux27OF1bkNbxXpXsuMeOdXxIofGK1vi14NGKsn-glm99SpYU8VzUvet2RkZR66K9-h5GGDaolHFnARNBCp50s09HPBm-hrir42ug0Nn7kRGPBlsZTh2v5YquvaqPxpAqMd1rrKs-aP35QDs7g9MobU3a2fVy99GTx4Lang6hn1C56yJUd0lUTyBj3liwH_j8QdOVmcifosrnQ2tZVnpYIAtk1qJEXj7RArWRAQ1wbmdPw7')"></div>
+</div>
+<div class="md:col-span-3 p-8 flex flex-col justify-center space-y-4">
+<span class="font-label-caps text-electric-cyan text-[10px]">Case Study</span>
+<h3 class="font-headline-md text-2xl text-deep-navy">Restoring History: Our Latest Heritage Projects</h3>
+<p class="text-on-surface-variant text-base">From Grade II listed landmarks to historic industrial sites, we bring 21st-century power to Britain's architectural past without losing its soul.</p>
+<div class="flex items-center gap-6 pt-4">
+<a class="font-label-caps text-deep-navy border-b border-deep-navy pb-1 text-[10px] hover:text-electric-cyan hover:border-electric-cyan transition-colors" href="featured-projects-enterprise-electrical.html">VIEW PROJECT GALLERY</a>
+<div class="flex items-center gap-2 text-on-surface-variant text-[10px] font-label-caps">
+<span class="material-symbols-outlined text-sm">schedule</span> 12 MIN READ
+                                        </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center gap-4 pt-8">
+<button class="w-12 h-12 flex items-center justify-center border border-outline-variant text-on-surface-variant hover:bg-deep-navy hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center border border-deep-navy bg-deep-navy text-white font-label-caps">1</button>
+<button class="w-12 h-12 flex items-center justify-center border border-outline-variant text-on-surface-variant hover:bg-deep-navy hover:text-white transition-all font-label-caps">2</button>
+<button class="w-12 h-12 flex items-center justify-center border border-outline-variant text-on-surface-variant hover:bg-deep-navy hover:text-white transition-all font-label-caps">3</button>
+<button class="w-12 h-12 flex items-center justify-center border border-outline-variant text-on-surface-variant hover:bg-deep-navy hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Sidebar -->
+<aside class="lg:col-span-4 space-y-12">
+<!-- Search Box -->
+<div class="p-8 bg-white border border-outline-variant">
+<h4 class="font-headline-md text-lg text-deep-navy mb-6">Search News</h4>
+<div class="relative">
+<input class="w-full border-0 border-b-2 border-outline-variant focus:border-electric-cyan focus:ring-0 bg-transparent py-3 pr-10 font-body-md text-on-surface" placeholder="Keywords..." type="text">
+<span class="material-symbols-outlined absolute right-0 top-3 text-on-surface-variant">search</span>
+</div>
+</div>
+<!-- Categories -->
+<div class="p-8 bg-white border border-outline-variant">
+<h4 class="font-headline-md text-lg text-deep-navy mb-6">Expertise Categories</h4>
+<nav class="space-y-4">
+<a class="flex justify-between items-center group" href="our-services-enterprise-electrical.html">
+<span class="text-on-surface-variant group-hover:text-electric-cyan transition-colors">Industrial Systems</span>
+<span class="font-label-caps text-[10px] bg-surface px-2 py-1">12</span>
+</a>
+<div class="h-[1px] bg-outline-variant/30"></div>
+<a class="flex justify-between items-center group" href="our-services-enterprise-electrical.html">
+<span class="text-on-surface-variant group-hover:text-electric-cyan transition-colors">Health &amp; Safety</span>
+<span class="font-label-caps text-[10px] bg-surface px-2 py-1">08</span>
+</a>
+<div class="h-[1px] bg-outline-variant/30"></div>
+<a class="flex justify-between items-center group" href="our-services-enterprise-electrical.html">
+<span class="text-on-surface-variant group-hover:text-electric-cyan transition-colors">Renewable Energy</span>
+<span class="font-label-caps text-[10px] bg-surface px-2 py-1">15</span>
+</a>
+<div class="h-[1px] bg-outline-variant/30"></div>
+<a class="flex justify-between items-center group" href="featured-projects-enterprise-electrical.html">
+<span class="text-on-surface-variant group-hover:text-electric-cyan transition-colors">Heritage Restorations</span>
+<span class="font-label-caps text-[10px] bg-surface px-2 py-1">04</span>
+</a>
+<div class="h-[1px] bg-outline-variant/30"></div>
+<a class="flex justify-between items-center group" href="our-services-enterprise-electrical.html">
+<span class="text-on-surface-variant group-hover:text-electric-cyan transition-colors">Smart Home Tech</span>
+<span class="font-label-caps text-[10px] bg-surface px-2 py-1">21</span>
+</a>
+</nav>
+</div>
+<!-- Social Integration -->
+<div class="p-8 bg-deep-navy text-white">
+<h4 class="font-headline-md text-lg mb-6">Stay Connected</h4>
+<div class="grid grid-cols-2 gap-4">
+<a class="flex items-center gap-3 p-3 bg-white/5 border border-white/10 hover:bg-electric-cyan hover:text-deep-navy transition-all duration-300" href="blog-news-enterprise-electrical.html">
+<span class="material-symbols-outlined text-sm">share</span>
+<span class="font-label-caps text-[10px]">LinkedIn</span>
+</a>
+<a class="flex items-center gap-3 p-3 bg-white/5 border border-white/10 hover:bg-electric-cyan hover:text-deep-navy transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+<span class="font-label-caps text-[10px]">Twitter</span>
+</a>
+<a class="flex items-center gap-3 p-3 bg-white/5 border border-white/10 hover:bg-electric-cyan hover:text-deep-navy transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined text-sm">face_nod</span>
+<span class="font-label-caps text-[10px]">Facebook</span>
+</a>
+<a class="flex items-center gap-3 p-3 bg-white/5 border border-white/10 hover:bg-electric-cyan hover:text-deep-navy transition-all duration-300" href="featured-projects-enterprise-electrical.html">
+<span class="material-symbols-outlined text-sm">camera</span>
+<span class="font-label-caps text-[10px]">Instagram</span>
+</a>
+</div>
+</div>
+<!-- Newsletter (Sidebar Variant) -->
+<div class="p-8 border border-electric-cyan bg-electric-cyan/5 relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline-md text-lg text-deep-navy mb-4">Engineering Insights</h4>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Get technical whitepapers and industry news delivered to your inbox monthly.</p>
+<form class="space-y-4">
+<input class="w-full bg-white border border-outline-variant px-4 py-3 focus:ring-deep-navy focus:border-deep-navy font-body-md text-sm" placeholder="Your work email" type="email">
+<button class="w-full bg-deep-navy text-white font-label-caps py-3 hover:bg-primary transition-colors">SUBSCRIBE NOW</button>
+</form>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-9xl">electric_bolt</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Pre-Footer CTA -->
+<section class="mt-section-padding-lg bg-deep-navy py-20">
+<div class="max-w-container-max mx-auto px-gutter text-center space-y-8">
+<h2 class="font-headline-lg text-white max-w-2xl mx-auto">Ready to power your next major project?</h2>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-electric-cyan text-deep-navy font-label-caps px-10 py-5 hover:bg-white transition-all transform hover:scale-105">CONTACT OUR ENGINEERS</button>
+<button class="border border-white text-white font-label-caps px-10 py-5 hover:bg-white hover:text-deep-navy transition-all">VIEW OUR SERVICES</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-obsidian text-white border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-section-padding-lg px-gutter max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md font-bold text-white">Enterprise Electrical</div>
+<p class="text-on-primary-container text-sm leading-relaxed max-w-xs">
+                    Leading the industry with technical excellence and architectural scale in electrical engineering for over three decades.
+                </p>
+<div class="flex gap-4">
+<a class="text-on-primary-container hover:text-electric-cyan transition-colors" href="blog-news-enterprise-electrical.html"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-primary-container hover:text-electric-cyan transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-on-primary-container hover:text-electric-cyan transition-colors" href="our-services-enterprise-electrical.html"><span class="material-symbols-outlined">location_on</span></a>
+</div>
+</div>
+<!-- Newsletter Form Column -->
+<div class="md:col-span-2 space-y-6">
+<h4 class="font-label-caps text-electric-cyan">Newsletter Subscription</h4>
+<div class="relative max-w-md">
+<input class="w-full bg-white/5 border border-white/10 px-6 py-4 text-white focus:ring-electric-cyan focus:border-electric-cyan placeholder:text-white/30 font-body-md" placeholder="Enter your email for technical updates" type="email">
+<button class="absolute right-2 top-2 bottom-2 bg-electric-cyan text-deep-navy px-6 font-label-caps hover:bg-white transition-colors">Join</button>
+</div>
+<p class="text-[10px] text-on-primary-container uppercase tracking-widest">Global Technical Excellence in Engineering.</p>
+</div>
+<!-- Links Column -->
+<div class="space-y-8">
+<div>
+<h4 class="font-label-caps text-white mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-on-primary-container hover:text-electric-cyan transition-colors text-sm" href="our-services-enterprise-electrical.html">NICEIC Accreditation</a></li>
+<li><a class="text-on-primary-container hover:text-electric-cyan transition-colors text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-on-primary-container hover:text-electric-cyan transition-colors text-sm" href="our-services-enterprise-electrical.html">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-white mb-6">Follow Us</h4>
+<ul class="flex gap-4">
+<li><a class="text-on-primary-container hover:text-electric-cyan transition-colors text-sm" href="#">LinkedIn</a></li>
+<li><a class="text-on-primary-container hover:text-electric-cyan transition-colors text-sm" href="#">Twitter</a></li>
+<li><a class="text-on-primary-container hover:text-electric-cyan transition-colors text-sm" href="#">Facebook</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 py-8">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<p class="text-[10px] text-on-primary-container font-label-caps tracking-widest">
+                    © 2024 Enterprise Electrical Services Ltd. Technical Excellence in Engineering.
+                </p>
+<div class="flex gap-8">
+<span class="text-[10px] text-on-primary-container font-label-caps">EST. 1989</span>
+<span class="text-[10px] text-on-primary-container font-label-caps text-electric-cyan">ISO 9001 CERTIFIED</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Simple Hover Interaction Logic -->
+<script>
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.classList.add('duration-200');
+            });
+        });
+
+        // Sticky Header Transition
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-xl', 'bg-surface/95');
+            } else {
+                header.classList.remove('shadow-xl', 'bg-surface/95');
+            }
+        });
+    </script>
+</body></html>

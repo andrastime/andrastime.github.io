@@ -1,0 +1,368 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us | AR Electrical - Powering the Midlands</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@300;400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#c1c6d7",
+                    "inverse-on-surface": "#2f3035",
+                    "outline": "#849495",
+                    "inverse-primary": "#006970",
+                    "on-tertiary-container": "#595f6d",
+                    "on-secondary": "#283500",
+                    "secondary-fixed": "#c3f400",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#abd600",
+                    "surface-container": "#1e2024",
+                    "on-tertiary-fixed-variant": "#414754",
+                    "on-background": "#e2e2e8",
+                    "surface-dim": "#111318",
+                    "error": "#ffb4ab",
+                    "inverse-surface": "#e2e2e8",
+                    "on-tertiary": "#2a303d",
+                    "primary-container": "#00f0ff",
+                    "primary-fixed": "#7df4ff",
+                    "on-tertiary-fixed": "#161c27",
+                    "on-primary-fixed-variant": "#004f54",
+                    "tertiary": "#f4f5ff",
+                    "primary": "#dbfcff",
+                    "on-error": "#690005",
+                    "surface-container-high": "#282a2e",
+                    "outline-variant": "#3b494b",
+                    "surface-container-highest": "#333539",
+                    "on-primary-container": "#006970",
+                    "surface-bright": "#37393e",
+                    "on-error-container": "#ffdad6",
+                    "background": "#111318",
+                    "surface-glass": "rgba(255, 255, 255, 0.05)",
+                    "secondary-container": "#c3f400",
+                    "surface": "#111318",
+                    "on-secondary-fixed-variant": "#3c4d00",
+                    "surface-variant": "#333539",
+                    "on-secondary-fixed": "#161e00",
+                    "on-surface-variant": "#b9cacb",
+                    "on-secondary-container": "#556d00",
+                    "electric-cyan": "#00F0FF",
+                    "tertiary-fixed": "#dde2f3",
+                    "on-primary-fixed": "#002022",
+                    "secondary": "#ffffff",
+                    "on-surface": "#e2e2e8",
+                    "surface-tint": "#00dbe9",
+                    "tertiary-container": "#d4d9ea",
+                    "on-primary": "#00363a",
+                    "surface-container-lowest": "#0c0e12",
+                    "surface-container-low": "#1a1c20",
+                    "primary-fixed-dim": "#00dbe9",
+                    "volt-lime": "#CCFF00",
+                    "slate-deep": "#0A0C10"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "2rem",
+                    "stack-lg": "3rem",
+                    "container-max": "1280px",
+                    "section-padding": "6rem",
+                    "stack-md": "1.5rem",
+                    "stack-sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "callout": ["Montserrat"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-caps": ["JetBrains Mono"],
+                    "display-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "callout": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+        .hero-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-electric-cyan selection:text-black">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-surface/80 backdrop-blur-md dark:bg-surface-container-lowest/80 border-b border-outline-variant shadow-sm h-20">
+<div class="flex justify-between items-center w-full px-gutter h-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="text-headline-md font-headline-md font-extrabold tracking-tighter text-on-surface dark:text-on-surface">AR Electrical</span>
+<span class="hidden md:inline-flex items-center px-3 py-1 text-label-caps font-label-caps border border-volt-lime text-volt-lime uppercase tracking-widest bg-volt-lime/10">NICEIC APPROVED</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps" href="ar-electrical-home.html">Home</a>
+<a class="text-electric-cyan font-bold border-b-2 border-electric-cyan pb-1 text-label-caps font-label-caps" href="about-ar-electrical.html">About</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps" href="index.html">Services</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps" href="index.html">Our Work</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps" href="about-ar-electrical.html">Reviews</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden lg:flex items-center gap-2 text-volt-lime font-bold" href="tel:07846869914">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span class="text-label-caps">Emergency Call</span>
+</a>
+<button class="bg-electric-cyan text-black px-6 py-3 font-headline-md font-bold uppercase text-[14px] glow-hover transition-all active:scale-95">Get a Quote</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[60vh] flex items-center overflow-hidden border-b border-outline-variant hero-pattern">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent z-10"></div>
+<div class="absolute right-0 top-0 w-1/2 h-full opacity-40">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional, high-end interior of a modern commercial electrical room with neatly organized conduit, copper wiring, and high-tech electrical panels. The lighting is dramatic and moody, emphasizing the technical precision and engineering mastery of the installation. Cool blue and cyan highlights reflect off metallic surfaces in a clean, professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz3OvP0KF1AzXTrARNxUYWYWVFIZXgWYYEoSUQGbmWA6awqVlfDAM6AJik2ZFXxMmq0MZ6j9ZdiKgEMcPiZsOhy5-tnOOJygt88RGzFCvvaf587hcv7uDvKIxuJOoLztfPgwbhfHbA3uU7EfRmTvTKTjMq_M3l-9Au8JfgELJ6DUJ-j9Nkxa0bIU6_vQdFJ_rJkThPBE0zQWN8uyA98FluNi_0T7llf8Fcs86R8QHAZ0pRqeABrthfvA">
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-20 w-full">
+<div class="max-w-3xl">
+<span class="text-volt-lime font-label-caps tracking-[0.2em] uppercase mb-4 block">Established &amp; Trusted</span>
+<h1 class="text-display-lg font-display-lg text-on-surface mb-6 leading-tight">Our Story: Powering the Midlands Since 2018.</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-xl mb-8">From residential safety checks to complex commercial engineering, AR Electrical (Midlands) Ltd represents the new standard in electrical craftsmanship.</p>
+</div>
+</div>
+</section>
+<!-- Mission & Values Section -->
+<section class="py-section-padding bg-slate-deep">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-headline-lg font-headline-lg mb-8">Engineering Safety, Delivering Excellence.</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-12">Our mission is simple: to provide uncompromising electrical solutions that prioritize long-term safety over short-term shortcuts. We believe that electrical work is more than just wires; it's the foundation of modern infrastructure.</p>
+<div class="space-y-8">
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container flex items-center justify-center border border-volt-lime text-volt-lime">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md mb-2">Uncompromising Safety</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">We strictly adhere to BS7671 standards and NICEIC regulations, ensuring every circuit is tested and verified.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container flex items-center justify-center border border-electric-cyan text-electric-cyan">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md mb-2">Technical Mastery</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Continuous training in smart technology, EV charging, and high-voltage systems keeps us ahead of the curve.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="glass-card p-8 aspect-square flex flex-col justify-end">
+<span class="text-display-lg font-display-lg text-electric-cyan">100%</span>
+<p class="text-label-caps font-label-caps text-on-surface-variant">Safety Compliance</p>
+</div>
+<div class="bg-surface-container-highest p-8 aspect-square flex flex-col justify-end">
+<span class="text-display-lg font-display-lg text-volt-lime">500+</span>
+<p class="text-label-caps font-label-caps text-on-surface-variant">Projects Completed</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-highest p-8 aspect-square flex flex-col justify-end">
+<span class="text-display-lg font-display-lg text-white">NICEIC</span>
+<p class="text-label-caps font-label-caps text-on-surface-variant">Approved Contractor</p>
+</div>
+<div class="glass-card p-8 aspect-square flex flex-col justify-end">
+<span class="text-display-lg font-display-lg text-electric-cyan">BHM</span>
+<p class="text-label-caps font-label-caps text-on-surface-variant">Birmingham Native</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Narrative Section -->
+<section class="py-section-padding bg-background relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="max-w-4xl mx-auto text-center mb-16">
+<h2 class="text-headline-lg font-headline-lg mb-6">Built on the Foundation of Birmingham.</h2>
+<div class="w-24 h-1 bg-volt-lime mx-auto mb-12"></div>
+<div class="text-body-lg font-body-lg text-on-surface-variant space-y-6 text-left leading-relaxed">
+<p>AR Electrical (Midlands) Ltd has been providing electrical services to both domestic and commercial customers in Birmingham and beyond for a number of years. Born from a desire to bridge the gap between "local handymen" and high-end engineering firms, our founder envisioned a company that combined the approachability of a local trade with the rigor of a corporate safety division.</p>
+<p>Starting as a small team focused on domestic rewiring and safety inspections, we quickly earned a reputation for excellent work quality and professional working practices. Our growth into the commercial sector was fueled by this reputation, allowing us to handle larger contracts across the West Midlands, from office refits to specialized data cabling projects.</p>
+<p>Today, we stand as a leading NICEIC Approved Contractor, serving the heart of Birmingham with a team that values every project's integrity, regardless of size. We remain deeply rooted in our community, ensuring that every home and business we touch is powered with reliability and precision.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Meet The Team Section -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<span class="text-volt-lime font-label-caps tracking-widest uppercase mb-4 block">Our Professionals</span>
+<h2 class="text-headline-lg font-headline-lg">Meet the Experts.</h2>
+</div>
+<p class="text-on-surface-variant max-w-md">Our team consists of qualified specialists, each bringing unique expertise to our mission of technical mastery.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Team Member 1 -->
+<div class="group">
+<div class="aspect-[3/4] mb-6 overflow-hidden bg-surface-container border border-outline-variant grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of a senior electrical engineer in a clean black polo shirt with a subtle company logo. He is standing in a modern workspace, looking confident and professional. The background is softly blurred with industrial elements. High contrast lighting with a cool electric-blue tint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9dAPiL-UD7bpF1cHsrhndJLuWWYaLNOPgrUvKVRBnLdOZE9B4TMQ4aOo6KeKdZZBODG7I4CMxQE-uSxr9MTCiWwzIxfOetYNU-M0flgSTyGXVbaNRruPODFnMAgl2-0dM4sh-aFZDjmulrP7klWnQSLC1dljtGbFokF4EQHnojsyoC5AZhuYqkGQKVYr5VaK8qTbFz-j6JiEgR_K7GmPZ2jE8E8X3MyR9ZPRbpV_6lQQgG49t3tOI5A">
+</div>
+<h4 class="text-headline-md font-headline-md mb-1 group-hover:text-electric-cyan transition-colors">Anthony R.</h4>
+<p class="text-label-caps font-label-caps text-on-surface-variant mb-4 uppercase">Lead Engineer &amp; Founder</p>
+<p class="text-body-md font-body-md text-on-surface-variant">15+ years of experience in high-voltage industrial installations and domestic safety management.</p>
+</div>
+<!-- Team Member 2 -->
+<div class="group">
+<div class="aspect-[3/4] mb-6 overflow-hidden bg-surface-container border border-outline-variant grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="A focused female electrician in professional workwear, including a utility belt and protective gear, carefully inspecting a complex circuit breaker box. The setting is a clean, modern commercial building. The lighting is crisp and bright, highlighting the intricate details of the electrical components and her professional expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBePpDRB61uzGV9Jc9Y71QnJzcH_v_mc9O71ak7_ng2tjOeiyIFJxfFRSoxOdwz1EjM1BJ4UZ3xLsNhvhZDK64Fhua7fRWTd8bhHkygJECdFy0w_NvLRIN7knec9SGHo4tSmWT7_yb82dzXQPlR71y3psawb8JqlsRTk9MNozmOLjwLvM090A7yDOIlo0eOrQ6lUSJ5tGnpyByTodVjZ02e5g-GFuOmVHz6H9PSv2ZZtAN6oVl_kjaFpg">
+</div>
+<h4 class="text-headline-md font-headline-md mb-1 group-hover:text-electric-cyan transition-colors">Sarah J.</h4>
+<p class="text-label-caps font-label-caps text-on-surface-variant mb-4 uppercase">Senior Commercial Specialist</p>
+<p class="text-body-md font-body-md text-on-surface-variant">Expert in commercial infrastructure, large-scale rewires, and emergency lighting systems.</p>
+</div>
+<!-- Team Member 3 -->
+<div class="group">
+<div class="aspect-[3/4] mb-6 overflow-hidden bg-surface-container border border-outline-variant grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="A young, tech-savvy electrical technician standing next to a modern wall-mounted EV charging station in a high-end residential garage. He is holding a tablet with a diagnostic interface. The lighting is sharp, emphasizing a futuristic, clean energy aesthetic with cyan and lime green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkxLlJoAxdKc6TCRoaCyErnqyWd5ETG_cTad7Ax0012GiZ5sh2CfdMpgQKuT5Id9qqj22Mj5yBjwk4fuRbzhMcfoO8Ox8wrFtw9DSwD01q-FX5MVpkuJ_HfGFjjF36AfypHKGSDB1JKpIryLzX2IyDZ-3GEdXgEP1pPHHfCy-oAGw2_SNtqJdPjBOkfXfwTXifAw5ZVNwdNjlXDB4-pj2PCCgvOnNvhE3SSg83KJGs6O_od4eZHbMtSA">
+</div>
+<h4 class="text-headline-md font-headline-md mb-1 group-hover:text-electric-cyan transition-colors">Marcus L.</h4>
+<p class="text-label-caps font-label-caps text-on-surface-variant mb-4 uppercase">EV &amp; Smart Tech Specialist</p>
+<p class="text-body-md font-body-md text-on-surface-variant">Specializing in sustainable energy solutions, EV charger installations, and home automation integration.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Signals / Certifications -->
+<section class="py-12 bg-white/5 border-y border-outline-variant">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60">
+<img alt="NICEIC Logo" class="h-16 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2PaBWzPSTJoguibUFhe4GvqeVgdo6e0jXnEltobTmVOdGdh-JI7j8JGBsoiNeDbppd-vmpgO9gcLHj1UnO8eSJb5_XY1wLAAZNfnUwUVP789u6cf85ZODq4zGcctZYGeXm9vgopi1Ug57yrqlLiw2P1P5J3EkKAK9EM3cpTMpEBrIHMj6LgKQbDJeJLPBmf8J5UjaJkqpdG5mw5eR8NEoFBkcT5qRgt5dqnFu7tonKH_JYefzNqvgeg">
+<img alt="Checkatrade Logo" class="h-12 brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvES7WNLPNj9xJrWEhJjtFn2MZ3bjYYnEIBzPPhz4i83wbetyaLEeW7I5F3XOPSUcMwdKy4QQIzqnSrxEAtFnDutCH6icGwknEC96xWvqNAicfkv8RIjO08sBFEjMsyYw3j6cgR6I64FklaTSIupN9WL6CuF1xDyR3CyaPpIegklVtas2BSer1BK2GfQXX62iU8Z3Qi3vuBYmmSV5q9UznpL2P4rlVNd3Mns6n9FkNNbsyjvCj_pWVMg">
+<div class="flex items-center gap-2">
+<span class="text-headline-md font-headline-md text-white">Google</span>
+<div class="flex text-volt-lime">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-section-padding relative overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20" data-alt="A macro close-up of a high-tech electrical circuit board with glowing cyan pathways and copper elements. The image has a shallow depth of field, creating a sense of sophisticated technology and expert craftsmanship. Dark, atmospheric mood with professional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnU60iV8xSr_qP_3U29AVQUlvaPntmYuzppLHrdow8aqS6_T891XLXtOg_RjczpBrdbgvqjhEkgNCiqbCHQLsXcJkmHyysLFcHSecET89435vdaFcA-j6H2j1IOzAcBOcN5rLRnO6a9COe6q3v_muFaNarQ8ULJA1XEuM6SKA1c_xxweelnqt1YbI8d_UPzO-unVcjId8u6yMcEXs5EaobBb9G5nXemi2D5kx7Adz4WZl4N1MVJFS1wQ">
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10 text-center">
+<h2 class="text-display-lg font-display-lg mb-8">Ready to Start Your Project?</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Whether it's a minor repair or a large-scale commercial installation, our team is ready to deliver excellence.</p>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="bg-electric-cyan text-black px-12 py-5 font-headline-md font-bold uppercase glow-hover transition-all active:scale-95">Get a Quote</button>
+<button class="border-2 border-electric-cyan text-white px-12 py-5 font-headline-md font-bold uppercase hover:bg-electric-cyan/10 transition-all active:scale-95">Contact Us</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-deep dark:bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-gutter py-section-padding max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<span class="text-headline-md font-headline-md font-bold text-electric-cyan mb-6 block">AR Electrical</span>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-sm mb-8">Providing reliable, professional electrical services throughout Birmingham and the West Midlands. NICEIC Approved Contractor for peace of mind.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:text-electric-cyan hover:border-electric-cyan transition-all" href="about-ar-electrical.html"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:text-electric-cyan hover:border-electric-cyan transition-all" href="index.html"><span class="material-symbols-outlined">link</span></a>
+</div>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-white mb-6 block">Navigation</span>
+<ul class="space-y-4">
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-electric-cyan underline transition-all" href="about-ar-electrical.html">About</a></li>
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-electric-cyan underline transition-all" href="index.html">Services</a></li>
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-electric-cyan underline transition-all" href="ar-electrical-home.html">Our Work</a></li>
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-electric-cyan underline transition-all" href="index.html">Commercial</a></li>
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-electric-cyan underline transition-all" href="ar-electrical-home.html">Domestic</a></li>
+</ul>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-white mb-6 block">Compliance</span>
+<ul class="space-y-4">
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-electric-cyan underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-electric-cyan underline transition-all" href="#">Terms of Service</a></li>
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-electric-cyan underline transition-all" href="about-ar-electrical.html">Safety Inspections</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-8 px-gutter">
+<div class="max-w-container-max mx-auto text-center">
+<p class="text-label-caps font-label-caps text-on-surface-variant/60">© 2024 AR Electrical (Midlands) Ltd. All Rights Reserved. NICEIC Approved Contractor.</p>
+</div>
+</div>
+</footer>
+<!-- Quick Quote Floating Action (Mobile only as per instructions) -->
+<div class="fixed bottom-6 right-6 md:hidden z-[100]">
+<button class="bg-electric-cyan text-black p-4 rounded-full shadow-[0_0_20px_rgba(0,240,255,0.4)] flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[32px]">electric_bolt</span>
+</button>
+</div>
+<script>
+        // Micro-interactions and subtle scroll effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section > div').forEach(el => {
+                el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>

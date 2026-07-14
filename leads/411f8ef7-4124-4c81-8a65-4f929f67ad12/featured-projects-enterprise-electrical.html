@@ -1,0 +1,319 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Projects | Enterprise Electrical Services Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#7594cb",
+                        "tertiary-container": "#4c1f00",
+                        "on-primary-fixed": "#001b3e",
+                        "on-secondary": "#ffffff",
+                        "caution-orange": "#E36C09",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-fixed": "#7df4ff",
+                        "secondary": "#006970",
+                        "outline": "#747780",
+                        "on-surface": "#181c1e",
+                        "tertiary-fixed-dim": "#ffb68c",
+                        "on-secondary-container": "#00686f",
+                        "on-tertiary-fixed-variant": "#753400",
+                        "surface-container-highest": "#e0e3e5",
+                        "deep-navy": "#002B5C",
+                        "on-tertiary-container": "#ea7111",
+                        "on-tertiary-fixed": "#321200",
+                        "surface-tint": "#3f5f92",
+                        "secondary-fixed-dim": "#00dbe9",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#43474f",
+                        "primary-container": "#002b5c",
+                        "inverse-on-surface": "#eef1f3",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "surface-container-high": "#e5e9eb",
+                        "surface-bright": "#f7fafc",
+                        "tertiary-fixed": "#ffdbc9",
+                        "inverse-primary": "#aac7ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#181c1e",
+                        "primary": "#001736",
+                        "surface": "#f7fafc",
+                        "surface-container": "#ebeef0",
+                        "obsidian": "#0A0D12",
+                        "surface-container-low": "#f1f4f6",
+                        "outline-variant": "#c4c6d0",
+                        "secondary-container": "#00eefc",
+                        "on-tertiary": "#ffffff",
+                        "steel-gray": "#4A5568",
+                        "background": "#f7fafc",
+                        "on-primary-fixed-variant": "#264779",
+                        "surface-dim": "#d7dadc",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#002022",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#2c0f00",
+                        "inverse-surface": "#2d3133",
+                        "electric-cyan": "#00F0FF",
+                        "primary-fixed-dim": "#aac7ff",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "section-padding-lg": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .project-card:hover .card-overlay {
+            opacity: 1;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .circuit-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00F0FF, transparent);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 z-50 w-full bg-surface/80 dark:bg-primary/80 backdrop-blur-xl border-b border-outline-variant dark:border-on-primary-fixed-variant">
+<nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+<a class="flex-shrink-0" href="index.html">
+<img alt="Enterprise Electrical Services Ltd Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLvh2GgagnDlchhyXuAkhjQCUzPzz5WZU1BDhfRDZ4fV7qiKszLcNYXShOaKeB4acy1Rh1-BpOVnx2513eIXlSNu8SG3z2TGFokJpgDygIqfCAtOHAz1Z_6SjnIYxXkPhMq7sNdgF2CypeFNnpP-nD9IBA61h0u9EbIQiqRQR8yX3v3hFRjfuhzqLkAIJoTs8WynRoQd7kCBhCSTK7uuL28pe8q4Tq9io62vHHkTmaHWStZHNUKEiyjXnZA">
+</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-deep-navy dark:hover:text-white transition-colors" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-deep-navy dark:hover:text-white transition-colors" href="our-services-enterprise-electrical.html">Services</a>
+<a class="font-label-caps text-label-caps text-electric-cyan border-b-2 border-electric-cyan pb-1" href="featured-projects-enterprise-electrical.html">Projects</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-deep-navy dark:hover:text-white transition-colors" href="blog-news-enterprise-electrical.html">Blog</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-deep-navy dark:hover:text-white transition-colors" href="index.html">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-deep-navy dark:hover:text-white transition-colors" href="index.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block bg-primary-container text-white px-6 py-2 font-label-caps text-label-caps hover:bg-electric-cyan hover:text-deep-navy transition-all duration-300">
+                    Request a Quote
+                </button>
+<button class="md:hidden text-deep-navy">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative bg-primary py-section-padding-lg overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="max-w-3xl">
+<span class="font-label-caps text-label-caps text-electric-cyan mb-4 block">PORTFOLIO OF EXCELLENCE</span>
+<h1 class="font-display-lg text-white mb-6 leading-tight">Engineering the Future of <span class="text-electric-cyan">Electrical Infrastructure</span></h1>
+<p class="font-body-lg text-on-primary-container max-w-2xl">From high-stakes medical facilities to large-scale industrial complexes, we deliver technical precision that powers essential environments.</p>
+</div>
+</div>
+<!-- Decorative Circuit Line -->
+<div class="circuit-line absolute bottom-0 left-0 w-full"></div>
+</section>
+<!-- Project Filter & Intro -->
+<section class="bg-surface py-12 border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="flex gap-4">
+<span class="px-4 py-1 border border-deep-navy text-deep-navy font-label-caps text-label-caps bg-secondary-container/10">All Projects</span>
+<span class="px-4 py-1 border border-outline-variant text-outline font-label-caps text-label-caps hover:border-deep-navy cursor-pointer transition-colors">Commercial</span>
+<span class="px-4 py-1 border border-outline-variant text-outline font-label-caps text-label-caps hover:border-deep-navy cursor-pointer transition-colors">Education</span>
+<span class="px-4 py-1 border border-outline-variant text-outline font-label-caps text-label-caps hover:border-deep-navy cursor-pointer transition-colors">Healthcare</span>
+</div>
+<p class="font-label-caps text-label-caps text-outline">SHOWING 3 FEATURED CASE STUDIES</p>
+</div>
+</section>
+<!-- Project Grid -->
+<section class="py-section-padding-lg bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Project Card 1 -->
+<div class="project-card group relative overflow-hidden bg-surface-container-low border border-outline-variant h-[600px] flex flex-col transition-all duration-500 hover:scale-[1.02]">
+<div class="relative h-2/3 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A professional architectural photograph of a high-end modern medical school foyer with polished concrete floors and minimalist structural lighting. The scene highlights intricate electrical conduits hidden behind sleek metal panels, illuminated by cool-toned architectural LEDs. The mood is clinical yet high-end, using a palette of steel grays and bright white light-mode tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRsAwyCwdzIJEsRAgZ9L78HQuc0fpd8kWwpQ5FB2xg5tEt_h97I7CX30gWrs79WEbknX9tPjWDFgKHM04N2SFd4z-r2ydUaG2ijDcoyVJRDN9IOqy71WXzkfccYpLXWVl_cziceXKSXuMJMSlvbbzwpPWxlotVrMij5lWDF-kXtQsxm-IlxtJRkH1Sq4JYRFPQ78dkTiduX-HbQ1aHsVRpEK-jX_GxiVcusEkjayF0cvMKgYEsrlNr">
+<div class="absolute top-4 left-4">
+<span class="bg-deep-navy text-white px-3 py-1 font-label-caps text-[10px]">HEALTHCARE &amp; EDUCATION</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="font-headline-md text-deep-navy mb-2">Medical School Foyer &amp; Barnes Library</h3>
+<div class="flex items-center gap-2 text-outline-variant mb-4">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="font-label-caps text-[10px]">UNITED KINGDOM</span>
+</div>
+</div>
+<button class="w-full py-4 border border-deep-navy text-deep-navy font-label-caps text-label-caps hover:bg-deep-navy hover:text-white transition-all flex items-center justify-center gap-2 group/btn">
+                                VIEW CASE STUDY
+                                <span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="project-card group relative overflow-hidden bg-surface-container-low border border-outline-variant h-[600px] flex flex-col transition-all duration-500 hover:scale-[1.02] lg:mt-12">
+<div class="relative h-2/3 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An expansive industrial laboratory and office environment featuring clean lines and technical complexity. Overhead cable trays and complex electrical trunking are visible, showcasing high-precision engineering. The lighting is crisp and functional, casting a professional glow on laboratory equipment and white workspaces. The aesthetic is industrial-kinetic with high-contrast electric cyan accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlSNdPnCg-bgU_aik_nyv1xaTi34UchaPKTUe21lr0Uvu6G6FqXtZKA4SOW0VA6OubMr8nzF3Z8XVudUVQk5yWegbnVi__j93ijxw2Pe-YQu4BwdCnog5hb2iyjvwm2EOQMAgTEBb0zBvbANQyu7QFoCWHfF0tZEjI4vP0h6X04LzfvG4Tfhea-LBnyQ7fwfPKSMzU5bkWUTOnmnLYPnhg7JIvcEbZcp7cDWHi6FS3AXN21mVYEc56">
+<div class="absolute top-4 left-4">
+<span class="bg-deep-navy text-white px-3 py-1 font-label-caps text-[10px]">COMMERCIAL &amp; LABS</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="font-headline-md text-deep-navy mb-2">Eurofins Laboratory &amp; Offices</h3>
+<div class="flex items-center gap-2 text-outline-variant mb-4">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="font-label-caps text-[10px]">EUROPEAN NETWORK</span>
+</div>
+</div>
+<button class="w-full py-4 border border-deep-navy text-deep-navy font-label-caps text-label-caps hover:bg-deep-navy hover:text-white transition-all flex items-center justify-center gap-2 group/btn">
+                                VIEW CASE STUDY
+                                <span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="project-card group relative overflow-hidden bg-surface-container-low border border-outline-variant h-[600px] flex flex-col transition-all duration-500 hover:scale-[1.02]">
+<div class="relative h-2/3 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A grand luxury hotel exterior at Drayton Manor captured during twilight. The architectural facade is accented by dramatic warm and cool lighting that emphasizes the building's contours. Professional electrical installations power a sophisticated outdoor lighting scheme. The environment feels upscale and technically advanced, utilizing shadows and high-contrast light pools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsNuiRt180uT2eweVGdAn68eXQ5Q6LkT4tE5q9Jbybj-WAuGm3Q-hJqi4kuI84tNa4RwIZql9oLpVftbtuHOUWGN0Gq6wHls1FiTNy4VU9sFk7w9gm2HY6alKi8SrP_-hrvMbhBHXtFZPy7kJDTgFkpxJAhuoeEa62A1n2XZzZ2nln2Z4ocYnEbWC40lpsZNc3yquaDrE9eEq3c9CNQBd-1mA-jayEaUI5T4h1kkcwS5i_vCS3QySy">
+<div class="absolute top-4 left-4">
+<span class="bg-deep-navy text-white px-3 py-1 font-label-caps text-[10px]">HOSPITALITY</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="font-headline-md text-deep-navy mb-2">Drayton Manor Hotel</h3>
+<div class="flex items-center gap-2 text-outline-variant mb-4">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="font-label-caps text-[10px]">TAMWORTH, STAFFORDSHIRE</span>
+</div>
+</div>
+<button class="w-full py-4 border border-deep-navy text-deep-navy font-label-caps text-label-caps hover:bg-deep-navy hover:text-white transition-all flex items-center justify-center gap-2 group/btn">
+                                VIEW CASE STUDY
+                                <span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-primary-container py-section-padding-lg relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter text-center relative z-10">
+<h2 class="font-headline-lg text-white mb-8">Ready to initiate your next project?</h2>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-electric-cyan text-deep-navy px-10 py-4 font-label-caps text-label-caps font-bold hover:bg-white transition-colors duration-300">
+                        REQUEST A CONSULTATION
+                    </button>
+<button class="border border-white/30 text-white px-10 py-4 font-label-caps text-label-caps hover:bg-white/10 transition-colors duration-300">
+                        DOWNLOAD BROCHURE
+                    </button>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-0 right-0 w-96 h-96 bg-electric-cyan blur-[150px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-obsidian border-t border-on-primary-fixed-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-section-padding-lg px-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<img alt="Enterprise Electrical Services Ltd Logo" class="h-10 mb-8 filter brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AP1WRLvh2GgagnDlchhyXuAkhjQCUzPzz5WZU1BDhfRDZ4fV7qiKszLcNYXShOaKeB4acy1Rh1-BpOVnx2513eIXlSNu8SG3z2TGFokJpgDygIqfCAtOHAz1Z_6SjnIYxXkPhMq7sNdgF2CypeFNnpP-nD9IBA61h0u9EbIQiqRQR8yX3v3hFRjfuhzqLkAIJoTs8WynRoQd7kCBhCSTK7uuL28pe8q4Tq9io62vHHkTmaHWStZHNUKEiyjXnZA">
+<p class="font-body-md text-on-primary-container max-w-md mb-8">
+                    Technical Excellence in Engineering. Delivering complex electrical solutions across the UK with a commitment to safety, innovation, and reliability.
+                </p>
+<div class="flex gap-4">
+<a class="text-on-primary-container hover:text-electric-cyan transition-colors" href="featured-projects-enterprise-electrical.html"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-primary-container hover:text-electric-cyan transition-colors" href="our-services-enterprise-electrical.html"><span class="material-symbols-outlined">group</span></a>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-white mb-6">ACCREDITATIONS</h4>
+<ul class="space-y-4">
+<li><a class="font-label-caps text-label-caps text-on-primary-container hover:text-electric-cyan transition-colors" href="our-services-enterprise-electrical.html">NICEIC Accreditation</a></li>
+<li><a class="font-label-caps text-label-caps text-on-primary-container hover:text-electric-cyan transition-colors" href="our-services-enterprise-electrical.html">Safety Standard</a></li>
+<li><a class="font-label-caps text-label-caps text-on-primary-container hover:text-electric-cyan transition-colors" href="our-services-enterprise-electrical.html">Quality Assurance</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-white mb-6">LEGAL</h4>
+<ul class="space-y-4">
+<li><a class="font-label-caps text-label-caps text-on-primary-container hover:text-electric-cyan transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-label-caps text-label-caps text-on-primary-container hover:text-electric-cyan transition-colors" href="our-services-enterprise-electrical.html">Terms of Service</a></li>
+<li><a class="font-label-caps text-label-caps text-on-primary-container hover:text-electric-cyan transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-gutter">
+<div class="max-w-container-max mx-auto flex flex-col md:row justify-between items-center gap-4">
+<p class="font-label-caps text-[10px] text-on-primary-container uppercase tracking-widest">
+                    © 2024 Enterprise Electrical Services Ltd. Technical Excellence in Engineering.
+                </p>
+<div class="flex gap-6">
+<span class="text-white/20 font-label-caps text-[10px]">LINKEDIN</span>
+<span class="text-white/20 font-label-caps text-[10px]">TWITTER</span>
+<span class="text-white/20 font-label-caps text-[10px]">FACEBOOK</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 1";
+            });
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 0";
+            });
+        });
+    </script>
+</body></html>

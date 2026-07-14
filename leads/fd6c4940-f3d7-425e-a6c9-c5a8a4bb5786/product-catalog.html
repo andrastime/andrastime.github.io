@@ -1,0 +1,451 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Product Catalog | Electrical, Lighting &amp; Security Supplies | Robinson &amp; Rushe</title>
+<meta content="Browse our extensive range of professional electrical supplies. From switches and sockets to advanced CCTV systems, Robinson &amp; Rushe provides the quality you need." name="description">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#dfc700",
+                        "secondary": "#6b5f00",
+                        "on-tertiary-fixed": "#410005",
+                        "outline": "#727780",
+                        "surface-container": "#f0eded",
+                        "tertiary-container": "#a8001b",
+                        "on-primary-fixed-variant": "#0c4978",
+                        "on-secondary-container": "#706300",
+                        "on-secondary-fixed-variant": "#504700",
+                        "surface-variant": "#e4e2e1",
+                        "tertiary": "#7c0011",
+                        "secondary-container": "#fbe11e",
+                        "on-surface": "#1b1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f5f3f2",
+                        "on-primary-container": "#9bcaff",
+                        "outline-variant": "#c2c7d0",
+                        "on-tertiary-container": "#ffb2ad",
+                        "on-surface-variant": "#42474f",
+                        "on-background": "#1b1c1c",
+                        "charcoal-dark": "#1A1A1B",
+                        "surface-container-high": "#eae8e7",
+                        "inverse-on-surface": "#f3f0f0",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001d35",
+                        "deep-navy": "#123452",
+                        "electric-yellow": "#FFEB3B",
+                        "surface-bright": "#fbf9f8",
+                        "slate-gray": "#6B7280",
+                        "on-secondary-fixed": "#201c00",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#303030",
+                        "tertiary-fixed-dim": "#ffb3af",
+                        "primary-container": "#1f5584",
+                        "inverse-primary": "#9ccaff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#fee322",
+                        "on-tertiary-fixed-variant": "#930017",
+                        "surface-white": "#FFFFFF",
+                        "primary": "#003d68",
+                        "background": "#fbf9f8",
+                        "surface-dim": "#dcd9d9",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#9ccaff",
+                        "surface": "#fbf9f8",
+                        "surface-tint": "#2e6191",
+                        "primary-fixed": "#d0e4ff",
+                        "surface-container-highest": "#e4e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "stack-lg": "32px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-sm": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .product-card-shadow {
+            box-shadow: 0 4px 12px rgba(31, 85, 132, 0.08);
+        }
+        .product-card-shadow:hover {
+            box-shadow: 0 8px 24px rgba(31, 85, 132, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed-dim">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-outline-variant shadow-sm sticky top-0 z-50">
+<div class="max-w-container mx-auto px-margin-desktop flex justify-between items-center h-20 w-full">
+<div class="flex items-center gap-gutter">
+<a class="font-headline-md text-headline-md font-bold text-primary" href="index.html">Robinson &amp; Rushe</a>
+<nav class="hidden md:flex gap-stack-lg">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-200" href="product-catalog.html">Electrical</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-200" href="product-catalog.html">Lighting</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-200" href="product-catalog.html">Showers</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-200" href="product-catalog.html">CCTV</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-200" href="product-catalog.html">Heaters</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-200" href="product-catalog.html">Tools</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-primary">person</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors relative">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-tertiary-container text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-container mx-auto px-margin-desktop py-stack-lg">
+<!-- Header & Toolbar -->
+<div class="flex flex-col md:flex-row justify-between items-baseline gap-stack-md mb-stack-lg border-b border-outline-variant pb-stack-md">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Product Catalog</h1>
+<p class="text-on-surface-variant font-body-md text-body-md">Electrical, Lighting &amp; Security Supplies</p>
+</div>
+<div class="flex items-center gap-stack-md w-full md:w-auto">
+<div class="flex items-center gap-stack-sm bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant flex-1 md:flex-none">
+<span class="material-symbols-outlined text-slate-gray">sort</span>
+<select class="bg-transparent border-none text-body-md focus:ring-0 cursor-pointer">
+<option>Sort by: Newest</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Alphabetical</option>
+</select>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Filter -->
+<aside class="w-full md:w-64 flex-shrink-0 space-y-stack-lg">
+<!-- Categories -->
+<section>
+<h3 class="font-headline-md text-headline-md text-primary text-[18px] mb-stack-md">Categories</h3>
+<ul class="space-y-stack-sm">
+<li>
+<label class="flex items-center gap-stack-sm group cursor-pointer">
+<input checked="" class="rounded-sm border-outline text-primary focus:ring-primary h-4 w-4" type="checkbox">
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Electrical</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-stack-sm group cursor-pointer">
+<input class="rounded-sm border-outline text-primary focus:ring-primary h-4 w-4" type="checkbox">
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Lighting</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-stack-sm group cursor-pointer">
+<input class="rounded-sm border-outline text-primary focus:ring-primary h-4 w-4" type="checkbox">
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">CCTV</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-stack-sm group cursor-pointer">
+<input class="rounded-sm border-outline text-primary focus:ring-primary h-4 w-4" type="checkbox">
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Showers</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-stack-sm group cursor-pointer">
+<input class="rounded-sm border-outline text-primary focus:ring-primary h-4 w-4" type="checkbox">
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Heaters</span>
+</label>
+</li>
+</ul>
+</section>
+<!-- Price Range -->
+<section>
+<h3 class="font-headline-md text-headline-md text-primary text-[18px] mb-stack-md">Price Range</h3>
+<div class="space-y-stack-sm">
+<input class="w-full h-2 bg-surface-container-high rounded-full appearance-none accent-primary cursor-pointer" max="1000" min="0" type="range">
+<div class="flex justify-between text-label-sm font-label-sm text-slate-gray">
+<span>£0</span>
+<span>£1000+</span>
+</div>
+</div>
+</section>
+<!-- Brands -->
+<section>
+<h3 class="font-headline-md text-headline-md text-primary text-[18px] mb-stack-md">Popular Brands</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1 bg-surface-container-low border border-outline-variant text-label-sm font-label-sm rounded-full hover:bg-primary hover:text-white transition-all">Triton</button>
+<button class="px-3 py-1 bg-surface-container-low border border-outline-variant text-label-sm font-label-sm rounded-full hover:bg-primary hover:text-white transition-all">Digiview</button>
+<button class="px-3 py-1 bg-surface-container-low border border-outline-variant text-label-sm font-label-sm rounded-full hover:bg-primary hover:text-white transition-all">Schneider</button>
+<button class="px-3 py-1 bg-surface-container-low border border-outline-variant text-label-sm font-label-sm rounded-full hover:bg-primary hover:text-white transition-all">Lutron</button>
+</div>
+</section>
+<!-- Trade CTA -->
+<section class="bg-primary-container p-6 rounded-xl relative overflow-hidden group">
+<div class="relative z-10">
+<h4 class="font-headline-md text-white text-[18px] mb-2">Trade Pricing</h4>
+<p class="text-on-primary-container text-body-md text-sm mb-4">Open an account today for professional trade discounts and bulk rates.</p>
+<a class="inline-block bg-secondary-container text-on-secondary-container font-bold px-4 py-2 rounded-lg text-sm hover:scale-105 transition-transform duration-150" href="index.html">Open Account</a>
+</div>
+<div class="absolute top-0 right-0 p-4 opacity-10 scale-150 group-hover:rotate-12 transition-transform duration-500">
+<span class="material-symbols-outlined text-[64px]" style="font-variation-settings: 'FILL' 1;">badge</span>
+</div>
+</section>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1: Triton RUBIE Shower -->
+<div class="bg-surface-white border border-outline-variant rounded-xl overflow-hidden product-card-shadow flex flex-col group hover:scale-[1.02] transition-all duration-300">
+<div class="relative h-64 bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+<img alt="Triton RUBIE Shower" class="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsWmXWhOErbjWFWRSmEPIamKnU0R7jCLbOVp-zHObI-ks4rmWFYj1e8K-QPwgFYzgKgvB5kR7-cn7EMOo0xnHfLm7HEeXwFNgaBrULxNfzU8P6051-SJ3MQOeeI6F9nP6MmvYkt2aBSAoaV6FpuQ-Sk6A3OfMJYoPeLN-gbLfwwVa5wpU0vE5BqBWlPZ-qde686zenGmoMyyg3yeWyxiKuU9MQu7mL0SAEkahCTP-fzPRh7h0Jpae7CV_o">
+<div class="absolute top-4 left-4 bg-tertiary-container text-white text-label-sm font-label-sm px-2 py-1 rounded">SALE</div>
+</div>
+<div class="p-stack-md flex flex-col flex-1">
+<span class="text-label-sm font-label-sm text-slate-gray mb-1 uppercase tracking-wider">Showers</span>
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface mb-2">Triton RUBIE Shower</h3>
+<div class="mt-auto pt-stack-md">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline-md text-primary">£49.99</span>
+<span class="text-label-sm font-label-sm text-slate-gray line-through">£74.99</span>
+<span class="text-label-sm font-label-sm text-slate-gray">+ VAT</span>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2: CCTV System Digiview -->
+<div class="bg-surface-white border border-outline-variant rounded-xl overflow-hidden product-card-shadow flex flex-col group hover:scale-[1.02] transition-all duration-300">
+<div class="relative h-64 bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+<img alt="CCTV System Digiview" class="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLtgJFcl3aaT418r4KmBmfZ2lhRe-4_-Ok4L9atg7RyOdObuSeF2XqUH3WM-w_nIKQZygSFjnjltYrYlUK_m8BwUrTkmbNxFr0GFoUndK-ZUK--OO28PGkIdTjG6uglwPrtS7iIy_E4ZMqQ9EH-2v6GNwzRmlzsavNrNx6z_e___gHxdTZj3M_dOFLDnJOaowdQZDObqVkZOTHLPwQiva1D3mmUYYSUWZpXFVK8AYkpu6duYc6pcGyVw3w">
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container text-label-sm font-label-sm px-2 py-1 rounded">HOT DEAL</div>
+</div>
+<div class="p-stack-md flex flex-col flex-1">
+<span class="text-label-sm font-label-sm text-slate-gray mb-1 uppercase tracking-wider">Security</span>
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface mb-2">CCTV System Digiview</h3>
+<div class="mt-auto pt-stack-md">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline-md text-primary">£299.00</span>
+<span class="text-label-sm font-label-sm text-slate-gray">+ VAT</span>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3: LED Panels 600x600 -->
+<div class="bg-surface-white border border-outline-variant rounded-xl overflow-hidden product-card-shadow flex flex-col group hover:scale-[1.02] transition-all duration-300">
+<div class="relative h-64 bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+<img alt="LED Panels 600x600" class="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvSnxoGd58VyFnTq8lKdgRslKJ9TTFpy7tkgRKZvKle0IDKOO0GUqeop_ZTCwLrWAqzkzAIBau__pXsdAsy-UZniSUbXiuvVEPQlPkud4RJjKclyZeIdhzFK0mFUG76ffbczYcwdcGSS72-0sZKV-t2tifzCbohYVg0kIKf1yG2SoCo_yDcJ8GQRH-phzl-Nn7wV-y8EqQPVJVIs69c1jRGrPlcmTglOQIZbMrF4GZ-ZaJChMbahzBjTMY">
+</div>
+<div class="p-stack-md flex flex-col flex-1">
+<span class="text-label-sm font-label-sm text-slate-gray mb-1 uppercase tracking-wider">Lighting</span>
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface mb-2">LED Panels 600x600</h3>
+<div class="mt-auto pt-stack-md">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline-md text-primary">£14.99</span>
+<span class="text-label-sm font-label-sm text-slate-gray">+ VAT</span>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 4: Twin & Earth Cable -->
+<div class="bg-surface-white border border-outline-variant rounded-xl overflow-hidden product-card-shadow flex flex-col group hover:scale-[1.02] transition-all duration-300">
+<div class="relative h-64 bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+<img alt="Twin &amp; Earth Cable 100m" class="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsizVakcG4c6y5Wx8LvemgDIqsaTtuAYE-OvZyoBgECMschRz5ODAxLPg5HtvllPDaJvg1tiJQDqcE3qVFfVRhhWqBBSFU3wmAnxcWTl8uVvJDd6nuw3QS1MB4MU2e01SIaXsxlh35ewDt8Omo0sxE6JEha3XZiiTdOaPdD6sf6f3xHBXJ0Xf4wkNKk0D9eZ3pBxUnsbRq2ZxBdKTOD7aejskrlgCpyN7BsH06D_iJqkIPkmlAc1D_eroY">
+</div>
+<div class="p-stack-md flex flex-col flex-1">
+<span class="text-label-sm font-label-sm text-slate-gray mb-1 uppercase tracking-wider">Cabling</span>
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface mb-2">Twin &amp; Earth Cable 100m</h3>
+<div class="mt-auto pt-stack-md">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline-md text-primary">£39.99</span>
+<span class="text-label-sm font-label-sm text-slate-gray">+ VAT</span>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 5: Modern Radiator -->
+<div class="bg-surface-white border border-outline-variant rounded-xl overflow-hidden product-card-shadow flex flex-col group hover:scale-[1.02] transition-all duration-300">
+<div class="relative h-64 bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+<img alt="Modern Radiator" class="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvOraFFo05Qy06rZ5G07U4kQJ3fMXg85T9aredaw4Zd-bQ9KoN1oDzaFSAZ-9VdMk1zKqzzMxEWfjMahh-cXikJ_rweFtSnKOMKi69VgcL4R0781xUYpYKRNmKbN2GDIDWWkoX17f83RFdKQGvqOQ03f-CtfgPyskthneT0UwnwumgPaIzxvnRVdkf7VZXBUhyHUWL6whLeOV4Vx6aboXcFF18GtHFaAm7cd6uEhirrYKdZOc1S0Drnr2A">
+</div>
+<div class="p-stack-md flex flex-col flex-1">
+<span class="text-label-sm font-label-sm text-slate-gray mb-1 uppercase tracking-wider">Heaters</span>
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface mb-2">Modern Radiator</h3>
+<div class="mt-auto pt-stack-md">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline-md text-primary">£189.00</span>
+<span class="text-label-sm font-label-sm text-slate-gray">+ VAT</span>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 6: Designer Wall Light -->
+<div class="bg-surface-white border border-outline-variant rounded-xl overflow-hidden product-card-shadow flex flex-col group hover:scale-[1.02] transition-all duration-300">
+<div class="relative h-64 bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+<img alt="Designer Wall Light" class="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLs9qAHFdWjOJDkyHoAfVAPc3eQBfYbffFt3v6Q6kQ7sgybaU1KpGB8JaKQBZAlaXyp_kXcW0F6ypF_NENVm85SyOYOCp52o1yr-HoU1dkjhWrAvrq1UyF2_W2N6FitO6oLsiehYUixMaQNWWiW3cYv96FDbEwf22mSQ8bFIy_epRJsfi-Bo8KXEunmtywx0ruch773yL5GNlvpx7OP0Dz0BQDOxV_JWHY-5bPvYPrshaXwmPgczpQW_AQ">
+<div class="absolute top-4 left-4 bg-primary text-white text-label-sm font-label-sm px-2 py-1 rounded">PREMIUM</div>
+</div>
+<div class="p-stack-md flex flex-col flex-1">
+<span class="text-label-sm font-label-sm text-slate-gray mb-1 uppercase tracking-wider">Lighting</span>
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface mb-2">Designer Wall Light</h3>
+<div class="mt-auto pt-stack-md">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="font-headline-md text-primary">£54.95</span>
+<span class="text-label-sm font-label-sm text-slate-gray">+ VAT</span>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-stack-lg flex flex-col md:flex-row items-center justify-between gap-stack-md pt-stack-md border-t border-outline-variant">
+<p class="text-body-md text-on-surface-variant">Showing 1-6 of 152 products</p>
+<nav class="flex items-center gap-1">
+<button class="p-2 border border-outline-variant rounded hover:bg-surface-container-low disabled:opacity-50 transition-colors" disabled="">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-primary text-white font-bold rounded">1</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-surface-container-low rounded transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-surface-container-low rounded transition-colors">3</button>
+<span class="px-2 text-slate-gray">...</span>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-surface-container-low rounded transition-colors">26</button>
+<button class="p-2 border border-outline-variant rounded hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+</div>
+<!-- Global CTA -->
+<section class="mt-24 mb-12 bg-charcoal-dark rounded-2xl p-margin-desktop text-center relative overflow-hidden">
+
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-display-lg text-display-lg text-white mb-stack-md">Ready to upgrade your workflow?</h2>
+<p class="text-body-lg text-surface-variant mb-stack-lg">Join thousands of UK electrical contractors who rely on Robinson &amp; Rushe for premium equipment and unbeatable trade services.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-stack-md">
+<a class="bg-electric-yellow text-on-surface font-bold px-8 py-4 rounded-lg hover:scale-105 transition-transform duration-150 shadow-lg" href="index.html">Open a Trade Account</a>
+<a class="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-lg hover:bg-white hover:text-charcoal-dark transition-all duration-200" href="index.html">Contact a Specialist</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="max-w-container mx-auto px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between gap-gutter">
+<div class="space-y-stack-md">
+<a class="font-headline-md text-headline-md font-bold text-secondary-container" href="index.html">Robinson &amp; Rushe</a>
+<p class="text-body-md text-surface-variant max-w-xs">Your trusted partner for high-quality electrical, lighting, and security solutions across the UK.</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-gutter">
+<div class="flex flex-col gap-stack-sm">
+<h5 class="text-secondary-container font-bold mb-2">Company</h5>
+<a class="text-on-primary hover:text-secondary-fixed-dim transition-colors" href="index.html">Contact Us</a>
+<a class="text-on-primary hover:text-secondary-fixed-dim transition-colors" href="index.html">Branch Locator</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h5 class="text-secondary-container font-bold mb-2">Legal</h5>
+<a class="text-on-primary hover:text-secondary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-primary hover:text-secondary-fixed-dim transition-colors" href="index.html">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-stack-sm col-span-2 sm:col-span-1">
+<h5 class="text-secondary-container font-bold mb-2">Stay Updated</h5>
+<a class="text-on-primary hover:text-secondary-fixed-dim transition-colors" href="index.html">Newsletter Signup</a>
+</div>
+</div>
+</div>
+<div class="max-w-container mx-auto px-margin-desktop pb-8 text-center md:text-left">
+<p class="text-label-sm font-label-sm text-surface-variant">© 2024 Robinson &amp; Rushe Electrical Wholesalers. All rights reserved.</p>
+</div>
+</footer>
+<!-- FAB (Mobile Only Filter Toggle) -->
+<button class="md:hidden fixed bottom-6 right-6 bg-primary text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center z-40" onclick="alert('Opening mobile filters...')">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<script>
+        // Simple Interaction Logic for Filters
+        document.querySelectorAll('input[type="range"]').forEach(input => {
+            input.addEventListener('input', e => {
+                // Future implementation: Update price range visuals
+            });
+        });
+
+        // Search Bar Micro-interaction
+        const searchInput = document.querySelector('input[type="text"]');
+        if(searchInput) {
+            searchInput.addEventListener('focus', () => {
+                searchInput.parentElement.classList.add('ring-2', 'ring-primary');
+            });
+            searchInput.addEventListener('blur', () => {
+                searchInput.parentElement.classList.remove('ring-2', 'ring-primary');
+            });
+        }
+    </script>
+</body></html>

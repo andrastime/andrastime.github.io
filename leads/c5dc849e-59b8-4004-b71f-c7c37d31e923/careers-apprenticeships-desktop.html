@@ -1,0 +1,383 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Careers &amp; Apprenticeships | VOLTAGE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#58dbff",
+                    "deep-navy": "#002B36",
+                    "safety-yellow": "#FFD60A",
+                    "surface-tint": "#15667e",
+                    "on-surface": "#1b1b1c",
+                    "inverse-primary": "#8cd0eb",
+                    "surface-container": "#f0edee",
+                    "tertiary": "#004554",
+                    "primary-fixed": "#b8eaff",
+                    "on-tertiary-fixed": "#001f27",
+                    "surface-bright": "#fcf8f9",
+                    "surface": "#fcf8f9",
+                    "tertiary-fixed": "#b3ebff",
+                    "secondary": "#a04100",
+                    "on-secondary-container": "#5d2300",
+                    "primary-container": "#005e75",
+                    "surface-container-high": "#eae7e8",
+                    "surface-container-low": "#f6f3f4",
+                    "background": "#fcf8f9",
+                    "on-secondary-fixed-variant": "#7a3000",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#91d5f0",
+                    "on-primary": "#ffffff",
+                    "primary": "#004557",
+                    "surface-variant": "#e5e2e3",
+                    "on-primary-fixed": "#001f28",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#005e72",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#341000",
+                    "inverse-on-surface": "#f3f0f1",
+                    "secondary-fixed-dim": "#ffb693",
+                    "on-secondary": "#ffffff",
+                    "outline": "#70787d",
+                    "on-tertiary": "#ffffff",
+                    "live-orange": "#FF8A00",
+                    "inverse-surface": "#303031",
+                    "outline-variant": "#bfc8cc",
+                    "on-primary-fixed-variant": "#004d61",
+                    "circuit-gray": "#E2E8F0",
+                    "surface-container-highest": "#e5e2e3",
+                    "surface-dim": "#dcd9da",
+                    "tertiary-fixed-dim": "#4cd6fb",
+                    "secondary-container": "#fc7728",
+                    "primary-fixed-dim": "#8cd0eb",
+                    "on-surface-variant": "#3f484c",
+                    "on-background": "#1b1b1c",
+                    "on-tertiary-fixed-variant": "#004e5f",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#ffdbcb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "margin-x": "32px",
+                    "container-max": "1280px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"],
+                    "label-md": ["JetBrains Mono"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .btn-gradient {
+            background: linear-gradient(to bottom, #a84500, #923c00);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+        .btn-gradient:hover {
+            filter: brightness(1.1);
+        }
+        .technical-grid {
+            background-size: 32px 32px;
+            background-image: linear-gradient(to right, rgba(226, 232, 240, 0.5) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(226, 232, 240, 0.5) 1px, transparent 1px);
+        }
+        .circuit-line {
+            position: absolute;
+            background: theme('colors.secondary');
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<header class="bg-deep-navy sticky top-0 z-50 shadow-md border-b border-outline-variant">
+<nav class="flex justify-between items-center w-full px-margin-x py-4 max-w-container-max mx-auto">
+<a class="text-headline-md font-headline-md font-extrabold text-white tracking-tighter" href="index.html">VOLTAGE</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-white font-medium text-label-md font-label-md hover:text-secondary-container transition-colors" href="products-services-desktop.html">Industrial Supplies</a>
+<a class="text-white font-medium text-label-md font-label-md hover:text-secondary-container transition-colors" href="products-services-desktop.html">EV Charging</a>
+<a class="text-white font-medium text-label-md font-label-md hover:text-secondary-container transition-colors" href="products-services-desktop.html">Lighting Solutions</a>
+<a class="text-white font-medium text-label-md font-label-md hover:text-secondary-container transition-colors" href="products-services-desktop.html">Renewables</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 text-label-md font-label-md" href="careers-apprenticeships-desktop.html">Careers</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="text-white font-medium text-label-md font-label-md hidden lg:block">Branch Finder</button>
+<button class="bg-secondary text-white px-6 py-2 uppercase text-label-md font-label-md font-bold btn-gradient transition-all active:scale-95">Trade Login</button>
+<button class="md:hidden text-white"><span class="material-symbols-outlined">menu</span></button>
+</div>
+</nav>
+</header>
+<main>
+<section class="relative h-[600px] flex items-center overflow-hidden bg-deep-navy">
+<div class="absolute inset-0 opacity-40">
+<div class="absolute inset-0 bg-gradient-to-r from-deep-navy via-transparent to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic, wide-angle shot of a state-of-the-art electrical distribution warehouse with towering shelves of industrial components. Bright cool-toned LED lighting illuminates the organized rows of metallic conduit and copper spools. The mood is professional and high-performance, reflecting a top-tier industrial supply brand with deep navy and orange accents throughout the scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFVXyfMbxiw_soTBPH3KeCO3UP4kxbDNkhmS4KdcLmLLfttNT8aEwhj4MN7YVLZVeg8qzKclCVm3jq9QQNB9uHmKMeOQEQpNR88AUE4Z5q0tlR1tu7_JfmlIXx6Ucd18MvTg-IAcM5ISIxcf-3NF7YWITwDSB56fC-8X722IFPMZBn1tetABOQ2rWRYjw1hzx6HWQi3j8GMVZVDPglzrArwCtTc7HIL5MlaDeRrzQA3N0_Ryzhr-u0">
+</div>
+<div class="relative z-20 w-full px-margin-x max-w-container-max mx-auto text-white">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-container mb-4 block">Power Your Future</span>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">Empowering the next generation of trade professionals.</h1>
+<p class="font-body-lg text-body-lg mb-8 opacity-90">Join Voltage, the UK's leading electrical wholesaler, and build a career grounded in precision, expertise, and long-term growth.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary px-8 py-4 uppercase text-label-md font-label-md font-bold btn-gradient">Explore Opportunities</button>
+<button class="border-2 border-white px-8 py-4 uppercase text-label-md font-label-md font-bold hover:bg-white hover:text-deep-navy transition-all">Our Apprenticeship Program</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-section-gap px-margin-x max-w-container-max mx-auto technical-grid">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="relative p-2 bg-circuit-gray border border-outline-variant">
+<img alt="ECA Apprentice of the Year Winner Jack Hawkins" class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtt__0ubMh3K56yQQ3RFGTGc-2Ftwe5dPklmkoHlSpRMSH_jlCONhbU1jx6CVx7zOW6ATYa0EYw7vJS5XOVT9vZ9uQTH3cPUuoAtcCQy9Rdp50cUPdBQ1ui8X1BFkKlUe7WSUV86CHwxhhRKnxd9UOVdB_7vtpoW0_PIOzMqEL4l9mOGBWuJoHIQIhOMck77CRAzENnw7d_-ROPaBIJ03SgRU0S91Ici0c1uwAO5mCn7ovE-LTR6x-pWXQ">
+<div class="absolute -bottom-6 -right-6 bg-secondary p-6 text-white shadow-xl hidden md:block max-w-xs">
+<p class="font-label-md text-label-md mb-2">AWARDS 2025</p>
+<h3 class="font-headline-md text-headline-md font-bold leading-none mb-1">ECA Apprentice of the Year</h3>
+<p class="font-body-md text-body-md opacity-80 italic">"Voltage provided the platform I needed to excel."</p>
+</div>
+</div>
+<div class="md:pl-12">
+<h2 class="font-headline-lg text-headline-lg mb-6 text-deep-navy">Award-Winning Mentorship</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        Our commitment to excellence is reflected in our people. We celebrate Jack Hawkins, our latest <strong>ECA Apprentice of the Year</strong> winner. This prestigious accolade highlights our dedication to nurturing talent and providing the technical foundation required for professional mastery.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">workspace_premium</span>
+<div>
+<h4 class="font-bold text-deep-navy">Industry Recognized Training</h4>
+<p class="text-on-surface-variant">Structured programs aligned with ECA and JIB standards.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">handshake</span>
+<div>
+<h4 class="font-bold text-deep-navy">Expert One-on-One Support</h4>
+<p class="text-on-surface-variant">Learn directly from seasoned professionals with decades of trade experience.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-surface-container py-section-gap">
+<div class="px-margin-x max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-4">Why Join Voltage?</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-white p-8 border border-circuit-gray hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center mb-6 transition-colors group-hover:bg-secondary">
+<span class="material-symbols-outlined text-white">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Career Pathways</h3>
+<p class="font-body-md text-on-surface-variant">We don't just offer jobs; we provide clear progression paths from warehouse to management and technical sales.</p>
+</div>
+<div class="bg-white p-8 border border-circuit-gray hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center mb-6 transition-colors group-hover:bg-secondary">
+<span class="material-symbols-outlined text-white">diversity_3</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Strong Community</h3>
+<p class="font-body-md text-on-surface-variant">Our branches are hubs of community and professional collaboration. You're joining a family that supports one another.</p>
+</div>
+<div class="bg-white p-8 border border-circuit-gray hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center mb-6 transition-colors group-hover:bg-secondary">
+<span class="material-symbols-outlined text-white">security</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Safety First</h3>
+<p class="font-body-md text-on-surface-variant">Health and safety is at our core. We ensure every apprentice and employee works in a secure, compliant environment.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-section-gap px-margin-x max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<h2 class="font-headline-lg text-headline-lg mb-6 text-deep-navy">Dedication that Defines Us</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        Voltage is built on long-service commitment. We take pride in our team members who have spent decades growing with us, proving that a career here is a career for life.
+                    </p>
+<div class="bg-deep-navy text-white p-6 border-l-4 border-secondary">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-safety-yellow text-4xl">history</span>
+<span class="font-label-md text-label-md uppercase tracking-widest">Legacy of Excellence</span>
+</div>
+<p class="font-body-md italic opacity-90">"I started as a delivery driver 25 years ago. Today, I manage the busiest branch in the region. Voltage invests in people who show grit and curiosity."</p>
+<p class="font-label-sm text-label-sm mt-4 text-secondary-container">— Senior Branch Manager</p>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2">
+<div class="relative">
+<img alt="Long service recognition image" class="w-full object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border border-outline-variant" src="https://lh3.googleusercontent.com/aida/AP1WRLtHFm5oqmdn7fvZhETbzTIJCqiM13A-HbrYQV8XibJEKevIQ34cL-uMUhhuLP53aXAJiHrO67gSWGMZ-U_UAtc3M0KWHyKRIZL7P9TJeLb8y5_TBihoVP-t03K41d0CtNWb5WjpaaCfIKJuCqs1q1e7Cm9YGLM6DqKB71qIZh8xkz69MmubJ1FVLIOStL2oAYRKCp4jS4nzWj6aos_KTvgobzefjpeX_5sgbmUEWBYdlMiaQCWq51ZegeM">
+<div class="absolute top-8 left-8 bg-safety-yellow text-deep-navy font-bold px-4 py-2 text-label-sm font-label-sm">MILESTONE ACHIEVED</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-deep-navy py-24 text-white">
+<div class="px-margin-x max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-display-lg text-display-lg mb-4">Current Opportunities</h2>
+<p class="font-body-lg text-on-tertiary-container">Find your place in the Voltage team. We are currently recruiting across technical sales, logistics, and management trainees.</p>
+</div>
+<button class="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-3 uppercase text-label-md font-label-md font-bold transition-all">View All 42 Roles</button>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-primary p-6 flex flex-col md:flex-row justify-between items-center group hover:bg-tertiary transition-all cursor-pointer border border-on-primary-fixed-variant">
+<div>
+<span class="font-label-sm text-label-sm text-secondary-container mb-1 block">MANCHESTER CENTRAL</span>
+<h3 class="font-headline-md text-headline-md font-bold">Apprentice Warehouse Operative</h3>
+</div>
+<div class="flex items-center gap-8 mt-4 md:mt-0">
+<div class="text-right hidden md:block">
+<p class="font-label-sm text-label-sm text-on-tertiary-container">STARTING SALARY</p>
+<p class="font-bold">Competitive + Benefits</p>
+</div>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<div class="bg-primary p-6 flex flex-col md:flex-row justify-between items-center group hover:bg-tertiary transition-all cursor-pointer border border-on-primary-fixed-variant">
+<div>
+<span class="font-label-sm text-label-sm text-secondary-container mb-1 block">LONDON WEST</span>
+<h3 class="font-headline-md text-headline-md font-bold">Internal Sales Executive</h3>
+</div>
+<div class="flex items-center gap-8 mt-4 md:mt-0">
+<div class="text-right hidden md:block">
+<p class="font-label-sm text-label-sm text-on-tertiary-container">EXPERIENCE</p>
+<p class="font-bold">1-3 Years Trade Sales</p>
+</div>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<div class="bg-primary p-6 flex flex-col md:flex-row justify-between items-center group hover:bg-tertiary transition-all cursor-pointer border border-on-primary-fixed-variant">
+<div>
+<span class="font-label-sm text-label-sm text-secondary-container mb-1 block">BIRMINGHAM HUB</span>
+<h3 class="font-headline-md text-headline-md font-bold">Graduate Management Trainee</h3>
+</div>
+<div class="flex items-center gap-8 mt-4 md:mt-0">
+<div class="text-right hidden md:block">
+<p class="font-label-sm text-label-sm text-on-tertiary-container">PROGRAM DURATION</p>
+<p class="font-bold">24 Months Rotation</p>
+</div>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-section-gap px-margin-x max-w-container-max mx-auto overflow-hidden">
+<div class="bg-surface-container-high relative overflow-hidden flex flex-col md:flex-row items-stretch">
+<div class="w-full md:w-1/2 p-12 lg:p-20 relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-6">Our Training Programs</h2>
+<p class="font-body-lg text-on-surface-variant mb-10">From NVQ Level 3 Electrical Installation to advanced sales methodology, we invest £1M+ annually into our internal academy.</p>
+<ul class="space-y-6 mb-10">
+<li class="flex items-center gap-4">
+<span class="w-2 h-2 bg-secondary rounded-full"></span>
+<span class="font-bold">Voltage National Academy Access</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="w-2 h-2 bg-secondary rounded-full"></span>
+<span class="font-bold">Product Manufacturer Certifications</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="w-2 h-2 bg-secondary rounded-full"></span>
+<span class="font-bold">Leadership Development Framework</span>
+</li>
+</ul>
+<button class="bg-secondary text-white px-10 py-4 uppercase text-label-md font-label-md font-bold btn-gradient">Request Brochure</button>
+</div>
+<div class="w-full md:w-1/2 relative min-h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A group of diverse professional electricians and logistics managers in a modern, brightly lit office environment. They are reviewing a large blueprint and digital tablet together. One is wearing a reflective Voltage branded vest, others in smart casual business attire. The atmosphere is collaborative, energetic, and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfLcmASE6YKoslR_3bHmkVm-iAXLBoVVBx0Vt_rZhKJPMTpggcG9PK1mxz7Ksj6YWSlmP7Cc22GIEBXcdZcagKm0qBijMf7ON5OpJLf-7riXkQi-DoA6jev24cpDEcnBBuOP7WN-xQ_jlKHMOknrpeZGQc3gzvIRCftl5MMPFtflBUGUQ7adlWz-YA_oplMwbVs4nxt9n17VgHotLsuPVdL7r9pZeTyLUnpIRYonbtIzBlrEyHERwo">
+</div>
+</div>
+</section>
+<section class="bg-secondary py-20 text-center px-margin-x">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-display-lg text-headline-lg text-white mb-6">Ready to spark your career?</h2>
+<p class="text-white text-body-lg mb-10 opacity-90">Applications for our 2025 Apprenticeship intake are now open. Don't miss your chance to join a winning team.</p>
+<button class="bg-deep-navy text-white px-12 py-5 uppercase text-label-md font-label-md font-extrabold hover:scale-105 transition-all shadow-xl">Apply Now</button>
+</div>
+</section>
+</main>
+<footer class="bg-deep-navy border-t-4 border-secondary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-x py-section-gap max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<a class="text-headline-md font-headline-md font-black text-white mb-6 block" href="index.html">VOLTAGE</a>
+<p class="text-circuit-gray opacity-80 font-body-md">Empowering the professional trade with industrial-grade supplies and expert knowledge since 1994.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-label-md">Main Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-circuit-gray opacity-80 hover:text-white hover:opacity-100 transition-opacity font-label-sm text-label-sm" href="products-services-desktop.html">Industrial Supplies</a></li>
+<li><a class="text-circuit-gray opacity-80 hover:text-white hover:opacity-100 transition-opacity font-label-sm text-label-sm" href="products-services-desktop.html">EV Charging</a></li>
+<li><a class="text-circuit-gray opacity-80 hover:text-white hover:opacity-100 transition-opacity font-label-sm text-label-sm" href="products-services-desktop.html">Renewables</a></li>
+<li><a class="text-secondary underline font-label-sm text-label-sm" href="careers-apprenticeships-desktop.html">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-label-md">Information</h4>
+<ul class="space-y-4">
+<li><a class="text-circuit-gray opacity-80 hover:text-white hover:opacity-100 transition-opacity font-label-sm text-label-sm" href="index.html">Privacy Policy</a></li>
+<li><a class="text-circuit-gray opacity-80 hover:text-white hover:opacity-100 transition-opacity font-label-sm text-label-sm" href="products-services-desktop.html">Terms of Service</a></li>
+<li><a class="text-circuit-gray opacity-80 hover:text-white hover:opacity-100 transition-opacity font-label-sm text-label-sm" href="products-services-desktop.html">Health &amp; Safety</a></li>
+<li><a class="text-circuit-gray opacity-80 hover:text-white hover:opacity-100 transition-opacity font-label-sm text-label-sm" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-label-md">Branch Support</h4>
+<p class="text-circuit-gray opacity-80 font-body-md mb-4">Need help finding a local branch or setting up a trade account?</p>
+<button class="bg-on-tertiary-container text-deep-navy w-full py-3 font-bold uppercase text-label-md font-label-md hover:bg-white transition-colors">Branch Finder</button>
+</div>
+</div>
+<div class="px-margin-x py-6 border-t border-outline-variant max-w-container-max mx-auto text-center md:text-left">
+<p class="text-circuit-gray opacity-50 text-label-sm font-label-sm">© 2024 Voltage Electrical Wholesalers Ltd. All Rights Reserved. Professional Grade Power.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for career cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

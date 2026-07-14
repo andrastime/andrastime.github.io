@@ -1,0 +1,320 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Get a Quote | QUINN ELECTRICAL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#c8c6c5",
+                    "background": "#131315",
+                    "outline": "#a78b7e",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "deep-charcoal": "#1A1A1C",
+                    "secondary-fixed": "#ffe16d",
+                    "on-surface-variant": "#e0c0b2",
+                    "electric-orange": "#E6640D",
+                    "secondary": "#fff9ef",
+                    "primary": "#ffb693",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "primary-fixed": "#ffdbcb",
+                    "surface-container-lowest": "#0e0e10",
+                    "wire-gray": "#4D4D4D",
+                    "on-tertiary-container": "#2a2a2a",
+                    "on-primary-fixed-variant": "#7a3000",
+                    "primary-fixed-dim": "#ffb693",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-low": "#1b1b1d",
+                    "error": "#ffb4ab",
+                    "primary-container": "#ed6914",
+                    "on-error": "#690005",
+                    "on-primary-container": "#4b1b00",
+                    "inverse-surface": "#e5e1e4",
+                    "surface-dim": "#131315",
+                    "tertiary-fixed": "#e4e2e1",
+                    "surface-container-highest": "#353437",
+                    "on-surface": "#e5e1e4",
+                    "on-background": "#e5e1e4",
+                    "inverse-primary": "#a04100",
+                    "surface-bright": "#39393b",
+                    "on-secondary-container": "#725f00",
+                    "error-container": "#93000a",
+                    "surface-tint": "#ffb693",
+                    "on-tertiary": "#303030",
+                    "safety-yellow": "#FFD700",
+                    "surface-container": "#201f21",
+                    "tertiary-container": "#929090",
+                    "inverse-on-surface": "#303032",
+                    "on-primary": "#562000",
+                    "surface-container-high": "#2a2a2c",
+                    "on-secondary-fixed": "#221b00",
+                    "on-primary-fixed": "#341000",
+                    "surface": "#131315",
+                    "secondary-container": "#ffdb3c",
+                    "on-secondary": "#3a3000",
+                    "on-secondary-fixed-variant": "#544600",
+                    "outline-variant": "#584237",
+                    "glow-orange": "rgba(230, 100, 13, 0.15)",
+                    "surface-variant": "#353437",
+                    "secondary-fixed-dim": "#e9c400"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "margin-mobile": "16px",
+                    "stack-lg": "32px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Sora"],
+                    "headline-lg-mobile": ["Sora"],
+                    "display-lg": ["Sora"],
+                    "headline-lg": ["Sora"],
+                    "label-caps": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(26, 26, 28, 0.8);
+            backdrop-filter: blur(12px);
+            border: 0.5px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 15px rgba(230, 100, 13, 0.4);
+        }
+        .circuit-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(230, 100, 13, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        input:focus, select:focus, textarea:focus {
+            box-shadow: inset 0 0 8px rgba(230, 100, 13, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-electric-orange selection:text-white circuit-bg">
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/5 bg-deep-charcoal/80 shadow-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Quinn Electrical Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLuH2zI0mnIQwlwSpGzcyLuFcp2FKclwL5U9H_wvBBeoFZy6rbYOjNaxqiceVpiangHpCa2aAz1Fglv5B6KZCZcsEVD3AKREOjnwPAs4vcvb1LUuvK4jZhNUG2SFGrx15WKF6fFrS_aL8-ZgrAWPj2TX-HqOU-7_JFH_YV0FGsPEoVwVSj9-N7P-ufjqo7c0P_cx7mWRxHn9SmueeP9NGiCvEHAzq1KtmxC2kOvA2gnPuQLPzfb3_6-8MPE">
+<span class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-surface uppercase">QUINN ELECTRICAL</span>
+</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="our-services-quinn-electrical.html">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="testimonials-quinn-electrical.html">Success Stories</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">About Us</a>
+<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-6 py-2 rounded-lg scale-95 active:scale-90 transition-transform glow-button font-bold">GET QUOTE</button>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="mb-stack-lg">
+<div class="flex items-center gap-2 mb-stack-sm">
+<span class="w-8 h-[2px] bg-electric-orange"></span>
+<span class="font-label-caps text-label-caps text-electric-orange uppercase tracking-widest">Connect with Expertise</span>
+</div>
+<h1 class="font-display-lg text-display-lg mb-4">Request a <span class="text-electric-orange">Precision</span> Quote</h1>
+<p class="text-on-surface-variant font-body-lg max-w-2xl">From complex industrial installations to 24/7 emergency residential repairs, our elite craftsmanship is just a message away.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+<div class="lg:col-span-5 flex flex-col gap-stack-md">
+<div class="glass-panel p-8 rounded-xl flex flex-col gap-stack-lg h-full">
+<section>
+<h2 class="font-headline-md text-headline-md mb-stack-md border-l-4 border-electric-orange pl-4">Contact Intelligence</h2>
+<div class="space-y-6">
+<div class="flex items-start gap-4 group">
+<div class="bg-surface-container p-3 rounded-lg text-electric-orange group-hover:bg-electric-orange group-hover:text-black transition-colors">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant">OPERATIONAL BASE</h3>
+<p class="font-body-md">Glenfield, Leicester<br>United Kingdom</p>
+</div>
+</div>
+<div class="flex items-start gap-4 group">
+<div class="bg-surface-container p-3 rounded-lg text-electric-orange group-hover:bg-electric-orange group-hover:text-black transition-colors">
+<span class="material-symbols-outlined">emergency</span>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-electric-orange">EMERGENCY 24/7</h3>
+<p class="font-body-md font-bold text-electric-orange">Contact Dispatch Immediately</p>
+<p class="font-label-caps text-label-caps mt-1">Available for Leicester &amp; Surrounding Areas</p>
+</div>
+</div>
+<div class="flex items-start gap-4 group">
+<div class="bg-surface-container p-3 rounded-lg text-electric-orange group-hover:bg-electric-orange group-hover:text-black transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant">ACCREDITATION</h3>
+<p class="font-body-md">Fully Certified Electrical Contractors</p>
+<div class="flex gap-2 mt-2">
+<span class="px-2 py-0.5 border border-safety-yellow text-safety-yellow font-label-caps text-[10px] rounded uppercase">SafeContractor</span>
+<span class="px-2 py-0.5 border border-safety-yellow text-safety-yellow font-label-caps text-[10px] rounded uppercase">NICEIC Approved</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-auto overflow-hidden rounded-xl border border-wire-gray aspect-video relative group">
+<div class="absolute inset-0 z-10 bg-deep-charcoal/20 group-hover:bg-transparent transition-colors"></div>
+<div class="w-full h-full" data-location="Leicester United Kingdom" style="">
+<img class="w-full h-full object-cover" data-alt="A high-tech digital map interface showing the Leicester area, rendered in a dark cyber-professional aesthetic with glowing orange nodes representing service areas and thin technical grid lines over a deep charcoal background. The mood is sophisticated and precise." src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+</div>
+<div class="absolute bottom-4 left-4 z-20 glass-panel px-4 py-2 rounded-lg border border-wire-gray">
+<p class="font-label-caps text-label-caps text-electric-orange flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-electric-orange animate-pulse"></span>
+                                ACTIVE SERVICE ZONE
+                            </p>
+</div>
+</section>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="glass-panel p-8 rounded-xl border border-wire-gray">
+<form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-gutter" method="POST">
+<div class="md:col-span-1">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">Full Name</label>
+<input class="w-full bg-surface-container-low border border-wire-gray rounded-lg px-4 py-3 text-on-surface focus:border-electric-orange focus:ring-0 transition-all outline-none" placeholder="e.g. John Doe" type="text">
+</div>
+<div class="md:col-span-1">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">Email Address</label>
+<input class="w-full bg-surface-container-low border border-wire-gray rounded-lg px-4 py-3 text-on-surface focus:border-electric-orange focus:ring-0 transition-all outline-none" placeholder="john@example.com" type="email">
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">Service Classification</label>
+<select class="w-full bg-surface-container-low border border-wire-gray rounded-lg px-4 py-3 text-on-surface focus:border-electric-orange focus:ring-0 transition-all outline-none appearance-none">
+<option>Commercial Installation</option>
+<option>Residential Lighting</option>
+<option>Fault Finding &amp; Diagnostics</option>
+<option>Emergency 24/7 Response</option>
+<option>EV Charging Systems</option>
+<option>Safety Certification</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">Project Specifications</label>
+<textarea class="w-full bg-surface-container-low border border-wire-gray rounded-lg px-4 py-3 text-on-surface focus:border-electric-orange focus:ring-0 transition-all outline-none resize-none" placeholder="Describe the requirements or technical challenges..." rows="6"></textarea>
+</div>
+<div class="md:col-span-2 flex items-center gap-3 py-2">
+<input class="rounded bg-surface-container border-wire-gray text-electric-orange focus:ring-electric-orange" id="urgent" type="checkbox">
+<label class="font-body-md text-on-surface-variant cursor-pointer" for="urgent">This project requires immediate emergency priority.</label>
+</div>
+<div class="md:col-span-2 mt-4">
+<button class="w-full md:w-auto bg-electric-orange text-background font-label-caps text-label-caps font-bold px-12 py-4 rounded-lg scale-95 hover:scale-100 active:scale-90 transition-transform glow-button uppercase flex items-center justify-center gap-2" type="submit">
+                                INITIALIZE REQUEST
+                                <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</form>
+</div>
+<div class="mt-stack-lg grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+<div class="p-4 rounded-xl border border-wire-gray/30 bg-surface-container-low/50">
+<span class="material-symbols-outlined text-electric-orange mb-2">bolt</span>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-1">RAPID RESPONSE</h4>
+<p class="text-[12px] text-on-surface-variant">98% of queries answered within 2 hours.</p>
+</div>
+<div class="p-4 rounded-xl border border-wire-gray/30 bg-surface-container-low/50">
+<span class="material-symbols-outlined text-electric-orange mb-2">shield</span>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-1">SAFETY FIRST</h4>
+<p class="text-[12px] text-on-surface-variant">All work compliant with latest IET wiring regs.</p>
+</div>
+<div class="p-4 rounded-xl border border-wire-gray/30 bg-surface-container-low/50">
+<span class="material-symbols-outlined text-electric-orange mb-2">engineering</span>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-1">EXPERT TEAM</h4>
+<p class="text-[12px] text-on-surface-variant">Highly trained, certified technicians only.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full py-section-gap border-t border-wire-gray bg-deep-charcoal">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<img alt="Logo" class="h-6 w-6 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLuH2zI0mnIQwlwSpGzcyLuFcp2FKclwL5U9H_wvBBeoFZy6rbYOjNaxqiceVpiangHpCa2aAz1Fglv5B6KZCZcsEVD3AKREOjnwPAs4vcvb1LUuvK4jZhNUG2SFGrx15WKF6fFrS_aL8-ZgrAWPj2TX-HqOU-7_JFH_YV0FGsPEoVwVSj9-N7P-ufjqo7c0P_cx7mWRxHn9SmueeP9NGiCvEHAzq1KtmxC2kOvA2gnPuQLPzfb3_6-8MPE">
+<span class="font-headline-md text-headline-md text-on-surface font-bold uppercase">QUINN</span>
+</div>
+<p class="text-on-tertiary-fixed-variant font-body-md">Precision engineering and elite craftsmanship for industrial, commercial, and residential clients.</p>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-electric-orange mb-6">QUICK ACCESS</h3>
+<ul class="flex flex-col gap-3">
+<li><a class="text-on-tertiary-fixed-variant hover:text-electric-orange transition-colors font-body-md" href="our-services-quinn-electrical.html">Our Services</a></li>
+<li><a class="text-on-tertiary-fixed-variant hover:text-electric-orange transition-colors font-body-md" href="our-services-quinn-electrical.html">Emergency Callouts</a></li>
+<li><a class="text-on-tertiary-fixed-variant hover:text-electric-orange transition-colors font-body-md" href="testimonials-quinn-electrical.html">Project Gallery</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-electric-orange mb-6">RESOURCES</h3>
+<ul class="flex flex-col gap-3">
+<li><a class="text-on-tertiary-fixed-variant hover:text-electric-orange transition-colors font-body-md" href="our-services-quinn-electrical.html">Safety Certs</a></li>
+<li><a class="text-on-tertiary-fixed-variant hover:text-electric-orange transition-colors font-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-tertiary-fixed-variant hover:text-electric-orange transition-colors font-body-md" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-electric-orange mb-6">CONTACT DISPATCH</h3>
+<p class="text-on-surface font-bold font-headline-md mb-2">0116 123 4567</p>
+<p class="text-on-tertiary-fixed-variant font-body-md mb-4">24/7 Emergency Support Lines</p>
+<div class="flex gap-4">
+<a class="bg-surface-container p-2 rounded hover:bg-electric-orange transition-colors group" href="testimonials-quinn-electrical.html">
+<span class="material-symbols-outlined text-[20px] text-on-surface group-hover:text-black">share</span>
+</a>
+<a class="bg-surface-container p-2 rounded hover:bg-electric-orange transition-colors group" href="contact-us-quinn-electrical.html">
+<span class="material-symbols-outlined text-[20px] text-on-surface group-hover:text-black">mail</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-stack-lg pt-stack-lg border-t border-wire-gray/20">
+<p class="text-on-tertiary-fixed-variant font-label-caps text-label-caps text-center opacity-80">
+                © 2024 Quinn Electrical Contractors. Precision Engineering &amp; Elite Craftsmanship.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for form focus
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label')?.classList.add('text-electric-orange');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label')?.classList.remove('text-electric-orange');
+            });
+        });
+    </script>
+</body></html>

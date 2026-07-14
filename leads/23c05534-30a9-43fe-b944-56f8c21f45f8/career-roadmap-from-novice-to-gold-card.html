@@ -1,0 +1,423 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Electrician's Career Map | ECNM BHM Birmingham Centre of Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Montserrat:wght@700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#e9c400",
+                        "on-secondary-container": "#725f00",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "zinc-surface": "#1E1E1E",
+                        "outline": "#849396",
+                        "surface": "#131313",
+                        "on-tertiary": "#313030",
+                        "surface-dim": "#131313",
+                        "secondary-container": "#ffdb3c",
+                        "on-primary-fixed": "#001f24",
+                        "obsidian-base": "#0A0A0A",
+                        "primary": "#c3f5ff",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#d2d0cf",
+                        "inverse-primary": "#006875",
+                        "secondary": "#fff9ef",
+                        "tertiary": "#efeceb",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary": "#3a3000",
+                        "on-surface-variant": "#bac9cc",
+                        "on-secondary-fixed-variant": "#544600",
+                        "on-primary-fixed-variant": "#004f58",
+                        "outline-variant": "#3b494c",
+                        "on-tertiary-container": "#5a5959",
+                        "electric-cyan": "#00E5FF",
+                        "surface-container-highest": "#353534",
+                        "surface-container": "#201f1f",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#00363d",
+                        "error": "#ffb4ab",
+                        "vat-muted": "#888888",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#e5e2e1",
+                        "safety-yellow": "#FFD700",
+                        "on-secondary-fixed": "#221b00",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#9cf0ff",
+                        "background": "#131313",
+                        "surface-tint": "#00daf3",
+                        "secondary-fixed": "#ffe16d",
+                        "primary-fixed-dim": "#00daf3",
+                        "primary-container": "#00e5ff",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "surface-variant": "#353534",
+                        "on-primary-container": "#00626e",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-bright": "#3a3939",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Inter"],
+                        "price-display": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "price-display": ["32px", {"lineHeight": "32px", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glow-cyan {
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+        }
+        .card-glass {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .timeline-connector {
+            background: linear-gradient(to bottom, #00E5FF 0%, transparent 100%);
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+        }
+        @keyframes pulse-cyan {
+            0%, 100% { box-shadow: 0 0 10px rgba(0, 229, 255, 0.2); }
+            50% { box-shadow: 0 0 25px rgba(0, 229, 255, 0.6); }
+        }
+        .active-pulse {
+            animation: pulse-cyan 3s infinite ease-in-out;
+        }
+        .career-path-svg {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+            height: 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-electric-cyan selection:text-obsidian-base">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl dark:bg-surface/70 border-b border-white/10 shadow-lg shadow-electric-cyan/10">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="text-body-lg font-headline-md font-bold text-electric-cyan tracking-tighter">
+                ECNM BHM
+            </div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-electric-cyan transition-colors text-label-bold font-label-bold" href="index.html">Courses</a>
+<a class="text-electric-cyan border-b-2 border-electric-cyan pb-1 text-label-bold font-label-bold" href="career-roadmap-from-novice-to-gold-card.html">Career Map</a>
+<a class="text-on-surface-variant hover:text-electric-cyan transition-colors text-label-bold font-label-bold" href="career-roadmap-from-novice-to-gold-card.html">Birmingham Hub</a>
+<a class="text-on-surface-variant hover:text-electric-cyan transition-colors text-label-bold font-label-bold" href="index.html">About</a>
+</div>
+<div class="flex items-center space-x-6">
+<a class="hidden lg:block text-electric-cyan font-label-bold hover:scale-105 transition-transform" href="tel:01215550123">0121 555 0123</a>
+<button class="bg-electric-cyan text-on-primary px-6 py-2 rounded-DEFAULT font-label-bold text-label-bold hover:scale-105 transition-transform active:scale-95 shadow-[0_0_20px_rgba(0,229,255,0.2)]">
+                    Enquire Now
+                </button>
+</div>
+</div>
+</nav>
+<main class="relative pt-32 pb-24">
+<!-- Background Atmospheric Element -->
+<div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+
+</div>
+<section class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header -->
+<div class="text-center mb-24">
+<span class="inline-block bg-electric-cyan/10 text-electric-cyan px-4 py-1 rounded-full text-label-bold font-label-bold mb-4 active-pulse">
+                    PROFESSIONAL PATHWAY
+                </span>
+<h1 class="text-headline-lg-mobile md:text-display-lg font-headline-lg md:font-display-lg text-on-surface mb-6 leading-tight">
+                    Electrician's <span class="text-electric-cyan glow-cyan">Career Map</span>
+</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    From absolute beginner to fully qualified Gold Card holder. Navigate your future with our accredited training route designed for high-stakes professional success.
+                </p>
+</div>
+<!-- Timeline Content -->
+<div class="relative max-w-4xl mx-auto">
+<!-- Vertical Line (Desktop) -->
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-electric-cyan via-electric-cyan/50 to-safety-yellow transform -translateX-1/2 opacity-20"></div>
+<!-- Stage 1 -->
+<div class="relative mb-32 flex flex-col md:flex-row items-center justify-between group">
+<div class="w-full md:w-5/12 order-2 md:order-1">
+<div class="card-glass p-gutter rounded-xl hover:border-electric-cyan/50 transition-all duration-300 transform hover:-translate-y-2">
+<div class="flex items-center gap-3 mb-4">
+<span class="text-electric-cyan text-headline-md font-headline-md">01</span>
+<h3 class="text-headline-md font-headline-md">Level 2 Diploma</h3>
+</div>
+<p class="text-on-surface-variant mb-6 text-body-md font-body-md">
+                                Your starting point. Focuses on domestic wiring, health and safety, installation theory, and electrical science. The essential foundation for your career.
+                            </p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-white/5 rounded text-[12px] font-label-bold text-vat-muted border border-white/10 uppercase tracking-widest">C&amp;G 2365-02</span>
+</div>
+</div>
+</div>
+<div class="z-20 mb-8 md:mb-0 order-1 md:order-2">
+<div class="w-16 h-16 rounded-full bg-obsidian-base border-4 border-electric-cyan flex items-center justify-center active-pulse">
+<span class="material-symbols-outlined text-electric-cyan" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+<div class="hidden md:block w-5/12 order-3"></div>
+</div>
+<!-- Stage 2 -->
+<div class="relative mb-32 flex flex-col md:flex-row items-center justify-between group">
+<div class="hidden md:block w-5/12 order-1"></div>
+<div class="z-20 mb-8 md:mb-0 order-1 md:order-2">
+<div class="w-16 h-16 rounded-full bg-obsidian-base border-4 border-electric-cyan flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-cyan">architecture</span>
+</div>
+</div>
+<div class="w-full md:w-5/12 order-2 md:order-3">
+<div class="card-glass p-gutter rounded-xl hover:border-electric-cyan/50 transition-all duration-300 transform hover:-translate-y-2">
+<div class="flex items-center gap-3 mb-4">
+<span class="text-electric-cyan text-headline-md font-headline-md">02</span>
+<h3 class="text-headline-md font-headline-md">Level 3 Diploma</h3>
+</div>
+<p class="text-on-surface-variant mb-6 text-body-md font-body-md">
+                                Advance into critical skills: electrical design, advanced science, inspection and testing, and fault-finding. Moving from domestic to commercial mastery.
+                            </p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-white/5 rounded text-[12px] font-label-bold text-vat-muted border border-white/10 uppercase tracking-widest">C&amp;G 2366-03</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stage 3 -->
+<div class="relative mb-32 flex flex-col md:flex-row items-center justify-between group">
+<div class="w-full md:w-5/12 order-2 md:order-1">
+<div class="card-glass p-gutter rounded-xl hover:border-electric-cyan/50 transition-all duration-300 transform hover:-translate-y-2">
+<div class="flex items-center gap-3 mb-4">
+<span class="text-electric-cyan text-headline-md font-headline-md">03</span>
+<h3 class="text-headline-md font-headline-md">NVQ Portfolio</h3>
+</div>
+<p class="text-on-surface-variant mb-6 text-body-md font-body-md">
+                                Document your practical mastery on-site. Using our online system, upload evidence from real-world projects to satisfy JIB requirements.
+                            </p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-safety-yellow/10 rounded text-[12px] font-label-bold text-safety-yellow border border-safety-yellow/20 uppercase tracking-widest">ON-SITE WORK</span>
+</div>
+</div>
+</div>
+<div class="z-20 mb-8 md:mb-0 order-1 md:order-2">
+<div class="w-16 h-16 rounded-full bg-obsidian-base border-4 border-electric-cyan flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-cyan">assignment_turned_in</span>
+</div>
+</div>
+<div class="hidden md:block w-5/12 order-3"></div>
+</div>
+<!-- Stage 4 -->
+<div class="relative mb-32 flex flex-col md:flex-row items-center justify-between group">
+<div class="hidden md:block w-5/12 order-1"></div>
+<div class="z-20 mb-8 md:mb-0 order-1 md:order-2">
+<div class="w-16 h-16 rounded-full bg-obsidian-base border-4 border-electric-cyan flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-cyan">verified_user</span>
+</div>
+</div>
+<div class="w-full md:w-5/12 order-2 md:order-3">
+<div class="card-glass p-gutter rounded-xl hover:border-electric-cyan/50 transition-all duration-300 transform hover:-translate-y-2">
+<div class="flex items-center gap-3 mb-4">
+<span class="text-electric-cyan text-headline-md font-headline-md">04</span>
+<h3 class="text-headline-md font-headline-md">AM2 Assessment</h3>
+</div>
+<p class="text-on-surface-variant mb-6 text-body-md font-body-md">
+                                The ultimate test of competence. A 2.5-day practical assessment at an independent centre. The final hurdle before your full qualification.
+                            </p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-error-container/20 rounded text-[12px] font-label-bold text-error border border-error/20 uppercase tracking-widest">CRITICAL EXAM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stage 5: Gold Card -->
+<div class="relative flex flex-col items-center">
+<div class="z-30 mb-8">
+<div class="w-24 h-24 rounded-full bg-safety-yellow border-4 border-white shadow-[0_0_40px_rgba(255,215,0,0.5)] flex items-center justify-center active-pulse">
+<span class="material-symbols-outlined text-obsidian-base scale-150" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+<div class="w-full text-center">
+<div class="card-glass p-gutter rounded-xl border-safety-yellow/30 bg-gradient-to-br from-zinc-surface to-safety-yellow/5">
+<h2 class="text-headline-lg font-headline-lg text-safety-yellow mb-4">ECS Gold Card</h2>
+<p class="text-body-lg font-body-lg text-on-surface mb-8">
+                                Congratulations! You are now a fully qualified JIB Approved Electrician. Qualified for Domestic, Commercial, and Industrial work globally.
+                            </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+<div class="p-4 bg-obsidian-base rounded border border-white/5">
+<div class="text-safety-yellow font-bold text-xl">£35k+</div>
+<div class="text-xs text-vat-muted uppercase">Avg Salary</div>
+</div>
+<div class="p-4 bg-obsidian-base rounded border border-white/5">
+<div class="text-safety-yellow font-bold text-xl">Elite</div>
+<div class="text-xs text-vat-muted uppercase">JIB Status</div>
+</div>
+<div class="p-4 bg-obsidian-base rounded border border-white/5">
+<div class="text-safety-yellow font-bold text-xl">Global</div>
+<div class="text-xs text-vat-muted uppercase">Opportunities</div>
+</div>
+<div class="p-4 bg-obsidian-base rounded border border-white/5">
+<div class="text-safety-yellow font-bold text-xl">Secure</div>
+<div class="text-xs text-vat-muted uppercase">AI Protected</div>
+</div>
+</div>
+<button class="bg-safety-yellow text-on-secondary px-8 py-4 rounded-full font-label-bold text-label-bold hover:scale-105 transition-transform shadow-xl">
+                                Start Your Journey Today
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Features -->
+<section class="mt-48 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+<h2 class="text-headline-lg font-headline-lg text-center mb-16">The Road to <span class="text-electric-cyan">Mastery</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 card-glass p-gutter rounded-xl flex flex-col justify-end min-h-[300px] relative overflow-hidden group">
+<div class="absolute inset-0 z-0 opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="Close up of high quality electrical wiring and professional tools in a clean modern workshop environment, shot with shallow depth of field, dramatic cinematic lighting, cyan and amber color grade, premium trade aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFXZxGIkv9feZTll70OjyJ3a2lkXT3UoP6Vh7UUuJvifuevNTyZK9VbB9aiRTddaIHqjOEPAgbfVMO239MZUKTW_6qBZieFBSKbvyMZI-msixtshXf14EczQEdg8piP7lR2AX5URUG47C1r1hM2fByn61Iugm73P9-ATzueYFx2NTLxXkBEL13avt39A2M2Aa65-c1_0bSmS3m10y-DoX9TthUJVMjz5tsFlNUhmLkFs6U3dI9oRDP')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-obsidian-base via-obsidian-base/60 to-transparent z-10"></div>
+<div class="relative z-20">
+<h3 class="text-headline-md font-headline-md mb-2">Birmingham Training Hub</h3>
+<p class="text-on-surface-variant mb-4 max-w-md">Train in our state-of-the-art facility in the heart of the Jewellery Quarter. Industry-standard equipment and expert instructors.</p>
+<a class="text-electric-cyan font-label-bold flex items-center gap-2" href="career-roadmap-from-novice-to-gold-card.html">View Location <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="card-glass p-gutter rounded-xl border-safety-yellow/20 flex flex-col items-center text-center justify-center">
+<span class="material-symbols-outlined text-safety-yellow text-5xl mb-4" style="font-variation-settings: 'FILL' 1;">work</span>
+<h3 class="text-headline-md font-headline-md mb-2">Guaranteed Work</h3>
+<p class="text-on-surface-variant text-body-md">We source your NVQ placement with trusted local employers, letting you earn while you learn.</p>
+</div>
+<div class="card-glass p-gutter rounded-xl flex flex-col justify-center">
+<div class="text-electric-cyan font-display-lg font-bold mb-0">12</div>
+<div class="text-headline-md font-headline-md mb-4 leading-tight">Months to Qualified</div>
+<p class="text-on-surface-variant text-body-md">Our fast-track route is designed for focused career changers who want to bypass the 4-year wait.</p>
+</div>
+<div class="md:col-span-2 card-glass p-gutter rounded-xl flex items-center gap-gutter">
+<div class="hidden sm:block w-32 h-32 rounded-lg bg-zinc-surface border border-white/10 flex-shrink-0 flex items-center justify-center overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="A portrait of a confident professional electrician wearing a high-vis vest and branded ECNM uniform, looking towards the camera in a modern industrial setting, bright electric cyan lighting highlights, sharp focus, cinematic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtEtP1knfU_MQeDsxADufPkxC1aD7MhBbiEu__BrM225A9_32gjNtPdf5GcJeijlWue-nLPCQ3UgI6Qx6ok30GaZhX1naadRk1wtLIB_f4tgpAXZ3_71EcRYTsXfXY3Y7-zPQPE-n7YkuL3YQ8kpckvdv6SuvPexULrJvAFEY1tm7Ylss_XE06TFgR_eZ7arZiOZ74H3rjVGWGmyVlilYmgo_evF5vl-VwIrcidkDHGqW6PWr76GCm">
+</div>
+<div>
+<h3 class="text-headline-md font-headline-md mb-2">Expert Tutors</h3>
+<p class="text-on-surface-variant text-body-md mb-2">Learn from industry veterans like Laethian, Mark, and Steve who have decades of field experience.</p>
+<div class="flex items-center gap-2 text-safety-yellow">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-vat-muted ml-2">Trustpilot 4.9/5</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-obsidian-base border-t border-white/5 py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="text-headline-md font-headline-md text-electric-cyan mb-6">ECNM BHM</div>
+<p class="text-on-surface-variant text-body-md max-w-md mb-8">
+                    The Birmingham Centre of Excellence for electrical training. We specialize in taking career changers from zero to fully qualified in the fastest possible time.
+                </p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-electric-cyan/20 transition-colors" href="career-roadmap-from-novice-to-gold-card.html">
+<span class="material-symbols-outlined text-on-surface">face_nod</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-electric-cyan/20 transition-colors" href="career-roadmap-from-novice-to-gold-card.html">
+<span class="material-symbols-outlined text-on-surface">linked_camera</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-on-surface font-label-bold text-label-bold uppercase tracking-widest mb-6">Course Path</h4>
+<ul class="space-y-4">
+<li><a class="text-vat-muted hover:text-white transition-colors text-body-md" href="career-roadmap-from-novice-to-gold-card.html">Level 3 NVQ</a></li>
+<li><a class="text-vat-muted hover:text-white transition-colors text-body-md" href="career-roadmap-from-novice-to-gold-card.html">18th Edition</a></li>
+<li><a class="text-vat-muted hover:text-white transition-colors text-body-md" href="career-roadmap-from-novice-to-gold-card.html">Gold Card Route</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-label-bold text-label-bold uppercase tracking-widest mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-vat-muted hover:text-white transition-colors text-body-md" href="index.html">Contact Us</a></li>
+<li><a class="text-vat-muted hover:text-white transition-colors text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-vat-muted hover:text-white transition-colors text-body-md" href="index.html">About Us</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-white/5 text-center md:text-left">
+<p class="text-vat-muted text-label-bold text-xs uppercase tracking-widest">
+                © 2024 Electrician Courses Near Me Limited. Birmingham Centre of Excellence.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-glass').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out');
+            observer.observe(card);
+        });
+
+        // Parallax effect for shader
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const shader = document.querySelector('webgl-shader');
+            if (shader) {
+                shader.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+    </script>
+</body></html>

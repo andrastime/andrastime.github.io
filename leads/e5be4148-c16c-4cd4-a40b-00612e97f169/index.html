@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AG Property Services | Professional Handyman Birmingham</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#00201b",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed-variant": "#0f5046",
+                        "on-tertiary": "#003354",
+                        "background": "#131313",
+                        "on-primary-fixed-variant": "#574500",
+                        "inverse-primary": "#735c00",
+                        "outline": "#99907c",
+                        "on-tertiary-container": "#004875",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed-dim": "#98cbff",
+                        "surface-dim": "#131313",
+                        "secondary-fixed-dim": "#97d2c5",
+                        "inverse-on-surface": "#313030",
+                        "surface-container": "#201f1f",
+                        "secondary": "#97d2c5",
+                        "surface-variant": "#353534",
+                        "on-tertiary-fixed-variant": "#004a77",
+                        "tertiary-fixed": "#cfe5ff",
+                        "outline-variant": "#4d4635",
+                        "surface-container-highest": "#353534",
+                        "on-primary-fixed": "#241a00",
+                        "surface-tint": "#e9c349",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-fixed": "#b3eee1",
+                        "on-secondary": "#003730",
+                        "primary-fixed-dim": "#e9c349",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#ffe088",
+                        "primary-container": "#d4af37",
+                        "tertiary-container": "#6cb9ff",
+                        "primary": "#f2ca50",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "secondary-container": "#0f5046",
+                        "on-surface-variant": "#d0c5af",
+                        "on-primary": "#3c2f00",
+                        "tertiary": "#a9d3ff",
+                        "on-secondary-container": "#86c0b4",
+                        "surface-bright": "#3a3939",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-fixed": "#001d33",
+                        "on-error": "#690005",
+                        "surface": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#0e0e0e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Sora"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Sora"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0F0F0F;
+            color: #e5e2e1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card-high {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(40px);
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        .primary-glow {
+            box-shadow: 0 0 24px rgba(212, 175, 55, 0.2);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(15, 15, 15, 0.6), #0F0F0F);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav {
+            color: #f2ca50;
+            font-weight: 700;
+            border-bottom: 2px solid #f2ca50;
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-background/80 backdrop-blur-lg border-b border-white/10">
+<div class="flex items-center gap-4">
+<img alt="AG Property Services Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLuza3YxShD2MUmJR7KS224bG9XBqQtCANzIetxeH132c9HAyriHd748Szuy-vjJ-DDB-6TTJV_fdksqr8VrkufPTTmrFy3VXP3WvtRyiKSQiA8NfXj47lbGF4ce5uP9dpqjdWLkSEjhoUyn-wj3QCJwRcJhhyVrfrPzL1gtD5GcMVBSclPmluWb5UWbRwNH4Y-A1UlI4OXT8Y6p5lci7JYE9OK4tOn2XgEiDYGfgv7q-Xq7BEPpH6qZa7w"/>
+<span class="font-headline-lg text-on-surface uppercase tracking-tighter hidden lg:block">AG Property Services</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="active-nav font-label-sm text-label-sm" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#">Areas</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#">Reviews</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#">Gallery</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block text-primary font-bold font-label-sm text-label-sm" href="tel:07346810436">07346 810436</a>
+<a class="bg-primary-container text-on-primary px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform primary-glow" href="#">Get Free Quote</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, high-contrast shot of a luxury residential property interior in Birmingham, featuring warm ambient lighting and professional carpentry details. The scene has a moody, dark-mode aesthetic with deep shadows and golden highlights reflecting off polished surfaces. High-end tools are neatly placed on a workbench in the background, signifying precision and craftsmanship." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0pHI7hS3DqPCRz7IdW_ZT6jQxpqlvAtXV3AQUi8cVorAI47qE1IA6IPeAXiew2OaiMjVv4PNRKzalKbgClv8gitHE1tVt1BkiHGhtJCv8jxtY9Jf0RRlHa5y-AUtfhw0kZTHVVXfTg-rXW4rvyz4FM7cKFhpinfp8swJ7-b_VDjhq1w8pAff1TaCKw9GORXc73lYgK-p5AwuTYruaG9xRjiJsECgSOFRqfjPM21xyLmDNJt-U4DhY')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="max-w-3xl space-y-8">
+<span class="inline-block bg-primary/10 text-primary border border-primary/20 px-4 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-widest">Same-Day Service Available</span>
+<h1 class="font-headline-xl text-headline-xl md:text-display-lg md:leading-[80px]">
+                    Professional Handyman &amp; Property Maintenance in <span class="text-primary">Birmingham</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Trusted by 100+ homeowners, landlords and letting agents. 5-star rated. Fully insured. Honest pricing — no hidden fees.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 primary-glow transition-all hover:scale-[1.02]" href="#">
+                        Get a Free Quote <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="glass-card px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-white/10 transition-all" href="tel:07346810436">
+<span class="material-symbols-outlined">call</span> Call 07346 810436
+                    </a>
+<a class="bg-[#25D366] text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all" href="#">
+<span class="material-symbols-outlined">chat</span> WhatsApp
+                    </a>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p><strong>5.0</strong> · 7 Google Reviews · 100+ jobs delivered</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="py-12 bg-surface-container-low border-y border-white/5">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col gap-1 items-center md:items-start">
+<span class="font-headline-lg text-primary">5.0 Stars</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">7 Google Reviews</span>
+</div>
+<div class="flex flex-col gap-1 items-center md:items-start">
+<span class="font-headline-lg text-primary">Fully Insured</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">£2M Public Liability</span>
+</div>
+<div class="flex flex-col gap-1 items-center md:items-start">
+<span class="font-headline-lg text-primary">Same-Day</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Service Available</span>
+</div>
+<div class="flex flex-col gap-1 items-center md:items-start">
+<span class="font-headline-lg text-primary">Free Quotes</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">No hidden costs</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest block mb-4">What We Do</span>
+<h2 class="font-headline-xl text-headline-xl mb-4">Every job, done right the first time</h2>
+<p class="text-on-surface-variant text-body-lg font-body-lg">From emergency plumbing to a full repaint — one trusted team for your whole property.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 group" href="#">
+                    View all services <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service Cards -->
+<div class="glass-card p-8 rounded-xl group hover:border-primary/50 transition-all cursor-pointer relative overflow-hidden">
+<div class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase">Popular</div>
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="emergency_home">emergency_home</span>
+<h3 class="font-headline-lg text-headline-lg mb-2">Emergency Repairs</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Boilers, electrics, leaks — rapid response when you need it most.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-primary font-bold">From £85</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl group hover:border-primary/50 transition-all cursor-pointer relative">
+<div class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase">Popular</div>
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="plumbing">plumbing</span>
+<h3 class="font-headline-lg text-headline-lg mb-2">Plumbing Repairs</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Taps, pipes, toilets and full installations across Birmingham.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-primary font-bold">From £65</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl group hover:border-primary/50 transition-all cursor-pointer relative">
+<div class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase">Popular</div>
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="electrical_services">electrical_services</span>
+<h3 class="font-headline-lg text-headline-lg mb-2">Electrical Repairs</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Certified electrical repairs and safety checks for peace of mind.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-primary font-bold">From £75</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl group hover:border-primary/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="door_front">door_front</span>
+<h3 class="font-headline-lg text-headline-lg mb-2">Door &amp; Lock Repairs</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Broken hinges, frames and locks — fixed the same day.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-primary font-bold">From £55</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+<!-- Second Row -->
+<div class="glass-card p-8 rounded-xl group hover:border-primary/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="format_paint">format_paint</span>
+<h3 class="font-headline-lg text-headline-lg mb-2">Painting &amp; Decorating</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Interior and exterior decorating with a flawless finish.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-primary font-bold">Call for quote</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl group hover:border-primary/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="carpenter">carpenter</span>
+<h3 class="font-headline-lg text-headline-lg mb-2">Carpentry</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Bespoke shelves, fitted furniture and timber repairs.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-primary font-bold">From £95</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl group hover:border-primary/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="textures">texture</span>
+<h3 class="font-headline-lg text-headline-lg mb-2">Plastering</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Smooth, ready-to-paint walls and ceilings for any room.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-primary font-bold">Call for quote</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl group hover:border-primary/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="window">window</span>
+<h3 class="font-headline-lg text-headline-lg mb-2">Window Repairs</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Restore draughty, leaking or sticking windows with ease.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-primary font-bold">From £65</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-6">
+<div class="text-center md:text-left">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest block mb-4">Real Reviews</span>
+<h2 class="font-headline-xl text-headline-xl">Trusted by your neighbours</h2>
+<p class="text-on-surface-variant font-body-lg mt-2">5.0 average across 7 Google reviews — and growing.</p>
+</div>
+<a class="glass-card px-8 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-white/10 transition-all" href="#">
+                    Read all reviews <span class="material-symbols-outlined">reviews</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="glass-card p-10 rounded-2xl relative">
+<div class="flex text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-8 font-body-lg">"Called at 8pm on a Sunday with a burst pipe under the sink. Arrived within the hour, fixed it cleanly and the price was exactly what was quoted. Genuine lifesavers — already booked them for radiator work."</p>
+<div class="pt-6 border-t border-white/10">
+<p class="font-bold text-on-surface">Sarah M.</p>
+<p class="text-sm text-on-surface-variant">Edgbaston, Birmingham · Emergency Plumbing</p>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="glass-card p-10 rounded-2xl relative">
+<div class="flex text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-8 font-body-lg">"Quoted three companies and AG were the most professional from the first phone call. Full bathroom refit done in 4 days, no mess, no surprises. The tiling is faultless."</p>
+<div class="pt-6 border-t border-white/10">
+<p class="font-bold text-on-surface">James P.</p>
+<p class="text-sm text-on-surface-variant">Solihull · Bathroom Refit</p>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="glass-card p-10 rounded-2xl relative">
+<div class="flex text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-8 font-body-lg">"Had three sockets replaced and a new outdoor light fitted. Turned up on time, explained everything, certificate provided. Honest pricing and tidy work — exactly what you want from a tradesman."</p>
+<div class="pt-6 border-t border-white/10">
+<p class="font-bold text-on-surface">Priya K.</p>
+<p class="text-sm text-on-surface-variant">Sutton Coldfield · Electrical Repairs</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Highlights & How it Works -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest block mb-4">Why AG Property</span>
+<h2 class="font-headline-xl text-headline-xl mb-8">A name you can actually trust</h2>
+<p class="text-on-surface-variant text-body-lg mb-10">No vague quotes, no surprise charges, no missed appointments. Just clean, professional work backed by real reviews.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Fully insured &amp; certified</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>5-star Google rating</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Same-day response times</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Transparent quotes within 2hrs</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>12-month workmanship guarantee</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>24/7 emergency support</span>
+</div>
+</div>
+<a class="bg-primary text-on-primary px-10 py-4 rounded-lg font-bold inline-flex items-center gap-2 primary-glow hover:scale-105 transition-transform" href="#">
+                        Get a free quote <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="glass-card-high p-12 rounded-3xl">
+<h3 class="font-headline-lg text-headline-lg mb-10 text-primary">How it works</h3>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center font-bold text-primary">1</div>
+<div>
+<h4 class="font-bold text-xl mb-2 text-on-surface">Tell us what's needed</h4>
+<p class="text-on-surface-variant">Fill the 60-second form, call, or send a WhatsApp with photos.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center font-bold text-primary">2</div>
+<div>
+<h4 class="font-bold text-xl mb-2 text-on-surface">Free written quote in 2 hours</h4>
+<p class="text-on-surface-variant">Fixed price, no call-out fees, no surprises.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center font-bold text-primary">3</div>
+<div>
+<h4 class="font-bold text-xl mb-2 text-on-surface">Booked, completed, guaranteed</h4>
+<p class="text-on-surface-variant">Clean, professional work backed by a 12-month guarantee.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Coverage Section -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest block mb-4">Coverage</span>
+<h2 class="font-headline-xl text-headline-xl mb-6">Serving Birmingham &amp; the West Midlands</h2>
+<p class="text-on-surface-variant font-body-lg mb-12">Same-day service across our core areas. Call us for anywhere within 20km.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<span class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold">Birmingham</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Solihull</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Wolverhampton</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Sutton Coldfield</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Dudley</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Walsall</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">West Bromwich</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Smethwick</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Halesowen</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Stourbridge</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Oldbury</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Tipton</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Coventry</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Tamworth</span>
+<span class="glass-card px-6 py-2 rounded-full font-bold">Lichfield</span>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="relative rounded-3xl overflow-hidden bg-surface-container-high border border-white/10 p-12 md:p-20 text-center">
+<div class="absolute inset-0 z-0 opacity-20">
+<div class="w-full h-full bg-cover bg-center" data-alt="A macro photograph of skilled hands using a high-end screwdriver on a modern architectural fixture. The lighting is focused and dramatic, highlighting the texture of the metal and the precision of the work. The color palette is dominated by dark, industrial tones with warm golden light reflecting off metallic surfaces, creating a sense of expert luxury and reliability." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqt08jmbGoPkulzZUlkvNsXj8pGjl2ie0CtYldzRcrenHuGPtgspeWyZGpy0FJ28Bnk01rzYqjp4HvcZ6k-Sfknmz4zrSeetJHteFyhznywMn3XwNWN_E2VpswGoc8mpwq9Sr2ozaH80b1SvHnjzffXZbwaZDSRoXFhmBGfGndyRlGB-VeDyYkyB9sVYc5MQdVOZuOD4ztBBpfJM6MeOH7YA0gMpX47pgoSO7C_w5VZWldqvHhRK_P')"></div>
+</div>
+<div class="relative z-10 space-y-8">
+<h2 class="font-headline-xl text-headline-xl md:text-[56px] leading-tight max-w-4xl mx-auto">Need repairs done right the first time?</h2>
+<p class="text-on-surface-variant text-body-lg max-w-2xl mx-auto">Get a free quote today — response within 2 hours during business hours.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+<a class="bg-primary text-on-primary px-12 py-5 rounded-xl font-bold text-lg primary-glow hover:scale-105 transition-transform" href="#">
+                            Request Your Free Quote
+                        </a>
+<a class="glass-card px-12 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2" href="tel:07346810436">
+<span class="material-symbols-outlined">call</span> 07346 810436
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-surface-container-lowest border-t border-white/5">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="flex items-center gap-3">
+<img alt="AG Property Services Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLuza3YxShD2MUmJR7KS224bG9XBqQtCANzIetxeH132c9HAyriHd748Szuy-vjJ-DDB-6TTJV_fdksqr8VrkufPTTmrFy3VXP3WvtRyiKSQiA8NfXj47lbGF4ce5uP9dpqjdWLkSEjhoUyn-wj3QCJwRcJhhyVrfrPzL1gtD5GcMVBSclPmluWb5UWbRwNH4Y-A1UlI4OXT8Y6p5lci7JYE9OK4tOn2XgEiDYGfgv7q-Xq7BEPpH6qZa7w"/>
+<div>
+<h3 class="font-headline-lg text-primary text-xl">AG Property Services</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Repairs · Maintenance · Improvements</p>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-md">Premium handyman and property maintenance across Birmingham and the West Midlands. 5-star rated, fully insured, and trusted by 100+ homeowners and letting agents.</p>
+</div>
+<div>
+<h4 class="font-headline-lg text-lg mb-8">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-white transition-colors font-body-md" href="#">Services</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors font-body-md" href="#">Areas We Cover</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors font-body-md" href="#">Reviews</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors font-body-md" href="#">Gallery</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors font-body-md" href="#">About</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors font-body-md" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-lg text-lg mb-8">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-white transition-colors font-body-md" href="#">Plumbing</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors font-body-md" href="#">Electrical</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors font-body-md" href="#">Carpentry</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors font-body-md" href="#">Painting</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors font-body-md" href="#">Emergency Repairs</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors font-body-md" href="#">Property Maintenance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-lg text-lg mb-8">Get In Touch</h4>
+<ul class="space-y-4 text-on-surface-variant font-body-md">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<a class="hover:text-white transition-colors" href="tel:07346810436">07346 810436</a>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<a class="hover:text-white transition-colors" href="mailto:hello@agpropertyservices.co.uk">hello@agpropertyservices.co.uk</a>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>Birmingham &amp; West Midlands</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<p>Mon–Fri 7AM–6PM</p>
+<p>Sat 8AM–4PM · Sun closed</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="col-span-full pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 mt-16">
+<p class="text-on-surface-variant font-label-sm text-label-sm">© 2026 AG Property Services. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-white transition-colors font-label-sm text-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-white transition-colors font-label-sm text-label-sm" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-white transition-colors font-label-sm text-label-sm" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const heroImage = document.querySelector('.absolute.inset-0.z-0 div');
+            if(heroImage) {
+                heroImage.style.transform = `translateY(${scroll * 0.4}px)`;
+            }
+        });
+    </script>
+</body></html>

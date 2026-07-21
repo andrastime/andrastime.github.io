@@ -1,0 +1,412 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | The Handyman London</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .glass-card {
+            background: rgba(39, 42, 44, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(71, 85, 105, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: #FF5F00;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(0, 163, 255, 0.2);
+        }
+        .service-image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.75rem 0.75rem 0 0;
+        }
+        .service-image-container img {
+            transition: transform 0.5s ease;
+        }
+        .glass-card:hover .service-image-container img {
+            transform: scale(1.05);
+        }
+        .status-pulse {
+            width: 8px;
+            height: 8px;
+            background-color: #00A3FF;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 0 0 rgba(0, 163, 255, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 163, 255, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 163, 255, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 163, 255, 0); }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#272a2c",
+                      "electric-blue": "#00A3FF",
+                      "on-secondary-fixed": "#001d33",
+                      "on-surface-variant": "#e4bfb1",
+                      "secondary-container": "#00a2fd",
+                      "on-background": "#e0e3e5",
+                      "on-primary": "#5a1c00",
+                      "on-tertiary": "#2f3133",
+                      "error": "#ffb4ab",
+                      "surface-variant": "#323537",
+                      "background": "#101415",
+                      "primary-fixed": "#ffdbce",
+                      "safety-orange": "#FF5F00",
+                      "surface-container-low": "#191c1e",
+                      "outline-variant": "#5b4137",
+                      "on-secondary": "#003354",
+                      "inverse-on-surface": "#2d3133",
+                      "surface-container-lowest": "#0b0f10",
+                      "on-primary-container": "#531a00",
+                      "on-tertiary-fixed-variant": "#454749",
+                      "on-secondary-container": "#003558",
+                      "primary": "#ffb599",
+                      "inverse-surface": "#e0e3e5",
+                      "secondary-fixed-dim": "#98cbff",
+                      "metal-gray": "#475569",
+                      "on-tertiary-fixed": "#1a1c1e",
+                      "on-tertiary-container": "#2b2d2f",
+                      "tertiary-fixed": "#e2e2e5",
+                      "surface-dim": "#101415",
+                      "charcoal-black": "#0E1012",
+                      "tertiary-fixed-dim": "#c6c6c9",
+                      "surface-bright": "#363a3b",
+                      "secondary": "#98cbff",
+                      "tertiary": "#c6c6c9",
+                      "on-error": "#690005",
+                      "on-secondary-fixed-variant": "#004a77",
+                      "inverse-primary": "#a63b00",
+                      "primary-container": "#ff5f00",
+                      "surface-tint": "#ffb599",
+                      "error-container": "#93000a",
+                      "outline": "#ab8a7d",
+                      "primary-fixed-dim": "#ffb599",
+                      "surface-container-highest": "#323537",
+                      "on-primary-fixed": "#370e00",
+                      "surface-container": "#1d2022",
+                      "secondary-fixed": "#cfe5ff",
+                      "on-primary-fixed-variant": "#7f2b00",
+                      "tertiary-container": "#939496",
+                      "surface": "#101415",
+                      "on-surface": "#e0e3e5",
+                      "on-error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "base": "8px",
+                      "margin-mobile": "20px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "label-lg": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-xl": ["Montserrat"],
+                      "display-lg-mobile": ["Montserrat"],
+                      "label-sm": ["Inter"],
+                      "headline-lg": ["Montserrat"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Montserrat"],
+                      "headline-md": ["Montserrat"]
+              },
+              "fontSize": {
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-background/80 dark:bg-background/80 backdrop-blur-xl border-b border-metal-gray/20 shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface">
+                The Handyman <span class="text-safety-orange">London</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-electric-blue dark:text-electric-blue font-bold border-b-2 border-electric-blue pb-1 font-label-lg text-label-lg transition-all duration-300" href="#">Services</a>
+<a class="text-on-surface/80 dark:text-on-surface/80 hover:text-electric-blue transition-colors font-label-lg text-label-lg" href="index.html">About Us</a>
+<a class="text-on-surface/80 dark:text-on-surface/80 hover:text-electric-blue transition-colors font-label-lg text-label-lg" href="#">Case Studies</a>
+<a class="text-on-surface/80 dark:text-on-surface/80 hover:text-electric-blue transition-colors font-label-lg text-label-lg" href="#">Reviews</a>
+</div>
+<button class="bg-safety-orange text-on-primary-fixed hover:opacity-80 transition-all duration-300 font-label-lg text-label-lg px-6 py-2.5 rounded-lg font-bold Active:scale-95 transition-transform duration-200">
+                Book Now
+            </button>
+</nav>
+</header>
+<main class="min-h-screen relative">
+<!-- Atmospheric Background Shaders -->
+
+<!-- Hero Section -->
+<section class="relative pt-24 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+                    Premium Trade <br>
+<span class="text-safety-orange">Services</span> for London
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8">
+                    From bespoke carpentry to emergency electrical repairs, we provide tech-enabled maintenance solutions for London's most demanding homes and offices.
+                </p>
+<div class="flex items-center gap-4">
+<span class="status-pulse"></span>
+<span class="font-label-lg text-label-lg text-electric-blue tracking-wider uppercase">48 Specialized Experts Available Now</span>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Kitchen Repairs -->
+<article class="glass-card flex flex-col rounded-xl overflow-hidden group">
+<div class="service-image-container h-64">
+<img class="w-full h-full object-cover" data-alt="A high-end, modern kitchen in London with sleek dark cabinetry and polished marble countertops. Professional tools like a pipe wrench and spirit level are placed neatly on the surface. The lighting is crisp and cool, highlighting the metallic finishes and premium craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu7djvxyfmtrBaT3aNDfw7-bX63bpeBguumyujof2lQYFyDtl15FIm2gvV-0pYJVO_l4pOPOsVCK38U47-f5jaHLdNP0ltsFGv74rQha3YJOv4ybQr83p8pCFYzGtEwp6Mzl7lJpKrn6Htd7ehi9Fi1VYHLE_ifTpg17LB9dcrOH0yCr5dqQ97yS9Kfpim6FV_xAmiPoP5QaUqb4h8QO-jT7TbUK3lVowgbleLW_9e-_S6VbgkKeiT">
+<div class="absolute top-4 left-4 bg-charcoal-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-metal-gray/30">
+<span class="text-safety-orange font-label-sm text-label-sm uppercase tracking-widest">Plumbing &amp; Kitchen</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md mb-3">Kitchen Repairs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant/80 mb-8 flex-grow">
+                            Full-service maintenance for modern kitchens. From leaky faucets to integrated appliance installation and cabinet restoration.
+                        </p>
+<button class="w-full py-4 border border-safety-orange text-safety-orange font-bold rounded-lg hover:bg-safety-orange hover:text-white transition-all duration-300 Active:scale-95">
+                            Request Quote
+                        </button>
+</div>
+</article>
+<!-- Bathroom Maintenance -->
+<article class="glass-card flex flex-col rounded-xl overflow-hidden group">
+<div class="service-image-container h-64">
+<img class="w-full h-full object-cover" data-alt="A minimalist luxury bathroom featuring matte black fixtures and slate gray tiling. A professional plumber is working on a high-end shower installation using precision tools. The atmosphere is sophisticated and clean, with soft directional lighting creating sharp shadows and highlighting textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2i7RwhkDUgL6wgVHRfXm_odpVkQOjPZYeU5AXGUfbpbH1fltvLZ4vTGVqsMKevxQxf0jDLCy3pSurrg6zME0tB_ZkDDfPbcEsUL7hxfrwn2DrxqHoBwg_mELesNlugD1FycpT6lfpRBBk4xuEjmnwSpu_p9T97Pyxp_CqM758cEq7vpunDl8YezWxrxnJYOLCRsYDJbVVFb3cl6zDWT8tXdd2HFemyCMpvOod8ogBDRDOgt6uqjyK">
+<div class="absolute top-4 left-4 bg-charcoal-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-metal-gray/30">
+<span class="text-safety-orange font-label-sm text-label-sm uppercase tracking-widest">Sanitary Systems</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md mb-3">Bathroom Maintenance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant/80 mb-8 flex-grow">
+                            Preserving the sanctuary of your home. Expert grouting, silicone sealing, and precision plumbing for luxury bathrooms.
+                        </p>
+<button class="w-full py-4 border border-safety-orange text-safety-orange font-bold rounded-lg hover:bg-safety-orange hover:text-white transition-all duration-300 Active:scale-95">
+                            Request Quote
+                        </button>
+</div>
+</article>
+<!-- Electrical Safety -->
+<article class="glass-card flex flex-col rounded-xl overflow-hidden group">
+<div class="service-image-container h-64">
+<img class="w-full h-full object-cover" data-alt="Close up of a smart home electrical panel with vibrant blue LED indicators and organized wiring. A professional multimeter is testing a circuit, reflecting electric blue glows. The visual style is high-tech and industrial, set against a dark charcoal background with high-visibility safety orange accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJrV5Oahe_V50si_xRF7b6sl-5mzPZduswy_7llbh62eaYBpQ0hOTK56gFboYWPhbth1KR2fQZaBLoeiVxm8KEiqcoy3GxgAXmcIBy6WOVOQc30wtBDMtGsj3eVHlnlf1jVMJa4qegkTgpFpBS9j02pJ553ZN4pj64Saomz3TKej2ao-VCoswja4rhhIdFWVJEKzrTOB7IQWzf8FriZCc3p79HcOcfO7pwFKGpPKLWvqCXwCt_OIYa">
+<div class="absolute top-4 left-4 bg-charcoal-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-metal-gray/30">
+<span class="text-safety-orange font-label-sm text-label-sm uppercase tracking-widest">Certified Electrical</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md mb-3">Electrical Safety</h3>
+<p class="font-body-md text-body-md text-on-surface-variant/80 mb-8 flex-grow">
+                            NICEIC registered repairs. Smart lighting installation, consumer unit upgrades, and comprehensive safety testing for residential properties.
+                        </p>
+<button class="w-full py-4 border border-safety-orange text-safety-orange font-bold rounded-lg hover:bg-safety-orange hover:text-white transition-all duration-300 Active:scale-95">
+                            Request Quote
+                        </button>
+</div>
+</article>
+<!-- Bespoke Carpentry -->
+<article class="glass-card flex flex-col rounded-xl overflow-hidden group">
+<div class="service-image-container h-64">
+<img class="w-full h-full object-cover" data-alt="A master carpenter's workshop in London. Fine wood shavings on a dark workbench next to professional saws and chisels. A custom-built oak shelving unit is being assembled. The lighting is warm and golden, focusing on the intricate grain of the wood and the expert's hands." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMgCdH6jM5G5af2CZQaAG28imJ_M7FQoIBEywJEP_fa91wmGxugbD6FIMDhA6do-YemdMiI80DmMp3dbNr29n0BbmFPjoX-GwiDfHUO1I2hzQAeyO8KbwaTJBaWE8jq-5YRiY97Pwr6Dj-ZvkHGbWIdT8qsITgjjVat13MbiUSPLwmcYGRU-uwq_Hv3yV7xAf9vuF_FuKbkX87mzuawnv5gQkHO2BfVOnXn5GeBDCdP_S4jOtTlEHL">
+<div class="absolute top-4 left-4 bg-charcoal-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-metal-gray/30">
+<span class="text-safety-orange font-label-sm text-label-sm uppercase tracking-widest">Custom Woodwork</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md mb-3">Bespoke Carpentry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant/80 mb-8 flex-grow">
+                            Tailored storage solutions and structural woodwork. From alcove shelving to hardwood flooring and luxury trim installation.
+                        </p>
+<button class="w-full py-4 border border-safety-orange text-safety-orange font-bold rounded-lg hover:bg-safety-orange hover:text-white transition-all duration-300 Active:scale-95">
+                            Request Quote
+                        </button>
+</div>
+</article>
+<!-- Painting & Decorating -->
+<article class="glass-card flex flex-col rounded-xl overflow-hidden group">
+<div class="service-image-container h-64">
+<img class="w-full h-full object-cover" data-alt="A contemporary living room being transformed. Pristine white walls meet deep navy blue accent walls. High-quality paint cans and professional rollers are positioned on protective drop cloths. The mood is sophisticated and fresh, with bright natural light coming from a large London window." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_JMAuj45u5g0Nharr70mZjbGuP884yvgqRsUNw0sSh_wt-K9mb-Q2znfJ0229kYDSLUThQK0lQNCr75T5siU8YFs5x5fqv-e6mzlHDrze0lqF9FdKRgML5Cy2d5lggE-g90806Q8u57Fz1R9m3iLWX1MlXuyNs0yNbUOw6lK306mG4cESrUFjKM52D_-YZFkpbYK2Bj1UqgwT_Tw7me6BtHxZo65Dun1ceAXd4g5J-uuj2ikSjCRo">
+<div class="absolute top-4 left-4 bg-charcoal-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-metal-gray/30">
+<span class="text-safety-orange font-label-sm text-label-sm uppercase tracking-widest">Interior Finishing</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md mb-3">Painting &amp; Decorating</h3>
+<p class="font-body-md text-body-md text-on-surface-variant/80 mb-8 flex-grow">
+                            Flawless finishes using premium paints. Specialist in heritage property restoration and modern commercial decorating.
+                        </p>
+<button class="w-full py-4 border border-safety-orange text-safety-orange font-bold rounded-lg hover:bg-safety-orange hover:text-white transition-all duration-300 Active:scale-95">
+                            Request Quote
+                        </button>
+</div>
+</article>
+<!-- General Odd Jobs -->
+<article class="glass-card flex flex-col rounded-xl overflow-hidden group">
+<div class="service-image-container h-64">
+<img class="w-full h-full object-cover" data-alt="A focused close-up of a professional handyman's tool belt with high-end drills, screwdrivers, and measuring tapes. The background is a blurred, high-end apartment hallway. The lighting is cinematic, highlighting the rugged textures of the leather belt and the precision of the stainless steel tools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoosjC8k8DP4I01oURhuAxVjm1d7hw3J3cuXmsiPUrNfCOrdVvPRnW9xomaTRNzh7M1ML_mqUt_dRFJgO1vLEJ4-DFOmft6VLT6iqJbJuwyLlCQg-3ywKXsWJX4LpV_D1ITcoUJ0RJEFsdO4LQlx9F1oUjeeO-kalSOIG4z-jWDITOd8ln6CX8VjcVgt-kyFHSNCnxgZADx-ApzCktKVNshsQ1G6ZX9E5_HKStpbBUlkHtnCr4Qwug">
+<div class="absolute top-4 left-4 bg-charcoal-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-metal-gray/30">
+<span class="text-safety-orange font-label-sm text-label-sm uppercase tracking-widest">Multi-Trade</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md mb-3">General Odd Jobs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant/80 mb-8 flex-grow">
+                            The "to-do" list experts. Furniture assembly, TV mounting, door hanging, and general maintenance for busy professionals.
+                        </p>
+<button class="w-full py-4 border border-safety-orange text-safety-orange font-bold rounded-lg hover:bg-safety-orange hover:text-white transition-all duration-300 Active:scale-95">
+                            Request Quote
+                        </button>
+</div>
+</article>
+</div>
+</section>
+<!-- Trust Stats Banner -->
+<section class="py-20 border-y border-metal-gray/10 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div>
+<div class="text-display-lg-mobile md:text-headline-xl font-headline-xl text-safety-orange mb-2">15k+</div>
+<div class="text-label-lg font-label-lg text-on-surface-variant uppercase tracking-widest">Jobs Completed</div>
+</div>
+<div>
+<div class="text-display-lg-mobile md:text-headline-xl font-headline-xl text-safety-orange mb-2">4.9/5</div>
+<div class="text-label-lg font-label-lg text-on-surface-variant uppercase tracking-widest">Customer Rating</div>
+</div>
+<div>
+<div class="text-display-lg-mobile md:text-headline-xl font-headline-xl text-safety-orange mb-2">60m</div>
+<div class="text-label-lg font-label-lg text-on-surface-variant uppercase tracking-widest">Avg Response</div>
+</div>
+<div>
+<div class="text-display-lg-mobile md:text-headline-xl font-headline-xl text-safety-orange mb-2">12m</div>
+<div class="text-label-lg font-label-lg text-on-surface-variant uppercase tracking-widest">Parts Guarantee</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 relative overflow-hidden">
+
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-xl text-headline-xl mb-8">Ready to start your project?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                    Get an instant estimate for your home or commercial maintenance needs. Our team is standing by to assist you across all London boroughs.
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="bg-safety-orange text-on-primary-fixed px-10 py-5 rounded-lg font-bold text-lg hover:opacity-90 transition-all Active:scale-95 shadow-lg shadow-safety-orange/20">
+                        Get An Instant Quote
+                    </button>
+<button class="glass-card text-on-surface px-10 py-5 rounded-lg font-bold text-lg hover:border-electric-blue transition-all Active:scale-95">
+                        Call 020 7946 0000
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-metal-gray/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface mb-6">
+                    The Handyman <br><span class="text-safety-orange">London</span>
+</div>
+<p class="text-body-md text-on-surface-variant max-w-xs mb-8">
+                    Premium Trade Services for discerning Londoners. Quality, reliability, and modern efficiency.
+                </p>
+</div>
+<div>
+<h4 class="text-safety-orange font-bold mb-6">Services</h4>
+<ul class="space-y-4 font-label-sm text-label-sm">
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Plumbing</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Electrical</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Carpentry</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">General Repairs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-safety-orange font-bold mb-6">Company</h4>
+<ul class="space-y-4 font-label-sm text-label-sm">
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="index.html">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Case Studies</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Reviews</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-safety-orange font-bold mb-6">Legal</h4>
+<ul class="space-y-4 font-label-sm text-label-sm">
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Safety Standards</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-metal-gray/5 py-8 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant/50">© 2024 The Handyman London. Premium Trade Services.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for buttons and scroll
+        document.querySelectorAll('button, a').forEach(elem => {
+            elem.addEventListener('mousedown', () => {
+                elem.style.transform = 'scale(0.95)';
+            });
+            elem.addEventListener('mouseup', () => {
+                elem.style.transform = 'scale(1)';
+            });
+            elem.addEventListener('mouseleave', () => {
+                elem.style.transform = 'scale(1)';
+            });
+        });
+
+        // Sticky header reveal
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const header = document.querySelector('header');
+            if (currentScroll <= 0) {
+                header.classList.remove('shadow-xl');
+                return;
+            }
+            if (currentScroll > lastScroll) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+                header.classList.add('shadow-xl');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body></html>

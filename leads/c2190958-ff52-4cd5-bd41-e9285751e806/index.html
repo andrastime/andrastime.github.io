@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Handyman Catford | Elite Home Engineering &amp; Maintenance</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#00546f",
+                        "tertiary-fixed-dim": "#71d2ff",
+                        "on-secondary-container": "#bab8b9",
+                        "on-secondary-fixed-variant": "#474647",
+                        "on-primary": "#452b00",
+                        "on-background": "#eee0d3",
+                        "primary-fixed-dim": "#ffb953",
+                        "electric-blue": "#2853A3",
+                        "surface-variant": "#3b342b",
+                        "outline-variant": "#514535",
+                        "inverse-on-surface": "#372f26",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#ffddb4",
+                        "error": "#ffb4ab",
+                        "surface-container": "#251f16",
+                        "background": "#18120b",
+                        "primary": "#ffd39b",
+                        "surface-container-lowest": "#130d06",
+                        "secondary-container": "#49494a",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "on-error": "#690005",
+                        "on-tertiary": "#003547",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "surface-tint": "#ffb953",
+                        "surface-container-low": "#211b13",
+                        "surface-container-highest": "#3b342b",
+                        "tertiary-container": "#51cbff",
+                        "on-surface": "#eee0d3",
+                        "inverse-surface": "#eee0d3",
+                        "surface": "#18120b",
+                        "on-primary-fixed": "#291800",
+                        "inverse-primary": "#825500",
+                        "surface-bright": "#40382f",
+                        "on-tertiary-fixed-variant": "#004d66",
+                        "tertiary-fixed": "#c0e8ff",
+                        "secondary": "#c8c6c7",
+                        "surface-dim": "#18120b",
+                        "hazard-yellow": "#FFD700",
+                        "tertiary": "#ace2ff",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#e5e2e3",
+                        "on-primary-container": "#6c4500",
+                        "glass-border": "rgba(255, 255, 255, 0.15)",
+                        "on-secondary": "#303031",
+                        "deep-charcoal": "#0D0D0E",
+                        "outline": "#9f8e7b",
+                        "on-primary-fixed-variant": "#633f00",
+                        "on-tertiary-fixed": "#001e2b",
+                        "surface-container-high": "#302920",
+                        "primary-container": "#fbb03b",
+                        "on-surface-variant": "#d6c4af"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-edge": "40px",
+                        "section-padding": "120px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #0D0D0E; color: #eee0d3; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { backdrop-filter: blur(12px); background: rgba(13, 13, 14, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .hazard-gradient { background: linear-gradient(135deg, #FFD700 0%, #fbb03b 100%); }
+        .scroll-reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-hazard-yellow selection:text-deep-charcoal">
+<!-- TopNavBar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-container-max rounded-full bg-background/80 dark:bg-background/80 backdrop-blur-md border border-glass-border shadow-2xl flex justify-between items-center px-8 py-4 z-50">
+<div class="flex items-center gap-3">
+<img alt="Handyman Catford Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvQxuDuXhZg3zFykE-SUIll_rYrZRxll49mKGqa2QV5BTtNAFXDr2ozHFINvf4ZzyBL430T1J6OZZkhgyNXo23hrxvgkYv9CLSODcIi48PdZJao74L1vwo9TbNVYbLePYXoI6AmJxD1fLlmruPdkkw_1-DXMPG7nxJD2dLf7_3NW-33KNOkfFCipEBc2YIz8JBfK_sLDwpts5_4u1rOZL3JBrnxcOZIlZCqK_xxKgk0bI4IKlyFlEIxPgQa"/>
+<span class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight hidden sm:block">Handyman Catford</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-label-caps text-label-caps">
+<a class="text-hazard-yellow border-b border-hazard-yellow" href="#">Services</a>
+<a class="text-on-surface hover:text-hazard-yellow transition-colors" href="#">Gallery</a>
+<a class="text-on-surface hover:text-hazard-yellow transition-colors" href="#">Pricing</a>
+<a class="text-on-surface hover:text-hazard-yellow transition-colors" href="#">Contact</a>
+</div>
+<a class="bg-hazard-yellow text-deep-charcoal font-label-caps text-label-caps px-6 py-2.5 rounded-full font-bold hover:scale-105 active:scale-95 transition-all" href="tel:02087190128">
+            REQUEST QUOTE
+        </a>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-start overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLspfNHNXGmgizWGzkvsBmCBhsWeRgZhvFHE7XkO_RdQkyuHDgTgPP4cb_x23hX6aax6zGsEQDo-ENhnqxzvErN7AbnLYgPWeFAmhduOk_slLlSLNOdgEWCFhrJ-7m9-mEOwAFOkmWWt6_wlvCc3aVjK-rg_oRKhMIYRvhBBZKfCNfThiFGiLYpvhDlriLuumnJJbglnbSZErl_4qPFrDa2sPvY3IgUOlK-vZNPvmui4mnjTayhESzMx51I" style="filter: brightness(0.4) contrast(1.1);"/>
+<div class="absolute inset-0 bg-gradient-to-r from-deep-charcoal via-deep-charcoal/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-edge max-w-container-max mx-auto w-full">
+<div class="max-w-3xl space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-hazard-yellow/30 bg-hazard-yellow/10 text-hazard-yellow font-label-caps text-label-caps">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-hazard-yellow opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-hazard-yellow"></span>
+</span>
+                    AVAILABLE 24/7 IN CATFORD &amp; SE6
+                </div>
+<h1 class="font-display-lg text-display-lg text-white leading-none">
+                    Elite Engineering <br/> For Your <span class="text-hazard-yellow">Home.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Precision home maintenance and technical repairs delivered with 15 years of industrial excellence. No job is too small for our master technicians.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="px-10 py-5 bg-hazard-yellow text-deep-charcoal font-bold rounded-lg hover:brightness-110 transition-all flex items-center gap-3" href="tel:02087190128">
+<span class="material-symbols-outlined">call</span>
+                        CALL 020 8719 0128
+                    </a>
+<button class="px-10 py-5 border border-white/20 hover:bg-white/5 transition-all rounded-lg flex items-center gap-3">
+                        EXPLORE SERVICES
+                    </button>
+</div>
+</div>
+</div>
+<!-- Industrial Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-hazard-yellow/50">
+<span class="font-label-caps text-[10px] tracking-widest uppercase">Precision Standards</span>
+<div class="w-[1px] h-20 bg-gradient-to-b from-hazard-yellow to-transparent"></div>
+</div>
+</section>
+<!-- Experience Section (Stats Bento) -->
+<section class="py-section-padding px-margin-edge bg-surface">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+<div class="lg:col-span-7 glass-panel p-12 rounded-xl flex flex-col justify-between scroll-reveal">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Over 15 Years of <span class="text-hazard-yellow">Engineering Excellence.</span></h2>
+<p class="text-on-surface-variant font-body-lg max-w-lg mb-12">
+                        We provide professional Handyman Services in Catford and surrounding areas. Our trained engineers make sure you get rid of your problems permanently.
+                    </p>
+</div>
+<div class="grid grid-cols-3 gap-8">
+<div>
+<div class="text-hazard-yellow font-display-lg text-4xl mb-2">15+</div>
+<div class="font-label-caps text-xs text-on-surface-variant opacity-60">YEARS ACTIVE</div>
+</div>
+<div>
+<div class="text-hazard-yellow font-display-lg text-4xl mb-2">10k+</div>
+<div class="font-label-caps text-xs text-on-surface-variant opacity-60">PROJECTS COMPLETED</div>
+</div>
+<div>
+<div class="text-hazard-yellow font-display-lg text-4xl mb-2">SE6</div>
+<div class="font-label-caps text-xs text-on-surface-variant opacity-60">LOCAL ROOTS</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-rows-3 gap-gutter">
+<div class="glass-panel p-8 rounded-xl flex items-center gap-6 group hover:border-hazard-yellow/30 transition-all scroll-reveal">
+<div class="w-16 h-16 rounded-lg bg-hazard-yellow/10 flex items-center justify-center text-hazard-yellow group-hover:bg-hazard-yellow group-hover:text-deep-charcoal transition-all">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<div>
+<h4 class="font-bold text-xl mb-1">Certification</h4>
+<p class="text-on-surface-variant text-sm">Certified and highly experienced professionals.</p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl flex items-center gap-6 group hover:border-hazard-yellow/30 transition-all scroll-reveal">
+<div class="w-16 h-16 rounded-lg bg-hazard-yellow/10 flex items-center justify-center text-hazard-yellow group-hover:bg-hazard-yellow group-hover:text-deep-charcoal transition-all">
+<span class="material-symbols-outlined text-3xl">schedule</span>
+</div>
+<div>
+<h4 class="font-bold text-xl mb-1">24/7 Availability</h4>
+<p class="text-on-surface-variant text-sm">Emergency callouts at any hour, seven days a week.</p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl flex items-center gap-6 group hover:border-hazard-yellow/30 transition-all scroll-reveal">
+<div class="w-16 h-16 rounded-lg bg-hazard-yellow/10 flex items-center justify-center text-hazard-yellow group-hover:bg-hazard-yellow group-hover:text-deep-charcoal transition-all">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<div>
+<h4 class="font-bold text-xl mb-1">Fair Prices</h4>
+<p class="text-on-surface-variant text-sm">Honest assessments and competitive local rates.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Emergency Call-out -->
+<div class="w-full py-8 bg-hazard-yellow text-deep-charcoal overflow-hidden whitespace-nowrap">
+<div class="flex animate-[marquee_20s_linear_infinite] gap-12 font-label-caps text-xl font-extrabold uppercase">
+<span>24/7 EMERGENCY CALLOUTS • 020 8719 0128 • CATFORD'S FINEST • NO JOB TOO SMALL • 24/7 EMERGENCY CALLOUTS • 020 8719 0128 • CATFORD'S FINEST • NO JOB TOO SMALL • 24/7 EMERGENCY CALLOUTS • 020 8719 0128</span>
+<span>24/7 EMERGENCY CALLOUTS • 020 8719 0128 • CATFORD'S FINEST • NO JOB TOO SMALL • 24/7 EMERGENCY CALLOUTS • 020 8719 0128 • CATFORD'S FINEST • NO JOB TOO SMALL • 24/7 EMERGENCY CALLOUTS • 020 8719 0128</span>
+</div>
+</div>
+<!-- Services Section -->
+<section class="py-section-padding px-margin-edge">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg mb-6 uppercase tracking-tighter">Professional <br/> Service <span class="text-hazard-yellow">Catalogue</span></h2>
+<p class="font-body-lg text-on-surface-variant">Explore our comprehensive range of property maintenance solutions. Every service is backed by our full liability insurance and satisfaction guarantee.</p>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-hazard-yellow hover:text-deep-charcoal transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-hazard-yellow hover:text-deep-charcoal transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service Card 1 -->
+<div class="group relative aspect-[4/5] rounded-xl overflow-hidden glass-panel scroll-reveal">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 group-hover:opacity-30 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuOqBb9JClyGW3Ujxw1nNuaCmbQ494lrxrR7_dYgjq4hmAk4sTspyHnlBUOe65j0z8YQdrqgZ06P_rFrjMwZM0Mq1o4mWeFxfKEZRsCqsi4CbQMsJNmcvV3WBD6mNsBfZ4vMqXHaY4dORrssiXMPi_-nHkxPni8zcl3Hxe6vCxd3jYoU6zZZ6HWuHjHTVzmGzmMTS8ldzl0gktk0-AiiQzp8qUcZYs3UQan9dwwAfdxoYVJEooLx20NhOs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-charcoal via-deep-charcoal/20 to-transparent"></div>
+<div class="relative h-full flex flex-col justify-between p-8">
+<div class="font-label-caps text-xs text-hazard-yellow tracking-widest">SVC-01</div>
+<div>
+<h3 class="font-headline-lg text-2xl mb-4">Carpentry</h3>
+<p class="text-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">Bespoke woodworking, door hanging, and structural timber repairs.</p>
+</div>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group relative aspect-[4/5] rounded-xl overflow-hidden glass-panel scroll-reveal" style="transition-delay: 100ms;">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 group-hover:opacity-30 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLv6hwG3eRBkiXY19m6E96ztCa4XILiGR4RxaA__cyNYUf8qSctwxNVRitunIE7hH6hRaxkbFVsJVYGd5qkwbYNr0O8TQo7A0h7nSm8AiSUmQeRtyiNjnSiwO785942QNf54Q6GOAFMoPBHicEKpd8aCMZFxks723l9KKOJ9Xw3v2z6VKRonZS8swSunen0LqmqUwslcOXRhtgs8zryK82rSiLCGGjImA3P0xc2TqC1HCzIDsLhfRMRt3cE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-charcoal via-deep-charcoal/20 to-transparent"></div>
+<div class="relative h-full flex flex-col justify-between p-8">
+<div class="font-label-caps text-xs text-hazard-yellow tracking-widest">SVC-02</div>
+<div>
+<h3 class="font-headline-lg text-2xl mb-4">Plumbing</h3>
+<p class="text-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">Leak detection, appliance fitting, and emergency pipe maintenance.</p>
+</div>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group relative aspect-[4/5] rounded-xl overflow-hidden glass-panel scroll-reveal" style="transition-delay: 200ms;">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 group-hover:opacity-30 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLujczxfwq0ppDDUgmTdSb4vxBKZ_oOqr2m31FjOkK7YK42_OLFUQVnDG70JIafl1je_qXTAJQ2wuLX_9MuqQ4nFWXiwnG7hNAkGrx98Aw3O1l1bbPlJYv378hoAjJRr9q_DW4iRporiFXonOGf_p6PKHLf3o397Un5Coy8ueX0lJpgNj9KN6d7YOtaYh9oxVui1q0S_lUWlKgJnl_TSMkb5VMyxXUFkAauuSkx2VpKZ-XXDYR4IOh5B9K3V"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-charcoal via-deep-charcoal/20 to-transparent"></div>
+<div class="relative h-full flex flex-col justify-between p-8">
+<div class="font-label-caps text-xs text-hazard-yellow tracking-widest">SVC-03</div>
+<div>
+<h3 class="font-headline-lg text-2xl mb-4">Kitchen Fitting</h3>
+<p class="text-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">Full installations or modern upgrades to your culinary workspace.</p>
+</div>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="group relative aspect-[4/5] rounded-xl overflow-hidden bg-hazard-yellow scroll-reveal" style="transition-delay: 300ms;">
+<div class="relative h-full flex flex-col justify-between p-8 text-deep-charcoal">
+<div class="font-label-caps text-xs tracking-widest border-b border-deep-charcoal/20 pb-2">VIEW ALL</div>
+<div>
+<h3 class="font-headline-lg text-2xl mb-4 leading-tight">30+ Residential Services</h3>
+<button class="w-12 h-12 rounded-full border border-deep-charcoal flex items-center justify-center group-hover:bg-deep-charcoal group-hover:text-hazard-yellow transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-section-padding bg-surface-container-low overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-edge">
+<h2 class="font-display-lg text-display-lg mb-20 text-center uppercase">Trusted by the <br/> <span class="text-hazard-yellow">Community.</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="glass-panel p-10 rounded-xl relative scroll-reveal">
+<span class="material-symbols-outlined text-hazard-yellow/20 text-7xl absolute top-8 right-8" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<div class="flex gap-1 text-hazard-yellow mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg italic mb-8">"Provided an exceptionally professional and well mannered service. Work was finished on the same day and the serviceman was very efficient."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-hazard-yellow flex items-center justify-center text-deep-charcoal font-bold">JF</div>
+<div>
+<div class="font-bold">Jameson Family</div>
+<div class="text-xs text-on-surface-variant font-label-caps">E9, London</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="glass-panel p-10 rounded-xl relative scroll-reveal" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-hazard-yellow/20 text-7xl absolute top-8 right-8" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<div class="flex gap-1 text-hazard-yellow mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg italic mb-8">"For weeks I tried to repair a leak... it was only until after the job was finished that I realised I had been wasting my time! Courteous and polite."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-hazard-yellow flex items-center justify-center text-deep-charcoal font-bold">S</div>
+<div>
+<div class="font-bold">Smith</div>
+<div class="text-xs text-on-surface-variant font-label-caps">EC1, London</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="glass-panel p-10 rounded-xl relative scroll-reveal" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-hazard-yellow/20 text-7xl absolute top-8 right-8" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<div class="flex gap-1 text-hazard-yellow mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg italic mb-8">"My house key broke inside the lock... They arrived within 30mins. A great service, polite and professional assistance at all times."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-hazard-yellow flex items-center justify-center text-deep-charcoal font-bold">D</div>
+<div>
+<div class="font-bold">David</div>
+<div class="text-xs text-on-surface-variant font-label-caps">SW14, London</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full pt-section-padding pb-8 bg-deep-charcoal border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-edge max-w-container-max mx-auto mb-20">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<img alt="Footer Logo" class="h-10 w-10" src="https://lh3.googleusercontent.com/aida/AP1WRLvQxuDuXhZg3zFykE-SUIll_rYrZRxll49mKGqa2QV5BTtNAFXDr2ozHFINvf4ZzyBL430T1J6OZZkhgyNXo23hrxvgkYv9CLSODcIi48PdZJao74L1vwo9TbNVYbLePYXoI6AmJxD1fLlmruPdkkw_1-DXMPG7nxJD2dLf7_3NW-33KNOkfFCipEBc2YIz8JBfK_sLDwpts5_4u1rOZL3JBrnxcOZIlZCqK_xxKgk0bI4IKlyFlEIxPgQa"/>
+<span class="font-headline-lg text-2xl text-on-surface uppercase tracking-tight">Handyman Catford</span>
+</div>
+<p class="text-on-surface-variant font-body-md">Elite home maintenance and industrial engineering standards for the modern residential world. Operating in Catford and surrounding areas since 2006.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 glass-panel rounded-full flex items-center justify-center hover:bg-hazard-yellow hover:text-deep-charcoal transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 glass-panel rounded-full flex items-center justify-center hover:bg-hazard-yellow hover:text-deep-charcoal transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-hazard-yellow mb-8 tracking-widest">PRIMARY SERVICES</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-hazard-yellow transition-all" href="#">Emergency Callouts</a></li>
+<li><a class="hover:text-hazard-yellow transition-all" href="#">Carpentry</a></li>
+<li><a class="hover:text-hazard-yellow transition-all" href="#">Plumbing</a></li>
+<li><a class="hover:text-hazard-yellow transition-all" href="#">Electrical</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-hazard-yellow mb-8 tracking-widest">QUICK LINKS</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-hazard-yellow transition-all" href="#">Request Estimate</a></li>
+<li><a class="hover:text-hazard-yellow transition-all" href="#">Our Work Gallery</a></li>
+<li><a class="hover:text-hazard-yellow transition-all" href="#">Terms of Service</a></li>
+<li><a class="hover:text-hazard-yellow transition-all" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-hazard-yellow mb-8 tracking-widest">SECURE RESPONSE</h4>
+<div class="glass-panel p-6 rounded-lg space-y-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-hazard-yellow">call</span>
+<span class="font-bold">020 8719 0128</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-hazard-yellow">pin_drop</span>
+<span>Catford, SE6, London</span>
+</div>
+<div class="pt-4">
+<div class="inline-flex items-center gap-2 text-xs text-green-500">
+<span class="block w-2 h-2 rounded-full bg-green-500"></span>
+                            SYSTEMS ACTIVE - 24/7
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<div class="px-margin-edge max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/30 text-on-surface-variant text-xs gap-4">
+<p>© 2024 Handyman Catford. All Rights Reserved. Elite Engineering Excellence.</p>
+<div class="flex gap-8">
+<span>SE1 - SE28 COVERAGE</span>
+<span>CATFORD RESIDENTIAL SPECIALISTS</span>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Smooth parallax on hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.querySelector('section img');
+            if (heroImg) {
+                heroImg.style.transform = `translateY(${scrolled * 0.4}px) scale(1.05)`;
+            }
+        });
+    </script>
+</body></html>

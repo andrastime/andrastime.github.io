@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AJ Handyman | Professional Grade Results</title>
+<meta content="Professional handyman services for home and business. Quality repairs, installations, and maintenance you can trust." name="description"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary": "#9d4300",
+                "on-secondary-fixed": "#341100",
+                "surface-container": "#eceef0",
+                "on-error-container": "#93000a",
+                "on-tertiary-fixed-variant": "#3a485c",
+                "outline": "#76777d",
+                "primary": "#000000",
+                "inverse-primary": "#bec6e0",
+                "on-background": "#191c1e",
+                "surface-bright": "#f7f9fb",
+                "inverse-surface": "#2d3133",
+                "secondary-fixed-dim": "#ffb690",
+                "surface": "#f7f9fb",
+                "surface-container-low": "#f2f4f6",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-fixed-variant": "#783200",
+                "surface-container-highest": "#e0e3e5",
+                "primary-fixed": "#dae2fd",
+                "primary-container": "#131b2e",
+                "on-error": "#ffffff",
+                "secondary-fixed": "#ffdbca",
+                "on-primary-fixed-variant": "#3f465c",
+                "tertiary-container": "#0d1c2f",
+                "on-secondary": "#ffffff",
+                "tertiary": "#000000",
+                "primary-fixed-dim": "#bec6e0",
+                "on-primary-fixed": "#131b2e",
+                "on-tertiary-fixed": "#0d1c2f",
+                "on-primary-container": "#7c839b",
+                "inverse-on-surface": "#eff1f3",
+                "tertiary-fixed": "#d5e3fd",
+                "tertiary-fixed-dim": "#b9c7e0",
+                "error": "#ba1a1a",
+                "background": "#f7f9fb",
+                "outline-variant": "#c6c6cd",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#45464d",
+                "on-surface": "#191c1e",
+                "surface-dim": "#d8dadc",
+                "secondary-container": "#fd761a",
+                "on-tertiary-container": "#76859b",
+                "error-container": "#ffdad6",
+                "surface-container-high": "#e6e8ea",
+                "on-tertiary": "#ffffff",
+                "surface-tint": "#565e74",
+                "on-secondary-container": "#5c2400",
+                "surface-variant": "#e0e3e5"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "mobile-margin": "16px",
+                "container-max": "1280px",
+                "md": "24px",
+                "gutter": "24px",
+                "xl": "80px",
+                "base": "4px",
+                "lg": "48px",
+                "xs": "8px",
+                "sm": "16px"
+            },
+            "fontFamily": {
+                "display-lg": ["Inter"],
+                "label-bold": ["Inter"],
+                "caption": ["Inter"],
+                "headline-md": ["Inter"],
+                "headline-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "headline-lg-mobile": ["Inter"],
+                "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #76777d; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #000000; }
+    </style>
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "AJ Handyman",
+      "image": "placeholder",
+      "telephone": "(555) 000-0000",
+      "url": "https://ajhandyman.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Service Way",
+        "addressLocality": "Repair City",
+        "addressRegion": "ST",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      },
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 08:00-18:00"
+    }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md border-b border-outline-variant dark:border-outline shadow-sm h-16">
+<div class="flex justify-between items-center px-mobile-margin md:px-lg max-w-container-max mx-auto h-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed tracking-tight" href="#">AJ Handyman</a>
+<nav class="hidden md:flex items-center gap-xs">
+<a class="px-4 py-2 font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary transition-all active:scale-95" href="#home">Home</a>
+<a class="px-4 py-2 font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-200 transition-all active:scale-95" href="#services">Services</a>
+<a class="px-4 py-2 font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-200 transition-all active:scale-95" href="#gallery">Gallery</a>
+<a class="px-4 py-2 font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-200 transition-all active:scale-95" href="#reviews">Reviews</a>
+</nav>
+<div class="flex items-center gap-sm">
+<a class="hidden lg:block font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors" href="tel:5550000000">(555) 000-0000</a>
+<a class="bg-secondary text-on-secondary px-6 py-2.5 rounded shadow-md hover:brightness-110 active:scale-95 transition-all font-label-bold text-label-bold" href="#contact">Get a Quote</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-16 min-h-[90vh] flex items-center overflow-hidden" id="home">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A high-end interior construction shot featuring professional carpentry tools like a circular saw, level, and premium lumber neatly arranged on a clean workbench. The lighting is crisp and cinematic with shallow depth of field, set in a modern high-contrast workshop environment with black and safety orange accents. The aesthetic is professional, organized, and technical." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCubdxTiqhP4Yv5NF2enqo_OLyqnxLpAwnS3gEEyJe-DLBMD_KZXtF9Q4cG8LSw4jw8ASGOlU9VgAQuY7KMVWpWhM55mli8fs_YT8cuAv9bzNE3UIHUoISxZ8w_zpACNhfIlDxiuMv2A2bshJdYau1zuvA-hhr2pcDF5Hs7g9Td9ZOosYbwFt77J3PVszHp6_MQGMZYG5FdccSFvZbASiWQgOdZI7Wwi_zOY5n72Qu1ghZRTijn736o_g')"></div>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px]"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-mobile-margin md:px-lg py-xl flex flex-col items-start gap-md fade-up">
+<h1 class="font-display-lg text-[40px] md:text-display-lg text-white max-w-3xl">Professional Handyman Services You Can Trust</h1>
+<p class="font-body-lg text-body-lg text-white/90 max-w-2xl">Quality repairs, installations, and maintenance for your home or business. We bring expert craftsmanship and reliability to every job, large or small.</p>
+<div class="flex flex-wrap gap-sm pt-base">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-label-bold text-label-bold shadow-xl hover:brightness-110 transition-all" href="#contact">Book Now</a>
+<a class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-lg font-label-bold text-label-bold hover:bg-white/20 transition-all" href="#contact">Get a Free Quote</a>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl bg-surface" id="services">
+<div class="max-w-container-max mx-auto px-mobile-margin md:px-lg">
+<div class="text-center mb-lg fade-up">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-xs">Professional Grade Services</h2>
+<div class="w-16 h-1.5 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- General Repairs -->
+<div class="bg-surface-container-lowest p-md border border-outline-variant rounded-xl shadow-sm hover:shadow-md transition-shadow group fade-up">
+<div class="w-14 h-14 bg-secondary-fixed flex items-center justify-center rounded-lg mb-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl">build</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">General Repairs</h3>
+<p class="text-on-surface-variant mb-md">From fixing squeaky doors to repairing drywall, we handle all the small tasks that keep your home running smoothly.</p>
+<a class="text-secondary font-label-bold text-label-bold flex items-center gap-xs hover:gap-sm transition-all" href="#contact">
+                            Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Electrical & Plumbing -->
+<div class="bg-surface-container-lowest p-md border border-outline-variant rounded-xl shadow-sm hover:shadow-md transition-shadow group fade-up" style="transition-delay: 100ms">
+<div class="w-14 h-14 bg-secondary-fixed flex items-center justify-center rounded-lg mb-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl">plumbing</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">Electrical &amp; Plumbing</h3>
+<p class="text-on-surface-variant mb-md">Minor electrical fixes, faucet replacements, and leak repairs performed with technical precision and safety first.</p>
+<a class="text-secondary font-label-bold text-label-bold flex items-center gap-xs hover:gap-sm transition-all" href="#contact">
+                            Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Installations -->
+<div class="bg-surface-container-lowest p-md border border-outline-variant rounded-xl shadow-sm hover:shadow-md transition-shadow group fade-up" style="transition-delay: 200ms">
+<div class="w-14 h-14 bg-secondary-fixed flex items-center justify-center rounded-lg mb-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl">sleep_auto</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">Installations</h3>
+<p class="text-on-surface-variant mb-md">Expert mounting for TVs, appliance installation, and custom shelving solutions tailored to your space.</p>
+<a class="text-secondary font-label-bold text-label-bold flex items-center gap-xs hover:gap-sm transition-all" href="#contact">
+                            Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-xl bg-surface-container-low" id="gallery">
+<div class="max-w-container-max mx-auto px-mobile-margin md:px-lg">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-md fade-up">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-xs">Recent Projects</h2>
+<p class="text-on-surface-variant max-w-xl">Take a look at our professional-grade results across residential and commercial properties.</p>
+</div>
+<a class="bg-primary text-on-primary px-6 py-3 rounded font-label-bold text-label-bold hover:bg-on-surface-variant transition-colors" href="#">View All Gallery</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm md:gap-md h-[600px] md:h-[500px]">
+<div class="col-span-2 row-span-1 md:row-span-2 rounded-xl overflow-hidden fade-up relative group">
+<div class="w-full h-full bg-cover bg-center" data-alt="A close-up of high-end custom wood shelving installation in a modern minimalist living room. The wood is a deep walnut finish with perfect joinery, reflecting the sunlight from a nearby window. The aesthetic is clean, professional, and sophisticated, emphasizing technical competence and reliability in handyman work. High-contrast lighting highlights the grain textures." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCatIOfw2T37KWClEc5mBNi9Jilk9VNMFYQrdV0uc3c6DoVf0YFjX0wzMYzVbOKpBLfJ4pzEVD-3VJ1GkTsju-aw6yDTIHJQMCcDeJbQWL9F38zaH-6G7r2VGdqTmJE971wviterWkr86rHlK96WO6wl3KRHjtsOpk26iTzToEv00_hqtgqahevpPPJ2cyhgg8bjhodlIfXu7r-f2KbXFUEdLSakHUqczcxLqpJBF3xPjgfEu94DsjYgw')"></div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-md">
+<span class="text-white font-label-bold text-label-bold">Custom Cabinetry</span>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden fade-up relative group" style="transition-delay: 100ms">
+<div class="w-full h-full bg-cover bg-center" data-alt="A clean, modern bathroom renovation showing a newly installed chrome faucet and marble vanity. The installation is flawlessly sealed with white silicone, demonstrating meticulous attention to detail and professional-grade results. Bright, airy lighting with soft shadows in a light-mode aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiSVtuxv8dgg6wCX-PLBN0ilLjiE2A34DgEr38y2f7uQnN4qXJbWDXFOaXKB3xf-6lc-_9ZnCcUBZ0wpa3di1gvvHDC0YSUrPtV7baXcGXoWcTJRz6-Wh58yzZ2TCNJTwcZCOI5m-nZtKMI6xYRwSdCV5K1-S1fRGQWb8l8UOMVjmbSxkxPdRYQ_1BQcaTFse0toSQBbl3i9eznBZiJN4kWyY9GILXkGfrI6htLWOm2dEEKdaqnDflHw')"></div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-md">
+<span class="text-white font-label-bold text-label-bold">Kitchen &amp; Bath</span>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden fade-up relative group" style="transition-delay: 200ms">
+<div class="w-full h-full bg-cover bg-center" data-alt="An exterior deck restoration project featuring fresh cedar wood planks and a clear protective sealant. The perspective shows the long, straight lines of the deck boards leading into a lush green garden. The lighting is golden hour sunshine, showcasing high-contrast textures and professional craftsmanship." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-8jsKpU7PDHsYkWBOO8anNI01J1TRu7cvGzJcjiQMm1BXDqmpGkEQfHtcsij--EOQB5wB8Yc6f1RWycA1SudIcDpiaFDQZPTD2VqQXGB9B53Z5qICBEYEnHZgKyNRO5o0WwdB_4CRUjTARO0ySjiafHg_0akQcZlqWew6WKBFObfyhzHN78PxpXQHj1lU0lbFSaqyKi1C_zsrJfhNTM2IPJL9IYW1AmGT7qjMsmUM8PCf2FTuvk8fCQ')"></div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-md">
+<span class="text-white font-label-bold text-label-bold">Exterior Decking</span>
+</div>
+</div>
+<div class="col-span-1 md:col-span-2 rounded-xl overflow-hidden fade-up relative group" style="transition-delay: 300ms">
+<div class="w-full h-full bg-cover bg-center" data-alt="A modern home office setup with a perfectly wall-mounted flat-screen television and concealed wiring. The wall is a dark charcoal grey, providing a high-contrast backdrop for the clean, professional tech installation. The overall mood is orderly and technologically advanced, suggesting high-end trade skill." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAN8t2I_8EB8L9uETwGAFflSiK6eHfuDatKxYfKaO-P9aLqrgpa2qj6I6zWYnMrFoAqrgdGtWZOJhGCkVrg0iEc5KbbJItsBbUBLm0uud-kol3cIPN8DWmaa5gAuUBIgMYIsudB2CofZ48ln8Iiy--VlLuQD5BWyeHjNJygFwwpLDZk7wECBR4SCryntxoRfbQEwyKhcAtcWcUuNFXxRGMeaCK6ACWEk0WeM-XTikm7Jbavj8bIb1dVg')"></div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-md">
+<span class="text-white font-label-bold text-label-bold">Smart Home Mounting</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-xl bg-surface-bright overflow-hidden" id="reviews">
+<div class="max-w-container-max mx-auto px-mobile-margin md:px-lg">
+<div class="text-center mb-lg fade-up">
+<span class="font-label-bold text-label-bold text-secondary uppercase tracking-widest">Testimonials</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-xs">What Our Customers Say</h2>
+</div>
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- Review Card 1 -->
+<div class="flex-1 bg-white p-md rounded-xl border border-outline-variant shadow-sm fade-up">
+<div class="flex gap-1 text-secondary mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg italic text-on-surface mb-lg">"AJ Handyman did an incredible job with our bathroom remodel. The attention to detail on the tiling was beyond expectations. Professional, punctual, and left the workspace spotless!"</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a satisfied middle-aged male customer smiling warmly in a bright, modern living room. He is dressed in casual business attire, reflecting a high-end corporate yet friendly demographic. The lighting is soft and natural, emphasizing a mood of trust and satisfaction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW38l1sATwx60g5W5uVmTmxCcJufq69cS-8IAavnt_YSkhXiCXFkQrXlP0JGEsLl2m3y_PjHEea834KtHhbC4U3DNdJb5FuY764JDVLFkD120goBFQoSliU3DGD10tF4dIm_HzIbmK8P2PjnBZh-DIQp8aXdrjXLx-DoRp5rld8BYQLaUci-CCc8bdgoIEq7TvgZ_zPgduAnIQ2KQ7w2fDKsE8iAOrtCQ_fhqGJyWpbrz2RITSkizCWQ"/>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Mark Stevenson</h4>
+<p class="text-caption font-caption text-on-surface-variant">Homeowner, Downtown</p>
+</div>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="flex-1 bg-white p-md rounded-xl border border-outline-variant shadow-sm fade-up" style="transition-delay: 150ms">
+<div class="flex gap-1 text-secondary mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg italic text-on-surface mb-lg">"I've used several handymen over the years, but AJ is in a different league. He fixed a plumbing issue three others couldn't solve. Truly professional grade results every time."</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a smiling female property manager in her late 30s, standing in a sleek, modern apartment lobby. She exudes competence and reliability. The lighting is professional and high-key, aligning with the modern corporate and high-contrast design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCECNSqn3tauI9NnblTZVrrVOergW5Hxr8EErR1C_OSwqPsiM4kJYNcPXAzSY974VZvSMMKc1g1JBkVQ7KrCXaiUFhwtTEwdQtSKOHL2VkA6wZ8O8FUoF1MXUQ7m28jtKwwycaMFkbXBIcsWwIvuWFJpsH5bodz9687a19LWgNREaIEeMouKMWMcuIFCkAq1GuvjT7_qd2C_VNmSmC1UygqtVY96rJMilsEJhZ-FqqYR2r7Pa4l0uFOmQ"/>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Sarah Jennings</h4>
+<p class="text-caption font-caption text-on-surface-variant">Property Manager</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-xl bg-primary" id="contact">
+<div class="max-w-container-max mx-auto px-mobile-margin md:px-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+<div class="fade-up">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-md">Ready to Start Your Project?</h2>
+<p class="text-on-primary-container text-body-lg mb-lg">Fill out the form below for a free, no-obligation quote. Most responses are handled within 24 hours.</p>
+<div class="space-y-sm">
+<div class="flex items-center gap-md text-white">
+<span class="material-symbols-outlined text-secondary">call</span>
+<div>
+<p class="text-caption font-caption text-on-primary-container">Call Us Directly</p>
+<a class="font-label-bold text-label-bold" href="tel:5550000000">(555) 000-0000</a>
+</div>
+</div>
+<div class="flex items-center gap-md text-white">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<div>
+<p class="text-caption font-caption text-on-primary-container">Email Support</p>
+<p class="font-label-bold text-label-bold">service@ajhandyman.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-md md:p-lg rounded-2xl shadow-2xl fade-up" style="transition-delay: 200ms">
+<form class="grid grid-cols-1 gap-md">
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2">Name</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant focus:border-secondary focus:ring-secondary rounded-lg p-sm transition-all" placeholder="Your Name" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2">Email</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant focus:border-secondary focus:ring-secondary rounded-lg p-sm transition-all" placeholder="Your Email" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2">Phone</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant focus:border-secondary focus:ring-secondary rounded-lg p-sm transition-all" placeholder="Your Phone" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2">Message</label>
+<textarea class="w-full bg-surface-container-lowest border-outline-variant focus:border-secondary focus:ring-secondary rounded-lg p-sm transition-all" placeholder="Tell us about your project..." required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-secondary py-4 rounded-lg font-label-bold text-label-bold shadow-lg hover:brightness-110 active:scale-95 transition-all" type="submit">Schedule Service</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-fixed relative w-full border-t border-white/10">
+<div class="max-w-container-max mx-auto px-mobile-margin md:px-lg py-lg flex flex-col md:flex-row justify-between items-center gap-lg">
+<div class="text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg font-extrabold text-on-primary mb-xs">AJ Handyman</h2>
+<p class="font-body-md text-body-md text-on-primary/60">Professional Grade Results. Guaranteed.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-md">
+<a class="text-on-primary/80 dark:text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#home">Privacy Policy</a>
+<a class="text-on-primary/80 dark:text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#home">Terms of Service</a>
+<a class="text-secondary-fixed font-bold underline" href="tel:5550000000">(555) 000-0000</a>
+</nav>
+<p class="text-on-primary/80 dark:text-on-primary-fixed-variant text-body-md">
+                © 2024 AJ Handyman Services. Professional Grade Results.
+            </p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface dark:bg-surface-container-highest border-t border-outline-variant shadow-lg flex justify-around items-center h-16 pb-safe px-4">
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed font-bold transition-transform scale-100 active:scale-90" href="#home">
+<span class="material-symbols-outlined">home</span>
+<span class="font-caption text-caption">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant transition-transform scale-100 active:scale-90" href="#services">
+<span class="material-symbols-outlined">build</span>
+<span class="font-caption text-caption">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center -mt-8 bg-secondary text-on-secondary w-14 h-14 rounded-full shadow-lg transition-transform scale-100 active:scale-90" href="tel:5550000000">
+<span class="material-symbols-outlined">call</span>
+<span class="font-caption text-[10px] uppercase font-bold">Call</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant transition-transform scale-100 active:scale-90" href="#contact">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-caption text-caption">Contact</span>
+</a>
+</nav>
+<script>
+        // Entrance Animations Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Form Submission Interaction
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerText = 'Sent Successfully!';
+                btn.classList.replace('bg-secondary', 'bg-green-600');
+                e.target.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.replace('bg-green-600', 'bg-secondary');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Smooth nav tracking (Basic implementation)
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav.hidden a');
+            
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-secondary', 'font-bold', 'border-b-2', 'border-secondary');
+                link.classList.add('text-on-surface-variant');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('text-secondary', 'font-bold', 'border-b-2', 'border-secondary');
+                    link.classList.remove('text-on-surface-variant');
+                }
+            });
+        });
+    </script>
+</body></html>

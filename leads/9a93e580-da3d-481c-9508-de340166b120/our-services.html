@@ -1,0 +1,423 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | Camden Town Handyman</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#1a2b3c",
+                    "on-secondary-container": "#603100",
+                    "secondary-fixed-dim": "#ffb77d",
+                    "surface-bright": "#f7f9fb",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "secondary": "#904d00",
+                    "primary-fixed": "#d2e4fb",
+                    "tertiary-container": "#1b2b3f",
+                    "primary-fixed-dim": "#b7c8de",
+                    "surface-variant": "#e0e3e5",
+                    "secondary-fixed": "#ffdcc3",
+                    "outline": "#74777d",
+                    "surface-container-high": "#e6e8ea",
+                    "on-secondary-fixed": "#2f1500",
+                    "on-error": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "inverse-primary": "#b7c8de",
+                    "on-background": "#191c1e",
+                    "on-tertiary-container": "#8292aa",
+                    "primary": "#041627",
+                    "background": "#f7f9fb",
+                    "outline-variant": "#c4c6cd",
+                    "tertiary": "#051629",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#38485a",
+                    "surface-tint": "#4f6073",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#0b1d2d",
+                    "surface-container-highest": "#e0e3e5",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#6e3900",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f2f4f6",
+                    "inverse-surface": "#2d3133",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "secondary-container": "#fd8b00",
+                    "on-surface-variant": "#44474c",
+                    "tertiary-fixed": "#d3e4fe",
+                    "on-primary-container": "#8192a7",
+                    "surface": "#f7f9fb",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-fixed-dim": "#b7c8e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "label-md": ["Inter"],
+                    "caption": ["Inter"],
+                    "headline-xl": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card-hover:hover {
+            box-shadow: 0px 4px 20px rgba(4, 22, 39, 0.08);
+            border-color: #041627;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #041627;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-surface border-b border-outline-variant shadow-sm w-full">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="font-headline-md text-headline-md font-bold text-primary">Camden Town Handyman</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors duration-200" href="our-services.html">Services</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="gallery-reviews.html">Gallery</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Pricing</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="gallery-reviews.html">Reviews</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">About</a>
+</nav>
+<button class="bg-secondary-container text-on-primary font-bold px-6 py-2 rounded-lg hover:brightness-110 active:scale-95 transition-all">
+                Book Now
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[400px] flex items-center overflow-hidden bg-primary">
+<div class="absolute inset-0 opacity-40">
+<div class="w-full h-full bg-cover bg-center" data-alt="A macro photograph of professional industrial tools like a polished wrench and a level placed neatly on a dark wooden workbench. The lighting is moody and cinematic with deep shadows and sharp highlights, using the primary navy and construction orange palette to evoke a sense of high-end craftsmanship and urban reliability." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAf9UDzTkugi5Y4qetKNn6MkB8ijDCRH_OtJERSzNi7Qoce6x2Q42YRF0W0Sps79tjq5L7yrHi4DkADkCrHwsHCJFyrPx4rLA8qcv7AV_0Eqv68PpkczkPV2Y0R9LGPw6EyFgrYXKM9jL9XTz6njuT4T1co1v2BfUbpnOM96MbnbD6dkYHH4U2dUsop2nNp9vq2_YOIAPp1M5fsfKdcfftPebJjcgMunCy_plkPonPUYZfCNfT0qNE')"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl">
+<h1 class="font-headline-xl text-headline-xl text-on-primary mb-4">Expert Property Maintenance</h1>
+<p class="text-body-lg text-primary-fixed mb-8">From minor repairs to comprehensive installations, we bring white-glove trade excellence to Camden Town’s finest homes.</p>
+<div class="flex gap-4">
+<span class="inline-flex items-center gap-2 bg-secondary-container/20 text-secondary-fixed border border-secondary px-4 py-2 rounded-full text-label-md">
+<span class="material-symbols-outlined text-[20px]">verified</span> Fully Insured
+                        </span>
+<span class="inline-flex items-center gap-2 bg-secondary-container/20 text-secondary-fixed border border-secondary px-4 py-2 rounded-full text-label-md">
+<span class="material-symbols-outlined text-[20px]">schedule</span> Available Today
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid Section -->
+<section class="py-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Premium Services</h2>
+<div class="h-1.5 w-24 bg-secondary-container mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Plumbing -->
+<div class="group relative bg-white border border-outline-variant rounded-xl overflow-hidden service-card-hover transition-all duration-300">
+<div class="grid grid-cols-1 md:grid-cols-5 h-full">
+<div class="md:col-span-2 relative overflow-hidden h-48 md:h-full">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist shot of a modern chrome bathroom faucet with crystalline water droplets. The background is a soft-focus marble tile in shades of grey and white. The lighting is bright and airy, reflecting a premium plumbing service that values cleanliness and precision in an urban luxury home setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHhkuFwjwKRPZCKqodsQUnMHWgbY2aqYyJ7V-a9VBI1PbRwX4j1HClAxzShYaW_9bQiM7aJ-VkYSzfsr_PWBfDd-y6Tw1EKQfSB4OgpKNXi9_9p5j7bq0nhz7_VpcNworkumzww6Y960--hT2lOOEtRTRGy5kaJ1UlhliWAP5rzCQkqGBUDGaxgYIAg1EDJ4cMiQPIDhhGVM7uiF9rFOYJkH2crpCOoDhbTPyXt1OcZK_p0jztALw')"></div>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="md:col-span-3 p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-[32px]">plumbing</span>
+<h3 class="font-headline-md text-headline-md text-primary">Plumbing</h3>
+</div>
+<ul class="space-y-3 mb-8 text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Expert leaking tap repairs
+                                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Toilet mechanism servicing
+                                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Internal pipework maintenance
+                                    </li>
+</ul>
+</div>
+<button class="w-full bg-primary text-on-primary font-bold py-3 rounded-lg hover:bg-primary-container transition-colors">Book this Service</button>
+</div>
+</div>
+</div>
+<!-- Electrical -->
+<div class="group relative bg-white border border-outline-variant rounded-xl overflow-hidden service-card-hover transition-all duration-300">
+<div class="grid grid-cols-1 md:grid-cols-5 h-full">
+<div class="md:col-span-2 relative overflow-hidden h-48 md:h-full">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a sleek, modern designer light switch being installed on a crisp white wall. The scene is illuminated by warm, focused light, highlighting the clean lines of the electrical fixture. The atmosphere is professional and orderly, signifying safe and expert electrical work in a high-end residential environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtAxJ1kvwCLjciMscdfOCrUmIGF5jqjkzwKH8vflYbPec13x1ow5Cj3Tn0GN3q5L8gsHT232ixPv0G84Dm7BVUBBeftxiMrlZqmIW_3zBzkRY4n69WQrc_LHoIndAhN8J5BC0PnAp-4E_5Xy49Gs30ho-kwd1kFv6HszBxAeyAnMkG1agHHSzSeb1fXrKRBiHPpIuNj5OD8QJKIccxho5zpY5XnRuA-BTuI9A07Df03awW3fSqVeY')"></div>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="md:col-span-3 p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-[32px]">bolt</span>
+<h3 class="font-headline-md text-headline-md text-primary">Electrical</h3>
+</div>
+<ul class="space-y-3 mb-8 text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Socket and switch replacements
+                                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Light fitting &amp; chandelier installs
+                                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Diagnostic fault finding
+                                    </li>
+</ul>
+</div>
+<button class="w-full bg-primary text-on-primary font-bold py-3 rounded-lg hover:bg-primary-container transition-colors">Book this Service</button>
+</div>
+</div>
+</div>
+<!-- Carpentry -->
+<div class="group relative bg-white border border-outline-variant rounded-xl overflow-hidden service-card-hover transition-all duration-300">
+<div class="grid grid-cols-1 md:grid-cols-5 h-full">
+<div class="md:col-span-2 relative overflow-hidden h-48 md:h-full">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A focused shot of high-quality oak timber being measured with a brass-detailed ruler. Sawdust particles are caught in a shaft of morning sunlight, creating a warm, industrial-chic aesthetic. The image represents the precision and traditional skill of expert carpentry services provided to modern urban homeowners." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoKtAWywbr9EBDHMLe01lOnOBwxOH0_Bo-6Lv8KTnGMLM9DEdsVI51JBtgLICJUJiIHpaZjeoNBB6T2Npf7MbUgOMLOar5EE820y0w-L_5_GbxYwOmnTTQ5jRlYKl860_LeKEe7NPeIo9H97t-WffxgCWWpQxPvAa69Cdj6knpgr9HUn0B65UAh_MMi2koig-B5f-MHUIW1jhSBMwkymENxqpn4Lk_xKhTfIurUO3Bp1nKa4NOQA0')"></div>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="md:col-span-3 p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-[32px]">carpenter</span>
+<h3 class="font-headline-md text-headline-md text-primary">Carpentry</h3>
+</div>
+<ul class="space-y-3 mb-8 text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Premium flat-pack assembly
+                                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Custom shelving &amp; alcoves
+                                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Internal door hanging
+                                    </li>
+</ul>
+</div>
+<button class="w-full bg-primary text-on-primary font-bold py-3 rounded-lg hover:bg-primary-container transition-colors">Book this Service</button>
+</div>
+</div>
+</div>
+<!-- Painting & Decorating -->
+<div class="group relative bg-white border border-outline-variant rounded-xl overflow-hidden service-card-hover transition-all duration-300">
+<div class="grid grid-cols-1 md:grid-cols-5 h-full">
+<div class="md:col-span-2 relative overflow-hidden h-48 md:h-full">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A pristine white wall being painted with a deep navy blue using a high-quality roller. The lines are sharp and perfectly straight. The surrounding floor is protected by clean canvas drop cloths. This image captures the meticulous attention to detail and professional cleanliness of a premium interior decorating service." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXEjSvTtIX6iHRbfIXLUteK6HS2gDpcZ5deo4OTa8bfJZtnOEoHuNhqb82RY_oIsk3FDYVy0wkVTYoro1LUUbTYFOfWwXssudCgBkNSPotWxxZMBVfRQOqjxAxTJwJ9kg_9m186qj30uvZjsVolKq0KPWi-Jjzr1g7ZTAOReOfJhy6-lXy2ZF_hrHeEqsB76gmQYC873Mn2yVMBPbrUp4EHtyCc3jpbGk0PjbiKE184FXLytjIzKI')"></div>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="md:col-span-3 p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-[32px]">format_paint</span>
+<h3 class="font-headline-md text-headline-md text-primary">Painting</h3>
+</div>
+<ul class="space-y-3 mb-8 text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Full room painting
+                                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Meticulous touch-ups
+                                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Designer wallpapering
+                                    </li>
+</ul>
+</div>
+<button class="w-full bg-primary text-on-primary font-bold py-3 rounded-lg hover:bg-primary-container transition-colors">Book this Service</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="bg-surface-container py-20 px-margin-desktop">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Frequently Asked Questions</h2>
+<p class="text-body-md text-on-surface-variant">Everything you need to know about our premium trade services.</p>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="bg-white rounded-lg border border-outline-variant overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-bright transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-body-lg text-primary">How do you charge for your services?</span>
+<span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-on-surface-variant">
+                            We offer a transparent tiered pricing model. Small tasks are charged at a competitive hourly rate with a minimum call-out of one hour. For larger projects like full-room painting or extensive carpentry, we provide fixed-price quotes after a brief initial assessment.
+                        </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-white rounded-lg border border-outline-variant overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-bright transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-body-lg text-primary">Are you fully insured for residential work?</span>
+<span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-on-surface-variant">
+                            Yes, absolutely. Camden Town Handyman carries comprehensive public liability insurance up to £5 million, specifically tailored for high-end residential property maintenance and repairs.
+                        </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-white rounded-lg border border-outline-variant overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-bright transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-body-lg text-primary">Do you provide the materials for the job?</span>
+<span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-on-surface-variant">
+                            We can work both ways. If you have already purchased your fittings (like lights or flat-packs), we are happy to install them. Alternatively, we can source professional-grade materials for you, which will be added to your invoice at cost.
+                        </div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="bg-white rounded-lg border border-outline-variant overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-bright transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-body-lg text-primary">What areas of London do you cover?</span>
+<span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-on-surface-variant">
+                            While our heart is in Camden Town, we cover most of North and Central London, including Islington, Highgate, Primrose Hill, and Marylebone.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md text-on-primary mb-6">Camden Town Handyman</div>
+<p class="text-surface-variant text-body-md opacity-80 mb-6">Premium trade services for the modern urban home.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-fixed cursor-pointer hover:text-white transition-colors">face_nod</span>
+<span class="material-symbols-outlined text-secondary-fixed cursor-pointer hover:text-white transition-colors">photo_camera</span>
+<span class="material-symbols-outlined text-secondary-fixed cursor-pointer hover:text-white transition-colors">alternate_email</span>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold mb-6 text-secondary-fixed">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Plumbing</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Electrical</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Carpentry</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Painting</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold mb-6 text-secondary-fixed">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">About Us</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="gallery-reviews.html">Gallery</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold mb-6 text-secondary-fixed">Contact</h4>
+<ul class="space-y-4 text-surface-variant">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed">location_on</span>
+<span>Camden High Street,<br>London NW1 8NH</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed">call</span>
+<span>020 7946 0123</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed">mail</span>
+<span>hello@camdenhandyman.co.uk</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-primary-container py-8 text-center text-caption text-surface-variant/60">
+            © 2024 Camden Town Handyman. Premium Property Maintenance.
+        </div>
+</footer>
+<script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.material-symbols-outlined');
+            
+            // Toggle visibility
+            content.classList.toggle('hidden');
+            
+            // Animate Icon
+            if (content.classList.contains('hidden')) {
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Initialize first FAQ as open
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstFaq = document.querySelector('button[onclick="toggleFaq(this)"]');
+            if (firstFaq) toggleFaq(firstFaq);
+        });
+    </script>
+</body></html>

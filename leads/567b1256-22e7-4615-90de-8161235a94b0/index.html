@@ -1,0 +1,383 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us | The Handyman London</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(39, 42, 44, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(71, 85, 105, 0.2);
+        }
+        .glow-border:hover {
+            border-color: #00A3FF;
+            box-shadow: 0 0 15px rgba(0, 163, 255, 0.3);
+        }
+        @keyframes pulse-blue {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .pulse-dot {
+            animation: pulse-blue 2s infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#272a2c",
+                        "electric-blue": "#00A3FF",
+                        "on-secondary-fixed": "#001d33",
+                        "on-surface-variant": "#e4bfb1",
+                        "secondary-container": "#00a2fd",
+                        "on-background": "#e0e3e5",
+                        "on-primary": "#5a1c00",
+                        "on-tertiary": "#2f3133",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#323537",
+                        "background": "#101415",
+                        "primary-fixed": "#ffdbce",
+                        "safety-orange": "#FF5F00",
+                        "surface-container-low": "#191c1e",
+                        "outline-variant": "#5b4137",
+                        "on-secondary": "#003354",
+                        "inverse-on-surface": "#2d3133",
+                        "surface-container-lowest": "#0b0f10",
+                        "on-primary-container": "#531a00",
+                        "on-tertiary-fixed-variant": "#454749",
+                        "on-secondary-container": "#003558",
+                        "primary": "#ffb599",
+                        "inverse-surface": "#e0e3e5",
+                        "secondary-fixed-dim": "#98cbff",
+                        "metal-gray": "#475569",
+                        "on-tertiary-fixed": "#1a1c1e",
+                        "on-tertiary-container": "#2b2d2f",
+                        "tertiary-fixed": "#e2e2e5",
+                        "surface-dim": "#101415",
+                        "charcoal-black": "#0E1012",
+                        "tertiary-fixed-dim": "#c6c6c9",
+                        "surface-bright": "#363a3b",
+                        "secondary": "#98cbff",
+                        "tertiary": "#c6c6c9",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#004a77",
+                        "inverse-primary": "#a63b00",
+                        "primary-container": "#ff5f00",
+                        "surface-tint": "#ffb599",
+                        "error-container": "#93000a",
+                        "outline": "#ab8a7d",
+                        "primary-fixed-dim": "#ffb599",
+                        "surface-container-highest": "#323537",
+                        "on-primary-fixed": "#370e00",
+                        "surface-container": "#1d2022",
+                        "secondary-fixed": "#cfe5ff",
+                        "on-primary-fixed-variant": "#7f2b00",
+                        "tertiary-container": "#939496",
+                        "surface": "#101415",
+                        "on-surface": "#e0e3e5",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-background/80 backdrop-blur-xl border-b border-metal-gray/20 shadow-sm sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">The Handyman London</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface/80 hover:text-electric-blue transition-colors font-label-lg text-label-lg" href="#">Services</a>
+<a class="text-electric-blue font-bold border-b-2 border-electric-blue pb-1 font-label-lg text-label-lg" href="index.html">About Us</a>
+<a class="text-on-surface/80 hover:text-electric-blue transition-colors font-label-lg text-label-lg" href="#">Case Studies</a>
+<a class="text-on-surface/80 hover:text-electric-blue transition-colors font-label-lg text-label-lg" href="#">Reviews</a>
+</div>
+<button class="bg-safety-orange hover:opacity-80 transition-all duration-300 text-on-primary font-bold px-6 py-2 rounded-lg active:scale-95">
+                Book Now
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[70vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-40" data-alt="A high-resolution cinematic shot of professional grade carpenter tools including a precision level, heavy-duty hammer, and polished chisels laid out on a dark slate workbench. The lighting is dramatic with deep shadows and sharp highlights on the metallic surfaces, emphasizing a premium and rugged craftsmanship aesthetic. The overall mood is serious, expert, and high-end, utilizing a palette of deep charcoals and metallic grays." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpGW5EujOqxftTVIpRX8NMcqbuyicuTX5rSohFr7KdHU2iWeMQrCPu0Sbk8xTKqWSnoXXy01BsLiz_anVK_tWT46ArKL9ZBnO4a9ctbgb3ndwJqZNKhhfrMUqHEpoCot2y_tt6jHFD7RVi5IAZTGLmX7dVgBIYCHT4-oyZeJkBvHKYo64YtPy5vbEYB2h1z1dgO7oSdVfNflHZbCnNOmEM59LN6EgBh67Be_AqTrh-_WJFKTBpIYlP')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<span class="text-safety-orange font-label-lg text-label-lg uppercase tracking-widest mb-4 block">Crafting Excellence</span>
+<h1 class="font-display-lg text-display-lg max-w-3xl mb-6">Built on Precision and Reliability.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">We aren't just fixers; we are precision engineers for your home. Delivering London's most sophisticated maintenance solutions with a white-glove approach.</p>
+</div>
+</section>
+<!-- Our Mission Section -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-surface-container-high px-4 py-1 rounded-full border border-metal-gray/30">
+<span class="w-2 h-2 rounded-full bg-electric-blue pulse-dot"></span>
+<span class="font-label-sm text-label-sm text-electric-blue">MISSION DRIVEN</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl">The Highest Standards for London Homes.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Our mission is to redefine the trade industry in London. We believe that every repair, installation, or renovation deserves the same level of architectural precision as a new build. From Chelsea townhouses to modern Canary Wharf apartments, we bring a tech-enabled, meticulous approach to every project.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-safety-orange" data-icon="verified">verified</span>
+<span class="font-label-lg text-label-lg">Certified Master Tradespeople</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-safety-orange" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="font-label-lg text-label-lg">Precision Engineering Approach</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-safety-orange" data-icon="schedule">schedule</span>
+<span class="font-label-lg text-label-lg">Punctuality Guaranteed</span>
+</li>
+</ul>
+</div>
+<div class="relative">
+<div class="aspect-square glass-card rounded-xl p-4 rotate-3 transform transition-transform hover:rotate-0 duration-500">
+<div class="w-full h-full rounded-lg bg-cover bg-center" data-alt="A focused close-up of a professional handyman's hands wearing high-quality leather work gloves, expertly tightening a complex copper pipe joint with a sleek adjustable wrench. The environment is a high-end modern kitchen under construction with clean lines and premium materials. The lighting is bright and professional, highlighting the texture of the gloves and the metallic gleam of the pipes. The style is Corporate Modern with sharp focus." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1OsfPJMm5VP-hyqj6NJaTISfH_xQ1c1KKkljU2zj7eJReNdz-clh_yJSnIjrEpW4Q6rgi2C2yu7C24HkT3tWdhIRacMAtz7MemtNn1mUmTuPtETc4-SY2bUseK--I60t6LdYabTy8_DngvWpspGfgMdoxvaUsMZdBC32hmYhJrLCsqJLfffAv6kHivDfCMHiqLSdHhjr3kdpLAnFJDlokV20ezr4fSog_LCoeAHzKMS6EHiTHR06t')"></div>
+</div>
+<div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-xl hidden md:block border-l-4 border-electric-blue">
+<div class="text-display-lg text-electric-blue font-extrabold leading-none">15+</div>
+<div class="text-label-lg text-on-surface uppercase mt-2">Years of Excellence</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Meet the Experts Section -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-xl text-headline-xl mb-4">Meet the Experts</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Our team consists of veteran craftsmen who treat every home like a masterpiece.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Expert Card 1 -->
+<div class="glass-card rounded-xl overflow-hidden group glow-border transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A portrait of a professional electrician in his 40s, wearing a clean, branded navy blue work polo. He is standing in front of a blurred background of a modern electrical panel. He has a friendly but confident expression, conveying trustworthiness and expertise. The lighting is soft and professional, emphasizing a high-end service brand identity. The color palette includes deep blues and safety oranges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBKeRpb3x4DkNZgOHPr8Ng8Q9i_4yrsE_pg01YUayN7W6TdP_uf4ZPNryv_zDH86RDZ2Ww1J637PAu9Y2sl8WuLNgUYaAjqhBNQCp3_Hm_h742pZhq8N5QM8X-Wlp1oDitKVCCFdzo7E4ISWjbrAQzQ8_FG-d32KjfPtz5q5B96U3v-N5aY8j55XSk6Uly0kiy7bDe_pDCoeDKY_ShjrWvvQDygjJv_7Bp-CnRGUZhZa4xmX-D_I8l">
+<div class="absolute top-4 right-4 bg-electric-blue text-on-secondary px-3 py-1 rounded-full font-label-sm text-label-sm">ELECTRICAL</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md mb-1">David Sterling</h3>
+<p class="text-on-surface-variant font-label-lg text-label-lg mb-4">Master Electrician</p>
+<div class="flex items-center gap-1 text-safety-orange">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Expert Card 2 -->
+<div class="glass-card rounded-xl overflow-hidden group glow-border transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A portrait of a professional female carpenter in her late 30s, holding a digital measuring tool. She is wearing a professional charcoal work vest with 'The Handyman London' logo subtly visible. Behind her are high-quality wood samples in a bright studio. She looks skilled and focused. The lighting is crisp and modern, reflecting a premium trade service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7tQGo2NhX1X8R-yF4Grtzvy0PAeQWQ5QfQcRT4PnRntTbHzCWgGhKio1_M8_ktjLAE74Pij-4_2lrhlszyjSQjtF-XxXUIJiHq1wc3bK-BPq1uSfHvF9IH8Pbn3EeOl48dlSsgX9bJbdbL_20jo4aToy8NJVyLjZ_jHnyK82JQa731GdeoTrzq3ZKuMm5tl1qQp5gV2DHapOhVOlbti7hKwG74fnlnBAVzZQkYhwrD8tT33POuqWn">
+<div class="absolute top-4 right-4 bg-safety-orange text-on-primary px-3 py-1 rounded-full font-label-sm text-label-sm">CARPENTRY</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md mb-1">Elena Vance</h3>
+<p class="text-on-surface-variant font-label-lg text-label-lg mb-4">Artisan Carpenter</p>
+<div class="flex items-center gap-1 text-safety-orange">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Expert Card 3 -->
+<div class="glass-card rounded-xl overflow-hidden group glow-border transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A professional plumber in his late 40s standing confidently next to a high-end boiler installation. He is wearing professional work attire and has a calm, knowledgeable demeanor. The background is a clean utility room with polished copper pipes. High-quality lighting highlights the technical expertise and reliability of the individual. Dark charcoal and safety orange tones dominate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiSKjjEvqERebnwQQ-IC7-6wBARUxwM_2dMBtvEKoCst8Ecs2iTCU-Lc1f4c20gShNI3kwn79oVYBlNFN3I8U6VbgF24EZc8DGjcR6GC5mz-t1B8pGx2HUgNC4n-lgs_bTYoByyCT2saoHPqub1lkXxpRwfh7CZTaHkU47TCUi1vSCWoPMnflI3tP5kuMkJn-zEl5o680dNFiFRghIgJXJTHm-W_LsqLzgHWEFEP7SfBtZBomiOXgf">
+<div class="absolute top-4 right-4 bg-electric-blue text-on-secondary px-3 py-1 rounded-full font-label-sm text-label-sm">PLUMBING</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md mb-1">Marcus Thorne</h3>
+<p class="text-on-surface-variant font-label-lg text-label-lg mb-4">Heating Specialist</p>
+<div class="flex items-center gap-1 text-safety-orange">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Expert Card 4 -->
+<div class="glass-card rounded-xl overflow-hidden group glow-border transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A professional multi-trade expert smiling warmly, holding a sleek tablet showing a maintenance checklist. He is wearing a branded high-visibility vest that looks polished and new. The background is a luxury London living room with elegant decor. The shot is bright, energetic, and professional, signifying a modern, tech-enabled handyman service. Premium corporate photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7kHu8t18rRYFpp7FZXQldBfOAH-iZwn-RxXnaFSS5qf_K0hai72Q9occ0vSqceDXdbFzLh7YCWOm9GUA660xkpavxFpGMCHrV2iSO66i66AiFDE-Gsa2qWp4wsQEXJUwbdaNFrhlWRCpJq-6-zMGc5wVDlcN4igPFpI9EI3hzUQAqgeYbRVYu5mb7CfxrTfYit3vl9TlHhHUYTQk2UnonKWzWtWyLCS9Zqh3W7xuvs-_hMP2k0LNo">
+<div class="absolute top-4 right-4 bg-safety-orange text-on-primary px-3 py-1 rounded-full font-label-sm text-label-sm">GENERAL</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md mb-1">James Cooper</h3>
+<p class="text-on-surface-variant font-label-lg text-label-lg mb-4">Senior Project Lead</p>
+<div class="flex items-center gap-1 text-safety-orange">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Handyman Guarantee Section (Bento Grid) -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-xl text-headline-xl mb-12 text-center">The Handyman Guarantee</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 glass-card rounded-xl p-10 flex flex-col justify-center border-t-2 border-safety-orange">
+<span class="material-symbols-outlined text-safety-orange text-5xl mb-6" data-icon="security">security</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Full Liability Insurance &amp; Warranty</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Every single job we perform is backed by our comprehensive £5M liability insurance and a 12-month craftsmanship warranty. We don't just finish the job; we secure your peace of mind.</p>
+<div class="flex gap-4">
+<div class="px-4 py-2 rounded-full bg-surface-variant text-label-sm text-label-sm font-bold uppercase">£5M Coverage</div>
+<div class="px-4 py-2 rounded-full bg-surface-variant text-label-sm text-label-sm font-bold uppercase">12-Month Guarantee</div>
+</div>
+</div>
+<div class="md:col-span-4 glass-card rounded-xl overflow-hidden relative group">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="A close-up aesthetic shot of high-quality construction materials: raw oak wood, polished brass fittings, and textured concrete. The materials are arranged artistically with architectural lighting. The style is premium and minimalist, showcasing the quality of raw materials used by a high-end handyman service. The mood is tactile and sophisticated." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAN-UBd_1XWYPNFZvxXNh0Mng8VsvzUFF3Bq0VYIlWiB_qoGRRzpVLkVkg44Tt433upt4eNvXmdwTsaeEi1aB2Rqo0hXzCvkDJ-NCFVTyffSw1k_Uc09mjeiSspzHdSib2o_6Sx90NBuDyQebAzZDnGzmWS_1_rR0Jmm4InqjGvNBTrGBIGjfIjycYvniylir1hoJsWJBZlZL2Qc2lh7wRWK7g_5nsPwLDaHqojkyCueT4b4Gg7OKj5')"></div>
+<div class="absolute inset-0 bg-black/60 p-8 flex flex-col justify-end">
+<h4 class="font-headline-md text-headline-md mb-2">Premium Materials</h4>
+<p class="font-body-md text-body-md text-white/80">We source only the finest industrial-grade components for your home.</p>
+</div>
+</div>
+<div class="md:col-span-4 glass-card rounded-xl p-8 flex flex-col items-center text-center border-t-2 border-electric-blue">
+<span class="material-symbols-outlined text-electric-blue text-4xl mb-4" data-icon="speed">speed</span>
+<h4 class="font-headline-md text-headline-md mb-2">Urgent Response</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Same-day service availability for emergencies throughout Greater London.</p>
+</div>
+<div class="md:col-span-4 glass-card rounded-xl p-8 flex flex-col items-center text-center border-t-2 border-electric-blue">
+<span class="material-symbols-outlined text-electric-blue text-4xl mb-4" data-icon="payments">payments</span>
+<h4 class="font-headline-md text-headline-md mb-2">Transparent Pricing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Clear, upfront quotes with no hidden fees or "London premiums".</p>
+</div>
+<div class="md:col-span-4 glass-card rounded-xl p-8 flex flex-col items-center text-center border-t-2 border-electric-blue">
+<span class="material-symbols-outlined text-electric-blue text-4xl mb-4" data-icon="eco">eco</span>
+<h4 class="font-headline-md text-headline-md mb-2">Clean Workspace</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">We leave your home exactly as we found it. Spotless and fully restored.</p>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="py-24 relative overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A blurry, atmospheric night shot of the London skyline with the Shard and Tower Bridge illuminated. The image is overlayed with a deep charcoal tint and a grain texture. The overall aesthetic is moody, urban, and high-end, focusing on the sophisticated city context of the business." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-8F8FqSdVuLu3qQpoDeeFIIc3Yk_a3asvSoWpWNzS98KOSBilIga9OvnAIwcGZb1yxur47wkHzXdNHhiHu-0VWGzGhqKMsodq00atu7ZWLdJ4fzeWmiJMhx7zF4DdIe9Yo9uvVMtoKutiXfG8yLc1E6InyTGPz-L75f7tzdBkNOCE-2mGkBMQKfZXplGQzogbt7Cr_8QQARPQyDy0GqkfsQDvOuKllK0yofhBoauNIhXMLH2eBwfb')"></div>
+<div class="absolute inset-0 bg-primary-container/20 mix-blend-overlay"></div>
+<div class="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
+</div>
+<div class="relative z-10 text-center px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Ready to experience true craftsmanship?</h2>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="bg-safety-orange text-on-primary px-10 py-4 rounded-lg font-headline-md text-headline-md hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-safety-orange/20">Book Your Expert Now</button>
+<button class="glass-card px-10 py-4 rounded-lg font-headline-md text-headline-md border border-electric-blue/50 text-electric-blue hover:bg-electric-blue/10 transition-all">View All Services</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-metal-gray/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-6">The Handyman London</div>
+<p class="text-on-surface-variant font-body-md text-body-md">Premium trade services for the modern London residence. Excellence in every detail.</p>
+</div>
+<div class="col-span-1">
+<h5 class="text-safety-orange font-label-lg text-label-lg uppercase mb-6 tracking-wider">Services</h5>
+<ul class="space-y-4 font-label-sm text-label-sm">
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Plumbing</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Electrical</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Carpentry</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">General Repairs</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="text-safety-orange font-label-lg text-label-lg uppercase mb-6 tracking-wider">Company</h5>
+<ul class="space-y-4 font-label-sm text-label-sm">
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="index.html">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Case Studies</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Reviews</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="text-safety-orange font-label-lg text-label-lg uppercase mb-6 tracking-wider">Legal</h5>
+<ul class="space-y-4 font-label-sm text-label-sm">
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop py-8 border-t border-metal-gray/5 text-center text-on-surface-variant font-label-sm text-label-sm">
+            © 2024 The Handyman London. Premium Trade Services.
+        </div>
+</footer>
+<script>
+        // Subtle micro-interaction for cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

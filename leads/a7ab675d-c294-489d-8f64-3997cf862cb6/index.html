@@ -1,0 +1,422 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>London Concierge | HandymanForLondon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary-fixed-dim": "#afc8f0",
+                "surface-container": "#f0eded",
+                "inverse-primary": "#afc8f0",
+                "secondary-container": "#fed65b",
+                "on-surface-variant": "#43474e",
+                "on-secondary-fixed": "#241a00",
+                "surface-dim": "#dcd9d9",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed": "#e1e3e4",
+                "primary": "#000613",
+                "on-primary": "#ffffff",
+                "on-tertiary-container": "#848688",
+                "navy-deep": "#001F3F",
+                "tertiary-container": "#1c1f20",
+                "secondary-fixed-dim": "#e9c349",
+                "secondary-fixed": "#ffe088",
+                "inverse-surface": "#313030",
+                "primary-fixed": "#d4e3ff",
+                "on-primary-fixed-variant": "#2f486a",
+                "secondary": "#735c00",
+                "glass-border": "rgba(255, 255, 255, 0.2)",
+                "on-secondary": "#ffffff",
+                "white-clean": "#FFFFFF",
+                "outline-variant": "#c4c6cf",
+                "on-error": "#ffffff",
+                "error-container": "#ffdad6",
+                "on-tertiary-fixed-variant": "#454748",
+                "background": "#fcf9f8",
+                "surface-container-low": "#f6f3f2",
+                "surface-container-highest": "#e5e2e1",
+                "on-surface": "#1c1b1b",
+                "primary-container": "#001f3f",
+                "error": "#ba1a1a",
+                "on-secondary-container": "#745c00",
+                "on-error-container": "#93000a",
+                "gold-artisan": "#D4AF37",
+                "outline": "#74777f",
+                "surface-bright": "#fcf9f8",
+                "on-secondary-fixed-variant": "#574500",
+                "surface": "#fcf9f8",
+                "on-tertiary-fixed": "#191c1d",
+                "tertiary-fixed-dim": "#c5c7c8",
+                "tertiary": "#040607",
+                "navy-muted": "#002B56",
+                "on-primary-fixed": "#001c3a",
+                "surface-variant": "#e5e2e1",
+                "surface-tint": "#476083",
+                "on-primary-container": "#6f88ad",
+                "inverse-on-surface": "#f3f0ef",
+                "on-background": "#1c1b1b",
+                "surface-container-high": "#eae7e7",
+                "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "unit": "8px",
+                "margin-mobile": "20px",
+                "margin-desktop": "80px",
+                "gutter": "24px",
+                "bento-gap": "16px"
+            },
+            "fontFamily": {
+                "headline-sm": ["Montserrat"],
+                "body-md": ["Hanken Grotesk"],
+                "body-lg": ["Hanken Grotesk"],
+                "headline-md": ["Montserrat"],
+                "label-md": ["Hanken Grotesk"],
+                "label-sm": ["Hanken Grotesk"],
+                "display-lg": ["Montserrat"],
+                "display-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "display-lg-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #F1D592 50%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-navy-deep text-white-clean font-body-md overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-navy-deep/60 backdrop-blur-md border-b border-glass-border shadow-sm flex justify-between items-center px-margin-desktop py-4 max-w-full mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-gold-artisan">HandymanForLondon</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md uppercase text-navy-deep dark:text-white-clean hover:text-gold-artisan transition-colors" href="services-expertise.html">Services</a>
+<a class="font-label-md text-label-md uppercase text-navy-deep dark:text-white-clean hover:text-gold-artisan transition-colors" href="handymanforlondon-home.html">Artisans</a>
+<a class="font-label-md text-label-md uppercase text-gold-artisan border-b-2 border-gold-artisan pb-1" href="index.html">Concierge</a>
+<a class="font-label-md text-label-md uppercase text-navy-deep dark:text-white-clean hover:text-gold-artisan transition-colors" href="#">About</a>
+<a class="font-label-md text-label-md uppercase text-navy-deep dark:text-white-clean hover:text-gold-artisan transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-navy-deep text-white-clean px-6 py-2 font-label-md uppercase border border-gold-artisan hover:bg-gold-artisan hover:text-navy-deep transition-all duration-300">
+            Book Now
+        </button>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[80vh] flex items-center justify-center pt-24 px-margin-desktop overflow-hidden">
+
+<div class="relative z-10 text-center max-w-4xl">
+<span class="inline-block font-label-md text-gold-artisan tracking-widest uppercase mb-4 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">Members Only</span>
+<h1 class="font-display-lg text-display-lg text-white-clean mb-6 gold-gradient-text">The London Concierge</h1>
+<p class="font-body-lg text-body-lg text-white-clean/80 mb-10 max-w-2xl mx-auto">Elevate your home management to a curated service. Bespoke preventative maintenance and priority artisan access for London's most distinguished properties.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<a class="bg-gold-artisan text-navy-deep px-10 py-4 font-label-md uppercase font-bold hover:bg-white-clean transition-colors duration-300" href="#membership">View Tiers</a>
+<a class="border border-white-clean/30 text-white-clean px-10 py-4 font-label-md uppercase backdrop-blur-sm hover:bg-white-clean/10 transition-colors duration-300" href="#join">Inquire Now</a>
+</div>
+</div>
+</header>
+<!-- Bento Grid Value Props -->
+<section class="py-24 px-margin-desktop max-w-full mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-bento-gap">
+<!-- Large Image Bento -->
+<div class="md:col-span-8 h-[500px] relative overflow-hidden rounded-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" data-alt="A luxurious, sun-drenched London townhouse drawing room featuring impeccably maintained hardwood floors, ornate crown molding, and bespoke cabinetry. The lighting is warm and golden, emphasizing the high-end artisan craftsmanship of the space. The overall atmosphere is one of serene luxury and perfection, reflecting the elite maintenance services of HandymanForLondon. Deep navy and gold accents are subtly visible in the decor." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGSXlvkkjC8TkTY_wYKqWhAZDqgVxhRpBw8OoVoaZ98-txtLypILjow3A11w6qnoVEKs17JCNEbMWKRdP3knh3NFBLwwa-4e58WpIXENUCVCertfGwKRtU4tC38V52p8V03C0IiCOix4OffTeQzOSiM37dsT645rexCO5yES27vqZz9HQnFlI2dC9fhhWMHQk4ODPbFIAJsQx0yd0adpOazdc5lxepAeiNnxk9X_UeFv8hgUrQu2rZDQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 max-w-md">
+<h3 class="font-headline-md text-headline-md text-gold-artisan mb-2">Pristine Preservation</h3>
+<p class="text-white-clean/80">Quarterly audits and preventative care to ensure your residence remains in its finest state, year-round.</p>
+</div>
+</div>
+<!-- Priority Access -->
+<div class="md:col-span-4 glass-card p-10 flex flex-col justify-center rounded-xl">
+<span class="material-symbols-outlined text-gold-artisan text-4xl mb-4" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<h3 class="font-headline-sm text-headline-sm text-white-clean mb-4">Priority Booking</h3>
+<p class="text-white-clean/70 font-body-md">Concierge members bypass the waitlist. Same-day emergency response and guaranteed priority for all artisan bookings.</p>
+</div>
+<!-- Dedicated Manager -->
+<div class="md:col-span-4 glass-card p-10 flex flex-col justify-center rounded-xl">
+<span class="material-symbols-outlined text-gold-artisan text-4xl mb-4" data-icon="support_agent">support_agent</span>
+<h3 class="font-headline-sm text-headline-sm text-white-clean mb-4">Personal Liaison</h3>
+<p class="text-white-clean/70 font-body-md">A single point of contact who understands the nuances of your property’s complex systems and history.</p>
+</div>
+<!-- Artisan Quality -->
+<div class="md:col-span-8 h-[350px] relative overflow-hidden rounded-xl">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A close-up of a master artisan's hands meticulously working on a high-end smart home system installation within a modern London apartment. The lighting is professional and focused, highlighting the precision and attention to detail. The color palette is dominated by deep blues and metallic gold reflections. The image conveys expertise, reliability, and the modern artisan standard." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChXsGQUmR1phe4XgLd16yOVHuzENhdlS7hQPlsQdspSLiKxCJE9dxE6XXM5-A-q-UgBys5NSv2A0DcbyBYE8aZBNKPXETMg-krSyRnl8sjP86QYkdXB0RyBQlC1gEh-1Ew7nNOTmGagHAnrKbyjPU5BQxR726uML9E-nRepzfN5xbImTpXmKQcCo1PZtzxNgb-aMcdpoJPZLXualV_sO547VLLd8fkjnc_sC1G8qwAnciZs_VwhDsM9Q')"></div>
+<div class="absolute inset-0 bg-navy-deep/40"></div>
+<div class="absolute inset-0 flex items-center p-12">
+<div class="max-w-md">
+<h3 class="font-headline-sm text-headline-sm text-white-clean mb-2">Master Craftsmanship</h3>
+<p class="text-white-clean/90">Direct access to our most senior artisans for intricate restoration and high-tech installations.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Membership Tiers -->
+<section class="py-24 bg-primary-container" id="membership">
+<div class="px-margin-desktop max-w-full mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-display-lg text-white-clean mb-4">Membership Tiers</h2>
+<p class="font-body-lg text-on-primary-container max-w-2xl mx-auto">Select the level of care that suits your portfolio.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Essential -->
+<div class="glass-card p-10 rounded-xl border border-white-clean/10 flex flex-col h-full hover:border-gold-artisan/50 transition-colors duration-500">
+<div class="mb-8">
+<h4 class="font-label-md text-white-clean/60 uppercase tracking-widest mb-2">Essential</h4>
+<div class="font-headline-md text-white-clean">£450 <span class="text-label-md text-white-clean/40">/mo</span></div>
+</div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-start gap-3 text-white-clean/80">
+<span class="material-symbols-outlined text-gold-artisan text-lg" data-icon="check_circle">check_circle</span>
+<span>Annual preventative maintenance visit</span>
+</li>
+<li class="flex items-start gap-3 text-white-clean/80">
+<span class="material-symbols-outlined text-gold-artisan text-lg" data-icon="check_circle">check_circle</span>
+<span>Priority booking (48-hour guarantee)</span>
+</li>
+<li class="flex items-start gap-3 text-white-clean/80">
+<span class="material-symbols-outlined text-gold-artisan text-lg" data-icon="check_circle">check_circle</span>
+<span>10% discount on all labour rates</span>
+</li>
+</ul>
+<button class="w-full py-4 border border-white-clean/20 text-white-clean font-label-md uppercase hover:bg-white-clean hover:text-navy-deep transition-all">Select Essential</button>
+</div>
+<!-- Premium -->
+<div class="bg-navy-muted p-10 rounded-xl border-2 border-gold-artisan relative flex flex-col h-full transform scale-105 z-10 shadow-2xl">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold-artisan text-navy-deep px-4 py-1 text-label-sm font-bold uppercase rounded-full">Most Preferred</div>
+<div class="mb-8">
+<h4 class="font-label-md text-gold-artisan uppercase tracking-widest mb-2">Premium</h4>
+<div class="font-headline-md text-white-clean">£950 <span class="text-label-md text-white-clean/40">/mo</span></div>
+</div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-start gap-3 text-white-clean/80">
+<span class="material-symbols-outlined text-gold-artisan text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-bold">Bi-annual full-property health audits</span>
+</li>
+<li class="flex items-start gap-3 text-white-clean/80">
+<span class="material-symbols-outlined text-gold-artisan text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Priority booking (24-hour guarantee)</span>
+</li>
+<li class="flex items-start gap-3 text-white-clean/80">
+<span class="material-symbols-outlined text-gold-artisan text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Dedicated Account Manager</span>
+</li>
+<li class="flex items-start gap-3 text-white-clean/80">
+<span class="material-symbols-outlined text-gold-artisan text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>15% discount on all labour rates</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-gold-artisan text-navy-deep font-label-md uppercase font-bold hover:bg-white-clean transition-all shadow-lg">Select Premium</button>
+</div>
+<!-- Elite -->
+<div class="glass-card p-10 rounded-xl border border-white-clean/10 flex flex-col h-full hover:border-gold-artisan/50 transition-colors duration-500">
+<div class="mb-8">
+<h4 class="font-label-md text-white-clean/60 uppercase tracking-widest mb-2">Elite</h4>
+<div class="font-headline-md text-white-clean">£2,400 <span class="text-label-md text-white-clean/40">/mo</span></div>
+</div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-start gap-3 text-white-clean/80">
+<span class="material-symbols-outlined text-gold-artisan text-lg" data-icon="check_circle">check_circle</span>
+<span class="font-bold">Quarterly preventative maintenance</span>
+</li>
+<li class="flex items-start gap-3 text-white-clean/80">
+<span class="material-symbols-outlined text-gold-artisan text-lg" data-icon="check_circle">check_circle</span>
+<span>Emergency 4-hour response window</span>
+</li>
+<li class="flex items-start gap-3 text-white-clean/80">
+<span class="material-symbols-outlined text-gold-artisan text-lg" data-icon="check_circle">check_circle</span>
+<span>Unlimited expert consultations</span>
+</li>
+<li class="flex items-start gap-3 text-white-clean/80">
+<span class="material-symbols-outlined text-gold-artisan text-lg" data-icon="check_circle">check_circle</span>
+<span>Full portfolio coverage (up to 3 properties)</span>
+</li>
+</ul>
+<button class="w-full py-4 border border-white-clean/20 text-white-clean font-label-md uppercase hover:bg-white-clean hover:text-navy-deep transition-all">Select Elite</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-24 px-margin-desktop overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-gold-artisan mb-12 text-center">Words from The Circle</h2>
+<div class="flex flex-col md:flex-row gap-8">
+<!-- Testimonial 1 -->
+<div class="flex-1 glass-card p-12 rounded-xl relative">
+<span class="material-symbols-outlined text-gold-artisan/20 text-8xl absolute top-4 right-8 select-none" data-icon="format_quote">format_quote</span>
+<p class="font-body-lg text-body-lg italic text-white-clean/90 mb-8 relative z-10">"HandymanForLondon has transformed how I manage my Mayfair property. Knowing that a master artisan is always one call away brings a level of peace I haven't found anywhere else."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A sophisticated portrait of a high-net-worth London resident in their late 50s, dressed in a sharp charcoal suit. The lighting is reminiscent of a high-end editorial shoot with soft shadows and sharp focus. The background is a blurred view of a classic London square. This represents the elite clientele of the London Concierge service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAirlROvNt4cXAIhoOeMlyiPfWn86r5np2mShlaza9s6KPzVd2Vpz2C9ED6zMDwDe9W0-BU4W6MRzXEGhLKY-x6lU2uQirdaRqD8E656-vwADunqkPCTgyun9Ip2nCEJDNB5w6P0OxETASudRGY16zJXOR7MN0IKFpQ_hJTgTip_Xxc6WADXvYNySiefLwNQpk64XqrQvyDj8vu0wCxXnx4ZtEwQ5-XKG7bGHqTQJBwwz9JE4ZE2csJrw">
+</div>
+<div>
+<div class="font-label-md text-white-clean">Sir Alistair B.</div>
+<div class="text-label-sm text-gold-artisan">Mayfair Estate Owner</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="flex-1 glass-card p-12 rounded-xl relative">
+<span class="material-symbols-outlined text-gold-artisan/20 text-8xl absolute top-4 right-8 select-none" data-icon="format_quote">format_quote</span>
+<p class="font-body-lg text-body-lg italic text-white-clean/90 mb-8 relative z-10">"The quarterly audits caught a leak in the guest wing before it could damage the artwork. The service doesn't just fix problems; it prevents them entirely. Truly the modern standard."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A professional woman in her 40s, exuding confidence and luxury, standing in a brightly lit modern office in London. She has a warm smile and is styled in high-end fashion. The background is a soft-focus architectural detail of a glass building. This image communicates reliability and high-level service trust for a discerning client." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO93vzgm-VidUjlenGR9zLtt5F46hWXRVSaCnDrDfflyswmoiY5ov_gJkkc22Yn_v2QIGSRtKhR7nCQJCO_4jmeBsUcfFwHCyc0PZdFV_9hADz4zUSIkTdBaXyfeBfIShpFXlNAmY5qzUa07Um8th4xyzkUHbjkvVZqjns74vFgkdwmXR6Bw6u5JHKY2ucYj2w7v8k1gk7kmK-nj3TUlYhbnaJuKwCwP99rIUEOT-yJA_No4XWN9SUaQ">
+</div>
+<div>
+<div class="font-label-md text-white-clean">Elena V.</div>
+<div class="text-label-sm text-gold-artisan">Kensington Property Manager</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sign-up Form -->
+<section class="py-24 bg-white-clean text-navy-deep relative overflow-hidden" id="join">
+<div class="px-margin-desktop max-w-full mx-auto relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Join The Circle</h2>
+<p class="font-body-lg text-body-lg mb-8 text-on-surface-variant">Our concierge program is currently operating with limited availability to maintain our standard of service. Please submit an inquiry to begin the application process.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-navy-deep text-gold-artisan flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+</div>
+<p class="font-label-md">Strictly vetted, master-level artisans</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-navy-deep text-gold-artisan flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</div>
+<p class="font-label-md">Comprehensive £5m liability insurance</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-8 md:p-12 rounded-xl shadow-2xl">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md uppercase text-navy-deep">Full Name</label>
+<input class="w-full bg-white-clean border-outline focus:border-gold-artisan focus:ring-0 py-3 px-4 transition-all" placeholder="Enter your name" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-md uppercase text-navy-deep">Email Address</label>
+<input class="w-full bg-white-clean border-outline focus:border-gold-artisan focus:ring-0 py-3 px-4 transition-all" placeholder="Enter your email" type="email">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md uppercase text-navy-deep">Property Postcode</label>
+<input class="w-full bg-white-clean border-outline focus:border-gold-artisan focus:ring-0 py-3 px-4 transition-all" placeholder="e.g. W1J 7JZ" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-md uppercase text-navy-deep">Membership Interest</label>
+<select class="w-full bg-white-clean border-outline focus:border-gold-artisan focus:ring-0 py-3 px-4 transition-all">
+<option>Select a tier...</option>
+<option>Essential Tier</option>
+<option>Premium Tier</option>
+<option>Elite Tier</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-md uppercase text-navy-deep">Message (Optional)</label>
+<textarea class="w-full bg-white-clean border-outline focus:border-gold-artisan focus:ring-0 py-3 px-4 h-32 transition-all" placeholder="Tell us about your property needs..."></textarea>
+</div>
+<button class="w-full bg-navy-deep text-white-clean py-4 font-label-md uppercase font-bold hover:bg-gold-artisan hover:text-navy-deep transition-all duration-300" type="submit">Submit Inquiry</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="w-full pt-20 pb-10 bg-navy-deep">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-full mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md text-gold-artisan mb-4">HandymanForLondon</div>
+<p class="font-body-md text-surface-variant/70 mb-6">Redefining the standard of home maintenance through artisan expertise and concierge-level service.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-md text-white-clean uppercase tracking-widest mb-2">Navigation</h5>
+<a class="font-body-md text-surface-variant/70 hover:text-white-clean transition-all duration-200" href="services-expertise.html">Services</a>
+<a class="font-body-md text-surface-variant/70 hover:text-white-clean transition-all duration-200" href="handymanforlondon-home.html">Artisans</a>
+<a class="font-body-md text-gold-artisan font-bold" href="index.html">London Concierge Program</a>
+<a class="font-body-md text-surface-variant/70 hover:text-white-clean transition-all duration-200" href="handymanforlondon-home.html">Artisan Portal</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-md text-white-clean uppercase tracking-widest mb-2">Legal</h5>
+<a class="font-body-md text-surface-variant/70 hover:text-white-clean transition-all duration-200" href="index.html">Terms of Service</a>
+<a class="font-body-md text-surface-variant/70 hover:text-white-clean transition-all duration-200" href="index.html">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-md text-white-clean uppercase tracking-widest mb-2">Connect</h5>
+<div class="flex gap-4">
+<a class="hover:text-gold-artisan transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="hover:text-gold-artisan transition-colors" href="handymanforlondon-home.html"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+<a class="hover:text-gold-artisan transition-colors" href="#"><span class="material-symbols-outlined" data-icon="phone_in_talk">phone_in_talk</span></a>
+</div>
+<p class="font-body-md text-surface-variant/70 mt-4">London, United Kingdom<br>Available 24/7 for Elite Members.</p>
+</div>
+</div>
+<div class="mt-20 border-t border-white-clean/10 pt-10 text-center px-margin-desktop">
+<p class="font-body-md text-surface-variant/70 text-label-sm">© 2024 HandymanForLondon. The Modern Artisan Standard.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for form inputs
+        document.querySelectorAll('input, select, textarea').forEach(el => {
+            el.addEventListener('focus', () => {
+                el.parentElement.querySelector('label').style.color = '#D4AF37';
+            });
+            el.addEventListener('blur', () => {
+                el.parentElement.querySelector('label').style.color = '';
+            });
+        });
+
+        // Parallax-ish scroll reveal for bento cards
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.glass-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.9) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body></html>

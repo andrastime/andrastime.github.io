@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SMI | Strategic Management &amp; Implementation</title>
+<meta content="Professional local business services specializing in consulting, implementation, and support." name="description"/>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#e6e8ea",
+                    "surface-container-highest": "#e0e3e5",
+                    "inverse-primary": "#bec6e0",
+                    "surface-tint": "#565e74",
+                    "on-secondary-fixed": "#0d1c2f",
+                    "on-surface-variant": "#45464d",
+                    "on-primary-container": "#7c839b",
+                    "secondary-container": "#d5e3fd",
+                    "primary": "#000000",
+                    "surface-dim": "#d8dadc",
+                    "outline-variant": "#c6c6cd",
+                    "secondary-fixed-dim": "#b9c7e0",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#57657b",
+                    "tertiary-fixed": "#89f5e7",
+                    "primary-fixed": "#dae2fd",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "primary-fixed-dim": "#bec6e0",
+                    "secondary-fixed": "#d5e3fd",
+                    "surface-bright": "#f7f9fb",
+                    "outline": "#76777d",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-secondary-fixed-variant": "#3a485c",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005049",
+                    "primary-container": "#131b2e",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-fixed-dim": "#6bd8cb",
+                    "error-container": "#ffdad6",
+                    "secondary": "#515f74",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "inverse-surface": "#2d3133",
+                    "on-tertiary-fixed": "#00201d",
+                    "on-tertiary-container": "#0c9488",
+                    "on-background": "#191c1e",
+                    "tertiary-container": "#00201d",
+                    "on-error": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "error": "#ba1a1a",
+                    "background": "#f7f9fb",
+                    "surface-container": "#eceef0",
+                    "tertiary": "#000000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "max-width": "1280px",
+                    "margin-mobile": "16px",
+                    "lg": "40px",
+                    "xs": "8px",
+                    "margin-desktop": "auto",
+                    "sm": "16px",
+                    "gutter": "20px",
+                    "xl": "64px",
+                    "base": "4px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "button": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "display-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "button": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<!-- Schema JSON-LD -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SMI",
+      "image": "placeholder",
+      "@id": "",
+      "url": "https://smi-services.com",
+      "telephone": "+1-555-0123",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Business Way",
+        "addressLocality": "Metropolis",
+        "postalCode": "54321",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopNavBar (Desktop) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container-low/80 backdrop-blur-md shadow-sm">
+<div class="hidden md:flex max-w-max-width mx-margin-desktop px-lg justify-between items-center h-16">
+<a class="font-display-lg text-display-lg text-primary" href="#">SMI</a>
+<nav class="flex gap-md">
+<a class="font-button text-button text-on-tertiary-container font-bold border-b-2 border-on-tertiary-container transition-colors duration-200" href="#home">Home</a>
+<a class="font-button text-button text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200" href="#services">Services</a>
+<a class="font-button text-button text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200" href="#about">About</a>
+<a class="font-button text-button text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200" href="#contact">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary px-md py-xs rounded-lg font-button text-button hover:opacity-80 transition-opacity">Request a Quote</button>
+</div>
+</header>
+<!-- FAB (Call Now) -->
+<a class="fixed bottom-20 md:bottom-8 right-4 md:right-8 z-50 w-14 h-14 bg-on-tertiary-container text-white rounded-full flex items-center justify-center shadow-[0_20px_25px_rgba(15,23,42,0.15)] hover:scale-105 transition-transform" href="tel:+15550123">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+</a>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-16" id="home">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional, high-end office environment with sleek glass walls, minimalist furniture, and soft daylight filtering through. The space feels open and modern, utilizing a clean light-mode aesthetic with neutral tones and teal accents. In the background, professional consultants are subtly engaged in a focused meeting. The overall mood is sophisticated, reliable, and forward-thinking." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbgVGnMhYGv87LaVF1YzBEoj9SvUGsVoJUiomwD6fnOWedtkD8Oej0QBn39NxoQfvLgOPAWj2VrB35QQAi8n8hEYYIhAw92IJ6e4LnBV0iqcSrdwdEyBsaVQIWLdQ07DQVu98PJSisITwq6y4F2bwmMoG6npCJIfP_p3Pc7W8NjtWYoyoULaew-NpGBYUbYxWFCSs9VYJa-WpUL9qi3nuPZbi90VociVCtKhW05GjL7pvX5al-2NsS')"></div>
+<div class="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
+</div>
+<div class="relative z-10 max-w-max-width mx-margin-desktop px-margin-mobile md:px-lg w-full reveal">
+<div class="max-w-2xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-md">
+                        Strategic Excellence for Local Business Growth.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl leading-relaxed">
+                        SMI delivers institutional-grade consulting and implementation services tailored specifically for the modern local enterprise.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-sm">
+<a class="bg-on-tertiary-container text-white px-xl py-md rounded-lg font-button text-button text-center hover:opacity-90 transition-all shadow-lg" href="#contact">Request a Quote</a>
+<a class="border border-secondary text-secondary px-xl py-md rounded-lg font-button text-button text-center hover:bg-secondary/5 transition-all" href="#services">Book a Service</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl bg-surface-container-low" id="services">
+<div class="max-w-max-width mx-margin-desktop px-margin-mobile md:px-lg">
+<div class="text-center mb-xl reveal">
+<span class="text-on-tertiary-container font-label-bold text-label-bold uppercase tracking-widest">Our Expertise</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-base">Comprehensive Solutions</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Service 1: Consulting -->
+<article class="bg-surface-container-lowest p-md rounded-xl shadow-[0_2px_4px_rgba(15,23,42,0.05)] hover:shadow-[0_10px_15px_rgba(15,23,42,0.1)] transition-all flex flex-col h-full reveal">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-on-secondary-container">query_stats</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Consulting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-md">
+                            Deep-dive strategic analysis to identify growth bottlenecks and optimize your business architecture for the long term.
+                        </p>
+<a class="text-on-tertiary-container font-button text-button flex items-center gap-xs group" href="#contact">
+                            Get a Free Estimate 
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</article>
+<!-- Service 2: Implementation -->
+<article class="bg-surface-container-lowest p-md rounded-xl shadow-[0_2px_4px_rgba(15,23,42,0.05)] hover:shadow-[0_10px_15px_rgba(15,23,42,0.1)] transition-all flex flex-col h-full reveal" style="transition-delay: 100ms;">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-on-secondary-container">build</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Implementation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-md">
+                            We don't just plan; we execute. Our team handles the heavy lifting of integrating new systems and processes.
+                        </p>
+<a class="text-on-tertiary-container font-button text-button flex items-center gap-xs group" href="#contact">
+                            Get a Free Estimate 
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</article>
+<!-- Service 3: Support -->
+<article class="bg-surface-container-lowest p-md rounded-xl shadow-[0_2px_4px_rgba(15,23,42,0.05)] hover:shadow-[0_10px_15px_rgba(15,23,42,0.1)] transition-all flex flex-col h-full reveal" style="transition-delay: 200ms;">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-on-secondary-container">support_agent</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-md">
+                            Continuous monitoring and 24/7 dedicated assistance to ensure your operations run smoothly without interruption.
+                        </p>
+<a class="text-on-tertiary-container font-button text-button flex items-center gap-xs group" href="#contact">
+                            Get a Free Estimate 
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</article>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl" id="about">
+<div class="max-w-max-width mx-margin-desktop px-margin-mobile md:px-lg grid md:grid-cols-2 gap-xl items-center">
+<div class="reveal">
+<div class="relative rounded-2xl overflow-hidden aspect-video shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A diverse group of professional business experts standing in a bright, modern corridor of a contemporary office building. They are dressed in smart-casual business attire, looking confident and approachable. The lighting is soft and natural, emphasizing a high-trust, collaborative environment. The color palette is composed of soft whites, cool greys, and sophisticated teal accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrxtphioHiZweGzwJLWY7-HyLaKr47gafShLgDQnz8p_DKMYTaqDR1IbqScWUgp7r9PucBzZm0vas0Q_pHVHz7SzFw3xzClxtvjo-W4kcAZfJfazG1GIz35PEWo6zrn_UGPXXUQK836j-M-gIFh_Fw82ZRxI6HE3MzMR_bHqk7-KvwcNcwmfIxRC7d1I1IzWZV7QdGH9Sn3aXTMW92XcjEQ6Jo504MDxEGRxsk6jVERdEJpSzfe8pI')"></div>
+</div>
+</div>
+<div class="reveal" style="transition-delay: 200ms;">
+<span class="text-on-tertiary-container font-label-bold text-label-bold uppercase tracking-widest">Our Story</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-base mb-md">Local Focus, Global Standards</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-sm">
+                        SMI was founded on a simple principle: local businesses deserve the same level of strategic rigor as global corporations. We bridge the gap between high-level theory and local reality.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                        Our team of specialists brings decades of collective experience across multiple sectors, ensuring that your business benefits from diverse perspectives and proven methodologies.
+                    </p>
+<ul class="space-y-sm">
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Community-centric approach</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Data-driven decision making</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">End-to-end accountability</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl bg-surface-container-high" id="contact">
+<div class="max-w-max-width mx-margin-desktop px-margin-mobile md:px-lg">
+<div class="max-w-3xl mx-auto bg-surface-container-lowest p-md md:p-xl rounded-2xl shadow-xl reveal">
+<div class="text-center mb-xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-xs">Ready to Start?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Fill out the form below and a specialist will contact you within 24 hours.</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-base">
+<label class="font-label-bold text-label-bold text-on-surface-variant px-base">Full Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-md focus:ring-2 focus:ring-on-tertiary-container transition-all" placeholder="Jane Doe" type="text"/>
+</div>
+<div class="space-y-base">
+<label class="font-label-bold text-label-bold text-on-surface-variant px-base">Email Address</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-md focus:ring-2 focus:ring-on-tertiary-container transition-all" placeholder="jane@example.com" type="email"/>
+</div>
+<div class="space-y-base">
+<label class="font-label-bold text-label-bold text-on-surface-variant px-base">Phone Number</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-md focus:ring-2 focus:ring-on-tertiary-container transition-all" placeholder="(555) 000-0000" type="tel"/>
+</div>
+<div class="space-y-base">
+<label class="font-label-bold text-label-bold text-on-surface-variant px-base">Service Interested In</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-md focus:ring-2 focus:ring-on-tertiary-container transition-all">
+<option>Consulting</option>
+<option>Implementation</option>
+<option>Support</option>
+<option>Full Package</option>
+</select>
+</div>
+<div class="md:col-span-2 space-y-base">
+<label class="font-label-bold text-label-bold text-on-surface-variant px-base">Message</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-md focus:ring-2 focus:ring-on-tertiary-container transition-all" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<div class="md:col-span-2 flex items-center gap-sm bg-surface-container-low p-sm rounded-lg">
+<input class="w-5 h-5 rounded border-outline text-on-tertiary-container focus:ring-on-tertiary-container" id="captcha" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="captcha">I'm not a robot</label>
+<div class="ml-auto opacity-40">
+<span class="material-symbols-outlined">security</span>
+</div>
+</div>
+<div class="md:col-span-2">
+<button class="w-full bg-primary text-on-primary font-button text-button py-md rounded-lg hover:bg-on-primary-container transition-all shadow-md" type="submit">Send Message</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full relative bg-surface-container-lowest dark:bg-surface-container-low">
+<div class="w-full py-xl px-margin-mobile md:px-lg max-w-max-width mx-margin-desktop flex flex-col md:flex-row justify-between gap-md">
+<div class="space-y-sm">
+<span class="font-display-lg-mobile text-display-lg-mobile font-bold text-primary">SMI</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+                    Institutional reliability and modern agility for the contemporary local business.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-lg">
+<div class="flex flex-col gap-xs">
+<h4 class="font-label-bold text-label-bold text-primary mb-xs">Explore</h4>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-tertiary-container transition-all duration-200" href="#home">Home</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-tertiary-container transition-all duration-200" href="#services">Services</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-tertiary-container transition-all duration-200" href="#about">About</a>
+</div>
+<div class="flex flex-col gap-xs">
+<h4 class="font-label-bold text-label-bold text-primary mb-xs">Legal</h4>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-tertiary-container transition-all duration-200" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-tertiary-container transition-all duration-200" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 py-md px-margin-mobile text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 SMI Local Business Services. All rights reserved.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl md:hidden bg-surface/80 backdrop-blur-md shadow-lg h-16 flex justify-around items-center pb-safe">
+<a class="flex flex-col items-center justify-center text-on-tertiary-container" href="#home">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#services">
+<span class="material-symbols-outlined">build</span>
+<span class="font-label-bold text-[10px]">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#contact">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="font-label-bold text-[10px]">Quote</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="tel:+15550123">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-bold text-[10px]">Contact</span>
+</a>
+</nav>
+<script>
+        // Intersection Observer for Reveal animations
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Simple Smooth Scroll handling for Bottom Nav
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>

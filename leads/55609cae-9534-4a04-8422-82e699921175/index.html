@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daddy Electrician Ltd. | Expert Electrical Services</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8f9fa",
+                        "secondary-container": "#fcb812",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#8b9198",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#8192a7",
+                        "primary": "#041627",
+                        "surface-container": "#edeeef",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#38485a",
+                        "inverse-primary": "#b7c8de",
+                        "surface-container-low": "#f3f4f5",
+                        "on-primary-fixed": "#0b1d2d",
+                        "outline": "#74777d",
+                        "tertiary-container": "#242a30",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#dde3eb",
+                        "primary-fixed-dim": "#b7c8de",
+                        "surface-tint": "#4f6073",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "tertiary": "#0f161b",
+                        "primary-container": "#1a2b3c",
+                        "surface-variant": "#e1e3e4",
+                        "primary-fixed": "#d2e4fb",
+                        "on-secondary-container": "#6a4b00",
+                        "secondary-fixed": "#ffdea7",
+                        "tertiary-fixed-dim": "#c1c7cf",
+                        "on-surface-variant": "#44474c",
+                        "surface": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed": "#161c22",
+                        "outline-variant": "#c4c6cd",
+                        "on-surface": "#191c1d",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "on-tertiary-fixed-variant": "#41474e",
+                        "secondary": "#7c5800",
+                        "inverse-surface": "#2e3132",
+                        "secondary-fixed-dim": "#ffbb1e",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-fixed": "#271900",
+                        "background": "#f8f9fa",
+                        "on-background": "#191c1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "sticky-header-height": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "caption": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-sm": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background scroll-smooth font-body-md overflow-x-hidden">
+<!-- Header Section (TopNavBar) -->
+<header class="fixed top-0 left-0 w-full z-50 bg-primary shadow-md h-[80px]">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<a class="font-headline-sm text-headline-sm font-bold text-on-primary" href="#">
+                Daddy Electrician Ltd.
+            </a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8 font-label-bold text-label-bold">
+<a class="text-secondary-container border-b-2 border-secondary-container pb-1" href="#services">Services</a>
+<a class="text-on-primary hover:text-secondary-container transition-colors" href="#about">About</a>
+<a class="text-on-primary hover:text-secondary-container transition-colors" href="#testimonials">Testimonials</a>
+<a class="bg-secondary-container text-primary px-6 py-2 rounded-lg font-bold hover:scale-105 transition-all" href="tel:0123456789">
+                    0123 456 789
+                </a>
+</nav>
+<!-- Mobile Toggle -->
+<button class="md:hidden text-on-primary p-2" id="mobile-nav-toggle">
+<span class="material-symbols-outlined text-4xl">menu</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar (Mobile Menu) -->
+<aside class="fixed inset-y-0 right-0 z-[60] w-64 bg-surface shadow-xl translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-6" id="side-nav">
+<div class="flex justify-between items-center mb-10">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Menu</span>
+<button class="text-primary p-1" id="mobile-nav-close">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-4 font-body-md text-body-md mb-auto">
+<a class="flex items-center gap-4 bg-secondary-container text-primary rounded-xl px-4 py-3" href="#services">
+<span class="material-symbols-outlined">electrical_services</span>
+                Services
+            </a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-low px-4 py-3 transition-all rounded-xl" href="#about">
+<span class="material-symbols-outlined">info</span>
+                About
+            </a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-low px-4 py-3 transition-all rounded-xl" href="#testimonials">
+<span class="material-symbols-outlined">reviews</span>
+                Testimonials
+            </a>
+</nav>
+<button class="bg-primary text-secondary-container w-full py-4 rounded-xl font-bold mt-6 shadow-md hover:bg-primary-container transition-colors">
+            Get a Free Quote
+        </button>
+</aside>
+<div class="fixed inset-0 bg-primary/40 z-[55] hidden backdrop-blur-sm" id="nav-overlay"></div>
+<main class="mt-[80px]">
+<!-- Hero Section -->
+<section class="relative h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0" data-alt="A cinematic, high-quality wide shot of a professional electrician in a clean navy uniform wearing safety goggles and a tool belt, focused on wiring a modern residential circuit breaker. The lighting is bright and industrial with warm yellow highlights, set against a backdrop of a contemporary home interior. The overall aesthetic is professional, clean, and reliable, using a color palette of deep navy blue and bright yellow accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSjwhxBA5iJfv2YZqpiAl1UHvzMszMjYFfaKDAObiyXiyyWllZerhfRmxXb180OqvH-45D6yiJXHQIxWKsHECYXlplxcZlvgWJREvLSryItOUOCCNetFPP323weywxgplhJlDBaUuYUWRzCOtHZ88tLtS55gEpDqjnLYuK4KlBxwix3Ue2BJ0MiunVgZCrLsGtQg5tp7rDIO3Ow_P0VSoGHI7erqsfZcjQreavkVtMlTMpGBgI96936w')">
+<div class="absolute inset-0 bg-primary/60"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
+<div class="max-w-2xl animate-fade-in-up">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+                        Expert Electrical Services <span class="text-secondary-container">You Can Trust</span>
+</h1>
+<p class="font-body-lg text-body-lg mb-10 text-on-primary-container">
+                        Professional, Safe, and Reliable Electricians for Your Home &amp; Business. Certified experts delivering precision craftsmanship for every project.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-secondary-container text-primary px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform active:scale-95 shadow-lg" href="#contact">
+                            Get a Free Quote
+                        </a>
+<a class="border-2 border-on-primary text-on-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-on-primary hover:text-primary transition-all" href="#services">
+                            Our Services
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-surface" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Comprehensive Solutions</h2>
+<div class="w-20 h-1 bg-secondary-container mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Residential -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant hover:shadow-xl transition-all group">
+<div class="w-16 h-16 bg-primary text-secondary-container rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">home</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Residential</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            From light fixture installations to full home rewiring, we ensure your family's safety with top-tier residential electrical work.
+                        </p>
+<ul class="space-y-3 mb-8 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Lighting &amp; Ceiling Fans</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Panel Upgrades</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Safety Inspections</li>
+</ul>
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-bold hover:bg-secondary-container hover:text-primary transition-colors">Book Now</button>
+</div>
+<!-- Commercial -->
+<div class="bg-primary p-8 rounded-xl border border-primary-container shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-secondary-container text-primary text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">Premium</span>
+</div>
+<div class="w-16 h-16 bg-secondary-container text-primary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl">business</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-4">Commercial</h3>
+<p class="font-body-md text-body-md text-on-primary-container mb-8">
+                            Powering your business with efficiency. We specialize in complex commercial electrical systems and data cabling.
+                        </p>
+<ul class="space-y-3 mb-8 text-on-primary-container">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Industrial Wiring</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Energy Management</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Maintenance Contracts</li>
+</ul>
+<button class="w-full bg-secondary-container text-primary py-3 rounded-lg font-bold hover:scale-[1.02] transition-transform">Book Now</button>
+</div>
+<!-- Emergency -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant hover:shadow-xl transition-all group">
+<div class="w-16 h-16 bg-error-container text-on-error-container rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">bolt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">24/7 Emergency</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            Electrical failures don't wait for business hours. Our rapid response team is available around the clock for urgent repairs.
+                        </p>
+<ul class="space-y-3 mb-8 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Power Outage Repair</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Sparking &amp; Smoke Issues</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Storm Damage</li>
+</ul>
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-bold hover:bg-secondary-container hover:text-primary transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-white" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl" data-alt="A portrait of a senior head electrician standing confidently in front of a modern service van with the 'Daddy Electrician Ltd.' logo clearly visible. He is smiling professionally, wearing a high-visibility vest over a dark polo shirt. The background is a clean urban street during golden hour, emphasizing trust, years of experience, and a friendly community-focused brand." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOka-arUXgG6fwAQv0AX8323W_UnJ70xwDBepa8Lm49fpL1NaViMUhMf6ZvSaIClFtIAvjGkWzw0MxWk-KPDIZ2-dvzwpeQ-44SgsJI6xC-fx_4UHIGAAwKpGWyi9oBLropbIVCFqtiddXHK1CtFDvifEbCAIiMLpSgjB11uaccMzirbJQ8aYLy5dEnoJ0Li73OF8IvCkXyiT6qN3gPD-REsY_5NsoO_GPPNlT4rcFydSDqjgpu7tNDA')"></div>
+<div class="absolute -bottom-8 -right-8 bg-secondary-container p-8 rounded-xl shadow-xl hidden md:block">
+<p class="font-display-lg text-display-lg text-primary leading-none mb-1">15+</p>
+<p class="font-label-bold text-label-bold text-primary">Years of Excellence</p>
+</div>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Reliability Built on Decades of Expertise</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        At Daddy Electrician Ltd., we believe that safe electricity is the foundation of a modern lifestyle. Our mission is to provide unparalleled craftsmanship through rigorous safety standards and innovative electrical solutions.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Every member of our team is fully licensed, insured, and background-checked. We pride ourselves on transparent pricing and the "cleanest site in the city" guarantee—we leave your property exactly as we found it, only better powered.
+                    </p>
+<div class="grid grid-cols-2 gap-6 mb-10">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-3xl">verified</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Certified Pros</h4>
+<p class="text-caption text-on-surface-variant">Fully NIC/EIC accredited</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-3xl">payments</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Flat Rates</h4>
+<p class="text-caption text-on-surface-variant">No hidden service fees</p>
+</div>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold hover:bg-primary-container transition-all">Learn More About Us</button>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-24 bg-surface-container-low" id="testimonials">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Voices of Trust</h2>
+<p class="text-on-surface-variant">See why hundreds of local families choose us.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant flex flex-col justify-between">
+<div>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-6 italic">
+                                "The response time for our emergency outage was incredible. Within an hour, Daddy Electrician had the power back on and identified a faulty breaker we didn't know about. Truly life-savers!"
+                            </p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden" data-alt="A professional headshot of a middle-aged woman with a warm, satisfied smile. She has short brown hair and is wearing a business-casual blazer. The background is a soft-focus living room interior, suggesting a happy homeowner. The lighting is natural and flattering." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsY0Srwdgm_bdCuTEXxQtjen3G7Nb0KCiIKZfjXE9ajVQwJcIreCD_ey2VSSQo8Xfiyg6mdeODmJOo4cs_vH_g8jDF5KtZrdKkmmblsupKoONe-hVZnWv9Ta95sNB4GufdPo2HkCqfok91SAhYqDjm_iFMJC0cYxCL84HjJsktNc1kWlU02LAXznoVZyfXUvROJAYnT_Bma4SEQvedA2f_8D1fw0sfpKcPhnc8dERhJXeOpqKH0VxOrQ')"></div>
+<div>
+<p class="font-label-bold text-label-bold text-primary">Sarah Jenkins</p>
+<p class="text-caption text-on-surface-variant">Homeowner</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant flex flex-col justify-between">
+<div>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-6 italic">
+                                "We use Daddy Electrician for all our retail properties. Their preventive maintenance programs have saved us thousands in potential downtime. Professional, punctual, and highly skilled."
+                            </p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden" data-alt="A headshot of a professional man in his late 40s with a confident expression. He is wearing a sharp suit and glasses. The background is a modern office setting with glass walls, reflecting his status as a commercial property manager. High-quality lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0g9sJQ2uv5KVNnHbkjndMSM_0gpfTiuWBsH9UDAxLCE4kLOcCy-lmdReTe5sKspUPzq4dHFVnY1Ge1vqMRNyuVIgp5XWaQiuJDNRpYkO7b0AWWBczkty2qB2gLOSGaRZXkM6PcQsRbalvHTzvRH-XGx2E-PiQFrtaWViiQx0EBsp_ObrV1Mnha25Rslr7TbIjv9LFFOuVz9n78i47a0a8gwph_Bube4VQzGugbgl3Erh5fTk32dNXkA')"></div>
+<div>
+<p class="font-label-bold text-label-bold text-primary">Mark Thompson</p>
+<p class="text-caption text-on-surface-variant">Property Manager</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant flex flex-col justify-between">
+<div>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-6 italic">
+                                "Had a full house rewire done last month. The team was respectful of our space, finished ahead of schedule, and stayed within the original quote. Highly recommend!"
+                            </p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden" data-alt="A portrait of a young couple smiling together in their bright new kitchen. They are looking at the camera with a sense of pride and accomplishment. The lighting is warm and bright, highlighting a modern home aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9hPY5YM9hlLO1BhyxIMzwOMoA9yVZL5NJep7XOLfTPuCji91tq9yP9J-_9qqwqaeVLxsFPMYiX9FjgYtl3uVCzYhsi1o_vP5LmVCwkJQJvuY8wyTqlbvRGfkX6rxUKPmBaLtmDuJiYyKqCfZTTVSh8oV0gtopBllszuj7LnoyMnMSgHxhe6eViImJR5bJWe_t6eR8rBurqNHkIiabWD2SVMQns6f8co5op0roKtFIj2_qIVX8mH_SXQ')"></div>
+<div>
+<p class="font-label-bold text-label-bold text-primary">The Davises</p>
+<p class="text-caption text-on-surface-variant">New Homeowners</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-primary text-on-primary" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-md text-headline-md mb-6">Ready to Start Your Project?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-10">
+                        Fill out the form for a no-obligation quote. Our experts will get back to you within 24 hours.
+                    </p>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-secondary-container text-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold">Call Us 24/7</p>
+<a class="text-headline-sm font-bold text-secondary-container" href="tel:0123456789">0123 456 789</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-secondary-container text-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold">Email Us</p>
+<p class="font-body-lg">hello@daddyelectrician.co.uk</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-secondary-container text-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold">Visit Our Office</p>
+<p class="font-body-lg">123 Spark Street, London, UK</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 md:p-12 rounded-2xl">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2">Full Name</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-2 focus:ring-secondary-container/20 transition-all text-primary" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2">Email Address</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-2 focus:ring-secondary-container/20 transition-all text-primary" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2">Phone Number</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-2 focus:ring-secondary-container/20 transition-all text-primary" placeholder="07123 456 789" type="tel"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2">Message</label>
+<textarea class="w-full p-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-2 focus:ring-secondary-container/20 transition-all text-primary" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary-container text-primary py-4 rounded-lg font-bold text-lg hover:shadow-lg hover:scale-[1.01] transition-all" type="submit">Send Inquiry</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="bg-primary py-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter items-start">
+<div class="flex flex-col gap-4">
+<span class="font-headline-sm text-headline-sm text-on-primary font-bold">Daddy Electrician Ltd.</span>
+<p class="text-on-primary-container max-w-xs">
+                    Expert craftsmen providing residential and commercial electrical solutions across the region since 2008.
+                </p>
+<div class="flex gap-4 mt-2">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-primary hover:bg-secondary-container hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-3">
+<p class="font-label-bold text-label-bold text-secondary-container">Services</p>
+<a class="text-on-primary-container hover:text-on-primary transition-colors" href="#">Residential</a>
+<a class="text-on-primary-container hover:text-on-primary transition-colors" href="#">Commercial</a>
+<a class="text-on-primary-container hover:text-on-primary transition-colors" href="#">Emergency</a>
+</div>
+<div class="flex flex-col gap-3">
+<p class="font-label-bold text-label-bold text-secondary-container">Company</p>
+<a class="text-on-primary-container hover:text-on-primary transition-colors" href="#">About</a>
+<a class="text-on-primary-container hover:text-on-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="flex flex-col gap-4 text-right md:items-end">
+<p class="text-on-primary-container font-body-md text-body-md">
+                    © 2024 Daddy Electrician Ltd. All rights reserved.
+                </p>
+<div class="flex items-center gap-2 text-on-primary-container">
+<span class="material-symbols-outlined text-sm">security</span>
+<span class="text-caption">Fully Licensed &amp; Insured</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- JSON-LD LocalBusiness Schema -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Electrician",
+      "name": "Daddy Electrician Ltd.",
+      "image": "https://example.com/logo.png",
+      "@id": "",
+      "url": "https://example.com",
+      "telephone": "0123456789",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Spark Street",
+        "addressLocality": "London",
+        "postalCode": "W1 1AA",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+    </script>
+<script>
+        const navToggle = document.getElementById('mobile-nav-toggle');
+        const navClose = document.getElementById('mobile-nav-close');
+        const sideNav = document.getElementById('side-nav');
+        const overlay = document.getElementById('nav-overlay');
+
+        function toggleNav() {
+            sideNav.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        navToggle.addEventListener('click', toggleNav);
+        navClose.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+
+        // Close nav on link click
+        document.querySelectorAll('#side-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!sideNav.classList.contains('translate-x-full')) {
+                    toggleNav();
+                }
+            });
+        });
+    </script>
+</body></html>

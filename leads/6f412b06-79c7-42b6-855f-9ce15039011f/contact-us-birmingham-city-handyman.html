@@ -1,0 +1,389 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact Us - Birmingham City Handyman</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#303031",
+                    "secondary": "#5f5e5e",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-background": "#1b1c1c",
+                    "on-surface": "#1b1c1c",
+                    "outline-variant": "#e3beb8",
+                    "surface-white": "#FFFFFF",
+                    "error-container": "#ffdad6",
+                    "deep-charcoal": "#121212",
+                    "on-surface-variant": "#5a403c",
+                    "surface-dim": "#dbdad9",
+                    "tertiary": "#2b2d2d",
+                    "primary-container": "#8b0000",
+                    "on-primary-container": "#ff907f",
+                    "on-secondary-container": "#636262",
+                    "tertiary-fixed": "#e2e2e2",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "surface-container-low": "#f5f3f3",
+                    "on-primary-fixed": "#410000",
+                    "secondary-container": "#e2dfde",
+                    "on-tertiary-container": "#afafb0",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "background": "#fbf9f8",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "secondary-fixed": "#e5e2e1",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "whatsapp-green": "#25D366",
+                    "surface": "#fbf9f8",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e4e2e2",
+                    "primary-fixed": "#ffdad4",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#414343",
+                    "surface-tint": "#b52619",
+                    "outline": "#8e706b",
+                    "status-emergency": "#D32F2F",
+                    "surface-container": "#efeded",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#920703",
+                    "inverse-primary": "#ffb4a8",
+                    "surface-bright": "#fbf9f8",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e9e8e7",
+                    "primary": "#610000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "container-max": "1200px",
+                    "gutter": "24px",
+                    "section-padding": "80px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "label-caps": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "stat-metric": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "stat-metric": ["40px", {"lineHeight": "40px", "fontWeight": "800"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input-focus:focus {
+            outline: none;
+            border-color: #610000;
+            ring: 1px;
+            ring-color: #610000;
+        }
+        /* Glassmorphism subtle effect for high-end feel */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+        }
+        /* Custom horizontal line for architectural feel */
+        .arch-line::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #610000;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface-white dark:bg-deep-charcoal shadow-sm docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center h-20 px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-4">
+<img alt="Birmingham City Handyman Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLs1AG29-cDAx-Rsh-kyjjYCUG44ozfa4NI3a7N8dEp-iwV8EJ_FlEguv0iRbRwSFXw6g76lwKMGIsOHntXPWgTYkAz49tNWHx1BKoMujUJQpIm6NBa7NwMjnyDUZeN7kyopWuVIgDPm3gds3STclQDlRn8pLA8ZLRfnZXkaqccgpd9IGQRTPQ9hAnetbSOSxUSDi5jg7bltJVbal4VqDsMoG28xtJLU1iNDDRjoOkvY5pTAs6PUdaNE3UI">
+<span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface hidden lg:block">Birmingham City Handyman</span>
+</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="services-birmingham-city-handyman.html">Services</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="index.html">About Us</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="index.html">Testimonials</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-bold" href="contact-us-birmingham-city-handyman.html">Contact</a>
+</div>
+<a class="hidden md:flex bg-deep-charcoal text-on-primary px-6 py-3 rounded font-bold hover:bg-primary transition-all active:opacity-80" href="tel:+447538457384">
+                Get a Quote
+            </a>
+<!-- Mobile Menu Toggle (Simplified) -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] block mb-4 uppercase">Reliability You Can Trust</span>
+<h1 class="font-display-lg text-display-lg lg:text-display-lg text-on-background arch-line mb-8">Get in Touch - Free No-Obligation Quotes</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-lg">
+                        From minor repairs to major property maintenance, we provide professional handyman services across Birmingham. Reach out today for a prompt response and expert craftsmanship.
+                    </p>
+<!-- Direct Contact Chips -->
+<div class="flex flex-wrap gap-4 mb-8">
+<a class="flex items-center gap-3 bg-surface-container-low border border-outline-variant px-5 py-4 rounded-lg hover:shadow-md transition-all group" href="tel:+447538457384">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">call</span>
+<div>
+<p class="font-label-caps text-label-caps text-secondary">CALL DIRECT</p>
+<p class="font-headline-md text-headline-md text-on-surface">07538 457 384</p>
+</div>
+</a>
+<a class="flex items-center gap-3 bg-surface-container-low border border-outline-variant px-5 py-4 rounded-lg hover:shadow-md transition-all group" href="https://wa.me/+447538457384">
+<span class="material-symbols-outlined text-whatsapp-green group-hover:scale-110 transition-transform">chat</span>
+<div>
+<p class="font-label-caps text-label-caps text-secondary">WHATSAPP</p>
+<p class="font-headline-md text-headline-md text-on-surface">Message Us</p>
+</div>
+</a>
+</div>
+</div>
+<!-- Contact Form Card -->
+<div class="bg-surface-white p-stack-lg rounded-xl shadow-sm border border-surface-container-highest">
+<form action="#" class="space-y-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div>
+<label class="font-label-caps text-label-caps text-secondary mb-2 block uppercase">Full Name</label>
+<input class="w-full p-4 border border-outline-variant rounded bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="John Smith" type="text">
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-secondary mb-2 block uppercase">Phone Number</label>
+<input class="w-full p-4 border border-outline-variant rounded bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="07123 456 789" type="tel">
+</div>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-secondary mb-2 block uppercase">Email Address</label>
+<input class="w-full p-4 border border-outline-variant rounded bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="john@example.com" type="email">
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-secondary mb-2 block uppercase">Service Type</label>
+<select class="w-full p-4 border border-outline-variant rounded bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:border-primary transition-all appearance-none">
+<option>General Maintenance</option>
+<option>Plumbing &amp; Electrical</option>
+<option>Painting &amp; Decorating</option>
+<option>Garden &amp; Exterior</option>
+<option>Emergency Call Out</option>
+</select>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-secondary mb-2 block uppercase">Message</label>
+<textarea class="w-full p-4 border border-outline-variant rounded bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<!-- CAPTCHA Placeholder -->
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded border border-outline-variant">
+<input class="w-5 h-5 text-primary border-outline rounded" type="checkbox">
+<span class="font-body-md text-secondary">I'm not a robot</span>
+<div class="ml-auto">
+<img alt="reCAPTCHA" class="w-8 h-8 opacity-50 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdYaYFs05HYkVrF0wMbbGj4alVBgwI_0AzOIuOAdUpIRuMiyDhjTjdxuykK0srfhsf-zpigrdTpoGzDlRORN_w9czKvF4kr3hC9JoQhBoVF_oEMR8SgoPOcSO_XNkWp991qalMvm__N54qO1de2Ow4H2QeHk-nnupKoKLqXIwIVj7KKVsP4Mk1-aJ8cJ2hTdKCoCRz9tNRBzZToatUG3XR2JAhm5YoCTMEfwm2wkcIeabWS3121Ai2nA">
+</div>
+</div>
+<button class="w-full bg-deep-charcoal text-on-primary py-4 rounded font-bold text-headline-md hover:bg-primary transition-all transform active:scale-[0.98]" type="submit">
+                            Send Inquiry
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Emergency & Promotional Section (Bento Inspired) -->
+<section class="bg-surface-container-low py-section-padding">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Emergency Call Out -->
+<div class="md:col-span-2 bg-primary text-on-primary p-stack-lg rounded-xl flex flex-col justify-between overflow-hidden relative group">
+<div class="relative z-10">
+<span class="bg-status-emergency text-on-primary px-3 py-1 rounded text-label-caps mb-4 inline-block animate-pulse">LIVE NOW</span>
+<h2 class="font-headline-lg text-headline-lg mb-4">24hr Emergency Call Out Service</h2>
+<p class="font-body-lg text-body-lg mb-8 opacity-90 max-w-md">Urgent repairs needed? We're available 24/7 to handle electrical, plumbing, or structural emergencies across Birmingham.</p>
+<a class="inline-flex items-center gap-3 bg-on-primary text-primary px-8 py-4 rounded-lg font-bold hover:bg-opacity-90 transition-all" href="tel:+447538457384">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+                                EMERGENCY CALL NOW
+                            </a>
+</div>
+<div class="absolute right-0 bottom-0 opacity-10 transform translate-x-1/4 translate-y-1/4 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[200px]">emergency</span>
+</div>
+</div>
+<!-- NHS Staff Promotion Card -->
+<div class="bg-deep-charcoal text-on-primary p-stack-lg rounded-xl flex flex-col items-center text-center justify-center border border-primary-container">
+<span class="material-symbols-outlined text-primary-fixed-dim text-5xl mb-4">medical_services</span>
+<h3 class="font-headline-md text-headline-md mb-2">NHS Appreciation</h3>
+<p class="font-display-lg text-primary-fixed-dim mb-4">FREE 1hr</p>
+<p class="font-body-md text-secondary-fixed-dim mb-6">Service for NHS Staff members in Birmingham. Terms and conditions apply.</p>
+<a class="text-label-caps text-primary-fixed-dim underline decoration-2 underline-offset-4 hover:text-white transition-colors" href="#terms">VIEW T&amp;Cs</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Terms and Conditions Visual Section (Reference to Image 5) -->
+<section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="terms">
+<div class="flex flex-col md:flex-row items-center gap-stack-lg">
+<div class="w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg border border-outline-variant">
+<div class="aspect-[4/5] bg-cover bg-center grayscale-[0.2]" data-alt="A clean, professional photograph of a well-maintained red brick British terraced house with white bay windows and a ladder leaning against the exterior. The sky is clear, suggesting a professional working environment for a property maintenance company in Birmingham. The image is bright, high-contrast, and reinforces a sense of reliable local craftsmanship and architectural integrity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuK5qzRC9J-Rqo8-Swz8uFNc-yq-rXVaUhkt2EulniWlycpiqyi5qf0wgecwWuBPUHrrjEoQizyt7mVs6A9pXhe7krRfeLWlNZYOo0X3Z1OD6K7JXNwsAj24HNSASJonSydrK-QPvzyodF3wrpMwSkaUAe5_I4Ha-Tt9SgUHHIAGex9VDkBDMmS3mEvsOLFC4tZPK21X_x-ekAMHkCnaec9PsUuwmr8CHUIIYqHvJyzliZWnFDGe95jQ')"></div>
+</div>
+<div class="w-full md:w-1/2">
+<h3 class="font-headline-lg text-headline-lg mb-6">Service Terms &amp; Conditions</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<p class="font-body-md text-secondary">The supply &amp; cost of materials is excluded from promotional offers.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<p class="font-body-md text-secondary">Service excludes Birmingham Clean Air Zone locations.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<p class="font-body-md text-secondary">NHS Promotion: Must be currently working for NHS (Valid ID required).</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<p class="font-body-md text-secondary">Limit of one visit per person/property under promotional terms.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">info</span>
+<p class="font-body-md text-secondary">Valid until end of March 2025, subject to availability and withdrawal at any time.</p>
+</li>
+</ul>
+<div class="mt-10 p-6 bg-surface-container rounded-lg border-l-4 border-primary">
+<p class="font-body-md font-bold mb-2">Our humble request in return:</p>
+<p class="font-body-md text-on-surface-variant italic">"We simply ask that you Like &amp; Follow our Facebook page, or leave a review on Google, Facebook or Yell if you're happy with our work."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social & Map Section -->
+<section class="py-section-padding bg-surface-white border-t border-surface-container-highest">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+<div>
+<h3 class="font-headline-md text-headline-md mb-4">Local Expertise</h3>
+<p class="font-body-md text-secondary mb-8">Proudly serving businesses, home owners, tenants, landlords, and estate agents throughout Birmingham and surrounding areas for over 25 years.</p>
+<div class="flex gap-6">
+<a class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full text-primary hover:bg-primary hover:text-white transition-all" href="https://www.facebook.com/profile.php?id=61565402711822">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full text-primary hover:bg-primary hover:text-white transition-all" href="https://www.instagram.com/birmingham.city.handyman.uk/">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full text-primary hover:bg-primary hover:text-white transition-all" href="mailto:Admin@birminghamcityhandyman.com">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden h-64 shadow-inner border border-outline-variant">
+<div class="w-full h-full bg-cover bg-center" data-location="Birmingham" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACUQy84FsVLWsgVaZ7F7R3JuEdSxoYF7kWfJbK9OhjtpCK4fxUIx4aOHB6tftV5f1YPYWu3H7RC7NOYTHYDf_V7mpkpQCr7rgkBPETkUBslRH3pNv2Jf2rwCWO6cmMo4qCqNX8Cw9Z8w31TZ8AnbYwU5MpMu27nN6ha5KeCep2mMtoNu9EIMXCr1-9CGEQ4SeXmtWdMxTKS9Q-TEkwh56eJFkwVF6g_F3gdEXOiSgl2mIgYC2DQH7OUg')"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-stack-lg bg-surface-container-highest dark:bg-inverse-surface mt-10">
+<div class="md:col-span-1">
+<img alt="Footer Logo" class="h-10 w-auto mb-6" src="https://lh3.googleusercontent.com/aida/AP1WRLs1AG29-cDAx-Rsh-kyjjYCUG44ozfa4NI3a7N8dEp-iwV8EJ_FlEguv0iRbRwSFXw6g76lwKMGIsOHntXPWgTYkAz49tNWHx1BKoMujUJQpIm6NBa7NwMjnyDUZeN7kyopWuVIgDPm3gds3STclQDlRn8pLA8ZLRfnZXkaqccgpd9IGQRTPQ9hAnetbSOSxUSDi5jg7bltJVbal4VqDsMoG28xtJLU1iNDDRjoOkvY5pTAs6PUdaNE3UI">
+<p class="font-body-md text-on-surface-variant">Professional property maintenance and handyman services in Birmingham, UK.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-6 uppercase">Our Services</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="services-birmingham-city-handyman.html">Plumbing</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="services-birmingham-city-handyman.html">Electrical</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="services-birmingham-city-handyman.html">Garden Maintenance</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="services-birmingham-city-handyman.html">Emergency Call-Out</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-6 uppercase">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="index.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="index.html">Terms of Service</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="index.html">FAQs</a></li>
+</ul>
+</div>
+<div>
+<p class="font-body-md text-on-surface-variant mb-4 font-bold">Birmingham City Handyman</p>
+<p class="font-body-md text-on-surface-variant">© 2024 Birmingham City Handyman. All Rights Reserved.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center py-3 bg-surface-white dark:bg-deep-charcoal border-t border-outline-variant md:hidden shadow-lg">
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim active:scale-95 transition-transform" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim active:scale-95 transition-transform" href="services-birmingham-city-handyman.html">
+<span class="material-symbols-outlined">build</span>
+<span class="font-label-caps text-[10px]">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim active:scale-95 transition-transform" href="tel:+447538457384">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-caps text-[10px]">Call Now</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim active:scale-95 transition-transform" href="contact-us-birmingham-city-handyman.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="font-label-caps text-[10px]">Contact</span>
+</a>
+</nav>
+<!-- Floating WhatsApp Action (Contextual) -->
+<a class="fixed bottom-24 right-6 w-14 h-14 bg-whatsapp-green text-white rounded-full flex items-center justify-center shadow-2xl z-40 md:bottom-10 md:right-10 hover:scale-110 transition-transform hidden md:flex" href="https://wa.me/+447538457384">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+<script>
+        // Simple intersection observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'ease-out');
+        });
+    </script>
+</body></html>

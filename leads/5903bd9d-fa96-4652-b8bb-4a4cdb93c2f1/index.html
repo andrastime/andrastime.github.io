@@ -1,0 +1,391 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | Mr. Gray's Handyman Service</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Design System Tokens & Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#2e3132",
+                    "outline-variant": "#c5c6ca",
+                    "background": "#f8f9fa",
+                    "secondary-container": "#fd8b00",
+                    "secondary-fixed-dim": "#ffb77d",
+                    "tertiary-fixed": "#dce3ec",
+                    "on-secondary-fixed-variant": "#6e3900",
+                    "primary-container": "#212529",
+                    "on-surface": "#191c1d",
+                    "tertiary-container": "#1e252b",
+                    "on-tertiary-container": "#858c94",
+                    "on-primary-container": "#888c91",
+                    "tool-orange": "#F37021",
+                    "surface": "#f8f9fa",
+                    "surface-bright": "#f8f9fa",
+                    "on-background": "#191c1d",
+                    "on-primary-fixed-variant": "#43474c",
+                    "on-secondary-container": "#603100",
+                    "outline": "#75777b",
+                    "primary": "#0c1014",
+                    "inverse-primary": "#c3c7cc",
+                    "surface-container": "#edeeef",
+                    "surface-tint": "#5b5f63",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-variant": "#e1e3e4",
+                    "primary-fixed": "#e0e3e8",
+                    "secondary": "#904d00",
+                    "primary-fixed-dim": "#c3c7cc",
+                    "on-secondary-fixed": "#2f1500",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#ffdcc3",
+                    "on-tertiary-fixed": "#151c22",
+                    "on-primary-fixed": "#181c20",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#41484e",
+                    "border-subtle": "#DEE2E6",
+                    "slate-gray": "#343A40",
+                    "tertiary": "#091016",
+                    "on-surface-variant": "#44474a",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-dim": "#d9dadb",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c0c7cf",
+                    "on-primary": "#ffffff",
+                    "surface-light": "#FFFFFF",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "margin-mobile": "16px",
+                    "stack-sm": "8px",
+                    "section-padding": "80px",
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "button-text": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-xl": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "button-text": ["16px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card-hover:hover {
+            transform: translateY(-4px);
+            border-color: #F37021;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-tool-orange selection:text-white">
+<!-- TopNavBar Navigation Shell -->
+<header class="bg-surface-light dark:bg-primary border-b border-border-subtle dark:border-outline-variant shadow-sm docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-surface-light">
+                Mr. Gray's Handyman Service
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md text-slate-gray dark:text-surface-variant hover:text-tool-orange transition-colors" href="home-mr-gray-s-handyman-service.html">Home</a>
+<a class="font-label-md text-label-md text-tool-orange border-b-2 border-tool-orange pb-1" href="index.html">Services</a>
+<a class="font-label-md text-label-md text-slate-gray dark:text-surface-variant hover:text-tool-orange transition-colors" href="portfolio-mr-gray-s-handyman-service.html">Portfolio</a>
+<a class="font-label-md text-label-md text-slate-gray dark:text-surface-variant hover:text-tool-orange transition-colors" href="home-mr-gray-s-handyman-service.html">About</a>
+<a class="font-label-md text-label-md text-slate-gray dark:text-surface-variant hover:text-tool-orange transition-colors" href="contact-us-mr-gray-s-handyman-service.html">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden md:block bg-surface-light border-2 border-primary text-primary px-6 py-2 font-button-text text-button-text active:scale-95 transition-all duration-300 hover:bg-primary hover:text-white">Call Us</button>
+<button class="bg-tool-orange text-white px-6 py-2 font-button-text text-button-text active:scale-95 transition-all duration-300 hover:brightness-90">Request a Quote</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-primary-container overflow-hidden py-section-padding">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding relative z-10 grid md:grid-cols-2 gap-stack-lg items-center">
+<div class="text-left">
+<span class="text-tool-orange font-label-md text-label-md tracking-widest uppercase mb-stack-sm block">Expert Craftsmanship</span>
+<h1 class="text-white font-headline-xl text-headline-xl mb-stack-md leading-tight">Mastering the Art of Home Maintenance</h1>
+<p class="text-on-primary-container font-body-lg text-body-lg mb-stack-lg">From meticulous electrical work to high-end carpentry, we deliver professional-grade solutions with the precision and reliability your home deserves.</p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-2 bg-inverse-surface px-4 py-2 rounded-xl">
+<span class="material-symbols-outlined text-tool-orange" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-white font-label-md text-label-md">Licensed &amp; Insured</span>
+</div>
+<div class="flex items-center gap-2 bg-inverse-surface px-4 py-2 rounded-xl">
+<span class="material-symbols-outlined text-tool-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-white font-label-md text-label-md">Top Rated Professional</span>
+</div>
+</div>
+</div>
+<div class="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional handyman in high-end workwear expertly installing a modern minimalist light fixture in a bright, clean contemporary home. The scene is shot with high-key lighting, emphasizing a clean job site and the premium tools used. Deep charcoal and tool-orange accents appear in the branding of the professional equipment. The overall mood is focused, reliable, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGtObqhAIdefzkyi1feeSAa-uWRXGzhZtvrsCZQ6WZVb_3DPeg749o7v2yW6LwTj1i2MgsdQDAWx685NJoQcjT8W1VXuBdRBcX0vk5iw85jKExnG13IpATrww6uJUOnVZ8Zhxglt0nBFSRzrz5Jjn7UiXU1PZefnWP87HcFCVZ4zgQiUGu19jvjs2_dpmf4YcRoE_65opafzfafv3BHNrhPxNbz3Xl2Mfe417GQZHKquDtAPVlt5kfqw">
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/60 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-section-padding bg-surface-bright">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding">
+<div class="mb-stack-lg flex flex-col md:flex-row md:items-end md:justify-between border-b border-border-subtle pb-stack-md">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-sm">Core Service Disciplines</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Precision-focused maintenance and renovation services tailored for discerning property owners.</p>
+</div>
+<div class="mt-stack-md md:mt-0 flex items-center gap-stack-sm">
+<span class="text-slate-gray font-label-md text-label-md">Filter Experts:</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-primary font-label-md text-label-md cursor-pointer hover:bg-tool-orange hover:text-white transition-colors">All</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-primary font-label-md text-label-md cursor-pointer hover:bg-tool-orange hover:text-white transition-colors">Structural</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-primary font-label-md text-label-md cursor-pointer hover:bg-tool-orange hover:text-white transition-colors">Systems</span>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Plumbing -->
+<article class="md:col-span-8 group service-card-hover bg-white border border-border-subtle p-stack-lg rounded-xl transition-all duration-300 flex flex-col md:flex-row gap-gutter">
+<div class="w-full md:w-1/3 h-64 md:h-auto rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a sleek, modern chrome bathroom faucet being precisely tightened with a premium wrench. The water is perfectly still, reflecting the bright studio-style lighting of a clean, high-end renovation site. The background is a minimalist white marble wall with soft, diffused shadows. The image captures technical excellence and precision in plumbing work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNPInoJhRDrLmSSroB4rTOd0SusPUm74Y3GMpjfYsG_cCHiFZSNkewARlfpfavgpLJE4uZi0unOIEh-faOcBb7xx1WfczzEfHXfSprk2rXW25Y0QWXjs8ob-CktjXGQj59jZtAMC_eWlItbWH5nkI_EqggHst8sAvMdbpY-05w3pumsOXF5cgeYj3HKvqgRybfmLwdTrWBYL4NBks-zEke_bsj1SKhkfVrJ1sqZdDVVbtCIAWmjoc8DQ">
+</div>
+<div class="w-full md:w-2/3 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-stack-sm">
+<span class="material-symbols-outlined text-tool-orange" data-icon="plumbing">plumbing</span>
+<h3 class="font-headline-md text-headline-md text-primary">Plumbing Systems</h3>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md mb-stack-md">Specialized diagnostic and repair services for complex residential plumbing. From leak detection to high-end fixture installation, we ensure your systems operate with peak efficiency and leak-free reliability.</p>
+<ul class="grid grid-cols-2 gap-2 mb-stack-lg">
+<li class="flex items-center gap-2 text-label-md text-slate-gray"><span class="material-symbols-outlined text-tool-orange text-[16px]">check_circle</span> Leak Detection</li>
+<li class="flex items-center gap-2 text-label-md text-slate-gray"><span class="material-symbols-outlined text-tool-orange text-[16px]">check_circle</span> Pipe Retrofitting</li>
+<li class="flex items-center gap-2 text-label-md text-slate-gray"><span class="material-symbols-outlined text-tool-orange text-[16px]">check_circle</span> Fixture Upgrades</li>
+<li class="flex items-center gap-2 text-label-md text-slate-gray"><span class="material-symbols-outlined text-tool-orange text-[16px]">check_circle</span> Water Filtration</li>
+</ul>
+</div>
+<button class="self-start px-8 py-3 bg-primary text-white font-button-text text-button-text hover:bg-tool-orange transition-colors">Book Now</button>
+</div>
+</article>
+<!-- Electrical -->
+<article class="md:col-span-4 group service-card-hover bg-white border border-border-subtle p-stack-lg rounded-xl transition-all duration-300 flex flex-col">
+<div class="h-48 mb-stack-md rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of a neatly organized electrical panel in a modern utility room, with perfectly routed wires and clear labels. The lighting is crisp and cool-toned, highlighting the professional organization and safety-first approach. The scene represents reliability, high-level technical skill, and a commitment to meticulous detail in electrical work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUHFDFCnfNQb18h3g8gcjikeGKjsEsqm8IveYwwOsuZS4kZ8wdZWbXaJch2j-NPiJMraC-XKwmHhAijkzLBQIC1HyPXHhHOSprczS9iDToVTXWVDJJTIkPZtA9IWOI6pMG8Dl_wHMPiChhpLSqmcCTXoWi9eujZTWVI-zdxyFEQ3ieifi6nUVE9MO9xeXnnnoz0Wyt0fAVfvidddNYINHxvKumQOXiMqyrTXBdxxA31FLfyEAaM0yrWg">
+</div>
+<div class="flex items-center gap-2 mb-stack-sm">
+<span class="material-symbols-outlined text-tool-orange" data-icon="electrical_services">electrical_services</span>
+<h3 class="font-headline-md text-headline-md text-primary">Electrical</h3>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md mb-stack-lg grow">Certified repairs and installations focusing on safety and modern efficiency. We handle smart home integration and panel upgrades with clinical precision.</p>
+<button class="w-full py-3 border border-primary text-primary font-button-text text-button-text hover:bg-primary hover:text-white transition-colors">Book Now</button>
+</article>
+<!-- Carpentry -->
+<article class="md:col-span-4 group service-card-hover bg-white border border-border-subtle p-stack-lg rounded-xl transition-all duration-300 flex flex-col">
+<div class="h-48 mb-stack-md rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A craftsman's hand using a high-precision chisel on a piece of high-quality oak wood in a clean, organized workshop. Sunlight streams through a window, illuminating floating wood dust particles and the rich grain of the timber. The image highlights artisanal skill, high-end materials, and the professional nature of carpentry services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-IdGva0NJMbEaKmv1dlPEH6REpKJG6gi7vbYJxicPyxHkKHoKjygE65IN2p3EJ7v2YkMSGbvEC56uvF8ANEKUmQR08nCCxRWV3SJpCzyRFGAlGWo1rdiuPechU2IRKY_HyoW3YEf39dSMDDOQ2SJ2xDSUPU5mmujt3NqE9fT-vlkX5-8RvvzspcM_ZSd_A8Rf2PNl9dfbAc6HtsXWUVr4-oi3Mc26RXO8nEGxWC4Fvk4_HczwpRciag">
+</div>
+<div class="flex items-center gap-2 mb-stack-sm">
+<span class="material-symbols-outlined text-tool-orange" data-icon="handyman">handyman</span>
+<h3 class="font-headline-md text-headline-md text-primary">Carpentry</h3>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md mb-stack-lg grow">Structural integrity meets aesthetic excellence. From custom shelving to detailed trim work, our carpentry service is the backbone of your home's character.</p>
+<button class="w-full py-3 border border-primary text-primary font-button-text text-button-text hover:bg-primary hover:text-white transition-colors">Book Now</button>
+</article>
+<!-- Painting -->
+<article class="md:col-span-4 group service-card-hover bg-white border border-border-subtle p-stack-lg rounded-xl transition-all duration-300 flex flex-col">
+<div class="h-48 mb-stack-md rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A perfectly painted wall corner with a sharp, clean line between two sophisticated neutral tones. A professional paint brush with vibrant tool-orange bristles rests against a clean drop cloth. The lighting is soft and even, showcasing a flawless matte finish with zero imperfections. It communicates high-end quality and professional preparation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsxEjFrS6qQlb5R_KsUswzL4r0zIkj_YGrhgi14nDnzIDGJgfRKERLzX2Kc09UCtbTj4mijc6epgMvLvysXeSASfPrnyOqh3AYBcaECOfQU6Ync7IfGkNsp3FkFmZt4ePASiJHEQR5T1sFGh14riY8tOIXBlOrY8clN0vEls_O_e0iu50AcQ_evGC1rLRmkmfQZUmbn4KB9hjKnCNxwLZ_Ra8GSmmVibGxAJw_ktOHaaFGBVcK7I6iqg">
+</div>
+<div class="flex items-center gap-2 mb-stack-sm">
+<span class="material-symbols-outlined text-tool-orange" data-icon="format_paint">format_paint</span>
+<h3 class="font-headline-md text-headline-md text-primary">Painting</h3>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md mb-stack-lg grow">Masterful application and superior prep-work for a finish that stands the test of time. We use only premium low-VOC architectural coatings.</p>
+<button class="w-full py-3 border border-primary text-primary font-button-text text-button-text hover:bg-primary hover:text-white transition-colors">Book Now</button>
+</article>
+<!-- Renovations (The Feature) -->
+<article class="md:col-span-4 group service-card-hover bg-primary-container border border-outline-variant p-stack-lg rounded-xl transition-all duration-300 flex flex-col text-white">
+<div class="flex items-center gap-2 mb-stack-sm">
+<span class="material-symbols-outlined text-tool-orange" data-icon="construction">construction</span>
+<h3 class="font-headline-md text-headline-md">Renovations</h3>
+</div>
+<p class="text-on-primary-container font-body-md text-body-md mb-stack-lg grow">End-to-end transformation of kitchens, bathrooms, and living spaces. We manage every detail from demolition to the final polish, ensuring a seamless, high-end experience.</p>
+<div class="bg-tool-orange/10 border border-tool-orange/30 p-4 rounded-lg mb-stack-lg">
+<div class="flex items-center gap-2 text-tool-orange font-label-md text-label-md mb-1">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>Current Availability</span>
+</div>
+<p class="text-sm text-on-primary-container">Accepting new projects starting next month. Consultation required.</p>
+</div>
+<button class="w-full py-3 bg-tool-orange text-white font-button-text text-button-text hover:brightness-110 transition-all">Start Project</button>
+</article>
+</div>
+</div>
+</section>
+<!-- Maintenance Plans Section -->
+<section class="py-section-padding bg-surface-container-low border-y border-border-subtle">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding">
+<div class="grid md:grid-cols-2 gap-stack-lg items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Preservative Maintenance</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-stack-lg">Preventative care is the foundation of property value. Our scheduled maintenance programs are designed for homeowners who demand a hands-off, "always-perfect" property state.</p>
+<div class="space-y-4">
+<div class="flex gap-4 p-4 bg-white border border-border-subtle rounded-xl items-start">
+<div class="bg-surface-container-high p-3 rounded-lg text-tool-orange">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</div>
+<div>
+<h4 class="font-headline-md text-label-md text-primary mb-1">Quarterly Checkups</h4>
+<p class="text-body-md text-on-surface-variant">Full diagnostic of HVAC, plumbing, and electrical systems four times a year.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-white border border-border-subtle rounded-xl items-start">
+<div class="bg-surface-container-high p-3 rounded-lg text-tool-orange">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</div>
+<div>
+<h4 class="font-headline-md text-label-md text-primary mb-1">Safety Audits</h4>
+<p class="text-body-md text-on-surface-variant">Comprehensive smoke detector, CO2, and structural safety inspections.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-2 bg-tool-orange/5 rounded-2xl blur-xl group-hover:bg-tool-orange/10 transition-colors duration-500"></div>
+<div class="relative bg-white border border-border-subtle p-8 rounded-xl shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Maintenance Inquiries</h3>
+<form class="space-y-4">
+<div>
+<label class="block text-label-md font-label-md text-slate-gray mb-1 uppercase tracking-wider">Property Type</label>
+<select class="w-full border-b border-border-subtle focus:border-tool-orange focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none text-body-md">
+<option>Private Residence</option>
+<option>Commercial Property</option>
+<option>Multi-Unit Complex</option>
+</select>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-slate-gray mb-1 uppercase tracking-wider">Your Message</label>
+<textarea class="w-full border-b border-border-subtle focus:border-tool-orange focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none text-body-md" placeholder="Tell us about your property needs..." rows="3"></textarea>
+</div>
+<button class="w-full py-4 bg-primary text-white font-button-text text-button-text uppercase tracking-widest hover:bg-tool-orange transition-colors" type="submit">Request Info</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="bg-primary py-24 relative overflow-hidden">
+
+<div class="max-w-container-max mx-auto px-margin-mobile text-center relative z-10">
+<h2 class="text-white font-headline-xl text-headline-xl mb-stack-md">Ready to Elevate Your Living Space?</h2>
+<p class="text-on-primary-container font-body-lg text-body-lg max-w-2xl mx-auto mb-stack-lg">Connect with Mr. Gray today for a detailed consultation. Professional, reliable, and exceptionally precise.</p>
+<div class="flex flex-col md:flex-row justify-center gap-stack-md">
+<a class="flex items-center justify-center gap-2 bg-tool-orange text-white px-10 py-4 font-button-text text-button-text rounded-lg hover:brightness-110 transition-all shadow-lg shadow-tool-orange/20" href="tel:1-800-MR-GRAY">
+<span class="material-symbols-outlined" data-icon="call">call</span> Call 1-800-MR-GRAY
+                    </a>
+<a class="flex items-center justify-center gap-2 bg-white text-primary px-10 py-4 font-button-text text-button-text rounded-lg hover:bg-surface-variant transition-all" href="index.html">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span> Schedule Online
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Navigation Shell -->
+<footer class="bg-inverse-surface dark:bg-primary-container text-surface-light py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-surface-light mb-stack-sm">
+                    Mr. Gray
+                </div>
+<p class="text-on-primary-container text-body-md mb-stack-md">Professional handyman services delivering precision, reliability, and master craftsmanship to every home.</p>
+<div class="flex gap-4">
+<a class="text-on-primary-container hover:text-tool-orange transition-colors" href="portfolio-mr-gray-s-handyman-service.html"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-on-primary-container hover:text-tool-orange transition-colors" href="index.html"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-tool-orange uppercase tracking-widest mb-stack-md">Services</h4>
+<ul class="space-y-2">
+<li><a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors text-body-md" href="index.html">Plumbing</a></li>
+<li><a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors text-body-md" href="index.html">Electrical</a></li>
+<li><a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors text-body-md" href="index.html">Carpentry</a></li>
+<li><a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors text-body-md" href="index.html">Painting</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-tool-orange uppercase tracking-widest mb-stack-md">Support</h4>
+<ul class="space-y-2">
+<li><a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors text-body-md" href="home-mr-gray-s-handyman-service.html">Privacy Policy</a></li>
+<li><a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors text-body-md" href="index.html">Terms of Service</a></li>
+<li><a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors text-body-md" href="contact-us-mr-gray-s-handyman-service.html">Contact Us</a></li>
+<li><a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors text-body-md" href="index.html">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-tool-orange uppercase tracking-widest mb-stack-md">Availability</h4>
+<p class="text-on-primary-container text-body-md mb-stack-sm">Monday – Friday: 8am – 6pm</p>
+<p class="text-on-primary-container text-body-md mb-stack-sm">Saturday: 10am – 4pm</p>
+<p class="text-on-primary-container text-body-md">Emergency: 24/7 Available</p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding mt-stack-lg pt-stack-md border-t border-white/10 text-center">
+<p class="text-on-primary-container text-label-md font-label-md">© 2024 Mr. Gray's Handyman Service. All Rights Reserved.</p>
+</div>
+</footer>
+<!-- BottomNavBar Mobile Only -->
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-surface-light dark:bg-inverse-surface border-t border-border-subtle md:hidden shadow-lg">
+<a class="flex flex-col items-center justify-center text-slate-gray dark:text-surface-variant active:bg-surface-container active:scale-95 transition-all" href="tel:1-800-555-0123">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+<span class="font-label-md text-label-md">Call Now</span>
+</a>
+<a class="flex flex-col items-center justify-center text-tool-orange active:bg-surface-container active:scale-95 transition-all" href="index.html">
+<span class="material-symbols-outlined" data-icon="calendar_today" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-label-md text-label-md">Book Online</span>
+</a>
+</div>
+<script>
+        // Simple micro-interactions for service cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const img = card.querySelector('img');
+                if(img) img.style.transform = 'scale(1.05)';
+            });
+            card.addEventListener('mouseleave', () => {
+                const img = card.querySelector('img');
+                if(img) img.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

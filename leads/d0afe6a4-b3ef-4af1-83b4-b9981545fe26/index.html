@@ -1,0 +1,460 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Edinburgh Handyman | Premium Professional Trade Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            background-color: #16130b;
+            color: #eae1d4;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(22, 19, 11, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .bento-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: #1f1b13;
+        }
+        .bento-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            background: #2d2a21;
+        }
+        .gold-glow {
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "surface-variant": "#38342b",
+                "on-secondary-fixed": "#191c20",
+                "inverse-primary": "#735c00",
+                "on-background": "#eae1d4",
+                "surface-container-lowest": "#110e07",
+                "primary-container": "#d4af37",
+                "background": "#16130b",
+                "secondary": "#c5c6cc",
+                "on-primary-fixed-variant": "#574500",
+                "surface-bright": "#3d392f",
+                "on-error-container": "#ffdad6",
+                "surface-container-low": "#1f1b13",
+                "secondary-fixed": "#e1e2e8",
+                "outline": "#99907c",
+                "surface-dim": "#16130b",
+                "on-tertiary-fixed-variant": "#3c475a",
+                "inverse-on-surface": "#343027",
+                "inverse-surface": "#eae1d4",
+                "on-secondary": "#2e3135",
+                "slate-gray": "#718096",
+                "surface-container-highest": "#38342b",
+                "on-primary": "#3c2f00",
+                "outline-variant": "#4d4635",
+                "on-tertiary-container": "#3a4558",
+                "on-tertiary": "#263142",
+                "on-secondary-fixed-variant": "#44474b",
+                "on-primary-fixed": "#241a00",
+                "on-secondary-container": "#b6b8be",
+                "contractor-gold": "#D4AF37",
+                "deep-charcoal": "#121417",
+                "primary-fixed-dim": "#e9c349",
+                "secondary-fixed-dim": "#c5c6cc",
+                "tertiary": "#c3cee5",
+                "tertiary-container": "#a8b3c9",
+                "on-surface": "#eae1d4",
+                "tertiary-fixed": "#d8e3fa",
+                "on-tertiary-fixed": "#111c2c",
+                "surface-tint": "#e9c349",
+                "on-surface-variant": "#d0c5af",
+                "primary": "#f2ca50",
+                "error": "#ffb4ab",
+                "on-primary-container": "#554300",
+                "on-error": "#690005",
+                "error-container": "#93000a",
+                "surface": "#16130b",
+                "secondary-container": "#46494e",
+                "tertiary-fixed-dim": "#bcc7dd",
+                "safety-orange": "#FF650C",
+                "surface-dark": "#1A1D21",
+                "surface-container": "#231f17",
+                "primary-fixed": "#ffe088",
+                "surface-container-high": "#2d2a21"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+              },
+              "spacing": {
+                "margin-safe": "1.5rem",
+                "card-padding": "2rem",
+                "container-max": "1200px",
+                "gutter": "2rem",
+                "section-gap": "6rem"
+              },
+              "fontFamily": {
+                "display-lg-mobile": ["Montserrat"],
+                "body-md": ["Inter"],
+                "headline-md": ["Montserrat"],
+                "display-lg": ["Montserrat"],
+                "label-caps": ["Inter"],
+                "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-surface">
+<header class="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md shadow-md">
+<div class="flex justify-between items-center px-margin-safe py-4 max-w-container-max mx-auto h-24">
+<div class="flex items-center space-x-4">
+<img alt="Edinburgh Handyman Logo" class="h-16 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLuGo1uOY8HxrUiwXA-4T7XNuFlQfjB90_8uF9eN8g3pb_48MM_hEYmecDTZJfkVVi4Cr-OLcUMnZH3JoKQUji4XH5fBAQ7Ke2v1-TQJNgpGAt4-irONr4zSe6yLfawP-CHMLHVMap_eAcpkJvgQqeZJuXfuWp3aUN6fUpuWW-oL__D4v9IdnQDwWNI2L7HhGhfEFWgsYM1V665Ih-Nh4ZCyAle0tCsGhHXwHFYaaVqFkS37gXx5BO-_glou">
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-headline-md text-headline-md text-primary border-b-2 border-primary pb-1" href="our-services.html">Home</a>
+<a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors" href="our-services.html">Services</a>
+<a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors" href="pricing-booking.html">Pricing</a>
+<a class="font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface transition-colors" href="what-to-expect.html">What to Expect</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a class="hidden lg:block font-body-md text-body-md text-on-surface-variant font-semibold hover:text-primary transition-colors" href="tel:07462691603">0131 HANDY</a>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 font-bold uppercase tracking-wider text-sm hover:scale-105 active:scale-95 transition-all duration-300">
+                    Book Now
+                </button>
+</div>
+</div>
+</header>
+<main>
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale opacity-50 contrast-125" src="https://lh3.googleusercontent.com/aida/AP1WRLu95nsEsB7qWnPl1GvRSriXWKCv6zssOUdpq8x3ab4ikbdOWyMdzYKA2Kk21kpeIuIe_RtN2X_buViUHtqVWTn36HmpZBPaIjgpjgc54q1Hzc2eRQwchEZKlpD5lx0XxrF-IzAe_6EtrfCy1nwh2HeBMgasGr8yOrxqf62unwBmY4Ql-0jhScxW9idQqAyYlSvryid0auGxaZRD9dTrfBThJNAx8OrMfVnfw_kEn4_yV1cb1qGVWhZdlYM">
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-margin-safe w-full">
+<div class="max-w-3xl fade-in">
+<span class="inline-block px-4 py-1 mb-6 bg-primary/10 border border-primary/30 text-primary font-label-caps text-label-caps uppercase tracking-widest rounded-full">Premier Edinburgh Trade Services</span>
+<h1 class="font-display-lg text-display-lg lg:text-[64px] mb-8 leading-[1.1] font-extrabold tracking-tight">
+                        Outstanding Handyman Services for Homes &amp; Businesses <span class="text-contractor-gold underline decoration-primary/30">across Edinburgh.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl leading-relaxed">
+                        I bridge the gap between "local and trustworthy" and "premium and modern," providing high-end precision for every repair, installation, and renovation.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-contractor-gold text-surface-container-lowest px-10 py-5 font-bold uppercase tracking-widest text-sm hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-500">
+                            Book Online Now
+                        </button>
+<button class="border border-outline-variant text-on-surface px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-surface-container-high transition-all">
+                            View Services
+                        </button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+<span class="material-symbols-outlined text-4xl">expand_more</span>
+</div>
+</section>
+<section class="py-section-gap bg-surface-container-low px-margin-safe overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-display-lg text-display-lg text-on-surface mb-4">Services <span class="text-contractor-gold">Overview</span></h2>
+<div class="h-1 w-24 bg-contractor-gold mb-8"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Precision-focused solutions for every corner of your property. If it needs fixing, fitting, or finishing, consider it done to the highest architectural standards.</p>
+</div>
+<a class="text-contractor-gold font-bold uppercase tracking-widest flex items-center group" href="our-services.html">
+                        Explore all services <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Joinery -->
+<div class="bento-card p-card-padding group cursor-pointer border border-outline-variant/30">
+<div class="w-16 h-16 bg-surface-container-high flex items-center justify-center mb-8 group-hover:bg-contractor-gold group-hover:text-surface-dark transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl" data-icon="carpenter">carpenter</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-contractor-gold transition-colors">Joinery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Bespoke shelving, door hanging, cabinet repairs, and custom timber solutions designed for Edinburgh's unique homes.</p>
+<span class="text-sm font-bold uppercase tracking-widest flex items-center text-primary/60 group-hover:text-primary">View Examples <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span></span>
+</div>
+<!-- Plumbing -->
+<div class="bento-card p-card-padding group cursor-pointer border border-outline-variant/30 lg:mt-12">
+<div class="w-16 h-16 bg-surface-container-high flex items-center justify-center mb-8 group-hover:bg-contractor-gold group-hover:text-surface-dark transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl" data-icon="plumbing">plumbing</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-contractor-gold transition-colors">Plumbing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Expert repairs for taps, leaks, and re-siliconing. Professional bathroom finishes that prevent long-term damage.</p>
+<span class="text-sm font-bold uppercase tracking-widest flex items-center text-primary/60 group-hover:text-primary">View Examples <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span></span>
+</div>
+<!-- Decorating -->
+<div class="bento-card p-card-padding group cursor-pointer border border-outline-variant/30">
+<div class="w-16 h-16 bg-surface-container-high flex items-center justify-center mb-8 group-hover:bg-contractor-gold group-hover:text-surface-dark transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl" data-icon="format_paint">format_paint</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-contractor-gold transition-colors">Decorating</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Meticulous painting and finishing services. High-grade materials and perfect preparation for a premium look.</p>
+<span class="text-sm font-bold uppercase tracking-widest flex items-center text-primary/60 group-hover:text-primary">View Examples <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span></span>
+</div>
+<!-- Electrical -->
+<div class="bento-card p-card-padding group cursor-pointer border border-outline-variant/30">
+<div class="w-16 h-16 bg-surface-container-high flex items-center justify-center mb-8 group-hover:bg-contractor-gold group-hover:text-surface-dark transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl" data-icon="bolt">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-contractor-gold transition-colors">Electrical</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Replacing light fixtures, switches, and sockets with precision and safety. Modernizing your property's tech aesthetic.</p>
+<span class="text-sm font-bold uppercase tracking-widest flex items-center text-primary/60 group-hover:text-primary">View Examples <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span></span>
+</div>
+<!-- Workplace -->
+<div class="bento-card p-card-padding group cursor-pointer border border-outline-variant/30 lg:mt-12">
+<div class="w-16 h-16 bg-surface-container-high flex items-center justify-center mb-8 group-hover:bg-contractor-gold group-hover:text-surface-dark transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl" data-icon="business">business</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-contractor-gold transition-colors">Workplace</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Dedicated maintenance for Edinburgh businesses. Rapid response and professional etiquette in corporate environments.</p>
+<span class="text-sm font-bold uppercase tracking-widest flex items-center text-primary/60 group-hover:text-primary">View Examples <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span></span>
+</div>
+<!-- Fixings -->
+<div class="bento-card p-card-padding group cursor-pointer border border-outline-variant/30">
+<div class="w-16 h-16 bg-surface-container-high flex items-center justify-center mb-8 group-hover:bg-contractor-gold group-hover:text-surface-dark transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl" data-icon="build">build</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-contractor-gold transition-colors">Fixings</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Mounting TVs, hanging art, mirrors, and window dressings. Laser-level precision for perfectly balanced interiors.</p>
+<span class="text-sm font-bold uppercase tracking-widest flex items-center text-primary/60 group-hover:text-primary">View Examples <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span></span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-section-gap relative overflow-hidden bg-background">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+
+</div>
+<div class="max-w-container-max mx-auto px-margin-safe grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="aspect-square bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A macro close-up of high-quality carpentry tools on a dark walnut workbench with warm gold atmospheric lighting. Wood shavings are scattered around a sharp chisel, and the background is blurred to create a professional, artisan mood. The image should convey precision, craftsmanship, and a premium aesthetic consistent with a luxury trade service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGP_vhAAWGz7qOYFrZk9HL4XKFIEoNmnpKBcMnVG_PRp_3fVK9TEETIjL9vrpsuAAxAwUXMB9vFp8ZyO96Ylh9OYR5fhN0XgzoDGfSS7LpvynHG0Vh4UbPcZUMDBVy0pV_PahdkxLEBgFFwYFiPMWYZgX3Bu1GlW2pIlpQxnr96aB_ntbhKkZySbjEiFn2WTnOU2YSILgtVLEkFcmoizoGnJp2pBp7A-qBA8LcfqFfllbTzlaGwfye0w">
+<div class="absolute bottom-0 left-0 bg-contractor-gold p-8 text-surface-dark max-w-xs">
+<p class="font-display-lg text-[48px] font-bold leading-none mb-2">100%</p>
+<p class="font-label-caps text-label-caps uppercase tracking-widest font-bold">Work Guaranteed</p>
+</div>
+</div>
+<div class="absolute -top-12 -right-12 w-48 h-48 border-[12px] border-contractor-gold/10 -z-10 hidden md:block"></div>
+</div>
+<div>
+<h2 class="font-display-lg text-display-lg mb-12">Our <span class="text-contractor-gold">Promise</span></h2>
+<ul class="space-y-10">
+<li class="flex items-start group">
+<div class="mr-6 p-3 bg-surface-container-high rounded-full group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined text-2xl" data-icon="schedule" data-weight="fill">schedule</span>
+</div>
+<div>
+<h4 class="font-headline-md text-xl mb-2 text-on-surface">Arrive on time</h4>
+<p class="text-on-surface-variant font-body-md">Your time is valuable. I respect your schedule with strict punctuality and clear communication if delays occur.</p>
+</div>
+</li>
+<li class="flex items-start group">
+<div class="mr-6 p-3 bg-surface-container-high rounded-full group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined text-2xl" data-icon="mood" data-weight="fill">mood</span>
+</div>
+<div>
+<h4 class="font-headline-md text-xl mb-2 text-on-surface">Always with a Smile</h4>
+<p class="text-on-surface-variant font-body-md">Professional trade work should be a pleasant experience. I bring positivity and professional etiquette to every site.</p>
+</div>
+</li>
+<li class="flex items-start group">
+<div class="mr-6 p-3 bg-surface-container-high rounded-full group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined text-2xl" data-icon="cleaning_services" data-weight="fill">cleaning_services</span>
+</div>
+<div>
+<h4 class="font-headline-md text-xl mb-2 text-on-surface">Clean Space Guarantee</h4>
+<p class="text-on-surface-variant font-body-md">I leave your home or office cleaner than I found it, utilizing professional dust extraction and protective coverings.</p>
+</div>
+</li>
+<li class="flex items-start group">
+<div class="mr-6 p-3 bg-surface-container-high rounded-full group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined text-2xl" data-icon="verified" data-weight="fill">verified</span>
+</div>
+<div>
+<h4 class="font-headline-md text-xl mb-2 text-on-surface">Work Guaranteed</h4>
+<p class="text-on-surface-variant font-body-md">Execution to the highest standards. All work is fully insured and guaranteed for your absolute peace of mind.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="py-section-gap bg-surface-container-low px-margin-safe">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-display-lg text-display-lg mb-4 text-on-surface">Customer <span class="text-contractor-gold">Feedback</span></h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Real experiences from homes and businesses across Edinburgh who value quality craftsmanship.</p>
+</div>
+<div class="relative max-w-4xl mx-auto p-12 bg-background border-l-8 border-contractor-gold shadow-2xl">
+<span class="material-symbols-outlined absolute -top-10 -left-10 text-[120px] opacity-10 text-contractor-gold" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<blockquote class="relative z-10">
+<p class="font-headline-md text-2xl md:text-3xl leading-relaxed mb-8 italic">
+                            "Extremely happy with work carried out by Ross \"The Handyman\". He arrived promptly made a lovely job of re-siliconing around bath and repair to bath panel all to a very high standard, left everything clean &amp; tidy. He kindly repaired my fitted wardrobe doors while he was here. Have already rebooked for some other jobs in my flat. Pricing very reasonable."
+                        </p>
+<footer class="flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-16 h-16 rounded-full bg-surface-container-high mr-4 flex items-center justify-center">
+<span class="text-contractor-gold font-bold text-xl">DS</span>
+</div>
+<div>
+<p class="font-bold text-on-surface text-lg">Diane Scott</p>
+<p class="text-on-surface-variant text-sm uppercase tracking-widest">Edinburgh Residential Client</p>
+</div>
+</div>
+<div class="flex space-x-1 text-contractor-gold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</footer>
+</blockquote>
+</div>
+<div class="mt-16 text-center">
+<button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center mx-auto space-x-2">
+<span class="font-bold uppercase tracking-widest text-xs">Read more verified reviews</span>
+<span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+</section>
+<section class="py-section-gap bg-background border-y border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-safe text-center">
+<div class="bg-surface-container-high p-16 relative overflow-hidden">
+<div class="absolute inset-0 opacity-5 pointer-events-none">
+
+</div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg mb-6">Ready to upgrade your space?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                            Check availability and secure your booking in under 60 seconds with our transparent online booking system.
+                        </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a class="bg-contractor-gold text-surface-container-lowest px-12 py-5 font-bold uppercase tracking-widest text-sm hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] transition-all" href="pricing-booking.html">
+                                Book Online Now
+                            </a>
+<a class="border border-outline-variant text-on-surface px-12 py-5 font-bold uppercase tracking-widest text-sm hover:bg-background transition-all" href="tel:07462691603">
+                                Call 07462 691603
+                            </a>
+</div>
+<p class="mt-8 text-sm text-on-surface-variant font-medium">Pricing starts at £40 per half hour • No call-out fee</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container-lowest py-section-gap px-margin-safe border-t border-outline-variant">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="col-span-1 lg:col-span-1">
+<img alt="Logo" class="h-16 w-auto mb-8" src="https://lh3.googleusercontent.com/aida/AP1WRLuGo1uOY8HxrUiwXA-4T7XNuFlQfjB90_8uF9eN8g3pb_48MM_hEYmecDTZJfkVVi4Cr-OLcUMnZH3JoKQUji4XH5fBAQ7Ke2v1-TQJNgpGAt4-irONr4zSe6yLfawP-CHMLHVMap_eAcpkJvgQqeZJuXfuWp3aUN6fUpuWW-oL__D4v9IdnQDwWNI2L7HhGhfEFWgsYM1V665Ih-Nh4ZCyAle0tCsGhHXwHFYaaVqFkS37gXx5BO-_glou">
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                    Setting the gold standard for handyman services in Edinburgh. Trust, transparency, and technical excellence.
+                </p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 bg-surface-container flex items-center justify-center rounded-full hover:bg-primary-container hover:text-on-primary-container transition-all" href="what-to-expect.html">
+<span class="material-symbols-outlined text-lg">face_nod</span>
+</a>
+<a class="w-10 h-10 bg-surface-container flex items-center justify-center rounded-full hover:bg-primary-container hover:text-on-primary-container transition-all" href="our-services.html">
+<span class="material-symbols-outlined text-lg">infrared</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-contractor-gold text-lg mb-8 uppercase tracking-widest">Core Services</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="our-services.html">Joinery</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="our-services.html">Decorating</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="our-services.html">Plumbing</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="our-services.html">Electrical</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="our-services.html">Office Maintenance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-contractor-gold text-lg mb-8 uppercase tracking-widest">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">1% for Charity</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="what-to-expect.html">What to Expect</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-contractor-gold text-lg mb-8 uppercase tracking-widest">Contact Us</h4>
+<ul class="space-y-6">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3">mail</span>
+<a class="text-on-surface-variant hover:text-on-surface" href="mailto:info@edinburghhandyman.com">info@edinburghhandyman.com</a>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3">call</span>
+<a class="text-on-surface-variant hover:text-on-surface" href="tel:07462691603">07462 691603</a>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3">location_on</span>
+<span class="text-on-surface-variant">Serving all EH Postcodes, Edinburgh, Scotland.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-24 pt-8 border-t border-outline-variant/30 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">
+                © 2024 Edinburgh Handyman Service. Registered in Scotland. Supporting local Edinburgh charities.
+            </p>
+</div>
+</footer>
+<script>
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.borderColor = 'rgba(212, 175, 55, 0.4)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.borderColor = 'rgba(212, 175, 55, 0.1)';
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
+</body></html>

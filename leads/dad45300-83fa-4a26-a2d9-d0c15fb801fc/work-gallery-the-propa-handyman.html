@@ -1,0 +1,389 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Gallery | The Propa Handyman - Birmingham's Trusted Expert</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#faf8ff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#616266",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e1e2ee",
+                    "secondary": "#5d5e62",
+                    "charcoal-black": "#121417",
+                    "primary-fixed": "#dbe1ff",
+                    "on-tertiary-fixed-variant": "#832700",
+                    "surface-container-low": "#f2f3ff",
+                    "stroke-neutral": "#E2E8F0",
+                    "surface-tint": "#0053da",
+                    "tertiary-fixed-dim": "#ffb59c",
+                    "inverse-surface": "#2e303a",
+                    "primary": "#004cca",
+                    "secondary-fixed": "#e2e2e6",
+                    "electric-blue": "#0062FF",
+                    "outline": "#737687",
+                    "tertiary": "#9e3100",
+                    "error": "#ba1a1a",
+                    "primary-container": "#0062ff",
+                    "inverse-on-surface": "#eff0fd",
+                    "on-surface-variant": "#424656",
+                    "on-secondary-fixed-variant": "#45474a",
+                    "surface-dim": "#d8d9e6",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#c2c6d9",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "background": "#faf8ff",
+                    "secondary-container": "#dfdfe3",
+                    "on-tertiary-fixed": "#390c00",
+                    "safety-orange": "#FF5C00",
+                    "surface-container": "#ecedfa",
+                    "on-tertiary-container": "#fff1ed",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-glass": "rgba(255, 255, 255, 0.7)",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#c84000",
+                    "on-primary-fixed": "#00174b",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "secondary-fixed-dim": "#c6c6ca",
+                    "on-surface": "#191b24",
+                    "on-secondary-fixed": "#1a1c1f",
+                    "on-background": "#191b24",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-container-highest": "#e1e2ee",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#ffdbcf",
+                    "surface": "#faf8ff",
+                    "surface-container-high": "#e7e7f4",
+                    "on-primary-container": "#f3f3ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "grid-gutter": "24px",
+                    "section-gap-desktop": "120px",
+                    "container-max": "1280px",
+                    "section-gap-mobile": "64px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "headline-xl": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "button-text": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "button-text": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 24px;
+        }
+        .masonry-item-tall { grid-row: span 2; }
+        .masonry-item-wide { grid-column: span 2; }
+        @media (max-width: 768px) {
+            .masonry-item-wide { grid-column: span 1; }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-charcoal-black text-surface-bright font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full bg-surface-glass backdrop-blur-md z-50 flex justify-between items-center px-8 py-3 border border-stroke-neutral shadow-lg shadow-primary/5">
+<div class="text-headline-md font-headline-md font-extrabold text-charcoal-black tracking-tighter">
+            The Propa Handyman
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-electric-blue transition-colors text-label-caps font-label-caps" href="our-services-the-propa-handyman.html">Services</a>
+<a class="text-on-surface-variant hover:text-electric-blue transition-colors text-label-caps font-label-caps" href="our-services-the-propa-handyman.html">Carpentry</a>
+<a class="text-on-surface-variant hover:text-electric-blue transition-colors text-label-caps font-label-caps" href="our-services-the-propa-handyman.html">Painting</a>
+<a class="text-on-surface-variant hover:text-electric-blue transition-colors text-label-caps font-label-caps" href="our-services-the-propa-handyman.html">Plumbing</a>
+<a class="text-electric-blue font-bold border-b-2 border-electric-blue pb-1 text-label-caps font-label-caps" href="work-gallery-the-propa-handyman.html">Gallery</a>
+</div>
+<div class="flex gap-4">
+<button class="bg-electric-blue text-on-primary px-6 py-2 rounded-full font-button-text text-button-text hover:bg-primary-container transition-all scale-95 active:scale-90">Book Now</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[60vh] flex items-end pb-24 px-4 overflow-hidden pt-40">
+
+<div class="relative max-w-7xl mx-auto w-full z-10">
+<span class="text-electric-blue font-label-caps text-label-caps mb-4 block">PORTFOLIO OF EXCELLENCE</span>
+<h1 class="text-headline-xl font-headline-xl max-w-3xl mb-6">Expert Craftsmanship, <br><span class="text-electric-blue">Visible Precision.</span></h1>
+<p class="text-body-lg font-body-lg text-surface-variant max-w-xl">
+                Explore our recent transformations across Birmingham. From delicate carpentry to full-scale property maintenance, every project is a testament to the "Propa" way.
+            </p>
+</div>
+</header>
+<!-- Project Gallery (Masonry Bento Grid) -->
+<section class="py-section-gap-desktop px-4 max-w-7xl mx-auto">
+<div class="masonry-grid">
+<!-- Project 1: Painting -->
+<div class="relative group overflow-hidden rounded-xl masonry-item-tall">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A professional painter using a long-handled roller to apply a smooth off-white coat to a large feature wall in a modern Birmingham home. The scene is illuminated by crisp, natural sunlight pouring through a window, highlighting the texture of the fresh paint and the clean lines of the contemporary interior. The aesthetic is bright, meticulous, and high-end." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_FBhD_8ce9GN30P8PGVy9R4S9eQIF2KJL1C9vwbsNXglErpSmBtdehgPyvYQBepInkxlWaDoQGuWO3Vc2RMT_L1mOQauc2-zsF5ke7S8qRUR1MhtkWih5o391RqX1fcHeY7IvCUS2IdmWFqUNdadz1iI2kgwsBAKvCISxCV7S3rH5PhxQyl1wurcWCXbUZGegJsjrQNab1zBssVJ5dAqQLPFOcA3YHNIafHgxwtCdu5d2nfgLYDpo">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-electric-blue font-label-caps text-label-caps">PAINTING &amp; DECORATING</span>
+<h3 class="text-headline-md font-headline-md mt-2">Full Interior Refresh</h3>
+</div>
+</div>
+<!-- Project 2: Carpentry -->
+<div class="relative group overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of high-quality bespoke wall panelling and skirting boards in a premium residential setting. The woodworking is finished in a sophisticated charcoal grey, with perfect mitre joints and clean architectural lines. The lighting is soft and moody, emphasizing the luxury texture of the handcrafted timber." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKSFXgSLaFfTvOyO_DImAw09R4kbTR5BngwELj_EhNFt_8KsG_ajujpgddrmNDZSEQpadOstKqYubeuF-r9xW9NTr5X1NilYZn3EcLO5WJE6rHsY0oKaUGNV6PTpVcY7TjdyfR4FwNqf8_wWNTLYb40_sQ3lHQet0PxP7k5KHbNDzj4KT7Y3vBlvh6K2TZrOt_EfELTf_pGDSubs9ZdXdbW1V_LTVw8acK5wYtOg-MkTUGiBR0p44k">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-electric-blue font-label-caps text-label-caps">CARPENTRY</span>
+<h3 class="text-headline-md font-headline-md mt-2">Custom Panelling</h3>
+</div>
+</div>
+<!-- Project 3: Plumbing -->
+<div class="relative group overflow-hidden rounded-xl masonry-item-wide">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A stunning modern bathroom renovation featuring a sleek walk-in shower with brushed gold fixtures and marble-effect tiling. The craftsmanship is evident in the precise grout lines and perfect alignment of the fixtures. The space feels like a high-end spa, illuminated by hidden LED strip lighting that creates a warm, premium glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa4g2qMWm1mgNINmArX-VWj-kGDHG1svToRjxfxFpPLlHHcVVw8T2Jp7VpZmYvTptFlIfm7hN0pLOCpcorkfkfDn60o2hxQ0kyFofFmRllQwehwmPLHMugkY5HunR_fTyCUN5GQvq3pXev17sNKz89yq9C4SaPTzokYDKQt2mz05jOhT0DCWqlNiv6fW8OUrJOqJD24DaV8zzsDiwd2Nf1PKdoTTH4Z-rWJLddp-0fX_RtakU6Q5u_">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-electric-blue font-label-caps text-label-caps">PLUMBING</span>
+<h3 class="text-headline-md font-headline-md mt-2">Luxury Bathroom Suite</h3>
+</div>
+</div>
+<!-- Project 4: Flooring -->
+<div class="relative group overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Wide shot of a newly installed light oak laminate floor in a spacious open-plan living room. The planks are perfectly laid with no visible gaps, reflecting the afternoon sun. The room is styled with minimalist furniture, emphasizing the clean, professional finish of the flooring work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDIcJlxbheD6-fx5HCfxqZbdiT8Sdk8dfAkhdOqVKIDsHqvkU-ZWV87E8rXrv-XfFM9s0JzWI-WCgOIu1ay5mXv5YZW4KMj2VPGasfnUmdPycrxQ37JGhgqHk8A7ajMW6KH5hN6rhIDda_lwtIFh6yUSkXzdJfz0eAKpR__WD-66NwtA9oeWy0SseFv1Mkr3enSg4HTU8zUrHax1jy2gj6SN674NeDLwmBYuQo1cmlfvW7OC4-Tyn5">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-electric-blue font-label-caps text-label-caps">FLOORING</span>
+<h3 class="text-headline-md font-headline-md mt-2">Laminate Installation</h3>
+</div>
+</div>
+<!-- Project 5: Maintenance -->
+<div class="relative group overflow-hidden rounded-xl masonry-item-tall">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A montage of various property maintenance tasks being performed: fitting a new designer internal door, replacing a kitchen tap with a modern swivel model, and adjusting architrave. The images are crisp and professional, showcasing the 'no job too small' philosophy with high-end tools and attention to detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWxX_br_8-fKWk73c12atQue7FHjMw1POGiZ931zIvR0u-WT7laXzp598zzeJT2z2PC6erW7CBtpdw-Mcxcx1BUUBThJOSqp8k557DgyXvC4HtfQAjN4vNsDSSr4_7DxmW4HbrrgXJ2soddIWQi7SU8JywLUMB-opvLrQfa-uKprjlG1KLeACHNygsmYwNDMWoafw0XUINKSVLwUnOGuhGMaAGSnAdXnhMYG2E4U-_FMh2bgRw06u6">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-electric-blue font-label-caps text-label-caps">MAINTENANCE</span>
+<h3 class="text-headline-md font-headline-md mt-2">Landlord Solutions</h3>
+</div>
+</div>
+<!-- Project 6: Doors -->
+<div class="relative group overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="High-quality carpentry work showing the installation of modern internal oak doors with chrome handles. The alignment is perfect against the white walls, demonstrating precision in hanging and hardware fitting. The scene is bright and airy, representing a clean residential improvement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7I3iutFoaa39EmI7vz9yXbcM-zjyS3qa2vD84_6lPZRtcksgKgyOByLaGx1UKdHAwBidqeDiFuKamGmu3m0pQYgyRVcyJ4ylXCE7mUtH4E7gpKHz1v7Gdzkc77BspQtFzDf9PQkxzytDLHqfpRkSq7_XAk37peTuKqruIVWL-6Tc1GHQEQA96uy_QmEVHRm-9mTcUPGIF-bpUWEjilBkbSHLGFN1g0k_Vu9qBjF-faAUdJiIWHkx1">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-electric-blue font-label-caps text-label-caps">CARPENTRY</span>
+<h3 class="text-headline-md font-headline-md mt-2">Internal Door Fitting</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Stories (Testimonials) -->
+<section class="bg-surface-container-low dark:bg-black py-section-gap-desktop">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<span class="text-electric-blue font-label-caps text-label-caps mb-4 block">CLIENT SUCCESS STORIES</span>
+<h2 class="text-headline-lg font-headline-lg text-charcoal-black dark:text-surface-bright">Words From Our Satisfied Birmingham Homeowners</h2>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline/20 flex items-center justify-center hover:bg-electric-blue hover:text-white transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline/20 flex items-center justify-center hover:bg-electric-blue hover:text-white transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+<!-- Testimonial 1 -->
+<div class="glass-card p-8 rounded-2xl flex flex-col h-full bg-white dark:bg-charcoal-black border border-stroke-neutral dark:border-outline-variant/10 shadow-lg shadow-primary/5">
+<div class="flex text-safety-orange mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-surface-variant italic mb-8 flex-grow">
+                        "Really pleased with the laminate flooring fitted by Chris! He even took down and later reassembled some furniture to ensure he could do the job to a higher standard. Would definitely use again!"
+                    </p>
+<div>
+<h4 class="font-headline-md text-headline-md text-charcoal-black dark:text-surface-bright text-[18px]">Dean Campbell</h4>
+<span class="text-label-caps font-label-caps text-electric-blue">Laminate Flooring</span>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="glass-card p-8 rounded-2xl flex flex-col h-full bg-white dark:bg-charcoal-black border border-stroke-neutral dark:border-outline-variant/10 shadow-lg shadow-primary/5">
+<div class="flex text-safety-orange mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-surface-variant italic mb-8 flex-grow">
+                        "We had some work done by Chris. The job was quoted and completed very quickly! Would definitely book in further jobs in the future!"
+                    </p>
+<div>
+<h4 class="font-headline-md text-headline-md text-charcoal-black dark:text-surface-bright text-[18px]">Megan Kite</h4>
+<span class="text-label-caps font-label-caps text-electric-blue">General Maintenance</span>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="glass-card p-8 rounded-2xl flex flex-col h-full bg-white dark:bg-charcoal-black border border-stroke-neutral dark:border-outline-variant/10 shadow-lg shadow-primary/5">
+<div class="flex text-safety-orange mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-surface-variant italic mb-8 flex-grow">
+                        "Chris is the only handyman I trust to do work at our house, he is honest, reliable and extremely professional, his work and craftsmanship is outstanding."
+                    </p>
+<div>
+<h4 class="font-headline-md text-headline-md text-charcoal-black dark:text-surface-bright text-[18px]">Tom Lawal</h4>
+<span class="text-label-caps font-label-caps text-electric-blue">Craftsmanship</span>
+</div>
+</div>
+<!-- Testimonial 4 -->
+<div class="glass-card p-8 rounded-2xl flex flex-col h-full bg-white dark:bg-charcoal-black border border-stroke-neutral dark:border-outline-variant/10 shadow-lg shadow-primary/5">
+<div class="flex text-safety-orange mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-surface-variant italic mb-8 flex-grow">
+                        "Highly recommend, helpful, friendly and professional jobs done at realistic prices. Truly the best service in Birmingham."
+                    </p>
+<div>
+<h4 class="font-headline-md text-headline-md text-charcoal-black dark:text-surface-bright text-[18px]">Michelle Topham</h4>
+<span class="text-label-caps font-label-caps text-electric-blue">Home Improvements</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="relative py-section-gap-desktop overflow-hidden">
+
+<div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+<h2 class="text-headline-xl font-headline-xl mb-8">Ready to start your <span class="text-electric-blue">next project?</span></h2>
+<p class="text-body-lg font-body-lg text-surface-variant mb-12">
+                Whether it's a small repair or a major renovation, we bring the same level of care and precision to every job. Contact us today for a free, honest quote.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-electric-blue text-white px-10 py-4 rounded-full font-headline-md text-headline-md hover:shadow-xl hover:shadow-electric-blue/20 transition-all scale-95 active:scale-90">Book a Free Quote</button>
+<button class="border border-surface-variant text-surface-variant px-10 py-4 rounded-full font-headline-md text-headline-md hover:bg-surface-variant hover:text-charcoal-black transition-all">Contact Us</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-charcoal-black border-t border-outline/20 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-grid-gutter mb-16">
+<div class="col-span-1 md:col-span-2">
+<div class="text-headline-lg font-headline-lg font-black text-surface-bright mb-6">The Propa Handyman</div>
+<p class="text-body-md font-body-md text-outline-variant max-w-md mb-8">
+                    Expert craftsmanship for modern homes. Delivering high-quality repairs, improvements, and property maintenance across Birmingham with a professional touch.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-glass/10 flex items-center justify-center hover:text-electric-blue transition-colors" href="https://instagram.com/Thepropahandyman">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-glass/10 flex items-center justify-center hover:text-electric-blue transition-colors" href="https://facebook.com/Thepropahandyman">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-glass/10 flex items-center justify-center hover:text-electric-blue transition-colors" href="https://wa.me/07827803840">
+<span class="material-symbols-outlined">chat</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md text-surface-bright mb-6 text-[18px]">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-on-secondary-container hover:text-surface-bright transition-transform duration-300 hover:translate-x-2 block" href="our-services-the-propa-handyman.html">Carpentry</a></li>
+<li><a class="text-on-secondary-container hover:text-surface-bright transition-transform duration-300 hover:translate-x-2 block" href="our-services-the-propa-handyman.html">Painting &amp; Decorating</a></li>
+<li><a class="text-on-secondary-container hover:text-surface-bright transition-transform duration-300 hover:translate-x-2 block" href="our-services-the-propa-handyman.html">Plumbing</a></li>
+<li><a class="text-on-secondary-container hover:text-surface-bright transition-transform duration-300 hover:translate-x-2 block" href="our-services-the-propa-handyman.html">Property Maintenance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md text-surface-bright mb-6 text-[18px]">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-on-secondary-container hover:text-surface-bright transition-transform duration-300 hover:translate-x-2 block" href="index.html">About Us</a></li>
+<li><a class="text-on-secondary-container hover:text-surface-bright transition-transform duration-300 hover:translate-x-2 block" href="work-gallery-the-propa-handyman.html">Our Work</a></li>
+<li><a class="text-on-secondary-container hover:text-surface-bright transition-transform duration-300 hover:translate-x-2 block" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-secondary-container hover:text-surface-bright transition-transform duration-300 hover:translate-x-2 block" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 pt-8 border-t border-outline/10 text-center">
+<p class="text-label-caps font-label-caps text-outline-variant">
+                © 2024 The Propa Handyman Birmingham. Expert Craftsmanship for Modern Homes.
+            </p>
+</div>
+</footer>
+<!-- Glassmorphic FAB -->
+<a class="fixed bottom-8 right-8 z-40 bg-surface-glass backdrop-blur-md p-4 rounded-full border border-stroke-neutral shadow-2xl flex items-center gap-3 group hover:bg-electric-blue transition-all duration-300" href="https://wa.me/07827803840">
+<span class="material-symbols-outlined text-electric-blue group-hover:text-white" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="text-charcoal-black font-button-text text-button-text group-hover:text-white hidden md:block">WhatsApp Expert</span>
+</a>
+<script>
+        // Intersection Observer for fade-in effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

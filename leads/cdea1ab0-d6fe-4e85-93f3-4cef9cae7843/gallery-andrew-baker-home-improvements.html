@@ -1,0 +1,296 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Project Gallery | Andrew Baker Home Improvements Leeds</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@300;400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#f9f5f5",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "surface-container-high": "#292a29",
+                        "on-background": "#e3e2e0",
+                        "on-secondary-container": "#b0babf",
+                        "secondary-fixed": "#dbe4e9",
+                        "on-primary": "#3a3000",
+                        "outline-variant": "#4d4732",
+                        "surface-container": "#1f201f",
+                        "on-secondary": "#293236",
+                        "primary": "#fff6df",
+                        "primary-fixed": "#ffe16d",
+                        "inverse-surface": "#e3e2e0",
+                        "primary-container": "#ffd700",
+                        "on-tertiary": "#313030",
+                        "surface-bright": "#383938",
+                        "surface-dim": "#121413",
+                        "on-error": "#690005",
+                        "on-surface": "#e3e2e0",
+                        "on-surface-variant": "#d0c6ab",
+                        "error-container": "#93000a",
+                        "background": "#121413",
+                        "error": "#ffb4ab",
+                        "surface": "#121413",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#303130",
+                        "glass-border": "rgba(255, 255, 255, 0.1)",
+                        "surface-variant": "#343534",
+                        "surface-container-lowest": "#0d0e0e",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-container-low": "#1b1c1b",
+                        "on-primary-fixed": "#221b00",
+                        "secondary-container": "#414a4f",
+                        "on-secondary-fixed": "#141d21",
+                        "surface-tint": "#e9c400",
+                        "outline": "#999077",
+                        "safety-yellow": "#FFD700",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "tertiary-container": "#dcd9d9",
+                        "primary-fixed-dim": "#e9c400",
+                        "secondary-fixed-dim": "#bec8cd",
+                        "on-secondary-fixed-variant": "#3f484c",
+                        "surface-container-highest": "#343534",
+                        "charcoal-deep": "#121212",
+                        "inverse-primary": "#705d00",
+                        "on-primary-container": "#705e00",
+                        "slate-gray": "#708090",
+                        "on-primary-fixed-variant": "#544600",
+                        "on-tertiary-container": "#605f5e",
+                        "secondary": "#bec8cd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "stack-sm": "8px",
+                        "margin-x": "32px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "stack-lg": "64px",
+                        "section-padding": "120px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "testimonial-quote": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-bold": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "testimonial-quote": ["20px", {"lineHeight": "1.5", "fontWeight": "300"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-item img {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .category-btn.active {
+            color: #FFD700;
+            border-bottom: 2px solid #FFD700;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121413;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #292a29;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FFD700;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-safety-yellow selection:text-charcoal-deep">
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-glass-border">
+<div class="flex justify-between items-center px-margin-x py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-on-surface">
+                ANDREW BAKER
+            </div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Home</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-andrew-baker-home-improvements.html">Services</a>
+<a class="font-label-bold text-label-bold uppercase text-safety-yellow border-b-2 border-safety-yellow pb-1" href="gallery-andrew-baker-home-improvements.html">Projects</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="contact-andrew-baker-home-improvements.html">Contact</a>
+</div>
+<a class="hidden md:inline-block bg-safety-yellow text-charcoal-deep font-label-bold px-6 py-2 uppercase hover:brightness-110 transition-all" href="#contact">
+                Get Estimate
+            </a>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-section-padding">
+<header class="max-w-container-max mx-auto px-margin-x mb-stack-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-stack-md">
+<div class="max-w-2xl">
+<span class="text-safety-yellow font-label-bold uppercase tracking-[0.2em] mb-4 block">Portfolio</span>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-6">
+                        Excellence in <br>Craftsmanship
+                    </h1>
+<p class="font-body-lg text-on-surface-variant max-w-xl">
+                        A showcase of our recent high-end home improvements, property maintenance, and architectural brickwork across Leeds and the Yorkshire area.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-4 border-b border-glass-border pb-2">
+<button class="category-btn active font-label-bold uppercase text-xs tracking-widest pb-2 transition-all px-2">All Projects</button>
+<button class="category-btn font-label-bold uppercase text-xs tracking-widest pb-2 transition-all px-2 text-on-surface-variant hover:text-on-surface">Brickwork</button>
+<button class="category-btn font-label-bold uppercase text-xs tracking-widest pb-2 transition-all px-2 text-on-surface-variant hover:text-on-surface">Plastering</button>
+<button class="category-btn font-label-bold uppercase text-xs tracking-widest pb-2 transition-all px-2 text-on-surface-variant hover:text-on-surface">Outdoors</button>
+</div>
+</div>
+</header>
+<section class="max-w-container-max mx-auto px-margin-x">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="gallery-item md:col-span-8 group relative overflow-hidden glass-panel aspect-[16/9]">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLva5sA5Vou8__qiNgmOl5d-gF3jwKuJx2gc1Vw_CwqfzRxT_8IUDmYD7H7tyKCyMx8FZhEy04iixyNEvI1g3Luijhzhw4iOeQ9e6gygoQfgPa3ugnXzEdl92ttN7MPFw4lelpu8IOUiznrZZ91EOB9RheyBjSXrN1KUb6jVmE6OJIQZdvEoyysFibZIoWyHpOlzSP8x4rCnyvup7y2z7Dz9JHMkz9MAVkPtf6Ok0H0yAYMyirnNKUEBhRI">
+<div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-charcoal-deep/90 via-charcoal-deep/20 to-transparent opacity-0 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-safety-yellow font-label-bold text-xs uppercase mb-2">Property Maintenance</span>
+<h3 class="font-headline-md text-on-surface">Premium Leeds Estate Renovation</h3>
+<p class="text-on-surface-variant text-sm mt-2 max-w-md">Complete exterior overhaul including structural repairs and decorative pointing.</p>
+</div>
+</div>
+<div class="gallery-item md:col-span-4 group relative overflow-hidden glass-panel aspect-[4/5]">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuNnQ02yXosxf188e4hYp5zF2KJ05r3HuzuAMNwAhFw6T5i8x7MMLEJOF7BobPi6N_uj0cJwHTXoCCL0XwuB6VLdhtTg4vxj77HzcCaujPn_XpjrywDhjCJUx_XgO4leeQRxunWjvEKjIyWsOdIvVKcchwlsAAfkBHtcj_lTMAVkjnWg7t_dD_blMxtaDSQV1D7K-emFQlYLphjOW87yoyZetIXvg6kqU12aYDObixJ3sRcBj6u611_QSM">
+<div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-charcoal-deep/90 via-charcoal-deep/20 to-transparent opacity-0 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-safety-yellow font-label-bold text-xs uppercase mb-2">Brickwork</span>
+<h3 class="font-headline-md text-on-surface">Architectural Garden Walls</h3>
+</div>
+</div>
+<div class="gallery-item md:col-span-4 group relative overflow-hidden glass-panel aspect-square">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvGm0APnp5OAXH8Kn_P4V_yFrHO3UkjVtlJKJUtMEluHJ4V6woGBxrYKQxyLuGI2Q28V3QoS7mnPBAd0dS3mnkhHFuavFKUjvFKMVYBvTWBZnB4ICWCkp7vw9HAziRlTt1dskvB73BUoKRRAGvlTWIDqoJilv1YX35ULCgZ-guVQgZUK00kA96etJZsiSVA318kzDNebCCU85OvBGV8GQQpxS4dOWN_PA0P91ptvs1Y1XcRWC5HlEYrow">
+<div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-charcoal-deep/90 via-charcoal-deep/20 to-transparent opacity-0 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-safety-yellow font-label-bold text-xs uppercase mb-2">Plastering</span>
+<h3 class="font-headline-md text-on-surface">Seamless Interior Finishing</h3>
+</div>
+</div>
+<div class="gallery-item md:col-span-4 group relative overflow-hidden glass-panel aspect-square">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtuJ6CmlO5B4DxVOmA9kPD9BLQWLnQ4KgEtWm8DUM7O598565ug-WRqHI9wbL5f5nRWcaYvrlC0KjpvhKWhN8vKlOUR6YMAuF4ut04hNKBAjPVUSRE1ujNx_obWI-vR7mYrjYX6yFR2dXaDS73z5aaC1NeIjDjCNqSDp0Yvl-pyY4kU_ELoyOZHkxRRVYI5tIAQ-LxqVWoXHcLJ8lbOnDeyMAJ8qFymwQc3TSndEXkIdLq7G4jpcm2IAQ">
+<div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-charcoal-deep/90 via-charcoal-deep/20 to-transparent opacity-0 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-safety-yellow font-label-bold text-xs uppercase mb-2">Garden Services</span>
+<h3 class="font-headline-md text-on-surface">Yorkshire Stone Patio</h3>
+</div>
+</div>
+<div class="gallery-item md:col-span-4 group relative overflow-hidden glass-panel aspect-square flex items-center justify-center bg-surface-container-low border-dashed border-2 border-glass-border">
+<div class="text-center p-8">
+<span class="material-symbols-outlined text-safety-yellow text-5xl mb-4" style="font-variation-settings: 'FILL' 0;">construction</span>
+<h4 class="font-headline-md text-on-surface mb-2">Your Project Here?</h4>
+<p class="text-on-surface-variant text-sm mb-6">Let's discuss how we can bring your vision to life with precision and care.</p>
+<a class="text-safety-yellow font-label-bold uppercase border-b border-safety-yellow pb-1 hover:brightness-125 transition-all" href="contact-andrew-baker-home-improvements.html">Start Enquiry</a>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-section-padding px-margin-x">
+<div class="max-w-container-max mx-auto glass-panel p-12 md:p-24 flex flex-col items-center text-center">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg mb-stack-md">Ready to start your project?</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">
+                    Whether it's a minor repair or a major home improvement, Andrew Baker provides the same level of prestige craftsmanship to every client in Leeds and beyond.
+                </p>
+<div class="flex flex-col md:flex-row gap-6">
+<a class="flex items-center gap-3 bg-safety-yellow text-charcoal-deep px-10 py-4 font-label-bold uppercase tracking-wider hover:scale-105 transition-transform" href="tel:07949149021">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+                        079 4914 9021
+                    </a>
+<a class="flex items-center gap-3 border border-safety-yellow text-safety-yellow px-10 py-4 font-label-bold uppercase tracking-wider hover:bg-safety-yellow/10 transition-colors" href="mailto:improvements.Leeds@gmail.com">
+<span class="material-symbols-outlined">mail</span>
+                        Email Request
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container-lowest w-full py-stack-lg border-t border-glass-border">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-x max-w-container-max mx-auto gap-stack-md">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="font-headline-md text-headline-md text-safety-yellow">ANDREW BAKER</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
+                    Prestige Property Maintenance Leeds
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-stack-md">
+<a class="text-on-surface-variant hover:text-safety-yellow transition-all font-body-md text-body-md" href="our-services-andrew-baker-home-improvements.html">Service Areas</a>
+<a class="text-on-surface-variant hover:text-safety-yellow transition-all font-body-md text-body-md" href="index.html">Careers</a>
+<a class="text-on-surface-variant hover:text-safety-yellow transition-all font-body-md text-body-md" href="index.html">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-safety-yellow transition-all font-body-md text-body-md" href="index.html">Terms of Service</a>
+</div>
+<div class="text-on-surface-variant font-body-md text-body-md opacity-80 text-center md:text-right">
+                © 2024 Andrew Baker Home Improvements Leeds. All Rights Reserved.
+            </div>
+</div>
+</footer>
+<script>
+        const buttons = document.querySelectorAll('.category-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => {
+                    b.classList.remove('active', 'text-safety-yellow', 'border-b-2', 'border-safety-yellow');
+                    b.classList.add('text-on-surface-variant');
+                });
+                btn.classList.add('active', 'text-safety-yellow', 'border-b-2', 'border-safety-yellow');
+                btn.classList.remove('text-on-surface-variant');
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.gallery-item').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

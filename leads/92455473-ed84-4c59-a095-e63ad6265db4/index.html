@@ -1,0 +1,567 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Site Electrics (Leeds) Limited | High-Voltage Precision Engineering</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#2f3035",
+                        "on-secondary-fixed": "#001551",
+                        "surface-tint": "#f1c100",
+                        "primary-fixed": "#ffe08b",
+                        "on-surface": "#e2e2e8",
+                        "primary-container": "#ffcc00",
+                        "primary": "#ffedc3",
+                        "void-black": "#0F1115",
+                        "tertiary-container": "#d4d1d1",
+                        "surface-glass": "rgba(255, 255, 255, 0.03)",
+                        "tertiary": "#f0eded",
+                        "electric-yellow": "#FFCC00",
+                        "surface-container": "#1e2024",
+                        "primary-fixed-dim": "#f1c100",
+                        "inverse-surface": "#e2e2e8",
+                        "on-surface-variant": "#d2c5ab",
+                        "surface": "#111317",
+                        "on-secondary": "#002780",
+                        "on-primary-fixed": "#241a00",
+                        "on-tertiary": "#303030",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "error": "#ffb4ab",
+                        "deep-charcoal": "#1D1D1D",
+                        "on-secondary-container": "#e4e7ff",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#282a2e",
+                        "surface-container-highest": "#333539",
+                        "tertiary-fixed": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#dce1ff",
+                        "on-primary": "#3d2f00",
+                        "outline-variant": "#4e4632",
+                        "secondary": "#b6c4ff",
+                        "secondary-container": "#0356ff",
+                        "surface-bright": "#37393e",
+                        "surface-container-lowest": "#0c0e12",
+                        "circuit-blue": "#0055FF",
+                        "surface-container-low": "#1a1c20",
+                        "outline": "#9a9078",
+                        "on-primary-container": "#6f5700",
+                        "on-secondary-fixed-variant": "#0039b3",
+                        "surface-dim": "#111317",
+                        "on-background": "#e2e2e8",
+                        "inverse-primary": "#745b00",
+                        "on-error": "#690005",
+                        "surface-variant": "#333539",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-container": "#5a5a59",
+                        "secondary-fixed-dim": "#b6c4ff",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "background": "#111317",
+                        "on-primary-fixed-variant": "#584400",
+                        "safety-orange": "#FF6B00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "display-lg-mobile": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .inner-glow-yellow:hover {
+            box-shadow: inset 0 0 10px rgba(255, 204, 0, 0.4), 0 0 15px rgba(255, 204, 0, 0.2);
+        }
+        .glass-card {
+            background: rgba(29, 29, 29, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .pulse-orange {
+            animation: pulse-orange 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-orange {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0F1115; }
+        ::-webkit-scrollbar-thumb { background: #1D1D1D; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FFCC00; }
+    </style>
+</head>
+<body class="bg-void-black text-on-surface selection:bg-electric-yellow selection:text-void-black">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-glass backdrop-blur-xl border-b border-white/10 shadow-2xl">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Site Electrics Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLu9ypd4UZAqoWR0TeWAE5ehXAafOwnSPjLdOxXLBlY_ARoHlsFO_oI2Fu4wtj0KjxsDx309h-pMGDHNjZcCBT4g6uC79WjJNBuClZ0AgeYNygc3OCcV1lyVfPcBxJm-4opr79sKqqaeEBQ39TiwBPqWQX8nQXoTlruiHjXqQ66r2i8ekdFhe42dlmj06yAvRujKjVvpcjGxis5iM1Y8w1WkUU-6fkvOr10nPlViGCoN3oDbnlhKq6SDPb8">
+<span class="hidden lg:block font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">SITE ELECTRICS</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-electric-yellow border-b-2 border-electric-yellow pb-1" href="our-services-site-electrics-leeds.html">Commercial</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-site-electrics-leeds.html">Residential</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-site-electrics-leeds.html">Maintenance</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Projects</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="our-services-site-electrics-leeds.html">Emergency</a>
+</div>
+<div class="flex gap-4 items-center">
+<a class="hidden xl:flex items-center gap-2 font-label-md text-label-md text-on-surface-variant hover:text-electric-yellow transition-colors" href="tel:01132000000">
+<span class="material-symbols-outlined text-[18px]">call</span> 0113 200 0000
+                </a>
+<button class="bg-electric-yellow text-void-black px-6 py-2.5 rounded-lg font-label-md text-label-md uppercase tracking-tight font-bold hover:scale-95 active:scale-90 transition-all duration-300 inner-glow-yellow">
+                    Get a Quote
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<!-- STITCH_SHADER_START:ANIMATION_5 class="absolute inset-0 w-full h-full opacity-60" -->
+<div class="absolute inset-0 w-full h-full opacity-60" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_5" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_5');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+
+float hash(vec2 p) {
+    return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+}
+
+float noise(vec2 p) {
+    vec2 i = floor(p);
+    vec2 f = fract(p);
+    vec2 u = f * f * (3.0 - 2.0 * f);
+    return mix(mix(hash(i + vec2(0.0, 0.0)), hash(i + vec2(1.0, 0.0)), u.x),
+               mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), u.x), u.y);
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    vec2 mouse = u_mouse / u_resolution;
+    
+    // Create a flowing, electric current effect
+    float n = 0.0;
+    vec2 p = uv * 3.0;
+    p.x += u_time * 0.1;
+    p.y += sin(u_time * 0.2 + p.x) * 0.5;
+    
+    n += noise(p) * 0.5;
+    n += noise(p * 2.1) * 0.25;
+    
+    // Base dark background (Surface color)
+    vec3 color = vec3(0.066, 0.075, 0.09); 
+    
+    // Electric yellow glow
+    vec3 accent = vec3(1.0, 0.8, 0.0);
+    float glow = pow(n, 4.0) * 0.3;
+    
+    // Mouse interaction glow
+    float dist = distance(uv, mouse);
+    float mouseGlow = smoothstep(0.4, 0.0, dist) * 0.15;
+    
+    color += accent * glow;
+    color += accent * mouseGlow;
+    
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_5 -->
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full border border-white/10">
+<span class="w-2 h-2 rounded-full bg-safety-orange pulse-orange"></span>
+<span class="font-label-caps text-[10px] uppercase text-on-surface-variant">24/7 Emergency Response Available</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight text-on-surface">
+                    Powering Leeds with <br>
+<span class="text-electric-yellow">Precision.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Professional, NICEIC-approved electrical engineering for domestic, commercial, and industrial clients across West Yorkshire. High-voltage expertise met with local reliability.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-electric-yellow text-void-black px-8 py-4 rounded-xl font-label-md text-label-md uppercase font-bold flex items-center justify-center gap-2 hover:translate-y-[-2px] transition-all">
+                        Get a Free Quote <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-transparent border-2 border-electric-yellow text-electric-yellow px-8 py-4 rounded-xl font-label-md text-label-md uppercase font-bold flex items-center justify-center gap-2 hover:bg-electric-yellow/5 transition-all">
+<span class="material-symbols-outlined">bolt</span> Emergency Service
+                    </button>
+</div>
+</div>
+<div class="hidden lg:block relative group">
+<div class="absolute -inset-10 bg-electric-yellow/10 blur-[120px] rounded-full group-hover:bg-electric-yellow/20 transition-all duration-700"></div>
+<div class="relative rounded-2xl overflow-hidden glass-card p-4 aspect-[4/3] transform group-hover:scale-[1.02] transition-transform duration-500">
+<img class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700 opacity-60 group-hover:opacity-100" data-alt="A cinematic close-up shot of high-end circuit breakers and industrial wiring in a clean, modern electrical cabinet. The lighting is moody and technical, with a dominant dark nocturnal palette and striking electric yellow and cool blue light accents reflecting off metallic surfaces. The overall aesthetic is professional, precise, and high-tech, showcasing master-level electrical craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkZxTiMsF3bPygoIzgh7Q_eifo_xrkl4KmaduhNe1eEFOdOD4oDLB5xOc3XMzQgCRDZ9YgzLc6uju5JoNjKjt_O9mGsm_gfjN7yz46gwDbt8-CDp6CAZScB9z1q_Cx5C3CDb-e7pqyaSBKyaxnzeJr4nkwuw8WqNrYk-vqdQMgO-f2Oy6r4efFhwTI2u-FJC4sW0cybWeAzZiwLKOQ6_O5YqZG2OUkdJWYAgvOpkEuCQE_6t9yffTF">
+</div>
+</div>
+</div>
+</header>
+<!-- Value Props (Bento Grid) -->
+<section class="py-section-gap relative">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16 space-y-4">
+<span class="font-label-caps text-label-caps text-electric-yellow">THE SITE ELECTRICS ADVANTAGE</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Precision Built on Reliability</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-card p-10 rounded-2xl space-y-6 group hover:border-electric-yellow/40 transition-all">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center text-electric-yellow group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Fully Accredited</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We are fully approved and registered with the NICEIC, ensuring all work meets the highest safety standards (BS 7671).</p>
+</div>
+<div class="glass-card p-10 rounded-2xl space-y-6 group hover:border-electric-yellow/40 transition-all">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center text-electric-yellow group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">security</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Full Coverage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Public Liability Insurance up to £2,000,000 and Professional Indemnity up to £500,000 for total peace of mind.</p>
+</div>
+<div class="glass-card p-10 rounded-2xl space-y-6 group hover:border-electric-yellow/40 transition-all">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center text-electric-yellow group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">history</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">24/7 Response</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Faults don't follow office hours. Our emergency response team is available around the clock for critical repairs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Preview -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+<div class="max-w-2xl space-y-4">
+<span class="font-label-caps text-label-caps text-electric-yellow">CORE SOLUTIONS</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Expertise Across All Sectors</h2>
+</div>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-electric-yellow transition-colors flex items-center gap-2">
+                    View All Services <span class="material-symbols-outlined">open_in_new</span>
+</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Large Featured Card -->
+<div class="relative rounded-2xl overflow-hidden group col-span-1 lg:col-span-2 h-[400px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="Wide angle shot of a futuristic commercial office space at night with intricate, glowing architectural lighting design and exposed conduit work. The scene is illuminated by neon-like blue and white strips integrated into the ceiling, creating a high-tech atmosphere. The photo is professionally shot with a crisp focus and emphasizes a clean, corporate industrial aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2_IwkNwK-qr6qyZ2eVRpCuJhnLqTsoeLvO-eY7z_aUzZxiQWCKedNEoIu8ETIpiTgPe6EdSK_BKp1GNff-O7Yz7YvsklOOl_4rdDR7fszwD825KhlcaljCPfK7lYL79aCGY5mQykTzUpOpr8e9QtZCHGBpE_agNBPXJgBlkf50n5aR3UFxD35oUTdU_KPhaDMunbGh0RIK48zKWAWqwZfiDyKPzP38Ikz7LGHRHGhwnceR0p6P4Ci')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-void-black via-void-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-12 w-full flex justify-between items-end">
+<div class="max-w-xl">
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Commercial &amp; Industrial</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Full-scale electrical infrastructure, maintenance contracts, and inspection testing for large-scale operations.</p>
+</div>
+<button class="bg-electric-yellow text-void-black h-14 w-14 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<!-- Secondary Cards -->
+<div class="glass-card rounded-2xl p-8 flex flex-col justify-between group">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-[48px] text-electric-yellow">home</span>
+<div class="text-right">
+<span class="font-label-caps text-[10px] text-on-surface-variant border border-white/10 px-2 py-1 rounded">RESIDENTIAL</span>
+</div>
+</div>
+<div class="mt-12">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Domestic Excellence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">From full rewires to minor upgrades, we bring technical precision to your home.</p>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-yellow text-[18px]">bolt</span> Fuse Box Upgrades</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-yellow text-[18px]">bolt</span> Testing &amp; Certification</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-yellow text-[18px]">bolt</span> EV Charger Installation</li>
+</ul>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-8 flex flex-col justify-between group">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-[48px] text-electric-yellow">engineering</span>
+<div class="text-right">
+<span class="font-label-caps text-[10px] text-on-surface-variant border border-white/10 px-2 py-1 rounded">MAINTENANCE</span>
+</div>
+</div>
+<div class="mt-12">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Compliance &amp; Safety</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Mandatory safety checks and preventive maintenance for landlords and businesses.</p>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-yellow text-[18px]">bolt</span> EICR Testing</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-yellow text-[18px]">bolt</span> PAT Testing</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-yellow text-[18px]">bolt</span> Emergency Light Checks</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section with Copy -->
+<section class="py-section-gap relative overflow-hidden">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-full bg-electric-yellow/5 blur-[150px] rounded-full"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="absolute -left-8 -top-8 w-32 h-32 border-l-4 border-t-4 border-electric-yellow opacity-40"></div>
+<img class="rounded-2xl shadow-2xl relative z-10 w-full h-[600px] object-cover" data-alt="A professional electrician wearing branded safety gear, meticulously testing a complex industrial distribution board with a high-end digital multimeter. The lighting is clean and focused, casting soft shadows. The background is a slightly blurred industrial utility room with conduit pipes and metallic surfaces, echoing the Voltage Noir design palette of deep charcoals and sharp yellow accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbdhGFua2XE-OuJXsoncep9YCsbbc2SXIBTAdJROLtqTlLcdTyYefO2D-QAVRAnsm8yHaJzQ4SNufMlLvNh8oDWtS943HOASPwHkhM-YYIjqt-TMfpplZan_M5Z5rYKQOAumCkAT18OMd4vteQMZyCpvt5sM_ed9YpxqDFpxW5hlgzAtVg11fsE2FlkH6lwUQa3bsTRfHAQYtgGeUPJSAuORJTIEqRqgYwPB7oqkxxz1s_O8tvHG82">
+<div class="absolute -right-6 -bottom-6 glass-card p-8 rounded-xl z-20 max-w-[280px]">
+<span class="text-electric-yellow font-display-lg text-[48px] block mb-2 leading-none">20+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">YEARS OF ELITE ENGINEERING EXPERIENCE</span>
+</div>
+</div>
+<div class="space-y-8">
+<span class="font-label-caps text-label-caps text-electric-yellow">ABOUT SITE ELECTRICS</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Qualified Experts You Can Put Your Faith In</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    At Site Electrics, we’re proud to offer a professional and efficient electrician service for domestic, commercial and industrial customers. With trained and qualified electricians that work to exacting standards, we are fully approved and registered with the NICEIC.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+<div class="space-y-2">
+<h4 class="font-label-md text-label-md text-on-surface font-bold">CERTIFIED SKILLS</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Full certification for Inspection and Testing [BS 2391] and 17th Edition qualified [BS 7671].</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-label-md text-label-md text-on-surface font-bold">QUALIFIED TEAM</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">All sub-contracted electricians are apprentice trained and fully qualified to the latest regulations.</p>
+</div>
+</div>
+<div class="pt-6">
+<button class="group flex items-center gap-3 font-label-md text-label-md text-on-surface font-bold">
+<span class="w-12 h-12 rounded-full border border-electric-yellow flex items-center justify-center group-hover:bg-electric-yellow group-hover:text-void-black transition-all">
+<span class="material-symbols-outlined">download</span>
+</span>
+                        DOWNLOAD INSURANCE DOCUMENTS
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust / Badges -->
+<section class="py-16 border-y border-white/10 bg-surface-container">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-wrap justify-center md:justify-between items-center gap-12 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[40px]">shield_person</span>
+<span class="font-label-caps text-[14px]">NICEIC APPROVED</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[40px]">security</span>
+<span class="font-label-caps text-[14px]">£2M LIABILITY COVER</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[40px]">task_alt</span>
+<span class="font-label-caps text-[14px]">PART P REGISTERED</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[40px]">workspace_premium</span>
+<span class="font-label-caps text-[14px]">17TH EDITION QUALIFIED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-12 bg-void-black border-t border-white/10">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Branding & Info -->
+<div class="col-span-1 md:col-span-2 space-y-8">
+<div class="flex items-center gap-4">
+<img alt="Site Electrics" class="h-10" src="https://lh3.googleusercontent.com/aida/AP1WRLu9ypd4UZAqoWR0TeWAE5ehXAafOwnSPjLdOxXLBlY_ARoHlsFO_oI2Fu4wtj0KjxsDx309h-pMGDHNjZcCBT4g6uC79WjJNBuClZ0AgeYNygc3OCcV1lyVfPcBxJm-4opr79sKqqaeEBQ39TiwBPqWQX8nQXoTlruiHjXqQ66r2i8ekdFhe42dlmj06yAvRujKjVvpcjGxis5iM1Y8w1WkUU-6fkvOr10nPlViGCoN3oDbnlhKq6SDPb8">
+<span class="font-headline-md text-headline-md text-electric-yellow font-bold tracking-tighter">SITE ELECTRICS</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                    Site Electrics (Leeds) Limited provides elite electrical services across Leeds and the wider Yorkshire region. Precision engineering meets safety compliance.
+                </p>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-yellow">location_on</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Units 12 &amp; 14, Idas Industrial Estate,<br>
+                            Pontefract Road, Leeds, LS10 1SP
+                        </p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-electric-yellow">call</span>
+<p class="font-body-md text-body-md text-on-surface">07968 235838</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-electric-yellow">mail</span>
+<p class="font-body-md text-body-md text-on-surface">mark@siteelectrics.co.uk</p>
+</div>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="space-y-6">
+<h4 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-widest">Solutions</h4>
+<nav class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all" href="our-services-site-electrics-leeds.html">Commercial Solutions</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all" href="our-services-site-electrics-leeds.html">Emergency 24/7</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all" href="our-services-site-electrics-leeds.html">Safety Compliance</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all" href="our-services-site-electrics-leeds.html">Inspection &amp; Testing</a>
+</nav>
+</div>
+<!-- Legal -->
+<div class="space-y-6">
+<h4 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-widest">Legal</h4>
+<nav class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all" href="shader.html">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all" href="index.html">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all" href="index.html">Cookie Settings</a>
+</nav>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant/60 italic">
+                © 2024 Site Electrics (Leeds) Limited. High-Voltage Precision Engineering.
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant/40">
+                Developed by Webahead Internet Ltd
+            </p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface-container-highest/90 backdrop-blur-lg border-t border-white/5 shadow-[0_-8px_30px_rgb(0,0,0,0.5)]">
+<div class="flex justify-around items-center py-3 px-4">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 transition-all" href="our-services-site-electrics-leeds.html">
+<span class="material-symbols-outlined">electric_bolt</span>
+<span class="font-label-md text-label-md">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 transition-all" href="contact-us-site-electrics-leeds.html">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="font-label-md text-label-md">Quote</span>
+</a>
+<a class="flex flex-col items-center justify-center text-electric-yellow bg-surface-container rounded-xl p-2 transition-all" href="contact-us-site-electrics-leeds.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+<span class="font-label-md text-label-md">Emergency</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 transition-all" href="tel:07968235838">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-md text-label-md">Contact</span>
+</a>
+</div>
+</nav>
+<!-- Parallax Script for IMAGE_3 if it were present, but I'll add a general scroll effect to images -->
+<script>
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxImages = document.querySelectorAll('.parallax-target');
+            parallaxImages.forEach(img => {
+                const limit = img.offsetTop + img.offsetHeight;
+                if (scrolled > img.offsetTop - window.innerHeight && scrolled < limit) {
+                    const yPos = -(scrolled * 0.1);
+                    img.style.transform = `translateY(${yPos}px)`;
+                }
+            });
+        });
+    </script>
+</body></html>

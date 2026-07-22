@@ -1,0 +1,310 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | HandymanForLondon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card-hover {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+        }
+        .bento-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 31, 63, 0.08);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed-dim": "#afc8f0",
+                      "surface-container": "#f0eded",
+                      "inverse-primary": "#afc8f0",
+                      "secondary-container": "#fed65b",
+                      "on-surface-variant": "#43474e",
+                      "on-secondary-fixed": "#241a00",
+                      "surface-dim": "#dcd9d9",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#e1e3e4",
+                      "primary": "#000613",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-container": "#848688",
+                      "navy-deep": "#001F3F",
+                      "tertiary-container": "#1c1f20",
+                      "secondary-fixed-dim": "#e9c349",
+                      "secondary-fixed": "#ffe088",
+                      "inverse-surface": "#313030",
+                      "primary-fixed": "#d4e3ff",
+                      "on-primary-fixed-variant": "#2f486a",
+                      "secondary": "#735c00",
+                      "glass-border": "rgba(255, 255, 255, 0.2)",
+                      "on-secondary": "#ffffff",
+                      "white-clean": "#FFFFFF",
+                      "outline-variant": "#c4c6cf",
+                      "on-error": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#454748",
+                      "background": "#fcf9f8",
+                      "surface-container-low": "#f6f3f2",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-surface": "#1c1b1b",
+                      "primary-container": "#001f3f",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#745c00",
+                      "on-error-container": "#93000a",
+                      "gold-artisan": "#D4AF37",
+                      "outline": "#74777f",
+                      "surface-bright": "#fcf9f8",
+                      "on-secondary-fixed-variant": "#574500",
+                      "surface": "#fcf9f8",
+                      "on-tertiary-fixed": "#191c1d",
+                      "tertiary-fixed-dim": "#c5c7c8",
+                      "tertiary": "#040607",
+                      "navy-muted": "#002B56",
+                      "on-primary-fixed": "#001c3a",
+                      "surface-variant": "#e5e2e1",
+                      "surface-tint": "#476083",
+                      "on-primary-container": "#6f88ad",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-background": "#1c1b1b",
+                      "surface-container-high": "#eae7e7",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "80px",
+                      "gutter": "24px",
+                      "bento-gap": "16px"
+              },
+              "fontFamily": {
+                      "headline-sm": ["Montserrat"],
+                      "body-md": ["Hanken Grotesk"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "headline-md": ["Montserrat"],
+                      "label-md": ["Hanken Grotesk"],
+                      "label-sm": ["Hanken Grotesk"],
+                      "display-lg": ["Montserrat"],
+                      "display-lg-mobile": ["Montserrat"]
+              },
+              "fontSize": {
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white-clean/60 backdrop-blur-md border-b border-glass-border shadow-sm flex justify-between items-center px-8 md:px-margin-desktop py-4 max-w-full mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-navy-deep">HandymanForLondon</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md uppercase text-gold-artisan border-b-2 border-gold-artisan pb-1" href="services-expertise.html">Services</a>
+<a class="font-label-md text-label-md uppercase text-navy-deep hover:text-gold-artisan transition-colors" href="handymanforlondon-home.html">Artisans</a>
+<a class="font-label-md text-label-md uppercase text-navy-deep hover:text-gold-artisan transition-colors" href="index.html">Concierge</a>
+<a class="font-label-md text-label-md uppercase text-navy-deep hover:text-gold-artisan transition-colors" href="index.html">About</a>
+<a class="font-label-md text-label-md uppercase text-navy-deep hover:text-gold-artisan transition-colors" href="index.html">Contact</a>
+</div>
+<button class="bg-navy-deep text-white-clean px-6 py-2 rounded-lg font-label-md uppercase hover:opacity-80 transition-opacity">Book Now</button>
+</nav>
+<main class="pt-32 pb-20 px-4 md:px-margin-desktop max-w-[1440px] mx-auto">
+<!-- Hero Section -->
+<header class="mb-16">
+<span class="text-gold-artisan font-label-md uppercase tracking-widest mb-4 block">The Modern Artisan Standard</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-navy-deep mb-6 max-w-3xl">Expert craftsmanship for London's finest residences.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">From complex smart home ecosystems to bespoke cabinetry, our artisans deliver precision with a concierge touch.</p>
+</header>
+<!-- Bento Grid Services -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-bento-gap">
+<!-- Smart Home Integration (Wide Card) -->
+<div class="md:col-span-8 bg-white-clean rounded-xl p-8 bento-card-hover border border-surface-container flex flex-col md:flex-row gap-8 relative overflow-hidden group">
+<div class="flex-1 z-10">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-gold-artisan" data-icon="smart_home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">smartphone</span>
+<h2 class="font-headline-md text-headline-md text-navy-deep">Smart Home Integration</h2>
+</div>
+<p class="text-on-surface-variant mb-8 max-w-md">Seamless automation for lighting, security, and climate. We unify your digital ecosystem for effortless living.</p>
+<!-- Hourly Rate Calculator -->
+<div class="bg-surface-container-low p-6 rounded-lg mb-6">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-md text-navy-deep">LIVE HOURLY RATE</span>
+<span class="text-2xl font-bold text-navy-deep">£<span id="rate-smart">95</span>.00</span>
+</div>
+<div class="space-y-4">
+<label class="block text-label-sm uppercase text-outline">Project Duration (Hours)</label>
+<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-gold-artisan" max="24" min="1" oninput="document.getElementById('total-smart').innerText = this.value * 95; document.getElementById('hours-smart').innerText = this.value" type="range" value="4">
+<div class="flex justify-between text-label-sm font-medium text-navy-deep">
+<span><span id="hours-smart">4</span> Hours</span>
+<span>Est. Total: £<span id="total-smart">380</span>.00</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-gold-artisan font-label-md hover:underline" href="handymanforlondon-home.html">
+                        Meet the Artisan <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="flex-1 min-h-[300px] rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A sophisticated, high-end residential interior showing integrated wall-mounted smart home control panels. The room features minimalist decor with soft neutral tones, luxury materials like marble and polished wood, and ambient, warm recessed lighting. The atmosphere is one of technological elegance and modern comfort in a prime London home." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSrncO9eJw2ijl1jUdLxcWKD1aG-AS9pxYnHhsGq4WCDQc1mefxXJecP2lk8WwD3JBfOmfuZuR__W7bENCSv67YzJxsuqGxd_-V4BmxVoHsGnQhmXi9duf9_ScJAOMWZVXBiIc941USnrJLStrym2VLtkI_HnlKjDwuEz4wtAkYQGOZhvtqt6LKnFyvSkJqqw-o6AK02_oXlOV6Bkq4wiX0ZCK3t7AOrgiG7FtfnbLTs1uRj3QwOkQNw">
+</div>
+</div>
+<!-- Electrical & AV (Square Card) -->
+<div class="md:col-span-4 bg-navy-deep rounded-xl p-8 bento-card-hover text-white-clean flex flex-col">
+<div class="mb-6">
+<span class="material-symbols-outlined text-gold-artisan text-3xl" data-icon="bolt" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h2 class="font-headline-sm text-headline-sm mt-4">Electrical &amp; AV</h2>
+</div>
+<p class="text-surface-variant/80 mb-8">Specialist wiring, lighting design, and high-fidelity audio installations.</p>
+<div class="mt-auto">
+<div class="border-t border-white-clean/10 pt-6 mb-6">
+<div class="flex justify-between items-end">
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-gold-artisan">Live Rate</span>
+<span class="text-xl font-bold">£85.00/hr</span>
+</div>
+<a class="bg-white-clean/10 hover:bg-white-clean/20 p-2 rounded-full transition-colors" href="handymanforlondon-home.html">
+<span class="material-symbols-outlined" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-gold-artisan p-0.5 overflow-hidden">
+<img class="w-full h-full object-cover rounded-full" data-alt="A professional headshot of a master electrician in a clean, modern workshop setting. The artisan is a middle-aged man with a friendly yet expert demeanor, wearing a high-quality navy blue uniform. The background is softly blurred, showing specialized electrical testing equipment and tools organized neatly on a wall. The lighting is crisp and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz0a3IYJ8zbHDpVC6ljTzyCzClLTD5RRvBMcHjyKyhUPZLWhI8XT_ZXCFCqbJ90HHewgjCIQ0Ol3_RHEWYlJqO0UUD0xBA-oMkFSB1mS2_wM2bDcGRk-Ll3IBRxxn6TgfYfgP7NbKBhucYnSATT9oRdR1nOhKQ7syQYrxOE6RyiWgi-TOBPUfk8dCeFSBLypgpaUXa6ToYScWjs9mEzNsh_aIOWLm4OLc5pfhaWseBiIbGxN53Jdi5bA">
+</div>
+<span class="font-label-md">Meet James P.</span>
+</div>
+</div>
+</div>
+<!-- Custom Carpentry (Square Card) -->
+<div class="md:col-span-4 bg-white-clean rounded-xl p-8 bento-card-hover border border-surface-container flex flex-col">
+<div class="mb-6">
+<span class="material-symbols-outlined text-navy-deep text-3xl" data-icon="carpenter">carpenter</span>
+<h2 class="font-headline-sm text-headline-sm text-navy-deep mt-4">Custom Carpentry</h2>
+</div>
+<p class="text-on-surface-variant mb-8">Bespoke shelving, luxury cabinetry, and restorative woodwork for historic properties.</p>
+<div class="mt-auto bg-surface-container-lowest p-5 rounded-lg border border-surface-container">
+<div class="flex justify-between items-center mb-2">
+<span class="text-label-sm text-outline">HOURLY RATE</span>
+<span class="font-bold text-navy-deep">£75.00</span>
+</div>
+<a class="text-gold-artisan font-label-md flex items-center justify-between group" href="handymanforlondon-home.html">
+                        Artisan Profile 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Plumbing (Wide Card) -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl overflow-hidden bento-card-hover border border-surface-container flex flex-col md:flex-row group">
+<div class="flex-1">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a luxury bathroom fixture installation. The focus is on a high-end brushed gold faucet against a background of premium white marble tiling. Soft, natural light streams in, highlighting the clean lines and meticulous installation quality. The aesthetic is extremely polished and minimalist, reflecting a high-standard London renovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAORHCcKn8auuSYfbBM9IKU6iV4-HEX9iCaGCjeA4ZPA3JfmoUhtYTxCiCCor7EDDnuKGDpXW0hFXYu1uWL7xGr6R9MRA854Vp4Ciy5zreQmzICPICg7j-GzNLJ1yqvUqA2N7wqx-SPbJXQEDm1tXHdlfqulod1CmNH0ASqhPh2ujn2Zi4ehlq7M6hY_CghyisOiBZG8MXJzQE8WcehibQA_NXoS0tnsgLYzmKFh9IzkKfci3rIVvgXpA">
+</div>
+<div class="flex-1 p-8 flex flex-col justify-center">
+<span class="material-symbols-outlined text-gold-artisan text-3xl mb-4" data-icon="water_drop" data-weight="fill" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<h2 class="font-headline-md text-headline-md text-navy-deep mb-4">Precision Plumbing</h2>
+<p class="text-on-surface-variant mb-6">High-end bathroom installations, leak detection, and master boiler servicing.</p>
+<div class="flex gap-4 items-center">
+<div class="px-4 py-2 bg-white-clean rounded border border-surface-container">
+<span class="block text-[10px] text-outline uppercase font-bold">Base Rate</span>
+<span class="text-navy-deep font-bold">£70/hr</span>
+</div>
+<button class="flex-1 bg-navy-deep text-white-clean py-3 rounded font-label-md uppercase tracking-wider hover:bg-navy-muted transition-colors">Book Plumbing Specialist</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Concierge Bar (Glassmorphic) -->
+<div class="mt-16 glass-card rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between border border-white-clean">
+<div class="flex items-center gap-6 mb-6 md:mb-0">
+<div class="flex -space-x-4">
+<div class="w-12 h-12 rounded-full border-2 border-white-clean bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up headshot of a professional female artisan with a confident smile, wearing a modern uniform. High-key studio lighting with a clean white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI4UibwsSWs9pbIfUeUbVwu9443_Xw4eEY3ZDMgBBQQGtVIkG6WqaJVHqJ4ELUmr7BKUIUi9JDBk5oZw8fGiUABDMXLNewSnPslE9W03fG_ctA8MxlGisnRsbSV5agy03Pw3FwkLpmYvAWxxbKfXz3H1iKIqeVvjWJCk8HjjklHroTO-JS-8BuHhxL3IKoBHr9KGv328LNNkZOwwUMGRk2lxBNp-OFqJO1fQ4wQUEBg71bTy8L29ON6g">
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-white-clean bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up headshot of a male master craftsman in his 30s with short hair and professional workwear. Sophisticated, minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwpj12WfIfOPuT8VsR72DCuAA7N8ZuP1t_RxK8IdiYZt8YfNj6h2T__GvPqCpNEkcIIPQX5QhrPBDobnFUHM_hfPswSZMlYfi2wTulWngblsYNyMVm-TozyNHVoZGtiNjzsNa_yw8CmwY9WVji0kInyJswkWLdqCz5zj9jfAhNwziwQJwscMxwUbqhAG4nKUogiHSCh-QikAl3O2uv53NIHSyY9GW_-PVXwkkHzOpr1qDX5vRcU9AX-g">
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-white-clean bg-navy-deep flex items-center justify-center text-white-clean font-label-sm">
+                        +12
+                    </div>
+</div>
+<div>
+<h4 class="font-headline-sm text-[18px] text-navy-deep">Need a custom quote?</h4>
+<p class="text-label-sm text-on-surface-variant">Our concierge team is available 24/7 for London residents.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="px-8 py-3 rounded-full border-2 border-navy-deep text-navy-deep font-label-md uppercase hover:bg-navy-deep hover:text-white-clean transition-all">Chat with Concierge</button>
+<button class="px-8 py-3 rounded-full bg-gold-artisan text-navy-deep font-label-md uppercase hover:opacity-90 transition-opacity">Instant Estimate</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 bg-navy-deep">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-8 md:px-margin-desktop max-w-full mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md text-gold-artisan mb-6">HandymanForLondon</div>
+<p class="text-surface-variant/70 font-body-md mb-8">Redefining property maintenance through the lens of luxury hospitality and master craftsmanship.</p>
+</div>
+<div>
+<h5 class="text-white-clean font-label-md uppercase mb-6">Quick Links</h5>
+<ul class="space-y-4">
+<li><a class="text-surface-variant/70 hover:text-white-clean transition-colors" href="handymanforlondon-home.html">About the Collective</a></li>
+<li><a class="text-surface-variant/70 hover:text-white-clean transition-colors" href="services-expertise.html">Residential Services</a></li>
+<li><a class="text-surface-variant/70 hover:text-white-clean transition-colors" href="#">Corporate Solutions</a></li>
+<li><a class="text-surface-variant/70 hover:text-white-clean transition-colors" href="index.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white-clean font-label-md uppercase mb-6">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-surface-variant/70 hover:text-white-clean transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-surface-variant/70 hover:text-white-clean transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="text-surface-variant/70 hover:text-white-clean transition-colors" href="handymanforlondon-home.html">Artisan Portal</a></li>
+<li><a class="text-surface-variant/70 hover:text-white-clean transition-colors" href="index.html">London Concierge Program</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white-clean font-label-md uppercase mb-6">Contact</h5>
+<p class="text-surface-variant/70 mb-2">Mayfair, London, UK</p>
+<p class="text-gold-artisan font-bold text-lg">+44 (0) 20 7946 0123</p>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-white-clean/10 px-8 md:px-margin-desktop max-w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-surface-variant/70 text-label-sm">© 2024 HandymanForLondon. The Modern Artisan Standard.</p>
+<div class="flex gap-6">
+<a class="text-surface-variant/70 hover:text-gold-artisan" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-surface-variant/70 hover:text-gold-artisan" href="index.html"><span class="material-symbols-outlined" data-icon="language">language</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for interest rates or live feedback could go here
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("HandymanForLondon - Modern Artisan UI Initialized");
+        });
+    </script>
+</body></html>

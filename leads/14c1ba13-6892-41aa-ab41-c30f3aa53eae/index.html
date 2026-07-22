@@ -1,0 +1,614 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Regent House Property Management | Masterful Reliability</title>
+<meta content="Professional refurbishment, repairs, and management in Leeds since 2002." name="description">
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "construction-gold": "#FFB800",
+                    "on-secondary-fixed-variant": "#7f2b00",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "primary": "#0b0c0f",
+                    "on-background": "#1a1c1c",
+                    "slate-gray": "#71767A",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "surface": "#f9f9f9",
+                    "inverse-surface": "#2f3131",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f9f9f9",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#e3e2e7",
+                    "on-secondary-container": "#5a1c00",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#222222",
+                    "on-secondary-fixed": "#370e00",
+                    "on-primary-container": "#89898e",
+                    "outline": "#77777b",
+                    "surface-subtle": "#F8F9FA",
+                    "on-primary-fixed-variant": "#46464b",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-container": "#8a8989",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1a1c1c",
+                    "surface-dim": "#dadada",
+                    "tertiary": "#0b0c0c",
+                    "on-surface-variant": "#46464b",
+                    "surface-tint": "#5e5e63",
+                    "primary-fixed-dim": "#c7c6cb",
+                    "background": "#f9f9f9",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#ffdbce",
+                    "secondary": "#a63b00",
+                    "secondary-container": "#fc6c29",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface-container": "#eeeeee",
+                    "on-primary-fixed": "#1a1b1f",
+                    "secondary-fixed-dim": "#ffb599",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "industrial-orange": "#F26522",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-container-low": "#f3f3f4",
+                    "tertiary-fixed": "#e4e2e2",
+                    "outline-variant": "#c7c6cb",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#212226",
+                    "charcoal-deep": "#121214",
+                    "inverse-primary": "#c7c6cb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "stack-sm": "8px",
+                    "section-padding": "120px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "nav-link": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "nav-link": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-sticky {
+            transition: all 0.3s ease-in-out;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(217, 217, 217, 0.3);
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .bento-item {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bento-item:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body class="bg-background text-primary selection:bg-industrial-orange/30">
+<!-- Utility Bar -->
+<div class="hidden md:block bg-charcoal-deep text-white py-2 text-xs font-label-caps border-b border-white/10">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                LEEDS &amp; SURROUNDING AREAS
+            </span>
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-2 hover:text-industrial-orange transition-colors" href="tel:01132310275">
+<span class="material-symbols-outlined text-[14px]">call</span>
+                    0113 231 0275
+                </a>
+<span>MON - FRI: 08:00 - 18:00</span>
+</div>
+</div>
+</div>
+<!-- Navigation Shell -->
+<header class="fixed top-0 md:top-8 w-full z-50 px-margin-mobile md:px-gutter transition-all duration-300" id="top-nav">
+<nav class="max-w-container-max mx-auto bg-surface/90 dark:bg-primary/90 backdrop-blur-md rounded-lg shadow-sm border-b border-outline-variant/30 h-20 flex justify-between items-center px-6 md:px-12">
+<div class="flex items-center gap-4">
+<img alt="Regent House Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLuYzL5jviU5X0642-2i5D31e0Uv0yFlSJP9MetAVaopNaoJyrS1KV4VJmU3CI0vlP19N1vfxcv41hlBR0eLXe7gCfvqRx3NeeNwWdQF5Qx_76s9p19wA71NkWI5pSLkvPib-98ebe5HwnNhhnShGYLfy2EkEUaQlZphOGwrWR-Xwddie7BEIkL09NSPmf5YJwKZTMILMeIR95zi7D2BcoBbjGFuLuZqWpUAow4hwYAQeTfP78r2RyrR1D-T">
+<span class="font-headline-md text-headline-md font-bold text-primary hidden lg:block tracking-tighter">Regent House</span>
+</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-8 font-nav-link text-nav-link uppercase">
+<a class="text-industrial-orange border-b-2 border-industrial-orange pb-1" href="index.html">Home</a>
+<a class="text-charcoal-deep hover:text-industrial-orange transition-colors duration-300" href="#services">Services</a>
+<a class="text-charcoal-deep hover:text-industrial-orange transition-colors duration-300" href="#repairs">Repairs</a>
+<a class="text-charcoal-deep hover:text-industrial-orange transition-colors duration-300" href="#gallery">Gallery</a>
+<a class="text-charcoal-deep hover:text-industrial-orange transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:flex bg-industrial-orange text-white px-6 py-3 font-label-caps text-label-caps uppercase hover:bg-charcoal-deep transition-all duration-300 scale-95 active:scale-90" href="tel:01132310275">
+                    Call Now
+                </a>
+<button class="md:hidden flex items-center text-primary" id="mobile-menu-toggle">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center pt-24 overflow-hidden">
+<!-- STITCH_SHADER_START:ANIMATION_9 class="absolute inset-0 w-full h-full opacity-40" -->
+<div class="absolute inset-0 w-full h-full opacity-40" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_9" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_9');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Subtle flowing industrial gradient
+    float dist = length(uv - 0.5);
+    float pulse = 0.5 + 0.5 * sin(u_time * 0.5 + dist * 5.0);
+    
+    vec3 color1 = vec3(0.129, 0.133, 0.149); // #212226 (Charcoal)
+    vec3 color2 = vec3(0.2, 0.21, 0.23); // Slightly lighter charcoal
+    vec3 accent = vec3(1.0, 0.647, 0.0); // Orange-ish industrial accent
+    
+    vec3 finalColor = mix(color1, color2, pulse * 0.3);
+    finalColor = mix(finalColor, accent, (1.0 - dist) * 0.05 * pulse);
+    
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_9 -->
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6">
+<span class="inline-block bg-industrial-orange/10 text-industrial-orange px-4 py-1 font-label-caps text-label-caps uppercase mb-6 rounded-full">Established 2002</span>
+<h1 class="font-display-lg text-display-lg lg:text-[72px] text-primary leading-[1.1] mb-6">
+                        Masterful Property <span class="text-industrial-orange">Maintenance</span> &amp; Development
+                    </h1>
+<p class="font-body-lg text-body-lg text-slate-gray mb-10 max-w-lg">
+                        Professional refurbishment, repairs, and management in Leeds. We provide high-end luxury service with industrial expertise for your commercial and residential assets.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-industrial-orange text-white px-10 py-5 font-label-caps text-label-caps uppercase hover:translate-y-[-4px] transition-all shadow-lg shadow-industrial-orange/20">
+                            Get a Quote
+                        </button>
+<button class="border-2 border-charcoal-deep text-charcoal-deep px-10 py-5 font-label-caps text-label-caps uppercase hover:bg-charcoal-deep hover:text-white transition-all">
+                            Schedule Service
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative z-20 group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A premium wide-angle architectural shot of a minimalist, high-end kitchen renovation by Regent House. The space features large marble islands, sleek wooden cabinetry, and industrial accents like a laser level tool visible on the wall. Soft natural light floods in from large floor-to-ceiling windows, highlighting the impeccable professional finish and masterful property maintenance quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBJGBOUWVc4hksbufVbiYtz5nnttwYdQJDYMvl8Jae1vkTZ9KcKV4RXGQMJsmu6DeQg3H5QPi3X2mflqhIGtLo2ckTXf67nkznyN_dcwNzSay3izmYGNjxo0tPtzXjTGCiCEvyUr4BoLBYmBzVIuYAR_MXCCFj5LdHE4bxdfEV46nIyY1MaZ34kTHiQwi8O8QrtVUTUKr0LtScp3G1mqc9PQNBojUqbuA22ZC5E9PPFLpVE0BdSr-kZQ">
+</div>
+<!-- Decorative architectural elements -->
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-industrial-orange/5 rounded-2xl -z-10"></div>
+<div class="absolute -top-8 -right-8 w-64 h-64 border border-outline-variant/30 rounded-2xl -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-section-padding bg-surface-subtle" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Expertise in Every <span class="text-industrial-orange">Detail</span></h2>
+<p class="font-body-md text-body-md text-slate-gray max-w-2xl">From bespoke bathroom fittings to full-scale commercial refurbishments, we bridge the gap between rugged capability and masterful aesthetics.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Bathroom Renovations -->
+<div class="md:col-span-2 bento-item bg-white p-8 rounded-xl border border-outline-variant/30 shadow-sm flex flex-col md:flex-row gap-8 overflow-hidden group">
+<div class="md:w-1/2">
+<span class="material-symbols-outlined text-industrial-orange mb-4 text-4xl">shower</span>
+<h3 class="font-headline-md text-headline-md mb-4">Bathroom Renovations</h3>
+<p class="font-body-md text-body-md text-slate-gray mb-6">Bespoke design and installation focusing on high-end fixtures and flawless execution. We create sanctuaries out of standard spaces.</p>
+<a class="text-industrial-orange font-label-caps flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="shader.html">
+                                VIEW PROJECTS <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="md:w-1/2 aspect-square md:aspect-auto rounded-lg overflow-hidden h-64 md:h-full relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMGbuwj2WfMyI1DaGmIQDdAiUs8WsvpJwa1GntoBzROELk96tpcok9afo7Uyq0fcHAjDS0sLy6LMloSA5QqgtPPN7CwedhcnoPHU7mq-90m7ENSWzJoPd5-cz-495pazjdrliclQ-yiidk5foGgJVVR6h3QgJUH3wdXiMNTZ82Z51JnFu8ZlyclijRjkcVh4ozl_TucMZYXH3C67LeTAyYIMGrsLYbGj8_u4vpSS3m3G_IhhIBXh3ekQ">
+</div>
+</div>
+<!-- Kitchen Renovations -->
+<div class="bento-item bg-white p-8 rounded-xl border border-outline-variant/30 shadow-sm flex flex-col group">
+<span class="material-symbols-outlined text-industrial-orange mb-4 text-4xl">restaurant</span>
+<h3 class="font-headline-md text-headline-md mb-4">Kitchen Mastery</h3>
+<p class="font-body-md text-body-md text-slate-gray mb-8">Modern, functional kitchens designed for Leeds' most prestigious properties.</p>
+<div class="mt-auto aspect-video rounded-lg overflow-hidden bg-slate-100 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="A sleek, modern kitchen renovation featuring matte black cabinetry, industrial pendant lighting, and professional-grade stainless steel appliances. The focus is on clean lines and architectural stability, reflecting the Regent House property management brand identity of masterful reliability and expert development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1_wF_s2FCyii_eR39rZloYVMwoA1mreF92AXo0ek5LqMB07h83kYJCEU54MoMcO3dUd-voGlNTV3maHyMn9wFQgwDL5sVib23RNRT4qdhJCF-cV0-JxBZFCyN1rYl8OylK-ofq8MMEa0ZBUThMHpciw0LQuV16fbcVGkOSfA18hW4SGJABIMtmCsqId37N-0yNleMydoEJBzhGiHKG4TT84HOF_hcB90gErybFxtyuUhlndFLlbFU7Q">
+</div>
+</div>
+<!-- Property Refurbishment -->
+<div class="md:col-span-3 bento-item bg-charcoal-deep text-white p-12 rounded-xl border border-outline-variant/10 shadow-lg flex flex-col lg:flex-row items-center gap-12 group">
+<div class="lg:w-2/3 aspect-video rounded-lg overflow-hidden order-2 lg:order-1">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdDDxc7yJBg4IQYs1CoBRtQr9p67t_2NDd1lyxfjbBAyxBZtFIEj1AgfERsTQjxUtrXxHYagHve1pglYihAW4gp_L0vAMfD-G8mFBuR15eep_oKQYpvw2bHuE8rCPtfvSAObqV-29t0RRcCiuLAOOj2h5_9QvhSHRJnsFVJcC9BsMcdqptqQXVq8945qO4KzoVye2yaDChU0SqAyVOekwv2UMMajCJCIILRLCz4lJWBWM-HvLdWPzMGw">
+</div>
+<div class="lg:w-1/3 order-1 lg:order-2">
+<span class="material-symbols-outlined text-industrial-orange mb-4 text-5xl">corporate_fare</span>
+<h3 class="font-headline-lg text-headline-lg text-white mb-6">Property Refurbishment</h3>
+<p class="font-body-lg text-body-lg text-surface-variant mb-8">Full-scale property restoration and modernization for residential and commercial landlords. From structural repairs to high-end cosmetic finishing.</p>
+<button class="bg-industrial-orange text-white px-8 py-4 font-label-caps text-label-caps uppercase hover:bg-white hover:text-charcoal-deep transition-colors">
+                                LEARN MORE
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tools & Expertise -->
+<section class="py-section-padding bg-white relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid md:grid-cols-2 gap-20 items-center">
+<div class="relative order-2 md:order-1">
+<div class="aspect-square rounded-full border-[32px] border-surface-subtle absolute -top-12 -left-12 -z-10 animate-pulse"></div>
+<div class="rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A high-resolution close-up of professional workshop tools—a drill, hammer, and wrenches neatly arranged on a rugged wooden workbench in a brightly lit, modern environment. The scene communicates expert craftsmanship, masterful property maintenance, and a disciplined approach to industrial expertise within a high-end luxury service context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoc06xylmEEF-uTvWL-wGagEmf34eVi6oYQP-JaaKQWwSMK07kMMNTs9GPxgwRpbBjoz3MnCtD-0RCHTiPlKijpMVgTaJDAWztj189ysfnm-rU-arkI7jEMVGc4gIdN6WAPAFdfvmLKGTdm16Pv55Wmn4VWvJQhBhi7sawAE_Nm-EweeHCob6NvYqPKRMbBuPwc-Hkr8ZZGdsHo16U-PSiyB6uSf0D4vJtv3F0Qf7If4HGB1cHcsFH6Q">
+</div>
+</div>
+<div class="order-1 md:order-2">
+<h2 class="font-headline-lg text-headline-lg mb-8">Built on <span class="text-industrial-orange">Reliability</span></h2>
+<p class="font-body-lg text-body-lg text-slate-gray mb-10">Our team utilizes the latest in industrial technology and precision tools to ensure that every repair and development project meets the 'Regent Standard'. We don't just fix; we enhance.</p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-industrial-orange bg-industrial-orange/10 p-2 rounded-lg">verified</span>
+<div>
+<h4 class="font-bold text-primary mb-1">Certified Craftsmanship</h4>
+<p class="text-slate-gray text-body-md">Fully insured and accredited professionals for total peace of mind.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-industrial-orange bg-industrial-orange/10 p-2 rounded-lg">speed</span>
+<div>
+<h4 class="font-bold text-primary mb-1">Efficient Execution</h4>
+<p class="text-slate-gray text-body-md">Rapid response for repairs without compromising on quality or finish.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-industrial-orange bg-industrial-orange/10 p-2 rounded-lg">history_edu</span>
+<div>
+<h4 class="font-bold text-primary mb-1">20+ Years Legacy</h4>
+<p class="text-slate-gray text-body-md">Serving the Leeds community with dedicated property management since 2002.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-section-padding bg-charcoal-deep text-white">
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-gutter text-center">
+<span class="material-symbols-outlined text-industrial-orange text-6xl mb-8">format_quote</span>
+<blockquote class="font-headline-lg text-headline-lg md:text-5xl italic leading-tight mb-12">
+                    "The Regent House team transformed our commercial space into a modern masterpiece. Their attention to detail and professional project management was second to none."
+                </blockquote>
+<div class="flex flex-col items-center">
+<div class="w-16 h-1 bg-industrial-orange mb-4"></div>
+<cite class="font-label-caps text-label-caps uppercase not-italic">Fran Tait</cite>
+<span class="text-surface-variant font-body-md">Commercial Director, Leeds Central</span>
+</div>
+</div>
+</section>
+<!-- Consultation Form Section -->
+<section class="py-section-padding bg-surface-subtle" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid lg:grid-cols-2 gap-20">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8">Request a <span class="text-industrial-orange">Consultation</span></h2>
+<p class="font-body-lg text-body-lg text-slate-gray mb-12">Ready to elevate your property? Fill out the form below, and our senior management team will contact you within 24 hours to discuss your requirements.</p>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="bg-white p-4 rounded-lg shadow-sm border border-outline-variant/30 flex-shrink-0">
+<span class="material-symbols-outlined text-industrial-orange text-3xl">call</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Phone</h4>
+<p class="text-slate-gray">0113 231 0275</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="bg-white p-4 rounded-lg shadow-sm border border-outline-variant/30 flex-shrink-0">
+<span class="material-symbols-outlined text-industrial-orange text-3xl">mail</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Email</h4>
+<p class="text-slate-gray">office@regenthousepm.co.uk</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-2xl shadow-xl border border-outline-variant/30">
+<form action="#" class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps uppercase text-slate-gray">Full Name</label>
+<input class="border border-outline-variant rounded-lg p-4 focus:border-industrial-orange focus:ring-0 outline-none transition-colors" placeholder="John Doe" type="text">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps uppercase text-slate-gray">Email Address</label>
+<input class="border border-outline-variant rounded-lg p-4 focus:border-industrial-orange focus:ring-0 outline-none transition-colors" placeholder="john@example.com" type="email">
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps uppercase text-slate-gray">Service Required</label>
+<select class="border border-outline-variant rounded-lg p-4 focus:border-industrial-orange focus:ring-0 outline-none transition-colors appearance-none">
+<option>Property Refurbishment</option>
+<option>Bathroom Renovation</option>
+<option>Kitchen Renovation</option>
+<option>General Repairs</option>
+<option>Commercial Maintenance</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps uppercase text-slate-gray">Message</label>
+<textarea class="border border-outline-variant rounded-lg p-4 focus:border-industrial-orange focus:ring-0 outline-none transition-colors resize-none" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-industrial-orange text-white py-5 font-label-caps text-label-caps uppercase hover:bg-charcoal-deep transition-all shadow-lg" type="submit">
+                                Send Message
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-section-padding bg-primary dark:bg-charcoal-deep text-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-4 gap-stack-lg">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Regent House" class="h-10 w-auto invert" src="https://lh3.googleusercontent.com/aida/AP1WRLuYzL5jviU5X0642-2i5D31e0Uv0yFlSJP9MetAVaopNaoJyrS1KV4VJmU3CI0vlP19N1vfxcv41hlBR0eLXe7gCfvqRx3NeeNwWdQF5Qx_76s9p19wA71NkWI5pSLkvPib-98ebe5HwnNhhnShGYLfy2EkEUaQlZphOGwrWR-Xwddie7BEIkL09NSPmf5YJwKZTMILMeIR95zi7D2BcoBbjGFuLuZqWpUAow4hwYAQeTfP78r2RyrR1D-T">
+<span class="font-headline-md text-headline-md text-white font-bold">Regent House</span>
+</div>
+<p class="font-body-md text-body-md text-surface-variant mb-8">
+                    Excellence in property management and refurbishment since 2002. Your trusted partner for Leeds real estate maintenance.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-industrial-orange transition-colors" href="shader.html"><span class="material-symbols-outlined text-sm">face_nod</span></a>
+<a class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-industrial-orange transition-colors" href="index.html"><span class="material-symbols-outlined text-sm">link</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-industrial-orange mb-6">Quick Links</h4>
+<ul class="space-y-4 font-body-md text-body-md text-surface-variant">
+<li><a class="hover:text-industrial-orange underline" href="index.html">Home</a></li>
+<li><a class="hover:text-industrial-orange underline" href="#services">Services</a></li>
+<li><a class="hover:text-industrial-orange underline" href="#repairs">Repairs</a></li>
+<li><a class="hover:text-industrial-orange underline" href="#gallery">Gallery</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-industrial-orange mb-6">Legal</h4>
+<ul class="space-y-4 font-body-md text-body-md text-surface-variant">
+<li><a class="hover:text-industrial-orange underline" href="index.html">Privacy Policy</a></li>
+<li><a class="hover:text-industrial-orange underline" href="index.html">Terms of Service</a></li>
+<li><a class="hover:text-industrial-orange underline" href="index.html">Cookie Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-industrial-orange mb-6">Contact Us</h4>
+<address class="not-italic font-body-md text-body-md text-surface-variant space-y-4">
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-industrial-orange">location_on</span>
+                        Regent House, Leeds,<br>West Yorkshire, LS1 2PM
+                    </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-industrial-orange">call</span>
+                        0113 231 0275
+                    </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-industrial-orange">mail</span>
+                        office@regenthousepm.co.uk
+                    </p>
+</address>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-surface-variant text-sm text-center md:text-left">
+                © 2024 Regent House Property Management. All rights reserved. Registered in England &amp; Wales.
+            </p>
+<div class="flex items-center gap-4">
+<span class="text-xs text-surface-variant uppercase font-label-caps">Vetted &amp; Approved</span>
+<div class="w-8 h-8 bg-white/20 rounded"></div>
+<div class="w-8 h-8 bg-white/20 rounded"></div>
+</div>
+</div>
+</footer>
+<!-- Bottom Nav Shell (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface border-t border-outline-variant shadow-lg flex justify-around items-center py-3 px-4">
+<a class="flex flex-col items-center justify-center text-slate-gray active:scale-95 transition-all" href="tel:01132310275">
+<span class="material-symbols-outlined">phone</span>
+<span class="font-label-caps text-[10px] uppercase">Call</span>
+</a>
+<a class="flex flex-col items-center justify-center text-industrial-orange active:scale-95 transition-all" href="#contact">
+<div class="w-12 h-12 bg-industrial-orange text-white rounded-full flex items-center justify-center -mt-8 shadow-lg">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="font-label-caps text-[10px] uppercase mt-1">Contact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-gray active:scale-95 transition-all" href="#services">
+<span class="material-symbols-outlined">construction</span>
+<span class="font-label-caps text-[10px] uppercase">Services</span>
+</a>
+</nav>
+<!-- Schema.org Script -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Regent House Property Management",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Regent House",
+        "addressLocality": "Leeds",
+        "addressRegion": "West Yorkshire",
+        "postalCode": "LS1 2PM",
+        "addressCountry": "GB"
+      },
+      "telephone": "+441132310275",
+      "url": "https://www.regenthousepm.co.uk",
+      "logo": "https://lh3.googleusercontent.com/aida/AP1WRLuYzL5jviU5X0642-2i5D31e0Uv0yFlSJP9MetAVaopNaoJyrS1KV4VJmU3CI0vlP19N1vfxcv41hlBR0eLXe7gCfvqRx3NeeNwWdQF5Qx_76s9p19wA71NkWI5pSLkvPib-98ebe5HwnNhhnShGYLfy2EkEUaQlZphOGwrWR-Xwddie7BEIkL09NSPmf5YJwKZTMILMeIR95zi7D2BcoBbjGFuLuZqWpUAow4hwYAQeTfP78r2RyrR1D-T",
+      "areaServed": "Leeds",
+      "foundingDate": "2002"
+    }
+    </script>
+<script>
+        // Micro-interactions and Scroll effects
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('md:top-0');
+                nav.querySelector('nav').classList.remove('md:px-12');
+                nav.querySelector('nav').classList.add('rounded-none', 'md:px-8', 'shadow-md');
+            } else {
+                nav.classList.remove('md:top-0');
+                nav.querySelector('nav').classList.add('md:px-12');
+                nav.querySelector('nav').classList.remove('rounded-none', 'shadow-md');
+            }
+        });
+
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('reveal-on-scroll');
+            observer.observe(section);
+        });
+
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('mobile-menu-toggle');
+        menuBtn.addEventListener('click', () => {
+            // Simple mobile menu placeholder - in a real app would trigger a full screen overlay
+            alert('Navigation menu for Regent House expanded.');
+        });
+    </script>
+</body></html>

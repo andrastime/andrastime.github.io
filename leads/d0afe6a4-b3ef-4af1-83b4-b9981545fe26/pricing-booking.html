@@ -1,0 +1,355 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Pricing &amp; Booking | Edinburgh Handyman</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#38342b",
+                    "on-secondary-fixed": "#191c20",
+                    "inverse-primary": "#735c00",
+                    "on-background": "#eae1d4",
+                    "surface-container-lowest": "#110e07",
+                    "primary-container": "#d4af37",
+                    "background": "#16130b",
+                    "secondary": "#c5c6cc",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-bright": "#3d392f",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-low": "#1f1b13",
+                    "secondary-fixed": "#e1e2e8",
+                    "outline": "#99907c",
+                    "surface-dim": "#16130b",
+                    "on-tertiary-fixed-variant": "#3c475a",
+                    "inverse-on-surface": "#343027",
+                    "inverse-surface": "#eae1d4",
+                    "on-secondary": "#2e3135",
+                    "slate-gray": "#718096",
+                    "surface-container-highest": "#38342b",
+                    "on-primary": "#3c2f00",
+                    "outline-variant": "#4d4635",
+                    "on-tertiary-container": "#3a4558",
+                    "on-tertiary": "#263142",
+                    "on-secondary-fixed-variant": "#44474b",
+                    "on-primary-fixed": "#241a00",
+                    "on-secondary-container": "#b6b8be",
+                    "contractor-gold": "#D4AF37",
+                    "deep-charcoal": "#121417",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary-fixed-dim": "#c5c6cc",
+                    "tertiary": "#c3cee5",
+                    "tertiary-container": "#a8b3c9",
+                    "on-surface": "#eae1d4",
+                    "tertiary-fixed": "#d8e3fa",
+                    "on-tertiary-fixed": "#111c2c",
+                    "surface-tint": "#e9c349",
+                    "on-surface-variant": "#d0c5af",
+                    "primary": "#f2ca50",
+                    "error": "#ffb4ab",
+                    "on-primary-container": "#554300",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "surface": "#16130b",
+                    "secondary-container": "#46494e",
+                    "tertiary-fixed-dim": "#bcc7dd",
+                    "safety-orange": "#FF650C",
+                    "surface-dark": "#1A1D21",
+                    "surface-container": "#231f17",
+                    "primary-fixed": "#ffe088",
+                    "surface-container-high": "#2d2a21"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-safe": "1.5rem",
+                    "card-padding": "2rem",
+                    "container-max": "1200px",
+                    "gutter": "2rem",
+                    "section-gap": "6rem"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "label-caps": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-glow:focus-within {
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+            border-color: #D4AF37;
+        }
+        .bento-card {
+            background: linear-gradient(145deg, #1f1b13, #16130b);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-contractor-gold selection:text-background">
+<!-- Top Navigation -->
+<nav class="fixed top-0 z-50 w-full bg-background/95 backdrop-blur-md shadow-md">
+<div class="flex justify-between items-center px-margin-safe py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-display-lg font-bold text-on-surface uppercase tracking-tight">
+                Edinburgh Handyman
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-headline-md font-semibold" href="our-services.html">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-headline-md font-semibold" href="our-services.html">Services</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-headline-md text-headline-md font-semibold" href="pricing-booking.html">Pricing</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-headline-md text-headline-md font-semibold" href="what-to-expect.html">What to Expect</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-contractor-gold font-semibold hover:opacity-80 transition-opacity">0131 HANDY</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold hover:scale-95 active:scale-90 transition-transform">Book Now</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap px-margin-safe max-w-container-max mx-auto">
+<!-- Header Section -->
+<header class="mb-16">
+<div class="inline-block bg-surface-container-high px-4 py-1 rounded-full mb-6">
+<span class="font-label-caps text-label-caps text-contractor-gold uppercase tracking-widest">Transparent Rates</span>
+</div>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">Elite Craftsmanship. <br><span class="text-contractor-gold">Honest Investment.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">High-end trade services delivered with architectural precision. No hidden fees, just professional excellence for your Edinburgh property.</p>
+</header>
+<!-- Pricing Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap">
+<!-- Primary Rate Card -->
+<div class="md:col-span-8 bento-card p-card-padding rounded-xl border border-outline-variant flex flex-col justify-between overflow-hidden relative group">
+
+<div class="relative z-10">
+<span class="material-symbols-outlined text-contractor-gold text-4xl mb-6">payments</span>
+<h2 class="font-display-lg text-display-lg mb-2">£40 <span class="text-headline-md">/ half hour</span></h2>
+<p class="text-on-surface-variant max-w-md mb-8">Professional handyman services billed in 30-minute increments for precise, fair accounting of our work on your premises.</p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-contractor-gold text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-semibold">1-Hour Minimum</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-contractor-gold text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-semibold">No Call-out Fee</span>
+</div>
+</div>
+</div>
+<div class="mt-12 p-6 bg-primary-container/10 border-l-4 border-contractor-gold rounded-r-lg">
+<p class="italic text-on-surface">"My aim is to provide outstanding service. I promise to arrive on time, leave your space cleaner than I found it, and keep you updated."</p>
+</div>
+</div>
+<!-- Discount Card -->
+<div class="md:col-span-4 bg-contractor-gold p-card-padding rounded-xl flex flex-col justify-center text-on-primary shadow-2xl relative overflow-hidden">
+<div class="absolute -right-10 -top-10 text-[12rem] opacity-10 font-bold rotate-12 select-none">10%</div>
+<h3 class="font-headline-md text-headline-md mb-4 font-bold">The Day-Rate Advantage</h3>
+<p class="font-display-lg text-display-lg mb-6 leading-none">10% <br>OFF</p>
+<p class="mb-8 font-medium">Automatic discount for bookings of 5 hours or more on the same day.</p>
+<button class="bg-on-primary text-contractor-gold w-full py-4 rounded-lg font-bold hover:scale-105 transition-transform">Calculate Large Job</button>
+</div>
+<!-- Charity Card -->
+<div class="md:col-span-12 lg:col-span-4 bento-card p-card-padding rounded-xl border border-outline-variant group">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-safety-orange text-4xl">favorite</span>
+<a class="text-contractor-gold hover:underline font-label-caps text-label-caps" href="our-services.html">Learn More</a>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">1% For Charity</h3>
+<p class="text-on-surface-variant text-sm">Every booking supports local Edinburgh charities. We believe in building a better community, one project at a time.</p>
+</div>
+<!-- Minimum Charge Logic -->
+<div class="md:col-span-6 lg:col-span-4 bento-card p-card-padding rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant mb-6">info</span>
+<h3 class="font-headline-md text-headline-md mb-2">Minimum Booking</h3>
+<p class="text-on-surface-variant text-sm">All projects are subject to a minimum charge of one hour (£80). This ensures we can provide the highest quality tools and preparation for every visit.</p>
+</div>
+<!-- Guarantee Card -->
+<div class="md:col-span-6 lg:col-span-4 bento-card p-card-padding rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-contractor-gold mb-6">verified</span>
+<h3 class="font-headline-md text-headline-md mb-2">Quality Guarantee</h3>
+<p class="text-on-surface-variant text-sm">All work is executed to the highest architectural standards and fully guaranteed. If you're not 100% satisfied, I'll make it right.</p>
+</div>
+</div>
+<!-- Interactive Booking Interface -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-section-gap items-start">
+<div class="sticky top-32">
+<h2 class="font-display-lg text-display-lg mb-6">Check Availability &amp; <span class="text-contractor-gold">Book Online</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Select your desired service and preferred date. Our live booking system reflects real-time availability across Edinburgh.</p>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<div class="bg-surface-container-high p-3 rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-contractor-gold">schedule</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Instant Confirmation</h4>
+<p class="text-on-surface-variant text-sm">No waiting for quotes. Book your slot immediately and receive email confirmation.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="bg-surface-container-high p-3 rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-contractor-gold">cleaning_services</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Pristine Completion</h4>
+<p class="text-on-surface-variant text-sm">We treat your property with respect, ensuring a dust-free and clean finish after every job.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant shadow-2xl">
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Service Category</label>
+<select class="w-full bg-surface-container-high border-outline-variant rounded-lg p-3 text-on-surface focus:ring-contractor-gold focus:border-contractor-gold">
+<option>Joinery</option>
+<option>Decorating</option>
+<option>Plumbing</option>
+<option>Fixings</option>
+<option>Electrical (Minor)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Est. Duration</label>
+<select class="w-full bg-surface-container-high border-outline-variant rounded-lg p-3 text-on-surface focus:ring-contractor-gold focus:border-contractor-gold" id="duration">
+<option value="1">1 Hour (£80)</option>
+<option value="2">2 Hours (£160)</option>
+<option value="3">3 Hours (£240)</option>
+<option value="5">5 Hours (£360 - 10% OFF)</option>
+<option value="8">Full Day (£576 - 10% OFF)</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Select Date</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-3 px-2 border border-outline-variant rounded-lg hover:border-contractor-gold transition-colors text-center text-sm font-semibold bg-surface-container-highest" type="button">
+                                Mon 24 May
+                            </button>
+<button class="py-3 px-2 border border-contractor-gold bg-contractor-gold text-on-primary rounded-lg text-center text-sm font-bold shadow-lg" type="button">
+                                Tue 25 May
+                            </button>
+<button class="py-3 px-2 border border-outline-variant rounded-lg hover:border-contractor-gold transition-colors text-center text-sm font-semibold bg-surface-container-highest" type="button">
+                                Wed 26 May
+                            </button>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Project Details</label>
+<textarea class="w-full bg-surface-container-high border-outline-variant rounded-lg p-3 text-on-surface focus:ring-contractor-gold focus:border-contractor-gold placeholder:text-outline" placeholder="Briefly describe what you need done..." rows="4"></textarea>
+</div>
+<div class="p-6 bg-surface-container-highest rounded-xl border border-outline-variant">
+<div class="flex justify-between items-center mb-2">
+<span class="text-on-surface-variant">Subtotal</span>
+<span class="font-bold" id="subtotal">£400.00</span>
+</div>
+<div class="flex justify-between items-center text-safety-orange mb-4">
+<span class="font-semibold italic">10% Multi-hour Discount</span>
+<span class="font-bold" id="discount">-£40.00</span>
+</div>
+<div class="h-px bg-outline-variant mb-4"></div>
+<div class="flex justify-between items-center">
+<span class="font-headline-md text-headline-md">Total Price</span>
+<span class="font-display-lg text-display-lg text-contractor-gold" id="total">£360.00</span>
+</div>
+</div>
+<button class="w-full bg-contractor-gold py-5 rounded-lg text-on-primary font-bold text-lg hover:scale-[0.98] transition-transform shadow-xl" type="submit">
+                        Secure This Appointment
+                    </button>
+<p class="text-center text-xs text-on-surface-variant">No upfront payment required for most residential jobs. Payment on completion via card or bank transfer.</p>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-section-gap border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-safe max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-lg text-display-lg font-bold text-on-surface mb-6">EH.</div>
+<p class="text-on-surface-variant text-sm">Supporting local Edinburgh charities through every completed job. 1% for community growth.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-contractor-gold uppercase mb-6">Services</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="our-services.html">Joinery</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="our-services.html">Decorating</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="our-services.html">Plumbing</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="our-services.html">Electrical</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-contractor-gold uppercase mb-6">Legal</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="index.html">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="index.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-contractor-gold uppercase mb-6">Contact</h4>
+<p class="text-on-surface-variant font-body-md text-body-md mb-2">info@edinburghhandyman.com</p>
+<p class="text-on-surface-variant font-body-md text-body-md">0131 HANDY (426 39)</p>
+</div>
+</div>
+<div class="mt-section-gap px-margin-safe max-w-container-max mx-auto border-t border-outline-variant pt-8">
+<p class="text-on-surface-variant text-sm text-center">© 2024 Edinburgh Handyman Service. Registered in Scotland. Supporting local Edinburgh charities.</p>
+</div>
+</footer>
+<script>
+        // Simple interactive pricing simulation
+        const durationSelect = document.getElementById('duration');
+        const subtotalEl = document.getElementById('subtotal');
+        const discountEl = document.getElementById('discount');
+        const totalEl = document.getElementById('total');
+
+        durationSelect.addEventListener('change', (e) => {
+            const hours = parseInt(e.target.value);
+            const rate = 80; // £40 per half hour = £80 per hour
+            const subtotal = hours * rate;
+            let discount = 0;
+            
+            if (hours >= 5) {
+                discount = subtotal * 0.1;
+            }
+
+            subtotalEl.innerText = `£${subtotal.toFixed(2)}`;
+            discountEl.innerText = `-£${discount.toFixed(2)}`;
+            totalEl.innerText = `£${(subtotal - discount).toFixed(2)}`;
+            
+            if (discount > 0) {
+                discountEl.parentElement.classList.remove('hidden');
+                discountEl.parentElement.classList.add('flex');
+            } else {
+                discountEl.parentElement.classList.add('hidden');
+                discountEl.parentElement.classList.remove('flex');
+            }
+        });
+    </script>
+</body></html>

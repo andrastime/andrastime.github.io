@@ -1,0 +1,498 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | Royal Docks Electrical Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(227, 6, 19, 0.05);
+        }
+        .service-card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+        .active-nav-link {
+            border-bottom: 2px solid #E30613;
+            font-weight: 700;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed": "#d1e4fb",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "on-error": "#ffffff",
+                        "outline": "#926e69",
+                        "slate-muted": "#4A4E52",
+                        "on-primary-container": "#ffdad4",
+                        "error": "#ba1a1a",
+                        "tertiary": "#3c4e61",
+                        "on-tertiary-fixed": "#091d2e",
+                        "on-tertiary-fixed-variant": "#36485b",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "background": "#f8f9fa",
+                        "inverse-surface": "#2e3132",
+                        "secondary-container": "#e2e2e5",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#ffdad4",
+                        "on-primary-fixed": "#410000",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#5e3f3a",
+                        "on-primary-fixed-variant": "#930000",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#c6c6c9",
+                        "tertiary-fixed-dim": "#b5c8df",
+                        "tertiary-container": "#54667a",
+                        "glass-white": "rgba(255, 255, 255, 0.7)",
+                        "secondary": "#5d5e61",
+                        "primary-container": "#cc0000",
+                        "inverse-on-surface": "#f0f1f2",
+                        "slate-deep": "#121416",
+                        "surface-dim": "#d9dadb",
+                        "on-surface": "#191c1d",
+                        "surface-container-highest": "#e1e3e4",
+                        "secondary-fixed": "#e2e2e5",
+                        "success-green": "#28A745",
+                        "surface-tint": "#c00000",
+                        "on-background": "#191c1d",
+                        "on-secondary-fixed-variant": "#454749",
+                        "on-tertiary-container": "#d1e4fb",
+                        "outline-variant": "#e8bdb6",
+                        "surface-container-low": "#f3f4f5",
+                        "signal-red": "#E30613",
+                        "on-secondary-container": "#636467",
+                        "inverse-primary": "#ffb4a8",
+                        "on-secondary-fixed": "#1a1c1e",
+                        "primary": "#9e0000",
+                        "primary-fixed-dim": "#ffb4a8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "stack-lg": "32px",
+                        "element-gap": "16px",
+                        "stack-md": "16px",
+                        "section-padding": "80px",
+                        "gutter": "24px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-bold": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- Top Navigation Shell -->
+<nav class="bg-glass-white backdrop-blur-md sticky top-0 z-50 shadow-sm flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+<div class="flex items-center">
+<img alt="Royal Docks Electrical Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLuHZfEFRm7hRXAu8Y1NeAY310t976M-juC-T0v_V4Jr9RJSVQVHQoGhF3i5vpxVdKAc6nXg0J7p88pp3ZBkHA2UJew2eHxOzEndd9OWj4NNSMV_6KXNNl5Z2aXIjiwWNGmLbFct4FwxXYj6iKZwlHIBzOyLBN-udPT2_S0_dQEk4nRUTFI7UytLTkRoXuyVuvPhwvShdTHm6acwtkQda6I2j1w8rMzWPnXIEHGgE36wjEpeQ6Ap-SF3">
+</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-bold text-label-bold text-secondary hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="font-label-bold text-label-bold text-primary border-b-2 border-primary font-bold pb-1" href="services-royal-docks-electrical.html">Services</a>
+<a class="font-label-bold text-label-bold text-secondary hover:text-primary transition-colors" href="index.html">About</a>
+<a class="font-label-bold text-label-bold text-secondary hover:text-primary transition-colors" href="services-royal-docks-electrical.html">Pricing</a>
+<a class="font-label-bold text-label-bold text-secondary hover:text-primary transition-colors" href="contact-quote-royal-docks-electrical.html">Contact</a>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="bg-signal-red text-on-primary font-label-bold text-label-bold px-6 py-2.5 rounded-lg hover:scale-105 transition-transform duration-200 active:scale-95 shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">phone</span>
+                Call Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section with Shader Background -->
+<header class="relative w-full h-[60vh] flex items-center justify-center overflow-hidden bg-slate-deep">
+<!-- STITCH_SHADER_START:ANIMATION_5 class="absolute inset-0 w-full h-full opacity-60" -->
+<div class="absolute inset-0 w-full h-full opacity-60" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_5" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_5');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Slow, professional liquid motion using sine waves
+    float motion = sin(uv.x * 3.0 + u_time * 0.5) * 0.1;
+    motion += cos(uv.y * 2.0 + u_time * 0.3) * 0.1;
+    
+    // Base colors from the "Kinetic Slate" palette (Slate/Dark Grey and a hint of Red)
+    vec3 slate = vec3(0.08, 0.09, 0.1); // Deep slate
+    vec3 accent = vec3(0.8, 0.0, 0.0);  // Royal Docks Red
+    
+    // Mix based on coordinates and motion
+    float mixFactor = smoothstep(0.3, 0.7, uv.y + motion);
+    vec3 color = mix(slate, slate * 1.2, mixFactor);
+    
+    // Add a very subtle red glow from the bottom corner
+    float glow = distance(uv, vec4(1.0, 0.0, 0.0, 1.0).xy);
+    color += accent * (1.0 - smoothstep(0.0, 1.0, glow)) * 0.05;
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_5 -->
+<div class="relative z-10 px-gutter max-w-container-max mx-auto text-center">
+<span class="inline-block py-1 px-4 bg-signal-red text-white font-label-bold text-label-bold rounded-full mb-stack-md tracking-widest">EXPERT ELECTRICAL SOLUTIONS</span>
+<h1 class="font-display-lg text-display-lg text-white mb-stack-md">Professional Services for Every Need</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-2xl mx-auto">From emergency callouts to large-scale commercial installations, Royal Docks Electrical delivers precision and safety across London.</p>
+</div>
+</header>
+<!-- Why Choose Us - Trust Bar -->
+<section class="py-stack-lg bg-surface-container shadow-inner border-y border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-signal-red/10 flex items-center justify-center group-hover:bg-signal-red transition-colors duration-300">
+<span class="material-symbols-outlined text-signal-red group-hover:text-white transition-colors">bolt</span>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-slate-deep">Fast Response</h3>
+<p class="text-secondary text-sm">On-site within 60 minutes for emergencies.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-signal-red/10 flex items-center justify-center group-hover:bg-signal-red transition-colors duration-300">
+<span class="material-symbols-outlined text-signal-red group-hover:text-white transition-colors" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-slate-deep">Fully Qualified</h3>
+<p class="text-secondary text-sm">NICEIC &amp; City &amp; Guilds certified engineers.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-signal-red/10 flex items-center justify-center group-hover:bg-signal-red transition-colors duration-300">
+<span class="material-symbols-outlined text-signal-red group-hover:text-white transition-colors">payments</span>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-slate-deep">Fixed Prices</h3>
+<p class="text-secondary text-sm">Transparent quotes with no hidden fees.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<main class="py-section-padding max-w-container-max mx-auto px-gutter">
+<!-- Residential Services -->
+<div class="mb-section-padding">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-stack-md">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-slate-deep border-l-4 border-signal-red pl-4">Residential Services</h2>
+<p class="mt-4 text-secondary">Comprehensive home electrical solutions designed to keep your family safe and your property efficient.</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded bg-surface-container-high text-xs font-bold text-slate-muted">HOMES</span>
+<span class="px-3 py-1 rounded bg-surface-container-high text-xs font-bold text-slate-muted">APARTMENTS</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<!-- Card 1: Emergency Callout -->
+<div class="glass-card service-card-hover p-8 rounded-xl transition-all duration-300 flex flex-col h-full border-t-4 border-signal-red shadow-sm">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-signal-red text-4xl" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+<span class="bg-signal-red/10 text-signal-red text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Priority</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Emergency Callout (24/7)</h3>
+<p class="text-secondary flex-grow mb-8">Rapid response for power outages, electrical faults, and safety hazards at any hour.</p>
+<a class="bg-slate-deep text-white text-center py-3 rounded-lg font-label-bold text-label-bold hover:bg-signal-red transition-colors duration-200 uppercase tracking-widest" href="#contact">Get a Quote</a>
+</div>
+<!-- Card 2: Full Rewires -->
+<div class="glass-card service-card-hover p-8 rounded-xl transition-all duration-300 flex flex-col h-full shadow-sm">
+<div class="mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">settings_input_component</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Full Rewires</h3>
+<p class="text-secondary flex-grow mb-8">Modernize your property's electrical system with high-quality components and neat finishes.</p>
+<a class="bg-surface-container-highest text-slate-deep text-center py-3 rounded-lg font-label-bold text-label-bold hover:bg-slate-deep hover:text-white transition-colors duration-200 uppercase tracking-widest" href="#contact">Get a Quote</a>
+</div>
+<!-- Card 3: Consumer Unit Upgrades -->
+<div class="glass-card service-card-hover p-8 rounded-xl transition-all duration-300 flex flex-col h-full shadow-sm">
+<div class="mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">electrical_services</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Consumer Unit Upgrades</h3>
+<p class="text-secondary flex-grow mb-8">Installation of the latest RCD/RCBO protection units to ensure maximum safety and compliance.</p>
+<a class="bg-surface-container-highest text-slate-deep text-center py-3 rounded-lg font-label-bold text-label-bold hover:bg-slate-deep hover:text-white transition-colors duration-200 uppercase tracking-widest" href="#contact">Get a Quote</a>
+</div>
+</div>
+</div>
+<!-- Commercial Services -->
+<div>
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-stack-md">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-slate-deep border-l-4 border-primary pl-4">Commercial Services</h2>
+<p class="mt-4 text-secondary">High-performance electrical engineering for offices, retail, and industrial facilities.</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded bg-surface-container-high text-xs font-bold text-slate-muted">OFFICES</span>
+<span class="px-3 py-1 rounded bg-surface-container-high text-xs font-bold text-slate-muted">RETAIL</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<!-- Card 4: EICR Certificates -->
+<div class="glass-card service-card-hover p-8 rounded-xl transition-all duration-300 flex flex-col h-full shadow-sm">
+<div class="mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">description</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">EICR Certificates</h3>
+<p class="text-secondary flex-grow mb-8">Formal inspections for landlords and businesses to satisfy legal safety requirements and insurance.</p>
+<a class="bg-surface-container-highest text-slate-deep text-center py-3 rounded-lg font-label-bold text-label-bold hover:bg-slate-deep hover:text-white transition-colors duration-200 uppercase tracking-widest" href="#contact">Get a Quote</a>
+</div>
+<!-- Card 5: EV Charger Installation -->
+<div class="glass-card service-card-hover p-8 rounded-xl transition-all duration-300 flex flex-col h-full shadow-sm bg-gradient-to-br from-white to-tertiary-fixed/20">
+<div class="mb-6">
+<span class="material-symbols-outlined text-success-green text-4xl">ev_station</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">EV Charger Installation</h3>
+<p class="text-secondary flex-grow mb-8">Professional OZEV-approved installations for home driveways and commercial car parks.</p>
+<a class="bg-surface-container-highest text-slate-deep text-center py-3 rounded-lg font-label-bold text-label-bold hover:bg-slate-deep hover:text-white transition-colors duration-200 uppercase tracking-widest" href="#contact">Get a Quote</a>
+</div>
+<!-- Card 6: PAT Testing -->
+<div class="glass-card service-card-hover p-8 rounded-xl transition-all duration-300 flex flex-col h-full shadow-sm">
+<div class="mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">cable</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">PAT Testing</h3>
+<p class="text-secondary flex-grow mb-8">Comprehensive appliance testing to ensure your workplace remains compliant with HSE regulations.</p>
+<a class="bg-surface-container-highest text-slate-deep text-center py-3 rounded-lg font-label-bold text-label-bold hover:bg-slate-deep hover:text-white transition-colors duration-200 uppercase tracking-widest" href="#contact">Get a Quote</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Detailed Section for High Conversion -->
+<section class="bg-slate-deep py-section-padding text-white relative overflow-hidden" id="contact">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-signal-red opacity-5 transform skew-x-12 translate-x-1/2"></div>
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div>
+<h2 class="font-display-lg text-display-lg mb-stack-md text-surface-bright">Ready to secure your property?</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-12">Submit your requirements and one of our master electricians will provide a detailed, no-obligation quote within 4 business hours.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-signal-red">check_circle</span>
+<div>
+<h4 class="font-label-bold text-label-bold">Insurance Backed Guarantee</h4>
+<p class="text-slate-muted text-sm mt-1">Peace of mind for every installation we perform.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-signal-red">check_circle</span>
+<div>
+<h4 class="font-label-bold text-label-bold">Transparent Project Management</h4>
+<p class="text-slate-muted text-sm mt-1">Live updates and digital documentation provided.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-2xl shadow-2xl text-slate-deep">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-muted mb-2">Your Name</label>
+<input class="w-full bg-surface-container border-0 rounded-lg focus:ring-2 focus:ring-signal-red py-4 px-4" placeholder="Full Name" type="text">
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-muted mb-2">Phone Number</label>
+<input class="w-full bg-surface-container border-0 rounded-lg focus:ring-2 focus:ring-signal-red py-4 px-4" placeholder="+44 000 000 000" type="tel">
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-muted mb-2">Service Required</label>
+<select class="w-full bg-surface-container border-0 rounded-lg focus:ring-2 focus:ring-signal-red py-4 px-4">
+<option>Emergency Callout</option>
+<option>Full Rewire</option>
+<option>EICR Certificate</option>
+<option>EV Charger</option>
+<option>Other Service</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-muted mb-2">Brief Description</label>
+<textarea class="w-full bg-surface-container border-0 rounded-lg focus:ring-2 focus:ring-signal-red py-4 px-4 h-32" placeholder="Tell us about your project..."></textarea>
+</div>
+<button class="w-full bg-signal-red text-white py-5 rounded-lg font-label-bold text-label-bold uppercase tracking-widest hover:brightness-110 shadow-lg active:scale-95 transition-all" type="submit">Request Your Quote</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="bg-slate-deep border-t border-outline/10 w-full py-section-padding px-gutter max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-stack-lg">
+<div class="flex flex-col gap-stack-md">
+<span class="font-display-lg text-headline-lg text-surface-bright">Royal Docks</span>
+<p class="text-secondary-fixed text-body-md mt-2">Precision electrical services across the Royal Docks and Greater London area since 2008.</p>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-signal-red mb-6 uppercase tracking-widest">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-secondary-fixed hover:text-on-primary-container transition-colors font-body-md" href="services-royal-docks-electrical.html">Residential</a></li>
+<li><a class="text-secondary-fixed hover:text-on-primary-container transition-colors font-body-md" href="#">Commercial</a></li>
+<li><a class="text-secondary-fixed hover:text-on-primary-container transition-colors font-body-md" href="index.html">Emergency</a></li>
+<li><a class="text-secondary-fixed hover:text-on-primary-container transition-colors font-body-md" href="#">Service Areas</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-signal-red mb-6 uppercase tracking-widest">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-secondary-fixed hover:text-on-primary-container transition-colors font-body-md" href="shader.html">Privacy Policy</a></li>
+<li><a class="text-secondary-fixed hover:text-on-primary-container transition-colors font-body-md" href="#">Terms &amp; Conditions</a></li>
+<li><a class="text-secondary-fixed hover:text-on-primary-container transition-colors font-body-md" href="shader.html">Careers</a></li>
+<li><a class="text-secondary-fixed hover:text-on-primary-container transition-colors font-body-md" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-signal-red mb-6 uppercase tracking-widest">Connect</h4>
+<div class="flex gap-4 mb-8">
+<a class="w-10 h-10 rounded-full bg-slate-muted/20 flex items-center justify-center text-white hover:bg-signal-red transition-all" href="index.html">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-muted/20 flex items-center justify-center text-white hover:bg-signal-red transition-all" href="contact-quote-royal-docks-electrical.html">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+<p class="text-secondary-fixed text-xs">© 2024 Royal Docks Electrical Ltd. All rights reserved.</p>
+</div>
+</footer>
+<!-- Bottom Navigation for Mobile -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-surface dark:bg-slate-deep border-t border-outline-variant/30 shadow-lg rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-secondary" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined">bolt</span>
+<span class="font-label-bold text-[10px] mt-1">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary" href="contact-quote-royal-docks-electrical.html">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-bold text-[10px] mt-1">Contact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary" href="index.html">
+<span class="material-symbols-outlined">emergency_home</span>
+<span class="font-label-bold text-[10px] mt-1">Emergency</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for service cards
+        document.querySelectorAll('.service-card-hover').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.querySelector('.material-symbols-outlined').classList.add('scale-110');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('.material-symbols-outlined').classList.remove('scale-110');
+            });
+        });
+    </script>
+</body></html>

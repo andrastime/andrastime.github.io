@@ -1,0 +1,349 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Gallery - Strand &amp; Lock</title>
+<!-- Fonts and Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&amp;family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#2d3449",
+                        "titanium-silver": "#E2E8F0",
+                        "primary-fixed": "#d8e2ff",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#004493",
+                        "surface-dim": "#0b1326",
+                        "on-secondary-fixed": "#221b00",
+                        "on-tertiary-fixed-variant": "#7c2e00",
+                        "obsidian-base": "#020617",
+                        "electric-blue": "#007AFF",
+                        "tertiary": "#ffb595",
+                        "brushed-gold": "#C5A059",
+                        "outline": "#8b90a0",
+                        "background": "#0b1326",
+                        "secondary-fixed": "#ffe16d",
+                        "surface-tint": "#adc6ff",
+                        "primary-fixed-dim": "#adc6ff",
+                        "inverse-primary": "#005bc1",
+                        "primary": "#adc6ff",
+                        "tertiary-fixed-dim": "#ffb595",
+                        "on-primary": "#002e69",
+                        "secondary-container": "#ffdb3c",
+                        "on-tertiary-container": "#4c1a00",
+                        "on-background": "#dae2fd",
+                        "on-secondary-container": "#725f00",
+                        "on-tertiary": "#571e00",
+                        "outline-variant": "#414755",
+                        "security-orange": "#FF3B30",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#e9c400",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#351000",
+                        "surface-container-lowest": "#060e20",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-bright": "#31394d",
+                        "on-secondary": "#3a3000",
+                        "surface-container-high": "#222a3d",
+                        "surface": "#0b1326",
+                        "primary-container": "#4b8eff",
+                        "surface-container": "#171f33",
+                        "on-secondary-fixed-variant": "#544600",
+                        "on-primary-container": "#00285c",
+                        "tertiary-container": "#ef6719",
+                        "on-surface-variant": "#c1c6d7",
+                        "surface-container-low": "#131b2e",
+                        "on-error": "#690005",
+                        "secondary": "#fff9ef",
+                        "on-primary-fixed": "#001a41",
+                        "on-surface": "#dae2fd",
+                        "inverse-on-surface": "#283044",
+                        "surface-container-highest": "#2d3449",
+                        "inverse-surface": "#dae2fd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(11, 19, 38, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .masonry-grid {
+            columns: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) { .masonry-grid { columns: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { columns: 3; } }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-obsidian-base text-on-background selection:bg-electric-blue selection:text-white font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-obsidian-base/80 backdrop-blur-md sticky top-0 z-50 border-b border-titanium-silver/10 shadow-md">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-display-xl text-headline-lg font-bold text-titanium-silver tracking-tighter" href="/">
+                Strand &amp; Lock
+            </a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-titanium-silver hover:text-electric-blue transition-colors duration-300" href="expert-services-strand-lock.html">Services</a>
+<a class="font-body-md text-body-md text-titanium-silver hover:text-electric-blue transition-colors duration-300" href="expert-services-strand-lock.html">Locksmith</a>
+<a class="font-body-md text-body-md text-titanium-silver hover:text-electric-blue transition-colors duration-300" href="index.html">Handyman</a>
+<a class="font-body-md text-body-md text-titanium-silver hover:text-electric-blue transition-colors duration-300" href="contact-booking-strand-lock.html">Emergency</a>
+<a class="font-body-md text-body-md text-electric-blue border-b-2 border-electric-blue pb-1" href="our-work-gallery.html">Gallery</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block px-4 py-2 border border-titanium-silver/20 text-titanium-silver font-medium rounded hover:bg-surface-variant/20 transition-all active:scale-95">
+                    Get Quote
+                </button>
+<button class="px-6 py-2 bg-electric-blue text-white font-bold rounded shadow-[0_0_15px_rgba(0,122,255,0.4)] hover:scale-105 active:scale-90 transition-transform duration-200">
+                    Emergency Call
+                </button>
+</div>
+</div>
+</nav>
+<main class="min-h-screen relative">
+<!-- Hero Atmospheric Effect -->
+<div class="absolute top-0 left-0 w-full h-[600px] overflow-hidden pointer-events-none">
+
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-obsidian-base/50 to-obsidian-base"></div>
+</div>
+<section class="relative px-margin-desktop pt-24 pb-12 max-w-container-max mx-auto text-center">
+<span class="font-label-sm text-label-sm text-brushed-gold uppercase tracking-[0.2em] mb-4 block">Portfolio</span>
+<h1 class="font-display-xl text-display-xl text-titanium-silver mb-6">Our Craft in Action</h1>
+<p class="max-w-2xl mx-auto text-on-surface-variant font-body-md text-body-md leading-relaxed">
+                Precision engineering meets elite handyman services. Browse our recent projects across residential security and commercial property maintenance.
+            </p>
+</section>
+<!-- Filters -->
+<section class="sticky top-[80px] z-40 py-6 bg-obsidian-base/40 backdrop-blur-sm">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-wrap justify-center gap-4">
+<button class="filter-btn active px-8 py-3 rounded-full bg-electric-blue text-white font-bold text-label-sm uppercase transition-all" data-filter="all">All Projects</button>
+<button class="filter-btn px-8 py-3 rounded-full bg-surface-container border border-outline-variant text-on-surface-variant font-bold text-label-sm uppercase hover:border-electric-blue transition-all" data-filter="locksmith">Locksmith</button>
+<button class="filter-btn px-8 py-3 rounded-full bg-surface-container border border-outline-variant text-on-surface-variant font-bold text-label-sm uppercase hover:border-electric-blue transition-all" data-filter="handyman">Handyman</button>
+</div>
+</section>
+<!-- Gallery Grid -->
+<section class="px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="masonry-grid" id="project-gallery">
+<!-- Project Item 1 -->
+<div class="masonry-item project-card group relative overflow-hidden rounded-xl bg-surface-container-low border border-titanium-silver/5" data-category="locksmith">
+<img class="w-full h-auto transform transition-transform duration-700 group-hover:scale-110" data-alt="A high-end, detailed close-up of a premium brass door lock cylinder being serviced. The lighting is cinematic with deep shadows and metallic glints of titanium and gold. Professional locksmithing tools are visible in a blurred background, suggesting elite craftsmanship in a modern architectural setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1TDImg8d7QS7CAMYEeNGQ2o2lWiw-3gXejIFA4Svc7GbKDrejcZHiiJSbU-kcgGuTT9ez1p6xMKoRsB3KmfzVItfblOG1dAFsI0DxArO9R81NuAdSEBtVfBJBF-9lODTjILN7DebMkI9v42Bu-qgr07x9Pi6yCF29J9bNtrTz4tjRiz8l1zSMb62cjdXm4pzcT53o_bGuao2GrfUguzHA1UB8WfGk8qsPueCDaknP6B7yxFXy0iuxFw">
+<div class="project-overlay absolute inset-0 bg-gradient-to-t from-obsidian-base via-obsidian-base/60 to-transparent opacity-0 transform translate-y-4 transition-all duration-500 flex flex-col justify-end p-8">
+<span class="text-electric-blue font-label-sm text-label-sm mb-2">High-Security Upgrade</span>
+<h3 class="font-display-xl text-headline-lg text-white mb-2">Elite Residential Lock</h3>
+<p class="text-on-surface-variant text-body-md">Precision installation of anti-snap cylinders for a luxury estate.</p>
+</div>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-electric-blue text-white text-[10px] font-bold rounded uppercase tracking-wider">Locksmith</span>
+</div>
+</div>
+<!-- Project Item 2 -->
+<div class="masonry-item project-card group relative overflow-hidden rounded-xl bg-surface-container-low border border-titanium-silver/5" data-category="locksmith">
+<img class="w-full h-auto transform transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLtT7F8LM-Nuwc9VAjZv1XTr_dzsfmvgRue9G60FcDw4zJaqNxBAbCxED2d5GtLkwlfczcTdIEMMVZNyynx9UB0U10t-TAmVgPTTsuG664UZ2lAQ5r0zEXh2w3K27EMhprTrlwlucmsy0xWoHty_ERF8FOtS1ZsDMgSKk2R-32Fuio-XVVs5lzIF0vY4mRM14uKzi3tc4ayaJLDDHcW2TzPyd8H4j8-Le2djTgYRBFH3GxUBEUKO9ivkueiZ">
+<div class="project-overlay absolute inset-0 bg-gradient-to-t from-obsidian-base via-obsidian-base/60 to-transparent opacity-0 transform translate-y-4 transition-all duration-500 flex flex-col justify-end p-8">
+<span class="text-electric-blue font-label-sm text-label-sm mb-2">Commercial Security</span>
+<h3 class="font-display-xl text-headline-lg text-white mb-2">Office Complex Access</h3>
+<p class="text-on-surface-variant text-body-md">Master key system design and implementation for 20+ units.</p>
+</div>
+</div>
+<!-- Project Item 3 -->
+<div class="masonry-item project-card group relative overflow-hidden rounded-xl bg-surface-container-low border border-titanium-silver/5" data-category="handyman">
+<img class="w-full h-auto transform transition-transform duration-700 group-hover:scale-110" data-alt="A sophisticated shot of a professional handyman installing premium custom cabinetry hardware. The scene is shot in a bright, modern kitchen with brushed-gold accents and slate-grey surfaces. The focus is sharp on the technical alignment, reflecting an atmosphere of uncompromising quality and meticulous attention to detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4x8LaaF8s_s4FXQpPjsyXUBjhQ1WOh9ZyDAu6QpxS8bUZWtedCKtymauSK3Ly1HoZmRwcIFc-9KXNTZP-kbIZEom8rcBq2f6zUCH0a5u7aWoGON2Fvohmy_FZGXZaLvxUb42kfTXwfRSo35JFubMqyi2XOwFOhMQGe4vcWtLALChNVQxIew6V248VhJsEvfuHdJVM-stkrw84Wsf3SoduaI6bKhFpEOo3jcm88_IEfTvjhxdSvM1voQ">
+<div class="project-overlay absolute inset-0 bg-gradient-to-t from-obsidian-base via-obsidian-base/60 to-transparent opacity-0 transform translate-y-4 transition-all duration-500 flex flex-col justify-end p-8">
+<span class="text-brushed-gold font-label-sm text-label-sm mb-2">Bespoke Fitting</span>
+<h3 class="font-display-xl text-headline-lg text-white mb-2">Premium Hardware</h3>
+<p class="text-on-surface-variant text-body-md">Custom designer hardware integration for a high-end refurbishment.</p>
+</div>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-brushed-gold text-obsidian-base text-[10px] font-bold rounded uppercase tracking-wider">Handyman</span>
+</div>
+</div>
+<!-- Project Item 4 -->
+<div class="masonry-item project-card group relative overflow-hidden rounded-xl bg-surface-container-low border border-titanium-silver/5" data-category="locksmith">
+<img class="w-full h-auto transform transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLv_PssZCeljbXIj_jdzGcuj_zbzPSZ2US4-gw1wb81rfkkszUFslzfki1yihWMCom17fsueXrhlBNkk0II2sFuH4XqVR4Iw2xY1jqbSAvXnclhHBPz9CVD3Uep5JCfjAh0FZdzrxsA0uq3kOCsGXyPSxFv23O4-2XmdkRw6riYxpKPUJA0adZzH71LlTppBQeydSVCPVPANN7YkkCxVHwNxWOURO2U3kA40J4LIr_fexblGm2dvjHPlwlyw">
+<div class="project-overlay absolute inset-0 bg-gradient-to-t from-obsidian-base via-obsidian-base/60 to-transparent opacity-0 transform translate-y-4 transition-all duration-500 flex flex-col justify-end p-8">
+<span class="text-electric-blue font-label-sm text-label-sm mb-2">Fast Response</span>
+<h3 class="font-display-xl text-headline-lg text-white mb-2">Emergency Entry</h3>
+<p class="text-on-surface-variant text-body-md">Non-destructive entry and immediate re-keying service.</p>
+</div>
+</div>
+<!-- Project Item 5 -->
+<div class="masonry-item project-card group relative overflow-hidden rounded-xl bg-surface-container-low border border-titanium-silver/5" data-category="handyman">
+<img class="w-full h-auto transform transition-transform duration-700 group-hover:scale-110" data-alt="An artistic high-angle shot of a tech-heavy handyman workshop. Tools are organized perfectly on a matte black pegboard with soft neon blue lighting. In the foreground, a professional worker is precisely measuring a metallic framing component for a modern commercial installation. The mood is industrious, clean, and futuristic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvO0Gn9V9APDebukYrupx1Wu4iOhbjbhXp2mHTD928lQACseIhgZ4ppHSDsckSO3ep1owsWX3LKOCLmyC_QVAZqru8Kjh7U3VG3RbW8h3RnYlDSFPt7KecKYieR28OvtC_RwAoxdYR6fpfMHuOuQ-CWwJqzXhF2naLfonckWupgX1JVG99nnLwiBA4B0oLG1NrSWbJzGaOHvFrRIJBo2bSTx3jLo_2rQgmXR9quOdYGP1izAaQW3XpzA">
+<div class="project-overlay absolute inset-0 bg-gradient-to-t from-obsidian-base via-obsidian-base/60 to-transparent opacity-0 transform translate-y-4 transition-all duration-500 flex flex-col justify-end p-8">
+<span class="text-brushed-gold font-label-sm text-label-sm mb-2">Structural Assembly</span>
+<h3 class="font-display-xl text-headline-lg text-white mb-2">Smart Home Mounts</h3>
+<p class="text-on-surface-variant text-body-md">Precision mounting of large-scale display systems and smart hubs.</p>
+</div>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-brushed-gold text-obsidian-base text-[10px] font-bold rounded uppercase tracking-wider">Handyman</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="px-margin-desktop py-24 max-w-container-max mx-auto text-center border-t border-titanium-silver/10 mt-12">
+<div class="glass-panel p-12 rounded-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-electric-blue/10 blur-[100px]"></div>
+<div class="relative z-10">
+<h2 class="font-display-xl text-display-xl text-titanium-silver mb-8">Ready to Secure Your Craft?</h2>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="px-10 py-5 bg-electric-blue text-white font-bold rounded-xl shadow-[0_20px_40px_rgba(0,122,255,0.3)] hover:translate-y-[-4px] transition-all">
+                            Book an Elite Consultation
+                        </button>
+<button class="px-10 py-5 border border-titanium-silver/20 text-titanium-silver font-bold rounded-xl hover:bg-white/5 transition-all">
+                            View More Services
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dim border-t border-brushed-gold/20 bg-gradient-to-b from-surface-dim to-obsidian-base">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-xl text-headline-lg font-black text-brushed-gold mb-6">Strand &amp; Lock</div>
+<p class="text-on-surface-variant text-body-md mb-6">Uncompromising security solutions and elite craftsmanship for the discerning property owner.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-brushed-gold cursor-pointer hover:opacity-100 opacity-80 transition-opacity">verified</span>
+<span class="material-symbols-outlined text-brushed-gold cursor-pointer hover:opacity-100 opacity-80 transition-opacity">shield</span>
+<span class="material-symbols-outlined text-brushed-gold cursor-pointer hover:opacity-100 opacity-80 transition-opacity">build</span>
+</div>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-sm text-label-sm text-brushed-gold uppercase tracking-widest mb-6">Our Services</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-body-md" href="contact-booking-strand-lock.html">Emergency Locksmith</a></li>
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-body-md" href="expert-services-strand-lock.html">Smart Lock Installation</a></li>
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-body-md" href="index.html">General Handyman</a></li>
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-body-md" href="expert-services-strand-lock.html">Commercial Security</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-sm text-label-sm text-brushed-gold uppercase tracking-widest mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-body-md" href="contact-booking-strand-lock.html">Service Areas</a></li>
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-body-md" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-body-md" href="index.html">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-body-md" href="contact-booking-strand-lock.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-sm text-label-sm text-brushed-gold uppercase tracking-widest mb-6">Contact</h4>
+<div class="flex items-center gap-3 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-electric-blue">call</span>
+<span class="text-body-md">0800 123 4567</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-electric-blue">location_on</span>
+<span class="text-body-md">London, United Kingdom</span>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 py-8 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Strand &amp; Lock Elite Security and Handyman Services. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Gallery Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button state
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-electric-blue', 'text-white');
+                    b.classList.add('bg-surface-container', 'text-on-surface-variant');
+                });
+                btn.classList.add('active', 'bg-electric-blue', 'text-white');
+                btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Simple Fade-in Observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        projectItems.forEach(item => {
+            item.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700');
+            observer.observe(item);
+        });
+    </script>
+</body></html>

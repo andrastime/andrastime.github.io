@@ -1,0 +1,422 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Mr. Gray's Handyman Service | Mastering Every Fix</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#2e3132",
+                        "outline-variant": "#c5c6ca",
+                        "background": "#f8f9fa",
+                        "secondary-container": "#fd8b00",
+                        "secondary-fixed-dim": "#ffb77d",
+                        "tertiary-fixed": "#dce3ec",
+                        "on-secondary-fixed-variant": "#6e3900",
+                        "primary-container": "#212529",
+                        "on-surface": "#191c1d",
+                        "tertiary-container": "#1e252b",
+                        "on-tertiary-container": "#858c94",
+                        "on-primary-container": "#888c91",
+                        "tool-orange": "#F37021",
+                        "surface": "#f8f9fa",
+                        "surface-bright": "#f8f9fa",
+                        "on-background": "#191c1d",
+                        "on-primary-fixed-variant": "#43474c",
+                        "on-secondary-container": "#603100",
+                        "outline": "#75777b",
+                        "primary": "#0c1014",
+                        "inverse-primary": "#c3c7cc",
+                        "surface-container": "#edeeef",
+                        "surface-tint": "#5b5f63",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-variant": "#e1e3e4",
+                        "primary-fixed": "#e0e3e8",
+                        "secondary": "#904d00",
+                        "primary-fixed-dim": "#c3c7cc",
+                        "on-secondary-fixed": "#2f1500",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdcc3",
+                        "on-tertiary-fixed": "#151c22",
+                        "on-primary-fixed": "#181c20",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#41484e",
+                        "border-subtle": "#DEE2E6",
+                        "slate-gray": "#343A40",
+                        "tertiary": "#091016",
+                        "on-surface-variant": "#44474a",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-dim": "#d9dadb",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#c0c7cf",
+                        "on-primary": "#ffffff",
+                        "surface-light": "#FFFFFF",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "8px",
+                        "section-padding": "80px",
+                        "gutter": "24px",
+                        "stack-lg": "32px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "button-text": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "button-text": ["16px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-shadow-sm { text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+        .transition-soft { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-card:hover { transform: translateY(-4px); border-color: #F37021; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface-light dark:bg-primary border-b border-border-subtle dark:border-outline-variant shadow-sm docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-surface-light">
+                Mr. Gray's Handyman Service
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md text-tool-orange border-b-2 border-tool-orange pb-1" href="home-mr-gray-s-handyman-service.html">Home</a>
+<a class="font-label-md text-label-md text-slate-gray dark:text-surface-variant hover:text-tool-orange transition-colors" href="#services">Services</a>
+<a class="font-label-md text-label-md text-slate-gray dark:text-surface-variant hover:text-tool-orange transition-colors" href="#portfolio">Portfolio</a>
+<a class="font-label-md text-label-md text-slate-gray dark:text-surface-variant hover:text-tool-orange transition-colors" href="#about">About</a>
+<a class="font-label-md text-label-md text-slate-gray dark:text-surface-variant hover:text-tool-orange transition-colors" href="#contact">Contact</a>
+</div>
+<div class="hidden lg:flex items-center space-x-4">
+<a class="flex items-center text-primary font-bold hover:text-tool-orange transition-soft" href="tel:1234567890">
+<span class="material-symbols-outlined mr-2">call</span>
+                    Call Us
+                </a>
+<button class="bg-tool-orange text-white px-6 py-3 rounded-lg font-button-text text-button-text hover:bg-opacity-90 active:scale-95 transition-all duration-150 shadow-sm">
+                    Request a Quote
+                </button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Hero background showing a high-end, clean interior workspace." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACV-dhEgixTN1Unkf2SKxjW5zNqCTA8GQM6jhReb2B9H2dlehtHA4YJHgP5k9INkpbbPVnRD0zs46C2tHctQ1Qj_wgkX7I0fPiSDKrbTTGwBgftIGvWCsBh0qVqrPw0QH7mklEvMHbOaGa-i_E4mdWeSpoAp-XTDvk865vY9hyIHRbF2z4EkxzqBCFwkp0NmTnKuIzuigd2YklJrUlkejzHAGCPJ44KWaC78qYJz6s5m5iOyjwk-0o_w">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-8 md:px-section-padding">
+<div class="max-w-2xl text-white">
+<h1 class="font-headline-xl text-headline-xl mb-stack-md leading-tight">
+                        Mastering Every Fix, <br><span class="text-tool-orange">Building Every Vision</span>
+</h1>
+<p class="font-body-lg text-body-lg mb-stack-lg text-surface-variant opacity-90 max-w-lg">
+                        Premium handyman services for your home and business. Reliable. Professional. Guaranteed craftsmanship that transforms your space.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-tool-orange text-white px-8 py-4 rounded-lg font-button-text text-button-text hover:brightness-110 active:scale-95 transition-all" href="#contact">
+                            Request a Quote
+                        </a>
+<a class="border-2 border-white text-white px-8 py-4 rounded-lg font-button-text text-button-text hover:bg-white hover:text-primary active:scale-95 transition-all" href="#services">
+                            View Services
+                        </a>
+</div>
+</div>
+</div>
+<!-- Atmospheric Element -->
+<div class="absolute bottom-0 right-0 p-8 hidden md:block">
+<div class="bg-surface-light p-6 border-l-4 border-tool-orange shadow-lg flex items-center gap-4">
+<div class="text-tool-orange">
+<span class="material-symbols-outlined text-[40px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary uppercase tracking-wider">Trusted Quality</p>
+<p class="font-body-md text-body-md text-slate-gray">500+ Projects Completed</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Overview -->
+<section class="py-section-padding bg-surface-container-lowest" id="services">
+<div class="max-w-container-max mx-auto px-8">
+<div class="mb-stack-lg border-l-4 border-tool-orange pl-6">
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase tracking-tight">Our Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Comprehensive solutions for every corner of your property.</p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Image -->
+<div class="md:col-span-8 relative rounded-xl overflow-hidden group">
+<img alt="Service icons collage showing range of skills." class="w-full h-full object-cover transition-soft group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgzkbycxN4GAulIIosFVRIy0wwo_-mrZFNhJSv5ipjSeWv6l8KROit0tRXXHiWX3J9Mms6Z4HZVlj_2K12MsR0KQHn4SXVkoW7ufPcINvPQmVrFuC5z5kRMseTUPwn3M_UAE0WqTT8x9OEcjEYEsMRg8ad7PH1gNRRJx4T-znvMvf_wqSEMROlFurD1g94LNua0bY35Xmompo3ZjnjDJf5_fQ-yXIvsQoIrxd1CiYimsIXhb9i6Uen9A">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-white">
+<h3 class="font-headline-md text-headline-md">Integrated Maintenance</h3>
+<p class="font-body-md text-body-md opacity-80">Full-service care for residential and commercial assets.</p>
+</div>
+</div>
+<!-- Individual Service Cards -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="bento-card bg-surface-light border border-border-subtle p-6 transition-soft cursor-pointer flex items-start gap-4">
+<div class="p-3 bg-surface-container rounded-lg text-tool-orange">
+<span class="material-symbols-outlined">plumbing</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] mb-1">Plumbing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Leaky faucets to complex pipe replacements.</p>
+</div>
+</div>
+<div class="bento-card bg-surface-light border border-border-subtle p-6 transition-soft cursor-pointer flex items-start gap-4">
+<div class="p-3 bg-surface-container rounded-lg text-tool-orange">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] mb-1">Electrical</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Fixture installs and wiring troubleshooting.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 bento-card bg-surface-light border border-border-subtle p-8 transition-soft cursor-pointer">
+<div class="mb-4 text-tool-orange">
+<span class="material-symbols-outlined text-[32px]">carpenter</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Carpentry</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Custom shelving, trim work, and structural repairs with precision.</p>
+</div>
+<div class="md:col-span-4 bento-card bg-surface-light border border-border-subtle p-8 transition-soft cursor-pointer">
+<div class="mb-4 text-tool-orange">
+<span class="material-symbols-outlined text-[32px]">format_paint</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Painting</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Meticulous interior and exterior painting for a fresh finish.</p>
+</div>
+<div class="md:col-span-4 bg-primary text-white p-8 flex flex-col justify-center rounded-xl">
+<h4 class="font-headline-md text-headline-md mb-4">Don't See It?</h4>
+<p class="font-body-md text-body-md opacity-80 mb-6">If you have a unique vision or a specialized fix, we're ready to tackle it.</p>
+<a class="text-tool-orange font-bold flex items-center group" href="tel:1234567890">
+                            Contact Us Today
+                            <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Snapshot -->
+<section class="py-section-padding overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 md:order-1">
+<div class="absolute -top-10 -left-10 w-64 h-64 bg-surface-container-high rounded-full -z-10"></div>
+<img alt="Portrait of Mr. Gray, a professional handyman." class="rounded-xl shadow-2xl w-full aspect-square object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0Sd7-0-cbO2aBb0e2jTTdp54WUK2rVOL9VlN9iUA6j9UOnF8Ug2cE-0EjA_aJBROUFY_2u0L6PY411i-8xuZ1FRG4eZSdpcy51KoJ2opCv2Ks3NHDLMj0STQoVuHxtk2zA74Rc3x5X6uHXTrnB-577qPOXLDabVdKzRvN37rK9KO2om1A9U3TDTbi-HYdIpstbJ4uhBw-PaoYxlAQzq7ZPRUbudp1MLkUCRd-hbZn4adOf4kNLvJh6A">
+<div class="absolute -bottom-6 -right-6 bg-tool-orange text-white p-6 rounded-lg shadow-lg">
+<p class="font-headline-lg text-headline-lg">15+</p>
+<p class="font-label-md text-label-md uppercase tracking-widest">Years Experience</p>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="text-tool-orange font-label-md text-label-md uppercase tracking-widest mb-4 block">Craftsmanship First</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Reliability is our <br>Foundation.</h2>
+<p class="font-body-lg text-body-lg text-slate-gray mb-6">
+                        Mr. Gray's Handyman Service was founded on a simple principle: doing the job right the first time. We treat every home with the respect of a master artisan and the efficiency of a modern professional.
+                    </p>
+<ul class="space-y-4 mb-stack-lg">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tool-orange">check_circle</span>
+<span class="font-body-md text-body-md">Fully Licensed &amp; Insured Professionals</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tool-orange">check_circle</span>
+<span class="font-body-md text-body-md">Transparent Upfront Pricing</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tool-orange">check_circle</span>
+<span class="font-body-md text-body-md">100% Satisfaction Guarantee</span>
+</li>
+</ul>
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-button-text text-button-text hover:bg-slate-gray active:scale-95 transition-all">
+                        Learn More About Us
+                    </button>
+</div>
+</div>
+</section>
+<!-- Interactive Contact Form -->
+<section class="py-section-padding bg-surface-container-low" id="contact">
+<div class="max-w-container-max mx-auto px-8">
+<div class="bg-surface-light rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+<!-- Left Info Column -->
+<div class="md:w-1/3 bg-primary text-white p-12">
+<h2 class="font-headline-lg text-headline-lg mb-8">Get a Free Estimate</h2>
+<p class="font-body-md text-body-md text-surface-variant mb-12">Send us a message with your project details and we'll get back to you within 24 hours.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tool-orange">location_on</span>
+<div>
+<h5 class="font-label-md text-label-md uppercase mb-1">Service Area</h5>
+<p class="font-body-md text-body-md">Portland Metro &amp; Surrounding Areas</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tool-orange">phone_in_talk</span>
+<div>
+<h5 class="font-label-md text-label-md uppercase mb-1">Phone</h5>
+<p class="font-body-md text-body-md">(503) 555-0123</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Column -->
+<div class="md:w-2/3 p-12">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-primary uppercase">Full Name</label>
+<input class="border-b border-border-subtle focus:border-tool-orange focus:ring-0 px-0 py-3 transition-colors outline-none font-body-md" placeholder="John Doe" type="text">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-primary uppercase">Email Address</label>
+<input class="border-b border-border-subtle focus:border-tool-orange focus:ring-0 px-0 py-3 transition-colors outline-none font-body-md" placeholder="john@example.com" type="email">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-primary uppercase">Service Type</label>
+<select class="border-b border-border-subtle focus:border-tool-orange focus:ring-0 px-0 py-3 transition-colors outline-none font-body-md bg-transparent">
+<option>Select a Service</option>
+<option>Plumbing</option>
+<option>Electrical</option>
+<option>Carpentry</option>
+<option>Painting</option>
+<option>General Repair</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-primary uppercase">Urgency</label>
+<select class="border-b border-border-subtle focus:border-tool-orange focus:ring-0 px-0 py-3 transition-colors outline-none font-body-md bg-transparent">
+<option>Standard</option>
+<option>ASAP (Emergency)</option>
+<option>Within 2 Weeks</option>
+<option>Consultation Only</option>
+</select>
+</div>
+<div class="md:col-span-2 flex flex-col gap-2">
+<label class="font-label-md text-label-md text-primary uppercase">Message</label>
+<textarea class="border-b border-border-subtle focus:border-tool-orange focus:ring-0 px-0 py-3 transition-colors outline-none font-body-md resize-none" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<div class="md:col-span-2">
+<button class="bg-tool-orange text-white w-full md:w-auto px-12 py-4 rounded-lg font-button-text text-button-text hover:brightness-110 active:scale-95 transition-all shadow-md" type="submit">
+                                    Submit Request
+                                </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-primary-container text-white">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-section-padding py-stack-lg max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-surface-light mb-4">
+                    Mr. Gray's
+                </div>
+<p class="font-body-md text-body-md text-on-primary-container">Professional handyman services delivering precision and reliability since 2008.</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-tool-orange uppercase mb-4">Quick Links</h5>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed-dim transition-colors" href="home-mr-gray-s-handyman-service.html">Home</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed-dim transition-colors" href="#services">Services</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed-dim transition-colors" href="#about">About Us</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed-dim transition-colors" href="#contact">Quote Request</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-tool-orange uppercase mb-4">Our Expertise</h5>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed-dim transition-colors" href="index.html">Plumbing</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed-dim transition-colors" href="index.html">Electrical</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed-dim transition-colors" href="index.html">Carpentry</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed-dim transition-colors" href="index.html">Painting</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-tool-orange uppercase mb-4">Legal</h5>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed-dim transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed-dim transition-colors" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-primary-container py-6 text-center">
+<p class="font-label-md text-label-md text-on-primary-container">© 2024 Mr. Gray's Handyman Service. All Rights Reserved.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-surface-light dark:bg-inverse-surface border-t border-border-subtle md:hidden shadow-lg">
+<a class="flex flex-col items-center justify-center text-slate-gray active:bg-surface-container transition-transform active:scale-95" href="tel:1234567890">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-md text-label-md">Call Now</span>
+</a>
+<a class="flex flex-col items-center justify-center text-tool-orange active:bg-surface-container transition-transform active:scale-95" href="#contact">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-label-md text-label-md">Book Online</span>
+</a>
+</nav>
+<script>
+        // Simple scroll observer for sticky header effect or fade-ins
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Click interaction for service cards
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mousedown', () => {
+                card.style.transform = 'scale(0.98) translateY(-4px)';
+            });
+            card.addEventListener('mouseup', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+        });
+    </script>
+</body></html>

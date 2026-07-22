@@ -1,0 +1,354 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact &amp; Emergency Booking | Strand &amp; Lock</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800;900&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#2d3449",
+                    "titanium-silver": "#E2E8F0",
+                    "primary-fixed": "#d8e2ff",
+                    "error-container": "#93000a",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-dim": "#0b1326",
+                    "on-secondary-fixed": "#221b00",
+                    "on-tertiary-fixed-variant": "#7c2e00",
+                    "obsidian-base": "#020617",
+                    "electric-blue": "#007AFF",
+                    "tertiary": "#ffb595",
+                    "brushed-gold": "#C5A059",
+                    "outline": "#8b90a0",
+                    "background": "#0b1326",
+                    "secondary-fixed": "#ffe16d",
+                    "surface-tint": "#adc6ff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "inverse-primary": "#005bc1",
+                    "primary": "#adc6ff",
+                    "tertiary-fixed-dim": "#ffb595",
+                    "on-primary": "#002e69",
+                    "secondary-container": "#ffdb3c",
+                    "on-tertiary-container": "#4c1a00",
+                    "on-background": "#dae2fd",
+                    "on-secondary-container": "#725f00",
+                    "on-tertiary": "#571e00",
+                    "outline-variant": "#414755",
+                    "security-orange": "#FF3B30",
+                    "error": "#ffb4ab",
+                    "secondary-fixed-dim": "#e9c400",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#351000",
+                    "surface-container-lowest": "#060e20",
+                    "tertiary-fixed": "#ffdbcc",
+                    "surface-bright": "#31394d",
+                    "on-secondary": "#3a3000",
+                    "surface-container-high": "#222a3d",
+                    "surface": "#0b1326",
+                    "primary-container": "#4b8eff",
+                    "surface-container": "#171f33",
+                    "on-secondary-fixed-variant": "#544600",
+                    "on-primary-container": "#00285c",
+                    "tertiary-container": "#ef6719",
+                    "on-surface-variant": "#c1c6d7",
+                    "surface-container-low": "#131b2e",
+                    "on-error": "#690005",
+                    "secondary": "#fff9ef",
+                    "on-primary-fixed": "#001a41",
+                    "on-surface": "#dae2fd",
+                    "inverse-on-surface": "#283044",
+                    "surface-container-highest": "#2d3449",
+                    "inverse-surface": "#dae2fd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-xl": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "display-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(rgba(226, 232, 240, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(226, 232, 240, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glass-panel {
+            background: rgba(11, 19, 38, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(226, 232, 240, 0.1);
+        }
+        .emergency-active {
+            box-shadow: 0 0 20px rgba(255, 59, 48, 0.3);
+            border-color: #FF3B30 !important;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 15px rgba(0, 122, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-obsidian-base text-on-surface font-body-md selection:bg-electric-blue/30 overflow-x-hidden">
+<!-- Header Navigation -->
+<header class="bg-obsidian-base/80 backdrop-blur-md sticky top-0 z-50 border-b border-titanium-silver/10">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-xl text-headline-lg font-bold text-titanium-silver tracking-tighter">
+                Strand &amp; Lock
+            </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md text-titanium-silver hover:text-electric-blue transition-colors duration-300" href="expert-services-strand-lock.html">Services</a>
+<a class="font-body-md text-body-md text-titanium-silver hover:text-electric-blue transition-colors duration-300" href="expert-services-strand-lock.html">Locksmith</a>
+<a class="font-body-md text-body-md text-titanium-silver hover:text-electric-blue transition-colors duration-300" href="index.html">Handyman</a>
+<a class="font-body-md text-body-md text-titanium-silver hover:text-electric-blue transition-colors duration-300" href="contact-booking-strand-lock.html">Emergency</a>
+<a class="font-body-md text-body-md text-titanium-silver hover:text-electric-blue transition-colors duration-300" href="our-work-gallery.html">Gallery</a>
+</nav>
+<div class="flex gap-4">
+<button class="px-6 py-2 border border-electric-blue text-electric-blue font-bold rounded-lg hover:bg-electric-blue/10 transition-all scale-95 active:scale-90">Emergency Call</button>
+<button class="px-6 py-2 bg-electric-blue text-white font-bold rounded-lg glow-button transition-all scale-95 active:scale-90">Get Quote</button>
+</div>
+</div>
+</header>
+<main class="relative min-h-screen blueprint-grid">
+<!-- Background Animation Layer -->
+
+<section class="max-w-container-max mx-auto px-margin-desktop py-16 relative z-10">
+<div class="mb-12">
+<span class="font-label-sm text-label-sm text-electric-blue uppercase tracking-widest block mb-4">Elite Response Team</span>
+<h1 class="font-display-xl text-display-xl text-titanium-silver leading-tight">Secure Your Premises <br>&amp; Resolve Issues Fast</h1>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Sidebar: Contact Info -->
+<div class="lg:col-span-4 space-y-8">
+<div class="glass-panel p-8 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-titanium-silver">support_agent</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-brushed-gold mb-6 border-b border-brushed-gold/20 pb-4">Direct Lines</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-surface-container p-3 rounded-lg">
+<span class="material-symbols-outlined text-electric-blue">call</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-outline uppercase">24/7 Hotline</p>
+<p class="font-display-xl text-headline-lg-mobile text-titanium-silver">0800-STRAND</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container p-3 rounded-lg">
+<span class="material-symbols-outlined text-electric-blue">mail</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-outline uppercase">Email Inquiry</p>
+<p class="font-body-md text-body-md text-titanium-silver">priority@strandlock.elite</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container p-3 rounded-lg">
+<span class="material-symbols-outlined text-electric-blue">location_on</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-outline uppercase">Service Area</p>
+<p class="font-body-md text-body-md text-titanium-silver">Greater London, Central Hub, and Elite Suburbs</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map/Blueprint Visual -->
+<div class="glass-panel h-64 rounded-xl overflow-hidden relative border-t border-brushed-gold/30">
+<div class="w-full h-full bg-cover bg-center grayscale opacity-50 group-hover:opacity-70 transition-opacity" data-alt="A highly detailed architectural blueprint of a high-security penthouse apartment, featuring digital layout lines in titanium silver against a deep obsidian background. The visual includes subtle glowing nodes at entry points and secure zones, emphasizing a high-tech security terminal aesthetic. Soft cinematic lighting highlights the precision of the technical drawings." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCjuPh875aH3ia8wg1lKiayhfq31O9HpO87iqEKk3yz6kKf1MIFtTS-QM3Jp_vBocqeKceU64YrBb-gUfeoeX1jIFRsVOEsruDJd6F5sXPfAoDxRhWnUhHZiAtNuoWotGKJLjYY7j6qTEUVtzM3cDrSRs4RCQSlE_dEWXhFze8dbkoyVtpZKfBWRmlESEmX1aiB0g0CRoNGj0JsPXSGXh5C27jZBoK2OiATjjqBIg3VLDfEbI7fOp_mrQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-obsidian-base to-transparent flex items-end p-6">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+<p class="font-label-sm text-label-sm text-titanium-silver">6 Technicians Currently Active</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Section -->
+<div class="lg:col-span-8">
+<div class="glass-panel p-10 rounded-xl relative">
+<h2 class="font-headline-lg text-headline-lg text-titanium-silver mb-8">Request an Elite Technician</h2>
+<form class="space-y-8" id="booking-form">
+<!-- Emergency Toggle -->
+<div class="p-6 rounded-xl border border-titanium-silver/10 bg-surface-container-low transition-all duration-300" id="emergency-toggle-container">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-security-orange/10 p-3 rounded-full">
+<span class="material-symbols-outlined text-security-orange">emergency</span>
+</div>
+<div>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile text-titanium-silver">Urgent Emergency</h4>
+<p class="text-on-surface-variant text-sm">Priority dispatch within 30-60 minutes. Additional fees apply.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" id="emergency-trigger" type="checkbox">
+<div class="w-14 h-7 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-security-orange"></div>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-outline uppercase ml-1">Full Name</label>
+<input class="w-full bg-surface-dim border border-titanium-silver/10 rounded-lg px-4 py-3 text-titanium-silver focus:border-electric-blue focus:ring-1 focus:ring-electric-blue outline-none transition-all placeholder:text-outline/40" placeholder="Johnathan Wick" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-outline uppercase ml-1">Phone Number</label>
+<input class="w-full bg-surface-dim border border-titanium-silver/10 rounded-lg px-4 py-3 text-titanium-silver focus:border-electric-blue focus:ring-1 focus:ring-electric-blue outline-none transition-all placeholder:text-outline/40" placeholder="+44 7000 000000" type="tel">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-outline uppercase ml-1">Service Category</label>
+<select class="w-full bg-surface-dim border border-titanium-silver/10 rounded-lg px-4 py-3 text-titanium-silver focus:border-electric-blue focus:ring-1 focus:ring-electric-blue outline-none transition-all appearance-none">
+<option>Select a service...</option>
+<option>Elite Locksmith Services</option>
+<option>Premium Handyman Task</option>
+<option>Advanced Security Audit</option>
+<option>Emergency Gaining Entry</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-outline uppercase ml-1">Problem Description</label>
+<textarea class="w-full bg-surface-dim border border-titanium-silver/10 rounded-lg px-4 py-3 text-titanium-silver focus:border-electric-blue focus:ring-1 focus:ring-electric-blue outline-none transition-all placeholder:text-outline/40" placeholder="Briefly describe the security issue or service required..." rows="4"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full bg-electric-blue hover:bg-on-primary-container text-white font-bold py-4 rounded-xl text-lg glow-button transition-all transform active:scale-95 flex items-center justify-center gap-3" type="submit">
+<span class="material-symbols-outlined">send_money</span>
+                                    Dispatch Elite Technician
+                                </button>
+<p class="text-center text-on-surface-variant text-xs mt-4">By clicking dispatch, you agree to our premium service terms and rapid-response protocol.</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Areas Teaser -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-panel p-6 rounded-lg border-t-2 border-brushed-gold">
+<h5 class="font-label-sm text-label-sm text-brushed-gold mb-2">LOCKSMITH</h5>
+<p class="text-sm text-on-surface-variant">Non-destructive entry, smart lock installation, and forensic security audits for high-value properties.</p>
+</div>
+<div class="glass-panel p-6 rounded-lg border-t-2 border-electric-blue">
+<h5 class="font-label-sm text-label-sm text-electric-blue mb-2">HANDYMAN</h5>
+<p class="text-sm text-on-surface-variant">Precision mounting, bespoke cabinetry repairs, and high-spec maintenance for modern estates.</p>
+</div>
+<div class="glass-panel p-6 rounded-lg border-t-2 border-titanium-silver">
+<h5 class="font-label-sm text-label-sm text-titanium-silver mb-2">COMMERCIAL</h5>
+<p class="text-sm text-on-surface-variant">Bulk maintenance and complex master-key system deployments for corporate headquarters.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dim border-t border-brushed-gold/20 bg-gradient-to-b from-surface-dim to-obsidian-base">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-display-xl text-headline-lg font-black text-brushed-gold mb-4">S&amp;L</div>
+<p class="text-on-surface-variant text-sm pr-4">Crafting security and excellence for the discerning client. Available 24/7/365.</p>
+</div>
+<div>
+<h6 class="font-label-sm text-label-sm text-titanium-silver mb-4 uppercase tracking-tighter">Legal</h6>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-sm" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-sm" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-sm text-label-sm text-titanium-silver mb-4 uppercase tracking-tighter">Services</h6>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-sm" href="expert-services-strand-lock.html">Service Areas</a></li>
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-sm" href="contact-booking-strand-lock.html">Emergency Services</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-sm text-label-sm text-titanium-silver mb-4 uppercase tracking-tighter">Support</h6>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-brushed-gold transition-colors text-sm" href="contact-booking-strand-lock.html">Contact Us</a></li>
+<li><p class="text-electric-blue text-sm">Call Center: Active</p></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop py-6 border-t border-titanium-silver/5 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Strand &amp; Lock Elite Security and Handyman Services. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for Emergency Toggle
+        const emergencyTrigger = document.getElementById('emergency-trigger');
+        const container = document.getElementById('emergency-toggle-container');
+        const submitBtn = document.querySelector('button[type="submit"]');
+
+        emergencyTrigger.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                container.classList.add('emergency-active');
+                container.classList.add('bg-security-orange/5');
+                submitBtn.classList.remove('bg-electric-blue');
+                submitBtn.classList.add('bg-security-orange');
+                submitBtn.innerHTML = '<span class="material-symbols-outlined">bolt</span> EMERGENCY DISPATCH';
+            } else {
+                container.classList.remove('emergency-active');
+                container.classList.remove('bg-security-orange/5');
+                submitBtn.classList.add('bg-electric-blue');
+                submitBtn.classList.remove('bg-security-orange');
+                submitBtn.innerHTML = '<span class="material-symbols-outlined">send_money</span> Dispatch Elite Technician';
+            }
+        });
+
+        // Simple Form Submission Logic
+        document.getElementById('booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> DISPATCHING...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> DISPATCHED SUCCESS';
+                btn.classList.add('bg-green-600');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('bg-green-600');
+                    btn.disabled = false;
+                    e.target.reset();
+                    container.classList.remove('emergency-active');
+                    container.classList.remove('bg-security-orange/5');
+                    submitBtn.classList.add('bg-electric-blue');
+                    submitBtn.classList.remove('bg-security-orange');
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body></html>

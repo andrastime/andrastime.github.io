@@ -1,0 +1,354 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact | Pyramid Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&amp;family=Manrope:wght@100..900&amp;family=Sora:wght@100..900&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .electric-glow:hover {
+            box-shadow: 0 0 25px 0 rgba(221, 183, 255, 0.3);
+        }
+        .pyramid-accent {
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+        }
+        .pulse-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #ddb7ff 50%, transparent 100%);
+            opacity: 0.5;
+        }
+        input:focus + label, input:not(:placeholder-shown) + label {
+            transform: translateY(-24px) scale(0.85);
+            color: #ddb7ff;
+        }
+        .scan-line {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(221, 183, 255, 0.2), transparent);
+            position: absolute;
+            animation: scan 4s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "surface-container": "#201f1f",
+                    "primary-fixed": "#f0dbff",
+                    "on-primary-fixed": "#2c0051",
+                    "tertiary-container": "#00a392",
+                    "outline-variant": "#4d4354",
+                    "secondary": "#c6c6c6",
+                    "inverse-surface": "#e5e2e1",
+                    "surface": "#131313",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "on-secondary-fixed-variant": "#474747",
+                    "on-tertiary-container": "#00302a",
+                    "surface-tint": "#ddb7ff",
+                    "secondary-container": "#474747",
+                    "on-background": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-highest": "#353534",
+                    "tertiary": "#3cddc7",
+                    "on-tertiary-fixed-variant": "#005047",
+                    "surface-container-lowest": "#0e0e0e",
+                    "tertiary-fixed": "#62fae3",
+                    "on-primary-container": "#400071",
+                    "primary": "#ddb7ff",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-container": "#b76dff",
+                    "outline": "#988d9f",
+                    "on-tertiary": "#003731",
+                    "on-secondary-container": "#b5b5b5",
+                    "on-primary": "#490080",
+                    "on-surface": "#e5e2e1",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#6900b3",
+                    "on-secondary": "#303030",
+                    "inverse-primary": "#842bd2",
+                    "surface-container-low": "#1c1b1b",
+                    "tertiary-fixed-dim": "#3cddc7",
+                    "background": "#131313",
+                    "on-error-container": "#ffdad6",
+                    "surface-bright": "#393939",
+                    "surface-dim": "#131313",
+                    "on-surface-variant": "#cfc2d6",
+                    "surface-variant": "#353534",
+                    "secondary-fixed": "#e2e2e2",
+                    "primary-fixed-dim": "#ddb7ff",
+                    "on-tertiary-fixed": "#00201c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "section-gap": "120px",
+                    "container-max": "1280px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "80px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Sora"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Sora"],
+                    "headline-lg-mobile": ["Sora"],
+                    "label-md": ["JetBrains Mono"],
+                    "body-md": ["Manrope"],
+                    "display-lg": ["Sora"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">Pyramid Services</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="our-services-pyramid-services.html">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="our-projects-pyramid-services.html">Portfolio</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="contact-us-pyramid-services.html">Contact</a>
+</div>
+<button class="font-label-md text-label-md bg-primary text-on-primary px-6 py-3 rounded-DEFAULT hover:opacity-80 active:scale-95 transition-all duration-300 shadow-[0_0_20px_rgba(221,183,255,0.2)]">
+                Get a Quote
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-20 relative">
+
+<div class="max-w-2xl">
+<div class="flex items-center gap-4 mb-6">
+<span class="w-12 h-[1px] bg-primary"></span>
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest">Connect with Precision</span>
+</div>
+<h1 class="font-display-lg text-display-lg mb-8 leading-tight">Powering the North with Expertise.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Whether you're looking for a bespoke residential installation or emergency commercial repairs, our master electricians are ready to respond across Leeds and the surrounding regions.</p>
+</div>
+</section>
+<!-- Main Content Grid -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Contact Info Column -->
+<div class="lg:col-span-5 space-y-8">
+<!-- 24/7 Emergency Support Card -->
+<div class="glass-card p-stack-lg relative overflow-hidden group">
+<div class="scan-line"></div>
+<div class="pyramid-accent absolute top-0 right-0 w-12 h-12 bg-primary/20"></div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+<h3 class="font-headline-md text-headline-md">24/7 Emergency</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Critical failure? Our rapid response unit is on standby for all electrical emergencies in West Yorkshire.</p>
+<a class="block font-headline-md text-headline-md text-primary group-hover:tracking-wider transition-all duration-300" href="tel:0800000000">0800 123 4567</a>
+<div class="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 text-primary font-label-md text-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        LIVE STATUS: AVAILABLE
+                    </div>
+</div>
+<!-- Direct Dial Info -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="glass-card p-6">
+<span class="font-label-md text-xs text-primary mb-2 block">LEEDS CENTRAL</span>
+<p class="font-headline-md text-xl mb-4">0113 456 7890</p>
+<p class="font-body-md text-sm text-on-surface-variant">City Centre &amp; Surrounding Areas</p>
+</div>
+<div class="glass-card p-6">
+<span class="font-label-md text-xs text-primary mb-2 block">WEST YORKS</span>
+<p class="font-headline-md text-xl mb-4">01484 987 654</p>
+<p class="font-body-md text-sm text-on-surface-variant">Huddersfield &amp; Calderdale</p>
+</div>
+</div>
+<!-- Email & Office -->
+<div class="glass-card p-stack-lg">
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<p class="font-label-md text-xs text-on-surface-variant uppercase mb-1">Direct Inquiries</p>
+<a class="font-body-lg text-body-lg hover:text-primary transition-colors" href="mailto:hello@pyramidsvcs.co.uk">hello@pyramidsvcs.co.uk</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-label-md text-xs text-on-surface-variant uppercase mb-1">Regional HQ</p>
+<p class="font-body-lg text-body-lg">The Foundry, Whitehall Rd,<br>Leeds LS1 4HR</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form Column -->
+<div class="lg:col-span-7">
+<div class="glass-card p-stack-lg md:p-12 h-full">
+<h2 class="font-headline-lg text-headline-md mb-2">Request Technical Survey</h2>
+<p class="font-body-md text-on-surface-variant mb-12">Submit your project details and an engineer will review your requirements within 4 business hours.</p>
+<form class="space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-white/20 focus:ring-0 focus:border-primary transition-all py-2 font-body-md" id="name" placeholder=" " type="text">
+<label class="absolute left-0 top-2 font-label-md text-on-surface-variant pointer-events-none transition-all" for="name">Full Name</label>
+</div>
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-white/20 focus:ring-0 focus:border-primary transition-all py-2 font-body-md" id="email" placeholder=" " type="email">
+<label class="absolute left-0 top-2 font-label-md text-on-surface-variant pointer-events-none transition-all" for="email">Email Address</label>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-white/20 focus:ring-0 focus:border-primary transition-all py-2 font-body-md" id="phone" placeholder=" " type="tel">
+<label class="absolute left-0 top-2 font-label-md text-on-surface-variant pointer-events-none transition-all" for="phone">Phone Number</label>
+</div>
+<div class="relative">
+<select class="peer w-full bg-transparent border-0 border-b border-white/20 focus:ring-0 focus:border-primary transition-all py-2 font-body-md appearance-none" id="service">
+<option class="bg-surface" disabled="" selected="" value=""></option>
+<option class="bg-surface" value="residential">Residential Electrical</option>
+<option class="bg-surface" value="commercial">Commercial Contract</option>
+<option class="bg-surface" value="emergency">Emergency Repair</option>
+<option class="bg-surface" value="inspection">Safety Inspection (EICR)</option>
+</select>
+<label class="absolute left-0 top-2 font-label-md text-on-surface-variant pointer-events-none transition-all" for="service">Service Type</label>
+</div>
+</div>
+<div class="relative">
+<textarea class="peer w-full bg-transparent border-0 border-b border-white/20 focus:ring-0 focus:border-primary transition-all py-2 font-body-md resize-none" id="message" placeholder=" " rows="4"></textarea>
+<label class="absolute left-0 top-2 font-label-md text-on-surface-variant pointer-events-none transition-all" for="message">Project Details</label>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-5 rounded-DEFAULT electric-glow transition-all duration-500 flex items-center justify-center gap-3 group" type="submit">
+                            Transmit Inquiry
+                            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Service Area Map Section -->
+<section class="mt-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4">Operational Radius</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We serve the entire Leeds metropolitan area and surrounding West Yorkshire districts.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-md text-xs">Primary Zone</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full border border-primary"></span>
+<span class="font-label-md text-xs">Extended Coverage</span>
+</div>
+</div>
+</div>
+<div class="relative h-[500px] w-full rounded-xl overflow-hidden glass-card group">
+<div class="absolute inset-0 w-full h-full bg-surface-container grayscale opacity-80 group-hover:opacity-100 transition-opacity duration-700" data-alt="A futuristic, stylized satellite map of Leeds, West Yorkshire, presented in a high-contrast dark mode aesthetic. The map features luminous purple circuit-like lines highlighting main arterial roads and service hubs. A soft purple glow emanates from central Leeds, fading into the surrounding dark landscape. The visual style is technical, precise, and sophisticated, mirroring a digital architectural blueprint." data-location="Leeds, West Yorkshire" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQEKuj9dzSwnFUvARMLS2OxResboFxMNbE8V3acvMfPvmA33lRVIUt1_QUaMuFpInqm7Q6no5CsgjC3wc4f6I2tVOpS-Y2GNUJd-ywMh8i7xmE4JJyIFV3g9-UfRjgnqChiqomE90o-Cqu8-dz-7yA0uhOfDPAFW8ncmYDSJIzcKO1WCDc2StrE5Sy7fUotZ2JEbKOTzPr7byHSsase89S7kxiZs7uPCX4-vjRZWP9poQhtXnGJIIr')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent pointer-events-none"></div>
+<!-- Interactive Map Pin -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="relative">
+<div class="absolute -inset-8 bg-primary/20 rounded-full animate-ping"></div>
+<div class="absolute -inset-4 bg-primary/40 rounded-full animate-pulse"></div>
+<div class="relative bg-primary text-on-primary w-12 h-12 rounded-full flex items-center justify-center shadow-[0_0_30px_#ddb7ff]">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+</div>
+</div>
+<!-- City Labels Over Map -->
+<div class="absolute inset-0 p-12 hidden md:block pointer-events-none">
+<span class="absolute top-1/4 left-1/4 font-label-md text-xs text-on-surface/50">Bradford</span>
+<span class="absolute bottom-1/4 left-1/3 font-label-md text-xs text-on-surface/50">Wakefield</span>
+<span class="absolute top-1/3 right-1/4 font-label-md text-xs text-on-surface/50">York</span>
+<span class="absolute bottom-1/3 right-1/3 font-label-md text-xs text-on-surface/50">Castleford</span>
+</div>
+</div>
+</section>
+<!-- Pulse Divider -->
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-section-gap">
+<div class="pulse-line"></div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-surface border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-6">Pyramid Services</div>
+<p class="font-body-md text-on-surface-variant mb-6">High-performance electrical engineering for modern environments.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-primary mb-6">Services</h4>
+<a class="block font-body-md text-on-surface-variant hover:text-primary transition-colors" href="our-services-pyramid-services.html">Residential</a>
+<a class="block font-body-md text-on-surface-variant hover:text-primary transition-colors" href="our-services-pyramid-services.html">Commercial</a>
+<a class="block font-body-md text-on-surface-variant hover:text-primary transition-colors" href="contact-us-pyramid-services.html">Emergency</a>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-primary mb-6">Company</h4>
+<a class="block font-body-md text-on-surface-variant hover:text-primary transition-colors" href="our-services-pyramid-services.html">Safety Inspections</a>
+<a class="block font-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Terms</a>
+<a class="block font-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Privacy</a>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-md text-label-md text-primary mb-6">Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" href="index.html">
+<span class="material-symbols-outlined text-sm">link</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" href="index.html">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+<p class="font-body-md text-xs text-on-surface-variant">© 2024 Pyramid Services Leeds. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for inputs
+        document.querySelectorAll('input, select, textarea').forEach(el => {
+            el.addEventListener('focus', () => {
+                el.parentElement.querySelector('label').style.color = '#ddb7ff';
+            });
+            el.addEventListener('blur', () => {
+                if (!el.value) {
+                    el.parentElement.querySelector('label').style.color = '';
+                }
+            });
+        });
+    </script>
+</body></html>

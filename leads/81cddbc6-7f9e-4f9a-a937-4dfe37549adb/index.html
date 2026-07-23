@@ -1,0 +1,381 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Pyramid Services | Premium Electrical Engineering Leeds</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Manrope:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&amp;family=Manrope:wght@100..900&amp;family=Sora:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary-fixed-dim": "#c6c6c6",
+                "surface-container": "#201f1f",
+                "primary-fixed": "#f0dbff",
+                "on-primary-fixed": "#2c0051",
+                "tertiary-container": "#00a392",
+                "outline-variant": "#4d4354",
+                "secondary": "#c6c6c6",
+                "inverse-surface": "#e5e2e1",
+                "surface": "#131313",
+                "error-container": "#93000a",
+                "on-secondary-fixed": "#1b1b1b",
+                "on-secondary-fixed-variant": "#474747",
+                "on-tertiary-container": "#00302a",
+                "surface-tint": "#ddb7ff",
+                "secondary-container": "#474747",
+                "on-background": "#e5e2e1",
+                "error": "#ffb4ab",
+                "inverse-on-surface": "#313030",
+                "surface-container-highest": "#353534",
+                "tertiary": "#3cddc7",
+                "on-tertiary-fixed-variant": "#005047",
+                "surface-container-lowest": "#0e0e0e",
+                "tertiary-fixed": "#62fae3",
+                "on-primary-container": "#400071",
+                "primary": "#ddb7ff",
+                "surface-container-high": "#2a2a2a",
+                "primary-container": "#b76dff",
+                "outline": "#988d9f",
+                "on-tertiary": "#003731",
+                "on-secondary-container": "#b5b5b5",
+                "on-primary": "#490080",
+                "on-surface": "#e5e2e1",
+                "on-error": "#690005",
+                "on-primary-fixed-variant": "#6900b3",
+                "on-secondary": "#303030",
+                "inverse-primary": "#842bd2",
+                "surface-container-low": "#1c1b1b",
+                "tertiary-fixed-dim": "#3cddc7",
+                "background": "#050505",
+                "on-error-container": "#ffdad6",
+                "surface-bright": "#393939",
+                "surface-dim": "#131313",
+                "on-surface-variant": "#cfc2d6",
+                "surface-variant": "#353534",
+                "secondary-fixed": "#e2e2e2",
+                "primary-fixed-dim": "#ddb7ff",
+                "on-tertiary-fixed": "#00201c"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "section-gap": "120px",
+                "container-max": "1280px",
+                "margin-mobile": "20px",
+                "margin-desktop": "80px",
+                "stack-md": "16px",
+                "stack-lg": "32px",
+                "stack-sm": "8px"
+            },
+            "fontFamily": {
+                "headline-lg": ["Sora"],
+                "body-lg": ["Manrope"],
+                "headline-md": ["Sora"],
+                "headline-lg-mobile": ["Sora"],
+                "label-md": ["JetBrains Mono"],
+                "body-md": ["Manrope"],
+                "display-lg": ["Sora"]
+            },
+            "fontSize": {
+                "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #050505; color: #e5e2e1; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .electric-glow {
+            box-shadow: 0 0 20px 0 rgba(221, 183, 255, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(221, 183, 255, 0.5);
+        }
+        .scan-line {
+            background: linear-gradient(to bottom, transparent 50%, rgba(221, 183, 255, 0.05) 50%);
+            background-size: 100% 4px;
+        }
+        .pyramid-corner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, transparent 50%, #ddb7ff 50%);
+            opacity: 0.8;
+        }
+        .pulse-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #ddb7ff, transparent);
+            opacity: 0.4;
+        }
+        .hero-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Pyramid Services Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLtbG5_f6bUp1RGH3T9f0HP-F0hGXrHPZa9UDTJyywOUdigwynX9KFNLE5v7lmIhRxPPFhTMrFIghqJfYyzdVdPaowC7pyE1x5NRcG3Rf4oKgSKD-vcCqyWhtcGGi8FEo_dFcsZ8HGRh4xBbC_T5EMaVU6mHCp68fDHDUmrEq0mTOrJcxhzgn35DQVfVg6W8GS2oQCJnXaGUcgjWgBZKPYdChzjhsuMUnKPirmNjXaqsI_-K6uTPQwthzA">
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">Pyramid Services</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="index.html">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="our-services-pyramid-services.html">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="our-projects-pyramid-services.html">Portfolio</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="contact-us-pyramid-services.html">Contact</a>
+<button class="ml-4 px-6 py-2 bg-primary-container text-on-primary font-label-md text-label-md hover:opacity-80 transition-all duration-300 electric-glow active:scale-95">Get a Quote</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-4xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden pt-24 hero-clip">
+<!-- Background Animation Layer -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
+<div class="absolute inset-0 opacity-20 scan-line"></div>
+</div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="md:col-span-7 flex flex-col justify-center gap-stack-lg">
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 border border-primary text-primary font-label-md text-[12px] rounded-full uppercase tracking-widest">Available 24/7</span>
+<div class="h-px w-12 bg-primary/40"></div>
+</div>
+<h1 class="font-display-lg text-4xl md:text-display-lg text-on-background leading-tight">
+                    Powering <span class="text-primary text-glow">Leeds</span> with Precision &amp; Excellence
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    High-end electrical engineering for residential, commercial, and industrial projects. Technical mastery meets modern sophistication.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-8">
+<button class="px-10 py-4 bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 electric-glow hover:opacity-90 transition-all">
+                        VIEW SERVICES <span class="material-symbols-outlined">bolt</span>
+</button>
+<button class="px-10 py-4 border border-outline text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-white/5 transition-all">
+                        BOOK AN INSPECTION <span class="material-symbols-outlined">analytics</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-5 relative hidden md:flex items-center justify-center">
+<div class="relative w-full aspect-square glass-card rounded-full flex items-center justify-center overflow-hidden border-primary/20">
+<img alt="Professional Electrician" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuiCLjJCs26INERS_Gf8xYlx8gNgaGvO-_QgP1x3UONZNif4KEBA1enrZkrVwWx_lTPj0Xs-28ndYEi3OY5A0laMHPEJKqL6wMxGcGBu_P6ogM35nra9W_ouF8nkJpgeFHg5lTESbOoWtMsots7Y-i007145iXjLe3thphJRtMjORYVBohdcHQDZUDdfeu3YPBHRpQeGzupGuUYgWNy9BEkYDX349HLplIlxRQrmCONFCYY01ZMDV7PXw">
+</div>
+<!-- Floating Decorative Elements -->
+<div class="absolute -top-10 -right-10 w-40 h-40 glass-card rounded-xl rotate-12 flex items-center justify-center border-primary/10">
+<span class="material-symbols-outlined text-primary text-5xl">format_image_left</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Pulse Divider -->
+<div class="px-margin-desktop max-w-container-max mx-auto my-section-gap">
+<div class="pulse-divider"></div>
+</div>
+<!-- Core Services Bento -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+<div class="text-center mb-stack-lg">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">Expert Solutions</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mt-4">Premier Electrical Sectors</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Residential Card -->
+<div class="glass-card pyramid-corner p-stack-lg group hover:bg-white/[0.05] transition-all cursor-pointer">
+<div class="w-12 h-12 bg-primary/20 flex items-center justify-center rounded-lg mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">home</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Residential</h3>
+<p class="text-on-surface-variant mb-6">Sophisticated home automation, bespoke lighting design, and full rewiring services for luxury properties.</p>
+<ul class="space-y-3 font-label-md text-label-md text-on-surface/80">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">circle</span> Smart Home Integration</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">circle</span> EV Charging Stations</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">circle</span> Security &amp; Fire Systems</li>
+</ul>
+</div>
+<!-- Commercial Card -->
+<div class="glass-card pyramid-corner p-stack-lg group hover:bg-white/[0.05] transition-all cursor-pointer">
+<div class="w-12 h-12 bg-primary/20 flex items-center justify-center rounded-lg mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">business</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Commercial</h3>
+<p class="text-on-surface-variant mb-6">High-performance power systems and energy-efficient solutions tailored for modern business environments.</p>
+<ul class="space-y-3 font-label-md text-label-md text-on-surface/80">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">circle</span> Retail Lighting Fit-outs</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">circle</span> Data &amp; Comms Cabling</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">circle</span> Emergency Lighting</li>
+</ul>
+</div>
+<!-- Industrial Card -->
+<div class="glass-card pyramid-corner p-stack-lg group hover:bg-white/[0.05] transition-all cursor-pointer">
+<div class="w-12 h-12 bg-primary/20 flex items-center justify-center rounded-lg mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">factory</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Industrial</h3>
+<p class="text-on-surface-variant mb-6">Complex three-phase installations and large-scale facility maintenance with technical precision.</p>
+<ul class="space-y-3 font-label-md text-label-md text-on-surface/80">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">circle</span> Machine Wiring</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">circle</span> Control Panel Build</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">circle</span> Testing &amp; Compliance</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="bg-surface-container-low py-section-gap overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[400px] text-primary">bolt</span>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+<div class="flex flex-col gap-stack-lg">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">The Pyramid Standard</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">Engineered for Reliability</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We don't just provide electrical services; we deliver peace of mind through engineering excellence and a commitment to safety that goes beyond industry standards.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter mt-4">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">verified</span>
+<div>
+<h4 class="font-headline-md text-[20px] mb-1">NAPIT Approved</h4>
+<p class="text-on-surface-variant text-body-md">Fully accredited and insured for your protection.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">history_toggle_off</span>
+<div>
+<h4 class="font-headline-md text-[20px] mb-1">Rapid Response</h4>
+<p class="text-on-surface-variant text-body-md">On-site within hours for emergency outages.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">precision_manufacturing</span>
+<div>
+<h4 class="font-headline-md text-[20px] mb-1">State-of-the-art</h4>
+<p class="text-on-surface-variant text-body-md">Utilizing latest diagnostic and installation tools.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">loyalty</span>
+<div>
+<h4 class="font-headline-md text-[20px] mb-1">Fixed Pricing</h4>
+<p class="text-on-surface-variant text-body-md">Transparent quotes with no hidden surprises.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative h-[500px]">
+<div class="absolute inset-0 rounded-2xl overflow-hidden border border-white/10 glass-card">
+<div class="w-full h-full opacity-60" data-alt="A macro photography shot of complex high-end electrical wiring inside a modern control panel. The lighting is dark with dramatic electric purple and blue glows illuminating the copper wires and components. The style is technical, precise, and futuristic, following an Electric Noir aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDLw1gcdCRvTbPboQIKJPoTyx5vidm9qsdBAI-hI6VdXeoNCBTS1LOOBsw8FprCEWtBNPL043eaW-xRWt7auCLeBNqsRWV7d8yImAX5YnakuuN3mvBb9EPgGh_mdbnQGQXFmsvM2VIaI6jTwrXHXqZ5Oi55wQaFq9QP_c_lxfOyook4cLV-y4RwCY9vMcIR0gLYaRgWmVGGjPLFu3-xKDv6Cnn130VZptqGCQu9WmDuVnaA-Nwp9Le')"></div>
+</div>
+<!-- Trust Badge -->
+<div class="absolute -bottom-10 -left-10 bg-primary p-10 rounded-full text-on-primary flex flex-col items-center justify-center electric-glow animate-pulse">
+<span class="font-display-lg text-4xl">20+</span>
+<span class="font-label-md text-[10px] tracking-tighter">YEARS OF EXPERTISE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="glass-card p-12 md:p-24 relative overflow-hidden rounded-3xl border-primary/20">
+<div class="absolute inset-0 scan-line opacity-10"></div>
+<div class="relative z-10 flex flex-col items-center gap-stack-lg max-w-3xl mx-auto">
+<span class="material-symbols-outlined text-primary text-7xl">lightbulb</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Ready to upgrade your infrastructure?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Contact our Leeds-based engineering team today for a comprehensive site survey and bespoke quote.</p>
+<form class="w-full flex flex-col md:flex-row gap-4 mt-8">
+<input class="flex-grow bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all text-on-surface px-4 py-3 placeholder:text-outline-variant" placeholder="Your work email" type="email">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-10 py-4 electric-glow hover:scale-105 transition-transform active:scale-95 whitespace-nowrap">
+                        GET A QUOTE
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface w-full py-stack-lg border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-primary">Pyramid</span>
+</div>
+<p class="text-on-surface-variant text-body-md">Leeds' premier electrical service provider. Reliability and engineering excellence since 2004.</p>
+<div class="flex gap-4 mt-2">
+<a class="w-10 h-10 border border-outline-variant rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all" href="our-projects-pyramid-services.html"><span class="material-symbols-outlined">share</span></a>
+<a class="w-10 h-10 border border-outline-variant rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all" href="contact-us-pyramid-services.html"><span class="material-symbols-outlined">call</span></a>
+<a class="w-10 h-10 border border-outline-variant rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all" href="contact-us-pyramid-services.html"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-primary">Services</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="our-services-pyramid-services.html">Residential</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="our-services-pyramid-services.html">Commercial</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="our-services-pyramid-services.html">Industrial</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="our-services-pyramid-services.html">Emergency Repair</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-primary">Compliance</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="our-services-pyramid-services.html">Safety Inspections</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="our-services-pyramid-services.html">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="our-services-pyramid-services.html">Certifications</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-primary">Contact</h4>
+<p class="text-on-surface-variant">Unit 14, Leeds Industrial Park<br>Leeds, LS1 2AB</p>
+<p class="text-on-surface-variant font-bold">0113 4182 086</p>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-on-surface-variant text-[12px]">
+<p>© 2024 Pyramid Services Leeds. All rights reserved.</p>
+<p class="mt-4 md:mt-0">Designed for technical excellence.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => button.style.transform = 'scale(0.95)');
+            button.addEventListener('mouseup', () => button.style.transform = 'scale(1)');
+            button.addEventListener('mouseleave', () => button.style.transform = 'scale(1)');
+        });
+
+        // Simple scroll reveal
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.add('py-6');
+                nav.classList.remove('py-4');
+            }
+        });
+    </script>
+</body></html>

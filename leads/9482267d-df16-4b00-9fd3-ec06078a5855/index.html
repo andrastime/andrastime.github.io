@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hammer + Halo | Precision Handyman Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @media (max-width: 768px) {
+            .parallax-bg {
+                background-attachment: scroll;
+            }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "on-tertiary-fixed": "#191c1d",
+                        "inverse-surface": "#27313e",
+                        "on-background": "#121c28",
+                        "on-error-container": "#93000a",
+                        "background": "#f8f9ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#d1dbec",
+                        "on-tertiary-container": "#828485",
+                        "secondary-fixed": "#ffddb8",
+                        "secondary": "#855300",
+                        "outline": "#76777d",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-primary-container": "#7d8497",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#dfe9fa",
+                        "surface-tint": "#575e70",
+                        "tertiary": "#000000",
+                        "primary-container": "#141b2b",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c6c6cd",
+                        "surface-bright": "#f8f9ff",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "surface-variant": "#d9e3f4",
+                        "on-secondary-container": "#684000",
+                        "surface-container": "#e5eeff",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "on-surface": "#121c28",
+                        "secondary-container": "#fea619",
+                        "on-primary-fixed": "#141b2b",
+                        "surface-container-low": "#eef4ff",
+                        "primary-fixed": "#dce2f7",
+                        "surface": "#f8f9ff",
+                        "primary-fixed-dim": "#c0c6db",
+                        "tertiary-fixed": "#e1e3e4",
+                        "on-secondary-fixed": "#2a1700",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#404758",
+                        "inverse-primary": "#c0c6db",
+                        "tertiary-container": "#191c1d",
+                        "primary": "#000000",
+                        "surface-container-highest": "#d9e3f4",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#45464c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "headline-sm": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Header / TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300 h-20 flex items-center">
+<div class="flex justify-between items-center h-full px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-3">
+<img alt="Hammer + Halo Logo" class="h-12 w-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3vbmx3XyyEsa1WYVMrPrAOQduyYwuTJNnJvR7rgeJhDYTu70h9pB3L1JkvL-W3GS6M9pRjssbS6sd_5AEnCa14FwtrY_z56u8pf5Q_kHNigtuZWGePABJbUneNwJ7LK56jinTe2OQaXWkwrJJJ-ZC7ZbeHXCIXTasdsuA36RF8XO84GoLq0ZWQ1oJyW_MRAA2ROz3-vH6chZWP2MoD2NSVoGqyOYycQkArrndtxDOgEdcWgzWIBfPAg"/>
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-primary">Hammer + Halo</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#expertise">Expertise</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-6">
+<a class="hidden lg:flex items-center gap-2 font-label-md text-label-md text-primary font-bold" href="tel:5550123456">
+<span class="material-symbols-outlined text-secondary">phone</span>
+                    (555) 012-3456
+                </a>
+<a class="bg-primary text-on-primary px-6 py-3 font-label-md text-label-md rounded-lg hover:bg-secondary transition-all duration-300 active:scale-95" href="#quote">Get a Quote</a>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center overflow-hidden" id="hero">
+<div class="absolute inset-0 z-0 parallax-bg" data-alt="A cinematic, high-resolution lifestyle photograph of a professional handyman in high-end charcoal workwear, meticulously repairing a modern kitchen faucet. The scene is bathed in warm, soft morning light coming through a window, creating a serene and premium atmosphere. The color palette is dominated by deep grays, crisp whites, and subtle orange accents on the tools. The mood conveys precision, craftsmanship, and reliability in a luxurious residential setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaR5lTscy8jgP7eNQzBy6dafqiAnrwHfjab7Ji1eo3pt0hxKiA9O0l7Lj9ERb8ng41fyoMYvsDnGnMQp17ShB0OmvJBHgdRwG66LD0yhuF93Qtg-jBwd-x_1TqKds3D9nie5gx2WQv6LV4-wJzBKGqBVGNrTXStb5guIXAGSfXDCwWzDzWNuB2xxhbFGqjGxncEVJKLsSRIz-yh0571yM1xaNV5SjKWPky2YgvlEBqvcwuDM7DOhhZ7w')">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl text-on-primary">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+                        Your Home, Our Halo.<br/>
+<span class="text-secondary-container">Precision Repairs & Maintenance.</span>
+</h1>
+<p class="font-body-lg text-body-lg mb-8 text-on-primary/90 max-w-lg">
+                        Elevated craftsmanship for the modern property owner. From plumbing to custom carpentry, we bring architectural precision to every fix.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-secondary-container text-on-secondary-container px-8 py-4 font-label-md text-label-md rounded-lg shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all" href="#quote">Get a Quote</a>
+<a class="border-2 border-on-primary text-on-primary px-8 py-4 font-label-md text-label-md rounded-lg hover:bg-on-primary hover:text-primary transition-all" href="#services">Explore Services</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Section -->
+<section class="py-24 bg-surface px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="services">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Master-Level Services</h2>
+<div class="h-1 w-20 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Plumbing -->
+<article class="group bg-surface-container-low p-8 border border-outline-variant/30 rounded-xl hover:shadow-lg transition-all duration-300" itemscope="" itemtype="https://schema.org/Service">
+<meta content="Plumbing" itemprop="serviceType"/>
+<div class="w-14 h-14 bg-secondary-container/20 rounded-full flex items-center justify-center mb-6 text-secondary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">plumbing</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" itemprop="name">Plumbing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6" itemprop="description">
+                        Leak detection, fixture installation, and high-efficiency system maintenance with a focus on longevity.
+                    </p>
+<button class="flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors">
+                        Book Now <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</article>
+<!-- Electrical -->
+<article class="group bg-surface-container-low p-8 border border-outline-variant/30 rounded-xl hover:shadow-lg transition-all duration-300" itemscope="" itemtype="https://schema.org/Service">
+<meta content="Electrical" itemprop="serviceType"/>
+<div class="w-14 h-14 bg-secondary-container/20 rounded-full flex items-center justify-center mb-6 text-secondary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" itemprop="name">Electrical</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6" itemprop="description">
+                        Smart home integration, lighting upgrades, and safety inspections performed to exact code.
+                    </p>
+<button class="flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors">
+                        Book Now <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</article>
+<!-- Carpentry -->
+<article class="group bg-surface-container-low p-8 border border-outline-variant/30 rounded-xl hover:shadow-lg transition-all duration-300" itemscope="" itemtype="https://schema.org/Service">
+<meta content="Carpentry" itemprop="serviceType"/>
+<div class="w-14 h-14 bg-secondary-container/20 rounded-full flex items-center justify-center mb-6 text-secondary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">carpenter</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" itemprop="name">Carpentry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6" itemprop="description">
+                        Custom trim, cabinet repairs, and deck maintenance with architectural attention to detail.
+                    </p>
+<button class="flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors">
+                        Book Now <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</article>
+<!-- General Repairs -->
+<article class="group bg-surface-container-low p-8 border border-outline-variant/30 rounded-xl hover:shadow-lg transition-all duration-300" itemscope="" itemtype="https://schema.org/Service">
+<meta content="General Repairs" itemprop="serviceType"/>
+<div class="w-14 h-14 bg-secondary-container/20 rounded-full flex items-center justify-center mb-6 text-secondary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">construction</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" itemprop="name">General Repairs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6" itemprop="description">
+                        The "Halo" treatment for every corner of your home. Precise drywall, painting, and fixture repairs.
+                    </p>
+<button class="flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors">
+                        Book Now <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</article>
+</div>
+</section>
+<!-- Portfolio Carousel -->
+<section class="py-24 bg-surface-container-lowest overflow-hidden" id="projects">
+<div class="px-margin-desktop max-w-container-max mx-auto mb-12 flex justify-between items-end">
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Gallery</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-2">Recent Transformations</h2>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-colors" id="prevBtn">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-secondary transition-colors" id="nextBtn">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-gutter px-margin-desktop transition-transform duration-500 ease-in-out cursor-grab active:cursor-grabbing" id="carousel">
+<!-- Portfolio Item 1 -->
+<div class="min-w-[300px] md:min-w-[600px] shrink-0 group relative rounded-xl overflow-hidden shadow-lg border border-outline-variant/20">
+<div class="grid grid-cols-2 h-80 md:h-[450px]">
+<div class="relative bg-cover bg-center" data-alt="High-quality detailed close-up of an old, rusted bathroom faucet with scale buildup in a dark, dated bathroom. The image emphasizes the 'before' state of a renovation project. Professional photography with high contrast and sharp focus on the wear and tear." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFsyk65Vv9spfJfuAL5Vzrwx9TSYLqQ8Op-8X9BfO-5K2Yb2dOZoC3BQh3GYgFDmTocT27UMAQG0GIcvvncFaa_bUBCi6tHckIbZ_4jgFbXvDH4dKuj0X5MKZhYkl0uB8Mj31gQNRq91wvee_nPMVIVR_43uaEUWAx41T36_FNs0jTLo2GZguDhjAxfO2fA4N06jkDcu2IMHn7wIUytXyNQyZTIeH000Qf5XBbp81flYhygujCGcHsRg')">
+<span class="absolute top-4 left-4 bg-primary/80 text-on-primary px-3 py-1 text-caption uppercase font-bold rounded">Before</span>
+</div>
+<div class="relative bg-cover bg-center" data-alt="High-quality detailed close-up of a stunning, modern brushed gold waterfall faucet installed in a clean, white marble bathroom. The lighting is bright and airy, showing a luxury light-mode aesthetic. The 'after' state of a renovation project, perfectly matching the Hammer + Halo premium branding." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBSdpe9lp1M0d0LavNzmsRa00AeTgXt1FoY6oHTF5bkfRbObaiJB2ZgkrK6-_onR0lHniK55ZRCn3p5cpAzzWRNNHNniUUpgVZu3CLKolnm-ON1SFMXL0SHcbL6D15f7Ogor5fNh_TqblHL7s5nganF3VFlIyE-X0swepaQw6iZwcYlqOKmcVMMegs7LbIi70AdCASV-AmVdYZL9kore3VrHopLUlAww0hsW82eUbd7sGwsQ1LIZ5Qoxg')">
+<span class="absolute top-4 left-4 bg-secondary text-on-secondary px-3 py-1 text-caption uppercase font-bold rounded">After</span>
+</div>
+</div>
+<div class="p-6 bg-surface border-t border-outline-variant/30">
+<h4 class="font-headline-sm text-headline-sm">Master Bath Modernization</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Complete fixture overhaul and vanity restoration.</p>
+</div>
+</div>
+<!-- Portfolio Item 2 -->
+<div class="min-w-[300px] md:min-w-[600px] shrink-0 group relative rounded-xl overflow-hidden shadow-lg border border-outline-variant/20">
+<div class="grid grid-cols-2 h-80 md:h-[450px]">
+<div class="relative bg-cover bg-center" data-alt="A weathered, peeling wooden front door with dull metal hardware in a gray-toned outdoor setting. The image shows the need for repair and refurbishment. The lighting is overcast and flat to emphasize the poor condition of the door." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8SDk_iyMJZWx-nAGh1hbKm2fyBY_4-swqW_-fw8dGJ5VTiaJa1IuXOUhUDcCXk9Ji6QlAzqmWqR6tf3-FJvzcl1qbDaBh2JMA1seoNuj04nwVnau_MhIJxSsZeK2s22JbtsICni2H1Zq4zyQqFSb_35WnDQR97w7gC2qYaIP4UwGhWR7t0aEK6FTvFBsO-RZ_VkNsLTTO9u1lyv6IBiGrO4dQNogh5O5q0mHBnlgMkvYmrX-Mcux6zg')">
+<span class="absolute top-4 left-4 bg-primary/80 text-on-primary px-3 py-1 text-caption uppercase font-bold rounded">Before</span>
+</div>
+<div class="relative bg-cover bg-center" data-alt="A beautifully restored solid wood front door, sanded and finished with a rich mahogany stain and high-gloss protective coat. The hardware has been replaced with sleek, modern black iron. Bright sunlight hits the door, creating brilliant highlights and showcasing the masterful craftsmanship." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9Z8OuCyjFnQz-La2SQC6Dc3kS5PtAZ5wIa_iyaEgt7834gPrnlxC0t7MZtNzfSiSBeWiKxYmDNKQUJISFTAyqTsCRVtJjosP5Tcsc6hRXu-p2qTzPYoURDTZ2DgM5ibXC8aI9Votx8gwKh-DgkD4vWYGRnjMno2gn7dl2M1ojKOsy4If9C5N1ilg-uXKlF1cfZg4oGRxgOXT0A70c5o8BWXpvtVNkmo-Hss8DqkFryH2lyH4OW906eA')">
+<span class="absolute top-4 left-4 bg-secondary text-on-secondary px-3 py-1 text-caption uppercase font-bold rounded">After</span>
+</div>
+</div>
+<div class="p-6 bg-surface border-t border-outline-variant/30">
+<h4 class="font-headline-sm text-headline-sm">Entrance Portal Refurbishment</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Custom refinishing and hardware upgrade for a grand entry.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Let's Restore the Halo to Your Home.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Ready to experience precision? Fill out the form or reach out directly for a detailed estimate.
+                    </p>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface-variant uppercase">Call Us</h5>
+<p class="font-headline-sm text-headline-sm text-primary">(555) 012-3456</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface-variant uppercase">Email Us</h5>
+<p class="font-headline-sm text-headline-sm text-primary">service@hammerhalo.com</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface-variant uppercase">Location</h5>
+<p class="font-headline-sm text-headline-sm text-primary">Precision Park, Suite 100</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-8 md:p-12 rounded-2xl shadow-xl border border-outline-variant/20 relative">
+<form class="space-y-6" id="contactForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-label-md mb-2 text-on-surface-variant">Name</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all outline-none" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md mb-2 text-on-surface-variant">Email</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all outline-none" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md mb-2 text-on-surface-variant">Service Type</label>
+<select class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all outline-none">
+<option>Plumbing</option>
+<option>Electrical</option>
+<option>Carpentry</option>
+<option>General Repair</option>
+<option>Custom Project</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md mb-2 text-on-surface-variant">Message</label>
+<textarea class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all outline-none" required="" rows="4"></textarea>
+</div>
+<div class="bg-surface-variant/30 p-4 rounded-lg flex items-center gap-4">
+<div class="w-6 h-6 border-2 border-outline rounded flex items-center justify-center cursor-pointer bg-white"></div>
+<span class="text-caption">I'm not a robot (Captcha placeholder)</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 font-headline-sm text-headline-sm rounded-lg hover:bg-secondary transition-all shadow-md" type="submit">Send Request</button>
+</form>
+<!-- Success Message (Hidden) -->
+<div class="hidden absolute inset-0 bg-surface-container-high rounded-2xl flex flex-col items-center justify-center text-center p-12 z-10" id="successMessage">
+<div class="w-20 h-20 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-5xl">check_circle</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Request Received!</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A specialist will review your details and contact you within 24 hours.</p>
+<button class="mt-8 text-secondary font-bold hover:underline" onclick="resetForm()">Send another request</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container text-on-primary-container py-16 border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Hammer + Halo Logo" class="h-10 w-10 brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3vbmx3XyyEsa1WYVMrPrAOQduyYwuTJNnJvR7rgeJhDYTu70h9pB3L1JkvL-W3GS6M9pRjssbS6sd_5AEnCa14FwtrY_z56u8pf5Q_kHNigtuZWGePABJbUneNwJ7LK56jinTe2OQaXWkwrJJJ-ZC7ZbeHXCIXTasdsuA36RF8XO84GoLq0ZWQ1oJyW_MRAA2ROz3-vH6chZWP2MoD2NSVoGqyOYycQkArrndtxDOgEdcWgzWIBfPAg"/>
+<span class="font-headline-sm text-headline-sm text-on-primary-container">Hammer + Halo</span>
+</div>
+<p class="font-body-md text-body-md text-on-primary-container/80 max-w-sm mb-8">
+                    Defining the gold standard in property maintenance. Professional, licensed, and dedicated to precision in every project we undertake.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-on-primary-container/10 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-on-primary-container/10 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md uppercase mb-6 tracking-wider">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-fixed transition-colors" href="#">FAQ</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-fixed transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md uppercase mb-6 tracking-wider">Office</h4>
+<p class="font-body-md text-body-md text-on-primary-container/80 mb-4">
+                    123 Craftsmanship Way<br/>
+                    Suite 400<br/>
+                    Handyman Heights, CA 90210
+                </p>
+<p class="font-body-md text-body-md text-on-primary-container/80">
+                    Mon - Fri: 8:00 AM - 6:00 PM<br/>
+                    Sat: 9:00 AM - 2:00 PM
+                </p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-on-primary-container/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-caption text-caption text-on-primary-container/60">
+                © 2024 Hammer + Halo Handyman Services. Licensed & Insured.
+            </p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-secondary-fixed">shield</span>
+<span class="material-symbols-outlined text-secondary-fixed">verified</span>
+<span class="material-symbols-outlined text-secondary-fixed">workspace_premium</span>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface-container border-t border-outline-variant/50 shadow-lg flex justify-around items-center h-16 px-margin-mobile pb-safe">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-bright p-2 transition-all" href="tel:5550123456">
+<span class="material-symbols-outlined" data-icon="phone">phone</span>
+<span class="font-label-md text-[10px]">Call</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 active:scale-90 duration-150" href="#quote">
+<span class="material-symbols-outlined" data-icon="request_quote">request_quote</span>
+<span class="font-label-md text-[10px]">Quote</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-bright p-2 transition-all" href="#services">
+<span class="material-symbols-outlined" data-icon="construction">construction</span>
+<span class="font-label-md text-[10px]">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-bright p-2 transition-all" href="#map">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="font-label-md text-[10px]">Map</span>
+</a>
+</nav>
+<script>
+        // Form Submission Logic
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            successMessage.classList.remove('hidden');
+        });
+
+        function resetForm() {
+            contactForm.reset();
+            successMessage.classList.add('hidden');
+        }
+
+        // Carousel Logic
+        const carousel = document.getElementById('carousel');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        let scrollPos = 0;
+
+        nextBtn.addEventListener('click', () => {
+            const itemWidth = carousel.querySelector('div').offsetWidth + 24; // Width + gap
+            carousel.scrollBy({ left: itemWidth, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            const itemWidth = carousel.querySelector('div').offsetWidth + 24;
+            carousel.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('h-16', 'shadow-md');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.add('h-20');
+                header.classList.remove('h-16', 'shadow-md');
+            }
+        });
+    </script>
+</body></html>

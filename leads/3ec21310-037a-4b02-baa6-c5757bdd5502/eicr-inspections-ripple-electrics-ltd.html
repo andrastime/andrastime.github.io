@@ -1,0 +1,418 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Electrical Inspection (EICR) | Ripple Electrics Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#ffdb3c",
+                        "surface-container": "#1f2022",
+                        "primary": "#afc8f0",
+                        "inverse-primary": "#476083",
+                        "inverse-on-surface": "#2f3033",
+                        "background": "#121316",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1a1c1e",
+                        "surface-tint": "#afc8f0",
+                        "surface-container-highest": "#343537",
+                        "tertiary-fixed-dim": "#fdb69a",
+                        "tertiary-container": "#391303",
+                        "on-tertiary-fixed-variant": "#6b3a25",
+                        "on-surface": "#e3e2e5",
+                        "on-secondary": "#3a3000",
+                        "surface-container-lowest": "#0d0e11",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#b5785f",
+                        "surface-bright": "#38393c",
+                        "on-tertiary-fixed": "#351002",
+                        "surface": "#121316",
+                        "on-error": "#690005",
+                        "on-background": "#e3e2e5",
+                        "primary-fixed": "#d4e3ff",
+                        "inverse-surface": "#e3e2e5",
+                        "glass-border": "rgba(255, 215, 0, 0.2)",
+                        "outline-variant": "#43474e",
+                        "surface-dim": "#121316",
+                        "secondary-fixed": "#ffe16d",
+                        "outline": "#8e9198",
+                        "surface-container-high": "#292a2c",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "on-secondary-container": "#725f00",
+                        "on-tertiary": "#4f2411",
+                        "on-primary-container": "#6f88ad",
+                        "primary-container": "#001f3f",
+                        "secondary": "#fff9ef",
+                        "electric-cyan": "#00F2FF",
+                        "on-surface-variant": "#c4c6cf",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#221b00",
+                        "primary-fixed-dim": "#afc8f0",
+                        "surface-variant": "#343537",
+                        "on-secondary-fixed-variant": "#544600",
+                        "tertiary": "#fdb69a",
+                        "surface-dark": "#000B14",
+                        "on-primary": "#163152",
+                        "secondary-fixed-dim": "#e9c400",
+                        "on-primary-fixed": "#001c3a",
+                        "tertiary-fixed": "#ffdbce"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-xl": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #121316;
+            color: #e3e2e5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass-panel {
+            background: rgba(31, 32, 34, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .glow-gold {
+            box-shadow: 0 0 20px rgba(255, 219, 60, 0.15);
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(255, 219, 60, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .voltage-gradient {
+            background: linear-gradient(135deg, #001F3F 0%, #000B14 100%);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 242, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0); }
+        }
+
+        .active-ring {
+            animation: pulse-cyan 2s infinite;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-glass-border shadow-[0_0_20px_rgba(255,219,60,0.1)]">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary-container uppercase tracking-tighter">Ripple Electrics Ltd</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors" href="our-services-ripple-electrics-ltd.html">Domestic</a>
+<a class="font-label-caps text-label-caps text-secondary-container border-b-2 border-secondary-container pb-1" href="eicr-inspections-ripple-electrics-ltd.html">EICR</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors" href="our-services-ripple-electrics-ltd.html">Commercial</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors" href="contact-us-ripple-electrics-ltd.html">Contact</a>
+</nav>
+<a class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full font-label-caps text-label-caps hover:scale-105 transition-transform active:scale-95 duration-150" href="tel:07405026640">
+                07405 026640
+            </a>
+</div>
+</header>
+<main class="pt-24 pb-section-gap">
+<!-- Hero Section -->
+<section class="relative px-gutter max-w-container-max mx-auto py-16 lg:py-32">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/10 border border-secondary-container/30 rounded-full">
+<span class="material-symbols-outlined text-secondary-container text-sm">verified_user</span>
+<span class="font-label-caps text-xs text-secondary-container">NAPIT &amp; JIB CERTIFIED ENGINEERS</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-secondary leading-tight">
+                        Professional EICR &amp; <span class="text-secondary-container">Safety Inspections.</span>
+</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-xl">
+                        Ensuring legal compliance and electrical safety for landlords, homeowners, and commercial properties. We deliver thorough testing with detailed remedial reports.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="px-8 py-4 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps rounded-lg hover-glow transition-all" href="#book">REQUEST INSPECTION</a>
+<a class="px-8 py-4 border border-outline-variant hover:border-secondary transition-colors font-label-caps text-label-caps rounded-lg" href="#pricing">VIEW PRICING</a>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square glass-panel rounded-xl overflow-hidden glow-gold border-2 border-glass-border">
+<img class="w-full h-full object-cover opacity-80 mix-blend-lighten" data-alt="A professional high-contrast photo of a modern industrial electrical distribution board, with precise wiring and safety labels visible. The lighting is dramatic, highlighting the metallic surfaces and blue insulation, reflecting a high-end specialist engineering aesthetic in a dark-mode palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlkvrnQuO5LfWUdbhSp2vOXgB3I5240C0BAhAtnBTQyAbgqh942xhgjSBfZZ9ZJMXmHouRtWyElrxfhAR1JTiXADbjrFuYpen1GOnIOoh0gyAP9b5cciCLiAnkDEMoFtSpI4kwDMPCrko3Z2LO6dTYwLhQ9MDcmtegH3FSs--R2rPEZVH0u61jkoeXzH9CqjEOZXNdk1WgTGWu12K1CA5kTdXIaCyes0woBJ1ouK47hkWJtV9qaK4wBG5UrmyLgnnUiu4K-vwBmzo">
+</div>
+<div class="absolute -bottom-6 -left-6 glass-panel p-6 rounded-lg border border-secondary-container/20">
+<div class="flex items-center gap-3">
+<div class="p-3 bg-secondary-container rounded-full text-on-secondary-container">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<p class="font-label-caps text-xs text-secondary-container">EMERGENCY RESPONSE</p>
+<p class="font-headline-lg text-lg text-white">24/7 SUPPORT</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Compliance / Bento Section -->
+<section class="bg-surface-container-low py-24 px-gutter">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-secondary">Expert Landlord Compliance</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Mandatory since 2021, regular EICR inspections are critical for property safety and legal liability management.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Thorough Testing -->
+<div class="md:col-span-2 glass-panel p-8 rounded-xl relative overflow-hidden group">
+<div class="relative z-10 space-y-4">
+<span class="material-symbols-outlined text-secondary-container text-4xl">rule</span>
+<h3 class="font-headline-lg text-2xl text-secondary">Thorough Testing Protocols</h3>
+<p class="text-on-surface-variant text-body-md max-w-lg">Our JIB approved engineers perform rigorous visual and instrument-based testing of all fixed wiring, ensuring every circuit meets BS 7671 standards.</p>
+<ul class="space-y-2 mt-4">
+<li class="flex items-center gap-2 text-on-surface text-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Continuity &amp; Insulation Resistance</li>
+<li class="flex items-center gap-2 text-on-surface text-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Polarity &amp; Earth Fault Loop</li>
+<li class="flex items-center gap-2 text-on-surface text-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> RCD Trip Time Testing</li>
+</ul>
+</div>
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a digital multi-meter display showing electrical readings during a safety inspection. The environment is a dark utility room with industrial textures, glowing with amber and cyan highlights reflecting the high-tech precision of electrical engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCivHyB0fa0cK5OHX56KMbJ3TBzaWo5IopZhKrLIB6pPWypc_dcNeSkGqzgHptNa6MYIQDnkmqFZOV663ZZ1ukni5uYKENu7CkQJQ7BHwQENfzAtvWnAR7t67yUAL6LNfsh6wRtanqrQl62bUFvfLVq_V4AA5EbiMtiUizZMSC93TQvfVaIqAEHfzkG6W5CXJ6RZK-Q-qU-N6uzTNRO7LoLDhQWy7UfjDRbYoFIBUmdq8Rq4FgpBBo_tR0LHSMSHSPlxN4WAURycAM">
+</div>
+</div>
+<!-- Certification -->
+<div class="glass-panel p-8 rounded-xl bg-secondary-container/5 border-secondary-container/20 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary-container text-4xl">description</span>
+<h3 class="font-headline-lg text-2xl text-secondary mt-4">Digital Certification</h3>
+<p class="text-on-surface-variant text-body-md mt-2">Get your full PDF report within 24 hours of inspection completion.</p>
+</div>
+<div class="pt-8">
+<div class="flex -space-x-4">
+<div class="w-12 h-12 rounded-full border-2 border-background bg-white p-2 flex items-center justify-center">
+<span class="font-bold text-xs text-black">NAPIT</span>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-background bg-secondary-container p-2 flex items-center justify-center">
+<span class="font-bold text-xs text-black">JIB</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing / CTA -->
+<section class="py-24 px-gutter max-w-container-max mx-auto" id="pricing">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<div class="glass-panel p-1 border-glass-border rounded-2xl overflow-hidden glow-gold">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-highest">
+<tr>
+<th class="p-6 font-label-caps text-secondary-container">INSPECTION TYPE</th>
+<th class="p-6 font-label-caps text-secondary-container">STARTING FROM</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-glass-border">
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="p-6">Studio / 1-Bed Apartment</td>
+<td class="p-6 font-bold text-secondary">£120 + VAT</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="p-6">2-3 Bedroom House</td>
+<td class="p-6 font-bold text-secondary">£180 + VAT</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="p-6">4+ Bedroom Property</td>
+<td class="p-6 font-bold text-secondary">£220 + VAT</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="p-6">Commercial Property</td>
+<td class="p-6 font-bold text-secondary">Enquire</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-8" id="book">
+<h2 class="font-headline-lg text-headline-lg text-secondary">Book Your Inspection</h2>
+<form class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="font-label-caps text-xs text-on-surface-variant block mb-2">FULL NAME</label>
+<input class="w-full bg-surface-container border border-outline-variant focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan rounded-lg p-3 text-white outline-none" type="text">
+</div>
+<div>
+<label class="font-label-caps text-xs text-on-surface-variant block mb-2">PHONE NUMBER</label>
+<input class="w-full bg-surface-container border border-outline-variant focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan rounded-lg p-3 text-white outline-none" type="tel">
+</div>
+</div>
+<div>
+<label class="font-label-caps text-xs text-on-surface-variant block mb-2">POSTCODE</label>
+<input class="w-full bg-surface-container border border-outline-variant focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan rounded-lg p-3 text-white outline-none" type="text">
+</div>
+<div>
+<label class="font-label-caps text-xs text-on-surface-variant block mb-2">PROPERTY TYPE</label>
+<select class="w-full bg-surface-container border border-outline-variant focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan rounded-lg p-3 text-white outline-none">
+<option>Domestic - Landlord EICR</option>
+<option>Domestic - Homeowner Safety Check</option>
+<option>Commercial / Retail</option>
+<option>Industrial / Specialist</option>
+</select>
+</div>
+<button class="w-full py-4 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps rounded-lg hover:brightness-110 active:scale-[0.98] transition-all font-bold" type="submit">REQUEST QUOTE</button>
+</form>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 px-gutter bg-surface-container-lowest">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-3xl text-secondary text-center mb-12">Landlord FAQ</h2>
+<div class="space-y-4">
+<div class="glass-panel p-6 rounded-xl border border-glass-border">
+<h4 class="font-bold text-secondary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">help</span>
+                            How often is an EICR required?
+                        </h4>
+<p class="text-on-surface-variant">For rental properties, a new EICR is required every 5 years or at the start of a new tenancy. Some commercial properties may require more frequent testing.</p>
+</div>
+<div class="glass-panel p-6 rounded-xl border border-glass-border">
+<h4 class="font-bold text-secondary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">help</span>
+                            What happens if the report is 'Unsatisfactory'?
+                        </h4>
+<p class="text-on-surface-variant">If faults are found, they will be coded C1 (Danger), C2 (Potentially Dangerous), or C3 (Improvement Recommended). Landlords must address C1 and C2 issues within 28 days to remain compliant.</p>
+</div>
+<div class="glass-panel p-6 rounded-xl border border-glass-border">
+<h4 class="font-bold text-secondary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">help</span>
+                            Are Ripple engineers insured?
+                        </h4>
+<p class="text-on-surface-variant">Yes, we carry full public liability and professional indemnity insurance, backed by our JIB Gold Card and NAPIT certifications.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface-container/90 backdrop-blur-2xl border-t border-glass-border shadow-[0_-4px_24px_rgba(0,242,255,0.1)] rounded-t-full flex justify-around items-center px-4 py-3">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-secondary" href="our-services-ripple-electrics-ltd.html">
+<span class="material-symbols-outlined">electric_bolt</span>
+<span class="font-label-caps text-[10px] uppercase mt-1">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-secondary" href="index.html">
+<span class="material-symbols-outlined">imagesmode</span>
+<span class="font-label-caps text-[10px] uppercase mt-1">Gallery</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-2 scale-110" href="eicr-inspections-ripple-electrics-ltd.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+<span class="font-label-caps text-[10px] uppercase mt-1">Quote</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-secondary" href="tel:07405026640">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-caps text-[10px] uppercase mt-1">Call</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-glass-border bg-gradient-to-b from-surface-container-low to-surface-dark">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max mx-auto">
+<div class="space-y-4">
+<span class="font-headline-lg text-headline-lg text-secondary">Ripple Electrics Ltd</span>
+<p class="text-on-surface-variant font-body-md text-body-md">Expert specialist engineers providing elite electrical solutions across South London and the surrounding areas.</p>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-caps text-secondary">CERTIFICATIONS</h5>
+<ul class="space-y-2">
+<li class="text-on-surface-variant font-body-md">NAPIT Certified</li>
+<li class="text-on-surface-variant font-body-md">JIB Gold Card</li>
+<li class="text-on-surface-variant font-body-md">SafeContractor Approved</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-caps text-secondary">SERVICES</h5>
+<ul class="space-y-2">
+<li class="text-on-surface-variant font-body-md hover:text-secondary transition-colors cursor-pointer">Domestic Rewires</li>
+<li class="text-on-surface-variant font-body-md hover:text-secondary transition-colors cursor-pointer underline">Electrical Testing (EICR)</li>
+<li class="text-on-surface-variant font-body-md hover:text-secondary transition-colors cursor-pointer">Emergency Callout</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-caps text-secondary">CONTACT</h5>
+<p class="text-on-surface-variant font-body-md">07405 026640</p>
+<p class="text-on-surface-variant font-body-md">rippleelectrics@gmail.com</p>
+<div class="flex gap-4 mt-4">
+<a class="p-2 glass-panel rounded hover:translate-x-1 transition-transform" href="contact-us-ripple-electrics-ltd.html"><span class="material-symbols-outlined text-secondary">mail</span></a>
+<a class="p-2 glass-panel rounded hover:translate-x-1 transition-transform" href="contact-us-ripple-electrics-ltd.html"><span class="material-symbols-outlined text-secondary">location_on</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-glass-border flex flex-col md:flex-row justify-between gap-4 text-on-surface-variant font-label-caps text-xs">
+<span>© 2024 Ripple Electrics Ltd. Expert Specialist Engineers.</span>
+<div class="flex gap-6">
+<a class="hover:text-secondary" href="index.html">Privacy Policy</a>
+<a class="hover:text-secondary" href="index.html">Terms &amp; Conditions</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form interaction glow
+        const formInputs = document.querySelectorAll('input, select');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('active-ring');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('active-ring');
+            });
+        });
+    </script>
+</body></html>

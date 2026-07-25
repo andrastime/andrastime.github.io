@@ -1,0 +1,520 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Product Categories | YESSS Electrical</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .category-card:hover .category-image {
+            transform: scale(1.05);
+        }
+        .category-card:hover {
+            box-shadow: 0 10px 30px -10px rgba(0, 174, 239, 0.2);
+        }
+        /* Custom Scrollbar for Industrial Look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1A1A1A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00AEEF;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-fixed": "#cbe6ff",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eeeeee",
+                        "deep-slate": "#1A1A1A",
+                        "on-tertiary-fixed": "#001e31",
+                        "surface": "#f9f9f9",
+                        "on-tertiary-container": "#003c5d",
+                        "primary": "#00658d",
+                        "primary-container": "#00aeef",
+                        "warning-yellow": "#FFD700",
+                        "outline-variant": "#bdc8d1",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#3e4850",
+                        "tertiary": "#006496",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "success-green": "#2ECC71",
+                        "primary-fixed": "#c6e7ff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#82cfff",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-container": "#656464",
+                        "error-container": "#ffdad6",
+                        "outline": "#6e7881",
+                        "inverse-surface": "#2f3131",
+                        "on-primary-container": "#003e58",
+                        "on-tertiary-fixed-variant": "#004b72",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-on-surface": "#f1f1f1",
+                        "background": "#f9f9f9",
+                        "secondary": "#5f5e5e",
+                        "secondary-container": "#e4e2e1",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-primary-fixed-variant": "#004c6b",
+                        "inverse-primary": "#82cfff",
+                        "on-surface": "#1a1c1c",
+                        "secondary-fixed": "#e4e2e1",
+                        "tertiary-fixed-dim": "#90cdff",
+                        "surface-bright": "#f9f9f9",
+                        "electric-cyan": "#00AEEF",
+                        "surface-tint": "#00658d",
+                        "surface-container-low": "#f3f3f3",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#50aaea",
+                        "on-primary-fixed": "#001e2d",
+                        "surface-dim": "#dadada",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "label-sm": ["JetBrains Mono"],
+                        "label-md": ["JetBrains Mono"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-electric-cyan selection:text-white">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface-container-lowest/85 backdrop-blur-xl border-b-2 border-deep-slate shadow-[0_4px_20px_rgba(0,174,239,0.1)]">
+<div class="flex flex-col w-full max-w-container-max mx-auto px-margin-desktop py-4">
+<div class="flex items-center justify-between gap-gutter">
+<!-- Brand Logo -->
+<div class="font-headline-lg text-headline-lg font-black text-deep-slate tracking-tighter shrink-0 uppercase">
+                    YESSS <span class="text-electric-cyan">Electrical</span>
+</div>
+<!-- Search Bar -->
+<div class="flex-grow max-w-2xl hidden md:flex items-center bg-surface-container rounded-lg border-b-2 border-deep-slate focus-within:border-electric-cyan transition-colors px-4 py-2">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full font-label-md text-deep-slate placeholder:text-outline-variant" placeholder="Search 50,000+ products..." type="text">
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex flex-col items-end">
+<span class="font-label-sm text-outline-variant uppercase">Leeds Branch</span>
+<a class="font-label-md text-deep-slate hover:text-electric-cyan flex items-center gap-1 transition-colors" href="yesss-electrical-leeds-home.html">
+<span class="material-symbols-outlined text-sm">location_on</span> Branch Finder
+                        </a>
+</div>
+<button class="bg-deep-slate text-white px-6 py-2 font-label-md uppercase tracking-wider hover:bg-electric-cyan transition-all scale-95 active:scale-90">
+                        Trade Account
+                    </button>
+<div class="flex items-center gap-4 text-deep-slate">
+<button class="hover:text-electric-cyan transition-colors"><span class="material-symbols-outlined" data-icon="person">person</span></button>
+<button class="hover:text-electric-cyan transition-colors relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-electric-cyan text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">3</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="mt-4 flex items-center gap-8 overflow-x-auto no-scrollbar py-2">
+<a class="font-label-md whitespace-nowrap text-deep-slate hover:text-electric-cyan transition-colors duration-300" href="index.html">Lighting</a>
+<a class="font-label-md whitespace-nowrap text-deep-slate hover:text-electric-cyan transition-colors duration-300" href="index.html">EV Charging</a>
+<a class="font-label-md whitespace-nowrap text-deep-slate hover:text-electric-cyan transition-colors duration-300" href="index.html">Industrial Controls</a>
+<a class="font-label-md whitespace-nowrap text-deep-slate hover:text-electric-cyan transition-colors duration-300" href="index.html">Cables</a>
+<a class="font-label-md whitespace-nowrap text-deep-slate hover:text-electric-cyan transition-colors duration-300" href="index.html">Ventilation</a>
+<a class="font-label-md whitespace-nowrap text-deep-slate hover:text-electric-cyan transition-colors duration-300" href="index.html">Switchgear</a>
+</nav>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Breadcrumbs & Title -->
+<section class="mb-12">
+<nav class="flex gap-2 font-label-sm text-outline mb-4 uppercase">
+<a class="hover:text-electric-cyan transition-colors" href="yesss-electrical-leeds-home.html">Home</a>
+<span>/</span>
+<span class="text-deep-slate">Categories</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-deep-slate uppercase tracking-tight">Full Product <span class="text-electric-cyan">Ecosystem</span></h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mt-2">Explore our professional-grade inventory, organized for precision procurement and industrial-scale reliability.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-md text-deep-slate">Sort by:</span>
+<select class="bg-surface-container-high border-none font-label-md px-4 py-2 rounded focus:ring-2 focus:ring-electric-cyan cursor-pointer">
+<option>Most Popular</option>
+<option>A-Z</option>
+<option>Newest Arrivals</option>
+</select>
+</div>
+</div>
+</section>
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 shrink-0 space-y-8">
+<!-- Shop by Brand -->
+<div class="bg-surface-container-lowest p-6 border-b-4 border-deep-slate">
+<h3 class="font-label-md text-deep-slate uppercase font-bold mb-4 flex items-center justify-between">
+                        Shop by Brand
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-electric-cyan focus:ring-electric-cyan border-outline-variant" type="checkbox">
+<span class="font-label-sm text-on-surface-variant group-hover:text-deep-slate transition-colors uppercase">Schneider Electric</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-electric-cyan focus:ring-electric-cyan border-outline-variant" type="checkbox">
+<span class="font-label-sm text-on-surface-variant group-hover:text-deep-slate transition-colors uppercase">Luceco</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-electric-cyan focus:ring-electric-cyan border-outline-variant" type="checkbox">
+<span class="font-label-sm text-on-surface-variant group-hover:text-deep-slate transition-colors uppercase">MK Electric</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-electric-cyan focus:ring-electric-cyan border-outline-variant" type="checkbox">
+<span class="font-label-sm text-on-surface-variant group-hover:text-deep-slate transition-colors uppercase">BG Electrical</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-electric-cyan focus:ring-electric-cyan border-outline-variant" type="checkbox">
+<span class="font-label-sm text-on-surface-variant group-hover:text-deep-slate transition-colors uppercase">Vent-Axia</span>
+</label>
+<button class="text-electric-cyan font-label-sm uppercase mt-2 hover:underline">View All 200+ Brands</button>
+</div>
+</div>
+<!-- Special Offers -->
+<div class="bg-deep-slate p-6 text-white relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-electric-cyan rotate-45 translate-x-12 -translate-y-12"></div>
+<h3 class="font-headline-md text-headline-md mb-2 relative z-10">Clearance</h3>
+<p class="font-body-md text-surface-variant mb-6 relative z-10">Up to 40% off Industrial Switchgear this month.</p>
+<button class="w-full bg-electric-cyan text-white py-3 font-label-md uppercase tracking-widest hover:bg-white hover:text-deep-slate transition-all relative z-10">
+                        View Offers
+                    </button>
+</div>
+<!-- Technical Support Card -->
+<div class="bg-surface-container p-6 border-l-4 border-electric-cyan">
+<span class="material-symbols-outlined text-electric-cyan text-4xl mb-4">engineering</span>
+<h3 class="font-label-md text-deep-slate uppercase font-bold mb-2">Expert Advice</h3>
+<p class="font-label-sm text-on-surface-variant leading-relaxed uppercase">Need help with a technical spec? Our Leeds-based experts are on hand 8am-5pm.</p>
+</div>
+</aside>
+<!-- Categories Grid -->
+<div class="flex-grow">
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-gutter">
+<!-- Appliances -->
+<a class="category-card group bg-surface-container-lowest border border-surface-variant overflow-hidden transition-all duration-300" href="index.html">
+<div class="h-48 overflow-hidden relative">
+<div class="category-image bg-cover bg-center w-full h-full transition-transform duration-500" data-alt="A professional, clean high-key photograph of high-end industrial kitchen appliances and white goods in a minimalist showroom with soft blue lighting and sharp metallic details." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGF4p6b2oKwSrRPyC3vzISKizXVmQtWn-CFMUchhbCN7UO7UpbaSCQUl0Hmyvp8Z7mjImWdL6CttDEtdgtOVw6STeuK75t1ExGrnQ31pmyN4U17Sz87TgglgLFl6ASJchIQG_ua4ZFl5rYX-2j-P0WVLLEvCCYJKoVw6OU3eITZkBa8pnX6az8ZKdr5Fh3ZONHvEMU4_b4p6I_ZrGcoo-6MDhAtHsANjTR1jCSLyLhS3zfLeyiHS_mhgIotd8QawCoHnXx9jIlBVY')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/60 to-transparent"></div>
+<span class="absolute bottom-4 left-4 font-label-sm text-white bg-electric-cyan px-2 py-1 uppercase">1.2k+ Products</span>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-deep-slate uppercase mb-2 group-hover:text-electric-cyan transition-colors">Appliances</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Domestic and commercial appliances from leading brands.</p>
+<div class="flex items-center text-electric-cyan font-label-md uppercase tracking-wider">
+                                Explore <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</a>
+<!-- Cable -->
+<a class="category-card group bg-surface-container-lowest border border-surface-variant overflow-hidden transition-all duration-300" href="index.html">
+<div class="h-48 overflow-hidden relative">
+<div class="category-image bg-cover bg-center w-full h-full transition-transform duration-500" data-alt="A macro photograph of professional electrical cabling coils in various sizes and insulation colors, arranged in a structured, geometric pattern on a clean industrial concrete floor under cool studio lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmWvOglW2iUA-5xzkIWJR4vO5eSC1dPbECaXScFf4Ij6wa9P-RJoWth6XC1zuS9aPSNpORceZjvNUtAqnCmTLZwN3WTkbKu5yqHFPmQJyRopYoGqdnzLf8hi3mn-c-yFgJFF55Aep2BWlDOyoTuKbXwLCpyXZVzBilMDtQ3-n1bjLsxTZiX2s6w4U0rp_H1ZxyBgT7EiMdlKibZTkaH9CAanIXiC6briTOC9ORFQ-E75GuatZPMrhxg4p8sc8wOtfmmlI3akO6Vx0')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/60 to-transparent"></div>
+<span class="absolute bottom-4 left-4 font-label-sm text-white bg-electric-cyan px-2 py-1 uppercase">3.5k+ Products</span>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-deep-slate uppercase mb-2 group-hover:text-electric-cyan transition-colors">Cable</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">SWA, Twin &amp; Earth, Flex, and specialized high-spec wiring.</p>
+<div class="flex items-center text-electric-cyan font-label-md uppercase tracking-wider">
+                                Explore <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</a>
+<!-- EV Charging -->
+<a class="category-card group bg-surface-container-lowest border-2 border-electric-cyan overflow-hidden transition-all duration-300 relative shadow-lg" href="index.html">
+<div class="h-48 overflow-hidden relative">
+<div class="category-image bg-cover bg-center w-full h-full transition-transform duration-500" data-alt="A modern electric vehicle charging station mounted on a dark textured wall with illuminated cyan LED indicators and professional cable management, symbolizing clean energy and future-tech aesthetics." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfteHRAxFYHIdbIYUZ8Ap6doyGV4me0ZHtqRnb1rJSrNtjIRzGsgPwFOaMudKCCIvY7VntHaVZJ_2AjS3olQ2iG5oywdHvSOdzz23TIdCHGWne8pw1BY83qSt_8wC0UZiWTx1LaQIhWzR2s6K9dtqAsFQvHvAzwifTusCc0B-kVDmSDFbf_z-DDkJUT54SxOAGo7ZeoFExoiwJaOJ2_BKlltfFA5SAdjLr5Ubvepz7e09kmQh0YEX5zhpFb94mlcNftaxpMzeP_w8')"></div>
+<div class="absolute top-4 right-4">
+<span class="bg-warning-yellow text-deep-slate font-label-sm px-3 py-1 font-bold uppercase animate-pulse">Trending</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-deep-slate uppercase mb-2 group-hover:text-electric-cyan transition-colors">EV Charging &amp; Renewables</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">The latest in OZEV approved chargers and solar components.</p>
+<div class="flex items-center text-electric-cyan font-label-md uppercase tracking-wider">
+                                Explore <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">bolt</span>
+</div>
+</div>
+</a>
+<!-- Industrial Controls -->
+<a class="category-card group bg-surface-container-lowest border border-surface-variant overflow-hidden transition-all duration-300" href="index.html">
+<div class="h-48 overflow-hidden relative">
+<div class="category-image bg-cover bg-center w-full h-full transition-transform duration-500" data-alt="A close-up of a complex industrial control panel featuring neatly wired contactors, relays, and DIN rail mounted components with technical precision and cool white lighting in a modern factory setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6bdz7IGg85ufPn_6jxKkTGNHQiAblgTXtp-7Ed8VLYRb2JKUpPT-jRmDyBOnsr-SMF9r0qbaWBKDxNV3yw_Zsi6HnSefzH9-sQWl5AixPqUNQVERhxxxh-WhFS-NhgyR_udII4tspkKwPuRW3GF4-8y1Yl8XHkk6W3ir1Iz8_DH9EciE1zBh-LwM9F9w2ftpIfAzgm0wl6r5OapNp9viE5xCrPK9-HrRFtet2kdSDHChepgP7iWUHB4JRHl_Dz10RhQYYUqoseZo')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-deep-slate uppercase mb-2 group-hover:text-electric-cyan transition-colors">Industrial Controls</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Contactors, isolators, and heavy-duty motor control systems.</p>
+<div class="flex items-center text-electric-cyan font-label-md uppercase tracking-wider">
+                                Explore <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">settings</span>
+</div>
+</div>
+</a>
+<!-- Lighting -->
+<a class="category-card group bg-surface-container-lowest border border-surface-variant overflow-hidden transition-all duration-300" href="index.html">
+<div class="h-48 overflow-hidden relative">
+<div class="category-image bg-cover bg-center w-full h-full transition-transform duration-500" data-alt="An artistic display of architectural LED lighting fixtures, high-bay factory lights, and designer pendant lamps in a dark, atmospheric gallery space with vibrant electric cyan light trails." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDb3__YTpWKOrDXwvBMJsYgk6NKkTCiRV8RjrVhD5VCusrqdQHCurEYurKUygB6T-UexJ_5K84NOkqSnIOOPjrRqVnAXmao7OxWHNkJpPW5PJeLrixEReKuG1z-GWwGlK8wWLWXnyxRMAAH7YFL6-xDVg734CGfwozGc8si7cleUg76kec6wK3fDcEQZPJdIpGqzoOQLPMK2T39GowYCbsPHihuvfJPOBpr8GZLNActgCECIxxW6vOHv20mBgSPUQaNJmirYEKLJUc')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-deep-slate uppercase mb-2 group-hover:text-electric-cyan transition-colors">Lighting</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Indoor, outdoor, and emergency lighting solutions for any scale.</p>
+<div class="flex items-center text-electric-cyan font-label-md uppercase tracking-wider">
+                                Explore <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">lightbulb</span>
+</div>
+</div>
+</a>
+<!-- Smart Home -->
+<a class="category-card group bg-surface-container-lowest border border-surface-variant overflow-hidden transition-all duration-300" href="index.html">
+<div class="h-48 overflow-hidden relative">
+<div class="category-image bg-cover bg-center w-full h-full transition-transform duration-500" data-alt="A minimalist living room featuring integrated smart home tech like wall-mounted touchscreens, automated lighting control, and hidden speakers, styled in a sleek charcoal and white palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKzop-fmbRzuTCbwXfzMhJVjiUeNMtYRyuj5AX80JNHx0VPpAPj3J5oFzZQEScJBbxTDoATgi_0Znc0XBsEHplOF58wzt0CFSL2oDI0uC0-e6PdWwqyVAD32rPJZDRWooNZFwWCsb23qQd-q1aM4pXJyhNTxtlS-dn-QiOSv0hfeuA7hFJUbZWl91zwSZ3UGxX_u9UeSIco2tY1F4SyBqouxDmPKrDgDp8sulptnnBwe7rMIMEJhFoh9B_J5H9rsj6boPqkCslsWI')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-deep-slate uppercase mb-2 group-hover:text-electric-cyan transition-colors">Smart Home</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Home automation, intelligent thermostats, and connected lighting.</p>
+<div class="flex items-center text-electric-cyan font-label-md uppercase tracking-wider">
+                                Explore <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">home_app_logo</span>
+</div>
+</div>
+</a>
+<!-- Switchgear -->
+<a class="category-card group bg-surface-container-lowest border border-surface-variant overflow-hidden transition-all duration-300" href="index.html">
+<div class="h-48 overflow-hidden relative">
+<div class="category-image bg-cover bg-center w-full h-full transition-transform duration-500" data-alt="Professional consumer units and distribution boards with clear covers showing neatly arranged circuit breakers and RCDs in an organized industrial workshop." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOyaBny7pzi4g3YMEtTeK6XXif08bb4Dnw-pu78qmjwJqb51ZHN2Dynz74fkIHhVQSH-KzYUKVhG8mehhSFGgRbQ-svAEWU4n3rFmYmd8DtaUPZuDy4AsSwEwRTpBe99cQcj6tT2Yb22m3ZLPrfoiEhnWhMcBqoG_GziHuG_0eIPaql7FgmR8sFQUD3Ioilcix3qjxXdtK6xoFVqKEx9RfAGsv0LA_02x-eIDhmHKmfRye58GGbKY3uM8kwpo_IPuYoguIw1Pv3Kk')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-deep-slate uppercase mb-2 group-hover:text-electric-cyan transition-colors">Switchgear</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Distribution boards, consumer units, and protection devices.</p>
+<div class="flex items-center text-electric-cyan font-label-md uppercase tracking-wider">
+                                Explore <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">power</span>
+</div>
+</div>
+</a>
+<!-- Tools -->
+<a class="category-card group bg-surface-container-lowest border border-surface-variant overflow-hidden transition-all duration-300" href="index.html">
+<div class="h-48 overflow-hidden relative">
+<div class="category-image bg-cover bg-center w-full h-full transition-transform duration-500" data-alt="A collection of professional electrician's hand tools and power tools laid out on a blueprint, featuring high-quality insulated screwdrivers, multimeters, and drills in a cool blue toned studio lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUMq6NclqiTM5m3RnBGwrp0yIBiweXkt0F-ngB1ZIc_KCRogNSBbpLc8N5f3hhuKGiZamk89GK8AhkXkyFWOQOKfiNaMhxYIT-jJCS6z1NYwc1TIXzl6Dz2DQrrdVS0qDxDA0EEFX8wfdxnMweuf-LBD_X-ggnjMFn75WN8oBdlUW3lUIxFdrh1l4dh4T9pwVCdXSpM9CCMUDuX8YzdDGMNCAlIaJWd0yFHGKowkhfEDI9o7S3TcQ-Cc8_3ld9knT9nB3L57WwWG4')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-deep-slate uppercase mb-2 group-hover:text-electric-cyan transition-colors">Tools</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Insulated hand tools, testers, and professional power tools.</p>
+<div class="flex items-center text-electric-cyan font-label-md uppercase tracking-wider">
+                                Explore <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">construction</span>
+</div>
+</div>
+</a>
+<!-- Fire & Security -->
+<a class="category-card group bg-surface-container-lowest border border-surface-variant overflow-hidden transition-all duration-300" href="index.html">
+<div class="h-48 overflow-hidden relative">
+<div class="category-image bg-cover bg-center w-full h-full transition-transform duration-500" data-alt="Modern CCTV security cameras and high-tech smoke detectors mounted on a minimalist white ceiling, with subtle red status LEDs providing a sense of vigilant safety and precision technology." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBz6XKW3JpqRDlC4nfgX5I0PHbuTpLZm0jxdCN7xPT50GIe_nXC4_np0InbbMUVWhPkZlEJ-hDd6_KG-dSDgVGDWWOql7mJxaYa_rtbH3kvdU3l7tFIIB1oY9iCWp0dQlJOdeYIbwm4rGtsGuSiNpGWTD23esBYpTf04kG8cl-WOxoJ42eHs9nGYfIeXQfhavc3iBJiWbtsON75K71Nz-GHyepXIcU_F6bKUV7Xz7R6_4QULfn3RUHogKA1EXpwwQBHr1bqcYIQWm8')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-deep-slate uppercase mb-2 group-hover:text-electric-cyan transition-colors">Fire &amp; Security</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Alarm systems, CCTV, and fire detection hardware for sites.</p>
+<div class="flex items-center text-electric-cyan font-label-md uppercase tracking-wider">
+                                Explore <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">security</span>
+</div>
+</div>
+</a>
+</div>
+<!-- Load More / Pagination -->
+<div class="mt-12 flex justify-center">
+<button class="flex items-center gap-4 bg-surface-container-high px-8 py-4 font-label-md uppercase tracking-widest text-deep-slate hover:bg-electric-cyan hover:text-white transition-all group">
+                        View All Categories
+                        <span class="material-symbols-outlined group-hover:rotate-90 transition-transform">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Branch Map Teaser -->
+<section class="bg-surface-container border-y border-outline-variant py-20 relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-deep-slate uppercase mb-6">Local expertise, <br><span class="text-electric-cyan">National presence.</span></h2>
+<p class="font-body-lg text-on-surface-variant mb-8 max-w-lg">With over 300 branches nationwide, YESSS Electrical is never far from your next job site. Visit our Leeds flagship for live product demos.</p>
+<div class="flex flex-wrap gap-4">
+<div class="bg-white p-4 border-l-4 border-electric-cyan shadow-sm">
+<span class="block font-headline-md text-deep-slate">8:00 AM</span>
+<span class="font-label-sm text-outline uppercase">Branch Opening</span>
+</div>
+<div class="bg-white p-4 border-l-4 border-electric-cyan shadow-sm">
+<span class="block font-headline-md text-deep-slate">24/7</span>
+<span class="font-label-sm text-outline uppercase">Online Support</span>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-electric-cyan opacity-10 group-hover:opacity-20 transition-opacity blur-3xl"></div>
+<div class="relative bg-white p-2 shadow-2xl border-2 border-deep-slate">
+<div class="w-full h-80 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700" data-location="Leeds" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4a9YXMAJmdrdavivOocYtHKH7Qm52KH_91wVHS97_ijq91KdLPCns54vHG3Q2zFfOYmMc6O0PRaqxmXYaMY9T0x9yaC8e89UP20XrThI2Gg_e_nW_A3r2t4aO1BnsdrM1ech6dWpY4pgwpiEt7PdsE3-DOdHTkq19FnG6g_U0o2MCwdq2bLGJ2eqfOVvlBTPcFCL380gyFZVhZX3fuqY2ZkPiDkm8JAlPhnMdAxxAhHHkjXYY2gOYUYRPHXFJNfjslhH_1tcvO0o')"></div>
+<div class="p-6 bg-deep-slate text-white flex justify-between items-center">
+<div>
+<p class="font-label-md uppercase">Current Branch</p>
+<p class="font-headline-md">YESSS Leeds Central</p>
+</div>
+<button class="bg-electric-cyan text-white p-4 rounded-full hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">directions</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-deep-slate text-white border-t-4 border-electric-cyan">
+<div class="max-w-container-max mx-auto px-margin-desktop py-12 grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md font-bold text-surface-container-lowest uppercase tracking-tighter">
+                    YESSS <span class="text-electric-cyan">Electrical</span>
+</div>
+<p class="font-body-md text-surface-variant max-w-xs">The UK's fastest-growing electrical wholesaler. Supplying the trade since 2012 with premium service and technical expertise.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-electric-cyan transition-colors" href="yesss-electrical-leeds-home.html"><span class="material-symbols-outlined text-white">qr_code_2</span></a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-electric-cyan transition-colors" href="yesss-electrical-leeds-home.html"><span class="material-symbols-outlined text-white">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-electric-cyan uppercase font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="font-label-sm text-surface-variant hover:text-surface-container-lowest transition-transform hover:translate-x-1 inline-block uppercase" href="yesss-electrical-leeds-home.html">Account Management</a></li>
+<li><a class="font-label-sm text-surface-variant hover:text-surface-container-lowest transition-transform hover:translate-x-1 inline-block uppercase" href="index.html">Track Orders</a></li>
+<li><a class="font-label-sm text-surface-variant hover:text-surface-container-lowest transition-transform hover:translate-x-1 inline-block uppercase" href="yesss-electrical-leeds-home.html">Trade Application</a></li>
+<li><a class="font-label-sm text-surface-variant hover:text-surface-container-lowest transition-transform hover:translate-x-1 inline-block uppercase" href="yesss-electrical-leeds-home.html">Leeds Services</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-electric-cyan uppercase font-bold mb-6">Customer Care</h4>
+<ul class="space-y-3">
+<li><a class="font-label-sm text-surface-variant hover:text-surface-container-lowest transition-transform hover:translate-x-1 inline-block uppercase" href="index.html">Delivery Info</a></li>
+<li><a class="font-label-sm text-surface-variant hover:text-surface-container-lowest transition-transform hover:translate-x-1 inline-block uppercase" href="yesss-electrical-leeds-home.html">Returns Policy</a></li>
+<li><a class="font-label-sm text-surface-variant hover:text-surface-container-lowest transition-transform hover:translate-x-1 inline-block uppercase" href="index.html">Technical Support</a></li>
+<li><a class="font-label-sm text-surface-variant hover:text-surface-container-lowest transition-transform hover:translate-x-1 inline-block uppercase" href="index.html">Media Center</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-electric-cyan uppercase font-bold mb-6">Our App</h4>
+<p class="font-label-sm text-surface-variant uppercase mb-4">Manage your projects on the go with our trade app.</p>
+<div class="space-y-3">
+<button class="w-full border-2 border-surface-variant p-3 flex items-center gap-3 hover:bg-electric-cyan transition-all">
+<span class="material-symbols-outlined">file_download</span>
+<span class="font-label-sm uppercase">App Store</span>
+</button>
+<button class="w-full border-2 border-surface-variant p-3 flex items-center gap-3 hover:bg-electric-cyan transition-all">
+<span class="material-symbols-outlined">android</span>
+<span class="font-label-sm uppercase">Google Play</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-on-surface-variant/30 py-6">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-surface-variant uppercase">© 2024 YESSS Electrical Leeds. All rights reserved.</p>
+<div class="flex gap-6 font-label-sm text-surface-variant uppercase">
+<a class="hover:text-electric-cyan" href="index.html">Privacy</a>
+<a class="hover:text-electric-cyan" href="index.html">Terms</a>
+<a class="hover:text-electric-cyan" href="index.html">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating Action Button (Only for specific contexts, but here for utility) -->
+<button class="fixed bottom-8 right-8 bg-electric-cyan text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</button>
+<script>
+        // Micro-interaction for category cards
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('mousedown', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('mouseup', () => {
+                card.style.transform = 'scale(1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simple sticky nav interaction
+        let lastScrollTop = 0;
+        const nav = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                nav.style.transform = 'translateY(-10px)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+</body></html>

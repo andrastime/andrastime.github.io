@@ -1,0 +1,382 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Electrical Services | Ripple Electrics Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#ffdb3c",
+                        "surface-container": "#1f2022",
+                        "primary": "#afc8f0",
+                        "inverse-primary": "#476083",
+                        "inverse-on-surface": "#2f3033",
+                        "background": "#121316",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1a1c1e",
+                        "surface-tint": "#afc8f0",
+                        "surface-container-highest": "#343537",
+                        "tertiary-fixed-dim": "#fdb69a",
+                        "tertiary-container": "#391303",
+                        "on-tertiary-fixed-variant": "#6b3a25",
+                        "on-surface": "#e3e2e5",
+                        "on-secondary": "#3a3000",
+                        "surface-container-lowest": "#0d0e11",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#b5785f",
+                        "surface-bright": "#38393c",
+                        "on-tertiary-fixed": "#351002",
+                        "surface": "#121316",
+                        "on-error": "#690005",
+                        "on-background": "#e3e2e5",
+                        "primary-fixed": "#d4e3ff",
+                        "inverse-surface": "#e3e2e5",
+                        "glass-border": "rgba(255, 215, 0, 0.2)",
+                        "outline-variant": "#43474e",
+                        "surface-dim": "#121316",
+                        "secondary-fixed": "#ffe16d",
+                        "outline": "#8e9198",
+                        "surface-container-high": "#292a2c",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "on-secondary-container": "#725f00",
+                        "on-tertiary": "#4f2411",
+                        "on-primary-container": "#6f88ad",
+                        "primary-container": "#001f3f",
+                        "secondary": "#fff9ef",
+                        "electric-cyan": "#00F2FF",
+                        "on-surface-variant": "#c4c6cf",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#221b00",
+                        "primary-fixed-dim": "#afc8f0",
+                        "surface-variant": "#343537",
+                        "on-secondary-fixed-variant": "#544600",
+                        "tertiary": "#fdb69a",
+                        "surface-dark": "#000B14",
+                        "on-primary": "#163152",
+                        "secondary-fixed-dim": "#e9c400",
+                        "on-primary-fixed": "#001c3a",
+                        "tertiary-fixed": "#ffdbce"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-xl": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        
+        .glass-card {
+            background: rgba(31, 32, 34, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 219, 60, 0.1);
+        }
+
+        .glow-hover:hover {
+            box-shadow: 0 0 30px rgba(255, 219, 60, 0.15);
+            border-color: rgba(255, 219, 60, 0.4);
+        }
+
+        .voltage-glow {
+            box-shadow: 0 0 15px rgba(255, 219, 60, 0.4);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+        }
+
+        @keyframes pulse-cyan {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .animate-pulse-cyan {
+            animation: pulse-cyan 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-glass-border shadow-[0_0_20px_rgba(255,219,60,0.1)]">
+<nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary uppercase tracking-tighter">Ripple Electrics Ltd</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-secondary-container border-b-2 border-secondary-container pb-1" href="our-services-ripple-electrics-ltd.html">Domestic</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors" href="eicr-inspections-ripple-electrics-ltd.html">EICR</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors" href="our-services-ripple-electrics-ltd.html">Commercial</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors" href="contact-us-ripple-electrics-ltd.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:flex items-center gap-2 bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full font-label-caps text-label-caps hover:scale-105 active:scale-95 transition-all duration-300 voltage-glow" href="tel:07405026640">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                    07405 026640
+                </a>
+<button class="md:hidden text-secondary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-24 pb-32 md:pb-0">
+<!-- Hero Section -->
+<section class="relative min-h-[60vh] flex items-center overflow-hidden px-gutter py-section-gap">
+
+<div class="relative z-10 max-w-container-max mx-auto w-full">
+<div class="max-w-3xl">
+<span class="font-label-caps text-label-caps text-secondary-container mb-4 block tracking-[0.2em] uppercase">Premium Specialist Engineering</span>
+<h1 class="font-headline-xl text-headline-xl text-secondary mb-6 leading-tight">Expert Electrical Solutions for Modern Industry</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl">
+                        Over 29 years of specialist expertise delivering high-performance domestic, commercial, and industrial electrical installations across South London.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary-container text-on-secondary-container font-label-caps text-label-caps px-8 py-4 rounded-xl hover:scale-105 transition-all duration-300 voltage-glow uppercase">Get a Quote</button>
+<button class="border border-glass-border text-secondary font-label-caps text-label-caps px-8 py-4 rounded-xl hover:bg-surface-container-highest transition-all duration-300 backdrop-blur-md uppercase">Our Portfolio</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid - Asymmetric Layout -->
+<section class="px-gutter py-section-gap max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Domestic Column -->
+<div class="md:col-span-4 space-y-gutter">
+<div class="glass-card p-8 rounded-xl glow-hover h-full flex flex-col group transition-all duration-500">
+<div class="flex items-center justify-between mb-8">
+<span class="material-symbols-outlined text-secondary-container text-4xl" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-caps text-label-caps text-outline">01</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-4">Domestic</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                            Specialized residential engineering from complete smart-home rewires to advanced fuseboard upgrades and LED efficiency conversions.
+                        </p>
+<ul class="space-y-3 mb-10">
+<li class="flex items-center gap-3 font-label-caps text-[12px] text-on-surface">
+<span class="material-symbols-outlined text-secondary-container text-sm">bolt</span> Rewires &amp; Alterations
+                            </li>
+<li class="flex items-center gap-3 font-label-caps text-[12px] text-on-surface">
+<span class="material-symbols-outlined text-secondary-container text-sm">bolt</span> Fuseboard Upgrades
+                            </li>
+<li class="flex items-center gap-3 font-label-caps text-[12px] text-on-surface">
+<span class="material-symbols-outlined text-secondary-container text-sm">bolt</span> Smart Home Tech
+                            </li>
+</ul>
+<button class="w-full bg-secondary-container/10 border border-secondary-container/30 text-secondary-container font-label-caps text-label-caps py-4 rounded-lg group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-all duration-300">Inquire Now</button>
+</div>
+</div>
+<!-- Commercial Centerpiece -->
+<div class="md:col-span-8 space-y-gutter">
+<div class="relative overflow-hidden rounded-xl h-[400px] flex items-end group">
+<div class="absolute inset-0 z-0 scale-105 group-hover:scale-100 transition-transform duration-700" data-alt="A sophisticated industrial electrical control panel with intricate wiring, circuit breakers, and digital status monitors. The lighting is moody and technical with sharp cyan and gold highlights reflecting off metallic surfaces. High-end professional electrical engineering aesthetic with deep shadows and precise focus on the components." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdBd0rVd01fwsgBXqyBtOE5sejRVLJ5wy0BclWnGCf1k9QUDN3pqKppf1-cTwOE5zdnGGnvo_alsnhsZHwWmV6ukSpf2rJJH4_WjdPykZEnaVFkN45E_XiIqp6YOrZuiERTgOkXiGobWl6gqevEBxo5Lbfxan6tofDnWs2oydWXxEZLkPfT_SanRic52O5iWs_W2Zx6xDgvyVwu6iC8nPjUn1xa6OHwDRwYqzfuM1OCcCIBmQ7IpFT3O6Ds-1-vRLPGAVYkZqUpyk')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10"></div>
+<div class="relative z-20 p-10 w-full">
+<div class="flex items-end justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary-container mb-2 block">Specialist Projects</span>
+<h2 class="font-headline-lg text-headline-lg text-secondary">Commercial &amp; Industrial</h2>
+</div>
+<button class="bg-secondary text-on-secondary font-label-caps text-label-caps px-6 py-3 rounded-lg flex items-center gap-2 hover:translate-x-2 transition-transform duration-300">
+                                    Full Specs <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="glass-card p-8 rounded-xl glow-hover">
+<h3 class="font-headline-lg text-[24px] text-secondary mb-3">EICR Testing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Rigorous electrical safety inspections for landlords and businesses, ensuring total compliance.</p>
+<a class="font-label-caps text-label-caps text-secondary-container flex items-center gap-2 hover:gap-4 transition-all" href="eicr-inspections-ripple-electrics-ltd.html">View Compliance <span class="material-symbols-outlined text-sm">east</span></a>
+</div>
+<div class="glass-card p-8 rounded-xl glow-hover">
+<h3 class="font-headline-lg text-[24px] text-secondary mb-3">Emergency Callout</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">24/7 reactive maintenance for critical failures. We keep your operations powered around the clock.</p>
+<a class="font-label-caps text-label-caps text-electric-cyan flex items-center gap-2 animate-pulse-cyan" href="tel:07405026640">Deploy Now <span class="material-symbols-outlined text-sm">emergency</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Showcase (Gallery) -->
+<section class="py-section-gap bg-surface-container-lowest/50">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-4 uppercase italic">Precision &amp; Execution</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Documenting our high-integrity installations. From complex distribution boards to data infrastructure.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2 px-6 py-2 border border-glass-border rounded-full bg-surface-container-high">
+<span class="font-label-caps text-[12px] text-secondary">NAPIT Certified</span>
+</div>
+<div class="flex items-center gap-2 px-6 py-2 border border-glass-border rounded-full bg-surface-container-high">
+<span class="font-label-caps text-[12px] text-secondary">JIB Gold Card</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="aspect-[4/5] rounded-xl overflow-hidden glass-card group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuYQDrJ23YgjNXtmiU5a9N9YzmzLdbW0XgAQmb6PKW9T4Xgb4vS5t8cE4ThLgmcEZ03O5ZCKkkxW76TuC8uPsscfVoA0LlJXj0cR7xHfJ7f9bPtoadfS4aRTedhZcGN3ZPer_NlXBn8saNlmO14m3Zht0Eqw1ymu-gqV-pvQXxiFedVr-4fMn1cm4K4Wb7BJN-XJ7o-04tJFLDGrO_I6oWbl68VjNfqIkCADmUO1hY453708zU_5xw_JYQ">
+</div>
+<div class="aspect-[4/5] rounded-xl overflow-hidden glass-card group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLs7BPniMXMwOWKb3ZgNf0HUXi3d_0_bkG5rNLYDf7ClvR_UtXQwOpFNxQG98_fAk3XV1cTGMv9Hm7roiavlz1OX5QGycf32pL7_XppYXTiVfGoXiulRBucMMDFJLVMQez1khfSRnfuqHyKBMmwcJ7hMoh5gFb0Z_NidPbORKEdb4UF3IW7s9nCMjAPocLl2kIjho5ho1SX5cRspfIFieTFgxhQUp6B1SiHazotQjwOXlvTSjFTT6E9uAQ">
+</div>
+<div class="flex flex-col gap-8">
+<div class="flex-grow glass-card p-10 rounded-xl flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-secondary-container text-6xl mb-6">workspace_premium</span>
+<h4 class="font-headline-lg text-[24px] text-secondary mb-2">29+ Years</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Unrivaled Experience</p>
+</div>
+<div class="h-[200px] bg-secondary-container rounded-xl flex items-center justify-center group cursor-pointer overflow-hidden">
+<div class="bg-on-secondary-container text-secondary-container p-6 rounded-full group-hover:scale-125 transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Lead Capture Form -->
+<section class="px-gutter py-section-gap max-w-[900px] mx-auto">
+<div class="glass-card p-10 md:p-16 rounded-2xl relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-secondary-container/10 rounded-full blur-[80px]"></div>
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-4">Request a Site Survey</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Submit your project details for a specialist engineering assessment.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-[12px] text-secondary-container block">Full Name</label>
+<input class="w-full bg-background/50 border border-glass-border text-on-surface p-4 rounded-lg focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-all outline-none" placeholder="John Doe" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[12px] text-secondary-container block">Contact Number</label>
+<input class="w-full bg-background/50 border border-glass-border text-on-surface p-4 rounded-lg focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-all outline-none" placeholder="+44 7000 000000" type="tel">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[12px] text-secondary-container block">Service Category</label>
+<select class="w-full bg-background/50 border border-glass-border text-on-surface p-4 rounded-lg focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-all outline-none appearance-none">
+<option>Domestic Electrical</option>
+<option>Commercial Installation</option>
+<option>Industrial Engineering</option>
+<option>EICR / Testing</option>
+<option>24/7 Emergency</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[12px] text-secondary-container block">Project Description</label>
+<textarea class="w-full bg-background/50 border border-glass-border text-on-surface p-4 rounded-lg focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-all outline-none" placeholder="Briefly describe your requirements..." rows="4"></textarea>
+</div>
+<button class="w-full py-5 bg-secondary-container text-on-secondary-container font-headline-lg text-[20px] rounded-xl hover:voltage-glow hover:scale-[1.02] active:scale-95 transition-all duration-300 uppercase tracking-widest" type="submit">Transmit Inquiry</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-glass-border bg-gradient-to-b from-surface-container-low to-surface-dark">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<span class="font-headline-lg text-headline-lg text-secondary mb-6 block">Ripple Electrics Ltd</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-8">
+                    South London's trusted specialist engineers. Providing high-integrity electrical installations and maintenance for over 29 years.
+                </p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-secondary-container cursor-pointer hover:text-white transition-colors">bolt</span>
+<span class="material-symbols-outlined text-secondary-container cursor-pointer hover:text-white transition-colors">verified</span>
+<span class="material-symbols-outlined text-secondary-container cursor-pointer hover:text-white transition-colors">engineering</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary mb-6 uppercase">Expertise</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all inline-block" href="our-services-ripple-electrics-ltd.html">NAPIT Certified</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all inline-block" href="our-services-ripple-electrics-ltd.html">JIB Gold Card</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all inline-block" href="contact-us-ripple-electrics-ltd.html">Emergency Callout</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary mb-6 uppercase">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all inline-block" href="index.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all inline-block" href="index.html">Terms of Service</a></li>
+<li class="pt-4 font-label-caps text-[12px] text-on-surface-variant">© 2024 Ripple Electrics Ltd.</li>
+</ul>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-full bg-surface-container/90 backdrop-blur-2xl border-t border-glass-border shadow-[0_-4px_24px_rgba(0,242,255,0.1)] flex justify-around items-center px-4 py-3">
+<div class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-2 scale-110">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">electric_bolt</span>
+<span class="font-label-caps text-[10px]">Services</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-secondary">
+<span class="material-symbols-outlined">imagesmode</span>
+<span class="font-label-caps text-[10px]">Gallery</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-secondary">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="font-label-caps text-[10px]">Quote</span>
+</div>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-secondary" href="tel:07405026640">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-caps text-[10px]">Call</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for form inputs
+        document.querySelectorAll('input, textarea, select').forEach(element => {
+            element.addEventListener('focus', () => {
+                element.parentElement.querySelector('label').classList.add('text-glow');
+            });
+            element.addEventListener('blur', () => {
+                element.parentElement.querySelector('label').classList.remove('text-glow');
+            });
+        });
+    </script>
+</body></html>

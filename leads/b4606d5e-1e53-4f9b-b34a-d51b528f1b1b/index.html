@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VOLT &amp; DATA | Precision Auto Electrical Diagnostics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(28, 28, 30, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 20px rgba(75, 142, 255, 0.3);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#4a4949",
+                        "error-container": "#93000a",
+                        "background": "#131315",
+                        "surface-bright": "#39393b",
+                        "tertiary": "#c5c7c8",
+                        "surface-container": "#1f1f21",
+                        "on-secondary-fixed-variant": "#474646",
+                        "surface-container-lowest": "#0e0e10",
+                        "primary-fixed": "#d8e2ff",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-secondary": "#313030",
+                        "on-background": "#e4e2e4",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-secondary-container": "#bab8b7",
+                        "surface-tint": "#adc6ff",
+                        "on-tertiary-container": "#272a2b",
+                        "outline": "#8b90a0",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "surface-variant": "#353437",
+                        "tertiary-fixed": "#e1e3e4",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "inverse-primary": "#005bc1",
+                        "on-tertiary": "#2e3132",
+                        "primary-container": "#4b8eff",
+                        "on-primary": "#002e69",
+                        "on-primary-fixed": "#001a41",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-surface-variant": "#c1c6d7",
+                        "primary-fixed-dim": "#adc6ff",
+                        "inverse-on-surface": "#303032",
+                        "secondary": "#c8c6c5",
+                        "surface-dim": "#131315",
+                        "surface-container-highest": "#353437",
+                        "inverse-surface": "#e4e2e4",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#00285c",
+                        "on-error": "#690005",
+                        "surface": "#131315",
+                        "tertiary-container": "#8f9192",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#e4e2e4",
+                        "on-tertiary-fixed": "#191c1d",
+                        "primary": "#adc6ff",
+                        "surface-container-high": "#2a2a2c",
+                        "surface-container-low": "#1b1b1d",
+                        "outline-variant": "#414755"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "display-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
+<nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-full">
+<div class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary dark:text-primary">
+                VOLT &amp; DATA
+            </div>
+<div class="hidden md:flex items-center gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#diagnostics">Diagnostics</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#testimonials">Testimonials</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-sm">
+<a class="bg-primary-container text-on-primary-container px-md py-sm rounded-lg font-bold flex items-center gap-xs glow-button active:scale-95 duration-100" href="tel:0400000000">
+<span class="material-symbols-outlined text-[20px]" data-icon="call">call</span>
+<span class="hidden sm:inline">Call Now</span>
+</a>
+<button class="md:hidden text-primary" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-[32px]" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Mobile Menu Placeholder (Logic simple via JS below) -->
+<div class="hidden absolute top-20 left-0 w-full bg-surface-container border-b border-outline-variant/20 p-md flex flex-col gap-md md:hidden" id="mobile-menu">
+<a class="text-on-surface hover:text-primary py-sm" href="#services">Services</a>
+<a class="text-on-surface hover:text-primary py-sm" href="#about">About</a>
+<a class="text-on-surface hover:text-primary py-sm" href="#contact">Contact</a>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center brightness-[0.4]" data-alt="A professional technician in a clean, dark-themed workshop meticulously examining the complex wiring and digital interface of a high-end modern car's dashboard. The scene is lit with cinematic electric blue accents and soft, focused LED work lights. The aesthetic is industrial yet technologically advanced, emphasizing precision and expertise in automotive electronics. Deep shadows and vibrant blue highlights create a premium, high-performance atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBjiZDjKHY-NP0Mhnc5RZCMGbPm8DyXQS8BXJXbL98xOp6J6SphJm8xVOlvBkdvxsuoFpFiz5LV4K5LiZAfO5fTnNRkNQArNfDyOyVuunnlLC5zcepxbUpM6iVo31Zh_wcaVg5NrqdAY3RIp2BeeyNjxdoOvPwySIuRKt5qQESfdDd8kGiWyQrD-74eELcUQver9aTwXluRFKwL_GwXVSE_XmrSR_30gE0ITbNmiwmvK3TG_DWDJBeEgo05ktkpPvaiV-Htq0Budky')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop w-full max-w-7xl mx-auto">
+<div class="max-w-2xl space-y-md">
+<div class="inline-flex items-center px-sm py-xs bg-primary/10 border border-primary/20 rounded-full text-primary font-label-md text-label-md uppercase tracking-widest">
+                        Mobile Electrical Specialists
+                    </div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight">
+                        Precision Auto Electrical <br/>
+<span class="text-primary">Diagnostics &amp; Repair</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Reliable, mobile, and professional service for all makes and models. We bring dealership-level expertise directly to your driveway.
+                    </p>
+<div class="pt-md flex flex-col sm:flex-row gap-md">
+<a class="px-xl py-md bg-primary text-on-primary font-bold rounded-lg text-center glow-button transition-all" href="#contact">
+                            Book an Appointment
+                        </a>
+<a class="px-xl py-md border border-outline text-on-surface font-bold rounded-lg text-center hover:bg-surface-variant transition-all" href="#services">
+                            Our Services
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg text-center">
+<div class="space-y-xs">
+<div class="text-primary font-display-lg text-display-lg counter" data-target="500">0+</div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Cars Repaired</p>
+</div>
+<div class="space-y-xs">
+<div class="text-primary font-display-lg text-display-lg counter" data-target="15">0+</div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Years Experience</p>
+</div>
+<div class="space-y-xs">
+<div class="text-primary font-display-lg text-display-lg">24/7</div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Emergency Support</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl bg-background" id="services">
+<div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="mb-xl">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-sm">Our Expertise</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">From standard battery replacements to complex EFI tuning, we handle the nervous system of your vehicle with surgical precision.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Service Card 1 -->
+<div class="glass-card p-md rounded-xl group hover:border-primary/40 transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" data-icon="battery_charging_full">battery_charging_full</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Battery Diagnostics</h3>
+<p class="text-on-surface-variant mb-md font-body-md">Comprehensive load testing and health checks for traditional, AGM, and hybrid battery systems.</p>
+<button class="flex items-center gap-xs text-primary font-label-md uppercase tracking-bold group-hover:translate-x-2 transition-transform">
+                            Learn More <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Service Card 2 -->
+<div class="glass-card p-md rounded-xl group hover:border-primary/40 transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" data-icon="settings_input_component">settings_input_component</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">EFI Tuning</h3>
+<p class="text-on-surface-variant mb-md font-body-md">Precision electronic fuel injection tuning to maximize performance, efficiency, and driveability.</p>
+<button class="flex items-center gap-xs text-primary font-label-md uppercase tracking-bold group-hover:translate-x-2 transition-transform">
+                            Learn More <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Service Card 3 -->
+<div class="glass-card p-md rounded-xl group hover:border-primary/40 transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" data-icon="light_mode">light_mode</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Lighting Upgrades</h3>
+<p class="text-on-surface-variant mb-md font-body-md">LED conversions, custom accessory lighting, and headlight restoration for superior visibility.</p>
+<button class="flex items-center gap-xs text-primary font-label-md uppercase tracking-bold group-hover:translate-x-2 transition-transform">
+                            Learn More <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Service Card 4 -->
+<div class="glass-card p-md rounded-xl group hover:border-primary/40 transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" data-icon="ac_unit">ac_unit</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">AC Repair</h3>
+<p class="text-on-surface-variant mb-md font-body-md">Electrical fault finding for climate control systems and full compressor service.</p>
+<button class="flex items-center gap-xs text-primary font-label-md uppercase tracking-bold group-hover:translate-x-2 transition-transform">
+                            Learn More <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Service Card 5 -->
+<div class="glass-card p-md rounded-xl group hover:border-primary/40 transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" data-icon="videocam">videocam</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Dash Cam Install</h3>
+<p class="text-on-surface-variant mb-md font-body-md">Hardwired installations for front and rear cameras, ensuring clean, hidden wiring and park mode ready.</p>
+<button class="flex items-center gap-xs text-primary font-label-md uppercase tracking-bold group-hover:translate-x-2 transition-transform">
+                            Learn More <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-xl bg-surface-container-low overflow-hidden" id="about">
+<div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto flex flex-col md:flex-row gap-xl items-center">
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-primary"></div>
+<div class="w-full aspect-square rounded-xl bg-cover bg-center shadow-2xl" data-alt="A macro close-up of a high-tech automotive oscilloscope displaying complex waveform data in vibrant electric blue and green. In the blurred background, a master technician’s hand is visible using a precision probe on a car's circuit board. The lighting is dark and moody, highlighting the technical and scientific nature of modern vehicle repair. The composition reflects expertise, advanced diagnostic tools, and a meticulous attention to detail." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCt3icXFsCcYI99UiovV9jy36s9GPmCYKVeDVYOMnVmCTh2hzFiKovUOAB0jGHKvDlOVSux8kVV1F5JUDWpaDEsU5xjtqnWrPxB1k7yUhI_-Mxylnq79k7uF0TNY65uFLOHbw5jbrRi2B6L5kr9Co05SHZ6TJkUTDJ6lzTRnrwZaUL3QFue6mT47yHDFlM8JuA8j9Jg0ZHuCXOCiWEDMdmtYA25lrCewYgAdOVVVpBXPctfT8uE8xeGxmG4rIPS1H_UKVKpScb4evd1')"></div>
+</div>
+<div class="w-full md:w-1/2 space-y-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Built on Expertise, Driven by Data</h2>
+<p class="font-body-lg text-on-surface-variant">
+                        At VOLT &amp; DATA, we don't just swap parts—we solve problems. Our approach combines traditional mechanical experience with advanced digital diagnostic tools to provide a comprehensive look into your vehicle's electrical health.
+                    </p>
+<div class="space-y-sm">
+<div class="flex items-start gap-md">
+<div class="mt-1 w-6 h-6 rounded bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Factory-Grade Tools</h4>
+<p class="text-on-surface-variant font-body-md">We utilize the same diagnostic hardware as major European and Japanese dealerships.</p>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="mt-1 w-6 h-6 rounded bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Mobile Convenience</h4>
+<p class="text-on-surface-variant font-body-md">Our fully-equipped mobile lab comes to you, saving you time and towing costs.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl bg-background" id="contact">
+<div class="px-margin-mobile md:px-margin-desktop max-w-5xl mx-auto">
+<div class="text-center mb-xl">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-sm">Let's Get You Back on the Road</h2>
+<p class="font-body-md text-on-surface-variant">Send us a message and we'll get back to you with a free quote within 2 hours.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+<div class="bg-surface-container rounded-2xl p-lg space-y-md border border-outline-variant/30">
+<form class="space-y-md">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-xs uppercase">Full Name</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none text-on-surface transition-all" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-xs uppercase">Email Address</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none text-on-surface transition-all" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-xs uppercase">Phone Number</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none text-on-surface transition-all" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-xs uppercase">Your Message</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none text-on-surface transition-all" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-md font-bold rounded-lg glow-button active:scale-[0.98] transition-all" type="submit">
+                                Send Message
+                            </button>
+</form>
+</div>
+<div class="flex flex-col justify-center space-y-lg">
+<div class="space-y-sm">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Service Area</h4>
+<p class="text-on-surface-variant font-body-md">Proudly serving Greater Metro and surrounding suburbs. We travel up to 50km from the city center.</p>
+</div>
+<div class="space-y-md">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span class="text-on-surface font-body-md">Greater Metro Area, Mobile Workshop</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<span class="text-on-surface font-body-md">service@voltanddata.au</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<span class="text-on-surface font-body-md">Mon - Sat: 8:00 AM - 6:00 PM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-xl border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-2 space-y-md">
+<div class="font-headline-sm text-headline-sm font-black text-on-surface">VOLT &amp; DATA</div>
+<p class="text-on-surface-variant font-body-md max-w-sm">Premium mobile auto electrical services. Technical mastery for modern vehicles.</p>
+<a class="inline-flex items-center gap-sm text-primary font-bold text-headline-sm" href="tel:0400000000">
+<span class="material-symbols-outlined">call</span>
+                    0400 000 000
+                </a>
+</div>
+<div class="space-y-md">
+<h5 class="text-on-surface font-bold uppercase tracking-widest font-label-md">Navigation</h5>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#services">Services</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#about">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#diagnostics">Diagnostics Guide</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#contact">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-md">
+<h5 class="text-on-surface font-bold uppercase tracking-widest font-label-md">Legal</h5>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Warranty Info</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-xl pt-lg border-t border-outline-variant/10 text-center">
+<p class="font-label-md text-label-md text-on-surface-variant/60 uppercase">© 2024 VOLT &amp; DATA ELECTRICAL. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+<script>
+        // Simple Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simple Stats Counter Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const countTo = parseInt(target.getAttribute('data-target'));
+                    let current = 0;
+                    const duration = 2000;
+                    const stepTime = Math.abs(Math.floor(duration / countTo));
+                    
+                    const timer = setInterval(() => {
+                        current += 1;
+                        target.innerText = current + (target.innerText.includes('+') ? '+' : '');
+                        if (current >= countTo) {
+                            clearInterval(timer);
+                            target.innerText = countTo + '+';
+                        }
+                    }, stepTime);
+                    counterObserver.unobserve(target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.counter').forEach(counter => counterObserver.observe(counter));
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body></html>

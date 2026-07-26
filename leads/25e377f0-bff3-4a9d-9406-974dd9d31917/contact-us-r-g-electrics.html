@@ -1,0 +1,331 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact Us - R&amp;G Electrics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#003351",
+                      "surface-container-highest": "#40322a",
+                      "secondary-fixed": "#dae2fd",
+                      "primary-fixed-dim": "#ffb68a",
+                      "on-primary-fixed-variant": "#743500",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "surface-container-high": "#34271f",
+                      "success-emerald": "#10B981",
+                      "tertiary-fixed": "#cce5ff",
+                      "inverse-surface": "#f5ded2",
+                      "on-surface-variant": "#e0c0af",
+                      "on-primary-container": "#5d2900",
+                      "on-secondary-fixed": "#131b2e",
+                      "secondary": "#bec6e0",
+                      "surface-container": "#291d16",
+                      "slate-glass": "rgba(30, 41, 59, 0.7)",
+                      "surface-tint": "#ffb68a",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "tertiary-container": "#00a9fd",
+                      "surface-bright": "#45362e",
+                      "on-background": "#f5ded2",
+                      "primary-container": "#ff7b00",
+                      "error-container": "#93000a",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#1c110a",
+                      "background": "#1c110a",
+                      "on-tertiary-fixed-variant": "#004b73",
+                      "on-tertiary-fixed": "#001d31",
+                      "outline": "#a78b7c",
+                      "surface-variant": "#40322a",
+                      "tertiary-fixed-dim": "#92ccff",
+                      "primary-fixed": "#ffdbc8",
+                      "primary": "#ffb68a",
+                      "on-primary": "#522300",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary": "#283044",
+                      "outline-variant": "#584235",
+                      "secondary-container": "#3f465c",
+                      "on-surface": "#f5ded2",
+                      "surface-container-low": "#251912",
+                      "deep-obsidian": "#020617",
+                      "surface-container-lowest": "#160c06",
+                      "surface": "#1c110a",
+                      "on-tertiary-container": "#003b5c",
+                      "electric-glow": "#FFA34D",
+                      "on-error": "#690005",
+                      "inverse-primary": "#994700",
+                      "on-secondary-container": "#adb4ce",
+                      "inverse-on-surface": "#3b2d26",
+                      "on-primary-fixed": "#321300",
+                      "tertiary": "#92ccff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "stack-lg": "32px",
+                      "margin-mobile": "16px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "body-lg": ["Inter"],
+                      "label-bold": ["Inter"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .electric-glow-hover:hover {
+            box-shadow: 0 0 15px rgba(255, 163, 77, 0.4);
+        }
+        .slate-glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        .pulsing-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #FFA34D;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #FFA34D;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 163, 77, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 163, 77, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 163, 77, 0); }
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 163, 77, 0.05) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-deep-obsidian text-on-background font-body-md selection:bg-primary/30 selection:text-white overflow-x-hidden">
+<!-- Navigation Shell -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-deep-obsidian/80 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgba(255,163,77,0.1)]">
+<div class="max-w-container-max mx-auto px-gutter h-20 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<img alt="R&amp;G Electrics Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtkSGyuhkyu-HkOWhDdzQaTDkdAk4xQW0xsxcUvkgFm83ZzsxB5cA99akIMQo0GtFqRhyw2Vp9mjzDlNyJzi99_SlERbsaSTuhQRkSg9p9uC3r60isPZogQC7gZou0lNo5pGBlQMpfOKXQdk_dFt6dGZiHlqljJi1x0aLFjAsmjRTFk-XwFw6cgqbpzttV9DzYXutTBWuY0BL2FfabAkUU12BaiTYSgJZJOZkc4EXd6qnGxSWoPhCgUIM8">
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="home-r-g-electrics.html">Home</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="ev-chargers-r-g-electrics.html">EV Chargers</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="index.html">EICR</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="index.html">Inspections</a>
+<a class="font-label-bold text-label-bold text-primary border-b-2 border-primary pb-1" href="contact-us-r-g-electrics.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden lg:flex items-center gap-2 text-primary font-label-bold" href="tel:08006525532">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                    0800-652-5532
+                </a>
+<button class="bg-primary text-on-primary font-label-bold text-label-bold px-6 py-3 rounded-lg electric-glow-hover transition-all">
+                    Get a Quote
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-section-gap relative hero-gradient">
+<!-- Background Decorative Elements -->
+<div class="absolute top-40 -left-64 w-[600px] h-[600px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="absolute bottom-40 -right-64 w-[500px] h-[500px] bg-tertiary/5 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-gutter">
+<!-- Page Header -->
+<div class="text-center mb-stack-lg animate-in fade-in slide-in-from-bottom-4 duration-700">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-bold text-label-sm mb-stack-md">
+<span class="pulsing-dot"></span>
+                    NATIONWIDE RAPID RESPONSE
+                </div>
+<h1 class="font-display-lg text-display-lg text-white mb-stack-sm max-w-3xl mx-auto md:text-display-lg text-headline-lg-mobile">
+                    Ready to Power Your Next Project?
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    From emergency call-outs to large-scale commercial installations, our certified team is ready to deliver precision engineering and safety.
+                </p>
+</div>
+<!-- Contact Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg mt-16 items-start">
+<!-- Sidebar: Direct Contact -->
+<div class="lg:col-span-5 flex flex-col gap-stack-md">
+<div class="slate-glass-card rounded-xl p-8 transition-all hover:border-primary/30 group">
+<div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-stack-md group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary">phone_in_talk</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Call Us Anytime</h3>
+<p class="text-on-surface-variant mb-4">Available for emergency response 24/7 or for general enquiries during office hours.</p>
+<a class="text-primary font-headline-md text-headline-md block hover:underline" href="tel:08006525532">0800-652-5532</a>
+</div>
+<div class="slate-glass-card rounded-xl p-8 transition-all hover:border-primary/30 group">
+<div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-stack-md group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary">alternate_email</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Email Support</h3>
+<p class="text-on-surface-variant mb-4">Send us your project details or drawings, and our engineers will review them promptly.</p>
+<a class="text-primary font-headline-md text-headline-md block hover:underline break-all" href="mailto:info@randgelectrics.com">info@randgelectrics.com</a>
+</div>
+<div class="slate-glass-card rounded-xl p-8 overflow-hidden relative min-h-[200px]">
+<div class="absolute inset-0 opacity-40 mix-blend-overlay bg-cover bg-center" data-alt="A high-end cinematic aerial shot of a modern city landscape at night with glowing electric lines and infrastructure, evoking a sense of safety and power connection. The lighting uses warm orange glows against a deep slate and charcoal background in a premium professional style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiX_xzIyUQq8vjbXKpFGGHukJz85PSAEp3SaVyfJMJC0xPqXw0f6_qy7bro-lvQX41dmWl2tcswp4w_Ac1cMnNBAp2ydIzWDvYKddqcBsNSpnaRd5ioqawpzWAScLPWIKd1xKj72wcypHfG6cMQzUlJTTyyBXNV7BM55s3DVRAD0xNP6eJXs_ou7EtTISED1EwcLtdLOAPN7p5DWp6U4abfiV5-Pmq3jg2T94evlyZUHKiKRzZngowpm5CW4jwMySDboPj_Kq0sRus')"></div>
+<div class="relative z-10 h-full flex flex-col justify-end">
+<h4 class="font-headline-md text-white mb-2">Certified Excellence</h4>
+<p class="text-on-surface-variant text-label-bold">NICEIC • SafeContractor • OZEV Registered</p>
+</div>
+</div>
+</div>
+<!-- Main Form -->
+<div class="lg:col-span-7">
+<div class="slate-glass-card rounded-xl p-8 md:p-12">
+<h2 class="font-headline-lg text-white mb-8">Send a Message</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-sm text-on-surface-variant uppercase tracking-wider">Full Name</label>
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 text-white placeholder:text-on-surface-variant/40 outline-none transition-all" placeholder="John Doe" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-sm text-on-surface-variant uppercase tracking-wider">Email Address</label>
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 text-white placeholder:text-on-surface-variant/40 outline-none transition-all" placeholder="john@example.com" type="email">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-sm text-on-surface-variant uppercase tracking-wider">Phone Number</label>
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 text-white placeholder:text-on-surface-variant/40 outline-none transition-all" placeholder="07123 456789" type="tel">
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-sm text-on-surface-variant uppercase tracking-wider">Service Needed</label>
+<select class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 text-white outline-none transition-all appearance-none cursor-pointer">
+<option>EV Charger Installation</option>
+<option>Electrical Inspection (EICR)</option>
+<option>Consumer Unit Upgrade</option>
+<option>Emergency Call-Out</option>
+<option>Other Enquiry</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-sm text-on-surface-variant uppercase tracking-wider">Project Details</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 text-white placeholder:text-on-surface-variant/40 outline-none transition-all resize-none" placeholder="Tell us about your electrical needs..." rows="5"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-headline-md py-4 rounded-lg electric-glow-hover hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3" type="submit">
+                                Send Inquiry
+                                <span class="material-symbols-outlined">send</span>
+</button>
+<p class="text-center text-label-sm text-on-surface-variant/60">
+                                We usually respond to web inquiries within 2 business hours.
+                            </p>
+</form>
+</div>
+</div>
+</div>
+<!-- Map Placeholder / Branch Location -->
+<div class="mt-section-gap">
+<div class="slate-glass-card rounded-xl overflow-hidden h-[400px] relative">
+<div class="absolute inset-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A stylized minimalist digital map showing the service coverage area in London and the Southeast of England. The map uses a dark mode palette with glowing orange paths and nodes to represent electrical infrastructure and service reach, fitting the electric engineering brand aesthetic." data-location="London, UK" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYp4fPcmod5WeFEbeJbXt_8go_kjjtn-mR6II5I7qgnYKLEuhcVsLa8V_ijbqEhA6bs6uvRmetjkn1Dr31Uc13VlhT0F1ZKxmRXXm4oSdn5k1NcL8DaOjAoD3knLIkpdJA7LlHXvm1BEtftqGjgh784Y5ZkNtyeYT7Q6KzyLY7EJ0bZwHsdqe7xBJKOwQFoqp_F2LvKpd_JnxImSw6FqLT7kFdgrQMaxlYQipdoueqfgOBXv65WZSVSqmotFyT0Btv51DWgeh0uQs_">
+</div>
+<div class="absolute bottom-8 left-8 slate-glass rounded-lg p-6 max-w-sm">
+<h4 class="font-headline-md text-white mb-2">Service Area</h4>
+<p class="text-on-surface-variant mb-0">Covering London, Hertfordshire, and surrounding counties for both residential and commercial clients.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dim border-t border-outline-variant">
+<div class="max-w-container-max mx-auto py-stack-lg px-gutter flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<img alt="R&amp;G Electrics Logo" class="h-10 w-auto opacity-80" src="https://lh3.googleusercontent.com/aida/AP1WRLtkSGyuhkyu-HkOWhDdzQaTDkdAk4xQW0xsxcUvkgFm83ZzsxB5cA99akIMQo0GtFqRhyw2Vp9mjzDlNyJzi99_SlERbsaSTuhQRkSg9p9uC3r60isPZogQC7gZou0lNo5pGBlQMpfOKXQdk_dFt6dGZiHlqljJi1x0aLFjAsmjRTFk-XwFw6cgqbpzttV9DzYXutTBWuY0BL2FfabAkUU12BaiTYSgJZJOZkc4EXd6qnGxSWoPhCgUIM8">
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs text-center md:text-left">
+                    Professional electrical solutions with safety and precision at the core.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-electric-glow transition-colors" href="index.html">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-electric-glow transition-colors" href="index.html">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-electric-glow transition-colors" href="home-r-g-electrics.html">Accreditations</a>
+<a class="text-on-surface-variant hover:text-electric-glow transition-colors" href="contact-us-r-g-electrics.html">Emergency Call-Out</a>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2">
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="home-r-g-electrics.html">
+<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="home-r-g-electrics.html">
+<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+<p class="text-on-surface-variant opacity-80 text-label-sm mt-2">
+                    © 2024 R &amp; G Electrics (UK) Ltd. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple form interaction
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalHtml = btn.innerHTML;
+            
+            btn.disabled = true;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Sending...';
+            
+            setTimeout(() => {
+                btn.classList.replace('bg-primary', 'bg-success-emerald');
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Message Sent!';
+                e.target.reset();
+                
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.classList.replace('bg-success-emerald', 'bg-primary');
+                    btn.innerHTML = originalHtml;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Sticky header transition
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.add('h-20');
+                header.classList.remove('h-16');
+            }
+        });
+    </script>
+</body></html>

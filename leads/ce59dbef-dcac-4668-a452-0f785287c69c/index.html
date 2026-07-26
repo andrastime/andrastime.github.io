@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lucky Build | Expert Handyman Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f1fbff",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#828485",
+                        "secondary-fixed-dim": "#fdbc13",
+                        "primary-container": "#1a1c1e",
+                        "background": "#f1fbff",
+                        "inverse-on-surface": "#e7f3f7",
+                        "tertiary-container": "#191c1d",
+                        "secondary": "#7a5900",
+                        "surface-container-high": "#dfeaef",
+                        "on-background": "#131d21",
+                        "surface-variant": "#d9e4e9",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#5d5e61",
+                        "secondary-container": "#fdbc13",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#283236",
+                        "surface-container-highest": "#d9e4e9",
+                        "on-primary-fixed-variant": "#454749",
+                        "tertiary-fixed": "#e1e3e4",
+                        "secondary-fixed": "#ffdea3",
+                        "tertiary": "#000000",
+                        "surface-bright": "#f1fbff",
+                        "on-secondary-fixed": "#261900",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "on-surface-variant": "#44474a",
+                        "primary": "#000101",
+                        "on-primary-fixed": "#1a1c1e",
+                        "primary-fixed": "#e2e2e5",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#6b4d00",
+                        "on-surface": "#131d21",
+                        "surface-container": "#e4f0f4",
+                        "outline-variant": "#c5c6ca",
+                        "on-primary-container": "#838486",
+                        "outline": "#75777a",
+                        "inverse-primary": "#c6c6c9",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#191c1d",
+                        "surface-container-low": "#eaf5fa",
+                        "surface-dim": "#d1dce0",
+                        "primary-fixed-dim": "#c6c6c9",
+                        "on-secondary-fixed-variant": "#5d4200"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "stack-md": "16px",
+                        "unit": "4px",
+                        "stack-sm": "8px",
+                        "gutter": "24px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "caption": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .service-card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .service-card-shadow:hover {
+            box-shadow: 0 16px 24px -1px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface sticky top-0 z-50 shadow-sm">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Lucky Build Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWHs3sqYo0rRKf6M5RV-IWyMYA2U63TjP0G4W2TUa06ekIhitQzQfIN0fWJbCgM36p9XCTvkO21d1p0QY6NC-13xRV9o5QXR3EypXP_7URab96I4iopEAHEuw4gHPmhF5jSjzUhiiSwtsNb9JH9fzZXPc2Tm-Yl8dZfy8qit9H5OcvlVBD4ot__Dp7zCj0DP2YS9_r8jsCYqT3zesGqNHfLEV4RqPzwCBNGKWV1S2p38lYsNo7gxFcnSUpLlnUIJC-N5CqB5IVywE"/>
+<span class="font-headline-md text-headline-md font-bold text-primary hidden lg:block">Lucky Build</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md text-secondary-container font-bold border-b-2 border-secondary-container cursor-pointer transition-all active:scale-95" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-secondary cursor-pointer transition-all active:scale-95" href="#services">Services</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-secondary cursor-pointer transition-all active:scale-95" href="#projects">Projects</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-secondary cursor-pointer transition-all active:scale-95" href="#about">About</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-secondary cursor-pointer transition-all active:scale-95" href="#contact">Contact</a>
+</nav>
+<a class="hidden sm:flex items-center gap-2 bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:scale-105 transition-transform duration-200" href="tel:5550123456">
+<span class="material-symbols-outlined">call</span>
+                (555) 012-3456
+            </a>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A luxurious, high-end modern home interior with sleek architectural lines, featuring pristine white walls and warm wooden accents. The lighting is bright and natural, streaming through large floor-to-ceiling windows, creating a premium light-mode aesthetic. The atmosphere is sophisticated and orderly, reflecting professional craftsmanship and precision construction. The global color palette emphasizes deep charcoal and soft whites with sharp yellow highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZ_ffAb9Iv8WA5XKDxZUZ5CITne-NcG6i3eK6rJ8QNEJcRlHvkAqrh16VdTJ1eS3UhZQy-4AZ3nZOD4SHM_R2Zl0vGfa2NKSMPEjryF9SY7bL3ES0U82EF8ipT9fy5y256wG-U1E1KMSlFGDMZhqDUCeUNdFQv3irpNSi5MSoSn3WSYfDjD05zTOhFDOfiX4U-qGtDB7pIW6rI0Ni-BuguG-RL2EikJsxVQ-IDa9zc7LRtBFjRzqr8pty7Z4MPZBJYmewNx1bFPjc')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full text-on-primary">
+<div class="max-w-2xl fade-in">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-md leading-tight">
+                        Expert Handyman Services <span class="text-secondary-container">You Can Trust.</span>
+</h1>
+<p class="font-body-lg text-body-lg mb-stack-lg text-surface-variant opacity-90">
+                        From small repairs to major renovations, we build with care and precision. Professional excellence delivered to your doorstep.
+                    </p>
+<div class="flex flex-wrap gap-gutter">
+<a class="bg-secondary-container text-primary font-label-md text-label-md px-10 py-4 rounded-lg hover:scale-105 active:scale-95 transition-all shadow-lg uppercase tracking-wider" href="#contact">Request a Quote</a>
+<a class="bg-transparent border border-white text-white font-label-md text-label-md px-10 py-4 rounded-lg hover:bg-white/10 transition-all uppercase tracking-wider" href="#services">View Services</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto" id="services">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Premium Services</h2>
+<div class="w-20 h-1 bg-secondary-container mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-gutter h-auto md:h-[600px]">
+<!-- Plumbing -->
+<div class="md:col-span-2 md:row-span-1 service-card-shadow bg-white rounded-xl p-8 flex flex-col justify-between overflow-hidden relative group">
+<div class="z-10">
+<span class="material-symbols-outlined text-4xl text-secondary-container mb-4">plumbing</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Plumbing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Leak repairs, faucet installations, and full bathroom plumbing upgrades with architectural precision.</p>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[12rem]">plumbing</span>
+</div>
+</div>
+<!-- Electrical -->
+<div class="md:col-span-2 md:row-span-1 service-card-shadow bg-primary-container text-on-primary rounded-xl p-8 flex flex-col justify-between overflow-hidden relative group">
+<div class="z-10">
+<span class="material-symbols-outlined text-4xl text-secondary-container mb-4">electrical_services</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Electrical</h3>
+<p class="font-body-md text-body-md text-on-primary-container">Smart home integration, lighting design, and safe electrical maintenance for modern living.</p>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[12rem] text-white">electrical_services</span>
+</div>
+</div>
+<!-- Carpentry -->
+<div class="md:col-span-2 md:row-span-1 service-card-shadow bg-white rounded-xl p-8 flex flex-col justify-between overflow-hidden relative group">
+<div class="z-10">
+<span class="material-symbols-outlined text-4xl text-secondary-container mb-4">carpenter</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Carpentry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Custom shelving, deck repairs, and exquisite woodwork tailored to your home's unique character.</p>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-5">
+<span class="material-symbols-outlined text-[12rem]">carpenter</span>
+</div>
+</div>
+<!-- Painting -->
+<div class="md:col-span-2 md:row-span-1 service-card-shadow bg-surface-container rounded-xl p-8 flex flex-col justify-between overflow-hidden relative group border border-outline-variant/30">
+<div class="z-10">
+<span class="material-symbols-outlined text-4xl text-secondary-container mb-4">format_paint</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Painting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Interior and exterior finishes using high-performance coatings for a durable, premium aesthetic.</p>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-5">
+<span class="material-symbols-outlined text-[12rem]">format_paint</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface-container-high" id="contact">
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Ready to start your next project?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+                        Our team of experts is ready to provide you with a detailed quote and timeline for your home improvements. Experience the Lucky Build difference.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-full text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<p class="font-body-md">123 Builder's Lane, Suite 100, Craftstown</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-full text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<p class="font-body-md">Mon - Fri: 8:00 AM - 6:00 PM</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-outline-variant/20">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">FULL NAME</label>
+<input class="w-full bg-[#F1F2F6] border-none focus:ring-2 focus:ring-primary rounded-lg py-4 px-4 font-body-md" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">EMAIL ADDRESS</label>
+<input class="w-full bg-[#F1F2F6] border-none focus:ring-2 focus:ring-primary rounded-lg py-4 px-4 font-body-md" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">PHONE NUMBER</label>
+<input class="w-full bg-[#F1F2F6] border-none focus:ring-2 focus:ring-primary rounded-lg py-4 px-4 font-body-md" placeholder="(555) 000-0000" type="tel"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">MESSAGE</label>
+<textarea class="w-full bg-[#F1F2F6] border-none focus:ring-2 focus:ring-primary rounded-lg py-4 px-4 font-body-md" placeholder="How can we help you today?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-lg font-label-md text-label-md hover:bg-black transition-colors shadow-lg flex items-center justify-center gap-2" type="submit">
+                            SUBMIT REQUEST
+                        </button>
+<div class="flex items-center justify-center gap-2 pt-4">
+<span class="material-symbols-outlined text-green-600 text-sm">verified_user</span>
+<span class="font-caption text-caption text-on-tertiary-container uppercase tracking-widest">Secure Submission - 256-bit Encrypted</span>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-primary-container text-on-primary-container pt-20 pb-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop max-w-container-max mx-auto mb-16">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<img alt="Lucky Build" class="h-10 w-auto invert brightness-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWHs3sqYo0rRKf6M5RV-IWyMYA2U63TjP0G4W2TUa06ekIhitQzQfIN0fWJbCgM36p9XCTvkO21d1p0QY6NC-13xRV9o5QXR3EypXP_7URab96I4iopEAHEuw4gHPmhF5jSjzUhiiSwtsNb9JH9fzZXPc2Tm-Yl8dZfy8qit9H5OcvlVBD4ot__Dp7zCj0DP2YS9_r8jsCYqT3zesGqNHfLEV4RqPzwCBNGKWV1S2p38lYsNo7gxFcnSUpLlnUIJC-N5CqB5IVywE"/>
+<span class="font-headline-md text-headline-md text-white font-bold">Lucky Build</span>
+</div>
+<p class="font-body-md max-w-xs">Premium handyman services for high-end residential and commercial properties. Delivering excellence through refined craftsmanship.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="font-label-md text-label-md text-white uppercase tracking-widest mb-6">Services</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-tertiary-container hover:text-white transition-transform duration-200 inline-block hover:translate-x-1" href="#">Plumbing</a></li>
+<li><a class="font-body-md text-on-tertiary-container hover:text-white transition-transform duration-200 inline-block hover:translate-x-1" href="#">Electrical</a></li>
+<li><a class="font-body-md text-on-tertiary-container hover:text-white transition-transform duration-200 inline-block hover:translate-x-1" href="#">Carpentry</a></li>
+<li><a class="font-body-md text-on-tertiary-container hover:text-white transition-transform duration-200 inline-block hover:translate-x-1" href="#">Painting</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white uppercase tracking-widest mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-tertiary-container hover:text-white transition-transform duration-200 inline-block hover:translate-x-1" href="#">About Us</a></li>
+<li><a class="font-body-md text-on-tertiary-container hover:text-white transition-transform duration-200 inline-block hover:translate-x-1" href="#">Our Projects</a></li>
+<li><a class="font-body-md text-on-tertiary-container hover:text-white transition-transform duration-200 inline-block hover:translate-x-1" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-on-tertiary-container hover:text-white transition-transform duration-200 inline-block hover:translate-x-1" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-md text-label-md text-white uppercase tracking-widest mb-6">Stay Connected</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center rounded-lg hover:bg-secondary-container hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center rounded-lg hover:bg-secondary-container hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto pt-8 border-t border-outline-variant/10 text-center md:text-left">
+<p class="font-caption text-caption text-on-tertiary-container">© 2024 Lucky Build Handyman Services. All rights reserved.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Shared Component Mobile) -->
+<nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface-container shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<div class="flex justify-around items-center py-2 px-4">
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-4 py-1 scale-100 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant transition-transform" href="#services">
+<span class="material-symbols-outlined">build</span>
+<span class="font-label-md text-label-md">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant transition-transform" href="#contact">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-md text-label-md">Contact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant transition-transform" href="#contact">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="font-label-md text-label-md">Quote</span>
+</a>
+</div>
+</nav>
+<!-- FAB (Suppressed on this transactional page but defined for dashboard context) -->
+<div class="fixed bottom-24 right-6 hidden md:block">
+<button class="bg-secondary-container text-primary w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<script>
+        // Micro-interactions and scroll effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.service-card-shadow').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body></html>

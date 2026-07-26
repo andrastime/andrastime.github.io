@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PJ Building Services | Professional Electrician</title>
+<meta content="Expert Electrical Solutions for Home &amp; Business. Licensed, Insured, and Ready to Power Your World." name="description"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#191c1e",
+                    "secondary-container": "#fea619",
+                    "tertiary": "#000000",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#131b2e",
+                    "secondary": "#855300",
+                    "outline": "#76777d",
+                    "secondary-fixed": "#ffddb8",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "surface-container": "#eceef0",
+                    "on-error": "#ffffff",
+                    "primary-container": "#131b2e",
+                    "primary": "#000000",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2d3133",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "on-secondary-container": "#684000",
+                    "surface-container-low": "#f2f4f6",
+                    "on-surface-variant": "#45464d",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "background": "#f7f9fb",
+                    "surface-tint": "#565e74",
+                    "on-primary-container": "#7c839b",
+                    "on-tertiary-container": "#75859d",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary-fixed-variant": "#653e00",
+                    "secondary-fixed-dim": "#ffb95f",
+                    "inverse-primary": "#bec6e0",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "primary-fixed": "#dae2fd",
+                    "on-secondary-fixed": "#2a1700",
+                    "outline-variant": "#c6c6cd",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-container": "#0b1c30",
+                    "surface-container-highest": "#e0e3e5",
+                    "tertiary-fixed": "#d3e4fe",
+                    "surface": "#f7f9fb",
+                    "surface-variant": "#e0e3e5",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#f7f9fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "base": "4px",
+                    "xl": "48px",
+                    "container-max": "1280px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "gutter": "24px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "label-md": ["Open Sans"],
+                    "body-lg": ["Open Sans"],
+                    "caption": ["Open Sans"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-md": ["Open Sans"],
+                    "headline-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-border {
+            border-bottom: 2px solid #855300;
+        }
+        .service-card-shadow {
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+        }
+        .service-card-shadow:hover {
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+        }
+    </style>
+<!-- Structured Data -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "PJ Building Services",
+      "image": "placeholder",
+      "telephone": "(555) 012-3456",
+      "url": "https://pjbuildingservices.example.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Voltage Way",
+        "addressLocality": "ElectriCity",
+        "addressRegion": "ST",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7128,
+        "longitude": -74.0060
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/pjbuildingservices",
+        "https://www.linkedin.com/company/pjbuildingservices"
+      ]
+    }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface/90 backdrop-blur-md font-label-md text-label-md uppercase tracking-wider docked full-width top-0 sticky border-b border-outline-variant/30 shadow-sm z-50">
+<nav class="flex justify-between items-center w-full px-lg py-md max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">PJ Building Services</div>
+<ul class="hidden md:flex gap-lg items-center">
+<li><a class="text-on-surface hover:text-secondary transition-colors duration-200" href="#services">Services</a></li>
+<li><a class="text-on-surface hover:text-secondary transition-colors duration-200" href="#about">About</a></li>
+<li><a class="text-on-surface hover:text-secondary transition-colors duration-200" href="#reviews">Reviews</a></li>
+<li><a class="text-on-surface hover:text-secondary transition-colors duration-200" href="#contact">Contact</a></li>
+</ul>
+<div class="hidden md:flex items-center gap-md">
+<a class="text-primary font-bold hover:text-secondary transition-colors" href="tel:5550123456">Call: (555) 012-3456</a>
+<button class="bg-secondary-container text-on-secondary-container px-lg py-sm rounded-lg font-bold hover:opacity-90 active:scale-95 transition-all">Book Now</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button aria-label="Toggle Menu" class="md:hidden text-primary" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[819px] md:h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary/60 z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, wide-angle shot of a professional electrician wearing a high-visibility vest and hard hat, working on a complex electrical panel in a modern industrial setting. The lighting is focused and dramatic, highlighting the precision of the electrical components. The overall color palette uses deep navy and industrial grays with sharp metallic accents, creating a mood of reliability and technical mastery." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoXFaICp1tzLBboVPmJzF2MEicXJLcs739VqZvaBP_7hOIhIjuQnd9Wj_IWN6DWvLIIgmB8g8pzCKK2uM0WQnxXhuODpzR86lTmkQRbLBFNNcmkwn3-JWI5bsvpbpFGylXHnYwHQW2dqRS8YQYCd8vgvnAA3NukS00C9M5TYUohKqOEPgPt5KpUlbqNPdJ75XHxS8Ms3pwNtNI0Lr7NI1E5ZgpI3fOHOIhRvBW84L1pNKEida1_rnfRYOpZQQyR_gE-Yjl2U7r8A0')"></div>
+</div>
+<div class="relative z-20 text-center px-lg max-w-4xl">
+<h1 class="text-white font-display-lg text-[40px] md:text-display-lg mb-md leading-tight">Expert Electrical Solutions for Home &amp; Business</h1>
+<p class="text-white/90 font-body-lg text-body-lg mb-xl max-w-2xl mx-auto">Licensed, Insured, and Ready to Power Your World.</p>
+<div class="flex flex-col md:flex-row gap-md justify-center">
+<a class="bg-secondary-container text-on-secondary-container px-xl py-md rounded-lg font-bold text-lg hover:bg-secondary hover:text-white transition-all transform active:scale-95" href="#contact">Get Free Quote</a>
+<a class="bg-primary text-white border-2 border-white px-xl py-md rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all transform active:scale-95" href="tel:5550123456">Emergency Services</a>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl px-lg max-w-container-max mx-auto" id="services">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-sm">Our Professional Services</h2>
+<div class="w-16 h-1 bg-secondary-container mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+<!-- Residential Wiring -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 service-card-shadow transition-all group">
+<div class="w-12 h-12 bg-secondary-container/10 flex items-center justify-center rounded-lg mb-md text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Residential Wiring</h3>
+<p class="text-on-surface-variant font-body-md">Complete home wiring solutions for new builds, renovations, and safety upgrades.</p>
+</div>
+<!-- Commercial Maintenance -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 service-card-shadow transition-all group">
+<div class="w-12 h-12 bg-secondary-container/10 flex items-center justify-center rounded-lg mb-md text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">business</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Commercial Maintenance</h3>
+<p class="text-on-surface-variant font-body-md">Reliable electrical maintenance for businesses, offices, and industrial facilities.</p>
+</div>
+<!-- Panel Upgrades -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 service-card-shadow transition-all group">
+<div class="w-12 h-12 bg-secondary-container/10 flex items-center justify-center rounded-lg mb-md text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Panel Upgrades</h3>
+<p class="text-on-surface-variant font-body-md">Increase your capacity and safety with modern electrical panel installations.</p>
+</div>
+<!-- Smart Home Installation -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 service-card-shadow transition-all group">
+<div class="w-12 h-12 bg-secondary-container/10 flex items-center justify-center rounded-lg mb-md text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">stream_apps</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Smart Home</h3>
+<p class="text-on-surface-variant font-body-md">Integration of smart lighting, security, and climate control systems.</p>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="bg-surface-container-low py-xl" id="about">
+<div class="max-w-container-max mx-auto px-lg grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="relative rounded-xl overflow-hidden shadow-xl aspect-video lg:aspect-square">
+<div class="w-full h-full bg-cover bg-center" data-alt="A portrait of a senior professional electrician standing proudly in front of a well-organized company service vehicle. He is holding a digital multimeter and wearing a clean uniform with the company logo. The background shows a modern suburban neighborhood during a bright, clear day, emphasizing a friendly and community-oriented service vibe. The lighting is natural and warm, projecting trust and approachability." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZAhE94bp3a0SaT32CJMyf5aKpDcnd6nDVe7bny5bk64qFxwkWu7ya3A9_FMxs0FYKmezl9ldXcWLIB3XiLIHMXJ2Nmg8BAXFXskKYj7Z2A_NKwPDdy7l-Yr46VRS4c00NKpDn_47mopSDU19Ijx0wMQf5AMgWtFey35sapD-GR8ctDmNVYBjQB-427uPsDo25uXErGm7NuW3J47ZK9_xj6Ed9cVL8wyK9TBS95OAxPnaxHYc0CFabjSVddchj6Y5-glApJkN0zsI')"></div>
+<div class="absolute bottom-md left-md bg-secondary-container text-on-secondary-container p-md rounded-lg font-bold">
+<div class="text-3xl">15+</div>
+<div class="text-sm">Years of Excellence</div>
+</div>
+</div>
+<div class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Over a Decade of Trusted Expertise</h2>
+<p class="text-on-surface font-body-lg">At PJ Building Services, we believe that electrical work is about more than just wires and switches—it's about the safety and comfort of your home or business. With over 15 years of dedicated service, we've built a reputation for precision and reliability.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<div>
+<h4 class="font-bold text-on-surface">Fully Licensed</h4>
+<p class="text-caption text-on-surface-variant">Registered and compliant with all local safety codes.</p>
+</div>
+</div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary">security</span>
+<div>
+<h4 class="font-bold text-on-surface">Insured &amp; Bonded</h4>
+<p class="text-caption text-on-surface-variant">Complete peace of mind for every project we touch.</p>
+</div>
+</div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary">timer</span>
+<div>
+<h4 class="font-bold text-on-surface">Precision Timing</h4>
+<p class="text-caption text-on-surface-variant">We value your time and stick to our project deadlines.</p>
+</div>
+</div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary">eco</span>
+<div>
+<h4 class="font-bold text-on-surface">Energy Efficient</h4>
+<p class="text-caption text-on-surface-variant">Modern solutions to help you reduce power consumption.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section Placeholder -->
+<section class="py-xl px-lg max-w-container-max mx-auto" id="reviews">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-sm">What Our Clients Say</h2>
+<div class="flex justify-center gap-xs text-secondary mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<div class="bg-surface p-lg rounded-lg border border-outline-variant/30 italic text-on-surface-variant">
+                    "PJ Building Services handled our entire office rewire. Professional, clean, and finished ahead of schedule. Highly recommend for any commercial needs."
+                    <div class="mt-md font-bold text-on-surface not-italic">— Sarah J., Office Manager</div>
+</div>
+<div class="bg-surface p-lg rounded-lg border border-outline-variant/30 italic text-on-surface-variant">
+                    "Called for an emergency panel issue at 9 PM and they were here in 30 minutes. Absolute lifesavers during a winter storm!"
+                    <div class="mt-md font-bold text-on-surface not-italic">— Michael R., Homeowner</div>
+</div>
+<div class="bg-surface p-lg rounded-lg border border-outline-variant/30 italic text-on-surface-variant">
+                    "The smart home integration they did for us is flawless. Our energy bills have already started to drop. Great technical team."
+                    <div class="mt-md font-bold text-on-surface not-italic">— David L., Tech Enthusiast</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl bg-primary text-white" id="contact">
+<div class="max-w-container-max mx-auto px-lg">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<div>
+<h2 class="font-headline-lg text-display-lg mb-md">Ready to Start Your Project?</h2>
+<p class="text-white/80 font-body-lg mb-xl">Fill out the form to request a free quote or schedule a consultation. For emergencies, please call us directly.</p>
+<div class="space-y-md">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 bg-secondary-container/20 rounded-full flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<div class="font-bold">Call Us</div>
+<a class="hover:text-secondary-container transition-colors" href="tel:5550123456">(555) 012-3456</a>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 bg-secondary-container/20 rounded-full flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<div class="font-bold">Email Us</div>
+<a class="hover:text-secondary-container transition-colors" href="mailto:contact@pjbuildingservices.com">contact@pjbuildingservices.com</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface p-lg rounded-xl">
+<form action="#" class="space-y-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="block text-on-surface font-bold text-sm mb-xs" for="name">Name</label>
+<input class="w-full bg-white border-2 border-outline-variant rounded-lg p-md focus:border-secondary-container focus:ring-0 transition-colors text-on-surface" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block text-on-surface font-bold text-sm mb-xs" for="email">Email</label>
+<input class="w-full bg-white border-2 border-outline-variant rounded-lg p-md focus:border-secondary-container focus:ring-0 transition-colors text-on-surface" id="email" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-on-surface font-bold text-sm mb-xs" for="phone">Phone</label>
+<input class="w-full bg-white border-2 border-outline-variant rounded-lg p-md focus:border-secondary-container focus:ring-0 transition-colors text-on-surface" id="phone" placeholder="(555) 000-0000" type="tel"/>
+</div>
+<div>
+<label class="block text-on-surface font-bold text-sm mb-xs" for="message">Message</label>
+<textarea class="w-full bg-white border-2 border-outline-variant rounded-lg p-md focus:border-secondary-container focus:ring-0 transition-colors text-on-surface" id="message" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white font-bold py-md rounded-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all transform active:scale-95" type="submit">Submit Request</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest font-body-md text-on-surface full-width border-t border-outline-variant">
+<div class="w-full py-xl px-lg grid grid-cols-1 md:grid-cols-3 gap-lg max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="space-y-md">
+<div class="font-headline-md text-headline-md font-bold text-primary">PJ Building Services</div>
+<p class="text-on-surface-variant/80 max-w-xs">Providing top-tier electrical solutions since 2009. Quality work, guaranteed safety.</p>
+<div class="flex gap-md">
+<a class="text-primary hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-primary hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="md:text-center">
+<h4 class="font-bold mb-md uppercase tracking-wide text-sm">Quick Links</h4>
+<ul class="space-y-sm text-on-surface-variant/80">
+<li><a class="hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#services">Emergency Services</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#contact">Free Quote</a></li>
+</ul>
+</div>
+<!-- Contact/Legal -->
+<div class="md:text-right">
+<h4 class="font-bold mb-md uppercase tracking-wide text-sm">Contact Us</h4>
+<a class="block text-lg font-bold text-primary hover:text-secondary transition-colors mb-sm" href="tel:5550123456">(555) 012-3456</a>
+<p class="text-caption text-on-surface-variant/80">© 2024 PJ Building Services. All Rights Reserved. Licensed &amp; Insured.</p>
+</div>
+</div>
+</footer>
+<!-- SideNavBar (Mobile Only) -->
+<div class="fixed inset-y-0 left-0 w-64 bg-surface-container-lowest z-[100] transform -translate-x-full transition-transform duration-300 md:hidden shadow-xl flex flex-col h-full p-md" id="mobile-nav">
+<div class="flex items-center gap-sm mb-xl">
+<div class="font-headline-md text-headline-md text-primary">PJBS</div>
+</div>
+<nav class="flex-grow space-y-sm">
+<a class="flex items-center gap-md p-md bg-secondary-container text-on-secondary-container rounded-lg font-label-md" href="#">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md" href="tel:5550123456">
+<span class="material-symbols-outlined">call</span> Call
+            </a>
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md" href="#contact">
+<span class="material-symbols-outlined">request_quote</span> Quote
+            </a>
+<button class="w-full flex items-center gap-md p-md text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md" id="close-menu">
+<span class="material-symbols-outlined">close</span> Close
+            </button>
+</nav>
+<div class="mt-auto pt-md border-t border-outline-variant">
+<div class="font-bold text-primary">PJ Building Services</div>
+<div class="text-xs text-on-surface-variant">Professional Electrician</div>
+</div>
+</div>
+<!-- Mobile Bottom Nav Overlay -->
+<nav class="fixed bottom-0 left-0 right-0 md:hidden bg-surface-container-lowest flex justify-around items-center py-sm border-t border-outline-variant z-50">
+<a class="flex flex-col items-center gap-xs text-secondary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">HOME</span>
+</a>
+<a class="flex flex-col items-center gap-xs text-on-surface-variant" href="tel:5550123456">
+<span class="material-symbols-outlined">call</span>
+<span class="text-[10px] font-bold">CALL</span>
+</a>
+<a class="flex flex-col items-center gap-xs text-on-surface-variant" href="#contact">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="text-[10px] font-bold">QUOTE</span>
+</a>
+<button class="flex flex-col items-center gap-xs text-on-surface-variant" id="mobile-menu-trigger">
+<span class="material-symbols-outlined">menu</span>
+<span class="text-[10px] font-bold">MENU</span>
+</button>
+</nav>
+<script>
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuTrigger = document.getElementById('mobile-menu-trigger');
+        const mobileNav = document.getElementById('mobile-nav');
+        const closeMenu = document.getElementById('close-menu');
+
+        const toggleMenu = () => {
+            mobileNav.classList.toggle('-translate-x-full');
+        };
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileMenuTrigger.addEventListener('click', toggleMenu);
+        closeMenu.addEventListener('click', toggleMenu);
+
+        // Simple smooth scroll active link highlight
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('header ul li a');
+            
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav-border');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active-nav-border');
+                }
+            });
+        });
+    </script>
+</body></html>

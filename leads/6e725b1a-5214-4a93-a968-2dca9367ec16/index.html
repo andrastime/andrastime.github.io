@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Birmingham Sparkle | Professional Exterior Cleaning</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "secondary-fixed": "#c6e7ff",
+                    "on-background": "#191c1e",
+                    "on-secondary-container": "#004b69",
+                    "on-primary-fixed": "#001b3d",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#81cfff",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#2e476f",
+                    "inverse-surface": "#2d3133",
+                    "tertiary-fixed": "#ffddb9",
+                    "tertiary": "#321c00",
+                    "primary": "#002046",
+                    "tertiary-fixed-dim": "#f1bd81",
+                    "secondary": "#00658d",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "outline": "#74777f",
+                    "on-primary-container": "#87a0cd",
+                    "inverse-on-surface": "#eff1f3",
+                    "inverse-primary": "#aec7f7",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-tint": "#465f88",
+                    "surface-container-high": "#e6e8ea",
+                    "on-secondary-fixed": "#001e2d",
+                    "on-tertiary-fixed-variant": "#623f0f",
+                    "on-tertiary-fixed": "#2b1700",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f7f9fb",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#c6965e",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary-fixed": "#d6e3ff",
+                    "secondary-container": "#41befd",
+                    "background": "#f7f9fb",
+                    "tertiary-container": "#4f2f00",
+                    "on-surface-variant": "#44474e",
+                    "surface-container": "#eceef0",
+                    "primary-fixed-dim": "#aec7f7",
+                    "surface-dim": "#d8dadc",
+                    "primary-container": "#1b365d",
+                    "outline-variant": "#c4c6cf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap-lg": "120px",
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "section-gap-md": "64px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "headline-xl": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .liquid-shadow:hover {
+            box-shadow: 0 20px 40px -10px rgba(0, 163, 224, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-on-background/80 backdrop-blur-md border-b border-outline-variant dark:border-outline docked full-width top-0 sticky z-50 h-20">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed" href="#">Birmingham Sparkle</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 font-label-bold text-label-bold" href="#services">Services</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 font-label-bold text-label-bold" href="#why-us">Portfolio</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 font-label-bold text-label-bold" href="#reviews">Reviews</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 font-label-bold text-label-bold" href="#faq">FAQ</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden lg:flex items-center gap-2 text-secondary dark:text-secondary-fixed font-label-bold" href="tel:01215550199">
+<span class="material-symbols-outlined">call</span>
+                    0121 555 0199
+                </a>
+<a class="bg-primary text-on-primary px-6 py-3 rounded-xl font-label-bold hover:bg-secondary transition-all active:scale-95 duration-150 ease-in-out" href="#quote">
+                    Get a Quote
+                </a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A sun-drenched, high-resolution photograph of a modern Birmingham suburban home with perfectly clean white cladding, gleaming windows, and a pristine brick driveway. The lighting is soft morning light, creating a refreshing and professional atmosphere with high contrast between the deep blue sky and the bright exterior surfaces. The style is minimalist and corporate, emphasizing architectural clarity and a sense of 'instant relief' through cleanliness." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9ESsQOOM2wagMYXQB-ZEsULZHTRnOxkcqPDUOrLL2EtQ5-kCTRdLGM7zgy-1js-YXeelbRhOCWvRymT0TIKpANoQyPrJLaHnWMe7lBJ4wOHlh5trbXyQMoSrvZ19Omrl7OzMB7kz5GJV6_oT_mDulqLarNkKgC-lxwxcg12zUMk-KB4K2RYGhmDCswkh75Wxbfkl6o0hsMOYLldup-9J7Paisg5PHYttUpMKgluv1CH2MrHFXIa_e3gEpYbT4C2MVPk6VuAon7qtz')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full">
+<div class="max-w-2xl reveal">
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-label-bold mb-6">Birmingham's Premier Exterior Care</span>
+<h1 class="font-headline-xl text-headline-xl mb-6 text-primary">Professional Exterior Cleaning in Birmingham</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                        Revitalize your property's curb appeal with our precision cleaning services. We bring the sparkle back to gutters, roofs, and driveways.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-label-bold text-center hover:shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2" href="#quote">
+                            Get a Quote
+                        </a>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-label-bold text-center hover:bg-primary hover:text-on-primary transition-all active:scale-95">
+                            Book Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap-lg bg-surface" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-16 reveal">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Specialized Services</h2>
+<div class="h-1 w-20 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Gutter Cleaning -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden liquid-shadow transition-all duration-300 reveal">
+<div class="h-64 bg-cover bg-center" data-alt="Close-up detail of a high-tech gutter vacuum system removing leaves and debris from a clean, modern black guttering system against a crisp blue sky. The image emphasizes precision and professional equipment, using a cool-toned color palette and sharp focus on the metallic surfaces to represent meticulous care." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVyprU3pyuWZI1fvYCdBS2RL4XRdy_8kOGCx6PfQviQEU0d6ZL99W6vZ_IpbBxmr1KltxgVNZT2CQpM1bwnCRwch_vDSp865fK__b6blvxZv2tnM7PxUjerUwFdVdAcb-GqIUfOpY4NxnjA2z4esC-gOl2tXaIaawgPskz7u6rfyMOoGvgIlUpiG9hDBl2Cbh5zRpVbbRXSWVGg5kiZ-VuO9SuuNqbvcCo0KpcDippqCPcWqmrKhX46ZW28PXs7b6oijrN6IzCiFj2')"></div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Gutter Cleaning</h3>
+<p class="text-on-surface-variant mb-6">Manual and vacuum extraction to ensure free-flowing drainage systems and prevent water damage to your foundation.</p>
+<a class="text-secondary font-label-bold flex items-center gap-2 group" href="#">
+                                Learn More 
+                                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Pressure Washing -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden liquid-shadow transition-all duration-300 reveal" style="transition-delay: 150ms;">
+<div class="h-64 bg-cover bg-center" data-alt="A dramatic before-and-after shot of a brick patio being pressure washed. One side is covered in moss and dark stains, while the other side reveals vibrant, clean natural brick colors under a high-pressure water stream. The aesthetic is extremely clean and satisfying, showcasing industrial-grade results with a professional, cool-toned grade." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuArtWDoQWEC6D546jLVXNN5842F52fpMJPU6w5GC0o2v9DwJHsuJPg7o8u8Xl0AfjbeEGgbBIap1G8n3hOqtS99hV30uto8tXnHoLTMgOdFYqpLLbKZHhORqgZ0OiqO8KHJp1btrQHVGpD0Hl9bCr6YgNrfZhccyEK84heJ2M0hQJZUFaCRlZmA0OukkWnB8ne-fUMVVPKQVyATWwKGlWhkOEsOAo-D3YMcHjqUENMCvrhfxLyUSE8phh_DUD5nAVXooEmo4slQFweV')"></div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Pressure Washing</h3>
+<p class="text-on-surface-variant mb-6">Restoring driveways, patios, and cladding to their original glory using variable-pressure steam and water systems.</p>
+<a class="text-secondary font-label-bold flex items-center gap-2 group" href="#">
+                                Learn More 
+                                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Roof Cleaning -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden liquid-shadow transition-all duration-300 reveal" style="transition-delay: 300ms;">
+<div class="h-64 bg-cover bg-center" data-alt="A professional roof cleaning technician wearing safety gear using a soft-wash system on a traditional slate roof. The image highlights safety and delicate care for older surfaces, with the Birmingham skyline subtly visible in the background under clear, bright skies. High-contrast and professional photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASAuMPMl95mRkB41kfmvwgDyJdmfP0oFEhKFRIGjvFhfeXiNUdLVK3_-QTvSy5LjCmFgg0FIwXHxl5yTm0xYssggbAfq3bkm9GsL7YG-Kebwt8CAKNC50rc9quIaqYi3G6B18r4OWzpuwvlSSUonDjy79gURQdJTOo1bAqodNr3BFcf4vhnawvvEZhUDFjhO_dmZHONo37XTEkQcbcrJ8wGJYcM1M0hiSjjrQdNswzljNft74cUneZeUz8d0bdCNWIyujIlij43Yt1')"></div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Roof Cleaning</h3>
+<p class="text-on-surface-variant mb-6">Non-aggressive soft washing techniques that remove moss, lichen, and algae while protecting your roof's structural integrity.</p>
+<a class="text-secondary font-label-bold flex items-center gap-2 group" href="#">
+                                Learn More 
+                                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Signals / Why Choose Us -->
+<section class="py-section-gap-lg bg-primary text-on-primary" id="why-us">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-section-gap-md items-center">
+<div class="reveal">
+<h2 class="font-headline-lg text-headline-lg mb-8">Why Birmingham Sparkle is the Trusted Choice</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container">verified_user</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] mb-2">Fully Insured & Certified</h4>
+<p class="text-on-primary-container">Total peace of mind with comprehensive public liability insurance and industry-standard certifications.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container">precision_manufacturing</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] mb-2">Professional Equipment</h4>
+<p class="text-on-primary-container">We use high-reach telescopic equipment and eco-friendly soft-wash solutions for superior results.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container">location_on</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] mb-2">Local Birmingham Expertise</h4>
+<p class="text-on-primary-container">Deeply rooted in the West Midlands, we understand the specific environmental challenges of local properties.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative reveal" style="transition-delay: 200ms;">
+<div class="rounded-2xl overflow-hidden shadow-2xl">
+<div class="w-full aspect-square bg-cover bg-center" data-alt="A portrait of a professional exterior cleaning team standing proudly in front of their clean, branded van in a Birmingham residential street. They are wearing clean, navy uniforms and holding professional-grade cleaning tools. The mood is approachable yet authoritative, representing trust and local expertise with bright, natural lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2__nftgwlDTy4RQ1ONrdweqRFcxJy0wRQphJmsUEh6amxhW1SawMyPmwU6l8bcGnP4kUVTqeOrFdP9i4a67r99D_WtvKQAcmyqHQBNjW10z1byaOYJFTr8_lDlQghrswUG1Mrz_FN3ScbMf1xv_8YIUgDisqsHqYtUCyaAcitNEL_f2lNvX4Z7Mu-57cB68Mcrzv8mnCEPTowud48_iN0iq4StOO85Pe3HIkZP8ctltUwQJslG4hg3VBzt5mQwGYnNDJoxSOVdgXZ')"></div>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-secondary p-8 rounded-2xl shadow-xl max-w-xs hidden md:block">
+<div class="flex gap-2 text-tertiary-fixed mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-label-bold text-on-secondary italic">"Absolutely transformed our driveway. It looks better than when we first moved in!"</p>
+<p class="text-on-secondary-fixed-variant text-sm mt-2">— Sarah D., Solihull</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote Form Section -->
+<section class="py-section-gap-lg bg-surface-container-low" id="quote">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm border border-outline-variant flex flex-col md:flex-row">
+<div class="md:w-1/2 p-12 lg:p-16 flex flex-col justify-center reveal">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Ready for a Sparkle?</h2>
+<p class="text-on-surface-variant mb-10 text-body-lg">Fill out our quick form and one of our experts will provide a no-obligation quote within 24 hours.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-on-surface font-label-bold">No Hidden Costs</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-on-surface font-label-bold">Schedule at Your Convenience</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-on-surface font-label-bold">Satisfaction Guaranteed</span>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 bg-surface p-12 lg:p-16 border-l border-outline-variant reveal" style="transition-delay: 200ms;">
+<form class="space-y-6">
+<div>
+<label class="block font-label-bold text-on-surface mb-2" for="name">Name</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary transition-all outline-none" id="name" name="name" placeholder="Enter your name" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-on-surface mb-2" for="email">Email</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary transition-all outline-none" id="email" name="email" placeholder="email@example.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-bold text-on-surface mb-2" for="message">Message</label>
+<textarea class="w-full bg-surface-container-low border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary transition-all outline-none resize-none" id="message" name="message" placeholder="How can we help?" rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-secondary py-4 rounded-xl font-headline-md text-headline-md hover:bg-on-secondary-fixed-variant transition-colors shadow-lg shadow-secondary/20" type="submit">
+                                Send Quote Request
+                            </button>
+<p class="text-center text-xs text-on-surface-variant flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">security</span>
+                                Protected by reCAPTCHA
+                            </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-background w-full py-section-gap-md px-margin-mobile md:px-gutter">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="space-y-6">
+<div class="font-headline-lg text-headline-lg text-on-primary dark:text-primary-fixed">Birmingham Sparkle</div>
+<p class="font-body-md text-body-md text-surface-variant">Professional exterior care for Birmingham and the West Midlands. Transforming homes since 2018.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-bold text-label-bold text-secondary-fixed">Our Services</h4>
+<nav class="flex flex-col space-y-2">
+<a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md" href="#">Gutter Cleaning</a>
+<a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md" href="#">Pressure Washing</a>
+<a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md" href="#">Roof Cleaning</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-bold text-label-bold text-secondary-fixed">Contact Info</h4>
+<div class="space-y-2">
+<a class="text-on-primary dark:text-primary-fixed block font-headline-md" href="tel:01215550199">0121 555 0199</a>
+<p class="text-surface-variant">Birmingham, West Midlands</p>
+<div class="flex space-x-4 pt-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" href="#">
+<span class="material-symbols-outlined">qr_code_2</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-16 pt-8 border-t border-outline/20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-surface-variant text-sm text-center md:text-left">© 2024 Birmingham Sparkle Exterior Cleaning. All rights reserved. Professional exterior care for Birmingham and the West Midlands.</p>
+<div class="flex gap-6 text-sm">
+<a class="text-surface-variant hover:text-on-primary" href="#">Privacy Policy</a>
+<a class="text-surface-variant hover:text-on-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface dark:bg-on-background border-t border-outline-variant dark:border-outline shadow-lg md:hidden">
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-xl p-2 transition-all tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant p-2 active:bg-surface-container-high tap-highlight-transparent" href="#services">
+<span class="material-symbols-outlined">cleaning_services</span>
+<span class="font-label-bold text-[10px] mt-1">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant p-2 active:bg-surface-container-high tap-highlight-transparent" href="#quote">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="font-label-bold text-[10px] mt-1">Quote</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant p-2 active:bg-surface-container-high tap-highlight-transparent" href="tel:01215550199">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-bold text-[10px] mt-1">Call</span>
+</a>
+</nav>
+<script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth scroll adjustment for fixed header
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>

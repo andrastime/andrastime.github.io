@@ -1,0 +1,327 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Gallery | Handyman Coventry - Precision Craftsmanship</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#fefcff",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dcd9db",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#7c839b",
+                        "tertiary-fixed": "#ffe083",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary-fixed": "#231b00",
+                        "tertiary-fixed-dim": "#eec200",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "inverse-on-surface": "#f3f0f2",
+                        "on-error-container": "#93000a",
+                        "outline": "#76777d",
+                        "on-surface-variant": "#45464d",
+                        "surface-container": "#f0edef",
+                        "surface-container-highest": "#e4e2e4",
+                        "inverse-primary": "#bec6e0",
+                        "secondary": "#0051d5",
+                        "surface-bright": "#fcf8fa",
+                        "on-surface": "#1b1b1d",
+                        "navy-deep": "#0F172A",
+                        "surface": "#fcf8fa",
+                        "tertiary-container": "#cea700",
+                        "inverse-surface": "#303032",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "background": "#fcf8fa",
+                        "outline-variant": "#c6c6cd",
+                        "ice-white": "#F8FAFC",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "surface-tint": "#565e74",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#00174b",
+                        "primary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#eae7e9",
+                        "primary-fixed": "#dae2fd",
+                        "surface-container-low": "#f6f3f5",
+                        "primary-fixed-dim": "#bec6e0",
+                        "safety-yellow": "#FACC15",
+                        "on-tertiary-container": "#4e3e00",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1b1b1d",
+                        "tertiary": "#735c00",
+                        "surface-variant": "#e4e2e4",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "slate-steel": "#475569",
+                        "secondary-container": "#316bf3",
+                        "primary-container": "#131b2e",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .gallery-item {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .filter-btn.active {
+            background-color: #0F172A;
+            color: #F8FAFC;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary/30">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/80 dark:bg-navy-deep/80 backdrop-blur-xl border-b border-outline-variant dark:border-outline/20">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold tracking-tight text-navy-deep dark:text-ice-white">
+                Handyman Coventry
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-steel dark:text-outline-variant hover:text-navy-deep dark:hover:text-ice-white transition-colors text-label-sm font-label-sm" href="handyman-coventry-home.html">Home</a>
+<a class="text-slate-steel dark:text-outline-variant hover:text-navy-deep dark:hover:text-ice-white transition-colors text-label-sm font-label-sm" href="index.html">Services</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary pb-1 text-label-sm font-label-sm" href="project-gallery-handyman-coventry.html">Gallery</a>
+<a class="text-slate-steel dark:text-outline-variant hover:text-navy-deep dark:hover:text-ice-white transition-colors text-label-sm font-label-sm" href="handyman-coventry-home.html">Testimonials</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block px-6 py-2 bg-navy-deep text-ice-white text-label-sm font-label-sm rounded-lg hover:opacity-80 active:scale-95 transition-all">
+                    Free Estimate
+                </button>
+<button class="px-6 py-2 border-2 border-secondary text-secondary text-label-sm font-label-sm rounded-lg hover:bg-secondary hover:text-white transition-all">
+                    Contact Us
+                </button>
+</div>
+</nav>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="relative py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-3xl">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4 block">Portfolio</span>
+<h1 class="font-display-lg text-display-lg text-navy-deep mb-6">Craftsmanship in Every Detail</h1>
+<p class="font-body-lg text-body-lg text-slate-steel">
+                    From major DIY home improvements to the smallest repairs, explore our portfolio of precision-driven projects completed across Coventry.
+                </p>
+</div>
+</section>
+<!-- Gallery Filter -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-12">
+<div class="flex flex-wrap gap-4 items-center">
+<button class="filter-btn active px-6 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm transition-all hover:border-navy-deep" data-filter="all">All Work</button>
+<button class="filter-btn px-6 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm transition-all hover:border-navy-deep" data-filter="fencing">Fencing &amp; Gates</button>
+<button class="filter-btn px-6 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm transition-all hover:border-navy-deep" data-filter="buildings">Wooden Buildings</button>
+<button class="filter-btn px-6 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm transition-all hover:border-navy-deep" data-filter="interior">Interior Remodeling</button>
+<button class="filter-btn px-6 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm transition-all hover:border-navy-deep" data-filter="exterior">Exterior Work</button>
+</div>
+</section>
+<!-- Bento Grid Gallery -->
+<section class="px-margin-desktop max-w-container-max mx-auto pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter" id="gallery-grid">
+<!-- Large Highlight: Fencing -->
+<div class="gallery-item md:col-span-8 group" data-category="fencing">
+<div class="relative overflow-hidden rounded-xl bg-surface-container aspect-video md:aspect-[21/9]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLs8yzN5696LwPOZAbdw77hRcEXe3SRyay-CS4LM5dULMbe2QonsptPD7XC-_JT4J5OJkEdNcSeLJCZw0bNe5OCvhtyD32Ag8TGu4N3OBrLZRBGm_JzKCETT0YCabN1ZaOnsjw4nXMbmooPsZpN_MUXmra3Zu23As28KTmYChtVD6qjt2kh8LPqKNHpmZTuXBjW_G7toLOuUY7fy_ynpftTNF7uGdxZ8NkKLT5-rlGuSjcuJCaljxFXot1Y">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-ice-white/70 mb-2">Technical: Arched Chevron Design</span>
+<h3 class="font-headline-md text-headline-md text-ice-white">Custom Fencing &amp; Gates</h3>
+</div>
+</div>
+</div>
+<!-- Highlight: Wooden Buildings -->
+<div class="gallery-item md:col-span-4 group" data-category="buildings">
+<div class="relative overflow-hidden rounded-xl bg-surface-container aspect-square md:aspect-auto h-full">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvza8PHrgyyjuWtLmG16qEw-wfdiGzxMyrsnubtb3prGw7oe3Vu7zPI-PCzAw70qrRMcIEzks3HvruJdM3cT7AIZH15WEzOZ6mril0bsjxcWMIHZvYr9O_XfgcUY0l395l7CKNauJFW9wBeF-IXFhGtZJ_-Yom2_Tdb8BllKzy6YK0ngqFPPiy2Mf4y-BlkzI12K9cnUQyAMPO7LBORMwHJOs_IL2-vlB0jVhdvL_E8y5MSd8kx3VyU0_4">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-ice-white/70 mb-2">Technical: Tongue &amp; Groove</span>
+<h3 class="font-headline-sm text-headline-sm text-ice-white">Bespoke Sheds &amp; Cabins</h3>
+</div>
+</div>
+</div>
+<!-- Interior Project -->
+<div class="gallery-item md:col-span-4 group" data-category="interior">
+<div class="relative overflow-hidden rounded-xl bg-surface-container aspect-[4/5]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A professionally painted modern living room with crisp white walls and elegant navy blue accent wall. The floor features high-quality light oak herringbone parquet. The lighting is soft and warm, highlighting the smooth, clean finish of the walls and the precision of the flooring installation. The overall mood is sophisticated, corporate professional, and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAinSYnUQmg1qiYMjFMA1hxjtJx0HJ_bJOhGnBU5RZzHT03hNVt64L2bfsWDYvsBuyOJy2Evsc3-8o9YN3fQ9ze9X3kcwyIxJyJ8SGAMF7e7MRlFpbyWkuZflb4h9rIUKemF8En2_kx-WQwao_GdXBfp5a99GwlZPuPZA_souPzwkW9t2Q_U_FXkge2xVjyRzRg6nBresRvRn5nfk0MFv1EW--hcJZR7s21d623e7rSkI4P_2kKW6KRIawTkjvNdQMYQJPmwgrmRSs">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-ice-white/70 mb-2">Technical: P4 Finish</span>
+<h3 class="font-headline-sm text-headline-sm text-ice-white">Interior Painting</h3>
+</div>
+</div>
+</div>
+<!-- Exterior Project -->
+<div class="gallery-item md:col-span-4 group" data-category="exterior">
+<div class="relative overflow-hidden rounded-xl bg-surface-container aspect-[4/5]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of a masterfully laid red brick wall with clean, even mortar lines. The masonry shows expert craftsmanship with perfectly aligned rows. The scene is shot in natural daylight, emphasizing the rich texture of the bricks and the technical accuracy of the construction. The atmosphere is grounded, reliable, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvbnunYSrhV1VfyHi89WLto0l-nv_KsD1rV83i_RWUJJQNArJ8aCJlsyDUW_ujfkKvlAwcDzPQbB8Hi584KIdiki_nKYv7k1NzDLVYN8idzwrTqk2QvSWEjwVvPecfhSPtMailX6PdSs5tyaSrVRFiue87egMlkDrJzkk2W5LR9S7RrQn6UspurnHqDgJWJyYEzMtyQUOS-R4-Bkjp_5sBLcUryht1F11yuBTdU1e6S5L4ZU-xanBLARsNyahzj7nvc01McfZ7Aus">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-ice-white/70 mb-2">Technical: English Bond Masonry</span>
+<h3 class="font-headline-sm text-headline-sm text-ice-white">Brickwork &amp; Walling</h3>
+</div>
+</div>
+</div>
+<!-- Decking Project -->
+<div class="gallery-item md:col-span-4 group" data-category="exterior">
+<div class="relative overflow-hidden rounded-xl bg-surface-container aspect-[4/5]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A modern wooden decking area built with premium cedar wood. The boards are perfectly spaced and feature a concealed fastening system. High-end outdoor furniture sits on the deck, and the surrounding landscaping is pristine with manicured shrubs. The lighting is early evening golden hour, creating a warm yet professionally sleek garden sanctuary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA4r_HiHQRi88QQvo9WX_oxV7Cr5AhQXb3M2GiXpJgsWarWC5-821-F7ZMgRLn6W4PmwN4dtheW9yEgD5wNRoimHSsOIw-oofl50pXvyXzeCvt9NM7E9XJZEIVghFG7OGnLG8Sxx5Z81jMe8DhGrRkWioslJwSEsBwkWrusmnBLMMBUVwksX5Aa69bZfS8QyXMKCSmBo0SAbEAemkyd7AOXSQpCAv6Uwca1oHsH0rA0jBrMdgFXM-jch2v7M4g78hNFaxDap78Q9Q">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-ice-white/70 mb-2">Technical: Concealed Fastening</span>
+<h3 class="font-headline-sm text-headline-sm text-ice-white">Premium Decking</h3>
+</div>
+</div>
+</div>
+<!-- Flooring Project -->
+<div class="gallery-item md:col-span-6 group" data-category="interior">
+<div class="relative overflow-hidden rounded-xl bg-surface-container aspect-video">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Spacious hallway featuring polished light gray concrete effect flooring. The installation is flawless with no visible seams. The walls are a matching cool white, and the lighting is architectural recessed LED, giving a bright, corporate, and extremely modern high-end feel to the domestic space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyZ2Luku8hbhTuuLlMyjkH9NQG_MIYsRZRLn1U1eS6z24vc4jK5i5YwadRGY-LapK1luIXV2IVrQmCBs_MnHqePspSBqNayRXuPCHHvn9DcvfcNfTdH61w_9er5GwF8Ex65fyqTVJD6KheKxoF7JOWLzQYGX0cpY-UeVrkuw1LcxMxpRx3YCLLDRV-9GdZKcol_8YMX25WGdOlCSMbju_BOlsNnmmN0RdLG17L_mlmQd5p_7aI0PEOkSUe_k2x8_QBDYiWTO4Sc3I">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-ice-white/70 mb-2">Technical: Seamless LVT Installation</span>
+<h3 class="font-headline-sm text-headline-sm text-ice-white">Modern Flooring</h3>
+</div>
+</div>
+</div>
+<!-- Door Project -->
+<div class="gallery-item md:col-span-6 group" data-category="fencing">
+<div class="relative overflow-hidden rounded-xl bg-surface-container aspect-video">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A bespoke solid oak front door with intricate glass inserts and brushed steel hardware. The door is set within a matching oak frame. The craftsmanship is evident in the tight joinery and smooth satin finish. The scene is lit by bright, cool daylight, highlighting the natural grain of the wood and the precision of the fit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9FPEzWaf9oR1cQ6DmkJbcn1S3rNva8o3fNEPcPyfNnWIrSSv6qn7tHXVHdHUvccFeGd8uxlYIuNqjEUgXDCjFJcvUJeNR59szcA2u659tAi_WfoT3HAMimEw6hfhW6oruMBhQe3pQ5y4-RlHcRMIj_qd4kJnMKQVVI-npd6NWBzX9eyfaGZIlnimmXI_0WcsqqFQsk4DSCeUy05VCHjeDPiGfdmMZcdZK5sJzapjbkg4smTfBlsbPyskuXfVEOYkO5NKwPBKD49A">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-ice-white/70 mb-2">Technical: Solid Core Joinery</span>
+<h3 class="font-headline-sm text-headline-sm text-ice-white">Gates &amp; Doors</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-navy-deep py-24 text-center px-margin-desktop">
+<div class="max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-ice-white mb-6">Ready to Start Your Project?</h2>
+<p class="font-body-lg text-body-lg text-slate-steel mb-10">We provide free estimates for all handyman services in the Coventry area. No job is too small for our expertise.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-10 py-4 bg-secondary text-white rounded-lg font-headline-md text-label-sm hover:opacity-90 transition-all">Get a Free Quote</button>
+<button class="px-10 py-4 border-2 border-ice-white text-ice-white rounded-lg font-headline-md text-label-sm hover:bg-ice-white hover:text-navy-deep transition-all">Contact Us Now</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-navy-deep dark:bg-black border-t border-slate-steel/30">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+<div>
+<div class="text-headline-sm font-headline-sm font-bold text-ice-white mb-4">Handyman Coventry</div>
+<p class="text-slate-steel font-body-md max-w-sm mb-8">Delivering premium handyman, carpentry, and maintenance services with technical precision and guaranteed quality across the West Midlands.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-ice-white p-2 border border-slate-steel/30 rounded-lg cursor-pointer hover:bg-secondary transition-colors">home</span>
+<span class="material-symbols-outlined text-ice-white p-2 border border-slate-steel/30 rounded-lg cursor-pointer hover:bg-secondary transition-colors">call</span>
+<span class="material-symbols-outlined text-ice-white p-2 border border-slate-steel/30 rounded-lg cursor-pointer hover:bg-secondary transition-colors">mail</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="text-ice-white font-bold mb-4 uppercase tracking-tighter text-label-sm">Services</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-steel hover:text-ice-white transition-colors text-body-md" href="index.html">Fencing</a></li>
+<li><a class="text-slate-steel hover:text-ice-white transition-colors text-body-md" href="index.html">Brickwork</a></li>
+<li><a class="text-slate-steel hover:text-ice-white transition-colors text-body-md" href="index.html">Painting</a></li>
+<li><a class="text-slate-steel hover:text-ice-white transition-colors text-body-md" href="index.html">Carpentry</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-ice-white font-bold mb-4 uppercase tracking-tighter text-label-sm">Links</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-steel hover:text-ice-white transition-colors text-body-md" href="handyman-coventry-home.html">Privacy Policy</a></li>
+<li><a class="text-slate-steel hover:text-ice-white transition-colors text-body-md" href="handyman-coventry-home.html">Terms of Service</a></li>
+<li><a class="text-slate-steel hover:text-ice-white transition-colors text-body-md" href="index.html">Service Areas</a></li>
+<li><a class="text-slate-steel hover:text-ice-white transition-colors text-body-md" href="index.html">Emergency Repairs</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-slate-steel/10 text-center">
+<p class="text-slate-steel text-label-sm">© 2024 Handyman Coventry. Built for Precision and Craftsmanship.</p>
+</div>
+</footer>
+<script>
+        // Gallery Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                        setTimeout(() => { item.style.display = 'block'; }, 0);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        setTimeout(() => { item.style.display = 'none'; }, 400);
+                    }
+                });
+            });
+        });
+
+        // Simple smooth scroll and active interaction for links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                // Intent: Active navigation state logic already handled in templating, 
+                // but we add micro-interaction as per Task rules.
+                this.style.opacity = '0.8';
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.opacity = '1';
+                    this.style.transform = 'scale(1)';
+                }, 100);
+            });
+        });
+    </script>
+</body></html>

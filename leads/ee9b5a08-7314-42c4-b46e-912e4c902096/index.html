@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>APC Property Repair | Expert Maintenance & Craftsmanship</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-container": "#75859d",
+                        "secondary-fixed": "#ffddb8",
+                        "surface-container-high": "#e6e8ea",
+                        "background": "#f7f9fb",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "surface-container": "#eceef0",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-primary-fixed": "#131b2e",
+                        "on-secondary-container": "#684000",
+                        "on-primary-container": "#7c839b",
+                        "surface-container-highest": "#e0e3e5",
+                        "outline": "#76777d",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "surface-dim": "#d8dadc",
+                        "inverse-primary": "#bec6e0",
+                        "surface-tint": "#565e74",
+                        "secondary": "#855300",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dae2fd",
+                        "on-surface-variant": "#45464d",
+                        "on-background": "#191c1e",
+                        "primary": "#000000",
+                        "secondary-container": "#fea619",
+                        "outline-variant": "#c6c6cd",
+                        "tertiary": "#000000",
+                        "surface": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#131b2e",
+                        "on-secondary-fixed": "#2a1700",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-surface": "#191c1e",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#0b1c30"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "80px",
+                        "stack-md": "16px",
+                        "margin-desktop": "48px",
+                        "container-max": "1280px",
+                        "stack-lg": "32px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "caption": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "body-md": ["Inter"],
+                        "title-sm": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav {
+            color: #855300 !important;
+            border-bottom: 2px solid #855300;
+        }
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+            animation: fade-up 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Header (Shared Component: TopNavBar) -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-md bg-surface-container-lowest/80 border-b border-outline-variant/30 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="text-title-sm font-title-sm font-bold text-primary">APC Property Repair</span>
+</div>
+<nav class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#services">Services</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#projects">Projects</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#testimonials">Testimonials</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden md:flex items-center gap-2 font-label-bold text-label-bold text-primary hover:opacity-80" href="tel:+441234567890">
+<span class="material-symbols-outlined text-secondary">call</span>
+                    +44 1234 567 890
+                </a>
+<a class="bg-secondary-container text-on-secondary-fixed font-label-bold text-label-bold px-6 py-2.5 rounded-lg active:scale-95 transition-all" href="#contact">Get a Quote</a>
+<button class="md:hidden flex items-center p-2 text-on-surface" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 z-[60] bg-surface translate-x-full transition-transform duration-300 md:hidden" id="mobile-menu">
+<div class="p-margin-mobile flex flex-col h-full">
+<div class="flex justify-between items-center mb-10">
+<span class="font-title-sm text-title-sm font-bold text-primary">APC</span>
+<button class="p-2" id="close-menu-btn"><span class="material-symbols-outlined">close</span></button>
+</div>
+<nav class="flex flex-col gap-6">
+<a class="mobile-nav-link text-headline-md font-headline-md" href="#services">Services</a>
+<a class="mobile-nav-link text-headline-md font-headline-md" href="#projects">Projects</a>
+<a class="mobile-nav-link text-headline-md font-headline-md" href="#testimonials">Testimonials</a>
+<a class="mobile-nav-link text-headline-md font-headline-md" href="#contact">Contact</a>
+</nav>
+<div class="mt-auto pt-10 border-t border-outline-variant">
+<a class="flex items-center gap-4 text-title-sm font-title-sm mb-6" href="tel:+441234567890">
+<span class="material-symbols-outlined text-secondary">call</span>
+                    +44 1234 567 890
+                </a>
+</div>
+</div>
+</div>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[870px] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105" data-alt="A professional craftsman in a clean, organized modern workshop setting with soft natural morning light. The scene emphasizes precision and reliability, featuring high-end tools and high-contrast wooden surfaces. The atmosphere is calm and expert-focused, reflecting a master artisan's environment with neutral tones and corporate blue accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWnfLWZ9o0VksJ-JAlJ1HiXfqBdKrvi5wY62Db5LVCocfo_PyO1kFmrQwTq5baCmUHDJW7FQ0kB0FBUQ90YkyNilMAO333-VP3-7RNHtboPd8fUPqw-ellW_F6uDreokKLjxU9QTN6C1M2I3WPOSTT76hp7qYTBjrXCRRAFQaEbpBdCUmfC2wG6wCl1BxTotdY5GRhQP235DlyxBL8EiG9-jKxFb3YW2-SGGGJ0f0psR-GhTuagjOcX5iSSgyVS3PJZoxx9f7bBGs')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl animate-fade-up">
+<h1 class="font-display-lg text-display-lg text-primary mb-stack-md">Expert Property Repair & Maintenance You Can Trust</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-lg">Quality craftsmanship for local homes and businesses. Reliable, affordable, and fully insured services for peace of mind.</p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-on-primary font-label-bold text-label-bold px-8 py-4 rounded-lg hover:bg-on-primary-fixed-variant transition-colors shadow-lg shadow-primary/10" href="#contact">Get a Free Quote</a>
+<a class="bg-surface-container-high text-on-surface font-label-bold text-label-bold px-8 py-4 rounded-lg hover:bg-surface-variant transition-colors" href="#services">Our Services</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid Section -->
+<section class="py-section-padding bg-surface-container-lowest" id="services">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="text-secondary font-label-bold tracking-widest uppercase mb-2 block">What We Do</span>
+<h2 class="font-headline-md text-headline-md text-primary">Masterful Solutions for Every Property</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service 1 -->
+<article class="group bg-surface-container p-stack-lg rounded-xl border border-outline-variant/30 hover:border-secondary transition-all duration-300 hover:-translate-y-2">
+<div class="bg-surface-container-highest w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">home_repair_service</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-primary mb-3">General Repairs</h3>
+<p class="text-on-surface-variant font-body-md mb-6">From fixing leaks to structural touch-ups, we handle all small and large household repair tasks with precision.</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-caption font-caption text-on-tertiary-container"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Prompt Response</li>
+<li class="flex items-center gap-2 text-caption font-caption text-on-tertiary-container"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Expert Finish</li>
+</ul>
+</article>
+<!-- Service 2 -->
+<article class="group bg-surface-container p-stack-lg rounded-xl border border-outline-variant/30 hover:border-secondary transition-all duration-300 hover:-translate-y-2">
+<div class="bg-surface-container-highest w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">format_paint</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-primary mb-3">Painting & Decorating</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Transform your spaces with professional interior and exterior painting services focused on longevity and aesthetics.</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-caption font-caption text-on-tertiary-container"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Surface Prep</li>
+<li class="flex items-center gap-2 text-caption font-caption text-on-tertiary-container"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Premium Materials</li>
+</ul>
+</article>
+<!-- Service 3 -->
+<article class="group bg-surface-container p-stack-lg rounded-xl border border-outline-variant/30 hover:border-secondary transition-all duration-300 hover:-translate-y-2">
+<div class="bg-surface-container-highest w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">electrical_services</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-primary mb-3">Plumbing & Electrical</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Essential utility maintenance including fixture installation, rewiring, and leak management by certified experts.</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-caption font-caption text-on-tertiary-container"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Safety Certified</li>
+<li class="flex items-center gap-2 text-caption font-caption text-on-tertiary-container"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> 24/7 Availability</li>
+</ul>
+</article>
+<!-- Service 4 -->
+<article class="group bg-surface-container p-stack-lg rounded-xl border border-outline-variant/30 hover:border-secondary transition-all duration-300 hover:-translate-y-2">
+<div class="bg-surface-container-highest w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">garden_cart</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-primary mb-3">Exterior Maintenance</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Gutter cleaning, fence repairs, and pressure washing to keep your property's exterior looking pristine year-round.</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-caption font-caption text-on-tertiary-container"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Curb Appeal</li>
+<li class="flex items-center gap-2 text-caption font-caption text-on-tertiary-container"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Seasonal Prep</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+<!-- CTA Bar -->
+<section class="bg-primary text-on-primary py-10">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-fixed">emergency_home</span>
+</div>
+<h2 class="font-headline-md text-headline-md">Need urgent repairs? Call us now!</h2>
+</div>
+<a class="text-headline-md font-headline-md text-secondary-container hover:underline transition-all decoration-2 underline-offset-8" href="tel:+441234567890">
+                    +44 1234 567 890
+                </a>
+</div>
+</section>
+<!-- Projects Gallery (Bento-style Grid) -->
+<section class="py-section-padding bg-background" id="projects">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Recent Projects</h2>
+<p class="text-on-surface-variant font-body-lg max-w-2xl">A showcase of our commitment to excellence, across residential and commercial property maintenance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl aspect-video md:aspect-auto h-full">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A wide-angle shot of a beautifully renovated modern living room featuring crisp white walls, expert wood flooring installation, and perfect ceiling finishing. The lighting is bright and airy, showcasing the meticulous detail of the paintwork and the clean lines of the joinery. A professional and sophisticated interior aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCbWKE9hdpvkZPmvVknoFv-EwjbNfK-VI3ogTt1MAwGIZpQVXEi_zYuxMLJACxkkKBhnTh5PVFbc0tSvqSHo-_WtxFwSpbqFlK-s0ivmskeTGKvfeH1ikvTvDv8dR2h6BwZY_5iIxtHuemKln9YVkZEQ-3xBpfuEK9fMXY4-846LYpsEuh-9R7mIxPST81_1rFII3A0PcJGvV-FTbN93B_p32Wzhed0zWrRFLNdH2pzk1N-c_SWCSd4EeDLlm9seHQCojBLVVINeo')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-stack-lg">
+<span class="text-secondary-fixed font-label-bold mb-1">Full Renovation</span>
+<h4 class="text-white font-title-sm">Modern Victorian Interior Update</h4>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="group relative overflow-hidden rounded-xl h-64">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Close-up of high-quality exterior brickwork repair and pointing. The image shows a section of a residential wall where the mortar is perfectly uniform and the bricks are clean, highlighting expert exterior maintenance. Sharp focus, natural daylight, demonstrating technical precision in property repair." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCW6JzU4TLdOuCKFXB0kpJcZ5j1lsRjRt7kPdjGcQZ8rcdbzy82gqcxAU8yWlJGFXyT0nwy4BQbQnWutbK0NstvDT9resdWW-ECHgnJheCc1qD46vjMQVxfTIjPiITD4iA9OTtSYIARpIjViIQhHsvJssu2krYuu39dyw9tleVbMWi4rOTW9vwi8i1ER0n9RyQInaU6sWjueqBuZAvZkx_6jsQzji1jZHgL3Jhj4LG--8RTWK9tmsp9b01i4b_irpNgQDJ3sN_RAY0')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-stack-lg">
+<span class="text-secondary-fixed font-label-bold mb-1">Exterior Repair</span>
+<h4 class="text-white font-title-sm">Brickwork Pointing</h4>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl h-64">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Detailed view of a newly installed luxury kitchen backsplash with intricate tiling work. The tiles are perfectly aligned with clean grout lines, set against a modern countertop and high-end cabinetry. The lighting emphasizes the texture and quality of the artisan installation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNGhta1xb9JrFrud43M8M2I2fDTfUZ40d6pRyuJ03Gjjlvt3eS0fdN5xkM17BBGrGKX4a9BqFlCEAtdB6cgKdsdw8mTXIVOiFzwPtx4zyHhm2sG86pcJvEQCWnbBbo9KyvkESUQg-gqwymO2iWPhhniXuAtB3SVPC6-S97LXKBgmo_2YPkvKyMK0aZA68pRLBibdGKeDyrdFrnttnDVqEhULZtvb55TK241i6IUmPC21yLm4tLzF6aZHrCpIiB9smGEx-AzBG62Uw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-stack-lg">
+<span class="text-secondary-fixed font-label-bold mb-1">Specialist Tiling</span>
+<h4 class="text-white font-title-sm">Kitchen Backsplash Install</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-padding bg-primary-container text-on-primary-container" id="testimonials">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md mb-4">What Our Clients Say</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="bg-on-primary-fixed/10 p-stack-lg rounded-2xl border border-white/5">
+<div class="flex gap-1 mb-4 text-secondary-container">
+<span class="material-symbols-outlined fill">star</span>
+<span class="material-symbols-outlined fill">star</span>
+<span class="material-symbols-outlined fill">star</span>
+<span class="material-symbols-outlined fill">star</span>
+<span class="material-symbols-outlined fill">star</span>
+</div>
+<p class="font-body-lg italic mb-6">"APC Property Repair is my go-to for all my rental properties. Their attention to detail and professional communication is unrivaled. They arrived on time and left the place spotless."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold">SH</div>
+<div>
+<h5 class="font-label-bold">Sarah Henderson</h5>
+<span class="text-caption opacity-70">Property Manager, Central Heights</span>
+</div>
+</div>
+</div>
+<div class="bg-on-primary-fixed/10 p-stack-lg rounded-2xl border border-white/5">
+<div class="flex gap-1 mb-4 text-secondary-container">
+<span class="material-symbols-outlined fill">star</span>
+<span class="material-symbols-outlined fill">star</span>
+<span class="material-symbols-outlined fill">star</span>
+<span class="material-symbols-outlined fill">star</span>
+<span class="material-symbols-outlined fill">star</span>
+</div>
+<p class="font-body-lg italic mb-6">"Extremely reliable and fairly priced. They fixed a plumbing issue three other contractors couldn't solve. I wouldn't hesitate to recommend them to anyone."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold">DM</div>
+<div>
+<h5 class="font-label-bold">David Miller</h5>
+<span class="text-caption opacity-70">Homeowner, Oakwood Estate</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-section-padding bg-surface-container-lowest" id="contact">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="font-display-lg text-display-lg text-primary mb-6">Request Your Free Quote</h2>
+<p class="font-body-lg text-on-surface-variant mb-10">Briefly describe your project or repair needs. We typically respond within 24 hours with a preliminary estimate.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary bg-secondary-fixed/30 p-3 rounded-lg">location_on</span>
+<div>
+<h4 class="font-title-sm text-primary">Service Area</h4>
+<p class="text-on-surface-variant">Serving Manchester, Stockport, and surrounding regions.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary bg-secondary-fixed/30 p-3 rounded-lg">history</span>
+<div>
+<h4 class="font-title-sm text-primary">Working Hours</h4>
+<p class="text-on-surface-variant">Mon - Fri: 8:00 AM - 6:00 PM<br/>Emergency Callouts available 24/7</p>
+</div>
+</div>
+</div>
+</div>
+<form class="bg-background p-stack-lg rounded-2xl shadow-xl shadow-primary/5 border border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md mb-stack-md">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-primary">Full Name</label>
+<input class="w-full h-12 px-4 rounded-lg border-outline focus:ring-2 focus:ring-primary focus:border-primary bg-surface transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-primary">Email Address</label>
+<input class="w-full h-12 px-4 rounded-lg border-outline focus:ring-2 focus:ring-primary focus:border-primary bg-surface transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2 mb-stack-md">
+<label class="font-label-bold text-label-bold text-primary">Phone Number</label>
+<input class="w-full h-12 px-4 rounded-lg border-outline focus:ring-2 focus:ring-primary focus:border-primary bg-surface transition-all" placeholder="+44 1234 567 890" type="tel"/>
+</div>
+<div class="space-y-2 mb-8">
+<label class="font-label-bold text-label-bold text-primary">Message</label>
+<textarea class="w-full px-4 py-3 rounded-lg border-outline focus:ring-2 focus:ring-primary focus:border-primary bg-surface transition-all" placeholder="Tell us about your property repair needs..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-fixed font-headline-md text-headline-md py-4 rounded-lg hover:shadow-lg hover:shadow-secondary/20 active:scale-[0.98] transition-all" type="submit">Send Request</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component: Footer) -->
+<footer class="bg-primary-container text-on-primary-container py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<span class="text-title-sm font-title-sm text-on-primary-container block mb-6">APC Property Repair</span>
+<p class="text-body-md opacity-70 mb-6">Dedicated to providing high-quality property maintenance services for homes and businesses across the region.</p>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-bold text-label-bold mb-6 text-secondary-fixed">Quick Links</h4>
+<ul class="space-y-4 font-body-md">
+<li><a class="hover:text-on-primary-container transition-opacity opacity-70 hover:opacity-100" href="#services">Services</a></li>
+<li><a class="hover:text-on-primary-container transition-opacity opacity-70 hover:opacity-100" href="#projects">Projects</a></li>
+<li><a class="hover:text-on-primary-container transition-opacity opacity-70 hover:opacity-100" href="#testimonials">Testimonials</a></li>
+<li><a class="hover:text-on-primary-container transition-opacity opacity-70 hover:opacity-100" href="#contact">Get a Quote</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-bold text-label-bold mb-6 text-secondary-fixed">Legal</h4>
+<ul class="space-y-4 font-body-md">
+<li><a class="hover:text-on-primary-container transition-opacity opacity-70 hover:opacity-100" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-on-primary-container transition-opacity opacity-70 hover:opacity-100" href="#">Terms of Service</a></li>
+<li><a class="hover:text-on-primary-container transition-opacity opacity-70 hover:opacity-100" href="#">Sitemap</a></li>
+<li><a class="hover:text-on-primary-container transition-opacity opacity-70 hover:opacity-100" href="#">Local Services</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-bold text-label-bold mb-6 text-secondary-fixed">Connect</h4>
+<div class="flex gap-4 mb-6">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined">qr_code_2</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+<p class="text-caption font-caption opacity-70">© 2024 APC Property Repair and Maintenance. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Mobile Sticky Footer Bar -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-lowest border-t border-outline-variant/30 grid grid-cols-2 z-50 h-16">
+<a class="flex items-center justify-center gap-2 font-label-bold text-primary border-r border-outline-variant/30" href="tel:+441234567890">
+<span class="material-symbols-outlined text-secondary">call</span>
+            Call Now
+        </a>
+<a class="flex items-center justify-center gap-2 font-label-bold bg-secondary-container text-on-secondary-fixed" href="#contact">
+<span class="material-symbols-outlined">request_quote</span>
+            Get Quote
+        </a>
+</div>
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "APC Property Repair and Maintenance",
+      "image": "placeholder",
+      "telephone": "+44 1234 567 890",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Stockport",
+        "addressRegion": "Greater Manchester",
+        "addressCountry": "UK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.4106,
+        "longitude": -2.1575
+      },
+      "url": "https://www.apcpropertyrepair.co.uk",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
+<script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // Scroll animations and Active Nav highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active-nav');
+                }
+            });
+
+            // Header transparency logic
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-0', 'shadow-sm');
+            } else {
+                header.classList.remove('py-2', 'shadow-md');
+                header.classList.add('py-0', 'shadow-sm');
+            }
+        });
+    </script>
+</body></html>

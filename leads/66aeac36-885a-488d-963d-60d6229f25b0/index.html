@@ -1,0 +1,498 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>HPS ELECTRICAL | Powering Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#bac9cc",
+                    "error": "#ffb4ab",
+                    "electric-blue-glow": "rgba(0, 229, 255, 0.4)",
+                    "on-error-container": "#ffdad6",
+                    "surface-glass": "rgba(15, 23, 42, 0.8)",
+                    "surface-tint": "#00daf3",
+                    "inverse-surface": "#dae2fd",
+                    "error-container": "#93000a",
+                    "on-error": "#690005",
+                    "surface-container": "#171f33",
+                    "surface-container-low": "#131b2e",
+                    "on-tertiary-container": "#6f5500",
+                    "deep-charcoal": "#1E293B",
+                    "surface-bright": "#31394d",
+                    "tertiary-fixed-dim": "#f3bf26",
+                    "tertiary-container": "#fec931",
+                    "on-primary-fixed-variant": "#004f58",
+                    "tertiary": "#ffeac0",
+                    "surface-container-high": "#222a3d",
+                    "on-secondary-container": "#6a4800",
+                    "inverse-primary": "#006875",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "outline": "#849396",
+                    "on-primary-container": "#00626e",
+                    "tertiary-fixed": "#ffdf96",
+                    "on-background": "#dae2fd",
+                    "on-tertiary": "#3e2e00",
+                    "surface": "#0b1326",
+                    "on-primary": "#00363d",
+                    "on-surface": "#dae2fd",
+                    "secondary-container": "#feb300",
+                    "on-secondary": "#432c00",
+                    "background": "#0b1326",
+                    "surface-dim": "#0b1326",
+                    "primary-container": "#00e5ff",
+                    "on-tertiary-fixed": "#251a00",
+                    "on-primary-fixed": "#001f24",
+                    "surface-container-lowest": "#060e20",
+                    "surface-variant": "#2d3449",
+                    "on-secondary-fixed-variant": "#604100",
+                    "outline-variant": "#3b494c",
+                    "primary-fixed-dim": "#00daf3",
+                    "on-secondary-fixed": "#281900",
+                    "primary-fixed": "#9cf0ff",
+                    "secondary-fixed": "#ffdeac",
+                    "primary": "#c3f5ff",
+                    "inverse-on-surface": "#283044",
+                    "industrial-gold": "#FFD700",
+                    "secondary": "#ffd799",
+                    "surface-container-highest": "#2d3449",
+                    "secondary-fixed-dim": "#ffba38"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-caps": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "button-text": ["Hanken Grotesk"],
+                    "headline-xl": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "button-text": ["16px", {"lineHeight": "1.0", "fontWeight": "600"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(186, 201, 204, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: #00e5ff;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+        }
+        .electric-glow-text {
+            text-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(11, 19, 38, 0.2) 0%, rgba(11, 19, 38, 0.9) 100%);
+        }
+        .active-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00e5ff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00e5ff;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-md bg-surface-glass border-b border-outline-variant/30 shadow-md">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-primary">
+                HPS ELECTRICAL
+            </div>
+<div class="hidden md:flex space-x-8 items-center font-button-text text-button-text">
+<a class="text-primary border-b-2 border-primary pb-1" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="services-hps-electrical.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="projects-hps-electrical.html">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact-us-hps-electrical.html">Why Choose Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact-us-hps-electrical.html">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-button-text hover:brightness-110 active:scale-95 transition-all">
+                Get a Quote
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, low-angle photograph of a sophisticated modern architectural building at dusk. The structure features intricate glass facades and sharp geometric lines, illuminated by vibrant cyan and electric blue interior lighting that glows through the windows. The atmosphere is high-tech and premium, with a deep navy blue sky and subtle reflections on the surrounding wet pavement, evoking a sense of precision engineering and advanced electrical infrastructure." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJTgO_6O4JcGxN0kTMtytRSHD1HutV_HgYafM16yCn6q_Kn4I8xYorT2lgQyoJa75GvBREgC5dI954DMmvePw3sTUeGHths6ZTR5PchsgEU5yxOCppooilCYp02JHdU0q9i2HbMtuEDM-HTVnoimg1G84_QEVq2Ak9Wn4e3jH20QugoT4a1TShYEB_ApFp8CIocbaNtfGdIPtUwoXQtXoqXm3FnsyBuXUkaYZHA55cJAG4A0b_e8zSVQ')">
+</div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 w-full px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-3xl space-y-6">
+<div class="flex items-center gap-3">
+<span class="active-dot"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest">LIVE INFRASTRUCTURE SYSTEMS</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-primary leading-tight">
+                        Powering <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Excellence</span> In Every Wire.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Premium Electrical Solutions for Domestic, Commercial, and Industrial Projects. Trusted by industry leaders for precision, safety, and reliability.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-button-text text-lg shadow-[0_0_20px_rgba(0,229,255,0.3)] hover:shadow-[0_0_30px_rgba(0,229,255,0.5)] transition-all">
+                            Get a Free Quote
+                        </button>
+<button class="border border-primary text-primary px-8 py-4 rounded-xl font-button-text text-lg hover:bg-primary/10 transition-all">
+                            View Our Projects
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Overview Grid -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16 text-center space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">Core Services</h2>
+<div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Providing specialized electrical engineering and maintenance across all sectors with a focus on technological integration.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Domestic -->
+<div class="glass-card p-8 rounded-xl flex flex-col group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-black transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">home</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Domestic</h3>
+<p class="text-on-surface-variant flex-grow">Smart home automation, rewiring, and bespoke lighting designs for premium residences.</p>
+<a class="mt-6 text-primary flex items-center gap-2 font-button-text" href="services-hps-electrical.html">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Commercial -->
+<div class="glass-card p-8 rounded-xl flex flex-col group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-black transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">business</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Commercial</h3>
+<p class="text-on-surface-variant flex-grow">Efficient electrical fit-outs for offices, retail spaces, and hospitality venues.</p>
+<a class="mt-6 text-primary flex items-center gap-2 font-button-text" href="services-hps-electrical.html">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Industrial -->
+<div class="glass-card p-8 rounded-xl flex flex-col group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-black transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">factory</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Industrial</h3>
+<p class="text-on-surface-variant flex-grow">High-voltage infrastructure, machinery wiring, and industrial maintenance solutions.</p>
+<a class="mt-6 text-primary flex items-center gap-2 font-button-text" href="services-hps-electrical.html">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Testing & Inspection -->
+<div class="glass-card p-8 rounded-xl flex flex-col group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-black transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Testing &amp; Inspection</h3>
+<p class="text-on-surface-variant flex-grow">Comprehensive EICR reports, PAT testing, and safety compliance audits.</p>
+<a class="mt-6 text-primary flex items-center gap-2 font-button-text" href="services-hps-electrical.html">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</section>
+<!-- Why Choose Us Section -->
+<section class="bg-surface-container py-24">
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A professional close-up of a master electrician wearing branded high-visibility gear, meticulously working on a complex industrial control panel. The scene is filled with intricate colored wiring, circuit breakers, and glowing status indicators. The lighting is sharp and technical, emphasizing the high level of detail and expertise. The depth of field is shallow, focusing on the precision of the hands against the backdrop of an advanced electrical distribution board." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtxWtEx1suGl6QJHfbPjzJj6AtncLTsu99CgVESen8vrdFDOqZycUVAxJcVh5O0AiovmE1uU-My1_CubmLXgZB-N_Zj1p8liNFuNILzT6RTX4nzx35_UMW5b13976EhZHU3scCIT6HhFrkwWW4O3y4gdNtl32AzNaFD1rZsWjRNZ-RCWqCbA22HzDgQYJP6xIN5U0o2BMbQsw0nTYwj_CwgS2QrgH4_SCKAxUcKMVc-5_yCuwLmvTkWw">
+</div>
+<div class="absolute -bottom-6 -right-6 bg-primary p-8 rounded-xl shadow-2xl hidden md:block">
+<div class="text-black font-headline-xl leading-none">15+</div>
+<div class="text-black font-label-caps mt-2">YEARS OF<br>EXCELLENCE</div>
+</div>
+</div>
+<div class="space-y-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Why HPS Electrical?</h2>
+<p class="text-on-surface-variant text-lg">We combine traditional craftsmanship with modern technology to deliver electrical systems that are safe, efficient, and future-proof.</p>
+</div>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 border border-primary/30 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-1">Reliability</h4>
+<p class="text-on-surface-variant">Consistent delivery on time and within budget, ensuring minimal disruption to your operations or home life.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 border border-primary/30 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-1">Expertise</h4>
+<p class="text-on-surface-variant">Highly qualified NICEIC contractors specializing in complex commercial and industrial electrical engineering.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 border border-primary/30 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-1">Safety</h4>
+<p class="text-on-surface-variant">Uncompromising safety standards with zero-compromise approach to testing and compliance regulations.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Testimonials -->
+<section class="py-24 px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div class="space-y-4">
+<span class="font-label-caps text-primary">TESTIMONIALS</span>
+<h2 class="font-headline-lg text-headline-lg">What Our Clients Say</h2>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 border border-outline-variant rounded-full flex items-center justify-center hover:border-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 border border-outline-variant rounded-full flex items-center justify-center hover:border-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-card p-10 rounded-2xl relative">
+<span class="material-symbols-outlined text-primary absolute top-8 right-10 opacity-20 text-6xl">format_quote</span>
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic mb-8">"HPS handled our full office rewire with zero downtime. Their attention to detail in the server room cooling system was second to none. Truly professional."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a professional male business owner in a corporate setting, with a friendly yet confident expression. He is wearing a sharp charcoal suit. The background is a blurred office environment with modern lighting. The image style is clean, corporate, and high-quality, fitting a premium service testimonial section." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ1i5GSX4BjZCMR2FMawVFxptmK18U5b3G6V4ZGELMo3nuhliFcrU49b7jI-DcxBaoWGt5Gtg5yb0cHOu-TugEkRzi7apSc-VlMkX2S4_C8ncCvP38BgpeJB645V0RoTNyXUeZEdvw2OXyRu-dApF_zScItdg0hyum7dWbMqoZrDUkKUURGqwPpGh9ziDB4pIQY8TpYncHVshSu02ns0BAzpILTxOV0TnXo2dZti4Mng_I2L5Qz4fr_w">
+</div>
+<div>
+<div class="font-bold">David Chen</div>
+<div class="text-on-surface-variant text-sm">CEO, Innovatech Ltd</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 rounded-2xl relative">
+<span class="material-symbols-outlined text-primary absolute top-8 right-10 opacity-20 text-6xl">format_quote</span>
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic mb-8">"Highly recommend for domestic smart home installations. They integrated our lighting, heating, and security into one seamless system. Exceptional work."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a sophisticated woman in her 40s, looking happy and content in a modern, well-lit domestic setting. She has a warm smile. The lighting in the background highlights high-end interior design and architectural electrical details. High-contrast, clean aesthetic with a focus on luxury and comfort." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxDES9yngfcP3FRnbMJoAwMbclOABK-Qg6-5lRPVJlCNy0-T6UjjGSo3CMtwHaxdEE9X08BU8o8uImIFsr-Z0bMYb8kgIbFHuseVTPHA4lIzqm0VfePVrDJ9VubiDPiW_PvIvcXu4jjfivXV1A6OZOAyQ1NIUrgaT1qs-woiAYV5ozOJpJMmTwtTtj9DJB_4yTA_-R7fLyf4uF3gz-bjuDs-Q64hnLR8LlwHUDHsGarh60dzbjSl8t5g">
+</div>
+<div>
+<div class="font-bold">Sarah Jenkins</div>
+<div class="text-on-surface-variant text-sm">Homeowner, Surrey</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 rounded-2xl relative">
+<span class="material-symbols-outlined text-primary absolute top-8 right-10 opacity-20 text-6xl">format_quote</span>
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-industrial-gold text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic mb-8">"The industrial testing and inspection team at HPS were thorough and extremely knowledgeable. They found issues others missed and fixed them instantly."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a senior industrial facility manager, a man in his late 50s with a serious and trustworthy look. He is wearing a professional polo shirt with a small logo. The background is a blurred industrial plant with metallic textures and industrial lighting. Strong, reliable, and authentic corporate photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuD05acfV66h82ThlGWcynbu5YMQGRHifrZogEittN_MCuC6_YfxB6fM6FfjqdADAWN96RQMq-xxLTkqpwyCXdPqQlLLz3xs03I6lZOLEBvhBZIXgLsXDPf6Dex1ttjFWNeiUVUD4fi9KI1gfFRymxU4bI2uCbSzcROJBYLrMfoR-ti2R10URVSAEm88Gneh6f5LfxEDrtxnvhBHFtRjln8Jv8ShYO-jb4EO8FaqN4k3FXIKLmpxRZfQ">
+</div>
+<div>
+<div class="font-bold">Mark Thompson</div>
+<div class="text-on-surface-variant text-sm">Operations Manager, Titan Manufacturing</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-margin-desktop bg-surface-container-low" id="contact">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Let's Discuss Your Project</h2>
+<p class="text-on-surface-variant mb-12 text-lg">Whether it's an emergency call-out or a multi-million pound industrial fit-out, our engineers are ready to assist.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-xs text-primary">NAME</label>
+<input class="w-full bg-deep-charcoal border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface p-3 transition-all" placeholder="John Doe" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs text-primary">EMAIL ADDRESS</label>
+<input class="w-full bg-deep-charcoal border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface p-3 transition-all" placeholder="john@company.com" type="email">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs text-primary">SERVICE REQUIRED</label>
+<select class="w-full bg-deep-charcoal border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface p-3 transition-all">
+<option>Domestic Electrical</option>
+<option>Commercial Services</option>
+<option>Industrial Engineering</option>
+<option>Testing &amp; Inspection</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs text-primary">MESSAGE</label>
+<textarea class="w-full bg-deep-charcoal border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface p-3 transition-all" placeholder="Tell us about your requirements..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-button-text py-4 rounded-xl shadow-lg hover:brightness-110 transition-all" type="submit">
+                            Submit Inquiry
+                        </button>
+</form>
+</div>
+<div class="h-full min-h-[400px] lg:min-h-full rounded-2xl overflow-hidden glass-card p-2 relative">
+<div class="w-full h-full rounded-xl overflow-hidden border border-outline-variant/30">
+<!-- Map integration placeholder -->
+<div class="w-full h-full bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="A stylized, dark-themed satellite map of London, England, showing intricate street patterns and landmarks in a deep navy and electric blue color palette. The map has glowing cyan lines representing main infrastructure routes, aligning with the tech-industrial brand aesthetic of an electrical contractor. No generic map UI elements, just a clean, premium visual representation of the location." data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6LkvujKP0WqZJ__R4CHHCS4x97Ipx06TE7B5SZEzBnKKJt94ffuYO7HwfwSB4MilY_R2wyzxDF83y70LxL1mHCM-7N800G_nq0Ip0d5YJGLmW4AEnypJylgDEmo2zpCi_u9Re9Z1AmfVbCxUw82W-vyjAC7yoiOBOhcPA2ZxOiuWZU0ehEJ6TfHINQHSyO301e8AmL-nvU2BPL7v68WKbGg_UpPjDAZAaUEBlKsDaS5F92I0F_t8Lqg">
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<div class="absolute bottom-8 left-8 right-8 bg-surface-glass p-6 rounded-xl border border-primary/20 shadow-2xl">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-black">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<div class="font-bold text-primary">Headquarters</div>
+<div class="text-sm text-on-surface-variant">123 Industrial Way, London, SE1 7PB</div>
+</div>
+</div>
+<div class="mt-4 flex flex-col gap-2">
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-base">phone</span>
+<span>+44 (0) 20 7946 0123</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-base">mail</span>
+<span>contact@hpselectrical.co.uk</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                    HPS ELECTRICAL
+                </div>
+<p class="font-body-md text-on-surface-variant opacity-80">
+                    Setting the gold standard in electrical contracting across the UK. Innovation through expertise.
+                </p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="contact-us-hps-electrical.html"><span class="material-symbols-outlined">verified</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-primary mb-6">Services</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="hover:text-primary transition-colors cursor-pointer">Domestic Wiring</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Commercial Fit-outs</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Industrial Control</li>
+<li class="hover:text-primary transition-colors cursor-pointer">EV Charging Points</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Smart Home Tech</li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-primary mb-6">Quick Links</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="hover:text-primary transition-colors cursor-pointer">Privacy Policy</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Terms of Service</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Accreditations</li>
+<li class="hover:text-primary transition-colors cursor-pointer text-error">Emergency Call-Out</li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-primary mb-6">Accreditations</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-16 bg-surface-container flex items-center justify-center rounded grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100 p-2">
+<span class="font-label-caps text-[10px] text-center">NICEIC APPROVED</span>
+</div>
+<div class="h-16 bg-surface-container flex items-center justify-center rounded grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100 p-2">
+<span class="font-label-caps text-[10px] text-center">CHAS ACCREDITED</span>
+</div>
+<div class="h-16 bg-surface-container flex items-center justify-center rounded grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100 p-2">
+<span class="font-label-caps text-[10px] text-center">ISO 9001</span>
+</div>
+<div class="h-16 bg-surface-container flex items-center justify-center rounded grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100 p-2">
+<span class="font-label-caps text-[10px] text-center">SAFE CONTRACTOR</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-8 border-t border-outline-variant/30 text-center text-sm text-on-surface-variant opacity-60 max-w-container-max mx-auto">
+            © 2024 HPS Electrical Contractors Ltd. All rights reserved.
+        </div>
+</footer>
+<script>
+        // Simple micro-interaction for form inputs
+        document.querySelectorAll('input, textarea, select').forEach(element => {
+            element.addEventListener('focus', () => {
+                element.parentElement.querySelector('label').style.color = '#00daf3';
+            });
+            element.addEventListener('blur', () => {
+                element.parentElement.querySelector('label').style.color = '';
+            });
+        });
+    </script>
+</body></html>

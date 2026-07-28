@@ -1,0 +1,384 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Prices &amp; FAQ | PML Handyman - Professional Grade Maintenance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-ice": "#FFFFFF",
+                    "surface-container": "#eeedf2",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1a1c1f",
+                    "surface-variant": "#e2e2e6",
+                    "on-surface-variant": "#45464f",
+                    "on-secondary-fixed-variant": "#002eca",
+                    "on-primary-fixed-variant": "#354572",
+                    "blue-gradient-end": "#0D1731",
+                    "background": "#f9f9fd",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#2f3034",
+                    "tertiary-container": "#292d33",
+                    "outline-variant": "#c5c6d0",
+                    "primary": "#021541",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e8e8ec",
+                    "tertiary-fixed-dim": "#c3c6ce",
+                    "secondary-fixed-dim": "#bac3ff",
+                    "outline": "#757680",
+                    "inverse-on-surface": "#f0f0f4",
+                    "blue-gradient-start": "#1A2B56",
+                    "on-tertiary-container": "#90949b",
+                    "inverse-primary": "#b5c5f9",
+                    "error": "#ba1a1a",
+                    "accent-gold": "#D4AF37",
+                    "on-primary-container": "#8393c5",
+                    "tertiary-fixed": "#dfe2ea",
+                    "on-primary": "#ffffff",
+                    "surface": "#f9f9fd",
+                    "surface-dim": "#d9dade",
+                    "tertiary": "#14191e",
+                    "on-tertiary-fixed-variant": "#43474d",
+                    "on-primary-fixed": "#051944",
+                    "secondary-fixed": "#dee0ff",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e2e2e6",
+                    "secondary-container": "#3959fe",
+                    "on-background": "#1a1c1f",
+                    "primary-fixed": "#dae1ff",
+                    "status-success": "#2D6A4F",
+                    "on-secondary-container": "#efefff",
+                    "secondary": "#113be6",
+                    "surface-bright": "#f9f9fd",
+                    "surface-tint": "#4d5d8b",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#1a2b56",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f3f3f7",
+                    "on-secondary-fixed": "#00105c",
+                    "on-tertiary-fixed": "#181c21",
+                    "primary-fixed-dim": "#b5c5f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-edge": "32px",
+                    "stack-lg": "48px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "section-padding": "120px",
+                    "gutter": "24px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "display-xl": ["Hanken Grotesk"],
+                    "cta-text": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["JetBrains Mono"],
+                    "headline-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "cta-text": ["16px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .ambient-shadow {
+            box-shadow: 0 12px 40px rgba(26, 43, 86, 0.08);
+        }
+        .service-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(26, 43, 86, 0.12);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+        .accordion-item.active .icon-rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md border-b border-primary/10 shadow-[0_12px_40px_rgba(26,43,86,0.08)] h-20">
+<div class="max-w-container-max mx-auto px-margin-edge flex justify-between items-center h-full">
+<div class="font-headline-md text-headline-md font-bold text-primary">PML Handyman</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-cta-text text-cta-text uppercase tracking-wider text-on-surface-variant hover:text-primary transition-all duration-300" href="our-services-pml-handyman.html">Services</a>
+<a class="font-cta-text text-cta-text uppercase tracking-wider text-on-surface-variant hover:text-primary transition-all duration-300" href="index.html">About Us</a>
+<a class="font-cta-text text-cta-text uppercase tracking-wider text-on-surface-variant hover:text-primary transition-all duration-300" href="index.html">Testimonials</a>
+<a class="font-cta-text text-cta-text uppercase tracking-wider text-secondary font-bold border-b-2 border-secondary pb-1" href="prices-faq-pml-handyman.html">FAQs</a>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg font-cta-text text-cta-text uppercase tracking-wider active:scale-95 transition-transform">
+                MAKE A BOOKING
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-40 pb-section-padding bg-gradient-to-b from-surface-ice to-surface px-margin-edge">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div>
+<span class="font-label-caps text-label-caps text-secondary-container bg-secondary-container/10 px-3 py-1 rounded-full mb-4 inline-block">TRANSPARENT PRICING</span>
+<h1 class="font-display-xl text-display-xl text-primary mb-6">Expert Service, <br><span class="text-secondary">Fixed Rates.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">No hidden fees or unexpected extras. We believe in high-end maintenance delivered with corporate professionalism and absolute clarity.</p>
+</div>
+<div class="relative">
+<div class="bg-white p-8 rounded-xl ambient-shadow border border-primary/10">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-secondary">
+<img class="w-full h-full object-cover" data-alt="Close up of a Checkatrade verified badge on a white background, representing trust and reliability in professional trade services. Soft lighting, high-end commercial aesthetic with corporate blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC_M69TfAv8B1qDsHjHYlV9X8kpyyJvqHs6mB_yIR1ut6YTbqwaVOt-_YzEvpeB053PLDywIpN5LtXirSAdU10sckprAtaFZbVVsjtTAiK5ThiluSjN6CwCBcXWsP4nqJH45v6XzY89uQKtbTEb9Ev3a3Qkqa-i1jxhyy1U1hIq-yfRTN3MU_T9ImldXx-bTE1Mftt9dZ3RB02KqyIPpsahCbMWMnpxShR--t5qxHSpHDr8lpfQhO_">
+</div>
+<div>
+<h3 class="font-headline-md text-[24px] text-primary">Checkatrade Verified</h3>
+<div class="flex items-center text-accent-gold gap-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-on-surface-variant font-bold ml-2">9.9 / 10</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant mb-4 italic">"Impeccable attention to detail and professional communication. PML Handyman is our go-to for all property needs."</p>
+<div class="h-1 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[99%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Grid -->
+<section class="py-section-padding px-margin-edge bg-white">
+<div class="max-w-container-max mx-auto text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Standard Rate Structure</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Corporate grade standards for residential and commercial environments.</p>
+</div>
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Rate Card 1 -->
+<div class="bg-surface-ice p-8 rounded-xl border border-primary/10 ambient-shadow service-card-hover transition-all duration-300 text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">schedule</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Hourly Rate</h3>
+<div class="text-4xl font-bold text-primary mb-4">£65<span class="text-body-md font-normal text-on-surface-variant">/hr</span></div>
+<ul class="text-left space-y-4 mb-8 font-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-status-success text-sm">check_circle</span> Minimum 1-hour booking</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-status-success text-sm">check_circle</span> Specialized tool kits included</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-status-success text-sm">check_circle</span> Professional waste disposal</li>
+</ul>
+<button class="w-full border-2 border-primary py-3 rounded-lg font-cta-text hover:bg-primary hover:text-white transition-colors">BOOK HOURLY</button>
+</div>
+<!-- Rate Card 2 -->
+<div class="bg-primary p-8 rounded-xl border border-secondary/20 shadow-xl service-card-hover transition-all duration-300 text-center relative overflow-hidden">
+<div class="absolute top-4 right-4 bg-secondary text-white text-[10px] px-2 py-1 rounded font-bold uppercase tracking-widest">Most Popular</div>
+<span class="material-symbols-outlined text-white text-5xl mb-6">calendar_today</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Half Day</h3>
+<div class="text-4xl font-bold text-white mb-4">£240<span class="text-body-md font-normal text-on-primary-container">/4 hrs</span></div>
+<ul class="text-left space-y-4 mb-8 font-body-md text-on-primary-container">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Multi-task optimization</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Full property walk-through</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Prioritized emergency fixes</li>
+</ul>
+<button class="w-full bg-secondary-container text-white py-3 rounded-lg font-cta-text active:scale-95 transition-transform">BOOK HALF DAY</button>
+</div>
+<!-- Rate Card 3 -->
+<div class="bg-surface-ice p-8 rounded-xl border border-primary/10 ambient-shadow service-card-hover transition-all duration-300 text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">assignment</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Daily Rate</h3>
+<div class="text-4xl font-bold text-primary mb-4">£450<span class="text-body-md font-normal text-on-surface-variant">/8 hrs</span></div>
+<ul class="text-left space-y-4 mb-8 font-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-status-success text-sm">check_circle</span> Best value for major projects</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-status-success text-sm">check_circle</span> Project management included</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-status-success text-sm">check_circle</span> Multi-trade coordination</li>
+</ul>
+<button class="w-full border-2 border-primary py-3 rounded-lg font-cta-text hover:bg-primary hover:text-white transition-colors">BOOK FULL DAY</button>
+</div>
+</div>
+</section>
+<!-- Request a Quote Section -->
+<section class="py-section-padding px-margin-edge bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="h-[600px] rounded-xl bg-cover bg-center ambient-shadow relative overflow-hidden group" data-alt="A professional handyman in a navy blue uniform with a subtle PML logo, focused on meticulously installing high-end cabinetry in a modern, bright kitchen. The lighting is crisp and clean, reflecting a white-glove service standard. Professional photography style, shallow depth of field, corporate aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCU_CXrIvSj9ELyYO1AU3GoFCduADrUWV7iTZiBQGrEmhurMfKC8Q-xE9UP6kymh-mvn3xmU45kKICnp8GaMbuGed3QRmtzcTx6WDEwzJ8WQwCSIQ3rhKiruSMZWb1p7vGeK9rMgxvLceF59vjOf9cgLkMFxs-3lSIhwF33J9RbbZR2u63DP--t5p5eF07tpwWJTlZB1q-Ru0ElojtVKaGYO-zmr_l0ljZLPIuqtvOnBZ5rgSH6fKmH')">
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-colors duration-500"></div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Custom Projects &amp; Quotes</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Have a specific project that doesn't fit into our standard rates? Request a detailed, itemized quote for large-scale refurbishments or ongoing maintenance contracts.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">FULL NAME</label>
+<input class="w-full bg-surface p-4 border-b-2 border-primary/10 focus:border-secondary outline-none transition-all rounded-t-lg" placeholder="John Doe" type="text">
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">EMAIL ADDRESS</label>
+<input class="w-full bg-surface p-4 border-b-2 border-primary/10 focus:border-secondary outline-none transition-all rounded-t-lg" placeholder="john@example.com" type="email">
+</div>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">SERVICE CATEGORY</label>
+<select class="w-full bg-surface p-4 border-b-2 border-primary/10 focus:border-secondary outline-none transition-all rounded-t-lg appearance-none">
+<option>Property Maintenance</option>
+<option>Plumbing &amp; Electrical</option>
+<option>Painting &amp; Decorating</option>
+<option>Commercial Contracts</option>
+</select>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">PROJECT DETAILS</label>
+<textarea class="w-full bg-surface p-4 border-b-2 border-primary/10 focus:border-secondary outline-none transition-all rounded-t-lg" placeholder="Describe your project requirements..." rows="4"></textarea>
+</div>
+<button class="bg-secondary text-white px-10 py-4 rounded-lg font-cta-text uppercase tracking-widest hover:bg-primary transition-colors shadow-lg" type="submit">REQUEST QUOTE</button>
+</form>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-padding px-margin-edge">
+<div class="max-w-[800px] mx-auto">
+<div class="text-center mb-16">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em]">Questions &amp; Answers</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-4">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="accordion-item bg-white border border-primary/10 rounded-xl overflow-hidden ambient-shadow active">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-surface-container transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-headline-md text-[20px] text-primary">Are you fully insured for commercial work?</span>
+<span class="material-symbols-outlined icon-rotate text-secondary transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-8 pb-8 font-body-md text-on-surface-variant leading-relaxed">
+                            Yes, PML Handyman holds comprehensive public liability insurance up to £5,000,000. We are fully equipped and certified to handle both residential and high-end commercial property maintenance projects.
+                        </div>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="accordion-item bg-white border border-primary/10 rounded-xl overflow-hidden ambient-shadow">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-surface-container transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-headline-md text-[20px] text-primary">Do you provide your own tools and materials?</span>
+<span class="material-symbols-outlined icon-rotate text-secondary transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-8 pb-8 font-body-md text-on-surface-variant leading-relaxed">
+                            We arrive with a fully equipped professional kit suitable for most standard repairs. For specific materials (like paint, fixtures, or specialized parts), we can either source them on your behalf (at cost + 10% handling) or use materials you have provided.
+                        </div>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="accordion-item bg-white border border-primary/10 rounded-xl overflow-hidden ambient-shadow">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-surface-container transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-headline-md text-[20px] text-primary">What areas do you cover?</span>
+<span class="material-symbols-outlined icon-rotate text-secondary transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-8 pb-8 font-body-md text-on-surface-variant leading-relaxed">
+                            Our primary service area includes West London and the surrounding suburbs. For large-scale projects or commercial contracts, we may travel further within the M25. Please contact our support team for specific location queries.
+                        </div>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="accordion-item bg-white border border-primary/10 rounded-xl overflow-hidden ambient-shadow">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-surface-container transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-headline-md text-[20px] text-primary">How do I pay for my service?</span>
+<span class="material-symbols-outlined icon-rotate text-secondary transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-8 pb-8 font-body-md text-on-surface-variant leading-relaxed">
+                            We accept all major credit/debit cards via our secure portable payment terminals, as well as bank transfers for commercial accounts. Payment is required upon completion of the work for residential bookings.
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary py-section-padding px-margin-edge">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md text-on-primary mb-6">PML Handyman</div>
+<p class="font-body-md text-on-primary-container/80 mb-4">Professional grade property maintenance for the modern homeowner and commercial manager.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary hover:text-white transition-colors cursor-pointer">qr_code_2</span>
+<span class="material-symbols-outlined text-secondary hover:text-white transition-colors cursor-pointer">mail</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-6">SERVICES</h4>
+<ul class="space-y-4 font-body-md text-on-primary-container/80">
+<li class="hover:text-on-primary transition-transform hover:translate-x-1 duration-200 cursor-pointer">General Repairs</li>
+<li class="hover:text-on-primary transition-transform hover:translate-x-1 duration-200 cursor-pointer">Plumbing &amp; Electrics</li>
+<li class="hover:text-on-primary transition-transform hover:translate-x-1 duration-200 cursor-pointer">Exterior Maintenance</li>
+<li class="hover:text-on-primary transition-transform hover:translate-x-1 duration-200 cursor-pointer">Commercial Services</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-6">QUICK LINKS</h4>
+<ul class="space-y-4 font-body-md text-on-primary-container/80">
+<li class="hover:text-on-primary transition-transform hover:translate-x-1 duration-200 cursor-pointer">About Us</li>
+<li class="text-accent-gold transition-transform hover:translate-x-1 duration-200 cursor-pointer">Prices &amp; FAQ</li>
+<li class="hover:text-on-primary transition-transform hover:translate-x-1 duration-200 cursor-pointer">Service Areas</li>
+<li class="hover:text-on-primary transition-transform hover:translate-x-1 duration-200 cursor-pointer">Emergency Support</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-6">LEGAL</h4>
+<ul class="space-y-4 font-body-md text-on-primary-container/80">
+<li class="hover:text-on-primary transition-transform hover:translate-x-1 duration-200 cursor-pointer">Privacy Policy</li>
+<li class="hover:text-on-primary transition-transform hover:translate-x-1 duration-200 cursor-pointer">Terms of Service</li>
+<li class="hover:text-on-primary transition-transform hover:translate-x-1 duration-200 cursor-pointer">Careers</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-20 pt-8 border-t border-white/10 text-center font-body-md text-on-primary-container/60">
+            © 2024 PML Handyman. Professional Grade Maintenance.
+        </div>
+</footer>
+<script>
+        // Simple script for handling accordion logic and nav scroll effects
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body></html>

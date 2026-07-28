@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aussie Man &amp; Van | Expert Handyman Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#281900",
+                        "surface-container-low": "#f2f4f4",
+                        "surface-dim": "#d8dada",
+                        "on-tertiary-fixed-variant": "#254e45",
+                        "primary-container": "#004d40",
+                        "primary-fixed": "#afefdd",
+                        "tertiary": "#06342c",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f8fafa",
+                        "on-primary-container": "#7ebdac",
+                        "surface-variant": "#e1e3e3",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#6a4800",
+                        "surface-container": "#eceeee",
+                        "on-primary-fixed-variant": "#065043",
+                        "primary": "#00342b",
+                        "secondary-container": "#feb300",
+                        "inverse-primary": "#94d3c1",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2e3131",
+                        "on-background": "#191c1d",
+                        "background": "#f8fafa",
+                        "secondary": "#7e5700",
+                        "tertiary-container": "#224b42",
+                        "on-primary-fixed": "#00201a",
+                        "surface-tint": "#29695b",
+                        "outline": "#707975",
+                        "on-surface": "#191c1d",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#94d3c1",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#8fbaae",
+                        "on-surface-variant": "#3f4945",
+                        "on-secondary-fixed-variant": "#604100",
+                        "secondary-fixed": "#ffdeac",
+                        "on-tertiary-fixed": "#00201a",
+                        "outline-variant": "#bfc9c4",
+                        "surface": "#f8fafa",
+                        "surface-container-high": "#e6e8e8",
+                        "tertiary-fixed": "#bfecdf",
+                        "inverse-on-surface": "#eff1f1",
+                        "secondary-fixed-dim": "#ffba38",
+                        "tertiary-fixed-dim": "#a4cfc3",
+                        "surface-container-highest": "#e1e3e3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-mobile": "64px",
+                        "container-max": "1280px",
+                        "section-gap-desktop": "120px",
+                        "grid-gutter": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "display": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "display-mobile": ["Montserrat"],
+                        "label-sm": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .service-card-shadow {
+            box-shadow: 0px 10px 30px rgba(0, 77, 64, 0.08);
+        }
+        .glass-header {
+            background: rgba(248, 250, 250, 0.95);
+            backdrop-filter: blur(12px);
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4 glass-header border-b border-outline-variant">
+<div class="flex items-center gap-4">
+<img alt="Aussie Man &amp; Van Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFD7W44bhALQN_IQ6UCt_zPmQo7qe6Vkk0yOhKhOX1MhCZkqkPJY-noZ1e3KBhTowmaKoK0Uw702c8PvuLBDq_mnQkU6Z-qzuwb7YBtwdpYsSL3y2EW95bOetuVpeFOHYtn-fnVqh93eTBdPhLxf3o-G1KGLwZJKowg19yRc7gdNd7Tp-nm4_KSMU-nHl8JP32s8J_EAWmXQHGMJ7IHdL5eI8WV-Bw5MrVVIMb7OAp9yo9XZVyLzvIHQ"/>
+<span class="font-display text-headline-md font-bold text-primary">Aussie Man &amp; Van</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-secondary hover:text-secondary transition-colors duration-200" href="#">Furniture Assembly</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">TV Mounting</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Maintenance</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Why Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">How It Works</a>
+</nav>
+<div class="flex items-center gap-6">
+<a class="hidden lg:flex items-center gap-2 font-label-bold text-primary hover:text-secondary transition-colors" href="tel:0400000000">
+<span class="material-symbols-outlined">call</span>
+                0400 000 000
+            </a>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-full font-label-bold hover:shadow-lg active:scale-95 transition-all">
+                Get a Quote
+            </button>
+</div>
+</header>
+<main class="pt-[72px]">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105 animate-[pulse_10s_infinite_alternate]" data-alt="A professional handyman in a dark green polo shirt with gold embroidery, expertly drilling into a high-quality walnut wood frame in a bright, modern Australian living room. The lighting is soft and natural, emphasizing a premium and clean service environment. The aesthetic is sharp and organized, reflecting expertise and precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNxrJ9XiImPmJNBiJlnZTyWtN2z3OMJZLMiNsE9uSgL390f_SVyB33R1fG_M376LnDzdgtOhkldW7eaHvBvuTTOGrxzAhaZ0SZ2t3qD9-XEo5cofC9t5V2L7jL9hh_0wUTEXzJhfkCa18tjBCtWswZIZSUZoclRX-S_8065484aLyad2D89cu4M_2iYrM5IvM1uDyMT6l4bLwwv5wpZ3X9djNzK1ShZYNav9R6Uxi6eUUwBJAc6EO3IA')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<h1 class="font-display text-display-mobile md:text-display text-on-primary mb-6 reveal-on-scroll">
+                        Expert Handyman Services with the Aussie Spirit.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-primary/90 mb-10 reveal-on-scroll" style="transition-delay: 100ms;">
+                        From flat-packs to TV mounting, we get your home move-in ready today with professional precision and unmatched reliability.
+                    </p>
+<div class="flex flex-wrap gap-4 reveal-on-scroll" style="transition-delay: 200ms;">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full font-label-bold text-lg hover:bg-secondary hover:text-white transition-all shadow-xl">
+                            Book Now
+                        </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-on-primary px-8 py-4 rounded-full font-label-bold text-lg hover:bg-white/20 transition-all">
+                            Get a Quote
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-8 bg-surface">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-display text-headline-lg text-primary mb-4">Our Premium Expertise</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Precision-driven solutions for every corner of your home, delivered by certified professionals.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
+<!-- Card 1 -->
+<div class="group relative bg-white rounded-xl overflow-hidden service-card-shadow transition-transform duration-500 hover:-translate-y-2 reveal-on-scroll">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of professional hands using a power drill to assemble a piece of high-end wooden furniture. The scene is bright and airy, showing a clean workspace with organized tools like levels and wrenches on a felt mat. The focus is on the craftsmanship and precision of the assembly process." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdrhv9gpzPvPhm9U2SW_vMxClX1pCPiql-S2wgY3bnQd5x1suGTnaVKgLS6CKVG-H3S3a1MWB5lsqv80DezJ7rY5kNUh0-bdMhlJXN74dZd2qPggkDc86ng_R9dr5T9OIdXRVqNVxZudBMLqe4Lv3OzcQsMi2nkFfsfCNyIcNdScBWBENqvBA9tv7w49U7j-_0e0qJbu2UqGKAK9267OGxj0ziK-1rwYJOTbFQeAJEmksMTDNGNI_hMQ')"></div>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<div class="p-8">
+<h3 class="font-display text-headline-md text-primary mb-3">Furniture Assembly</h3>
+<p class="text-on-surface-variant mb-6">Expert flat-pack assembly for IKEA, West Elm, and premium designer brands.</p>
+<a class="flex items-center gap-2 text-secondary font-label-bold group/link" href="#">
+                                Learn More 
+                                <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-white rounded-xl overflow-hidden service-card-shadow transition-transform duration-500 hover:-translate-y-2 reveal-on-scroll" style="transition-delay: 150ms;">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A smiling professional handyman wearing a green polo shirt mounting a large flat-screen television onto a white wall in a minimalist living room. He is focused on the bracket, demonstrating careful installation and technical skill. The room is modern and bright with neutral tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCX6b-yNZEzhpMAwNSH5Kfurivq0WPqhdHJ5wb2k9s-DRNnSdfecqmhHm8HIJLGQuEhH1Gn5cv9IquxadtQlmiZlLR6Id5dpaFmcWndmqCfC3R1EtWiKI6tl4G5fP1fUa7UwsIr-dOleTwtqGAjPFQPjDFRr9qEkZXfruzjCTp1i6MzxWz_ok0jpWJbNinpcG3poYseir5lTBjz0SdoCEbIQcTlOLK-ZGA7Ce8wAWHNkDYSe_TF0o0_3Q')"></div>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<div class="p-8">
+<h3 class="font-display text-headline-md text-primary mb-3">TV &amp; Artwork Mounting</h3>
+<p class="text-on-surface-variant mb-6">Secure, level, and cable-managed mounting for all your home entertainment needs.</p>
+<a class="flex items-center gap-2 text-secondary font-label-bold group/link" href="#">
+                                Learn More 
+                                <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-white rounded-xl overflow-hidden service-card-shadow transition-transform duration-500 hover:-translate-y-2 reveal-on-scroll" style="transition-delay: 300ms;">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A technician performing general home maintenance, checking plumbing or electrical fixtures in a high-end modern kitchen. The environment is spotless, and the professional is equipped with a clean tool belt. The lighting highlights a sense of order and reliability." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADeyE8OkkVR1kxhYSQ7iQME-Xx2pWCOUQF1lGK0TIN2gs2lcZxeRojWJs1lmjLkUqfOG29KimhhOe_KWkqFW73JBVu0eBwLAKNvDYqwntIGCORsl1GV972QuUuirgYIJ3KJ9wpNLefxCrpHPmcTKK23yXRN1V243iaUFiG_-m1Me-U2NiUzCFBqyW3Dac0FZa_xOUhRP6-HrWFeO4eY2aSlCwpf1zqQGsMKEWMr94Gr7TfSfY0imkUnA')"></div>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<div class="p-8">
+<h3 class="font-display text-headline-md text-primary mb-3">Property Maintenance</h3>
+<p class="text-on-surface-variant mb-6">General repairs, door adjustments, and minor installations to keep your home perfect.</p>
+<a class="flex items-center gap-2 text-secondary font-label-bold group/link" href="#">
+                                Learn More 
+                                <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Story Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low overflow-hidden">
+<div class="max-w-container-max mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="reveal-on-scroll">
+<h2 class="font-display text-display-mobile md:text-display text-primary mb-6">The "Can-Do" Aussie Spirit</h2>
+<p class="text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        At Aussie Man &amp; Van, we're more than just handymen. We're your concierge for home readiness. With our professional fleet and expert team, we bring efficiency, punctuality, and Australian craftsmanship to every job.
+                    </p>
+<div class="space-y-4 mb-10">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-label-bold text-on-surface">One-Stop-Shop Efficiency</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<span class="font-label-bold text-on-surface">Fully Insured &amp; Police Checked</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">schedule</span>
+</div>
+<span class="font-label-bold text-on-surface">On-Time, Every Time Guarantee</span>
+</div>
+</div>
+</div>
+<div class="relative reveal-on-scroll" style="transition-delay: 200ms;">
+<div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+<div class="w-full h-full bg-cover bg-center" data-alt="A clean, white modern logistics van with the Aussie Man &amp; Van logo, featuring a green kangaroo icon, parked on a charming London-style cobblestone street lined with traditional brick terraced houses. The scene is bright and professional, suggesting a high-end service fleet operating in a sophisticated neighborhood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLLItXW1DhHVIDrnkhFDAaSwJoiASegIyF77BFbMis0dCQuUCL9NemUn1my_8RgFP72UHAyRpjrx-kUQ4QJjhDvSlnwM-h6BB6fzyNze7Bn3S1gHC4YH8XmMAgIYhO8QiziF9hYsBtODIq2whEfaOmqlxeY0sOjHjlvlVwYpoxfv5fNk7IftuhKiMgNvT0MK9UHoVDozjINfSsUufwdUosxuMMFOBAq5VpUDt82D8k1V8XJ1rLOIsNVQ')"></div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-full -z-10 opacity-20"></div>
+</div>
+</div>
+</section>
+<!-- Lead Capture Form -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-primary text-on-primary">
+<div class="max-w-4xl mx-auto px-8">
+<div class="text-center mb-12">
+<h2 class="font-display text-display-mobile md:text-headline-lg mb-4">Request Your Free Quote</h2>
+<p class="text-on-primary/70">Tell us about your project and we'll get back to you with a competitive estimate.</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal-on-scroll">
+<div class="flex flex-col gap-2">
+<label class="text-label-sm uppercase tracking-widest opacity-70">Full Name</label>
+<input class="bg-white/10 border-white/20 rounded-lg p-4 focus:ring-2 focus:ring-secondary-container focus:border-transparent text-on-primary placeholder:text-white/30 transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-label-sm uppercase tracking-widest opacity-70">Email Address</label>
+<input class="bg-white/10 border-white/20 rounded-lg p-4 focus:ring-2 focus:ring-secondary-container focus:border-transparent text-on-primary placeholder:text-white/30 transition-all" placeholder="john@example.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-label-sm uppercase tracking-widest opacity-70">Phone Number</label>
+<input class="bg-white/10 border-white/20 rounded-lg p-4 focus:ring-2 focus:ring-secondary-container focus:border-transparent text-on-primary placeholder:text-white/30 transition-all" placeholder="0400 000 000" type="tel"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-label-sm uppercase tracking-widest opacity-70">Message</label>
+<textarea class="bg-white/10 border-white/20 rounded-lg p-4 focus:ring-2 focus:ring-secondary-container focus:border-transparent text-on-primary placeholder:text-white/30 transition-all" placeholder="Tell us what you need help with..." rows="4"></textarea>
+</div>
+<button class="md:col-span-2 bg-secondary-container text-on-secondary-container py-4 rounded-lg font-label-bold text-lg hover:bg-secondary hover:text-white transition-all transform active:scale-95 shadow-xl">
+                        Send Inquiry
+                    </button>
+</form>
+</div>
+</section>
+<!-- CTA Bar -->
+<section class="bg-secondary py-12">
+<div class="max-w-container-max mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="text-center md:text-left">
+<h3 class="font-display text-headline-md text-white">Need an expert right now?</h3>
+<p class="text-white/80">Our specialists are standing by to assist with your home projects.</p>
+</div>
+<button class="bg-white text-primary px-10 py-4 rounded-full font-label-bold text-lg hover:bg-primary-container hover:text-white transition-all shadow-2xl flex items-center gap-3">
+<span class="material-symbols-outlined">event_available</span>
+                    Schedule a Call
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="w-full py-16 px-8 grid grid-cols-1 md:grid-cols-4 gap-grid-gutter max-w-container-max mx-auto">
+<!-- Brand Info -->
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<img alt="Aussie Man &amp; Van Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFD7W44bhALQN_IQ6UCt_zPmQo7qe6Vkk0yOhKhOX1MhCZkqkPJY-noZ1e3KBhTowmaKoK0Uw702c8PvuLBDq_mnQkU6Z-qzuwb7YBtwdpYsSL3y2EW95bOetuVpeFOHYtn-fnVqh93eTBdPhLxf3o-G1KGLwZJKowg19yRc7gdNd7Tp-nm4_KSMU-nHl8JP32s8J_EAWmXQHGMJ7IHdL5eI8WV-Bw5MrVVIMb7OAp9yo9XZVyLzvIHQ"/>
+<span class="font-display text-headline-md font-bold text-secondary">Aussie Man &amp; Van</span>
+</div>
+<p class="text-on-primary/70 text-body-md">Professional handyman solutions delivering Australian reliability to your doorstep. From flat-pack assembly to full property maintenance.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">thumb_up</span>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="md:ml-12">
+<h4 class="font-display text-label-bold text-secondary uppercase tracking-widest mb-6">Services</h4>
+<ul class="space-y-4 text-on-primary/80">
+<li><a class="hover:text-secondary transition-colors" href="#">Furniture Assembly</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">TV &amp; Art Mounting</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Maintenance</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Pricing</a></li>
+</ul>
+</div>
+<!-- Company -->
+<div>
+<h4 class="font-display text-label-bold text-secondary uppercase tracking-widest mb-6">Company</h4>
+<ul class="space-y-4 text-on-primary/80">
+<li><a class="hover:text-secondary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Why Us</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<!-- Contact Details -->
+<div>
+<h4 class="font-display text-label-bold text-secondary uppercase tracking-widest mb-6">Contact Us</h4>
+<ul class="space-y-4 text-on-primary/80">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">call</span>
+                        0400 000 000
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">mail</span>
+                        hello@aussiemanvan.com
+                    </li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+                        123 Professional Way,<br/>Sydney, NSW 2000
+                    </li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-8 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-on-primary/50 text-sm">
+<p>© 2024 Aussie Man &amp; Van Ltd. All Rights Reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        // Sticky Header Transition
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body></html>

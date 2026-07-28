@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SYS MAINTENANCE LTD | Professional Home Maintenance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1e",
+                        "secondary-container": "#fd761a",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary-container": "#1e40af",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#783200",
+                        "on-surface-variant": "#444653",
+                        "outline-variant": "#c4c5d5",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-high": "#e6e8ea",
+                        "outline": "#757684",
+                        "on-primary-fixed-variant": "#173bab",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "tertiary": "#2d3449",
+                        "tertiary-container": "#434b60",
+                        "inverse-on-surface": "#eff1f3",
+                        "background": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-fixed": "#dae2fd",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "inverse-primary": "#b8c4ff",
+                        "on-primary-fixed": "#001453",
+                        "secondary-fixed-dim": "#ffb690",
+                        "primary-fixed": "#dde1ff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdbca",
+                        "on-secondary-fixed": "#341100",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#5c2400",
+                        "on-primary-container": "#a8b8ff",
+                        "primary-fixed-dim": "#b8c4ff",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary": "#ffffff",
+                        "primary": "#00288e",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "on-tertiary-fixed": "#131b2e",
+                        "on-surface": "#191c1e",
+                        "secondary": "#9d4300",
+                        "on-tertiary-container": "#b4bbd5",
+                        "surface-tint": "#3755c3",
+                        "surface-container": "#eceef0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "lg": "48px",
+                        "xs": "8px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "button": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant py-4">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-gutter">
+<div class="flex items-center gap-3">
+<img alt="SYS Maintenance Logo" class="h-10 w-auto rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi9x9swrLaJQVWNAoRnaZuDgezLer8y41zvf1Ba0kTbZRYbemVzQoVn5gnO26WdSXbeTnVFZHw__-a3lN3fssFEbtQACe53lBDCshBAMie0k6Z2OOq2vTZnFixYqSeazhSb_shOiskpU0g3TmPt5EsNSyj5Hksbm5tSSNRDEuqbmu5hMLiI15Q41dyLvdDzSEAdmZCrKOI8JPSS7ExZAukUjk4DEXxca4s-ckNAgIUWIsNsoUxgFQusw"/>
+<span class="font-headline-md text-headline-md font-bold text-primary">SYS MAINTENANCE LTD</span>
+</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-md font-button text-button">
+<a class="text-primary border-b-2 border-primary pb-1 transition-colors duration-200" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#pricing">Pricing</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#testimonials">Testimonials</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:flex items-center gap-2 text-primary font-button" href="tel:0800123456">
+<span class="material-symbols-outlined">call</span>
+                    0800 123 456
+                </a>
+<a class="bg-primary text-on-primary px-6 py-3 rounded-lg font-button hover:opacity-90 active:scale-95 transition-all" href="#contact">
+                    Get a Quote
+                </a>
+</div>
+</nav>
+</header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Service Professional" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcU07nOhe5sWw83ciidlQofBZrWy8AMp8jnvMnd-I_XGLTFttWInpui6jkcbvikOqkCST30ETju6cd4GqC4OMSkupeVu5eiEeMvUuKkDDbXbdpqbeAEhl-dqB_s59X_pHx2ALWAABWHUw6cCnjQGYqsS-qAibEijGcgWsCRrCESYKmd0QNptfQIkCHRtF_7yyvY3Nauub5q-d0ka85yYE3fI39Ay-_tfMXcmGL4JBcT1S4Q1lg_r_W8Q"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-gutter w-full">
+<div class="max-w-2xl reveal active">
+<span class="inline-block px-4 py-1 bg-primary/10 text-primary font-label-bold text-label-bold rounded-full mb-4">RELIABLE &amp; CERTIFIED</span>
+<h1 class="font-display-lg text-display-lg text-on-background mb-6 leading-tight">
+                        Professional Home Maintenance <span class="text-primary">You Can Trust</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                        Experience industrial-grade quality for your home. From electrical systems to complex carpentry, we deliver high-end corporate standards to every residential project.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-secondary-container text-on-primary px-8 py-4 rounded-lg font-button shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all" href="#contact">
+                            Get a Free Quote
+                        </a>
+<a class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-button hover:bg-primary/5 transition-all" href="#pricing">
+                            View Plans
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Section -->
+<section class="py-xl bg-surface-container-low" id="services">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 reveal">
+<h2 class="font-headline-lg text-headline-lg mb-4">Our Professional Services</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">We deploy specialized technicians equipped with state-of-the-art tools to ensure your home systems operate at peak efficiency.</p>
+</div>
+<div class="bento-grid reveal">
+<!-- Electrical Card -->
+<div class="col-span-12 md:col-span-8 group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest transition-all hover:shadow-xl">
+<div class="flex flex-col md:flex-row h-full">
+<div class="w-full md:w-1/2 p-md flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h3 class="font-headline-md text-headline-md mb-2">Electrical Solutions</h3>
+<p class="text-on-surface-variant mb-6">Complete diagnostics, panel upgrades, and smart home installations performed by licensed master electricians.</p>
+</div>
+<a class="flex items-center gap-2 text-primary font-button group-hover:gap-4 transition-all" href="#contact">
+                                    Book Electrician <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
+<img alt="Electrical Work" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrbpcuVG5r-JGX52IXzzDz90gPGMqY94xuViAnwOhkVAroz7hRGUz0lxCIj3RtrZjdh80dgAn3w6hdzTF7LFJCI7kcYmz9G_utXUgCBK3QV924rv0YwO3HH8UaZVL8P5XWms_-2rI-iTxcMsgPR2noCYkT8AA5gxIJAVxmXjEKI3xDsdjsIngX15mP4bMgWzuvceocf-i9MSQq5dwF3fctgs_jixiyiwaHfyukUd5ysrSxi9uDD2k_wg"/>
+</div>
+</div>
+</div>
+<!-- Plumbing Card -->
+<div class="col-span-12 md:col-span-4 group rounded-xl border border-outline-variant bg-surface-container-lowest p-md transition-all hover:shadow-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+<h3 class="font-headline-md text-headline-md mb-2">Advanced Plumbing</h3>
+<p class="text-on-surface-variant mb-6">From leak detection to full system replacements, we handle it all with zero-mess protocols.</p>
+<a class="flex items-center gap-2 text-primary font-button" href="#contact">
+                            Book Plumbing <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Carpentry Card -->
+<div class="col-span-12 md:col-span-4 group rounded-xl border border-outline-variant bg-surface-container-lowest p-md transition-all hover:shadow-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">carpenter</span>
+<h3 class="font-headline-md text-headline-md mb-2">Master Carpentry</h3>
+<p class="text-on-surface-variant mb-6">Custom cabinetry, structural repairs, and fine finishing that stand the test of time.</p>
+<a class="flex items-center gap-2 text-primary font-button" href="#contact">
+                            Book Carpentry <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Maintenance Card -->
+<div class="col-span-12 md:col-span-8 group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest transition-all hover:shadow-xl">
+<div class="flex flex-col md:flex-row-reverse h-full">
+<div class="w-full md:w-1/2 p-md flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">construction</span>
+<h3 class="font-headline-md text-headline-md mb-2">Total Home Maintenance</h3>
+<p class="text-on-surface-variant mb-6">Our preventive care plans are designed to catch issues before they become expensive emergencies.</p>
+</div>
+<a class="flex items-center gap-2 text-primary font-button" href="#pricing">
+                                    Explore Plans <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
+<div class="w-full h-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A professional technician in a clean blue uniform inspecting a heating unit in a modern utility room. The lighting is crisp and natural, highlighting the technical proficiency and cleanliness of the service. Corporate professional aesthetic with blue and orange accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8LKmL_Qjz5wod4smBUdTGpFUvHEPOijDInGLG97zgXKIIruV69kR7RHU_pKyz44dt-Kb_zuG9JY1oOzkoBhGQ4cVBiMPeSAYk4_QF--btTNHD9hIQHKleoM0txx7D6aFc0c_1y1JGqGlYVOcbYA66f8e1rEFJI_XvN5zwHIg9_boxH5_rqvP97QnjHqDJ9Wh2Rr-DIovfUhUDMSA5xtb0u3vcx7V_q_uuuSkyZgIAfoz4mnFBF0yLsQ')"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-xl bg-surface" id="pricing">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 reveal">
+<h2 class="font-headline-lg text-headline-lg mb-4">Monthly Maintenance Plans</h2>
+<p class="text-on-surface-variant">Secure your peace of mind with our priority service tiers.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md reveal">
+<!-- Basic -->
+<div class="bg-surface-container-lowest p-xl rounded-xl border border-outline-variant flex flex-col h-full hover:-translate-y-2 transition-all">
+<h3 class="font-headline-md text-headline-md mb-2">Essential</h3>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-4xl font-bold">$49</span>
+<span class="text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-auto text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 2 Maintenance Visits/Year</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 10% Off All Repairs</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 24/7 Phone Support</li>
+<li class="flex items-center gap-3 text-outline-variant line-through"><span class="material-symbols-outlined text-sm">cancel</span> Priority Dispatch</li>
+</ul>
+<button class="w-full mt-10 py-4 border-2 border-primary text-primary font-button rounded-lg hover:bg-primary/5">Select Plan</button>
+</div>
+<!-- Popular -->
+<div class="bg-primary-container p-xl rounded-xl border-2 border-primary flex flex-col h-full transform scale-105 shadow-xl relative z-10">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-secondary-container text-on-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Most Popular</div>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-2">Professional</h3>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-4xl font-bold text-on-primary">$99</span>
+<span class="text-on-primary-container">/mo</span>
+</div>
+<ul class="space-y-4 mb-auto text-on-primary-container">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-on-primary text-sm">check_circle</span> 4 Maintenance Visits/Year</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-on-primary text-sm">check_circle</span> 25% Off All Repairs</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-on-primary text-sm">check_circle</span> Priority Dispatch (2hr Window)</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-on-primary text-sm">check_circle</span> Annual Safety Audit</li>
+</ul>
+<button class="w-full mt-10 py-4 bg-secondary-container text-on-primary font-button rounded-lg hover:opacity-90">Select Plan</button>
+</div>
+<!-- Enterprise -->
+<div class="bg-surface-container-lowest p-xl rounded-xl border border-outline-variant flex flex-col h-full hover:-translate-y-2 transition-all">
+<h3 class="font-headline-md text-headline-md mb-2">Elite</h3>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-4xl font-bold">$199</span>
+<span class="text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-auto text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Monthly Health Checks</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Zero Labor Fees on Repairs</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Emergency Priority Line</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Dedicated Project Manager</li>
+</ul>
+<button class="w-full mt-10 py-4 border-2 border-primary text-primary font-button rounded-lg hover:bg-primary/5">Select Plan</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-xl bg-surface-container-high overflow-hidden" id="testimonials">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 reveal">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-2">What Our Clients Say</h2>
+<p class="text-on-surface-variant">Trusted by over 500+ homeowners in the region.</p>
+</div>
+<div class="flex gap-2">
+<button class="p-3 border border-outline text-primary rounded-full hover:bg-primary hover:text-white transition-all" id="prevBtn"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-3 border border-outline text-primary rounded-full hover:bg-primary hover:text-white transition-all" id="nextBtn"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md reveal">
+<div class="glass-card p-md rounded-xl">
+<div class="flex gap-1 text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic mb-6">"Absolute game changer. Their electrical team was efficient, clean, and explained everything. I haven't seen this level of professionalism in years."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">JD</div>
+<div>
+<p class="font-label-bold">James Davidson</p>
+<p class="text-body-sm text-on-surface-variant">Homeowner, North Hills</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-md rounded-xl">
+<div class="flex gap-1 text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic mb-6">"The monthly plan saved us hundreds when our water heater failed. They were out within the hour. Highly recommended!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">SW</div>
+<div>
+<p class="font-label-bold">Sarah Williams</p>
+<p class="text-body-sm text-on-surface-variant">Property Manager</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-md rounded-xl">
+<div class="flex gap-1 text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic mb-6">"Fantastic attention to detail on our kitchen cabinets. The carpentry team is truly skilled. Professional through and through."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">RK</div>
+<div>
+<p class="font-label-bold">Robert King</p>
+<p class="text-body-sm text-on-surface-variant">Resident, Downtown</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl" id="contact">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant overflow-hidden flex flex-col md:flex-row reveal">
+<div class="w-full md:w-5/12 bg-primary p-xl text-on-primary">
+<h2 class="font-headline-lg text-headline-lg mb-6">Ready for a Better Home?</h2>
+<p class="mb-10 text-on-primary-container">Contact us today for a complimentary on-site evaluation of your home maintenance needs.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined">call</span>
+<div>
+<p class="font-label-bold">Call Anytime</p>
+<a class="text-2xl font-bold hover:underline" href="tel:0800123456">0800 123 456</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined">mail</span>
+<div>
+<p class="font-label-bold">Email Us</p>
+<p class="text-lg">support@sysmaintenance.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined">location_on</span>
+<div>
+<p class="font-label-bold">Visit Us</p>
+<p class="text-lg">123 Corporate Plaza, Industrial Zone</p>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-white/20">
+<p class="font-label-bold mb-4">Certified &amp; Insured</p>
+<div class="flex gap-4 opacity-70">
+<span class="material-symbols-outlined text-4xl">verified</span>
+<span class="material-symbols-outlined text-4xl">shield_with_heart</span>
+<span class="material-symbols-outlined text-4xl">workspace_premium</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-7/12 p-xl">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface border-outline-variant rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface border-outline-variant rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-on-surface-variant">Phone Number</label>
+<input class="w-full bg-surface border-outline-variant rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="0800 123 456" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-on-surface-variant">Service Needed</label>
+<select class="w-full bg-surface border-outline-variant rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary transition-all">
+<option>Electrical</option>
+<option>Plumbing</option>
+<option>Carpentry</option>
+<option>General Maintenance</option>
+<option>Monthly Plans</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-on-surface-variant">Inquiry Details</label>
+<textarea class="w-full bg-surface border-outline-variant rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary-container text-on-primary py-4 rounded-lg font-button shadow-md hover:shadow-lg active:scale-[0.98] transition-all" type="submit">
+                                Send Message
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest py-xl border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between gap-xl mb-xl">
+<div class="max-w-sm">
+<img alt="SYS Maintenance Logo" class="h-12 w-auto mb-6 rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi9x9swrLaJQVWNAoRnaZuDgezLer8y41zvf1Ba0kTbZRYbemVzQoVn5gnO26WdSXbeTnVFZHw__-a3lN3fssFEbtQACe53lBDCshBAMie0k6Z2OOq2vTZnFixYqSeazhSb_shOiskpU0g3TmPt5EsNSyj5Hksbm5tSSNRDEuqbmu5hMLiI15Q41dyLvdDzSEAdmZCrKOI8JPSS7ExZAukUjk4DEXxca4s-ckNAgIUWIsNsoUxgFQusw"/>
+<p class="text-on-surface-variant mb-6">SYS MAINTENANCE LTD provides high-end corporate maintenance standards for the modern home. Reliability and technical proficiency guaranteed.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-outline rounded-full text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline rounded-full text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm">thumb_up</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-xl">
+<div>
+<h4 class="font-label-bold mb-6">Quick Links</h4>
+<ul class="space-y-4 text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#services">Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#pricing">Pricing Plans</a></li>
+<li><a class="hover:text-primary transition-colors" href="#testimonials">Testimonials</a></li>
+<li><a class="hover:text-primary transition-colors" href="#contact">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold mb-6">Support</h4>
+<ul class="space-y-4 text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Emergency Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold mb-6">Newsletter</h4>
+<p class="text-body-sm text-on-surface-variant mb-4">Tips for home maintenance.</p>
+<div class="flex gap-2">
+<input class="bg-surface border-outline-variant rounded p-2 text-sm w-full" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary px-4 rounded transition-all hover:opacity-90">Join</button>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4 text-body-sm text-outline">
+<p>© 2024 SYS MAINTENANCE LTD. All rights reserved.</p>
+<div class="flex gap-6">
+<a href="#">Cookies</a>
+<a href="#">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Reveal animations on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            revealElements.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+
+        // Smooth navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

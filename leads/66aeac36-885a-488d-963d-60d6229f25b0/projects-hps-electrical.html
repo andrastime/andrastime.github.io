@@ -1,0 +1,372 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Projects | HPS Electrical Contractors</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(132, 147, 150, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: #00e5ff;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+            transform: translateY(-4px);
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+        }
+        .status-pulse {
+            width: 8px;
+            height: 8px;
+            background-color: #00e5ff;
+            border-radius: 50%;
+            position: relative;
+        }
+        .status-pulse::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 50%;
+            background-color: #00e5ff;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .mesh-gradient {
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(0, 229, 255, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(255, 215, 0, 0.03) 0px, transparent 50%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#bac9cc",
+                      "error": "#ffb4ab",
+                      "electric-blue-glow": "rgba(0, 229, 255, 0.4)",
+                      "on-error-container": "#ffdad6",
+                      "surface-glass": "rgba(30, 41, 59, 0.7)",
+                      "surface-tint": "#00daf3",
+                      "inverse-surface": "#dae2fd",
+                      "error-container": "#93000a",
+                      "on-error": "#690005",
+                      "surface-container": "#171f33",
+                      "surface-container-low": "#131b2e",
+                      "on-tertiary-container": "#6f5500",
+                      "deep-charcoal": "#1E293B",
+                      "surface-bright": "#31394d",
+                      "tertiary-fixed-dim": "#f3bf26",
+                      "tertiary-container": "#fec931",
+                      "on-primary-fixed-variant": "#004f58",
+                      "tertiary": "#ffeac0",
+                      "surface-container-high": "#222a3d",
+                      "on-secondary-container": "#6a4800",
+                      "inverse-primary": "#006875",
+                      "on-tertiary-fixed-variant": "#594400",
+                      "outline": "#849396",
+                      "on-primary-container": "#00626e",
+                      "tertiary-fixed": "#ffdf96",
+                      "on-background": "#dae2fd",
+                      "on-tertiary": "#3e2e00",
+                      "surface": "#0b1326",
+                      "on-primary": "#00363d",
+                      "on-surface": "#dae2fd",
+                      "secondary-container": "#feb300",
+                      "on-secondary": "#432c00",
+                      "background": "#0b1326",
+                      "surface-dim": "#0b1326",
+                      "primary-container": "#00e5ff",
+                      "on-tertiary-fixed": "#251a00",
+                      "on-primary-fixed": "#001f24",
+                      "surface-container-lowest": "#060e20",
+                      "surface-variant": "#2d3449",
+                      "on-secondary-fixed-variant": "#604100",
+                      "outline-variant": "#3b494c",
+                      "primary-fixed-dim": "#00daf3",
+                      "on-secondary-fixed": "#281900",
+                      "primary-fixed": "#9cf0ff",
+                      "secondary-fixed": "#ffdeac",
+                      "primary": "#c3f5ff",
+                      "inverse-on-surface": "#283044",
+                      "industrial-gold": "#FFD700",
+                      "secondary": "#ffd799",
+                      "surface-container-highest": "#2d3449",
+                      "secondary-fixed-dim": "#ffba38"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "container-max": "1280px",
+                      "margin-mobile": "16px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Hanken Grotesk"],
+                      "label-caps": ["JetBrains Mono"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Hanken Grotesk"],
+                      "button-text": ["Hanken Grotesk"],
+                      "headline-xl": ["Hanken Grotesk"],
+                      "body-lg": ["Inter"],
+                      "headline-lg-mobile": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "button-text": ["16px", {"lineHeight": "1.0", "fontWeight": "600"}],
+                      "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="mesh-gradient min-h-screen pt-24">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-surface-glass border-b border-outline-variant/30 shadow-md">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-primary">
+                HPS ELECTRICAL
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">Home</a>
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors duration-300" href="services-hps-electrical.html">Services</a>
+<a class="font-button-text text-button-text text-primary border-b-2 border-primary pb-1" href="projects-hps-electrical.html">Projects</a>
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact-us-hps-electrical.html">Why Choose Us</a>
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact-us-hps-electrical.html">Contact</a>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-button-text rounded-DEFAULT neon-glow active:scale-95 transition-transform duration-200">
+                    Get a Quote
+                </button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-24">
+<!-- Header Section -->
+<header class="py-16 md:py-24">
+<div class="flex items-center gap-3 mb-4">
+<div class="status-pulse"></div>
+<span class="font-label-caps text-label-caps text-industrial-gold uppercase">Portfolio Showcase</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-on-surface mb-6 max-w-3xl">
+                Engineering <span class="text-primary-container">Precision</span> in Every Circuit.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                From high-voltage industrial infrastructure to bespoke smart residential installations, HPS Electrical delivers unwavering reliability and technical excellence across the UK.
+            </p>
+</header>
+<!-- Category Filters -->
+<section class="mb-12">
+<div class="flex flex-wrap gap-4 items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mr-2">Filter By Sector:</span>
+<button class="px-6 py-2 rounded-full border border-primary bg-primary text-on-primary font-button-text transition-all">All Projects</button>
+<button class="px-6 py-2 rounded-full border border-outline hover:border-primary text-on-surface-variant hover:text-primary font-button-text transition-all">Industrial</button>
+<button class="px-6 py-2 rounded-full border border-outline hover:border-primary text-on-surface-variant hover:text-primary font-button-text transition-all">Commercial</button>
+<button class="px-6 py-2 rounded-full border border-outline hover:border-primary text-on-surface-variant hover:text-primary font-button-text transition-all">Residential</button>
+</div>
+</section>
+<!-- Bento Grid Portfolio -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Project 1: Industrial (Large) -->
+<div class="md:col-span-8 group relative overflow-hidden glass-card rounded-xl">
+<div class="aspect-video w-full relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic wide-angle shot of a massive industrial power distribution center at blue hour. Glowing cyan LED indicators on steel cabinets reflect against a polished dark concrete floor. High-contrast lighting highlights intricate cable management trays and heavy-duty transformers in a sophisticated engineering environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtTJu3GZWDjgtZpfQN2lAh9a3s26JzNZL5Ud8JMNXbRd1P3d8asfoEqGY5w5brYo546MGCMTWGO7zqYSOlvgefvw_kFQikx8foCQ6n9J-tWrzWQp4eNRuqTB_oypC9GBcMdnfKjaRDkfvIXDTEu02SFDgMWPDccXI24n2QReqgBEBdnMHiTITTAC0uYr13_DlfU4h4mRIRIPOYJyAFPGIk3G2uXEXkjM3CUCDjgjZVQfwUmANaZVvwzQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-80"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-surface-container text-primary font-label-caps text-[10px] px-3 py-1 rounded-full border border-primary/30">INDUSTRIAL</span>
+<span class="text-on-surface-variant font-label-caps text-[10px]">LANCASHIRE HUB</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Primary Grid Infrastructure Expansion</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Complete design and installation of a 11kV substation and secondary distribution network for a 200,000 sq ft logistics facility.</p>
+</div>
+</div>
+<!-- Project 2: Commercial -->
+<div class="md:col-span-4 group glass-card rounded-xl overflow-hidden">
+<div class="aspect-square relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close-up detail of a modern commercial office lighting installation. Minimalist linear LED fixtures create a futuristic geometric pattern across a dark architectural ceiling. The style is sleek and corporate, with cool cyan highlights and deep charcoal shadows reflecting a high-tech workspace." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwLgLI9vYE0UD3RsDC5HVkAVNPZ9n65ZDIuv5PbTSaXwyn7lobFOFb5ZTpcN8Oz37rjmCHqH4G_-1bsaMsIUhZ3NBA66zHxHSNv72Rgk9Bvj8-iMGkh5u-nHaIkY9UUCpEyR1Edj0lLEjV2K2wiW9b38ItCBgQgEhqvafg8q9y5kF6_aoUMksXv52NAdpdXACQlI6RM5VWmiei4bH702gLNriz-QUABozkerDaBXIZQTK7XO6QKT_Ztg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-90"></div>
+</div>
+<div class="p-6">
+<span class="text-industrial-gold font-label-caps text-[10px] block mb-2">COMMERCIAL</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-lg">Luminary Corporate HQ</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Intelligent lighting control systems and emergency backup solutions for a multi-story office development.</p>
+</div>
+</div>
+<!-- Project 3: Residential -->
+<div class="md:col-span-4 group glass-card rounded-xl overflow-hidden">
+<div class="aspect-square relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Interior of a luxury smart home features a sleek wall-mounted touchscreen control panel glowing with an amber interface. The surrounding architecture is modern minimalist with warm accent lighting. The image emphasizes high-end residential technology integration and premium finishes." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCprZCkPDvT9liI46vseC8VI22lW4rOGUKRGgvWzd3qCiIQTp3a4QD2GS6Pb5hZyPwC0gjpJEdDhFslGShTR1Aqte7oEff6F51XH64ykgCipgU0E4kiqRfpVv-TDd_D-MZ73pGBj8HDN9jHFP_6PeHgKyWCVqZ6WaPT3WzgJfnKKiUtdY7Yoav-2TU-e0KVkzmdxu-UCQCFKbZPsBVjhR2EG51be9V4FYQ_Ri-Iy7ep28tL93WvPF89zQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-90"></div>
+</div>
+<div class="p-6">
+<span class="text-primary font-label-caps text-[10px] block mb-2">RESIDENTIAL</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-lg">Lake District Estate</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Full smart-home integration including home automation, security, and sustainable PV solar arrays.</p>
+</div>
+</div>
+<!-- Project 4: Industrial (Medium) -->
+<div class="md:col-span-4 group glass-card rounded-xl overflow-hidden">
+<div class="aspect-square relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-angle view of a complex industrial control panel with thousands of perfectly organized wires color-coded in blue, red, and yellow. The wiring is a masterpiece of precision engineering, housed in a clean gray steel enclosure. Sharp industrial lighting emphasizes the technical complexity and order." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3HrmBEOGvqjdujeVfp1SsugYlMzDIqqQpd8ljulNdJ2ph_WbI8eSZFmRLSCMo8WWNiBRMD6fDgRB5ZrGOxwmmtj4rHd9r8WaHqh3aWDMMecOAVwUgmPjHPsgZQ7ER6Iz00l5AyZaqStTT3KryQJgZ2wLatLlx6IhkAbBh8bir3gNoCX-DyIjqLGd_j4omEqQc2k2-DrQ9GeeqHbPtn2Q23JUsdQVNPZGkLRu9BAYCuRVG-EG-Ekif7Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-90"></div>
+</div>
+<div class="p-6">
+<span class="text-primary font-label-caps text-[10px] block mb-2">INDUSTRIAL</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-lg">Manufacturing Automation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Control panel fabrication and PLC programming for a high-speed pharmaceutical production line.</p>
+</div>
+</div>
+<!-- Project 5: Commercial (Featured Side) -->
+<div class="md:col-span-4 group glass-card rounded-xl overflow-hidden">
+<div class="aspect-square relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An external shot of a modern retail facade at night, illuminated by dramatic architectural up-lighting in a soft electric blue. The building features large glass windows reflecting the surrounding urban environment. The lighting is designed to be both functional and a high-end visual statement." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpbTyUh3M5AlP5BAhYN4JdRiZ5ai8tCC0eMhuJJc_w4cVhcfm2uo4W1Pxm4lw9ZMY7jziaTTzu4ONVaGlFMpjANVvOmikJZC-cTrQBKvKDINuzwfxNg4ktKasq46ZIjgsvu7hHGHc6I_51Pj4_FjsmsjMq0NKJvPY8ErxRM_LDny_7M_wyqJOyxfAbks3xn5-3PdMn5DtmX_2AdqTuV5jBqQ1-3wjhBULpH2Hfy7jgadIC-i9V4Iyggw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-90"></div>
+</div>
+<div class="p-6">
+<span class="text-industrial-gold font-label-caps text-[10px] block mb-2">COMMERCIAL</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-lg">Retail Plaza Revitalization</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">External architectural lighting design and installation for a premium shopping destination.</p>
+</div>
+</div>
+</div>
+<!-- Project Stats/Cta Section -->
+<section class="mt-24 py-16 px-12 glass-card rounded-2xl relative overflow-hidden">
+
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div>
+<div class="font-headline-xl text-headline-xl text-primary mb-2">500+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Projects Completed</div>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-industrial-gold mb-2">15+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Years Excellence</div>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-primary mb-2">0</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Safety Incidents</div>
+</div>
+</div>
+<div class="mt-16 text-center relative z-10">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6">Ready to energize your next project?</h2>
+<button class="bg-primary-container text-on-primary-container px-10 py-4 font-button-text rounded-DEFAULT neon-glow hover:scale-105 transition-all">
+                    Start a Consultation
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-6">HPS</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                    Precision electrical engineering for high-stakes environments. Trusted across the UK for industrial and commercial excellence.
+                </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-surface mb-6">Services</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li class="hover:text-primary transition-colors cursor-pointer">Industrial Power</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Commercial Fit-outs</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Smart Home Systems</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Maintenance &amp; Testing</li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-surface mb-6">Quick Links</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li class="hover:text-primary transition-colors cursor-pointer">Privacy Policy</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Terms of Service</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Accreditations</li>
+<li class="text-industrial-gold hover:opacity-80 transition-opacity cursor-pointer">Emergency Call-Out</li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-surface mb-6">Contact</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">info@hpselectrical.co.uk</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">0800 123 4567</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">mail</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-12 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">
+                © 2024 HPS Electrical Contractors Ltd. All rights reserved.
+            </p>
+<div class="flex gap-6">
+<span class="font-label-caps text-[10px] text-on-surface-variant border border-outline-variant px-2 py-1">NICEIC APPROVED</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant border border-outline-variant px-2 py-1">CHAS ACCREDITED</span>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Interaction: Filter buttons toggle
+        const filterButtons = document.querySelectorAll('button[class*="rounded-full"]');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-on-primary');
+                    b.classList.add('border-outline', 'text-on-surface-variant');
+                });
+                btn.classList.add('bg-primary', 'text-on-primary');
+                btn.classList.remove('border-outline', 'text-on-surface-variant');
+            });
+        });
+
+        // Parallax effect for project cards
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.glass-card');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const cardX = rect.left + rect.width / 2;
+                const cardY = rect.top + rect.height / 2;
+                
+                const angleX = (e.clientY - cardY) / 100;
+                const angleY = (e.clientX - cardX) / 100;
+                
+                // Only subtle effect
+                // card.style.transform = `rotateX(${-angleX}deg) rotateY(${angleY}deg) translateY(-4px)`;
+            });
+        });
+    </script>
+</body></html>

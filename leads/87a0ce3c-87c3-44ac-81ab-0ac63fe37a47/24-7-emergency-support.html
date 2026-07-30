@@ -1,0 +1,329 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>24/7 Emergency Response | H&amp;M Group</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Hanken+Grotesk:wght@400;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#fff8f7",
+                        "on-primary-fixed": "#410003",
+                        "outline": "#8c716e",
+                        "on-secondary-container": "#636262",
+                        "primary": "#690008",
+                        "inverse-surface": "#3b2d2c",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#ffedeb",
+                        "surface-container-highest": "#f5dddb",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-tint": "#ac322e",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#735c00",
+                        "secondary": "#5f5e5e",
+                        "tertiary-container": "#cca730",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-background": "#251817",
+                        "primary-fixed": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "charcoal-light": "#333333",
+                        "on-tertiary-container": "#4f3d00",
+                        "off-white": "#F9F9F9",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-tertiary": "#ffffff",
+                        "emergency-red": "#B22222",
+                        "primary-container": "#8b1a1a",
+                        "on-surface-variant": "#58413f",
+                        "surface-variant": "#f5dddb",
+                        "surface-container-high": "#fbe3e0",
+                        "secondary-container": "#e2dfde",
+                        "background": "#fff8f7",
+                        "surface-dim": "#ecd5d2",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-secondary-fixed-variant": "#474746",
+                        "inverse-primary": "#ffb3ac",
+                        "on-primary-container": "#ff9a91",
+                        "surface": "#fff8f7",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#ffe9e6",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "tertiary-fixed": "#ffe088",
+                        "outline-variant": "#e0bfbc",
+                        "on-surface": "#251817",
+                        "burgundy-deep": "#631212",
+                        "on-primary-fixed-variant": "#8a1a1a",
+                        "surface-container-low": "#fff0ef"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "stack-unit": "8px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["DM Serif Display"],
+                        "display-lg": ["DM Serif Display"],
+                        "headline-lg-mobile": ["DM Serif Display"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .pulse-emergency {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .85; transform: scale(1.05); }
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .active-scale:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="H&amp;M Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLtRyfi9MtPKYhY-5AlL_3bzonMBE57-XPeRREsh2qZT--83UYpbFPdKfkv38uDJ6adJsL0U6iVLrpVCNTPytcOYBG7xlWJ8baAI7bF8uv-oiDoMfKF6OTam1WzWbEuyjOQ4AnLedOhDymDwYMwZQUHrbjIF-DVRqCRf7HjtfpmEyOjJfGqhtiyFmgGZOqC26i8mQ8HLFnhM89V4cVFA32MADzBBL99PLdRlhkNnPq8Z7dJjRh9Z4qG_MOQ">
+<span class="font-headline-md text-headline-md font-bold text-burgundy-deep dark:text-primary-fixed-dim hidden md:inline">H&amp;M Group</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Home</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Services</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Portfolio</a>
+<a class="font-label-bold text-label-bold uppercase text-primary dark:text-inverse-primary border-b-2 border-primary pb-1" href="24-7-emergency-support.html">Emergency</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-200" href="get-a-quote-contact-us.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="active-scale bg-primary text-on-primary px-6 py-2 rounded-lg font-label-bold text-label-bold uppercase flex items-center gap-2" href="tel:07956128990">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+                    Call Now
+                </a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Emergency Section -->
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-on-background py-20 px-margin-mobile md:px-margin-desktop">
+
+<div class="relative z-10 max-w-container-max mx-auto text-center">
+<div class="inline-flex items-center gap-2 bg-emergency-red/20 border border-emergency-red/30 px-4 py-2 rounded-full mb-8 pulse-emergency">
+<span class="w-2 h-2 rounded-full bg-emergency-red"></span>
+<span class="text-off-white font-label-bold text-label-bold uppercase tracking-widest">Live Emergency Dispatch</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-[80px] text-off-white mb-6 leading-tight">
+                    Locked Out?<br>We're Here 24/7
+                </h1>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim max-w-2xl mx-auto mb-12">
+                    Professional H&amp;M emergency response team on standby. Providing urgent locksmith, plumbing, and electrical solutions across the region with guaranteed arrival within 30 minutes.
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<a class="active-scale bg-emergency-red hover:bg-primary transition-all text-white px-10 py-6 rounded-lg flex flex-col items-center gap-1 shadow-xl group" href="tel:07956128990">
+<span class="font-label-bold text-label-bold uppercase tracking-tighter opacity-80">Tap to Call Now</span>
+<span class="font-headline-md text-headline-md tracking-tight">07956 128 990</span>
+</a>
+<div class="flex flex-col items-start bg-off-white/5 backdrop-blur-sm border border-off-white/10 p-6 rounded-lg min-w-[280px]">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="text-off-white font-headline-md text-headline-md">30 Mins</span>
+</div>
+<span class="text-secondary-fixed-dim font-label-bold text-label-bold uppercase tracking-wide">Guaranteed Response</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Services -->
+<section class="py-24 bg-surface px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16 text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Elite Rapid Response Services</h2>
+<div class="w-20 h-1 bg-burgundy-deep mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Locksmith (Primary Focus) -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-high aspect-[16/9] md:aspect-auto h-full">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A macro close-up of a high-end luxury mortice lock mechanism, dramatic side lighting highlighting the polished steel and mechanical precision. The atmosphere is professional and secure, emphasizing elite locksmith expertise. Deep burgundy accents reflect the H&amp;M brand identity in a minimalist architectural setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4mCdHp2F_GDtsvMuCPQaUla_dl-OUzNqdX0jRO1Dbd-leP9p9DUrD2ZBJMzg_Y4Hu4-NLQE3neINg9P5rxzzPyWc66GN4Rj2FwU_hHxtLHODOrFwYy9IyObUx990tjlGQayuVARp4_CEMyjBXy9_AC0xUr2n35J4IiFd_sPf3cnFnPVLwTPybZ6EJu_wQDoj_WQD2jWycfCrtXA8VLGOsY6u57hCBiBWYZ6S0sM6umPSBzSY95ih1')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<span class="inline-block bg-burgundy-deep text-off-white font-label-bold text-label-bold px-3 py-1 mb-4 rounded-sm">PRIORITY SERVICE</span>
+<h3 class="font-headline-lg text-headline-lg text-white mb-2">Emergency Locksmith</h3>
+<p class="text-secondary-fixed-dim max-w-md font-body-md">Non-destructive entry, lock changes, and burglary repairs performed by certified professionals.</p>
+</div>
+</div>
+<!-- Plumbing (Secondary) -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high aspect-square">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Modern high-pressure copper piping installation in a high-end commercial building. The lighting is crisp and cool, highlighting the industrial elegance of the building services. Professional plumbing tools are neatly arranged nearby, suggesting a quick and efficient emergency response. Minimalist aesthetic with subtle charcoal shadows." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfIhAZgySu59Zz_HBUH4xisEla5rVbmgZSu9_I6OLPSmhjoRfjEgnrMVU8fNd7tKCO-IL2Hq8OgARBD9mqyT4AJpPBkyWgXCv4ZgoSeF8h6BeteOP7bMDttHWCBrBS7Ke40YIFCvjgLzehKhSFSeIhvtI5BV2hbG7xCrKsHK3fPKHIAsjw_5dW1bHFjTNF-aL3biFk9tdSuGlnDq7MaOCY0RZsnl8XaYKz_Vn7OPkNkA6G8U6XjAe8')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Plumbing</h3>
+<p class="text-secondary-fixed-dim font-body-md">Burst pipes, major leaks, and drainage failure response.</p>
+</div>
+</div>
+<!-- Electric (Tertiary) -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high aspect-square">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An artistic view of a modern fuse box and high-voltage wiring within a sleek architectural structure. Sharp focus on technical components, with soft bokeh background. Cool ambient lighting with a singular warm indicator light. Conveys the safety and precision of professional electrical building services." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6KG0GOJHr19jUUzEtggdcyjNMg-mSmKJkdoM79Eqp7-m9R_NanB1xwySgITMPMPQomq-QLJYaOF7J26gKgKfTavxB1FV5TtttzTZuVSFDZSnBVov1WkdZsAfmjtjzzk-4myJ6k0jRoOLqkdE7hVSDwJtGqsvRXg346dzg-lD_DIel8gIBNUaInwKiSzA8mhUhB_mQ5d9cjgewVPi7OE7q8c_eldY2ZncXhpkESuyZh9-7o-joRgjr')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Electric</h3>
+<p class="text-secondary-fixed-dim font-body-md">Complete power failure and dangerous fault resolution.</p>
+</div>
+</div>
+<!-- Trust Badges -->
+<div class="md:col-span-8 bg-surface-container p-10 rounded-xl border border-outline-variant/30 flex flex-col justify-center">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-[32px]">verified_user</span>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase">Fully Licensed</h4>
+<p class="text-on-surface-variant text-sm">Security Industry Approved</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-[32px]">verified</span>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase">Public Liability</h4>
+<p class="text-on-surface-variant text-sm">£10m Comprehensive Cover</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-[32px]">workspace_premium</span>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase">EST. 2009</h4>
+<p class="text-on-surface-variant text-sm">15 Years Excellence</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Immediate Contact Section -->
+<section class="bg-primary py-20 px-margin-mobile md:px-margin-desktop text-center">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-8">Need Assistance Right Now?</h2>
+<div class="flex flex-col md:flex-row justify-center items-center gap-8">
+<div class="flex items-center gap-4 text-off-white">
+<span class="material-symbols-outlined text-[48px]">phone_iphone</span>
+<div class="text-left">
+<p class="font-label-bold text-label-bold uppercase opacity-70">Direct Line</p>
+<p class="font-headline-md text-headline-md">07956 128 990</p>
+</div>
+</div>
+<div class="h-12 w-px bg-on-primary/20 hidden md:block"></div>
+<div class="flex items-center gap-4 text-off-white">
+<span class="material-symbols-outlined text-[48px]">support_agent</span>
+<div class="text-left">
+<p class="font-label-bold text-label-bold uppercase opacity-70">Dispatch Status</p>
+<p class="font-headline-md text-headline-md">Available Now</p>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<a class="inline-block bg-white text-primary font-label-bold text-label-bold uppercase px-12 py-5 rounded-sm hover:bg-off-white transition-all active-scale" href="tel:07956128990">
+                        Call Dispatch Center
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-background dark:bg-surface-container-lowest text-off-white py-12 px-margin-mobile md:px-margin-desktop border-t border-outline/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<h3 class="font-headline-md text-headline-md text-surface-bright mb-6">H&amp;M Group</h3>
+<p class="text-secondary-fixed-dim font-body-md mb-4 opacity-80">Elite building and security services delivering precision since 2009. We specialize in rapid-response maintenance and architectural solutions.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-bold text-label-bold uppercase mb-6 text-primary-fixed">Services</h4>
+<ul class="space-y-3">
+<li><a class="text-secondary-fixed-dim hover:text-primary-fixed-dim transition-all" href="h-m-premium-handyman-services.html">Locksmith</a></li>
+<li><a class="text-secondary-fixed-dim hover:text-primary-fixed-dim transition-all" href="h-m-premium-handyman-services.html">Building</a></li>
+<li><a class="text-secondary-fixed-dim hover:text-primary-fixed-dim transition-all" href="h-m-premium-handyman-services.html">Electric</a></li>
+<li><a class="text-secondary-fixed-dim hover:text-primary-fixed-dim transition-all" href="index.html">Plumbing</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-bold text-label-bold uppercase mb-6 text-primary-fixed">Quick Help</h4>
+<ul class="space-y-3">
+<li><a class="text-primary-fixed font-bold hover:text-primary-fixed-dim transition-all" href="24-7-emergency-support.html">Emergency 24/7</a></li>
+<li><a class="text-secondary-fixed-dim hover:text-primary-fixed-dim transition-all" href="index.html">Privacy Policy</a></li>
+<li><a class="text-secondary-fixed-dim hover:text-primary-fixed-dim transition-all" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-bold text-label-bold uppercase mb-6 text-primary-fixed">Reach Us</h4>
+<p class="text-secondary-fixed-dim font-body-md mb-2">Available across London &amp; Greater Suburbs.</p>
+<p class="text-off-white font-headline-md mb-6">07956 128 990</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-off-white cursor-pointer hover:text-primary transition-colors">share</span>
+<span class="material-symbols-outlined text-off-white cursor-pointer hover:text-primary transition-colors">chat</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-16 pt-8 border-t border-off-white/10 text-center">
+<p class="text-secondary-fixed-dim text-sm opacity-60">© 2024 H&amp;M Locksmith and Building Services Ltd. All rights reserved. EST. 2009.</p>
+</div>
+</footer>
+<!-- Fixed Mobile Contact Button (Floating) -->
+<div class="md:hidden fixed bottom-6 right-6 z-[60]">
+<a class="w-16 h-16 bg-emergency-red text-white rounded-full flex items-center justify-center shadow-2xl pulse-emergency active-scale" href="tel:07956128990">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">call</span>
+</a>
+</div>
+<script>
+        // Micro-interactions for scale effects
+        document.querySelectorAll('.active-scale').forEach(el => {
+            el.addEventListener('mousedown', () => el.style.transform = 'scale(0.96)');
+            el.addEventListener('mouseup', () => el.style.transform = 'scale(1)');
+            el.addEventListener('mouseleave', () => el.style.transform = 'scale(1)');
+        });
+    </script>
+</body></html>

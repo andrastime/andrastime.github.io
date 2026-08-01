@@ -1,0 +1,375 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>London Handyman | Customer Reviews &amp; Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Manrope:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#cfe5ff",
+                        "primary-fixed-dim": "#98cbff",
+                        "surface-bright": "#33394c",
+                        "surface": "#0c1324",
+                        "surface-container": "#191f31",
+                        "primary-container": "#00a3ff",
+                        "inverse-primary": "#00629d",
+                        "on-secondary": "#283044",
+                        "secondary-fixed": "#dae2fd",
+                        "on-error-container": "#ffdad6",
+                        "metallic-silver": "#CBD5E1",
+                        "on-secondary-fixed": "#131b2e",
+                        "outline": "#88919d",
+                        "on-tertiary-fixed": "#0d1c2d",
+                        "on-primary": "#003354",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-secondary-container": "#adb4ce",
+                        "on-primary-container": "#00375a",
+                        "tertiary": "#b9c8de",
+                        "success-emerald": "#10B981",
+                        "surface-variant": "#2e3447",
+                        "on-surface-variant": "#bec7d4",
+                        "on-primary-fixed-variant": "#004a77",
+                        "surface-container-high": "#23293c",
+                        "on-surface": "#dce1fb",
+                        "tertiary-fixed-dim": "#b9c8de",
+                        "secondary": "#bec6e0",
+                        "tertiary-fixed": "#d4e4fa",
+                        "background": "#0c1324",
+                        "surface-dim": "#0c1324",
+                        "outline-variant": "#3f4852",
+                        "surface-tint": "#98cbff",
+                        "surface-container-highest": "#2e3447",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "secondary-container": "#3f465c",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#273547",
+                        "on-primary-fixed": "#001d33",
+                        "inverse-surface": "#dce1fb",
+                        "primary": "#98cbff",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#070d1f",
+                        "inverse-on-surface": "#2a3043",
+                        "on-tertiary-fixed-variant": "#39485a",
+                        "surface-container-low": "#151b2d",
+                        "on-background": "#dce1fb",
+                        "error-container": "#93000a",
+                        "on-tertiary": "#233143",
+                        "tertiary-container": "#8f9eb3",
+                        "electric-blue": "#00E0FF",
+                        "deep-navy": "#1E293B"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter-grid": "2rem",
+                        "stack-section": "8rem",
+                        "margin-page": "5vw",
+                        "stack-component": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Manrope"],
+                        "label-bold": ["Hanken Grotesk"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .portfolio-grid-gap {
+            gap: 1px;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(0, 224, 255, 0.4);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(203, 213, 225, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-electric-blue selection:text-background">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-md dark:bg-surface/70 border-b border-metallic-silver/20 flex justify-between items-center px-margin-page py-4 transition-all duration-300 ease-in-out">
+<div class="font-display-lg text-headline-md font-extrabold text-on-surface tracking-tighter">
+            London Handyman
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="customer-reviews-portfolio.html">Portfolio</a>
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="expert-services-renovations-repairs.html">Services</a>
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="expert-services-renovations-repairs.html">Expertise</a>
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="expert-services-renovations-repairs.html">Process</a>
+<button class="bg-primary-container text-on-primary font-label-bold text-label-bold uppercase tracking-wider px-6 py-3 rounded-none hover:opacity-80 hover:shadow-[0_0_15px_rgba(0,163,255,0.5)] transition-all">
+                Get a Quote
+            </button>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<main class="pt-24">
+<!-- Expertise Bar -->
+<div class="w-full bg-surface-container-low border-b border-outline-variant/20 py-3 overflow-hidden">
+<div class="flex justify-center items-center gap-12 whitespace-nowrap animate-pulse">
+<span class="font-label-bold text-label-bold text-metallic-silver flex items-center gap-2">
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                    25 YEARS EXPERIENCE
+                </span>
+<span class="font-label-bold text-label-bold text-metallic-silver flex items-center gap-2">
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                    LONDON, ONTARIO
+                </span>
+<span class="font-label-bold text-label-bold text-metallic-silver flex items-center gap-2">
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                    FULLY INSURED &amp; BONDED
+                </span>
+</div>
+</div>
+<!-- Hero Title Section -->
+<header class="px-margin-page mt-stack-section mb-stack-component text-center">
+<p class="font-label-bold text-label-bold text-electric-blue uppercase tracking-widest mb-4">Elite Craftsmanship</p>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-headline-lg-mobile md:text-display-lg max-w-4xl mx-auto">What Our Customers Say</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-6">
+                Discover why London's most discerning homeowners trust us for their premium renovations and high-end home maintenance.
+            </p>
+</header>
+<!-- Review Wall & Social Proof -->
+<section class="px-margin-page mb-stack-section">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-grid">
+<!-- Column 1 -->
+<div class="space-y-gutter-grid">
+<div class="glass-card p-8 group transition-all duration-500 hover:-translate-y-2">
+<div class="flex gap-1 text-electric-blue mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface italic mb-6">"Absolute precision. The kitchen remodel exceeded our expectations. The attention to detail on the cabinetry is world-class."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant border border-metallic-silver/20 flex items-center justify-center font-bold text-electric-blue">JS</div>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">JAMES STEVENS</p>
+<p class="text-[12px] text-metallic-silver/60">HYDE PARK ESTATE</p>
+</div>
+</div>
+</div>
+<div class="border border-outline-variant/20 overflow-hidden relative group">
+<img class="w-full grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A high-end interior renovation showcasing a modern living room with a sleek marble fireplace, floor-to-ceiling windows overlooking a misty London landscape, and minimalist furniture. The lighting is soft and cinematic, highlighting the rich textures of the metallic silver accents and deep navy walls. The style is professional, elite, and ultra-modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK94FR9wbYFAi10aauew1UpHd91CfuUaIrAJp95qHl_Bfz3cMCDbqFQeXxahCWmC9hPIKNiQeFEZ2sK1cmSorkIY--Bidi5oYy_3vex0dr8m3VnZr-EY39YAU4LPCxxpw1bRe1OmIrs1SKyBH7DsJOdb-eUX1_8yBI-2wLd9J4twW_-2jCtbJRMbWaJtM8sBgzYU3jXAoiUBrzHHclBNodxMMODUP121BP16PJ1wn2Fzx7j-pjviCD">
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6">
+<p class="font-label-bold text-label-bold text-electric-blue">LIVING ROOM REDESIGN</p>
+</div>
+</div>
+</div>
+<!-- Column 2 (Taller/Offset) -->
+<div class="space-y-gutter-grid md:pt-12">
+<div class="border border-outline-variant/20 overflow-hidden relative group">
+<img class="w-full grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A detailed close-up of premium tiling work in a luxury bathroom. The tiles are large-format dark porcelain with precise 1mm grout lines. A sleek, modern chrome faucet reflects the soft, ambient lighting of the showroom-style setting. The mood is sophisticated and emphasizes the meticulous craftsmanship of the London Handyman team." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdtxJwTi-3q33-UeiR67ZKpSemKx22DbOt6phIgUDMrqCFQV1qu9y2dmbHIRweGItvdKqclB68wsBtKul_ugkk_GLrFkATZXZtXFVZ-uXWwjS2x-0JnEwiVKAYYsFu48WEb4whryXZt2rHFnzvkk9gMtSus3X-TSwN-j_GkY1zQtTBIznjWSJFSrz1cdc6-G9oQKg1tGzVPFKreCjptcvvJIwezCTazWYUur2S4Xs-hyYLOm2m4Gb9">
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6">
+<p class="font-label-bold text-label-bold text-electric-blue">BATHROOM MASTERPIECE</p>
+</div>
+</div>
+<div class="glass-card p-8 group transition-all duration-500 border-l-4 border-l-electric-blue">
+<div class="flex gap-1 text-electric-blue mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface italic mb-6">"Finally, a contractor who treats my home like a work of art. Punctual, clean, and incredible craftsmanship."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant border border-metallic-silver/20 flex items-center justify-center font-bold text-electric-blue">LM</div>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">LAURA MIDDLETON</p>
+<p class="text-[12px] text-metallic-silver/60">WORTLEY VILLAGE</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 3 -->
+<div class="space-y-gutter-grid">
+<div class="glass-card p-8 group transition-all duration-500 hover:-translate-y-2">
+<div class="flex gap-1 text-electric-blue mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface italic mb-6">"The 'Concierge-level' service is real. They didn't just fix the leaks; they audited our entire plumbing system. Highly recommended."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant border border-metallic-silver/20 flex items-center justify-center font-bold text-electric-blue">RH</div>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">ROBERT HARDING</p>
+<p class="text-[12px] text-metallic-silver/60">OLD NORTH LONDON</p>
+</div>
+</div>
+</div>
+<div class="border border-outline-variant/20 overflow-hidden relative group">
+<img class="w-full grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="An expansive view of a custom-built outdoor deck and patio area. The wood is premium Ipe with hidden fasteners, integrated warm LED accent lighting, and a modern glass railing. The setting is a lush backyard at twilight, with the deck glowing against the dark navy sky. The image conveys a sense of high-end outdoor living and professional structural design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb4JkOE67oWVEEDy5uxaM9260m6hZeRXRvBgrirW-5aV1kRNq_jIqSdcNxVqgdBhoa6J2XHTrYZvVo6m8TvyNVlxaBcu0Xv3KU17fo7gSJR1DJWvc9ee6_TsVB3cjLFBRn4ZQIZv4_ZIe7Rx9KLNZGaCiQ4R0rIIb5141aMzHKmrY76S6WEeTpzj0tsQ2AG_t6q3fl3AM6SqTG8qd3YyTjoHwmeryIpSg2eUv3U46tRHv7Eobm-8kj">
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6">
+<p class="font-label-bold text-label-bold text-electric-blue">OUTDOOR OASIS</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Gallery Section -->
+<section class="mb-stack-section bg-surface-container-lowest py-24">
+<div class="px-margin-page mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<p class="font-label-bold text-label-bold text-electric-blue uppercase tracking-widest mb-2">Curated Portfolio</p>
+<h2 class="font-display-lg text-headline-lg text-headline-lg-mobile md:text-headline-lg">Elite Project Gallery</h2>
+</div>
+<div class="flex gap-4">
+<button class="border-2 border-metallic-silver/20 p-3 hover:bg-electric-blue hover:text-surface transition-all">
+<span class="material-symbols-outlined">west</span>
+</button>
+<button class="border-2 border-metallic-silver/20 p-3 hover:bg-electric-blue hover:text-surface transition-all">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 portfolio-grid-gap px-2 bg-outline-variant/10">
+<!-- Large Feature -->
+<div class="md:col-span-8 group relative overflow-hidden h-[600px]">
+<img class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLtB2X5inOniPwK-OA9x7JlisQtY35NlCktpkhztsrZeJcJ2VUKI1Tb6jYdcY9srox0dUMG6boy3CcWsmrs6LQD6QsszPI0KJGPIYzrEDrx4-sWVGxzv4XgypM7DR55suuQ0cvebr3-jFfIozOod9kWnyAAUgyb82w1b27I95O11GHK-u9oNAhDnEMYqQStmytt1sh9dgMwWaida7kVgFDxZ8H-VRZ51l8TRLOXekF1erVYV1aa5rcZiOWQ">
+<div class="absolute inset-0 bg-surface/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-12">
+<span class="font-label-bold text-label-bold text-electric-blue mb-4">EXTERIOR LIVING</span>
+<h3 class="font-display-lg text-headline-lg text-white mb-6">The Artisan Fire Pit Installation</h3>
+<button class="w-fit border-2 border-white px-8 py-3 font-label-bold text-label-bold text-white hover:bg-white hover:text-surface transition-all uppercase">View Case Study</button>
+</div>
+</div>
+<!-- Side Grid -->
+<div class="md:col-span-4 flex flex-col portfolio-grid-gap">
+<div class="h-1/2 group relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvCNjSknaC5I2C8b9qatTGqFxpWs9FYWHr5nzD394l3nNGzmGAzoJ0Hy9IL2xsd3FHNKkPYZmbdHZLqTBOX87z15No4QTwpv4KfgxeepEF577vQxkOPQCprMad-IvDC2YXmteeOxnnL4ptXQrp60v7zu3szYeRVzJ0zj7GYAgE9dzSzAoYmqb6kovKJZ_78FoQmetIrQtcUQRXX870z_0r1Hng2qVClh-kE1B1MGEBU-YcPEQJ7s4kWEIg">
+<div class="absolute inset-0 bg-surface/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<span class="font-label-bold text-label-bold text-electric-blue uppercase tracking-widest">Detail &amp; Precision</span>
+</div>
+</div>
+<div class="h-1/2 group relative overflow-hidden bg-deep-navy flex items-center justify-center p-12 border-t border-metallic-silver/10">
+<div class="text-center">
+<h4 class="font-display-lg text-headline-md mb-4 text-glow">120+</h4>
+<p class="font-label-bold text-label-bold text-metallic-silver">LUXURY PROJECTS COMPLETED THIS YEAR</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Additional Image Placeholder Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 portfolio-grid-gap px-2 mt-px">
+<div class="h-[400px] group relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[2s] group-hover:scale-105" data-alt="A photograph of an elegant, modern home office featuring custom-built walnut bookshelves, a minimalist glass desk, and integrated warm lighting. The craftsmanship of the woodwork is the focus, showing seamless joints and a deep, rich finish. The room is styled for a high-end corporate professional, with metallic silver hardware and a deep navy accent wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbR1ZI0uTVdWlbeqHO6xe80V0fI35kLGz72ZdwGrxckZgJxDnN2olVV6_ZbRazXd_e3MhbK7lzBgf0qnLQNPfm2AV8qMiqvrQApUA_QkR91m-zMUT_As1SuQ-n--JXh3xvWCegJhTUAyfsb8p29HAQKyzcf2KXCAG3_s9jekj081bteMHap9nfTrpZcaM7PPfkVJk-la_e3-v5Bq5Tv2S9eAULp-SKTMW8Vg4Y0EPJH1xiWG0AVACt">
+<div class="absolute top-8 left-8">
+<span class="font-label-bold text-label-bold bg-surface/80 px-4 py-2 text-on-surface">CUSTOM MILLWORK</span>
+</div>
+</div>
+<div class="h-[400px] group relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[2s] group-hover:scale-105" data-alt="A professional shot of a modern kitchen renovation with high-end appliances, white quartz countertops, and a waterfall island. The lighting consists of minimalist pendant lights that cast a soft glow over the clean, architectural lines. The color palette is neutral with metallic silver accents, creating a bright and airy atmosphere that emphasizes the quality of the renovation work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5CWCo2NTaIkA7ZAqQW3hvML52AdGLCLv4dcbWh8wOLYjbGQXOxuEpiqoLAH2o82LW9wZigM-dFgUi9cw7MPDGWAuotDclJC-IL-KNQ89YLwR_qnXSu6NgORp17OaCH5HRz92iCmPODT6gmYIMNkOh8PYsumGmPLc_1g5_R4TpCrZKhxyx6MwVzdgYafWmcICIVzAi8URnA7On0CR2XYJE4VRuuRV8-QR-8AWwrPMkkaZFlDIOZ9bu">
+<div class="absolute top-8 left-8">
+<span class="font-label-bold text-label-bold bg-surface/80 px-4 py-2 text-on-surface">KITCHEN ARCHITECTURE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="px-margin-page mb-stack-section relative py-32 overflow-hidden">
+
+<div class="relative z-10 text-center">
+<h2 class="font-display-lg text-display-lg text-headline-lg-mobile md:text-display-lg mb-8 max-w-4xl mx-auto">Ready to start your project?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-12">
+                    Join London's elite homeowners. Experience the difference that professional craftsmanship and concierge-level service make.
+                </p>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="bg-primary-container text-on-primary font-label-bold text-label-bold uppercase tracking-widest px-10 py-5 rounded-none hover:opacity-90 hover:shadow-[0_0_25px_rgba(0,163,255,0.6)] transition-all">
+                        Get a Quote
+                    </button>
+<button class="border-2 border-metallic-silver/20 text-on-surface font-label-bold text-label-bold uppercase tracking-widest px-10 py-5 rounded-none hover:bg-metallic-silver/10 transition-all">
+                        View More Work
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-stack-component bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-grid px-margin-page max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-lg text-headline-md text-on-surface mb-6">London Handyman</div>
+<p class="font-body-md text-body-md text-on-secondary-container leading-relaxed">
+                    Elevating London homes through professional renovation and meticulous craftsmanship for over two decades.
+                </p>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-6 uppercase tracking-wider">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-secondary-container hover:text-on-surface transition-colors" href="customer-reviews-portfolio.html">Portfolio</a></li>
+<li><a class="font-body-md text-body-md text-on-secondary-container hover:text-on-surface transition-colors" href="expert-services-renovations-repairs.html">Our Services</a></li>
+<li><a class="font-body-md text-body-md text-on-secondary-container hover:text-on-surface transition-colors" href="expert-services-renovations-repairs.html">Process</a></li>
+<li><a class="font-body-md text-body-md text-on-secondary-container hover:text-on-surface transition-colors" href="expert-services-renovations-repairs.html">Emergency Repairs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-6 uppercase tracking-wider">Information</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-secondary-container hover:text-on-surface transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-secondary-container hover:text-on-surface transition-colors" href="index.html">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-secondary-container hover:text-on-surface transition-colors" href="index.html">Service Area</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-6 uppercase tracking-wider">Connect</h4>
+<p class="font-body-md text-body-md text-on-secondary-container mb-4">London, Ontario, Canada</p>
+<div class="flex gap-4">
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="index.html"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="get-a-free-quote-london-handyman-repair.html"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant/10 text-center px-margin-page">
+<p class="font-body-md text-body-md text-on-secondary-container/60 opacity-80">© 2024 London Handyman Repair. Elite Craftsmanship.</p>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for navbar
+        window.onscroll = function() {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 50) {
+                nav.classList.add('py-2', 'bg-surface/95');
+                nav.classList.remove('py-4', 'bg-surface/70');
+            } else {
+                nav.classList.add('py-4', 'bg-surface/70');
+                nav.classList.remove('py-2', 'bg-surface/95');
+            }
+        };
+    </script>
+</body></html>

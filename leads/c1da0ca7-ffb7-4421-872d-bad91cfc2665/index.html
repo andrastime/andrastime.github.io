@@ -1,0 +1,392 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>London Handyman | Elite Craftsmanship</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Manrope:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#cfe5ff",
+                        "primary-fixed-dim": "#98cbff",
+                        "surface-bright": "#33394c",
+                        "surface": "#0c1324",
+                        "surface-container": "#191f31",
+                        "primary-container": "#00a3ff",
+                        "inverse-primary": "#00629d",
+                        "on-secondary": "#283044",
+                        "secondary-fixed": "#dae2fd",
+                        "on-error-container": "#ffdad6",
+                        "metallic-silver": "#CBD5E1",
+                        "on-secondary-fixed": "#131b2e",
+                        "outline": "#88919d",
+                        "on-tertiary-fixed": "#0d1c2d",
+                        "on-primary": "#003354",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-secondary-container": "#adb4ce",
+                        "on-primary-container": "#00375a",
+                        "tertiary": "#b9c8de",
+                        "success-emerald": "#10B981",
+                        "surface-variant": "#2e3447",
+                        "on-surface-variant": "#bec7d4",
+                        "on-primary-fixed-variant": "#004a77",
+                        "surface-container-high": "#23293c",
+                        "on-surface": "#dce1fb",
+                        "tertiary-fixed-dim": "#b9c8de",
+                        "secondary": "#bec6e0",
+                        "tertiary-fixed": "#d4e4fa",
+                        "background": "#0c1324",
+                        "surface-dim": "#0c1324",
+                        "outline-variant": "#3f4852",
+                        "surface-tint": "#98cbff",
+                        "surface-container-highest": "#2e3447",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "secondary-container": "#3f465c",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#273547",
+                        "on-primary-fixed": "#001d33",
+                        "inverse-surface": "#dce1fb",
+                        "primary": "#98cbff",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#070d1f",
+                        "inverse-on-surface": "#2a3043",
+                        "on-tertiary-fixed-variant": "#39485a",
+                        "surface-container-low": "#151b2d",
+                        "on-background": "#dce1fb",
+                        "error-container": "#93000a",
+                        "on-tertiary": "#233143",
+                        "tertiary-container": "#8f9eb3",
+                        "electric-blue": "#00E0FF",
+                        "deep-navy": "#1E293B"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter-grid": "2rem",
+                        "stack-section": "8rem",
+                        "margin-page": "5vw",
+                        "stack-component": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Manrope"],
+                        "label-bold": ["Hanken Grotesk"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0c1324; color: #dce1fb; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .hover-glow:hover { box-shadow: 0 0 15px rgba(0, 224, 255, 0.4); }
+        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+        .expertise-bar-scroll { overflow: hidden; white-space: nowrap; }
+        .animate-scroll { display: inline-block; animation: scroll 30s linear infinite; }
+        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-page py-4 max-w-full mx-auto bg-surface/70 backdrop-blur-md dark:bg-surface/70 border-b border-metallic-silver/20 transition-all duration-300 ease-in-out">
+<div class="flex items-center gap-2">
+<img alt="London Handyman Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLu2bYGXYO84jlFh1b8hLXFRUm_Dau1mORhieFwwVObmOK05yDoKR3UffOA9QR8rJPWq1S7auruAP8dmf5tbp47TfZLXOiVIe0FiwuEcj0aHGJrcBg4wffYJWLvsUG7BuKgQnXzVFSZ7pQwhVb2e9LhbKLL1qGtQxr3FOzGQBL3e14miGmBNHRtsWAAcVP3EzEKg7VBxIK_LWVJrKqsDhOX1Py-S9JHs3b8l72H1-HUbwO8RsnGw-1gITg">
+<span class="font-display-lg text-headline-md font-extrabold text-on-surface tracking-tighter">London Handyman</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-primary border-b-2 border-primary pb-1" href="customer-reviews-portfolio.html">Portfolio</a>
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors hover:opacity-80" href="expert-services-renovations-repairs.html">Services</a>
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors hover:opacity-80" href="expert-services-renovations-repairs.html">Expertise</a>
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors hover:opacity-80" href="expert-services-renovations-repairs.html">Process</a>
+</div>
+<button class="bg-electric-blue text-on-primary font-label-bold px-6 py-3 rounded-DEFAULT hover-glow transition-all duration-300 uppercase tracking-widest text-sm font-bold">
+            Get a Quote
+        </button>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A professional, high-end home renovation project in London Ontario showcasing a sleek modern kitchen with dark navy cabinetry, white marble countertops, and warm recessed lighting. The atmosphere is elite and minimalist with sharp architectural lines and premium finishes, reflecting an atmosphere of professional craftsmanship and precise detail. The lighting is soft and cinematic, highlighting the expert repair and renovation quality of the boutique service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvfmjxWQGAceTtqIFMNv9lHqcXkUNtZYvEjxwvABvDTIR6uTTjQZ5XqmDsR5RjsS_8GrZI4Ujr_lvByXlqU35MtcSVfEte79-fxsYH1y0Vchb5j5jZQ-uu8OEPTnDSjJYh62nsYxpi4kFx17Sb8emczJf8cKFv2xkxI5CzfpRlc75BLCLwTi103iaVosj9uEJVEWMZxv3n3R4kRnp5ARf3Dd3eMYats1-xiY4uUCpTUZXSc1pHiMU1">
+</div>
+<div class="relative z-20 px-margin-page max-w-4xl">
+<div class="mb-6 inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full border border-metallic-silver/20">
+<span class="material-symbols-outlined text-electric-blue text-sm">verified</span>
+<span class="font-label-bold text-[10px] text-metallic-silver uppercase tracking-[0.2em]">Elite Craftsmanship in Ontario</span>
+</div>
+<h1 class="font-display-lg text-display-lg mb-8 text-on-surface">Expert Renovations &amp; Repairs in <span class="text-electric-blue">London, Ontario</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl leading-relaxed">
+                Transforming traditional home maintenance into a high-end concierge experience. From bespoke kitchen remodels to precision emergency repairs, we deliver elite craftsmanship for the discerning homeowner.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-electric-blue text-on-primary font-label-bold px-8 py-4 rounded-DEFAULT hover-glow transition-all flex items-center gap-3 uppercase tracking-widest">
+                    Get a Quote
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border-2 border-metallic-silver/30 text-on-surface font-label-bold px-8 py-4 rounded-DEFAULT hover:border-electric-blue transition-all uppercase tracking-widest">
+                    View Services
+                </button>
+</div>
+</div>
+</section>
+<!-- Expertise Bar (Ticker) -->
+<div class="bg-surface-container-high py-4 border-y border-metallic-silver/10 expertise-bar-scroll relative z-30">
+<div class="animate-scroll inline-flex gap-16 items-center">
+<span class="font-label-bold text-label-bold text-metallic-silver flex items-center gap-4"><span class="material-symbols-outlined text-electric-blue">history</span> 25 YEARS EXPERIENCE</span>
+<span class="font-label-bold text-label-bold text-metallic-silver flex items-center gap-4"><span class="material-symbols-outlined text-electric-blue">location_on</span> SERVING LONDON, ONTARIO</span>
+<span class="font-label-bold text-label-bold text-metallic-silver flex items-center gap-4"><span class="material-symbols-outlined text-electric-blue">verified_user</span> FULLY INSURED &amp; BONDED</span>
+<span class="font-label-bold text-label-bold text-metallic-silver flex items-center gap-4"><span class="material-symbols-outlined text-electric-blue">energy_savings_leaf</span> ECO-FRIENDLY MATERIALS</span>
+<!-- Duplicate for infinite scroll effect -->
+<span class="font-label-bold text-label-bold text-metallic-silver flex items-center gap-4"><span class="material-symbols-outlined text-electric-blue">history</span> 25 YEARS EXPERIENCE</span>
+<span class="font-label-bold text-label-bold text-metallic-silver flex items-center gap-4"><span class="material-symbols-outlined text-electric-blue">location_on</span> SERVING LONDON, ONTARIO</span>
+<span class="font-label-bold text-label-bold text-metallic-silver flex items-center gap-4"><span class="material-symbols-outlined text-electric-blue">verified_user</span> FULLY INSURED &amp; BONDED</span>
+<span class="font-label-bold text-label-bold text-metallic-silver flex items-center gap-4"><span class="material-symbols-outlined text-electric-blue">energy_savings_leaf</span> ECO-FRIENDLY MATERIALS</span>
+</div>
+</div>
+<!-- Services Section (Bento Grid) -->
+<section class="py-stack-section px-margin-page bg-surface-dim">
+<div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="font-label-bold text-label-bold text-electric-blue uppercase tracking-widest block mb-4">Precision Services</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Curated Home Solutions</h2>
+</div>
+<p class="max-w-md text-on-surface-variant font-body-md">
+                Every project is handled with showroom-level attention to detail, whether it's a minor repair or a complete interior overhaul.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Service 1: Kitchen & Bath -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-lg bg-deep-navy border border-metallic-silver/10 h-[450px]">
+<img alt="Kitchen Renovation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLs9YAf_JkVfSMiSSIpc2sRhJrmF_eobml-SCl8-uEwRzsVf8xv45ktBOpeUnHuwYjtGH2VH_44VWUcHwgawlmqTJ82tIHKbZv450iL1XAvzqDfM0RYs_BN5_FrVSlYVQXTvlmG4b0_VfhwtP3d_lpt5bnk-b0cVzLurNFghNKcMu9EdM-7KBERIArthxULHRmtzMoC87gZqJqbYDH9wGkFjvUSh6HPStdVblruNYNb50wXgEMkvkKVrTg">
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="inline-block px-3 py-1 bg-electric-blue/20 text-electric-blue rounded-DEFAULT text-xs font-bold mb-4">INTERIOR</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Kitchen &amp; Bath Remodels</h3>
+<p class="text-on-surface-variant max-w-sm mb-6">Elevating your most used spaces with premium fixtures, tiling, and cabinetry installation.</p>
+<a class="text-electric-blue font-label-bold uppercase tracking-widest text-xs flex items-center gap-2 group-hover:gap-4 transition-all" href="customer-reviews-portfolio.html">
+                        Explore Portfolio <span class="material-symbols-outlined text-sm">trending_flat</span>
+</a>
+</div>
+</div>
+<!-- Service 2: Decks -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-lg bg-deep-navy border border-metallic-silver/10 h-[450px]">
+<img alt="Deck Installation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLtAY80kj8EKE4J44aNMR3arUJQRrU4CELk1wSnxfKz2IKM_XnJCj75vQ5MCkT5AbQfQNzeWE_0twI2NAyqqAR0oDHKBbFGrhaxtni_TBiZh-rmxd9vZIZpZiFrC0ASVc3YICIjRqfYAU5jLfXooUreYquzGWuRvHYmUsSpcXR0OTd0tqb9_uXCpXNBJ3A_jg-db28lElCBl6uXC4S_3KiLwT3qwPrBtByQ-p7JcCe_SZt4U6RZOQa7ncw">
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="inline-block px-3 py-1 bg-electric-blue/20 text-electric-blue rounded-DEFAULT text-xs font-bold mb-4">EXTERIOR</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Decking &amp; Fencing</h3>
+<p class="text-on-surface-variant mb-6">Expertly crafted outdoor structures designed for the Canadian climate.</p>
+</div>
+</div>
+<!-- Service 3: Custom Carpentry -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-lg bg-deep-navy border border-metallic-silver/10 h-[400px]">
+<img alt="Carpentry Services" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLtM_L7s34cG1z-v3CelssK6sr17mbfMCHlK7di_6zcbpiC_QXhfr66e0LEM1z0MdCPFzoGvAoGjmymL-eMV0DKIYhPeM_jcuOzusVE6CYLmZfcQfxmvaVNYK0EffTwkPa9ng_lrhNR_LTBe8edZEXyLqrhRgqWj-yVIof8NLG-xjRzTSnLeE9MYwwRq6NJM3mlZWFHzlMpF8Ec4TTRLjyHssRbEZi0_AlShjcW6eUO69keGRS3r4WmgMcw">
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="inline-block px-3 py-1 bg-electric-blue/20 text-electric-blue rounded-DEFAULT text-xs font-bold mb-4">STRUCTURAL</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Custom Carpentry</h3>
+</div>
+</div>
+<!-- Service 4: General Repairs -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-lg bg-deep-navy border border-metallic-silver/10 h-[400px]">
+<div class="absolute inset-0 flex items-center justify-center p-12 text-center">
+<div>
+<span class="material-symbols-outlined text-6xl text-electric-blue/20 mb-6" style="font-variation-settings: 'FILL' 1;">handyman</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Expert Repairs &amp; Maintenance</h3>
+<p class="text-on-surface-variant max-w-xl mx-auto mb-8 font-body-lg">From electrical troubleshooting to drywall restoration, we handle the technical repairs that keep your home running flawlessly.</p>
+<div class="flex flex-wrap justify-center gap-3">
+<span class="px-4 py-2 bg-surface-variant rounded-DEFAULT text-xs font-label-bold text-metallic-silver uppercase">Plumbing</span>
+<span class="px-4 py-2 bg-surface-variant rounded-DEFAULT text-xs font-label-bold text-metallic-silver uppercase">Electrical</span>
+<span class="px-4 py-2 bg-surface-variant rounded-DEFAULT text-xs font-label-bold text-metallic-silver uppercase">Painting</span>
+<span class="px-4 py-2 bg-surface-variant rounded-DEFAULT text-xs font-label-bold text-metallic-silver uppercase">Drywall</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-stack-section px-margin-page bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2 relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-electric-blue z-10"></div>
+<div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-electric-blue z-10"></div>
+<img class="rounded-lg shadow-2xl relative z-0" data-alt="A professional handyman crew working on a luxury home renovation in London Ontario. The workers are wearing clean, branded gear and using precision tools in a well-lit, organized workspace. The atmosphere is energetic and professional, showcasing their elite expertise and modern approach to home repairs. High contrast lighting with subtle electric blue accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHgKDTZ4Awe8po_bYP1_L8tinZ3IOQE6OvEl_AmzKfEATnZ5tHbnsMNUvXjCi-b2nFU2BiY8UAl3xGtdNjVDowgQVVqDPTNqqzAHTvPhxopmGLlUEH1nF4WDc1LRBchc8LD1f2wgDSlq2ZxStJII69k_X9oddT7g8EdT2IIc6CeHtdMSqH4R6Q5NsJKDCu02oAT2nObDZg3zGke3oU5gqnOzLts7K5MMKiz8jO4PEPjV3KJUH2PMsb">
+</div>
+<div class="lg:w-1/2">
+<span class="font-label-bold text-label-bold text-electric-blue uppercase tracking-widest block mb-6">Why London Handyman</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">The Gold Standard of Home Care</h2>
+<div class="space-y-10">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-electric-blue/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-blue">workspace_premium</span>
+</div>
+<div>
+<h4 class="font-headline-md text-xl text-on-surface mb-2">25 Years of Excellence</h4>
+<p class="text-on-surface-variant">A quarter-century of refining our techniques to provide the most reliable renovation services in Ontario.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-electric-blue/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-blue">verified</span>
+</div>
+<div>
+<h4 class="font-headline-md text-xl text-on-surface mb-2">Honest, Fixed Pricing</h4>
+<p class="text-on-surface-variant">No hidden fees or surprise costs. We provide detailed, transparent quotes before any work begins.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-electric-blue/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-blue">bolt</span>
+</div>
+<div>
+<h4 class="font-headline-md text-xl text-on-surface mb-2">Energetic Professional Crew</h4>
+<p class="text-on-surface-variant">A highly motivated team that treats your home with the same respect as a luxury showroom.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-stack-section bg-surface overflow-hidden relative">
+<div class="absolute top-0 right-0 w-96 h-96 bg-electric-blue/5 blur-[120px] rounded-full"></div>
+<div class="px-margin-page max-w-5xl mx-auto text-center relative z-10">
+<span class="material-symbols-outlined text-6xl text-electric-blue/20 mb-8">format_quote</span>
+<blockquote class="font-display-lg text-headline-lg italic text-on-surface leading-tight mb-12">
+                "The London Handyman team transformed our dated basement into a stunning home theatre. Their attention to detail and professional conduct was beyond anything we've experienced before. Truly elite service."
+            </blockquote>
+<div class="flex flex-col items-center">
+<div class="w-16 h-1 bg-electric-blue mb-6"></div>
+<p class="font-headline-md text-xl text-on-surface">James Aristhorne</p>
+<p class="font-label-bold text-metallic-silver text-xs uppercase tracking-widest">Wortley Village, London</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-stack-section px-margin-page">
+<div class="bg-surface-container rounded-xl p-12 md:p-24 border border-metallic-silver/10 relative overflow-hidden text-center">
+<div class="absolute inset-0 opacity-10">
+<!-- Decorative grid pattern could go here via CSS -->
+<div class="w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, #CBD5E1 1px, transparent 0); background-size: 40px 40px;"></div>
+</div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface mb-8">Ready to Elevate Your Space?</h2>
+<p class="text-on-surface-variant font-body-lg max-w-2xl mx-auto mb-12">
+                    Whether you have an emergency repair or a dream renovation, our elite team is standing by to assist you.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-electric-blue text-on-primary font-label-bold px-12 py-5 rounded-DEFAULT hover-glow transition-all uppercase tracking-[0.2em] text-sm">
+                        Get a Precise Quote
+                    </button>
+<button class="border-2 border-metallic-silver/30 text-on-surface font-label-bold px-12 py-5 rounded-DEFAULT hover:border-electric-blue transition-all uppercase tracking-[0.2em] text-sm">
+                        Request a Call
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-stack-component bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-grid px-margin-page max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<img alt="Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLu2bYGXYO84jlFh1b8hLXFRUm_Dau1mORhieFwwVObmOK05yDoKR3UffOA9QR8rJPWq1S7auruAP8dmf5tbp47TfZLXOiVIe0FiwuEcj0aHGJrcBg4wffYJWLvsUG7BuKgQnXzVFSZ7pQwhVb2e9LhbKLL1qGtQxr3FOzGQBL3e14miGmBNHRtsWAAcVP3EzEKg7VBxIK_LWVJrKqsDhOX1Py-S9JHs3b8l72H1-HUbwO8RsnGw-1gITg">
+<span class="font-display-lg text-headline-md text-on-surface tracking-tighter text-xl">London Handyman</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Professional home renovation and repair boutique serving London, Ontario and surrounding areas with 25 years of elite expertise.
+                </p>
+<div class="flex gap-4">
+<a class="text-metallic-silver hover:text-electric-blue transition-colors" href="get-a-free-quote-london-handyman-repair.html"><span class="material-symbols-outlined">qr_code_2</span></a>
+<a class="text-metallic-silver hover:text-electric-blue transition-colors" href="customer-reviews-portfolio.html"><span class="material-symbols-outlined">share</span></a>
+<a class="text-metallic-silver hover:text-electric-blue transition-colors" href="expert-services-renovations-repairs.html"><span class="material-symbols-outlined">home_repair_service</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-bold text-electric-blue uppercase tracking-widest mb-6">Expertise</h4>
+<ul class="space-y-4">
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors" href="expert-services-renovations-repairs.html">Kitchen Remodels</a></li>
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors" href="expert-services-renovations-repairs.html">Bathroom Renovations</a></li>
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors" href="expert-services-renovations-repairs.html">Custom Decking</a></li>
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors" href="expert-services-renovations-repairs.html">Emergency Repairs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-electric-blue uppercase tracking-widest mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors" href="index.html">Service Area</a></li>
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors" href="index.html">Terms of Service</a></li>
+<li><a class="text-on-secondary-container hover:text-on-surface transition-colors" href="index.html">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-electric-blue uppercase tracking-widest mb-6">Contact</h4>
+<p class="text-on-secondary-container mb-4">London, Ontario, Canada</p>
+<p class="text-electric-blue font-bold mb-4">519-555-0123</p>
+<p class="text-on-secondary-container">office@londonhandyman.pro</p>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-metallic-silver/5 px-margin-page text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 London Handyman Repair. Elite Craftsmanship. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Smooth scroll implementation for the expertise bar
+        const expertiseBar = document.querySelector('.expertise-bar-scroll');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        expertiseBar.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - expertiseBar.offsetLeft;
+            scrollLeft = expertiseBar.scrollLeft;
+        });
+        expertiseBar.addEventListener('mouseleave', () => { isDown = false; });
+        expertiseBar.addEventListener('mouseup', () => { isDown = false; });
+        expertiseBar.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - expertiseBar.offsetLeft;
+            const walk = (x - startX) * 2;
+            expertiseBar.scrollLeft = scrollLeft - walk;
+        });
+
+        // Navbar interaction on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'bg-surface/90', 'shadow-xl');
+                nav.classList.remove('py-4', 'bg-surface/70');
+            } else {
+                nav.classList.remove('py-2', 'bg-surface/90', 'shadow-xl');
+                nav.classList.add('py-4', 'bg-surface/70');
+            }
+        });
+    </script>
+</body></html>

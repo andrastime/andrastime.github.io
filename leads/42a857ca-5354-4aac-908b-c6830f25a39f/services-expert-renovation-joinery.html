@@ -1,0 +1,346 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | FixIt Kitchen &amp; Bathroom Fitter</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#1a1c1e",
+                        "inverse-on-surface": "#f4f0ef",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#201b17",
+                        "primary": "#000101",
+                        "on-background": "#1c1b1b",
+                        "primary-fixed": "#e2e2e5",
+                        "primary-container": "#1a1c1e",
+                        "surface-variant": "#e5e2e1",
+                        "on-primary-fixed-variant": "#454749",
+                        "surface-dim": "#ddd9d9",
+                        "tertiary": "#010100",
+                        "brushed-gold": "#C5A059",
+                        "secondary-container": "#fed488",
+                        "indigo-cabinet": "#1E2B3C",
+                        "surface-bright": "#fcf8f8",
+                        "on-surface-variant": "#44474a",
+                        "outline": "#75777a",
+                        "tertiary-container": "#201b17",
+                        "primary-fixed-dim": "#c6c6c9",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-secondary-container": "#785a1a",
+                        "inverse-surface": "#313030",
+                        "on-primary-container": "#838486",
+                        "tertiary-fixed": "#ebe0da",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#f1eded",
+                        "on-surface": "#1c1b1b",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-tint": "#5d5e61",
+                        "surface": "#fcf8f8",
+                        "tertiary-fixed-dim": "#cfc5be",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#c6c6c9",
+                        "charcoal-deep": "#1A1C1E",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#261900",
+                        "slate-muted": "#4A5568",
+                        "on-tertiary-fixed-variant": "#4c4641",
+                        "secondary-fixed": "#ffdea5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-off-white": "#F9FAFB",
+                        "background": "#fcf8f8",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c5c6ca",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-tertiary-container": "#8b837d",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#775a19",
+                        "surface-container-high": "#ebe7e7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "stack-lg": "48px",
+                        "margin-mobile": "20px",
+                        "stack-md": "16px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Libre Caslon Text"],
+                        "title-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .service-card-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
+        }
+        .staggered-list li {
+            border-bottom: 1px solid rgba(74, 85, 104, 0.1);
+            padding: 12px 0;
+        }
+        .glass-header {
+            background: rgba(252, 248, 248, 0.95);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-brushed-gold/30">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 border-b border-slate-muted/20 bg-surface/95 backdrop-blur-md">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
+<div class="font-headline-lg text-headline-lg font-bold text-charcoal-deep">FixIt</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-muted hover:text-charcoal-deep transition-colors font-title-md text-title-md" href="fixit-premium-kitchen-bathroom-fitting.html">Kitchens</a>
+<a class="text-slate-muted hover:text-charcoal-deep transition-colors font-title-md text-title-md" href="fixit-premium-kitchen-bathroom-fitting.html">Bathrooms</a>
+<a class="text-slate-muted hover:text-charcoal-deep transition-colors font-title-md text-title-md" href="services-expert-renovation-joinery.html">Process</a>
+<a class="text-slate-muted hover:text-charcoal-deep transition-colors font-title-md text-title-md" href="index.html">Gallery</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:block text-slate-muted font-body-md" href="tel:07918107292">07918107292</a>
+<button class="bg-charcoal-deep text-white px-6 py-3 rounded-DEFAULT font-label-caps text-label-caps uppercase hover:opacity-90 transition-opacity">
+                    Call Now
+                </button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24">
+<!-- Page Header & Breadcrumbs -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-stack-lg">
+<nav class="flex items-center gap-2 text-slate-muted font-label-caps text-label-caps uppercase mb-4">
+<a class="hover:text-brushed-gold transition-colors" href="/">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-charcoal-deep">Services</span>
+</nav>
+<h1 class="font-display-lg text-display-lg text-charcoal-deep max-w-2xl">Expert Kitchen &amp; Bathroom Fitting Services</h1>
+<p class="mt-4 font-body-lg text-body-lg text-slate-muted max-w-xl">From concept to completion, we deliver beautifully elegant and functional living environments tailored to your unique lifestyle.</p>
+</section>
+<!-- Kitchens Section (Asymmetric / Editorial Layout) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-stack-lg" id="kitchens">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 relative group">
+<div class="overflow-hidden rounded-lg">
+<img class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious, high-end kitchen featuring sage green shaker cabinets and a white marble countertop. The space is illuminated by soft, warm under-cabinet lighting, highlighting a classic farmhouse sink and premium fixtures. A detailed herringbone patterned wood floor adds a touch of architectural elegance to the modern, master-builder aesthetic." src="https://lh3.googleusercontent.com/aida/AP1WRLvhUm9uqau39TYoMzRSRh4YvzQDnDSvwQtgi5wlTgsXB97HRxJ3b6p7kjHOymsccf2Ikqt8jgqtNYjNMgihK7_E8AJ951_4-VLU7lUaPtBfDQZiNncNWc5EyGuTwYM9Ozf3QsvBbMG71Jr3zP5gW0YmGEZdUjUkvNcTqs9vJMrBKExtBG3uXTRXbnDOyerEOw0LCGWbnbAJA2aMIE0uZqVq_utdRR-lv-i9mgpaoVJ6E5dzdv2PQzqBOw">
+</div>
+<div class="absolute -bottom-6 -right-6 hidden lg:block bg-brushed-gold text-charcoal-deep p-8 rounded-lg shadow-xl max-w-xs">
+<p class="font-label-caps text-label-caps uppercase tracking-widest mb-2">Trade Pricing</p>
+<h4 class="font-headline-lg text-headline-lg leading-tight">Trade account discount applied</h4>
+</div>
+</div>
+<div class="lg:col-span-5 lg:pl-12">
+<span class="inline-block px-3 py-1 bg-indigo-cabinet text-white font-label-caps text-label-caps uppercase mb-6">Supply &amp; Fit</span>
+<h2 class="font-display-lg text-display-lg text-charcoal-deep mb-6">Full Kitchen Installations</h2>
+<div class="mb-8">
+<p class="text-brushed-gold font-bold text-3xl mb-2">From £8,000.00</p>
+<p class="text-slate-muted line-through text-lg">Was £12,000.00</p>
+</div>
+<div class="space-y-4 font-body-lg text-body-lg text-slate-muted mb-8">
+<p>We supply and fit quality kitchens from leading suppliers like Howdens, Wren, and Magnet. Our comprehensive service ensures a seamless transition from your old space to a bespoke culinary environment.</p>
+<ul class="staggered-list space-y-2">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-brushed-gold">check_circle</span> Plumbing &amp; Electrical</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-brushed-gold">check_circle</span> Worktop Router Jointing</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-brushed-gold">check_circle</span> Appliance Installation</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-brushed-gold">check_circle</span> Tiling &amp; Lighting</li>
+</ul>
+</div>
+<button class="w-full md:w-auto bg-brushed-gold text-charcoal-deep px-8 py-4 rounded-DEFAULT font-title-md text-title-md hover:brightness-105 transition-all">Book a Free Survey</button>
+</div>
+</div>
+<div class="mt-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="rounded-lg overflow-hidden h-64">
+<img class="w-full h-full object-cover" data-alt="A professional construction scene showcasing a kitchen mid-installation. Structural wooden frames are visible alongside partially installed sage green cabinetry. Tools like levels and drills are strategically placed, emphasizing the 'Master Builder' precision and architectural craftsmanship involved in the renovation process." src="https://lh3.googleusercontent.com/aida/AP1WRLu6B2fi-5JMHQvlr12QzfyhL0d_iIy2NX7xX8exPdb9dOfjXrcITJuxN8DFgaSe8cUkqrMoPQoQX705Q_Mobxe3-DwkTbjce3yL4bYPKT2mV9HG7vwIt-iy3OIzTNNOUBuWtL5K7e2s7DspJtG5KMBLX8w0A4BUQiRq3jvvQm-G0Ow75NtUgrHdL5Ud3Ud7Wp_6xdWvPwY176WSaKBDv4i4dpP581rI41vR_NAEXzuTogUfnAVXbl6LKwI">
+</div>
+<div class="lg:col-span-2 bg-surface-container-low p-10 flex flex-col justify-center">
+<h3 class="font-headline-lg text-headline-lg text-charcoal-deep mb-4 italic">"Either it's from Howdens, Wren Kitchen, Magnet Kitchen or any other supplier we will fit it for you."</h3>
+<p class="font-body-md text-body-md text-slate-muted">You give us a design, or we design it for you free of charge. Our precision-focused team ensures every cabinet is perfectly leveled and every joint is seamless.</p>
+</div>
+</div>
+</section>
+<!-- Bathrooms Section (Minimalist Glassmorphism) -->
+<section class="bg-charcoal-deep py-24 text-white overflow-hidden" id="bathrooms">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col lg:flex-row gap-gutter items-center">
+<div class="lg:w-1/2 order-2 lg:order-1">
+<span class="inline-block px-3 py-1 border border-brushed-gold text-brushed-gold font-label-caps text-label-caps uppercase mb-6">Luxury to Budget</span>
+<h2 class="font-display-lg text-display-lg text-white mb-8">Bathroom Sanctuaries</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+<div>
+<h4 class="font-title-md text-title-md text-brushed-gold mb-3">Preparation</h4>
+<p class="font-body-md text-surface-variant">Full removal of your old suite followed by professional plumbing, electrical work, and plastering/plasterboarding.</p>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-brushed-gold mb-3">Finishing</h4>
+<p class="font-body-md text-surface-variant">Precision tiling (600x600 gloss/matt), wall mixer showers with overflow, and elegant cladding solutions.</p>
+</div>
+</div>
+<div class="bg-white/5 backdrop-blur-md p-6 border border-white/10 rounded-lg mb-10">
+<h5 class="font-label-caps text-label-caps uppercase text-brushed-gold mb-4">Pricing Guide</h5>
+<p class="font-display-lg text-display-lg text-white">Full Install from £7,000</p>
+<p class="text-surface-variant font-body-md mt-2 italic">Standard inclusions: Shower tray, full tiling, basin, toilet, and lighting.</p>
+</div>
+<button class="bg-white text-charcoal-deep px-8 py-4 rounded-DEFAULT font-title-md text-title-md hover:bg-brushed-gold transition-colors">Start Your Project</button>
+</div>
+<div class="lg:w-1/2 order-1 lg:order-2 grid grid-cols-2 gap-4">
+<div class="pt-12">
+<img class="w-full aspect-[2/3] object-cover rounded-lg" data-alt="A modern, minimalist bathroom design featuring sleek grey tiles and high-gloss white cabinetry. The lighting is sophisticated, with recessed ceiling spots and soft LED strips under the vanity, creating a serene, spa-like atmosphere. The architectural precision of the tile alignment showcases expert craftsmanship." src="https://lh3.googleusercontent.com/aida/AP1WRLu4_irYxd01lIJZ8qWQeWQqySyMlZoevP5YrEn4cTe2vcD9az5z0m9h0ouYY1u4ETZOisBR-uKXfqa_PfnaQFkbHaHzOQzwY9zq9-0FxmnKqBMxZGi6oyFh4v23L6Yz6rl-heB7rXeZ0j0adBg7A_foQOK8BCO4Y9Zp_RKp-EfhNcQHaKnYXO3qmsKo2awRXTWXc2-lPk1thnQDx8xs9msC7AIEe3FpwIBQrt09pG0hmOkrU7RCYbdAdSU">
+</div>
+<div>
+<img class="w-full aspect-[2/3] object-cover rounded-lg" data-alt="Close-up detail of a bathroom renovation featuring premium fixtures. A modern shower mixer with a hand-held attachment is perfectly installed against dark, textured hexagonal tiles. The contrast between the metallic chrome and the deep tile color evokes a sense of permanence and luxury fitting." src="https://lh3.googleusercontent.com/aida/AP1WRLu8nQu1zBQS4alzKDZPHVSRPJ-77BAT1AkbIuNlWnVazamGnBqmJaJwEBnQ7dnCdnqv_supUM1AtufXhDM_DtuORk1wfjYhFGW2U77o0lHqSPwpIhV7NySv-ynHT2aTKDeoqDQsfPi85PEb-6a7MgYSPLm3BZKZS4gu506ZDmBB7EiMousZWPf_-jGrLMmdDXYVOm4-yJSFJpPKOzegH867TawelYEBf1-XDmKUC04iGF7_i2_VtZepsIk">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Other Services (Bento Grid) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24" id="other-services">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-display-lg text-charcoal-deep">Full House Renovation</h2>
+<p class="mt-4 font-body-lg text-body-lg text-slate-muted">Comprehensive joinery and specialist services for your entire home.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Bento Item 1: Joinery -->
+<div class="md:col-span-2 service-card-lift bg-surface-off-white p-10 border border-slate-muted/10 rounded-lg flex flex-col md:flex-row gap-8">
+<div class="md:w-1/2">
+<h3 class="font-headline-lg text-headline-lg text-charcoal-deep mb-4">Precision Joinery</h3>
+<p class="font-body-md text-slate-muted mb-6">Expert craftsmanship for internal doors, skirting boards, locks, shelving, and laminate flooring.</p>
+<ul class="space-y-3 font-label-caps text-label-caps uppercase text-charcoal-deep">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-brushed-gold">carpenter</span> Skirting Boards</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-brushed-gold">door_front</span> Internal Doors</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-brushed-gold">layers</span> Flooring</li>
+</ul>
+</div>
+<div class="md:w-1/2">
+<div class="h-64 bg-slate-200 rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="A macro shot of master-crafted wood joinery. Fine wood shavings rest on a perfectly smooth, light oak floor plank. In the background, a craftsman's hand is visible using a traditional plane, emphasizing the manual expertise and meticulous attention to detail that FixIt brings to every home renovation project." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQce5C0g8Dd_t7R0bRr07tWyn_6XmC87-ClbypJsRyT19mjTdkyfLPGPjdAHCf9F3diKdfZ_yOS5Vs3MQ2r94PnDf-wCG00o_hmmp6BXRXpjW4yp4Yg3KqAnX8YtxBtHGjRrPaErDCoH0VPKR32SRW6gBu_1AGhAOh-jD9B38qv4RRKNiL_csHl09dzdo70hIQ72BhTq36ty1TTi5zhYfe6ThVZAjTsQq7TPIqcyMSxGVt32lHfAAs')"></div>
+</div>
+</div>
+</div>
+<!-- Bento Item 2: Media Wall -->
+<div class="service-card-lift bg-charcoal-deep text-white p-10 rounded-lg flex flex-col justify-between">
+<div>
+<span class="text-brushed-gold font-label-caps text-label-caps uppercase mb-4 block">Specialist</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Media Walls</h3>
+<p class="font-body-md text-surface-variant mb-6">Bespoke TV mounting and integrated entertainment units.</p>
+<p class="text-brushed-gold font-bold text-2xl">From £1,200</p>
+</div>
+<div class="mt-8 rounded-lg overflow-hidden aspect-square">
+<img class="w-full h-full object-cover" data-alt="A modern media wall installation in a contemporary living room. The wall features integrated LED lighting behind a large television, flanked by minimalist shelving. The clean lines and professional mounting reflect a sophisticated 'Master Builder' approach to modern living environments." src="https://lh3.googleusercontent.com/aida/AP1WRLs1RzuYUVyUHntwRb6Wb2lmt7DAYCon_ReiHivtFSafTzA9H4UElcc54kz1ZOqNKTBPNirFJnIXWqTaOOmN5pk_s3Kfi81rxAbqXdZh_x2Kl5beFeU0_-uHwadFgOyw6D9NT-bfN_HQkg5BoLexM2_aGzUl3wuTGFImY4XdGRYamjMkPKAs-AERpnUDMPoEfyC3nq6Oi-VseR9m68nmNdyT8AAV1q7uwhKA4jQGpRtHzh6UZNLsXr1oX2w">
+</div>
+</div>
+<!-- Bento Item 3: Guarantee -->
+<div class="md:col-span-3 service-card-lift bg-brushed-gold text-charcoal-deep p-12 rounded-lg text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-6xl mb-4">verified</span>
+<h3 class="font-display-lg text-display-lg mb-4">12 Month Workmanship Guarantee</h3>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto opacity-90">All our installations are backed by a full year guarantee, complemented by manufacturer warranties on all specified products. Trust and permanence in every project.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-charcoal-deep text-white border-t border-white/10">
+<div class="w-full px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between max-w-container-max mx-auto gap-12">
+<div class="max-w-sm">
+<div class="font-headline-lg text-headline-lg text-brushed-gold mb-6">FixIt</div>
+<p class="font-body-md text-surface-variant">Highly experienced team with a passion for design &amp; excellence. Established in 2012, based in the heart of Leeds.</p>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="flex flex-col gap-4">
+<p class="font-label-caps text-label-caps uppercase text-brushed-gold">Contact</p>
+<p class="font-body-md text-surface-variant">07918107292</p>
+<p class="font-body-md text-surface-variant">Leeds, West Yorkshire</p>
+</div>
+<div class="flex flex-col gap-4">
+<p class="font-label-caps text-label-caps uppercase text-brushed-gold">Explore</p>
+<a class="font-body-md text-surface-variant hover:text-white transition-colors" href="index.html">Privacy Policy</a>
+<a class="font-body-md text-surface-variant hover:text-white transition-colors" href="index.html">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-surface-variant/60">© 2024 FixIt Kitchen &amp; Bathroom Fitter. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-surface-variant/60 hover:text-white transition-colors" href="index.html">Facebook</a>
+<a class="text-surface-variant/60 hover:text-white transition-colors" href="index.html">TikTok</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center bg-charcoal-deep md:hidden z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+<a class="flex flex-col items-center justify-center text-white/80 w-full py-3 active:bg-brushed-gold/90 transition-all duration-200" href="tel:07918107292">
+<span class="material-symbols-outlined mb-1">call</span>
+<span class="font-label-caps text-label-caps uppercase">Call</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-brushed-gold text-charcoal-deep w-full py-3 active:scale-95 transition-transform" href="get-a-quote-fixit-fitting-renovations.html">
+<span class="material-symbols-outlined mb-1">request_quote</span>
+<span class="font-label-caps text-label-caps uppercase">Quote</span>
+</a>
+</nav>
+<!-- Sticky Floating CTA (Desktop Only) -->
+<div class="fixed bottom-8 right-8 hidden md:block z-40">
+<button class="flex items-center gap-3 bg-brushed-gold text-charcoal-deep px-6 py-4 rounded-full shadow-2xl hover:-translate-y-1 transition-all duration-300 font-title-md text-title-md">
+<span class="material-symbols-outlined">calendar_today</span>
+            Talk to an Expert
+        </button>
+</div>
+<script>
+        // Simple scroll observer for animations or header effects
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Soft interaction for buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => btn.style.transform = 'scale(0.98)');
+            btn.addEventListener('mouseup', () => btn.style.transform = 'scale(1)');
+        });
+    </script>
+</body></html>

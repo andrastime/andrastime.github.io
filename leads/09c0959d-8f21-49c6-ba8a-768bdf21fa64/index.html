@@ -1,0 +1,392 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arley Handyman | Premium Craftsmanship</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#dce4e5",
+                    "electric-blue": "#00E5FF",
+                    "on-surface": "#dce4e5",
+                    "surface-tint": "#00daf3",
+                    "on-secondary": "#313030",
+                    "on-tertiary-fixed": "#251a00",
+                    "on-surface-variant": "#bac9cc",
+                    "on-error-container": "#ffdad6",
+                    "outline": "#849396",
+                    "tertiary": "#ffeac0",
+                    "tertiary-fixed": "#ffdf96",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface-container-high": "#242b2d",
+                    "primary-container": "#00e5ff",
+                    "surface": "#0d1516",
+                    "on-secondary-fixed-variant": "#474646",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-highest": "#2e3638",
+                    "on-tertiary": "#3e2e00",
+                    "primary-fixed": "#9cf0ff",
+                    "on-primary-fixed": "#001f24",
+                    "on-tertiary-container": "#6f5500",
+                    "background": "#0d1516",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#f3bf26",
+                    "surface-container-low": "#151d1e",
+                    "tertiary-container": "#fec931",
+                    "surface-bright": "#333a3c",
+                    "primary-fixed-dim": "#00daf3",
+                    "on-primary-container": "#00626e",
+                    "secondary-container": "#4a4949",
+                    "charcoal-deep": "#0A0A0A",
+                    "slate-medium": "#1C1C1E",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "primary": "#c3f5ff",
+                    "secondary": "#c8c6c5",
+                    "inverse-primary": "#006875",
+                    "surface-dim": "#0d1516",
+                    "inverse-on-surface": "#2a3233",
+                    "outline-variant": "#3b494c",
+                    "on-primary": "#00363d",
+                    "on-secondary-container": "#bab8b7",
+                    "surface-container-lowest": "#080f11",
+                    "on-primary-fixed-variant": "#004f58",
+                    "secondary-fixed": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "success-emerald": "#42B72A",
+                    "surface-container": "#192122",
+                    "on-background": "#dce4e5",
+                    "pure-white": "#FFFFFF",
+                    "surface-variant": "#2e3638",
+                    "on-error": "#690005"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(28, 28, 30, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card:hover {
+            border-color: #00E5FF;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(13, 21, 22, 0.4) 0%, rgba(13, 21, 22, 0.9) 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface/80 border-b border-white/10 shadow-sm">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4">
+<a class="text-headline-md font-display-lg tracking-tighter text-on-surface dark:text-on-surface" href="index.html">ARLEY</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-electric-blue border-b-2 border-electric-blue pb-1 font-label-lg text-label-lg" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-lg text-label-lg" href="our-services-arley-handyman.html">Services</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-lg text-label-lg" href="portfolio-arley-handyman.html">Gallery</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-lg text-label-lg" href="book-now-arley-handyman.html">Contact</a>
+</div>
+<button class="bg-electric-blue text-charcoal-deep font-label-lg text-label-lg px-6 py-2.5 rounded-lg font-bold hover:opacity-80 active:scale-95 transition-all duration-300">
+                Book Now
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, high-contrast interior shot of a luxury modern home featuring sleek black cabinetry and warm designer lighting. A professional craftsman in a charcoal uniform is meticulously installing a geometric brass light fixture. The lighting is dramatic and moody, emphasizing the premium textures of wood and marble in the kitchen background. The overall aesthetic is clean, sophisticated, and technically precise." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBi7NmbGxr0l4ifOFueqQmvqETJPDk53ozon1--KCSkqggi_nd_wDwW4AjZSj8eIioGZYzGKehKM1X2kmCfMqjJWRSIsSKtLXyWy5Zp0QJdCFRjuDhusaf7YssZcASZMaBLt81vcCPznBXzMkqDESQIPAimTRYCJbo4sG3UOGyOAzk3qsny7E4xhIY1e1duHwQpW7yMx9oxJlBSX2eB2_Ccz2ha66e5bGYsKAaUDw_i74GEO1dBzP8r2g')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="max-w-2xl space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric-blue/10 border border-electric-blue/20">
+<span class="material-symbols-outlined text-[16px] text-electric-blue" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-electric-blue font-label-sm text-label-sm tracking-widest uppercase">Arley Pro Status Verified</span>
+</div>
+<h1 class="font-display-lg text-[40px] leading-[48px] md:text-display-lg text-pure-white">
+                        Premium Craftsmanship for Your Modern Home
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Expert handyman services delivered with white-glove precision. We transform living spaces through meticulous maintenance and high-end technical skill.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-electric-blue text-charcoal-deep px-8 py-4 rounded-xl font-headline-md text-headline-md font-bold hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] transition-all duration-300">
+                            Book Your Service
+                        </button>
+<button class="border border-pure-white text-pure-white px-8 py-4 rounded-xl font-headline-md text-headline-md font-bold hover:bg-pure-white/10 transition-all duration-300">
+                            View Portfolio
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us: Bento Grid -->
+<section class="py-24 bg-surface">
+<div class="max-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-pure-white mb-4">Precision Engineering, Every Visit</h2>
+<div class="h-1 w-24 bg-electric-blue"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Card 1: Reliability -->
+<div class="md:col-span-8 glass-card rounded-2xl p-8 flex flex-col justify-between overflow-hidden relative group">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-electric-blue text-[40px] mb-6">schedule</span>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-4">Reliability Guaranteed</h3>
+<p class="text-on-surface-variant font-body-md text-body-md max-w-md">We value your time as much as you do. Our team operates on a strict schedule, ensuring punctuality and clear communication throughout your project.</p>
+</div>
+<div class="absolute right-0 bottom-0 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'wght' 700;">task_alt</span>
+</div>
+</div>
+<!-- Card 2: Skill -->
+<div class="md:col-span-4 glass-card rounded-2xl p-8 group">
+<span class="material-symbols-outlined text-electric-blue text-[40px] mb-6">architecture</span>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-4">Master Skillset</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">From intricate electrical work to custom cabinetry adjustments, our pros bring decades of combined technical mastery.</p>
+</div>
+<!-- Card 3: Clean Work -->
+<div class="md:col-span-4 glass-card rounded-2xl p-8 group">
+<span class="material-symbols-outlined text-electric-blue text-[40px] mb-6">cleaning_services</span>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-4">Clean Environment</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">We treat your home like a gallery. Dust-free workflows and meticulous post-service cleanup are our standard protocol.</p>
+</div>
+<!-- Card 4: Detailed Image -->
+<div class="md:col-span-8 rounded-2xl overflow-hidden relative group h-80 md:h-auto">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A professional workbench in a dimly lit, high-end garage workshop. The lighting is dramatic, focused on a perfectly organized set of high-quality tools including wrenches, drills, and screwdrivers arranged in custom wall mounts. The workbench is made of thick, polished oak with a heavy-duty machinist's vise attached. A leather tool belt lies casually in the foreground, glowing under a warm LED strip. The mood is one of extreme order, professionalism, and high-tech efficiency." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1wVRDI0RSLxTrwD8p2VeJaKM8tTD_g5UDx5NutqX0SF-8A-4MmwxHj5EJBYg1HQEoMXOfNmLIncrGXfnQj-7_pqU6jbBe84fPNpU18H3z6a3OcbPerNWvFtdlg3RtkBvGnpUiYvlj28TIfv_5ySDXy6KaQB0MFLlf5Sj6IkZNVEkxv5naxuyQjd2x3aQPCFydVJCEw2ov9Ni9SKRwPM1qck_ngNLBO53HgKul_DuL9o702WYjU8blzQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-deep to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<p class="text-electric-blue font-label-lg text-label-lg mb-1">THE ARLEY STANDARD</p>
+<p class="text-pure-white font-headline-md text-headline-md">Equipped for Perfection</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Services -->
+<section class="py-24 bg-surface-container">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<p class="text-electric-blue font-label-lg text-label-lg tracking-widest mb-2 uppercase">Solutions</p>
+<h2 class="font-headline-lg text-headline-lg text-pure-white">Signature Services</h2>
+</div>
+<button class="text-electric-blue border-b border-electric-blue font-label-lg text-label-lg pb-1 hover:opacity-70 transition-opacity">Explore All Services</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="h-48 bg-cover bg-center" data-alt="A close-up of a high-tech modern bathroom fixture being installed. A plumber's hands are visible, using a chrome-finished wrench to tighten a sleek, minimalist faucet onto a marble countertop. The scene is bright and airy, with a cool-toned light-mode aesthetic and sharp focus on the metallic reflections." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAehWc8kvbMw8IvleXfw79WitKmE4QbqdUYbt2cjHRTbQpwVVrVohZxQxfyA_oyxt6rtNS_L8toaeZeA1btsVM6QT9PmB_ItdCIl0Y3nuTYSwQd3d_TI25nDsFuM3uLuyTipZ-bbhCBWXsIPSV1rwlgAGhTWwLvZUDjnHArCmCtxyXJDBAis11iFjRt0KljhOnsUbghHuoRPpa2InrzQaLZ-CaFoNMt9aINqsihy-bCERA8YSURJSCPsQ')"></div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+<span class="bg-electric-blue/10 text-electric-blue text-[10px] px-2 py-0.5 rounded font-bold uppercase">Popular</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-3">Premium Plumbing</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">From smart fixture installation to silent drainage solutions, we handle complex plumbing with surgical precision.</p>
+<a class="inline-flex items-center text-electric-blue font-label-lg text-label-lg group-hover:gap-3 transition-all duration-300" href="our-services-arley-handyman.html">
+                                View Details <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="h-48 bg-cover bg-center" data-alt="An electrician installing a smart home lighting panel. The interior is modern and dark-themed, with glowing blue indicator lights on the circuitry. The professional is wearing high-visibility gloves, focusing on intricate wiring within a sleek, recessed wall compartment. The style is ultra-modern and corporate professional." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFRrl7PC_-4Vt3LCmuNeyG3Whcyaxy9MwM4d8cKPFm-6SPRYJczjEJjk_SkdC2Y8eW6CSyMvc-XnDy8x_T0BDD4cpdFNySKycESWcviBm2tn1udkBJxXbR_Yup8LSZVQ_x0gjFsFCCRxO3YPo7BBiZrTKY-U5JTXU9cgzmQ2imTOruoMMdvf5_aEC0DLEV19KM1YUg4MKKSI0N25ewccy_hVMN2H9D_kAWAIo4SJ0W4Y__fAgAg4sgHw')"></div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 1;">electric_bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-3">Smart Electrical</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Expert diagnostic work and smart-home integration. We ensure your home's infrastructure is safe, efficient, and intelligent.</p>
+<a class="inline-flex items-center text-electric-blue font-label-lg text-label-lg group-hover:gap-3 transition-all duration-300" href="portfolio-arley-handyman.html">
+                                View Details <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="h-48 bg-cover bg-center" data-alt="A carpenter refining a custom walnut shelving unit in a modern living room. The focus is on the fine wood grain and the professional use of a hand plane, with thin shavings of wood falling away. The lighting is warm and natural, coming from a large window off-camera, creating a high-end editorial feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAyExU98kfDVOjWUzFDTFTq50mPMt9nQ9e0sZ7Jcs4vp1Zoqfc4PAq4la9azlUR_emauJ7OdPBXIl2GEjlg2a3BsMOM9GVKtVpf3-Xf3V4cepqpITOpBSV_C4gYvGXUXenkEUDtTLNZGxOyTy_fyW-S2YZDr8DiWYsFazlx__iykphPjL63ap4F5xvcdSuVd1v3DzSaH_MLi_KTRTY7uQ01il5GNHQKQz5EF7ZYJxzckSn-NZ9RQTDWw')"></div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 1;">stream_apps</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-3">Custom Carpentry</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Precision woodwork that adds character and utility. We specialize in custom shelving, trim work, and cabinetry repair.</p>
+<a class="inline-flex items-center text-electric-blue font-label-lg text-label-lg group-hover:gap-3 transition-all duration-300" href="our-services-arley-handyman.html">
+                                View Details <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Block -->
+<section class="py-24 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[400px] text-electric-blue">format_quote</span>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-3xl glass-card p-12 rounded-3xl relative z-10 border-l-4 border-l-electric-blue">
+<div class="flex gap-1 mb-8">
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="font-headline-lg text-headline-lg text-pure-white leading-tight mb-8">
+                        "The Arley team brought a level of professionalism I've never seen in home services. From the digital booking to the flawless execution of our kitchen lighting project, everything was white-glove."
+                    </blockquote>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-medium border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-pure-white">Jonathan Vance</p>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Estate Owner, Menlo Park</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-charcoal-deep border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-display-lg text-display-lg text-pure-white mb-6">Ready to elevate your home?</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-12 max-w-2xl mx-auto">Experience the intersection of high-end craftsmanship and modern efficiency. Join the hundreds of homeowners who trust Arley for their most critical repairs.</p>
+<button class="bg-electric-blue text-charcoal-deep px-12 py-5 rounded-2xl font-headline-md text-headline-md font-extrabold shadow-[0_10px_40px_rgba(0,229,255,0.2)] hover:scale-105 transition-transform">
+                    Start Your Project Now
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-charcoal-deep border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<div class="space-y-6">
+<span class="text-headline-md font-display-lg text-electric-blue">ARLEY</span>
+<p class="text-on-surface-variant font-body-md text-body-md">Premium craftsmanship guaranteed for the discerning modern homeowner.</p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="portfolio-arley-handyman.html"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-electric-blue transition-colors" href="book-now-arley-handyman.html"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-pure-white font-label-lg text-label-lg uppercase tracking-widest">Services</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="our-services-arley-handyman.html">Plumbing</a></li>
+<li><a class="text-on-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="our-services-arley-handyman.html">Electrical</a></li>
+<li><a class="text-on-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="our-services-arley-handyman.html">Carpentry</a></li>
+<li><a class="text-on-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="our-services-arley-handyman.html">Maintenance</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-pure-white font-label-lg text-label-lg uppercase tracking-widest">Company</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="index.html">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="index.html">Careers</a></li>
+<li><a class="text-on-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-pure-white font-label-lg text-label-lg uppercase tracking-widest">Contact</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">24/7 Service Support<br>800-ARLEY-PRO<br>support@arley.com</p>
+<div class="pt-4">
+<p class="text-on-surface-variant font-label-sm text-label-sm">© 2024 Arley Handyman Services. Premium Craftsmanship Guaranteed.</p>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(el => {
+            el.classList.add('scroll-reveal');
+            observer.observe(el);
+        });
+
+        // Sticky nav color transition on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-surface/95');
+                nav.classList.remove('bg-surface/80');
+            } else {
+                nav.classList.add('bg-surface/80');
+                nav.classList.remove('bg-surface/95');
+            }
+        });
+    </script>
+</body></html>

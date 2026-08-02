@@ -1,0 +1,456 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Golden Triangle Handyman | Premium Craftsmanship</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-container": "#735d00",
+                "tertiary-fixed-dim": "#b7c8e1",
+                "on-secondary-fixed": "#231b00",
+                "inverse-primary": "#bec6e0",
+                "surface-container-highest": "#e4e2e4",
+                "inverse-on-surface": "#f3f0f2",
+                "primary-container": "#131b2e",
+                "on-tertiary-container": "#75859d",
+                "error": "#ba1a1a",
+                "surface-variant": "#e4e2e4",
+                "surface-container-low": "#f6f3f5",
+                "surface-container": "#f0edef",
+                "secondary-fixed-dim": "#e8c344",
+                "goldenrod": "#B59410",
+                "surface-tint": "#565e74",
+                "on-surface": "#1b1b1d",
+                "on-primary": "#ffffff",
+                "inverse-surface": "#303032",
+                "on-tertiary-fixed": "#0b1c30",
+                "surface-dim": "#dcd9db",
+                "surface-container-lowest": "#ffffff",
+                "surface-bright": "#fcf8fa",
+                "on-primary-container": "#7c839b",
+                "tertiary-container": "#0b1c30",
+                "paper-white": "#F8FAFC",
+                "slate-gray": "#64748B",
+                "secondary-fixed": "#ffe081",
+                "on-error": "#ffffff",
+                "background": "#fcf8fa",
+                "primary-fixed": "#dae2fd",
+                "primary-fixed-dim": "#bec6e0",
+                "surface": "#fcf8fa",
+                "error-container": "#ffdad6",
+                "on-secondary": "#ffffff",
+                "on-error-container": "#93000a",
+                "on-tertiary-fixed-variant": "#38485d",
+                "on-primary-fixed-variant": "#3f465c",
+                "outline-variant": "#c6c6cd",
+                "on-background": "#1b1b1d",
+                "on-surface-variant": "#45464d",
+                "deep-navy": "#0F172A",
+                "outline": "#76777d",
+                "on-secondary-fixed-variant": "#564500",
+                "secondary-container": "#fdd755",
+                "tertiary-fixed": "#d3e4fe",
+                "tertiary": "#000000",
+                "surface-container-high": "#eae7e9",
+                "on-primary-fixed": "#131b2e",
+                "secondary": "#725c00",
+                "on-tertiary": "#ffffff",
+                "primary": "#000000"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "unit": "8px",
+                "section-gap-md": "80px",
+                "section-gap-lg": "120px",
+                "margin-mobile": "16px",
+                "gutter": "24px",
+                "container-max": "1280px"
+            },
+            "fontFamily": {
+                "headline-md": ["Montserrat"],
+                "label-sm": ["Inter"],
+                "headline-sm": ["Montserrat"],
+                "label-bold": ["Inter"],
+                "headline-lg": ["Montserrat"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "display-lg": ["Montserrat"],
+                "headline-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-goldenrod selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Golden Triangle Handyman Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLssOa4VgUvwYH20hBDSlHbnRvC95HAYrX__amEuS4ld7DR6aUp-pLlI2PVYQRlsbpYME1tXXoc9hVn3cHWaPBFCjPuAq0dyEEsH5iGH0YT0COZAR8Lf0iJeTFTeHAEQSAEtP4HSnOhVLXp5cdq7oMBJrsID1Nm2Vv2o3Kp7QtN5E_YJXK7hx7YWL3IYq-O2IgCRuXDLUgv_FSm3zxHPvgPZrlKlQmqfPG022ICbSHaBiGTmf0jm9ok2SwUd">
+<span class="hidden md:block font-headline-sm text-headline-sm font-bold text-deep-navy">Golden Triangle Handyman</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-goldenrod border-b-2 border-goldenrod pb-1 font-label-bold text-label-bold" href="#home">Home</a>
+<a class="text-deep-navy hover:text-goldenrod transition-colors font-label-bold text-label-bold" href="#about">About</a>
+<a class="text-deep-navy hover:text-goldenrod transition-colors font-label-bold text-label-bold" href="#services">Services</a>
+<a class="text-deep-navy hover:text-goldenrod transition-colors font-label-bold text-label-bold" href="#projects">Projects</a>
+<a class="text-deep-navy hover:text-goldenrod transition-colors font-label-bold text-label-bold" href="#reviews">Reviews</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-2 bg-deep-navy text-white px-6 py-2.5 rounded-full font-label-bold text-label-bold hover:bg-goldenrod transition-all active:scale-95 duration-150" href="tel:07438561614">
+<span class="material-symbols-outlined text-[20px]">call</span>
+                    07438 561614
+                </a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="home">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional handyman with silver hair and a neat beard meticulously installing sleek wooden floating shelves in a bright, modern living room. The room features high-end architectural details, minimalist furniture, and large windows with soft morning light. The craftsman wears high-quality navy blue overalls and a tool belt, embodying executive-level professionalism and white-glove service. The aesthetic is clean, sophisticated, and editorial." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARVRcZFSjNVGM5k-nvtjOgr829qRij_sEzkVRCZlrZ-H__hKDi5RFK1tmqp0DjR0WCjkce5JGaH8eOTJbQeUAcM7ZiBHDSBIuS_IHJqN2p6jEmxosi3xyZ-r5MG8DxNBPypqXSAriR2KMrfOOne2IesF0swyQmOcFO-uR1yYwyHxWj5g1YjtWqCiOnr4VfNoNJTA9Tt2iAg9_hFZAmAF9cot8pq2tmlyl8nfRYkD7R-KKdPjlVkM00CA')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-goldenrod/10 border border-goldenrod/20 text-goldenrod rounded-full mb-6">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-bold text-label-sm uppercase tracking-wider">Premium Property Maintenance</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-deep-navy mb-6 leading-tight">
+                        The Solution for All Your Handyman Needs
+                    </h1>
+<p class="font-body-lg text-body-lg text-slate-gray mb-10 max-w-lg">
+                        Meticulous craftsmanship for high-end residential and commercial spaces. We bring an executive level of professionalism to every repair and renovation.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-goldenrod text-deep-navy px-8 py-4 rounded font-label-bold text-label-bold hover:bg-deep-navy hover:text-white transition-all shadow-lg" href="#contact">
+                            Get a Free Quote
+                        </a>
+<a class="border-2 border-deep-navy text-deep-navy px-8 py-4 rounded font-label-bold text-label-bold hover:bg-deep-navy hover:text-white transition-all" href="#services">
+                            View Services
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-section-gap-lg bg-white" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid md:grid-cols-2 gap-gutter items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-8">Crafting Excellence for Discerning Clients</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-14 h-14 bg-surface-container-low flex items-center justify-center rounded-xl border border-outline-variant/30">
+<span class="material-symbols-outlined text-goldenrod text-3xl">history_edu</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-deep-navy mb-2">Decades of Experience</h3>
+<p class="text-slate-gray">A legacy of technical expertise and master-level execution in every project we undertake.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-14 h-14 bg-surface-container-low flex items-center justify-center rounded-xl border border-outline-variant/30">
+<span class="material-symbols-outlined text-goldenrod text-3xl">architecture</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-deep-navy mb-2">Meticulous Attention to Detail</h3>
+<p class="text-slate-gray">White-glove precision where every measurement and finish is scrutinized for perfection.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-14 h-14 bg-surface-container-low flex items-center justify-center rounded-xl border border-outline-variant/30">
+<span class="material-symbols-outlined text-goldenrod text-3xl">handshake</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-deep-navy mb-2">Executive Reliability</h3>
+<p class="text-slate-gray">A professional consultancy approach focusing on clear communication and timely completion.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative grid grid-cols-2 gap-4">
+<div class="pt-12">
+<img class="rounded-xl shadow-xl w-full aspect-[3/4] object-cover" data-alt="Close-up photograph of a skilled craftsman's hands working with precision tools on a high-end architectural detail. The lighting is focused and warm, highlighting the texture of premium wood and the metallic gleam of the tools. The background is a sophisticated workshop with organized equipment, suggesting meticulous professionalism and high-level craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB--WfMobCHM1GgFs7NhhAJ7wBu9y4l_PMmJUNZgPolvQe2fXjocjkQyHgspV6mk1CLc1ZOvGVrcHdoI1UZAokEK_cSj082XKVUPFhIbu7PzOuOAKUydCSw6Ybb1QXuo_O_Tl4_eDe6ivS_0upvfpNUbI3QuR5n2t6EC0VYpguZ9a61kQSQTdIZleRlSsSofhx8C5LYpNQl-qnETKSqQJugx2lqWUFBmovZbMmbOHxiOsn0jbyt4Vk4og">
+</div>
+<div>
+<img class="rounded-xl shadow-xl w-full aspect-[3/4] object-cover" data-alt="A beautifully finished modern interior featuring clean lines, premium materials, and flawless installation. The focus is on the seamless transition between materials, such as polished stone and natural wood. The lighting is soft and architectural, creating a luxurious and serene atmosphere that demonstrates the final result of white-glove handyman services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-cLZERPGpcXAB8RpY3aWEuq-k8oELXskE-MByp6FGGzYpEV1IBaUAPYu1rNovY8hjHb3UxeZp_1AMuVDCiX2312B_kOHX7VkCK9BFIhQm7awjC4Qj6KMHbnO7Tkue0xyYtsRiZkT0v7rqaRZem04n-WB872F7s1fpxYUeThAtfmlHfZdRh3d5FuKiRQHfqjgNGs0aN5Xt4vnRonfMrltU6DIMMUur6sJXiX82mrWXq08D2-TnV31vjA">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section - Bento Grid -->
+<section class="py-section-gap-lg bg-surface-container-low" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-4">Master-Level Services</h2>
+<p class="text-slate-gray max-w-2xl mx-auto">From heritage restorations to contemporary installations, our range of services is executed with unrelenting quality.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="group bg-white border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional wet room installation with minimalist glass partitions, sleek rain showerhead, and intricate geometric tiling. The lighting is bright and clean, reflecting off the polished surfaces to create a spa-like, luxurious feel. The craftsmanship is evident in the perfect alignment of tiles and the seamless integration of fixtures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx_u-Ta3IsXTg7EovcOhby-Goal4-cfJo4HicUS776nYYqqH0alGHr2mYN5qaUVTSuz7LGq43pOI67jTDDP8zDzcFng3yO_nrlNj5q6Px-SQ4lL4Py08V-07jK4MRAFmu0YJGzGTk53gfDKw3JFNtk0iI3gB4T5npiNp8C5di7ovfKSfQ-NeQXEKh3xPrC7TTp1nODKSnCdBjv5eryp0FGcH-T8EGfclXbynRc5K4dgZ5WLtmeWWebMQ">
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-deep-navy font-label-bold text-label-sm">Bespoke Installation</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-sm text-headline-sm text-deep-navy mb-3">Wet Rooms</h3>
+<p class="text-slate-gray mb-6">Expert design and installation of leak-proof, luxurious wet rooms with premium tiling and drainage systems.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-bold text-deep-navy">
+<span class="material-symbols-outlined text-goldenrod text-[20px] fill-icon">check_circle</span>
+                                    Tanking &amp; Waterproofing
+                                </li>
+<li class="flex items-center gap-2 text-label-bold text-deep-navy">
+<span class="material-symbols-outlined text-goldenrod text-[20px] fill-icon">check_circle</span>
+                                    Precision Tiling
+                                </li>
+</ul>
+<a class="text-goldenrod font-label-bold hover:underline inline-flex items-center gap-1" href="golden-triangle-handyman-services.html">Learn More <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-white border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a craftsman applying delicate gold leaf gilding to a complex architectural moulding. The scene is lit with warm, dramatic lighting that makes the gold leaf glow intensely. The craftsman's tools are specialized and fine, emphasizing the artistic and meticulous nature of this high-end service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAilSqgw5Y5yM0VB35b0-DDPFW1vNjb7QG93Bx9ML__6ifpWpq4_B8xWIiXT47Us1iUwp2tLwKPwkVSU10nxKoI5YVQsOPusuTRrq9j7F0LSFrTKLgFCZTMEMT7CiQi1ZZwLoqQ_VbRJ-2dOUidNwEv4Fmxr-KE7VRT8L31Oy6K5rNSgf7SWarCMjK66bI8uI6NYOlaTYeDoZabUs5QagaPA6bR-o8hG8BPOGYS81AIILndkEwazGptqg">
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-deep-navy font-label-bold text-label-sm">Heritage Craft</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-sm text-headline-sm text-deep-navy mb-3">Gold Leaf Gilding</h3>
+<p class="text-slate-gray mb-6">Specialized restoration and decorative gilding for heritage properties and high-end modern accents.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-bold text-deep-navy">
+<span class="material-symbols-outlined text-goldenrod text-[20px] fill-icon">check_circle</span>
+                                    Surface Preparation
+                                </li>
+<li class="flex items-center gap-2 text-label-bold text-deep-navy">
+<span class="material-symbols-outlined text-goldenrod text-[20px] fill-icon">check_circle</span>
+                                    24k Gold Application
+                                </li>
+</ul>
+<a class="text-goldenrod font-label-bold hover:underline inline-flex items-center gap-1" href="golden-triangle-handyman-services.html">Learn More <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-white border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern laminate flooring being professionally installed in a spacious, high-end loft. The boards have a natural oak texture and are perfectly aligned. The room features industrial-chic elements like exposed brick and large factory windows, with the floor reflecting the soft, natural light to create a warm and inviting professional space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1K13hOzOlGR92FNSK5nYHeCv-o8B8AGBWxjn2QtqGvoMJtgC6rfRuAWwXkfd1z8s1jj0ac0lkOm8PGxsMcKjHMi43CcTbgrtRCWRVlizpQAo0hkdJhZuaUtv1zsnFmI3CBwZNFozNaETuI7nMurJHvzVpNkCoCYdrEC4c_x_snbtPgcrwGEXstxrHgOogUuMyEPHulOpC7tzj0cf5_1EtGK3R2eNW9NBmDHpRlowc7R80qudxaCa8bQ">
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-deep-navy font-label-bold text-label-sm">Flooring Systems</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-sm text-headline-sm text-deep-navy mb-3">Laminate Flooring</h3>
+<p class="text-slate-gray mb-6">Precision installation of high-grade laminate and hardwood flooring for residential and commercial environments.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-bold text-deep-navy">
+<span class="material-symbols-outlined text-goldenrod text-[20px] fill-icon">check_circle</span>
+                                    Subfloor Preparation
+                                </li>
+<li class="flex items-center gap-2 text-label-bold text-deep-navy">
+<span class="material-symbols-outlined text-goldenrod text-[20px] fill-icon">check_circle</span>
+                                    Seamless Finishing
+                                </li>
+</ul>
+<a class="text-goldenrod font-label-bold hover:underline inline-flex items-center gap-1" href="golden-triangle-handyman-services.html">Learn More <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Contact Form -->
+<section class="py-section-gap-lg bg-deep-navy relative overflow-hidden" id="contact">
+<!-- Subtle Shader Overlay -->
+<div class="absolute inset-0 opacity-10">
+
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10">
+<div class="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-1/2 p-12 bg-surface-container-low border-r border-outline-variant/20">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-6">Start Your Next Project</h2>
+<p class="text-slate-gray mb-10 text-body-lg">Provide a few details about your maintenance or renovation requirements, and our lead specialist will reach out for a professional consultation.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-goldenrod">call</span>
+<div>
+<p class="font-label-bold text-deep-navy">Phone Support</p>
+<a class="text-body-md text-slate-gray hover:text-goldenrod transition-colors" href="tel:07438561614">07438 561614</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-goldenrod">mail</span>
+<div>
+<p class="font-label-bold text-deep-navy">Email Inquiries</p>
+<p class="text-body-md text-slate-gray">service@gthandyman.co.uk</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 p-12">
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label-bold text-deep-navy mb-2">First Name</label>
+<input class="w-full bg-white border border-outline-variant rounded px-4 py-3 focus:border-goldenrod focus:ring-0 outline-none transition-all" placeholder="John" type="text">
+</div>
+<div>
+<label class="block font-label-bold text-deep-navy mb-2">Last Name</label>
+<input class="w-full bg-white border border-outline-variant rounded px-4 py-3 focus:border-goldenrod focus:ring-0 outline-none transition-all" placeholder="Doe" type="text">
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-deep-navy mb-2">Service Required</label>
+<select class="w-full bg-white border border-outline-variant rounded px-4 py-3 focus:border-goldenrod focus:ring-0 outline-none transition-all">
+<option>General Maintenance</option>
+<option>Wet Room Installation</option>
+<option>Gold Leaf Gilding</option>
+<option>Flooring</option>
+<option>Other / Bespoke</option>
+</select>
+</div>
+<div>
+<label class="block font-label-bold text-deep-navy mb-2">Message</label>
+<textarea class="w-full bg-white border border-outline-variant rounded px-4 py-3 focus:border-goldenrod focus:ring-0 outline-none transition-all" placeholder="Describe your project details..." rows="4"></textarea>
+</div>
+<button class="w-full bg-goldenrod text-deep-navy font-label-bold text-label-bold py-4 rounded hover:bg-deep-navy hover:text-white transition-all shadow-md uppercase tracking-widest" type="submit">
+                                Get Started
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy text-paper-white w-full">
+<div class="py-section-gap-md px-margin-mobile md:px-gutter max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<img alt="Footer Logo" class="h-14 w-auto mb-6 brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AP1WRLssOa4VgUvwYH20hBDSlHbnRvC95HAYrX__amEuS4ld7DR6aUp-pLlI2PVYQRlsbpYME1tXXoc9hVn3cHWaPBFCjPuAq0dyEEsH5iGH0YT0COZAR8Lf0iJeTFTeHAEQSAEtP4HSnOhVLXp5cdq7oMBJrsID1Nm2Vv2o3Kp7QtN5E_YJXK7hx7YWL3IYq-O2IgCRuXDLUgv_FSm3zxHPvgPZrlKlQmqfPG022ICbSHaBiGTmf0jm9ok2SwUd">
+<p class="text-slate-gray font-body-md max-w-xs">Premium property maintenance and white-glove artisan services across the Golden Triangle and surrounding regions.</p>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-goldenrod uppercase tracking-wider mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-gray hover:text-paper-white transition-colors font-body-md" href="#home">Home</a></li>
+<li><a class="text-slate-gray hover:text-paper-white transition-colors font-body-md" href="#about">About</a></li>
+<li><a class="text-slate-gray hover:text-paper-white transition-colors font-body-md" href="#services">Services</a></li>
+<li><a class="text-slate-gray hover:text-paper-white transition-colors font-body-md" href="#projects">Projects</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-goldenrod uppercase tracking-wider mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-gray hover:text-paper-white transition-colors font-body-md" href="golden-triangle-handyman-services.html">Terms of Service</a></li>
+<li><a class="text-slate-gray hover:text-paper-white transition-colors font-body-md" href="index.html">Privacy Policy</a></li>
+<li><a class="text-slate-gray hover:text-paper-white transition-colors font-body-md" href="index.html">Sitemap</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-goldenrod uppercase tracking-wider mb-6">Connect</h4>
+<div class="flex gap-4 mb-6">
+<a class="w-10 h-10 border border-slate-gray/30 flex items-center justify-center rounded hover:bg-goldenrod hover:border-goldenrod transition-all group" href="golden-triangle-handyman-contact.html">
+<span class="material-symbols-outlined text-[20px] text-slate-gray group-hover:text-deep-navy">qr_code_2</span>
+</a>
+<a class="w-10 h-10 border border-slate-gray/30 flex items-center justify-center rounded hover:bg-goldenrod hover:border-goldenrod transition-all group" href="golden-triangle-handyman-services.html">
+<span class="material-symbols-outlined text-[20px] text-slate-gray group-hover:text-deep-navy">photo_camera</span>
+</a>
+<a class="w-10 h-10 border border-slate-gray/30 flex items-center justify-center rounded hover:bg-goldenrod hover:border-goldenrod transition-all group" href="golden-triangle-handyman-services.html">
+<span class="material-symbols-outlined text-[20px] text-slate-gray group-hover:text-deep-navy">work</span>
+</a>
+</div>
+<p class="text-slate-gray font-label-bold text-label-sm">Emergency Support: <br><span class="text-paper-white">07438 561614</span></p>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-8 px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center text-label-sm text-slate-gray">
+<p>© 2024 Golden Triangle Handyman Services Ltd. All rights reserved.</p>
+<p class="mt-4 md:mt-0">Crafted with Meticulous Precision</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 bg-white border-t border-outline-variant/20 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] md:hidden">
+<div class="flex justify-around items-center h-16 pb-safe">
+<a class="flex flex-col items-center justify-center text-goldenrod font-bold" href="#home">
+<span class="material-symbols-outlined fill-icon">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-gray" href="#services">
+<span class="material-symbols-outlined">build</span>
+<span class="font-label-sm text-label-sm">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-gray" href="#contact">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-sm text-label-sm">Contact</span>
+</a>
+</div>
+</nav>
+<script>
+        // Simple scroll behavior for active nav
+        window.addEventListener('scroll', () => {
+            const sections = ['home', 'about', 'services', 'contact'];
+            const navLinks = document.querySelectorAll('header nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const sectionTop = element.offsetTop;
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section;
+                    }
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-goldenrod', 'border-b-2', 'border-goldenrod', 'pb-1');
+                link.classList.add('text-deep-navy');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('text-goldenrod', 'border-b-2', 'border-goldenrod', 'pb-1');
+                    link.classList.remove('text-deep-navy');
+                }
+            });
+        });
+    </script>
+</body></html>

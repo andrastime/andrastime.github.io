@@ -1,0 +1,470 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services &amp; Prices | The Honest Handyman</title>
+<meta content="Transparent pricing and professional handyman services in Walsall. From carpentry to plumbing, experience quality you can trust." name="description">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#a23f00",
+                    "on-tertiary-fixed": "#131b2e",
+                    "on-surface": "#251913",
+                    "surface-container": "#ffe9e1",
+                    "secondary-container": "#d5e0f8",
+                    "on-primary-fixed-variant": "#7c2e00",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#545f73",
+                    "primary-container": "#c64f00",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#586377",
+                    "surface-container-highest": "#f6ddd4",
+                    "surface-variant": "#f6ddd4",
+                    "primary-fixed-dim": "#ffb595",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#fff1ec",
+                    "error-container": "#ffdad6",
+                    "on-background": "#251913",
+                    "tertiary-fixed-dim": "#bec6e0",
+                    "primary-fixed": "#ffdbcd",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "primary": "#9e3d00",
+                    "surface-container-high": "#fce3da",
+                    "background": "#fff8f6",
+                    "glass-stroke": "rgba(255, 255, 255, 0.3)",
+                    "secondary-fixed": "#d8e3fb",
+                    "on-primary-container": "#fffbff",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "tertiary": "#545c72",
+                    "on-tertiary-fixed-variant": "#3f465c",
+                    "tertiary-container": "#6c748b",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#ffb595",
+                    "on-primary-fixed": "#351000",
+                    "inverse-on-surface": "#ffede7",
+                    "inverse-surface": "#3c2d27",
+                    "surface": "#fff8f6",
+                    "outline-variant": "#e0c0b2",
+                    "outline": "#8c7166",
+                    "surface-bright": "#fff8f6",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-tertiary-container": "#fefcff",
+                    "surface-dim": "#edd5cc",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#dae2fd",
+                    "safety-orange": "#E67E22",
+                    "slate-surface": "#F8FAFC",
+                    "on-surface-variant": "#594238"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-lg": "40px",
+                    "container-max": "1280px",
+                    "section-padding": "80px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Montserrat"],
+                    "label-bold": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- Navigation -->
+<nav class="fixed w-full top-0 z-50 bg-white/70 backdrop-blur-md border-b border-glass-stroke shadow-sm">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-primary">The Honest Handyman</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="services-pricing-the-honest-handyman.html">Services</a>
+<a class="text-primary font-bold border-b-2 border-primary font-label-bold text-label-bold" href="services-pricing-the-honest-handyman.html">Prices</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="index.html">FAQ</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-bold text-label-bold hover:scale-105 transition-transform active:scale-95">Get a Quote</button>
+</div>
+<!-- Mobile Menu Toggle (Visual Only) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-16 px-gutter overflow-hidden">
+
+<div class="max-w-container-max mx-auto relative z-10 text-center">
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg text-on-surface mb-6">Honest Services, <span class="text-primary">Transparent Prices</span></h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                Reliability you can trust in Walsall. No hidden markups, just quality workmanship and a fair pricing model that puts you in control.
+            </p>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-bold text-label-bold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1" href="#services">Explore Services</a>
+<a class="bg-white border border-outline-variant text-primary px-8 py-4 rounded-lg font-label-bold text-label-bold hover:bg-surface-container transition-colors" href="#pricing">Pricing Model</a>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-section-padding px-gutter bg-surface-container-low" id="services">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<span class="text-primary font-label-bold text-label-bold tracking-widest uppercase mb-2 block">Our Expertise</span>
+<h2 class="text-headline-md font-headline-md text-on-surface">Comprehensive Solutions</h2>
+</div>
+<div class="bg-white/50 p-2 rounded-full border border-glass-stroke">
+<div class="flex gap-2">
+<span class="bg-primary text-on-primary px-4 py-1 rounded-full text-label-bold">All Jobs</span>
+<span class="px-4 py-1 rounded-full text-label-bold text-on-surface-variant hover:bg-white/80 cursor-pointer transition-all">Small Jobs</span>
+<span class="px-4 py-1 rounded-full text-label-bold text-on-surface-variant hover:bg-white/80 cursor-pointer transition-all">Projects</span>
+</div>
+</div>
+</div>
+<div class="bento-grid">
+<!-- Carpentry -->
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-all group border-l-4 border-l-primary">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">carpenter</span>
+</div>
+<h3 class="font-headline-md text-xl mb-2">Carpentry</h3>
+<p class="text-on-surface-variant text-sm mb-4">Skilled woodworking, timber framing, and custom adjustments for your home interiors.</p>
+<span class="text-primary text-label-bold text-xs bg-primary-fixed px-2 py-1 rounded">Service Level: Any</span>
+</div>
+<!-- Plumbing -->
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary">plumbing</span>
+</div>
+<h3 class="font-headline-md text-xl mb-2">Plumbing</h3>
+<p class="text-on-surface-variant text-sm mb-4">Fixing leaks, tap replacements, and ensuring your water systems run smoothly.</p>
+<span class="text-secondary text-label-bold text-xs bg-secondary-container px-2 py-1 rounded">Service Level: Small Jobs</span>
+</div>
+<!-- Wall Panelling -->
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-all group md:col-span-2 overflow-hidden relative">
+<div class="relative z-10">
+<div class="w-12 h-12 bg-tertiary-container rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-tertiary">grid_view</span>
+</div>
+<h3 class="font-headline-md text-xl mb-2">Wall Panelling</h3>
+<p class="text-on-surface-variant text-sm max-w-md">Transform your living space with modern or classic wall panelling solutions that add instant character and value.</p>
+</div>
+<div class="absolute -right-8 -bottom-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[120px]">architecture</span>
+</div>
+</div>
+<!-- Resilicone & Caulking -->
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">opacity</span>
+</div>
+<h3 class="font-headline-md text-xl mb-2">Resilicone &amp; Caulking</h3>
+<p class="text-on-surface-variant text-sm mb-4">Fresh seals for bathrooms, kitchens, and windows to prevent leaks and mold.</p>
+</div>
+<!-- Electrical -->
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-primary-fixed-dim rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-on-primary-fixed">lightbulb</span>
+</div>
+<h3 class="font-headline-md text-xl mb-2">Light &amp; Sockets</h3>
+<p class="text-on-surface-variant text-sm mb-4">Fitting new light fixtures and updating socket plates for a modern finish.</p>
+</div>
+<!-- Multi-Service Card -->
+<div class="glass-card p-6 rounded-xl border-dashed border-2 border-primary/30 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">construction</span>
+<h3 class="font-headline-md text-xl mb-2">And Much More...</h3>
+<div class="flex flex-wrap justify-center gap-2 mt-2">
+<span class="text-[10px] uppercase font-bold text-on-surface-variant border border-outline-variant px-2 py-0.5 rounded">Patching Holes</span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant border border-outline-variant px-2 py-0.5 rounded">Shelving</span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant border border-outline-variant px-2 py-0.5 rounded">Blinds</span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant border border-outline-variant px-2 py-0.5 rounded">Drains</span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant border border-outline-variant px-2 py-0.5 rounded">TV Mounting</span>
+</div>
+</div>
+<!-- Fence & Gate -->
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">fence</span>
+</div>
+<h3 class="font-headline-md text-xl mb-2">Fence &amp; Gate Repair</h3>
+<p class="text-on-surface-variant text-sm mb-4">Restore your property security and curb appeal with sturdy garden repairs.</p>
+</div>
+<!-- Flatpack -->
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary">handyman</span>
+</div>
+<h3 class="font-headline-md text-xl mb-2">Furniture Building</h3>
+<p class="text-on-surface-variant text-sm mb-4">Flatpack assembly made easy. From wardrobes to complex storage units.</p>
+</div>
+<!-- Odd Jobs -->
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-all group border-primary/20">
+<div class="w-12 h-12 bg-on-primary-fixed-variant rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-white">task_alt</span>
+</div>
+<h3 class="font-headline-md text-xl mb-2">Odd Jobs</h3>
+<p class="text-on-surface-variant text-sm mb-4">Those tiny tasks you keep putting off. I'll get through your 'To-Do' list.</p>
+</div>
+</div>
+<!-- List Footer -->
+<div class="mt-12 text-center p-8 bg-white/40 rounded-2xl border border-glass-stroke">
+<p class="text-on-surface-variant italic mb-0">Also providing: Interior Painting, Floors &amp; Skirting, Deck Maintenance, Window Caulking, and general maintenance.</p>
+</div>
+</div>
+</section>
+<!-- Pricing Model Section -->
+<section class="py-section-padding px-gutter relative" id="pricing">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-display-lg-mobile md:text-display-lg font-display-lg text-on-surface mb-4">Simple, Fair Pricing</h2>
+<p class="text-body-lg text-on-surface-variant max-w-3xl mx-auto">I've removed the guesswork from home repairs. No hidden fees, just honest value for honest work.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-10">
+<!-- Small Jobs Card -->
+<div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-outline-variant flex flex-col relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full transition-transform group-hover:scale-110"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">volunteer_activism</span>
+<h3 class="text-headline-md font-headline-md">Small "Day-to-Day" Jobs</h3>
+</div>
+<div class="space-y-6 mb-10">
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+</div>
+<p class="text-on-surface-variant"><strong class="text-on-surface">Parts:</strong> Charged at cost. No markup, no hidden commissions. You see exactly what I paid.</p>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+</div>
+<p class="text-on-surface-variant"><strong class="text-on-surface">Labor:</strong> You decide. Once the job is done, you pay what you believe the work was worth.</p>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+</div>
+<p class="text-on-surface-variant">Ideal for: Shelving, leaky taps, socket changes, or TV mounting.</p>
+</div>
+</div>
+<div class="mt-auto p-4 bg-surface-container-low rounded-xl text-center">
+<span class="text-primary font-bold text-2xl">You Value the Labor</span>
+</div>
+</div>
+</div>
+<!-- Large Projects Card -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-3xl p-8 md:p-12 shadow-xl flex flex-col relative overflow-hidden">
+<div class="absolute bottom-0 right-0 w-48 h-48 bg-primary/20 rounded-tl-full blur-2xl"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl">architecture</span>
+<h3 class="text-headline-md font-headline-md">Large Projects</h3>
+</div>
+<div class="space-y-6 mb-10">
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm">check</span>
+</div>
+<p class="text-inverse-on-surface/80"><strong class="text-white">Upfront Quotes:</strong> Clear, itemized breakdowns provided before any tools are touched.</p>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm">check</span>
+</div>
+<p class="text-inverse-on-surface/80"><strong class="text-white">Fixed Costs:</strong> No surprises or "extra" labor fees halfway through the project.</p>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm">check</span>
+</div>
+<p class="text-inverse-on-surface/80">Ideal for: Wall panelling, decking maintenance, or full room painting.</p>
+</div>
+</div>
+<div class="mt-auto p-4 bg-white/5 rounded-xl text-center border border-white/10">
+<span class="text-primary-fixed-dim font-bold text-2xl">Tailored Upfront Quote</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-padding px-gutter bg-white">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-12">
+<span class="text-primary font-label-bold text-label-bold tracking-widest uppercase mb-2 block">Common Questions</span>
+<h2 class="text-headline-md font-headline-md text-on-surface">Frequently Asked</h2>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="border-b border-outline-variant pb-6 group cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-headline-md text-lg text-on-surface group-hover:text-primary transition-colors">What is the best way to contact you?</h4>
+<span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+</div>
+<div class="hidden-content overflow-hidden max-h-0 transition-all duration-300">
+<p class="text-on-surface-variant font-body-md">WhatsApp is often the easiest way to contact me as photos can be displayed easily but I'm happy with a text or a call.</p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="border-b border-outline-variant pb-6 group cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-headline-md text-lg text-on-surface group-hover:text-primary transition-colors">What do you charge?</h4>
+<span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+</div>
+<div class="hidden-content overflow-hidden max-h-0 transition-all duration-300">
+<p class="text-on-surface-variant font-body-md">I charge for parts and am upfront with the cost of this. The labour costs are for you to decide on most jobs so you can decide what the work is worth.</p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="border-b border-outline-variant pb-6 group cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-headline-md text-lg text-on-surface group-hover:text-primary transition-colors">What jobs are you qualified to do?</h4>
+<span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+</div>
+<div class="hidden-content overflow-hidden max-h-0 transition-all duration-300">
+<p class="text-on-surface-variant font-body-md">As a handyman, I'm used to taking on all sorts of jobs, even if I'm not formally trained in just one trade. Years of working in schools taught me to think on my feet, fix problems quickly, and handle whatever comes my way. Experience really is the best teacher.</p>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="border-b border-outline-variant pb-6 group cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-headline-md text-lg text-on-surface group-hover:text-primary transition-colors">What jobs don't you do?</h4>
+<span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+</div>
+<div class="hidden-content overflow-hidden max-h-0 transition-all duration-300">
+<p class="text-on-surface-variant font-body-md">I'm always happy to chat about any job you need doing. With years of experience, I can handle most tasks whether they're messy or just the ones you'd rather not do yourself. If I can't help directly, I'll gladly point you in the right direction.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WhatsApp CTA -->
+<section class="py-section-padding px-gutter">
+<div class="max-w-container-max mx-auto bg-primary rounded-[2rem] p-10 md:p-16 text-center text-on-primary relative overflow-hidden">
+
+<div class="relative z-10">
+<h2 class="text-display-lg-mobile md:text-display-lg font-display-lg mb-6">Need a Specific Job Done?</h2>
+<p class="text-body-lg max-w-2xl mx-auto mb-10 opacity-90">Send me a message with a photo of the job, and I'll get back to you with a parts estimate or a project quote.</p>
+<a class="inline-flex items-center gap-3 bg-white text-primary px-10 py-5 rounded-full font-label-bold text-lg hover:scale-105 transition-transform shadow-xl" href="https://wa.me/447725747444">
+<span class="material-symbols-outlined">chat</span>
+                    Request via WhatsApp
+                </a>
+<div class="mt-8 flex justify-center items-center gap-6 opacity-80">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="text-xs uppercase tracking-wider font-bold">Reliable Service</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">payments</span>
+<span class="text-xs uppercase tracking-wider font-bold">Transparent Costs</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg px-gutter max-w-container-max mx-auto">
+<div>
+<div class="text-headline-md font-headline-md font-bold text-primary mb-4">The Honest Handyman</div>
+<p class="text-on-surface-variant font-body-md mb-6 max-w-xs">© 2024 The Honest Handyman. Community-focused reliability you can trust.</p>
+<div class="flex gap-4">
+<a class="text-primary hover:scale-110 transition-transform" href="index.html"><span class="material-symbols-outlined">qr_code_2</span></a>
+<a class="text-primary hover:scale-110 transition-transform" href="index.html"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="space-y-4">
+<h5 class="text-label-bold font-label-bold text-on-surface uppercase tracking-widest">Connect</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="https://wa.me/447725747444">WhatsApp</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="mailto:bashonesthandy@gmail.com">Email</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="tel:07725747444">Mobile</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-label-bold font-label-bold text-on-surface uppercase tracking-widest">Location</h5>
+<p class="text-on-surface-variant font-body-md">Serving Walsall, West Midlands and surrounding areas with pride.</p>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined">location_on</span>
+                    Walsall, UK
+                </div>
+</div>
+</div>
+</footer>
+<script>
+        function toggleFaq(element) {
+            const content = element.querySelector('.hidden-content');
+            const icon = element.querySelector('.material-symbols-outlined');
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Close all others
+                document.querySelectorAll('.hidden-content').forEach(el => {
+                    el.style.maxHeight = null;
+                    el.parentElement.querySelector('.material-symbols-outlined').style.transform = 'rotate(0deg)';
+                });
+                
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
+</body></html>

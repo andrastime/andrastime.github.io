@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wormy's Handyman Services | Professional Home Repairs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&family=JetBrains+Mono:wght@600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom scrollbar for better tool-like feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f7f9fb;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00030a;
+            border-radius: 4px;
+        }
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1e",
+                        "outline": "#75777e",
+                        "surface-container": "#eceef0",
+                        "surface-tint": "#4e5f7c",
+                        "background": "#f7f9fb",
+                        "on-secondary-fixed-variant": "#7a3000",
+                        "surface-variant": "#e0e3e5",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#44474d",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d6e3ff",
+                        "on-primary-container": "#7586a5",
+                        "on-error": "#ffffff",
+                        "tertiary": "#00030a",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-container": "#76869e",
+                        "primary": "#00030a",
+                        "tertiary-container": "#0d1e31",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "tertiary-fixed": "#d3e4fe",
+                        "inverse-primary": "#b6c7e9",
+                        "surface": "#f7f9fb",
+                        "primary-container": "#0a1d37",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary-container": "#fe6b00",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#ffdbcc",
+                        "on-primary-fixed": "#081c36",
+                        "on-surface": "#191c1e",
+                        "primary-fixed-dim": "#b6c7e9",
+                        "on-primary-fixed-variant": "#364763",
+                        "surface-dim": "#d8dadc",
+                        "outline-variant": "#c5c6ce",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#351000",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "on-secondary-container": "#572000",
+                        "surface-bright": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "secondary": "#a04100",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ffb693",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "margin-desktop": "64px",
+                        "sm": "16px",
+                        "md": "24px",
+                        "gutter": "20px",
+                        "xs": "8px",
+                        "base": "4px",
+                        "lg": "48px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Work Sans"],
+                        "headline-lg-mobile": ["Work Sans"],
+                        "headline-md": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "label-caps": ["JetBrains Mono"],
+                        "button-text": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "button-text": ["16px", { "lineHeight": "20px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface fixed top-0 w-full z-50 border-b border-tertiary/20">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md text-primary font-bold">Wormy's Handyman</div>
+<nav class="hidden md:flex gap-md">
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#services">Services</a>
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#about">About</a>
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#process">Process</a>
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#testimonials">Testimonials</a>
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#contact">Contact</a>
+</nav>
+<a class="bg-secondary text-white px-md py-xs rounded-lg font-button-text text-button-text hover:bg-on-secondary-fixed-variant transition-all active:scale-95" href="#contact">Get a Quote</a>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center brightness-50" data-alt="A professional handyman in a dark navy branded uniform focused on repairing a wooden structure in a bright modern home workshop. The lighting is crisp and natural, highlighting high-quality tools and materials. The image features a shallow depth of field, with warm wood tones and professional orange accents throughout the scene, embodying reliability and expertise." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCk5fN3COVOdb3Rvg2_c37BFqUc1Z3fn350756G4sMA_bLmexmcXbaotkh51WnExcee4eYZpgUkOo2QEAzs7PQ_yVzoWqy20jSOYY8pU_s6tI-7UDjrOXMtQ5rRzL6rcv_MC9PznYI-H-1O0Eh6MyQORfnnRZl2Ip12Qzv-0W-j_imntPcKBgNzUByZio1vyQeICWuMd2vKO3iQgMfSQNczcLy_foOT_ItAyit_OulzWSdlbicI_rvL')"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop w-full text-white">
+<div class="max-w-2xl">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-sm">Professional Handyman Services You Can Trust</h1>
+<p class="font-body-lg text-body-lg mb-lg text-white/90">Wormy's delivers expert repairs and maintenance for your home or office. Quality craftsmanship meet reliable schedules, every single time.</p>
+<div class="flex flex-wrap gap-md">
+<a class="bg-secondary text-white px-lg py-sm rounded-lg font-button-text text-button-text hover:bg-on-secondary-fixed-variant shadow-lg" href="#contact">Get a Free Quote</a>
+<a class="border-2 border-white text-white px-lg py-sm rounded-lg font-button-text text-button-text hover:bg-white/10 transition-colors" href="#services">Our Services</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-xl bg-surface" id="services">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-md">
+<div class="max-w-xl">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-base">Expertise</span>
+<h2 class="font-headline-md text-headline-md text-primary">Specialized Solutions for Every Corner of Your Home</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">From leaky faucets to full furniture assembly, we handle the tasks that keep your life running smoothly.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Plumbing -->
+<div class="service-card p-md bg-surface-container-lowest border border-tertiary/10 rounded-lg hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-primary/5 rounded flex items-center justify-center mb-md group-hover:bg-secondary/10 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl service-icon" data-icon="plumbing">plumbing</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-xs">Plumbing & Faucets</h3>
+<p class="text-on-surface-variant text-body-md">Fixing leaks, replacing fixtures, and clearing clogs with precision.</p>
+</div>
+<!-- Electrical -->
+<div class="service-card p-md bg-surface-container-lowest border border-tertiary/10 rounded-lg hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-primary/5 rounded flex items-center justify-center mb-md group-hover:bg-secondary/10 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl service-icon" data-icon="lightbulb">lightbulb</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-xs">Electrical & Lighting</h3>
+<p class="text-on-surface-variant text-body-md">Safe installation of outlets, smart home devices, and light fixtures.</p>
+</div>
+<!-- Carpentry -->
+<div class="service-card p-md bg-surface-container-lowest border border-tertiary/10 rounded-lg hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-primary/5 rounded flex items-center justify-center mb-md group-hover:bg-secondary/10 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl service-icon" data-icon="handyman">handyman</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-xs">Carpentry & Furniture</h3>
+<p class="text-on-surface-variant text-body-md">Custom shelving, trim repair, and expert furniture assembly.</p>
+</div>
+<!-- General Repairs -->
+<div class="service-card p-md bg-surface-container-lowest border border-tertiary/10 rounded-lg hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-primary/5 rounded flex items-center justify-center mb-md group-hover:bg-secondary/10 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl service-icon" data-icon="home_repair_service">home_repair_service</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-xs">General Home Repairs</h3>
+<p class="text-on-surface-variant text-body-md">Drywall patches, painting, and everything on your 'To-Do' list.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl bg-surface-container-low overflow-hidden" id="about">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="relative">
+<div class="aspect-square bg-primary-container rounded-xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="A friendly, smiling professional handyman in his 40s standing confidently in a clean, modern suburban residential setting. He is wearing a dark navy polo with a professional tool belt. The background is a well-maintained home with warm sunlight and a soft-focus garden, conveying a sense of community, trust, and local expertise. The overall aesthetic is professional and approachable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsNytEGMNTYzE6orfFN1KZ4CrX7c51n-084mjQwiCFAYMRXIsK1MnOv_Jpymp4KlHrwrJeDYKX8qx5QYZBLu80kAgb-1wf29G5ypXnyVxgoY5w8UnEaY0rGPSqZRzT97jDU12_WwlGFXy3vQXvnlQBRuuLZrZgU4aw2TP-G7PlB-pQvrneIbAku1X_qT3hn_ik5XO_lldK5Q2Uw4BxSD7RHEMLTtmKeerwMwH9_ZdhYpb05D7nhPzM"/>
+</div>
+<div class="absolute -bottom-md -right-md bg-secondary p-lg rounded-xl shadow-2xl text-white hidden md:block">
+<div class="text-headline-lg font-bold">15+</div>
+<div class="font-label-caps text-xs">Years of Excellence</div>
+</div>
+</div>
+<div class="space-y-md">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Our Story</span>
+<h2 class="font-headline-md text-headline-md text-primary">Local Service, World-Class Quality</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Founded on the principle that "no job is too small for professional treatment," Wormy's Handyman Services has been the backbone of local home maintenance for over 15 years.</p>
+<ul class="space-y-sm">
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary fill-icon" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Fully Licensed & Insured Professionals</span>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary fill-icon" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Transparent Upfront Pricing</span>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary fill-icon" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">100% Satisfaction Guarantee</span>
+</li>
+</ul>
+<div class="pt-md">
+<a class="text-primary font-button-text text-button-text flex items-center gap-xs hover:gap-sm transition-all group" href="#contact">
+                                Meet the whole team 
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-xl bg-primary text-white" id="process">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-xl">
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim uppercase tracking-widest block mb-base">How It Works</span>
+<h2 class="font-headline-md text-headline-md">Your Path to a Better Home</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg relative">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-20 h-20 rounded-full border-2 border-secondary/30 flex items-center justify-center mb-md group-hover:border-secondary transition-colors relative bg-primary-container">
+<span class="text-headline-md font-bold text-secondary">01</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-xs">Call or Request</h3>
+<p class="text-on-primary-container font-body-md max-w-[250px]">Contact us via our online form or give us a quick call to discuss your project.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-20 h-20 rounded-full border-2 border-secondary/30 flex items-center justify-center mb-md group-hover:border-secondary transition-colors relative bg-primary-container">
+<span class="text-headline-md font-bold text-secondary">02</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-xs">Schedule Time</h3>
+<p class="text-on-primary-container font-body-md max-w-[250px]">Choose a time that works for you. Our pros arrive on time and ready to work.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-20 h-20 rounded-full border-2 border-secondary/30 flex items-center justify-center mb-md group-hover:border-secondary transition-colors relative bg-primary-container">
+<span class="text-headline-md font-bold text-secondary">03</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-xs">Job Done Well</h3>
+<p class="text-on-primary-container font-body-md max-w-[250px]">We complete the task with precision and clean up thoroughly before we leave.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xl bg-surface relative" id="testimonials">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-secondary fill-icon" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary fill-icon" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary fill-icon" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary fill-icon" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary fill-icon" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-xl">What Our Neighbors Say</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<div class="p-lg bg-surface-container-lowest border border-tertiary/10 rounded-lg relative">
+<span class="material-symbols-outlined text-primary/10 text-6xl absolute top-md right-md" data-icon="format_quote">format_quote</span>
+<p class="font-body-md text-body-md italic mb-md relative z-10">"Wormy's saved my weekend! I had a massive plumbing leak on a Saturday morning. They were here within 2 hours and fixed it professionally. Highly recommended!"</p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a satisfied woman homeowner in her 50s, smiling brightly against a soft-focus background of a clean, modern kitchen. The lighting is warm and natural. Professional corporate photography style, high quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDepCbjzlQO1CWhNZaLGUiOm0IvwRR9-4dBATX7ciCzmE1rCEQp9DyKJtx55PJalH9xIRsNUN-bj0bnrmWiq1qfPi4b7i436FB64JoyHyaBRjKnswnmPGJMx6chHAO8FMVU7j3vFF_AH-KVc8xKTpgX9l1YmZ-H2Aez5cV_O8ghnjWBIULEbr56obe2J6kXx9oM0kWH6Lay2yoW9E7AgT9yzwqnfMvWQwosZXrRkWPNXIOsB4OcOPpk"/>
+</div>
+<div>
+<div class="font-button-text text-button-text">Sarah Jenkins</div>
+<div class="text-label-caps text-on-surface-variant">Homeowner</div>
+</div>
+</div>
+</div>
+<div class="p-lg bg-surface-container-lowest border border-tertiary/10 rounded-lg relative">
+<span class="material-symbols-outlined text-primary/10 text-6xl absolute top-md right-md" data-icon="format_quote">format_quote</span>
+<p class="font-body-md text-body-md italic mb-md relative z-10">"Professional, punctual, and very talented. They hung all our heavy artwork and installed new lighting fixtures. Everything is perfectly level and secure."</p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a middle-aged professional man in a business casual outfit, smiling comfortably in a modern bright office environment. The style is clean, corporate and modern, featuring a light-filled background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDct0uu-hdMslWmH_iQSAM27whDI1iyo5Kz5TFnBtqtrqIhj3viyPucc4ZudVIuTpJRhIe3ccJeDsJQSe4bmSXPabJW-jVranxaVgdJ0WBfPyFIG5tZFVm__JD1pxHQF38tiyXwMHzipevevy-MqabhAC_q5r9aHtdGl44_3cha_he6R8Pc4F44Fzy6CwOCbwsHLVuQ5CphOBHQTjpY2-b2tbzXjWf5uMIHgDa42Bv7XmsNvZyxjFes"/>
+</div>
+<div>
+<div class="font-button-text text-button-text">David Miller</div>
+<div class="text-label-caps text-on-surface-variant">Business Owner</div>
+</div>
+</div>
+</div>
+<div class="p-lg bg-surface-container-lowest border border-tertiary/10 rounded-lg relative">
+<span class="material-symbols-outlined text-primary/10 text-6xl absolute top-md right-md" data-icon="format_quote">format_quote</span>
+<p class="font-body-md text-body-md italic mb-md relative z-10">"Finally a handyman who calls back! The process was seamless from the first quote to the final cleanup. I'm already planning the next list of tasks."</p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A friendly, younger adult man with a neat appearance, smiling against a warm, sun-lit urban background. The aesthetic is modern, approachable, and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzDBR21tdNG-ClvlAqhTHByMWOUdg0yNFH05SHoTKZnJNXEuh4I1qqR-u5Mje1gRJ_A8tRQGd7ZBDkv8d7ojKT3-qe3NNIKfzaq_sgOJ10KKt9zZn59POo5Bz6vLXf5louhjtXbkNZJCRKbUo9x8jFg6yK1NZ3Br5jt_QmL2dSDPnzMp6iQZQ29ozoI91xeZwduHplqamTWmhaZHjOz4gDAEpIRWQmmwXbcczRanswz-xra0k6ferZ"/>
+</div>
+<div>
+<div class="font-button-text text-button-text">Marc Thompson</div>
+<div class="text-label-caps text-on-surface-variant">Real Estate Agent</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact/Quote Form -->
+<section class="py-xl bg-surface-container-highest" id="contact">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+<div class="p-lg md:p-xl bg-primary text-white space-y-lg">
+<div>
+<h2 class="font-headline-md text-headline-md mb-sm">Ready to Start Your Project?</h2>
+<p class="text-on-primary-container">Fill out the form for a free, no-obligation quote. Most responses arrive within 24 hours.</p>
+</div>
+<div class="space-y-md">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+</div>
+<div>
+<div class="font-label-caps text-secondary-fixed-dim">Quick Support</div>
+<div class="font-headline-md text-body-lg">(555) 123-4567</div>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+</div>
+<div>
+<div class="font-label-caps text-secondary-fixed-dim">Email Us</div>
+<div class="font-headline-md text-body-lg">hello@wormyshandy.com</div>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+</div>
+<div>
+<div class="font-label-caps text-secondary-fixed-dim">Service Area</div>
+<div class="font-headline-md text-body-lg">Metro Area & Surrounding Suburbs</div>
+</div>
+</div>
+</div>
+<div class="pt-lg border-t border-white/10">
+<div class="font-label-caps text-secondary-fixed-dim mb-xs uppercase">Working Hours</div>
+<p class="text-body-md text-on-primary-container">Mon - Fri: 8:00 AM - 6:00 PM<br/>Sat: 9:00 AM - 2:00 PM</p>
+</div>
+</div>
+<div class="p-lg md:p-xl">
+<form action="#" class="space-y-md" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-caps text-xs text-on-surface-variant uppercase">Full Name</label>
+<input class="w-full bg-surface-container border border-outline/20 rounded-lg px-md py-sm focus:border-secondary focus:ring-0 outline-none transition-all" placeholder="John Smith" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-caps text-xs text-on-surface-variant uppercase">Email Address</label>
+<input class="w-full bg-surface-container border border-outline/20 rounded-lg px-md py-sm focus:border-secondary focus:ring-0 outline-none transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-caps text-xs text-on-surface-variant uppercase">Service Type</label>
+<select class="w-full bg-surface-container border border-outline/20 rounded-lg px-md py-sm focus:border-secondary focus:ring-0 outline-none transition-all appearance-none">
+<option>Plumbing & Faucets</option>
+<option>Electrical & Lighting</option>
+<option>Carpentry & Furniture</option>
+<option>General Repair</option>
+<option>Other / Not Sure</option>
+</select>
+</div>
+<div class="space-y-xs">
+<label class="font-label-caps text-xs text-on-surface-variant uppercase">Your Message</label>
+<textarea class="w-full bg-surface-container border border-outline/20 rounded-lg px-md py-sm focus:border-secondary focus:ring-0 outline-none transition-all" placeholder="Briefly describe what you need help with..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-white font-button-text text-button-text py-md rounded-lg shadow-lg hover:bg-on-secondary-fixed-variant transition-all active:scale-95" type="submit">Send Quote Request</button>
+<p class="text-center text-label-caps text-on-surface-variant text-[10px]">By submitting, you agree to our privacy policy and terms of service.</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-lg max-w-7xl mx-auto">
+<div class="mb-lg md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md text-secondary mb-xs">Wormy's Handyman</div>
+<p class="font-body-md text-body-md text-on-primary/80 max-w-xs">Professional repairs you can trust. Serving our community with pride and expertise for 15+ years.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-lg items-center">
+<nav class="flex flex-wrap justify-center gap-md">
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">Service Area</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">FAQ</a>
+</nav>
+<div class="flex gap-sm">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="contact_support">contact_support</span>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 px-margin-mobile md:px-margin-desktop py-md max-w-7xl mx-auto text-center md:text-left">
+<p class="font-body-md text-xs text-on-primary/60">© 2024 Wormy's Handyman Services. All rights reserved. Professional repairs you can trust.</p>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Smooth header reveal on scroll
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                header.classList.remove('-translate-y-full');
+                return;
+            }
+            if (currentScroll > lastScroll && !header.classList.contains('-translate-y-full')) {
+                header.classList.add('-translate-y-full');
+            } else if (currentScroll < lastScroll && header.classList.contains('-translate-y-full')) {
+                header.classList.remove('-translate-y-full');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body></html>

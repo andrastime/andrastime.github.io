@@ -1,0 +1,422 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | One to One Properties Maintenance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#1d3557",
+                    "background": "#faf9fc",
+                    "slate-blue": "#457b9d",
+                    "tertiary-fixed": "#ffdeae",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#001b3c",
+                    "on-tertiary-fixed-variant": "#5d4210",
+                    "surface-container-low": "#f5f3f6",
+                    "surface-container": "#efedf1",
+                    "on-tertiary-fixed": "#281900",
+                    "surface-tint": "#485f84",
+                    "surface-bright": "#faf9fc",
+                    "on-tertiary": "#ffffff",
+                    "charcoal": "#2b2d42",
+                    "inverse-on-surface": "#f2f0f3",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#493000",
+                    "on-background": "#1b1b1e",
+                    "tertiary": "#2d1c00",
+                    "on-error-container": "#93000a",
+                    "deep-navy": "#1d3557",
+                    "surface-container-high": "#e9e7eb",
+                    "secondary": "#006e25",
+                    "on-surface-variant": "#44474e",
+                    "on-primary-fixed-variant": "#30476a",
+                    "inverse-surface": "#2f3033",
+                    "on-tertiary-container": "#bd985e",
+                    "outline-variant": "#c4c6cf",
+                    "secondary-fixed-dim": "#66df75",
+                    "inverse-primary": "#b0c7f1",
+                    "primary": "#031f41",
+                    "soft-ice": "#f1faee",
+                    "tertiary-fixed-dim": "#e9c083",
+                    "surface-variant": "#e3e2e5",
+                    "surface": "#faf9fc",
+                    "secondary-fixed": "#83fc8e",
+                    "on-secondary-fixed-variant": "#00531a",
+                    "vibrant-green": "#28a745",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-container-highest": "#e3e2e5",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#007327",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#1b1b1e",
+                    "on-primary-container": "#879ec6",
+                    "surface-dim": "#dbd9dd",
+                    "outline": "#74777f",
+                    "primary-fixed-dim": "#b0c7f1",
+                    "secondary-container": "#80f98b",
+                    "on-secondary-fixed": "#002106"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "section-gap": "120px",
+                    "stack-md": "16px",
+                    "stack-lg": "24px",
+                    "gutter": "32px",
+                    "stack-sm": "8px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "caption": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .shine-button {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(45deg);
+            transition: all 0.5s;
+            pointer-events: none;
+        }
+        .shine-button:hover::after {
+            left: 100%;
+            top: 100%;
+        }
+        .service-card {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-effect shadow-[0px_4px_20px_rgba(29,53,87,0.05)]">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md font-bold text-deep-navy">
+                Masterful Care
+            </div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant hover:text-deep-navy transition-colors font-label-bold" href="our-services-property-repairs-maintenance.html">Services</a>
+<a class="text-on-surface-variant hover:text-deep-navy transition-colors font-label-bold" href="index.html">About Us</a>
+<a class="text-on-surface-variant hover:text-deep-navy transition-colors font-label-bold" href="index.html">Portfolio</a>
+<a class="text-on-surface-variant hover:text-deep-navy transition-colors font-label-bold" href="index.html">Testimonials</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:flex items-center gap-2 bg-error text-white px-6 py-2 rounded-lg font-label-bold shine-button" href="tel:+4407864774317">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+                    Emergency Contact
+                </a>
+<button class="bg-deep-navy text-white px-6 py-2 rounded-lg font-label-bold hover:bg-vibrant-green transition-all duration-300">
+                    Free Quote
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative py-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A professional property maintenance scene in Leeds, showing a modern residential exterior with pristine brickwork and a lush green lawn. High-key natural lighting, clean corporate aesthetic, soft depth of field focusing on the architectural quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKrCw_9KTWhDqX8KKAfjiYeaAZZtuWq5tlPwGH9JzhOad6UA3zi94kKZQQyN-4oQv-SYkj6RpevlQZJPI2WOXWa4DpSK9NT3Ub_3qbyvOkq-FVZpwmoxpgQtCtFwpWJuvzhw5D1pF3NRljWmQeFU3WqBwfVfTxndyakLfaoZc-vm9eUJcizalLHcW4G8Qux6kr_N1_RE-j25uEGCU5O7v-Em1wddl75WkddMdwdW4PhidcE_bNocBw">
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 bg-soft-ice px-4 py-1.5 rounded-full text-deep-navy font-label-bold mb-6">
+<span class="material-symbols-outlined text-[18px] text-vibrant-green">verified</span>
+                        Leeds Directory Checked &amp; Vetted
+                    </div>
+<h1 class="font-display-lg text-display-lg text-deep-navy mb-6">Masterful Property Maintenance &amp; Solutions</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                        With over 30 years of trade expertise, we provide high-end interior repairs, external grounds maintenance, and specialized accessibility solutions across Leeds. Fully insured and DBS checked for your peace of mind.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-3 glass-effect px-6 py-4 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-vibrant-green" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-label-bold text-deep-navy">City &amp; Guilds Accredited</span>
+</div>
+<div class="flex items-center gap-3 glass-effect px-6 py-4 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-vibrant-green" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-bold text-deep-navy">Age &amp; Dementia Friendly</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tool Belt Visual Break -->
+<section class="max-w-container-max mx-auto px-margin-desktop my-12">
+<div class="relative h-[400px] rounded-2xl overflow-hidden shadow-xl group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLstsLGiVoN3sDawVK3DStmJHJO9qmo1CvDL0sm0XXdwOvgb-4wDupf_wOX0TPWKfwji8mSs6oE2gtg3JnZ5kr5IHywDlFtEs7D78e_yZyghCTVuY5bE2LNwSUKWLG_gzeeY8NLzpMBbd4l6kB5zl05ItZMpmwp3K-hmZ2Pj9QmhnLjZWAacgxwMAJXXEHQjESGIW5vE161hI1ZHz8XdzdMjWHqTJ_zR7_FZuyuUi9FLpXHGylHPVr26YdQ">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-transparent to-transparent flex flex-col justify-end p-12">
+<h2 class="text-white font-display-lg text-headline-lg mb-2">Equipped for Excellence</h2>
+<p class="text-white/80 font-body-lg">The right tools for every meticulously planned project.</p>
+</div>
+</div>
+</section>
+<!-- Bento Grid Services -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-lg text-deep-navy mb-4">Comprehensive Care Portfolio</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">From precision interior work to robust exterior groundskeeping, we offer a complete suite of professional maintenance services.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Internal Services -->
+<div class="md:col-span-7 service-card glass-effect rounded-2xl overflow-hidden flex flex-col shadow-sm">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="A bright, modern interior room in a Leeds home featuring freshly painted white walls, polished wooden skirting, and large windows with elegant blinds. The lighting is soft and airy, highlighting the meticulous detail of the professional decorating and repair work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8otFeB2FM2jbyaB49WAXzBM5u5sHJuqEjfJVjzp-UxFIvDMU1ubT184MXm6vrsxO8ZeCPeQz9x2nT1EersYgdduQYVBb5UmSW9YENdVUeMaqHj5GyhUmniLeLclTE414cGjsOK6-MW6uL1mDXOV7_CDjHsEGP_plqgnAf1gRYcjlx_-hoGYpMKvNMxAJ0JCjHRpZEa1SKYVyI7a3Q3zW6Pi9DEMcSXdJ3rM3PLGjyTzKQWTKPDY1E">
+<div class="absolute top-4 left-4 bg-deep-navy text-white px-4 py-1.5 rounded-lg font-label-bold">Internal Repairs</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-6">Interior Precision &amp; Decorating</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-vibrant-green text-[20px]">check_circle</span>
+                                    Windows, Doors &amp; Locks
+                                </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-vibrant-green text-[20px]">check_circle</span>
+                                    Skirting &amp; Architrave
+                                </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-vibrant-green text-[20px]">check_circle</span>
+                                    Blinds &amp; Curtains
+                                </li>
+</ul>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-vibrant-green text-[20px]">check_circle</span>
+                                    Painting &amp; Decorating
+                                    </li><li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-vibrant-green text-[20px]">check_circle</span>
+                                        Customized Solutions
+                                    </li>
+</ul>
+</div>
+<button class="mt-8 text-deep-navy font-label-bold flex items-center gap-2 hover:text-vibrant-green transition-colors">
+                            Inquire about Internal Services
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- External Services -->
+<div class="md:col-span-5 service-card bg-white rounded-2xl overflow-hidden flex flex-col shadow-sm">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="A clean, professionally maintained garden space in the UK. Showing a high-pressure jet washed patio, newly painted wooden fencing, and neatly manicured garden borders. Bright morning light creates sharp, clean shadows, emphasizing a fresh and tidy property exterior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATgPCxn5gR7HuMQVbzQMopN1VShWOQv_QOysqRY8Er03lQ2vdM1-X2thYtTNOItkhdgml3pWpzMfHVlyczwgOkHV2HZE6eWVrbmjImWA4k1_32MslTBPVvjfl_ZdOzDI3_dtoBBcNuuoY_7TYsTgoJ0QtKD-_lu3GOpQVtYIZ8AdDiXXKPfb0nDpusnS-AWrnAQMA5gTvjBVr6zawCbu2BHqr1ldvuQYqAzfxKR18Qbakjcb6F_kKX">
+<div class="absolute top-4 left-4 bg-slate-blue text-white px-4 py-1.5 rounded-lg font-label-bold">External Maintenance</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-6">Grounds &amp; Exterior Care</h3>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-slate-blue text-[20px]">fence</span>
+                                Gates, Fencing &amp; Decking
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-slate-blue text-[20px]">cleaning_services</span>
+                                Jet Washing Drives &amp; Patios
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-slate-blue text-[20px]">yard</span>
+                                Garden Maintenance
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-slate-blue text-[20px]">format_paint</span>
+                                External Painting
+                            </li>
+</ul>
+<button class="w-full py-3 border-2 border-deep-navy text-deep-navy font-label-bold rounded-lg hover:bg-deep-navy hover:text-white transition-all">
+                            Request External Quote
+                        </button>
+</div>
+</div>
+<!-- Accessibility - High Emphasis -->
+<div class="md:col-span-12 service-card glass-effect rounded-2xl overflow-hidden grid md:grid-cols-2 shadow-md border-vibrant-green/20">
+<div class="p-10 lg:p-16 flex flex-col justify-center order-2 md:order-1">
+<div class="inline-flex items-center gap-2 text-vibrant-green font-label-bold mb-4">
+<span class="material-symbols-outlined">accessible</span>
+                            Independence &amp; Safety Solutions
+                        </div>
+<h3 class="font-display-lg text-headline-lg text-deep-navy mb-6">Age &amp; Dementia Friendly Adaptations</h3>
+<p class="font-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                            Certified expertise in providing safe, high-quality accessibility solutions. We specialize in bespoke installations that maintain your independence without compromising on aesthetic quality.
+                        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+<div class="flex flex-col gap-2">
+<div class="w-12 h-12 bg-soft-ice rounded-full flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-vibrant-green">maps</span>
+</div>
+<h4 class="font-label-bold text-deep-navy">Grab &amp; Bannister Rails</h4>
+<p class="text-caption text-on-surface-variant">Sturdy, discrete, and strategically placed for maximum safety.</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="w-12 h-12 bg-soft-ice rounded-full flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-vibrant-green">ramp_left</span>
+</div>
+<h4 class="font-label-bold text-deep-navy">Bespoke Concrete Ramps</h4>
+<p class="text-caption text-on-surface-variant">Wheelchair-safe paths designed for durability and accessibility.</p>
+</div>
+</div>
+<a class="bg-vibrant-green text-white px-8 py-4 rounded-lg font-label-bold text-center shine-button shadow-lg shadow-vibrant-green/20 inline-block" href="our-services-property-repairs-maintenance.html">
+                            Consult with our Accessibility Expert
+                        </a>
+</div>
+<div class="relative h-full min-h-[400px] order-1 md:order-2">
+<img class="w-full h-full object-cover" data-alt="A detailed shot of high-quality stainless steel grab rails professionally installed in a modern, clean bathroom environment. Next to it, a smooth, wide concrete ramp with a non-slip texture leads to a residential front door. The scene is bright and highlights safety, dignity, and professional craftsmanship in a light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoC-qQjj1dy1wWGvTYrp8wcWcsbG2A9j-GSiKvWEdj_H-8ZF4VapeRx9EFcFtPg7k_I9GA34Z3GbmF5G5AK144LS4gj4mB8Ps0xBg8K949atnIOuC440CiNMPewR9-Dwxl8eLpTlJ9md6AjjrB4TbFE8wNI85blStqSNS7MtcTriQKDFU3yslySopzvH9_m1pZRqbJEVTUPSTqEm8lg0tF5vZjApaxZY2vdn312qB8hgXiK8kQne_w">
+<div class="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/50 hidden md:block"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="bg-deep-navy py-16">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-wrap justify-center items-center gap-12 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white text-4xl">policy</span>
+<div class="text-white">
+<div class="font-label-bold">DBS Checked</div>
+<div class="text-[10px] uppercase tracking-wider">Enhanced Security</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white text-4xl">verified_user</span>
+<div class="text-white">
+<div class="font-label-bold">Fully Insured</div>
+<div class="text-[10px] uppercase tracking-wider">Public Liability</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white text-4xl">school</span>
+<div class="text-white">
+<div class="font-label-bold">City &amp; Guilds</div>
+<div class="text-[10px] uppercase tracking-wider">Accredited Trade</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white text-4xl">diversity_3</span>
+<div class="text-white">
+<div class="font-label-bold">Leeds Directory</div>
+<div class="text-[10px] uppercase tracking-wider">Council Vetted</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy text-soft-ice py-stack-lg border-t border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto py-12">
+<div class="col-span-1 md:col-span-1">
+<div class="font-display-lg text-headline-md font-bold text-soft-ice mb-6">Masterful Care</div>
+<p class="text-soft-ice/70 text-body-md mb-6">Premium property maintenance and accessibility solutions for discerning clients across Leeds and surrounding areas.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-vibrant-green transition-colors" href="contact-us-get-a-free-quote.html">
+<span class="material-symbols-outlined text-[20px]">qr_code_2</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-vibrant-green transition-colors" href="contact-us-get-a-free-quote.html">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-bold text-white mb-6">Our Expertise</h4>
+<ul class="space-y-3">
+<li><a class="text-soft-ice/80 hover:text-white transition-colors" href="our-services-property-repairs-maintenance.html">Residential Services</a></li>
+<li><a class="text-soft-ice/80 hover:text-white transition-colors" href="our-services-property-repairs-maintenance.html">Commercial Repairs</a></li>
+<li><a class="text-soft-ice/80 hover:text-white transition-colors" href="our-services-property-repairs-maintenance.html">Accessibility Solutions</a></li>
+<li><a class="text-soft-ice/80 hover:text-white transition-colors" href="our-services-property-repairs-maintenance.html">Painting &amp; Decorating</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-white mb-6">Information</h4>
+<ul class="space-y-3">
+<li><a class="text-soft-ice/80 hover:text-white transition-colors" href="index.html">Terms of Service</a></li>
+<li><a class="text-soft-ice/80 hover:text-white transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="text-soft-ice/80 hover:text-white transition-colors" href="contact-us-get-a-free-quote.html">Contact Leeds Office</a></li>
+<li><a class="text-soft-ice/80 hover:text-white transition-colors" href="index.html">Dementia Awareness</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-white mb-6">Contact Details</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-green">call</span>
+<span class="text-soft-ice/80">+44 07864 774317</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-green">mail</span>
+<span class="text-soft-ice/80 break-all">info@one-to-one-propertymaintenance.com</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-green">location_on</span>
+<span class="text-soft-ice/80">Nunroyd Avenue, Leeds, LS17</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-white/10 text-center">
+<p class="text-caption text-soft-ice/50">© 2024 Masterful Care Property Maintenance. All Rights Reserved. DBS Checked &amp; Fully Insured. Company No: 14165509</p>
+</div>
+</footer>
+<!-- FAB for Quick Quote -->
+<button class="fixed bottom-8 right-8 bg-vibrant-green text-white px-6 py-4 rounded-full font-label-bold shadow-2xl shine-button flex items-center gap-3 z-50">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">request_quote</span>
+        Quick Quote
+    </button>
+</body></html>

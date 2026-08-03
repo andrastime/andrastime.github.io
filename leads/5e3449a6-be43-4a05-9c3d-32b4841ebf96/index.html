@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aubries Handyman and Maintenance | Master Craftsman</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "secondary-fixed-dim": "#b9c7e4",
+                    "surface": "#131313",
+                    "surface-dim": "#131313",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-background": "#e5e2e1",
+                    "on-tertiary": "#2f3131",
+                    "surface-tint": "#ffb693",
+                    "inverse-primary": "#a04100",
+                    "background": "#131313",
+                    "on-secondary": "#233148",
+                    "surface-container-low": "#1c1b1b",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-primary-container": "#572000",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#7a3000",
+                    "surface-container-highest": "#353534",
+                    "tertiary": "#c6c6c7",
+                    "on-secondary-fixed-variant": "#39475f",
+                    "surface-container": "#201f1f",
+                    "secondary-fixed": "#d6e3ff",
+                    "inverse-on-surface": "#313030",
+                    "on-primary-fixed": "#351000",
+                    "on-secondary-fixed": "#0d1c32",
+                    "surface-variant": "#353534",
+                    "on-secondary-container": "#abb9d6",
+                    "surface-bright": "#393939",
+                    "outline": "#a98a7d",
+                    "on-primary": "#561f00",
+                    "on-surface": "#e5e2e1",
+                    "on-surface-variant": "#e2bfb0",
+                    "error": "#ffb4ab",
+                    "on-error-container": "#ffdad6",
+                    "secondary": "#b9c7e4",
+                    "outline-variant": "#5a4136",
+                    "secondary-container": "#3c4962",
+                    "primary": "#ffb693",
+                    "primary-container": "#ff6b00",
+                    "surface-container-high": "#2a2a2a",
+                    "inverse-surface": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "label-sm": ["JetBrains Mono"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 182, 147, 0.4);
+        }
+        .btn-primary-glow:hover {
+            box-shadow: 0 0 30px rgba(255, 107, 0, 0.4);
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-reveal {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-3xl border-b border-white/15 transition-all duration-500">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<span class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">
+                Aubries Handyman
+            </span>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-lg text-body-lg" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-lg text-body-lg" href="#">Expertise</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-lg text-body-lg" href="#">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-lg text-body-lg" href="#">Testimonials</a>
+<button class="bg-primary-container text-white px-6 py-2 rounded-lg font-bold active:scale-95 transition-transform btn-primary-glow">
+                    Get a Quote
+                </button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="High-resolution, wide-angle interior shot of a luxury modern home undergoing expert renovation. The lighting is dramatic and moody, emphasizing clean lines and premium textures like polished wood and matte black finishes. Soft orange highlights reflect off glass surfaces, creating a sense of sophisticated craftsmanship and digital-age precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-W6GdWUQE6Ocx04zTztuUld4U8WV1i4SDczE7fmXVdY3ZlOf7eaqU12dgSC7s9XWm_m1x-kfaO4VykT9ovp9pmFK4DQlEm8ZlOqd8Ey4uXczVp-POIrYm23G5LWOQmQa-vAFvDhNfo0sweBhmuGpX_y2BluuW-yGbbRhtFFhxg0m1adnVsUtwle2wdy4r6gSCM0rBQu-8MO2x6aZz1AjqpMga_aXF9Mh0J0CQIWy1jy25-S97oaxJOw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full">
+<div class="max-w-3xl animate-reveal stagger-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Master Craftsman for the Digital Age</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-[84px] text-white leading-tight mb-8">
+                    Professional Home <br/>
+<span class="text-primary text-glow italic">Maintenance,</span> <br/>
+                    Crafted with Precision.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                    Providing professional handyman services that are budget-friendly. Specializing in reused and repurposed materials for home improvement. Fully insured for your peace of mind.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-on-primary-fixed font-bold px-8 py-4 rounded-xl text-body-lg active:scale-95 transition-all btn-primary-glow">
+                        Get a Quote Now
+                    </button>
+<button class="glass-card text-white font-bold px-8 py-4 rounded-xl text-body-lg border border-white/10 hover:bg-white/10 active:scale-95 transition-all">
+                        View Our Portfolio
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition Bento Grid -->
+<section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-card p-10 rounded-3xl animate-reveal stagger-1 group">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile mb-4 text-white">Budget-Friendly</h3>
+<p class="text-on-surface-variant">High-end results shouldn't break the bank. We leverage smart sourcing and efficient workflows to offer competitive pricing without sacrificing quality.</p>
+</div>
+<div class="glass-card p-10 rounded-3xl animate-reveal stagger-2 group">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile mb-4 text-white">Fully Insured</h3>
+<p class="text-on-surface-variant">Your property is in safe hands. We carry comprehensive public liability insurance, ensuring every project is protected from start to finish.</p>
+</div>
+<div class="glass-card p-10 rounded-3xl animate-reveal stagger-3 group">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">handyman</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile mb-4 text-white">Expert Craft</h3>
+<p class="text-on-surface-variant">With years of technical expertise, we approach every task with an engineer's mindset, ensuring longevity and aesthetic perfection in every detail.</p>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase mb-4 block">Our Specializations</span>
+<h2 class="font-headline-lg text-headline-lg text-white">Comprehensive Care <br/>for Modern Homes</h2>
+</div>
+<p class="text-on-surface-variant max-w-md text-right md:text-left">
+                    We offer a wide range of services designed to meet your home improvement needs. We pride ourselves on quality, affordability, and sustainability.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service Card 1 -->
+<div class="group relative overflow-hidden rounded-3xl aspect-[4/5] glass-card">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLvS64Sm1Ta9FnMxO1XD2nXc6RfvG3DWaooP6hkGlFKh8OtlZ1JWbNyqlupCrOoxCTSyp0N9nNS3L0_yK_Gl7U_mo0bSGTMvRf1W-SaisNkfL0EpZknGpnY7FlXfPSVlGcgB_E2Pml96mpfrUxcX-QsReqxWXi8if8ICfKH-UOIdmg8ztl3jRCp5PVnIupTWn1VxT-HLvTWe_l0p-rHPGXKfqHEHc0NXtTmvOfCWEeKYK9sHt-Si8gqMtrSk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded-full mb-4 inline-block">Electrical</span>
+<h4 class="font-headline-lg text-headline-lg-mobile text-white mb-2">Electrician Services</h4>
+<p class="text-on-surface-variant text-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                            Always ready to handle all your electrical needs with safety and precision.
+                        </p>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group relative overflow-hidden rounded-3xl aspect-[4/5] glass-card">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLsl9wdybtOubP5c7-hfFPX_arybxvUT9w7G2bSTUb6r3aAXHSteCpDgUaqKwvu1tzBhNhCt4VZ_72WG9Dg3WeFfhuNkmwLyOD_06_0aLXTxPIMGx70PU7pZfCuF_bj69qSKXITvc0Bx7dY_iaGR9nL6aElzBnuGXPc5OmmEDEzAVlyC6-bmTODYcyw5AqQ0NEVGbcVBQOgWqcSnCni_72FKAFg2kqTGXCmd_3vxOZMJWBgQSbzSlk0LZ-ep"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded-full mb-4 inline-block">Plumbing</span>
+<h4 class="font-headline-lg text-headline-lg-mobile text-white mb-2">Plumbing Solutions</h4>
+<p class="text-on-surface-variant text-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                            Efficient plumbing services to keep your home running smoothly and efficiently.
+                        </p>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group relative overflow-hidden rounded-3xl aspect-[4/5] glass-card">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLs9yj7Aa-60Msjkc3bFU8LlOJzuiVYarCdKaieyEuox85jNK0i8TTqdIRa_tyTd8RoAvdD-Wp31SJegXGQt6dcKO6pwhUWDKZwFGazUsU_3zUiTLW17qf0HF-lQxip1APz4K-fVhBt05Oo-FpiCy-IUTrQpVXeqyzHgPgre3mmku2dVDEi7sqBZiwPZcFAG8i5IW6NYMNgH-KBX6SHfc5OzwzOLe-d3riejSq63CHrxjxxR4GzfI8Qoyebz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded-full mb-4 inline-block">Renovation</span>
+<h4 class="font-headline-lg text-headline-lg-mobile text-white mb-2">Home Improvement</h4>
+<p class="text-on-surface-variant text-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                            Enhancing your living space with quality renovations, repurposing, and repairs.
+                        </p>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="group relative overflow-hidden rounded-3xl aspect-[4/5] glass-card">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLvEu0SD4UxuyPzY4lMsLjg8JNq-9hoEwh3IQBNA_SmoVOJVbp3I-0QQwfeGvWYqmwN0pe9iDZtGGqQyc_b7PkPcdWa65S3gm_HZ_Dno6axIva-2GXthnWEBy16fp0UemP2tiL2UIlK51D3z5WhLrkbhhdQlkLYc6-Ru2swEXqIgG_jHQjQf57lwxLZNs6Kvuw8lKPq5wA6Ao7b-Rsu6B4YLOuZC1EazadsiPI2Hi7FcVklWXe0zC-LwslM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded-full mb-4 inline-block">General</span>
+<h4 class="font-headline-lg text-headline-lg-mobile text-white mb-2">Handyman Services</h4>
+<p class="text-on-surface-variant text-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                            General repairs and maintenance tailored to your unique household requirements.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto overflow-hidden">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">What Our Clients Say</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="glass-card p-12 rounded-[2rem] border-l-4 border-primary">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-white italic mb-8">"Aubrie transformed our living room using reclaimed wood accents. The attention to detail was exceptional, and the result is both sustainable and stunning. Truly a master of his craft."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest"></div>
+<div>
+<p class="font-bold text-white">Sarah Jenkins</p>
+<p class="text-sm text-on-surface-variant">Upton Resident</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-12 rounded-[2rem] border-l-4 border-primary">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-white italic mb-8">"Efficient, tidy, and extremely professional. He fixed a plumbing issue three others couldn't diagnose. Absolute reliability is hard to find, but we found it here."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest"></div>
+<div>
+<p class="font-bold text-white">Mark Thompson</p>
+<p class="text-sm text-on-surface-variant">Pontefract Homeowner</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action / Contact -->
+<section class="py-section-gap relative">
+<div class="absolute inset-0 bg-primary/5 -z-10"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="glass-card p-12 md:p-20 rounded-[3rem] text-center max-w-4xl mx-auto border-white/5">
+<h2 class="font-display-lg text-headline-lg text-white mb-6">Ready to start your next <span class="text-primary italic">project?</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Whether it's a minor repair or a major renovation, get in touch today for a transparent, budget-friendly quote.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary mb-3">call</span>
+<p class="text-white font-bold">07397 640534</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary mb-3">mail</span>
+<p class="text-white font-bold break-all">Aubriestoolandplanthire@gmail.com</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary mb-3">location_on</span>
+<p class="text-white font-bold">Upton, Pontefract</p>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="bg-primary text-on-primary font-bold px-10 py-5 rounded-2xl text-body-lg btn-primary-glow transition-all" href="mailto:Aubriestoolandplanthire@gmail.com">
+                        Get a Free Quote
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface border-t border-outline-variant w-full py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary block mb-6">Aubries Handyman</span>
+<p class="text-on-surface-variant max-w-sm mb-8 font-body-md">Ensuring safety and reliability with every job. Professional maintenance for modern living spaces.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">qr_code_2</span>
+</a>
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Company</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Services</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Electrical Repairs</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Plumbing Fixes</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Home Upgrades</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">General Repairs</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-20 pt-8 border-t border-white/5 text-center text-on-surface-variant text-sm">
+            © 2024 Aubries Handyman and Maintenance. All rights reserved.
+        </div>
+</footer>
+<!-- Interactions & Effects Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-reveal');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.glass-card').forEach((el, index) => {
+                el.style.opacity = '0';
+                observer.observe(el);
+            });
+
+            // Sticky nav effect
+            const nav = document.querySelector('nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add('bg-surface/90', 'h-16');
+                    nav.classList.remove('h-20');
+                } else {
+                    nav.classList.remove('bg-surface/90', 'h-16');
+                    nav.classList.add('h-20');
+                }
+            });
+        });
+    </script>
+</body></html>

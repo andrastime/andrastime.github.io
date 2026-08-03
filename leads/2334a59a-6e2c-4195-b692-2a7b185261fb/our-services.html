@@ -1,0 +1,470 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services - Morris Handyman Services</title>
+<meta content="Expert craftsmanship and modern handyman services in Royton, Oldham, and across the North West." name="description">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e0e4da",
+                        "deep-charcoal": "#121416",
+                        "secondary-fixed": "#e2e2e5",
+                        "on-secondary-container": "#636467",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#f0f1f2",
+                        "on-tertiary-fixed": "#191c1d",
+                        "slate-grey": "#4A4D50",
+                        "outline": "#707a6c",
+                        "surface": "#f7fbf0",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2d322b",
+                        "silver-metallic": "#E9ECEF",
+                        "tertiary": "#535657",
+                        "surface-container": "#ebefe5",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "inverse-on-surface": "#eef2e8",
+                        "surface-tint": "#1b6d24",
+                        "on-secondary-fixed-variant": "#454749",
+                        "tertiary-fixed": "#e1e3e4",
+                        "on-surface-variant": "#40493d",
+                        "background": "#f7fbf0",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#a3f69c",
+                        "on-background": "#181d17",
+                        "outline-variant": "#bfcaba",
+                        "surface-bright": "#f7fbf0",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d7dbd2",
+                        "on-surface": "#181d17",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#1a1c1e",
+                        "surface-container-low": "#f1f5eb",
+                        "primary": "#0d631b",
+                        "primary-fixed-dim": "#88d982",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#c6c6c9",
+                        "on-primary-container": "#cbffc2",
+                        "secondary": "#5d5e61",
+                        "tertiary-container": "#6c6e6f",
+                        "surface-container-highest": "#e0e4da",
+                        "surface-container-high": "#e5eadf",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#2e7d32",
+                        "handyman-green": "#39B54A",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e2e2e5",
+                        "on-primary-fixed-variant": "#005312",
+                        "inverse-primary": "#88d982",
+                        "on-primary-fixed": "#002204"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "margin-tablet": "32px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "label-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Libre Caslon Text"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        @media (min-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(12, 1fr);
+            }
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 30px -10px rgba(57, 181, 74, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 dark:bg-deep-charcoal/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-silver-metallic/20">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-deep-charcoal dark:text-surface tracking-tight">
+                MORRIS HANDYMAN
+            </div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-deep-charcoal dark:text-surface-variant font-medium font-label-lg text-label-lg uppercase hover:text-handyman-green transition-colors duration-200" href="#">Services</a>
+<a class="text-deep-charcoal dark:text-surface-variant font-medium font-label-lg text-label-lg uppercase hover:text-handyman-green transition-colors duration-200" href="our-work-gallery.html">Gallery</a>
+<a class="text-deep-charcoal dark:text-surface-variant font-medium font-label-lg text-label-lg uppercase hover:text-handyman-green transition-colors duration-200" href="our-services.html">Why Us</a>
+<a class="text-deep-charcoal dark:text-surface-variant font-medium font-label-lg text-label-lg uppercase hover:text-handyman-green transition-colors duration-200" href="#">Testimonials</a>
+<a class="text-deep-charcoal dark:text-surface-variant font-medium font-label-lg text-label-lg uppercase hover:text-handyman-green transition-colors duration-200" href="contact-us.html">Contact</a>
+<button class="bg-handyman-green text-on-primary px-6 py-2.5 rounded text-label-lg font-bold uppercase transition-transform active:scale-95">Get a Quote</button>
+</div>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden text-deep-charcoal">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<span class="inline-block bg-handyman-green/10 text-handyman-green px-4 py-1 rounded-full text-label-lg uppercase mb-6">Expert Craftsmanship</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 leading-tight">
+                        Specialist Services <br><span class="italic text-handyman-green">Built to Last.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
+                        Based in Royton, Oldham, we deliver high-end trade services across the North West. From structural groundwork to bespoke carpentry, we bring precision and modern efficiency to every project.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-handyman-green text-on-primary px-8 py-4 rounded font-bold uppercase text-label-lg flex items-center gap-2 custom-shadow">
+                            Book a Consultation
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border-2 border-deep-charcoal text-deep-charcoal px-8 py-4 rounded font-bold uppercase text-label-lg hover:bg-deep-charcoal hover:text-surface transition-colors">
+                            View Our Work
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-lg overflow-hidden border border-silver-metallic/30 relative">
+<img class="w-full h-full object-cover" data-alt="A professional handyman in clean, high-end workwear expertly installing a modern minimalist bathroom faucet. The setting is a bright, upscale bathroom with white marble tiles and soft natural lighting. The mood is precise, clinical, and high-quality, emphasizing craftsmanship and cleanliness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbXk6tLIkKlYmFcBlhHsHWxtAeoNddYD_YcExqEP3i4BKI8bGb42tO43eRMQlGDJlCkEqzvannc6ke1MC9sR-gOITN5_yxV6Hs3eQgK71OUZirD3AyZegA50n0G6AJEBSIpTcnv2U_TXW2gurP2qABcdQd3PJCsfSZqzGSDj9vsdU1PlBR2XGX6OFtIBCU4XJs0JNoj3ig1YDkCPd4COyMlapU6doWz4CmV3hYyeADElMY5nnmEwvkrw">
+<!-- Floating Badge -->
+<div class="absolute bottom-8 left-8 bg-surface/90 backdrop-blur p-6 border border-silver-metallic/20 rounded shadow-sm max-w-xs">
+<div class="flex gap-1 text-handyman-green mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-label-lg text-label-lg text-deep-charcoal italic">"The workmanship was of the highest quality... over the moon with the end results."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="mb-16 text-center max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">Mastering Every Trade</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We provide a wide array of specialist services, setting high standards from basic day-to-day tasks to complex structural renovations.</p>
+</div>
+<div class="bento-grid">
+<!-- Carpentry (Large) -->
+<div class="md:col-span-8 bg-surface border border-silver-metallic/40 rounded p-8 service-card transition-all flex flex-col md:flex-row gap-8">
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-handyman-green text-4xl mb-6 service-icon transition-transform">carpenter</span>
+<h3 class="font-headline-md text-headline-md mb-4">Carpentry &amp; Bespoke Structures</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Custom summer houses, sheds, and intricate woodwork tailored to your outdoor space. We design garden retreats that serve as offices, studios, or serene escapes.</p>
+</div>
+<ul class="grid grid-cols-2 gap-x-4 gap-y-2 text-label-lg font-label-lg uppercase">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-handyman-green text-sm">check_circle</span> Summer Houses</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-handyman-green text-sm">check_circle</span> Shed Construction</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-handyman-green text-sm">check_circle</span> Garden Studios</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-handyman-green text-sm">check_circle</span> Decking &amp; Fencing</li>
+</ul>
+</div>
+<div class="flex-1 rounded overflow-hidden h-64 md:h-auto border border-silver-metallic/20">
+<img class="w-full h-full object-cover" data-alt="A beautifully crafted, modern cedar wood summer house with large glass windows. The building is situated in a lush, manicured garden with precise edges and contemporary landscaping. The late afternoon sun creates warm, architectural shadows against the vertical wood slats. High-end, precise craftsmanship is evident in every joint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ3GWYmv0c-5x9BwYahdkRrIf6C2Vd1Zk2VSOAhc4cc_6ymjyRxT_0MOaXEwJphUNwdcZJJhd1Un1IrSRFfZD2q__hacs-0jKm_3HRkA-jATvu_Z1EqUVdmll0VpGMvSknhyq60T1hRnn4cLHUa9y5ZkKPMTBEoyDQvDFUDWvXacfaxmQXNQv--MdtFZHsU0nV4NgZglJk61sSHCtjTJdd1yNecK1tIrz5hEWUo9bXQPOh6LOxOgTVrA">
+</div>
+</div>
+<!-- Plumbing (Small) -->
+<div class="md:col-span-4 bg-deep-charcoal text-surface rounded p-8 service-card border border-slate-grey/30">
+<span class="material-symbols-outlined text-handyman-green text-4xl mb-6 service-icon transition-transform">plumbing</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-surface">Modern Plumbing</h3>
+<p class="font-body-md text-surface/70 mb-8">From emergency leaks to full bathroom and en-suite renovations. We handle internal and external waste systems with precision.</p>
+<div class="rounded overflow-hidden h-40">
+<img alt="Plumbing context" class="w-full h-full object-cover grayscale opacity-60 hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/AP1WRLsAjOBpZ0ElzGo4oqMx-Ae07pIN6sfZpZbFmj5NkHa_JmQGuKZDfTEy3JjUGrlWvC7eICRu-xyzzc6MPZCufZdSnUthwihAxSaRtZiKpRgzKSRi9hwfZxK1iDsAuq9MKTgP8BRqkIkkrsjXAWmJOGynhTTH1ChhaM6HBqrXOhr3mEvDRvSLu920Nc3IS_oEgMQwDpVClWDozhD0b0p2xKm6j7X-gp9T6F18XTQx3_ALx_09nuBPeJj2mslS">
+</div>
+</div>
+<!-- Maintenance (Medium) -->
+<div class="md:col-span-4 bg-surface border border-silver-metallic/40 rounded p-8 service-card">
+<span class="material-symbols-outlined text-handyman-green text-4xl mb-6 service-icon transition-transform">home_repair_service</span>
+<h3 class="font-headline-md text-headline-md mb-4">Property Maintenance</h3>
+<p class="font-body-md text-on-surface-variant">General repairs, flat pack assembly, and kitchen appliance installations. Your daily home upkeep handled by professionals.</p>
+</div>
+<!-- Groundworks (Medium) -->
+<div class="md:col-span-4 bg-surface border border-silver-metallic/40 rounded p-8 service-card">
+<span class="material-symbols-outlined text-handyman-green text-4xl mb-6 service-icon transition-transform">construction</span>
+<h3 class="font-headline-md text-headline-md mb-4">Groundworks</h3>
+<p class="font-body-md text-on-surface-variant">Flagging, block paving, and drainage systems. We utilize mini-diggers for professional excavation and structural site prep.</p>
+</div>
+<!-- Gardening (Medium) -->
+<div class="md:col-span-4 bg-surface border border-silver-metallic/40 rounded p-8 service-card">
+<span class="material-symbols-outlined text-handyman-green text-4xl mb-6 service-icon transition-transform">yard</span>
+<h3 class="font-headline-md text-headline-md mb-4">Gardening</h3>
+<p class="font-body-md text-on-surface-variant">Complete garden transformations, artificial grass installation, and hedge maintenance for a pristine outdoor environment.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us / Trust Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-silver-metallic/20">
+<div class="flex flex-col md:flex-row gap-16 items-start">
+<div class="md:w-1/3 sticky top-32">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Why Industry Professionals and Homeowners <span class="italic">Choose Us</span>.</h2>
+<p class="font-body-md text-on-surface-variant mb-8">Trust is the foundation of our work. We combine old-world craftsmanship with modern certifications.</p>
+<div class="p-6 bg-surface-container rounded border border-handyman-green/20">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-handyman-green text-3xl">verified</span>
+<span class="font-label-lg text-label-lg uppercase text-deep-charcoal">Police CRS Checked</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-handyman-green text-3xl">policy</span>
+<span class="font-label-lg text-label-lg uppercase text-deep-charcoal">Public Liability Insured</span>
+</div>
+</div>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+<!-- Quality -->
+<div class="p-8 border border-silver-metallic/40 rounded hover:border-handyman-green transition-colors bg-surface">
+<div class="w-12 h-12 bg-handyman-green/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-handyman-green">workspace_premium</span>
+</div>
+<h4 class="font-label-lg text-label-lg uppercase mb-2">Highest Quality</h4>
+<p class="font-body-md text-on-surface-variant">Qualified to City &amp; Guilds standards, ensuring every cut and fitting meets national excellence markers.</p>
+</div>
+<!-- Pricing -->
+<div class="p-8 border border-silver-metallic/40 rounded hover:border-handyman-green transition-colors bg-surface">
+<div class="w-12 h-12 bg-handyman-green/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-handyman-green">payments</span>
+</div>
+<h4 class="font-label-lg text-label-lg uppercase mb-2">Fair Pricing</h4>
+<p class="font-body-md text-on-surface-variant">Competitively priced with no hidden call-out charges. We offer specialized discounts for OAPs.</p>
+</div>
+<!-- Reliable -->
+<div class="p-8 border border-silver-metallic/40 rounded hover:border-handyman-green transition-colors bg-surface">
+<div class="w-12 h-12 bg-handyman-green/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-handyman-green">timer</span>
+</div>
+<h4 class="font-label-lg text-label-lg uppercase mb-2">Local &amp; Reliable</h4>
+<p class="font-body-md text-on-surface-variant">Based in Royton, we respond quickly and guarantee all work delivered to our high internal standards.</p>
+</div>
+<!-- Design -->
+<div class="p-8 border border-silver-metallic/40 rounded hover:border-handyman-green transition-colors bg-surface">
+<div class="w-12 h-12 bg-handyman-green/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-handyman-green">design_services</span>
+</div>
+<h4 class="font-label-lg text-label-lg uppercase mb-2">Full Renovations</h4>
+<p class="font-body-md text-on-surface-variant">From plastering to painting and floor installation, we provide a complete end-to-end service solution.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery / Visual Proof -->
+<section class="py-24 bg-deep-charcoal text-surface overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Expert Portfolio</h2>
+<p class="font-body-md text-surface-variant/60 mt-4">Precision in every detail, across every trade.</p>
+</div>
+<div class="hidden md:block">
+<a class="flex items-center gap-2 text-handyman-green font-label-lg uppercase border-b border-handyman-green pb-1" href="https://www.facebook.com/morrishandymanservices/" target="_blank">
+                            Follow on Facebook
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-[3/4] overflow-hidden rounded">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="A close-up high-resolution shot of a perfectly laid herringbone laminate floor in a bright, modern living room. The wood texture is rich and detailed, with clean transitions to the white skirting boards. The lighting is bright and architectural, highlighting the precision of the installation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbHndZ_GN9lBF9qgwL7gufUEXMij967AGalC7yen1UOr9Qpz8j9hS18073Ic_rno80cb0Po1kIpDw6pCzPeqLoLy2YpP0nk6bAcyxqHT9GnxU6MtXOTkxv37AQvsJl4_xT-rMfvOaWRX50tnAZxY58D3CTUK7hv7EGkeQCVfcoEaAoQV92gxU4Ejf7KxQnXb93miz1DOp_bhR4ro7NvsRBHsoVR63FtnMTskuASu7h0zfEd-2B_4NwSA">
+</div>
+<div class="aspect-[3/4] overflow-hidden rounded md:mt-12">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="A wide-angle view of a professionally landscaped garden featuring high-quality artificial turf, clean stone flagging, and contemporary wooden fencing. The layout is balanced and orderly, showing a complete transformation from a messy yard to a premium outdoor living space. Bright daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw1aU-D1cAkJFR_vjfCAdbNiLZTYXQCxIkwKVVQ8F-PE0B6TD_LSJ-txnzlQBon6ePT1DNnAVUHhc8TRPeClVJiniyrDKX-Lqd1YPg-Co6YspE3bHCZwk8wOuzEQIDssHiAaLlFo8YlbBSDqUBtOIOxQ2_dp0WcjdjS4iv6cCjbJ0CMaL4GnREGJcmbT0XjdbRclZHavwv7r1kmssV8_gASQgOCadDXkRa95nsstzZLp9r4omdh3Mtyw">
+</div>
+<div class="aspect-[3/4] overflow-hidden rounded">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="A clean, modern kitchen backsplash featuring intricate tile work. The tiles are dark charcoal grey with precise white grout lines, contrasting against a minimalist white countertop. Professional tools are neatly arranged on one side, implying a master at work. Soft, diffuse lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXupihOTjvkAPJ6I8AZ6tXmYmzH_AsCKfw4ffGe643qFVUuTut-jy8zI_u4aBMzHfJSg1iXGHgRK_aNTCV-7HfZgvFzNlpEq8DO3qskU_bbI3JywBnl7oLVk1U78gaXMidK7ylYKwdovFiHU2wBhQoKwF4S5KRAIcQLBlGFqTD0xhIzlGyUmw1YRJEfL1w-kg9nNayov9PyA_xb1HiexcOeduT8fEsWWrzxUwDKXEGC0d63rNISQdLtg">
+</div>
+<div class="aspect-[3/4] overflow-hidden rounded md:mt-12">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="A structural view of a bespoke cedar summer house under construction. The wooden frame is exposed, showing complex carpentry and heavy-duty joints. The craftsmanship is evident in the precision of the angles and the quality of the raw timber. Natural outdoor lighting on a clear day." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkhmE_VZLgjtiQ2jhMq-iuoFW3JGbG6C4E7e5_ld9mQmRe5LFe-Q8kI7A70SuM__bfgvtiDGEQuExajFI3FnHgQFR0R_c2csQwAfVqWYbEv-HHKHFTHXmuPVc90MMeI9n2C92mScg9a0X_7x_Gvmv5kZ32heYosqNlE0FiPGgZbOq_dM1N3r-USqhNmo3zQM5QNdOuxTExkEN7s9-HJv4M3E6ChLkTxXVoyDFHnoAq_Dl99_nheUY4aQ">
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Slider Mock -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface max-w-container-max mx-auto">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-handyman-green text-6xl mb-8">format_quote</span>
+<p class="font-headline-md text-headline-md italic leading-relaxed mb-8">
+                    "Morris Handyman services redesigned my garden which was becoming too much for me to maintain. Really happy with the results! The artificial grass looks great &amp; the plants used have made the garden alive again. Would highly recommend."
+                </p>
+<div class="flex flex-col items-center">
+<div class="w-16 h-1 px-4 bg-handyman-green mb-4"></div>
+<h5 class="font-label-lg text-label-lg uppercase font-bold text-deep-charcoal">June Holmes</h5>
+<p class="font-body-md text-on-surface-variant">Royton, Oldham</p>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface-container-high">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-surface rounded-lg shadow-sm border border-silver-metallic/20 overflow-hidden grid md:grid-cols-2">
+<div class="p-12 md:p-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Ready to Start Your Project?</h2>
+<p class="font-body-md text-on-surface-variant mb-12">Contact Gareth today for a free, no-obligation quote. Expert advice and premium service are just a message away.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-6">
+<div>
+<label class="font-label-lg text-label-lg uppercase block mb-2">Name</label>
+<input class="w-full bg-surface-container-low border-silver-metallic/40 rounded focus:ring-handyman-green focus:border-handyman-green p-3 outline-none" type="text">
+</div>
+<div>
+<label class="font-label-lg text-label-lg uppercase block mb-2">Phone</label>
+<input class="w-full bg-surface-container-low border-silver-metallic/40 rounded focus:ring-handyman-green focus:border-handyman-green p-3 outline-none" type="tel">
+</div>
+</div>
+<div>
+<label class="font-label-lg text-label-lg uppercase block mb-2">Email</label>
+<input class="w-full bg-surface-container-low border-silver-metallic/40 rounded focus:ring-handyman-green focus:border-handyman-green p-3 outline-none" type="email">
+</div>
+<div>
+<label class="font-label-lg text-label-lg uppercase block mb-2">Message</label>
+<textarea class="w-full bg-surface-container-low border-silver-metallic/40 rounded focus:ring-handyman-green focus:border-handyman-green p-3 outline-none" rows="4"></textarea>
+</div>
+<button class="w-full bg-handyman-green text-on-primary font-bold uppercase text-label-lg py-4 rounded custom-shadow hover:brightness-105 transition-all" type="submit">Send Message</button>
+</form>
+</div>
+<div class="bg-deep-charcoal p-12 md:p-16 text-surface flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md mb-8">Contact Information</h3>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-handyman-green">person</span>
+<div>
+<p class="font-label-lg text-label-lg uppercase text-surface/50">Service Lead</p>
+<p class="font-body-lg text-body-lg">Mr Gareth Morris</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-handyman-green">call</span>
+<div>
+<p class="font-label-lg text-label-lg uppercase text-surface/50">Call Directly</p>
+<p class="font-body-lg text-body-lg">07938 635 226</p>
+<p class="font-body-lg text-body-lg">07957 470 083</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-handyman-green">mail</span>
+<div>
+<p class="font-label-lg text-label-lg uppercase text-surface/50">Email Us</p>
+<p class="font-body-lg text-body-lg">info@morrishandymanservices.co.uk</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-handyman-green">location_on</span>
+<div>
+<p class="font-label-lg text-label-lg uppercase text-surface/50">Location</p>
+<p class="font-body-lg text-body-lg">10 Longdale Close, Royton, Oldham</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-6 mt-12">
+<a class="w-10 h-10 border border-silver-metallic/20 flex items-center justify-center rounded-full hover:bg-handyman-green hover:border-handyman-green transition-colors" href="index.html">
+<img alt="Facebook" class="w-4 h-4 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDYRLxN2bAI2Fw-g2Mtp9_rSyVt-cDNBjqzM4fj3Rn_wmIGtUCj98Orsj5Pkwh16q88lymLXHYtr5reKh1EkwtRWUzdGSFrZZytHWCqz1nsjjoAapzrZQICsZte0kVj_yDleS3i3xdin0DCQnLVWRDCcbSO3pi1qDjF76ricpPwl8ZPehGEHgrXniI3N6J22ZO5glo8n4wHDtLL9uQe84vpk2P70xGrKxpFP2YfNLMZtb_LD9pa6umsQ">
+</a>
+<a class="w-10 h-10 border border-silver-metallic/20 flex items-center justify-center rounded-full hover:bg-handyman-green hover:border-handyman-green transition-colors" href="index.html">
+<img alt="Twitter" class="w-4 h-4 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc1qNsbdsW_bUX6wi9XzqqGZ1R26noUXZh-hxgRFYBz7FdHUPMKTDEk8IK9JKumdsycSYzOUey__59EsMnVqjMVoltlw2-HNzL8Wah2jsM4Gu7Pv0qT4S4eJXZT3vha3mswNtllQQakjL1NcXS9we5r6KwuJ3aWLtviR5dCn_YK7SWav8PEtpN-U9G8e__l7dG02xwG4Rk_mO9JGP6Ef_GYa0yqLU1XoQK20itl2x97CPo_FpJSK2qtg">
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-charcoal text-surface py-16">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-center gap-gutter border-b border-slate-grey/20 pb-12 mb-8">
+<div class="font-headline-md text-headline-md text-surface tracking-tight font-bold">MORRIS HANDYMAN</div>
+<div class="flex flex-wrap justify-center gap-8 text-label-sm uppercase font-label-sm font-medium">
+<a class="text-silver-metallic/60 hover:text-surface transition-colors" href="#">Privacy Policy</a>
+<a class="text-silver-metallic/60 hover:text-surface transition-colors" href="index.html">Terms of Service</a>
+<a class="text-silver-metallic/60 hover:text-surface transition-colors" href="#">Insurance &amp; Bonding</a>
+<a class="text-silver-metallic/60 hover:text-surface transition-colors" href="#">Careers</a>
+</div>
+</div>
+<div class="text-center md:text-left">
+<p class="text-label-sm font-label-sm uppercase text-silver-metallic/40">© 2024 Morris Handyman Services. Expert Craftsmanship. Modern Service.</p>
+</div>
+</div>
+</footer>
+<!-- Interaction Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle logic would go here
+            const nav = document.querySelector('nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    nav.classList.add('shadow-md');
+                } else {
+                    nav.classList.remove('shadow-md');
+                }
+            });
+
+            // Smooth Scroll active states
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Silver Saints | London's Best Handyman Service</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+        }
+        .shimmer-btn:hover::after {
+            animation: shimmer 0.6s infinite;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(203, 213, 224, 0.5);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "pure-white": "#FFFFFF",
+                      "on-error-container": "#93000a",
+                      "secondary-container": "#e4e2e1",
+                      "primary-fixed": "#b0ecff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface": "#1a1c1c",
+                      "surface-variant": "#e2e2e2",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#1b1c1c",
+                      "surface-dim": "#dadada",
+                      "on-error": "#ffffff",
+                      "on-background": "#1a1c1c",
+                      "silver-metallic": "#CBD5E0",
+                      "tertiary": "#526070",
+                      "tertiary-fixed": "#d6e4f7",
+                      "deep-onyx": "#1A202C",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed": "#e4e2e1",
+                      "outline-variant": "#bbc9ce",
+                      "on-secondary-fixed-variant": "#474747",
+                      "surface-tint": "#00687c",
+                      "on-primary-fixed": "#001f27",
+                      "surface-container-highest": "#e2e2e2",
+                      "surface-container": "#eeeeee",
+                      "on-secondary-container": "#656464",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#3b4857",
+                      "tertiary-container": "#b0bed0",
+                      "on-primary-fixed-variant": "#004e5e",
+                      "on-primary-container": "#005364",
+                      "surface-container-high": "#e8e8e8",
+                      "tertiary-fixed-dim": "#bac8da",
+                      "on-tertiary-container": "#404d5c",
+                      "secondary": "#5f5e5e",
+                      "primary-container": "#27cdf1",
+                      "saint-gold": "#F6AD55",
+                      "inverse-on-surface": "#f1f1f1",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "primary": "#00687c",
+                      "outline": "#6c797e",
+                      "background": "#f9f9f9",
+                      "secondary-fixed-dim": "#c8c6c6",
+                      "surface-bright": "#f9f9f9",
+                      "on-tertiary-fixed": "#0f1d2a",
+                      "inverse-surface": "#2f3131",
+                      "primary-fixed-dim": "#3bd7fc",
+                      "surface": "#f9f9f9",
+                      "on-surface-variant": "#3c494d",
+                      "surface-container-low": "#f3f3f3",
+                      "inverse-primary": "#3bd7fc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "container-max": "1200px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "section-padding": "80px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "headline-xl": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["Hanken Grotesk"],
+                      "label-sm": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-bold": ["Inter"],
+                      "headline-md": ["Hanken Grotesk"],
+                      "headline-lg": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                      "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                      "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                      "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "500" }],
+                      "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "label-bold": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                      "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                      "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Header / TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-pure-white/80 backdrop-blur-xl border-b border-outline-variant shadow-sm h-20">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-full">
+<a class="flex items-center gap-2" href="/">
+<img alt="The Silver Saints Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLuLBiH_9O7uMN2Hom-dl-bSEGteiMFT8Mwk-tB9HZLbLxCYlhE1izQAT3KmrZi1Y3LaAEAylnDWJ30ZmXpgVi3MLmUpP9Yb0_mjJItYpBDvZkIvDpXOVcUEFH8fwcmfeBDTrAfFEuf6qcDYOnbnnpkniHxlF-wMIOaLT2TpIGtPSdiogrtPANG2c0jtjqCtpPvOmfGOZ9Hq7DKgcvyHjdkQoM438n0QH_jplEpBD7tXMboxNwhBnDS1slg">
+</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#pricing">Pricing</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#about">About Us</a>
+<a class="font-label-bold text-label-bold text-primary flex items-center gap-1" href="tel:02070999199">
+<span class="material-symbols-outlined text-lg">call</span>
+                    0207 0999 199
+                </a>
+<a class="bg-deep-onyx text-pure-white font-label-bold text-label-bold px-6 py-3 rounded-lg shimmer-btn relative overflow-hidden active:scale-95 transition-transform" href="https://bookings.silversaints.com">
+                    Instant Online Booking
+                </a>
+</nav>
+<button class="md:hidden text-on-surface" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105 animate-[pulse_10s_ease-in-out_infinite]" data-alt="A professional handyman in a crisp black Silver Saints polo shirt precisely measuring a hardwood floor installation in a bright, minimalist London apartment. The lighting is soft and high-key, emphasizing a clean and premium service aesthetic. The background is slightly blurred, focusing on his expert craftsmanship and professional tools." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCi7m1qDvEfH_IhrYOY5z79qld81d33F1niqjn2f1j7NMb0oKaJhN7t9eQMf90kdQ7xvTwqv_StCbBGLPtpduGDc5R9tkZ_vhzPVEdBhek0cZNwZBaWTan_Ypncyadvy9B63NgQHHNEq98YdP_NqrysPsVu7FsYBWPAQ_SkSj_yI1jcmsVD5tq3Xbm1exp6MpmUm18sSRsyeBz9qW6EBLA0ER4CK8b8EDzxNCRmdDMyIHxfYyxCDDNS')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-deep-onyx/80 via-deep-onyx/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full">
+<div class="max-w-2xl reveal">
+<span class="inline-block bg-primary text-pure-white font-label-bold text-label-bold px-4 py-1 rounded-full mb-6 uppercase tracking-widest">Premium Service</span>
+<h1 class="font-headline-xl text-headline-xl text-pure-white mb-6 leading-tight">
+                        London's Best Handyman Service. <span class="text-primary-fixed-dim italic">Same-day &amp; Next-day.</span>
+</h1>
+<p class="text-pure-white/90 font-body-lg text-body-lg mb-10 max-w-lg">
+                        Professional multi-trade experts covering every London borough. Fully insured, 4.9★ rated, and backed by our satisfaction guarantee.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary text-pure-white px-8 py-4 rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-2 shimmer-btn relative overflow-hidden shadow-lg shadow-primary/20" href="https://bookings.silversaints.com">
+<span class="material-symbols-outlined">calendar_month</span>
+                            Instant Online Booking
+                        </a>
+<a class="bg-pure-white/10 backdrop-blur-md border border-pure-white/30 text-pure-white px-8 py-4 rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-2 hover:bg-pure-white/20 transition-all" href="#contact">
+                            Request a Quote
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Indicators -->
+<section class="py-12 bg-surface-container-low border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold">4.9★</span>
+<span class="text-label-sm font-label-bold uppercase tracking-tighter">On Trustpilot</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold">Google</span>
+<span class="text-label-sm font-label-bold">Reviews (1k+)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold">Checkatrade</span>
+<span class="text-label-sm font-label-bold">Verified</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold italic font-serif">Gas Safe</span>
+<span class="text-label-sm font-label-bold">Registered</span>
+</div>
+</div>
+</section>
+<!-- Service Overview - Bento Grid -->
+<section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="services">
+<div class="text-center mb-16 reveal">
+<h2 class="font-headline-lg text-headline-lg mb-4">Our 'Silver Service' Expertise</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">From leaking taps to complex electrical work, our multi-trade Saints handle everything with precision and punctuality.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
+<div class="md:col-span-8 md:row-span-1 group relative overflow-hidden rounded-xl glass-card p-8 flex flex-col justify-between transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">construction</span>
+<h3 class="font-headline-md text-headline-md mb-2">Fitting &amp; Fixing</h3>
+<ul class="text-on-surface-variant space-y-2 mb-6 max-w-sm">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check</span> Furniture Assembly</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check</span> Sash Cord Replacement</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check</span> Locks, Hinges &amp; Handles</li>
+</ul>
+</div>
+<div class="absolute right-0 bottom-0 w-1/2 h-full opacity-10 group-hover:opacity-20 transition-opacity">
+<img class="object-cover w-full h-full grayscale" data-alt="A clean workshop environment with neatly organized high-end power tools and wooden components on a workbench, symbolizing meticulous fitting and fixing services in a modern professional setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwx66bJkPKZzipT6NBiTPhi4zqbPYduLhewp6V5R9krnp3lz5RkTDVpKl3DJbT7ZbqAbpD0SMpVBC86_xTeq9QOqogIo5PIAO9ptaude2_5LypMXeuiAj4rM6nHBq1QMhvelciAaNR2OHKQumFgTJz3H9qlmiz0VkmeiTShK6TA203qL6IhoS4hhAlFOms0eQqE2Nnin9TAQSL_7zJSXHO4BrJIX-CjIpFfz1k9pW3rHd9qQIrfx3c">
+</div>
+<a class="text-primary font-label-bold text-label-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="index.html">Explore Fitting <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-xl bg-deep-onyx p-8 text-pure-white flex flex-col justify-between transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-4">plumbing</span>
+<h3 class="font-headline-md text-headline-md mb-2 text-pure-white">Plumbing</h3>
+<p class="text-pure-white/70 text-body-md">Shower repairs, toilet fixes, and unblocking services available same-day.</p>
+</div>
+<a class="text-primary-fixed-dim font-label-bold text-label-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="silver-saints-contact-us.html">Water Works <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-xl glass-card p-8 flex flex-col justify-between transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">bolt</span>
+<h3 class="font-headline-md text-headline-md mb-2">Electrical</h3>
+<p class="text-on-surface-variant text-body-md">Safe installation of light fittings, sockets, and fault investigation.</p>
+</div>
+<a class="text-primary font-label-bold text-label-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="index.html">Power Up <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="md:col-span-8 md:row-span-1 group relative overflow-hidden rounded-xl border border-outline-variant/30 bg-surface-container-high p-8 flex flex-col justify-between transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="grid md:grid-cols-2 gap-8 items-center h-full">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">frame_inspect</span>
+<h3 class="font-headline-md text-headline-md mb-2">Hanging Stuff</h3>
+<p class="text-on-surface-variant text-body-md mb-6">Precise hanging of mirrors, paintings, and TV installations. We ensure every frame is perfectly level.</p>
+<a class="text-primary font-label-bold text-label-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="silver-saints-contact-us.html">Get Hanging <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="h-full rounded-lg overflow-hidden">
+<img class="object-cover w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="A macro shot of a laser level projecting a crisp red line onto a gallery wall where expensive art is being hung. The scene conveys absolute precision and a high-end luxury service feel with neutral tones and focused lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATgdUj-sYeD_B5-7aMYT1IeQtYyqPjIqBgdaLbph6UDKW1Nw2b8TxD-R_Es9r3GtBa69zO7VCi_-ltSZ2dd8RaYROA8CyViknv9ESmbhLuqK_7k96LyIttDdy2G46IgwSVV9Jnu5ckv8LckqyLbkD98P6Ezeh6FlT7WUGf1FdmCa8HX3Y2PsrZtMRmYWzvLYkLQwYUwtT2J8S1n9tzov4j0hHFyUdcpb-WOFXMIyfbxjzFnE2J5sx_">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Meet the Saints -->
+<section class="py-section-padding bg-deep-onyx text-pure-white overflow-hidden">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg mb-4">Meet the Saints</h2>
+<p class="text-pure-white/70">Our team consists of experienced, friendly, and fully insured handymen specializing in all home repairs. We don't just fix things; we bring peace of mind.</p>
+</div>
+<a class="mt-8 md:mt-0 text-primary-fixed-dim font-label-bold text-label-bold border-b border-primary-fixed-dim/30 pb-2 hover:border-primary-fixed-dim transition-all" href="#">View Our Entire Team</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Saint 1 -->
+<div class="group reveal" style="transition-delay: 100ms">
+<div class="aspect-[0.8] rounded-2xl overflow-hidden mb-6 relative">
+<img alt="Martin - Silver Saint" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLtafQh_GhTmCTHKgNmI4FEkgtBd--skTex5xvm2yyTARVgN2G8uq90CsEDFxv5C_k6yldhu_jovkJg4e11DJj53WC3ae2W0DSwfv-W6ynOh9VdYVuz1ahEECRaWMp5LMcrWIXJCzx1EKdQgYIpO6O0A_87rWmcTzf8wTOSoa8Om2BlZxcIL44C85EVPEjrLERuIaTiaKmCLNEs5Mwv76Vt6XUXZaPppLrRqZvmayOdbYP_hPhVo8gqD6A">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-onyx/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<p class="text-label-bold font-label-bold">Multi-trade Specialist • 12 years exp.</p>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md">Martin</h4>
+<div class="flex items-center gap-1 text-saint-gold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-2 text-pure-white/60 font-label-sm text-label-sm">4.9 (240 reviews)</span>
+</div>
+</div>
+<!-- Saint 2 -->
+<div class="group reveal" style="transition-delay: 200ms">
+<div class="aspect-[0.8] rounded-2xl overflow-hidden mb-6 relative">
+<img alt="Stan - Silver Saint" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLu3pbXqT1dk_pvrBOIG230HFsYDg0cItoJROHS4fwLGtnzO2OQO9vivemh48aH5nbZENtrJyfYZ5O2xHo3JTiTz6mCUVjG11aahtTpR5R-Cvk48t9OjAulHmYYc_MrHWxXSocQaXwmOnACaqFcpnHkSOyxIQMRyqfEBVycrK7TJRRWiZmdrEAjcqXA7ZnqniMTGatiLX85a2mB1GW2zTkkl8w6oL_CmiJy5sGowbfwgDeELnK0_E2JgADw">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-onyx/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<p class="text-label-bold font-label-bold">Plumbing &amp; Gas Specialist</p>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md">Stan</h4>
+<div class="flex items-center gap-1 text-saint-gold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-2 text-pure-white/60 font-label-sm text-label-sm">5.0 (180 reviews)</span>
+</div>
+</div>
+<!-- Saint 3 -->
+<div class="group reveal" style="transition-delay: 300ms">
+<div class="aspect-[0.8] rounded-2xl overflow-hidden mb-6 relative">
+<img alt="Pieter - Silver Saint" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLslSCrSdpRh5KjlTABYzsGmSpcQFzHUfLNqu8wO9idPf5IyKlIlPFj19sqz2NrK7wmZWuHC5wikiedGvX4f8wcaflX2dnQsSi-FmiTOK0MdNYkDEDhaVUvmUnMwl8ndk79Dj59WRwkJg5ziH-VxOA2Uggxyo5kT_-R11FZeOR-CrB_EbnKP-lwBHp3hHiMLrHe9qoK8zT2eng9dm5c3QE3OcQo2ek8w-WQnyxUZQzhz_HulsjcBC8HtPA">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-onyx/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<p class="text-label-bold font-label-bold">Electrical &amp; Smart Home Saint</p>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md">Pieter</h4>
+<div class="flex items-center gap-1 text-saint-gold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-2 text-pure-white/60 font-label-sm text-label-sm">4.9 (310 reviews)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof - Testimonials -->
+<section class="py-section-padding bg-surface-container overflow-hidden">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-16 reveal">
+<h2 class="font-headline-lg text-headline-lg mb-4">What Our Clients Say</h2>
+<p class="text-on-surface-variant">Rated 4.9★ across Google, Trustpilot and Checkatrade based on over 1,000 verified reviews.</p>
+</div>
+<div class="flex gap-6 overflow-x-auto pb-8 snap-x no-scrollbar">
+<!-- Review 1 -->
+<div class="flex-shrink-0 w-80 md:w-96 snap-center glass-card p-8 rounded-xl reveal">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-pure-white font-bold text-xl">C</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-[18px]">Caroline Fenston</h5>
+<p class="text-label-sm text-on-surface-variant">Client since 2022</p>
+</div>
+</div>
+<div class="flex text-saint-gold mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface text-body-md italic leading-relaxed">
+                            "Silver Saints is very efficient and helpful and reliable. I used Pawel who was timely and friendly and got the job done. Great!"
+                        </p>
+</div>
+<!-- Review 2 -->
+<div class="flex-shrink-0 w-80 md:w-96 snap-center glass-card p-8 rounded-xl reveal" style="transition-delay: 150ms">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-tertiary flex items-center justify-center text-pure-white font-bold text-xl">J</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-[18px]">Jack O'Shea</h5>
+<p class="text-label-sm text-on-surface-variant">Client since 2023</p>
+</div>
+</div>
+<div class="flex text-saint-gold mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface text-body-md italic leading-relaxed">
+                            "Great service. Jonathan was very thorough and knowledgeable. Embodies the 'Silver Service' ethos perfectly."
+                        </p>
+</div>
+<!-- Review 3 -->
+<div class="flex-shrink-0 w-80 md:w-96 snap-center glass-card p-8 rounded-xl reveal" style="transition-delay: 300ms">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-saint-gold flex items-center justify-center text-pure-white font-bold text-xl">F</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-[18px]">Francesca Snelling</h5>
+<p class="text-label-sm text-on-surface-variant">Client since 2021</p>
+</div>
+</div>
+<div class="flex text-saint-gold mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface text-body-md italic leading-relaxed">
+                            "Eugene is top notch! Super efficient, polite and knowledgeable. I wouldn't trust anyone else with my home maintenance."
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="reveal">
+<h2 class="font-headline-lg text-headline-lg mb-6">Need a Saint? Let's fix it.</h2>
+<p class="text-on-surface-variant text-body-lg mb-8">
+                        Whether it's a minor odd job or a full-day renovation, we're here to help. Fill in the form and we'll get back to you with an estimate or confirmed booking.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold">Phone Support</h4>
+<p class="text-on-surface-variant">0207 0999 199 (Mon-Fri, 8am-6pm)</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold">Email Us</h4>
+<p class="text-on-surface-variant">fixit@silversaints.co.uk</p>
+</div>
+</div>
+</div>
+</div>
+<div class="reveal glass-card p-8 md:p-12 rounded-2xl shadow-2xl shadow-deep-onyx/5">
+<form class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-bold text-label-bold mb-2">Name</label>
+<input class="w-full bg-background border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Your full name" type="text">
+</div>
+<div>
+<label class="block font-label-bold text-label-bold mb-2">Email</label>
+<input class="w-full bg-background border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="email@address.com" type="email">
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold mb-2">Phone</label>
+<input class="w-full bg-background border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="07123 456 789" type="tel">
+</div>
+<div>
+<label class="block font-label-bold text-label-bold mb-2">Service Request</label>
+<textarea class="w-full bg-background border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="How can a Saint help you today?" rows="4"></textarea>
+</div>
+<button class="w-full bg-deep-onyx text-pure-white py-4 rounded-lg font-label-bold text-label-bold shimmer-btn relative overflow-hidden active:scale-[0.98] transition-transform" type="submit">
+                            Send Request
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-onyx text-pure-white pt-section-padding pb-8">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<img alt="Silver Saints Logo" class="h-8 mb-6 brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AP1WRLuLBiH_9O7uMN2Hom-dl-bSEGteiMFT8Mwk-tB9HZLbLxCYlhE1izQAT3KmrZi1Y3LaAEAylnDWJ30ZmXpgVi3MLmUpP9Yb0_mjJItYpBDvZkIvDpXOVcUEFH8fwcmfeBDTrAfFEuf6qcDYOnbnnpkniHxlF-wMIOaLT2TpIGtPSdiogrtPANG2c0jtjqCtpPvOmfGOZ9Hq7DKgcvyHjdkQoM438n0QH_jplEpBD7tXMboxNwhBnDS1slg">
+<p class="text-silver-metallic opacity-80 mb-6">
+                        London's leading handyman service. Dedicated to punctuality, expertise, and outstanding customer care.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-pure-white/20 flex items-center justify-center hover:bg-primary transition-all" href="silver-saints-contact-us.html"><span class="material-symbols-outlined text-sm">thumb_up</span></a>
+<a class="w-10 h-10 rounded-full border border-pure-white/20 flex items-center justify-center hover:bg-primary transition-all" href="silver-saints-contact-us.html"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold mb-6 text-pure-white">Our Services</h4>
+<ul class="space-y-4 text-silver-metallic opacity-80">
+<li><a class="hover:text-primary-fixed transition-all" href="index.html">Plumbing Work</a></li>
+<li><a class="hover:text-primary-fixed transition-all" href="index.html">Electrical Installations</a></li>
+<li><a class="hover:text-primary-fixed transition-all" href="index.html">Carpentry &amp; Fixing</a></li>
+<li><a class="hover:text-primary-fixed transition-all" href="index.html">Sash Window Draught Proofing</a></li>
+<li><a class="hover:text-primary-fixed transition-all" href="index.html">Gas Safety Certificates</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold mb-6 text-pure-white">Company</h4>
+<ul class="space-y-4 text-silver-metallic opacity-80">
+<li><a class="hover:text-primary-fixed transition-all" href="index.html">About Us</a></li>
+<li><a class="hover:text-primary-fixed transition-all" href="index.html">Our Rates</a></li>
+<li><a class="hover:text-primary-fixed transition-all" href="silver-saints-contact-us.html">Become a Saint</a></li>
+<li><a class="hover:text-primary-fixed transition-all" href="#">Customer Feedback</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold mb-6 text-pure-white">Legal</h4>
+<ul class="space-y-4 text-silver-metallic opacity-80">
+<li><a class="hover:text-primary-fixed transition-all" href="index.html">Terms of Service</a></li>
+<li><a class="hover:text-primary-fixed transition-all" href="index.html">Privacy Policy</a></li>
+<li><a class="hover:text-primary-fixed transition-all" href="index.html">Cookie Policy</a></li>
+<li><a class="hover:text-primary-fixed transition-all" href="silver-saints-contact-us.html">Complaints Procedure</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-pure-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-silver-metallic text-label-sm opacity-60">© 2024 Silver Saints Handyman Service. All rights reserved.</p>
+<div class="flex items-center gap-2 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-default">
+<span class="text-label-sm font-label-bold">TrustPilot</span>
+<div class="flex gap-0.5 text-saint-gold">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-pure-white/90 backdrop-blur-md border-t border-outline-variant/30 flex justify-around items-center h-16 pb-safe shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-secondary" href="#services">
+<span class="material-symbols-outlined text-2xl">construction</span>
+<span class="text-label-sm font-label-sm">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary" href="tel:02070999199">
+<span class="material-symbols-outlined text-2xl">call</span>
+<span class="text-label-sm font-label-sm">Call</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold relative" href="https://bookings.silversaints.com">
+<div class="absolute -top-1 w-2 h-2 bg-primary rounded-full animate-ping"></div>
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+<span class="text-label-sm font-label-sm">Book</span>
+</a>
+<button class="flex flex-col items-center justify-center text-secondary" id="mobileDrawerBtn">
+<span class="material-symbols-outlined text-2xl">menu</span>
+<span class="text-label-sm font-label-sm">Menu</span>
+</button>
+</nav>
+<script>
+        // Simple reveal animation on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Mobile Menu Interaction
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawerBtn = document.getElementById('mobileDrawerBtn');
+        
+        [mobileMenuBtn, mobileDrawerBtn].forEach(btn => {
+            btn?.addEventListener('click', () => {
+                alert('In a full implementation, this would open a beautiful full-screen navigation overlay.');
+            });
+        });
+    </script>
+</body></html>

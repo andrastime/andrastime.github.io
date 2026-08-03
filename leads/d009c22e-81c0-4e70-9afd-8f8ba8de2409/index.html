@@ -1,0 +1,446 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Handyman &amp; Gardening Services | Professional Property Care</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(26, 29, 30, 0.8) 0%, rgba(26, 29, 30, 0.4) 50%, rgba(26, 29, 30, 0) 100%);
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#3f6d38",
+                    "on-surface-variant": "#444749",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary": "#030200",
+                    "on-tertiary-fixed": "#251a00",
+                    "surface-variant": "#e1e3e4",
+                    "surface-bright": "#f8f9fa",
+                    "background": "#f8f9fa",
+                    "tertiary-container": "#261b00",
+                    "secondary": "#3b6934",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-primary-fixed-variant": "#444748",
+                    "on-tertiary-container": "#a67f00",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "charcoal-deep": "#1A1D1E",
+                    "on-tertiary-fixed-variant": "#5a4300",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c4c7c8",
+                    "on-secondary-fixed-variant": "#23501e",
+                    "tertiary-fixed": "#ffdf99",
+                    "slate-muted": "#64748B",
+                    "on-surface": "#191c1d",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "surface-container": "#edeeef",
+                    "inverse-surface": "#2e3132",
+                    "inverse-on-surface": "#f0f1f2",
+                    "primary": "#010202",
+                    "on-primary-fixed": "#191c1d",
+                    "on-primary-container": "#828586",
+                    "surface-tint": "#5c5f60",
+                    "primary-fixed-dim": "#c5c7c8",
+                    "forest-refined": "#2D5A27",
+                    "outline": "#747879",
+                    "primary-container": "#1a1d1e",
+                    "surface-dim": "#d9dadb",
+                    "inverse-primary": "#c5c7c8",
+                    "secondary-container": "#b9eeab",
+                    "safety-gold": "#E6B325",
+                    "surface-container-low": "#f3f4f5",
+                    "ice-white": "#FFFFFF",
+                    "primary-fixed": "#e1e3e4",
+                    "on-background": "#191c1d",
+                    "secondary-fixed": "#bcf0ae",
+                    "surface-container-high": "#e7e8e9",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#f3bf32",
+                    "secondary-fixed-dim": "#a1d494",
+                    "on-secondary-fixed": "#002201",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1200px",
+                    "margin-mobile": "20px",
+                    "margin-tablet": "32px",
+                    "base": "8px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "caption": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-safety-gold/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-charcoal-deep/90 backdrop-blur-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="text-headline-md font-headline-md font-bold tracking-tight text-charcoal-deep dark:text-ice-white" href="index.html">Handyman &amp; Garden Pro</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-forest-refined dark:text-secondary-fixed font-bold border-b-2 border-forest-refined pb-1 font-label-md text-label-md" href="our-services.html">Services</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-forest-refined transition-colors duration-300 font-label-md text-label-md" href="our-work-portfolio.html">Portfolio</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-forest-refined transition-colors duration-300 font-label-md text-label-md" href="index.html">About</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-forest-refined transition-colors duration-300 font-label-md text-label-md" href="contact-us-request-a-quote.html">Contact</a>
+</div>
+<button class="bg-charcoal-deep text-ice-white px-6 py-2.5 rounded-lg font-label-md text-label-md active:scale-95 transition-transform duration-200 shadow-lg hover:shadow-charcoal-deep/10">
+                Request a Quote
+            </button>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105 animate-[subtle-zoom_20s_infinite_alternate]" data-alt="A cinematic, wide-angle shot of a luxurious modern home with a perfectly manicured lawn and lush architectural garden during the golden hour. The soft evening sunlight illuminates the clean stone paths and vibrant green shrubs, creating a warm and welcoming atmosphere. The house features elegant glass windows and natural wood accents, embodying a premium, high-end residential aesthetic with a palette of deep greens, warm golds, and slate grays." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQmEZecNJriKB5qCHc6IaJW6IXSX9TLsIvzu-zRTo1wqUThKQNhxUVQdVwFBHsggYSPOHjtvPBZhDGa_AcbqqFwd5oZEUcGU-v7pQsQbiu8Zh8PUFKoer9NXE4cHTHAUL4P1UxAcxrzA2Hr-JQlRXGWcp2AjG-b7sTf1dK1y69jASnw3IQTqkysBXmobqiQvQo_QaMeZM9FIvemVihzxgE0LR96XqHqo7lYdJAC2F6yRzWjCDLyrM5')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl">
+<h1 class="font-display-lg text-display-lg text-ice-white mb-6 animate-fade-in-up">
+                        Masterful Care for Your <span class="text-safety-gold">Home &amp; Garden</span>
+</h1>
+<p class="font-body-lg text-body-lg text-ice-white/80 mb-10 leading-relaxed max-w-lg">
+                        Professional handyman services and expert landscaping tailored for the discerning homeowner. We bring precision, reliability, and beauty to every corner of your property.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-safety-gold text-charcoal-deep px-8 py-4 rounded-lg font-label-md text-label-md font-bold flex items-center justify-center gap-2 hover:bg-white transition-all active:scale-95 shadow-xl">
+<span class="material-symbols-outlined">calendar_today</span>
+                            Book a Consultation
+                        </button>
+<button class="bg-ice-white/10 backdrop-blur-md border border-ice-white/30 text-ice-white px-8 py-4 rounded-lg font-label-md text-label-md font-bold hover:bg-ice-white/20 transition-all active:scale-95">
+                            View Portfolio
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us - Bento Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-deep mb-4">Why Choose Us</h2>
+<div class="h-1.5 w-24 bg-safety-gold rounded-full"></div>
+</div>
+<div class="bento-grid">
+<!-- Feature 1 -->
+<div class="col-span-12 md:col-span-4 bg-white p-8 rounded-xl border border-surface-variant flex flex-col gap-6 hover:shadow-xl transition-shadow duration-300">
+<div class="w-14 h-14 rounded-lg bg-forest-refined/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-forest-refined text-3xl">verified</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-charcoal-deep mb-3">Licensed Experts</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Every technician is fully licensed, insured, and background-checked for your peace of mind.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="col-span-12 md:col-span-4 bg-charcoal-deep p-8 rounded-xl flex flex-col gap-6 text-ice-white">
+<div class="w-14 h-14 rounded-lg bg-safety-gold flex items-center justify-center">
+<span class="material-symbols-outlined text-charcoal-deep text-3xl">precision_manufacturing</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-3">Precision Focused</h3>
+<p class="text-ice-white/70 font-body-md text-body-md">We treat every property with the same meticulous attention to detail we would apply to our own homes.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="col-span-12 md:col-span-4 bg-white p-8 rounded-xl border border-surface-variant flex flex-col gap-6 hover:shadow-xl transition-shadow duration-300">
+<div class="w-14 h-14 rounded-lg bg-on-secondary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl">schedule</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-charcoal-deep mb-3">Reliable Timing</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">We value your time. Our team arrives as scheduled and completes work efficiently without cutting corners.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Summary -->
+<section class="py-24 bg-surface-container-low">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-deep mb-4">Professional Services</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">From structural repairs to seasonal landscaping, we provide comprehensive solutions for property maintenance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service Card 1 -->
+<div class="group bg-white rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+<div class="h-64 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A close-up high-quality photo of professional carpentry tools being used on a clean oak wood surface. The lighting is bright and industrial-modern, highlighting the fine texture of the wood shavings and the precision of the measurement marks. The color palette consists of warm wood tones, steel grays, and a soft white background, reflecting a high-end craftsman aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcA_ziakJhnod9wMAJcUwboVCdYacuQ7Z7CQAqbuMGyIsj1Hn1U0gCtPapOHqqgpUBygxVft6bs0HhXmH4nzqKDeovufHYCqNnMUm63e-M-7Hrbmz-wr5dHA1c0-7APFxyQ9-VLdLAIIOR50y9FgojlHhxjdI8CTWCMiyWBqqfrz_lyqFP5Xn4LjcPEG4UQSbaclT_hRxDtIXPfIVxXeJqiw_pyUnAxr72k25Afq9IjckvX3bpl85r')"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-label-md font-label-md text-charcoal-deep">
+                                Handyman
+                            </div>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-headline-md mb-3">Home Repairs &amp; Carpentry</h4>
+<p class="text-on-surface-variant mb-6 font-body-md">Custom shelving, furniture assembly, structural repairs, and specialized finish carpentry.</p>
+<a class="inline-flex items-center text-forest-refined font-bold gap-2 hover:gap-4 transition-all" href="our-services.html">
+                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-white rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+<div class="h-64 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A stunning aerial view of a geometrically designed residential garden with stone paths, structured flower beds, and lush green grass. The garden is meticulously kept, with blooming flowers in a palette of lavender and white against deep emerald greens. Sunlight filters through the leaves of a nearby tree, casting soft dappled shadows. Elegant and professional landscape design photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBPtbuIKCf-7x3kkGFtuhVcJyusRlWXg-NWud3YVNoFkBQPJamavHLyWk51xoP3L5v_nMEldhcf7GiaU6xbmkhuu5DKIzu2fp0mt3hTvz58_OMNjEWG-yJlYO74DBPfgKeBGdIP6dNjP8RZTcV6zXusWPReqnl1k80M8i1caGPSykYmKDyEdmNUMJY8Kt6BNuvz4p-8sAoc5saPsHQ3kEGVbAVK7iScdj--oKm4Gz-R5NzpXKJThmWi')"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-label-md font-label-md text-charcoal-deep">
+                                Gardening
+                            </div>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-headline-md mb-3">Landscape Architecture</h4>
+<p class="text-on-surface-variant mb-6 font-body-md">Seasonal maintenance, planting design, irrigation systems, and professional lawn care.</p>
+<a class="inline-flex items-center text-forest-refined font-bold gap-2 hover:gap-4 transition-all" href="our-services.html">
+                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-white rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+<div class="h-64 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A modern, minimalist residential exterior wall being professionally painted in a soft slate gray. A high-quality paint roller is visible in the corner of the frame, showing smooth, even application. The lighting is clear daylight, emphasizing the clean lines and crisp contrast between the paint and the white architectural trim. High-end property restoration and painting aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCilc4QS1K2aKKVsEL2p0cF7hKYiN_vfKmdCpL2sgriaf9Kh4ccrEVc9sY6d_7_KbVJhhQb6kA5IjKTWewUKUbQt6-DcAVrmv-fV0DMD6N1uDNIGLQygFW0bh9dBiy7wnytcH-423-R0Fej2HDGg8syzLd8OvQNQ31YCMaN6jS4Sy0CIpCMCsPLWmd91H4SulRx5wqiD3N0ytrK0jibKJepCngq5eYSAzn5fxgxCQZfrigzfaegdWj0')"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-label-md font-label-md text-charcoal-deep">
+                                Maintenance
+                            </div>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-headline-md mb-3">Property Restoration</h4>
+<p class="text-on-surface-variant mb-6 font-body-md">Exterior painting, pressure washing, gutter clearing, and fence restoration services.</p>
+<a class="inline-flex items-center text-forest-refined font-bold gap-2 hover:gap-4 transition-all" href="our-services.html">
+                                Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Projects Preview -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-charcoal-deep mb-2">Latest Projects</h2>
+<p class="text-on-surface-variant">Witness the transformation of premium properties.</p>
+</div>
+<button class="hidden md:block border-b-2 border-charcoal-deep font-bold pb-1 text-label-md">View All Projects</button>
+</div>
+<div class="grid grid-cols-12 gap-6">
+<div class="col-span-12 md:col-span-8 group relative rounded-xl overflow-hidden h-[400px]">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="A wide-angle landscape photograph of a finished custom backyard project featuring a sleek wooden deck, a modern fire pit area, and architectural lighting illuminating the space at dusk. The mood is sophisticated and peaceful, with a deep navy sky contrasting against the warm golden glow of the deck lights. The surrounding garden is perfectly structured with dark mulch and ornamental grasses." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTsrgKNSElA9piZisNiaoMURlYh19X2Dk9KhOKvkqzgB80TSDLRvhvFBOG3Y1qcsOa4KLP75VsQfAV0XwqL8suHyWH4yzCckr9yScesLPmj1hxJ5-tBoiRM8ZOoFgUJdYscUFnNyE7L27YKUrDZvj5HEoeJEcTQ620iO3gw4Qfp2bPTaalLwS2cUImCAkV0okEjC5xa7FCM3mqNToNa18ujuvACngcSZEGoKuWKN3Pe5pjA03R0fAs')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-deep/80 to-transparent flex flex-col justify-end p-10">
+<span class="text-safety-gold font-bold mb-2 uppercase tracking-widest text-caption">Landscaping &amp; Decking</span>
+<h4 class="text-ice-white font-headline-lg text-headline-lg mb-4">Westwood Estate Transformation</h4>
+<p class="text-ice-white/70 max-w-lg">Complete redesign of a 0.5-acre property including a custom hardwood deck and integrated lighting.</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 grid gap-6">
+<div class="group relative rounded-xl overflow-hidden h-[188px]">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A close-up shot of a perfectly installed white marble backsplash in a modern kitchen. The grout lines are crisp and clean, reflecting professional craftsmanship. Soft ambient lighting highlights the subtle gray veining in the stone. A minimalist and elegant look for professional handyman home renovation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQL4A8K2wpreaWy5opRe0S1Vz2cQ665qhnhRzY_Oa3AiudL3P6tpg_oq8sg-NiHJeqvMxPO40_MUfsvT9DK30HNvYaMt3gvioqDOdp9LkXql-V6HcfPjkooCHBwuHEPHktZ9LKZBeSRMOHGW_qoIV0kenCd2Xq7bULbjOfakDCnVtkmW_veREjZIYrRuyAV_DcYtisqnFrz37RgPWgX4j0UXcP-GtyAVxy1dynD-rzVKjRj4S_3cXt')"></div>
+<div class="absolute inset-0 bg-charcoal-deep/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="bg-white text-charcoal-deep px-4 py-2 rounded-lg font-bold text-label-md">View Details</button>
+</div>
+</div>
+<div class="group relative rounded-xl overflow-hidden h-[188px]">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A beautifully restored vintage wooden door with polished brass hardware. The wood grain is rich and vibrant, protected by a deep satin varnish. The surrounding stonework is clean and well-pointed. Professional property restoration and attention to detail photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5VsuC9isIQW10z36sbspVF_qXypb7sGj4b-8Sp4-JD7Ibv-YA-6-58jogwBri4x5ZanLdf-LdPO0XHkLUHwV3jr9idYBBKJ_sNJ4OW1NOA_ymJpwbfF0LzKbuMwAZ-NZdDEFYxk67_vUns-glfxeUX9fudRsC9sqKvRKnJCYJvEkBc27KOBQpZhbgq1gNp_wBZIWVOZlG1ATtw6wGnHjO3jIKuKp1DmuMKDXn005m3_w_j_BgDl7n')"></div>
+<div class="absolute inset-0 bg-charcoal-deep/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="bg-white text-charcoal-deep px-4 py-2 rounded-lg font-bold text-label-md">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-charcoal-deep text-ice-white">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div>
+<span class="text-safety-gold font-bold text-label-md uppercase tracking-[0.2em] mb-6 block">Testimonials</span>
+<h2 class="font-display-lg text-display-lg mb-8">What Our Clients Say About Us</h2>
+<div class="flex gap-4 mb-8">
+<div class="w-12 h-12 rounded-full bg-safety-gold/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-safety-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-safety-gold/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-safety-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-safety-gold/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-safety-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-safety-gold/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-safety-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-safety-gold/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-safety-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-ice-white/60 font-body-lg">Trusted by over 500+ homeowners in the region for high-end maintenance and renovation.</p>
+</div>
+<div class="space-y-8">
+<!-- Testimonial 1 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-2xl relative">
+<span class="material-symbols-outlined absolute top-8 right-8 text-white/10 text-6xl">format_quote</span>
+<p class="font-body-lg text-body-lg mb-6 italic leading-relaxed">
+                                "The attention to detail is simply unmatched. They handled our garden redesign and several interior repairs with absolute professionalism. It’s rare to find such reliable experts."
+                            </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged woman with a friendly expression, set against a blurred background of a modern living room. The lighting is soft and flattering, emphasizing a trustworthy and satisfied customer look. High-end lifestyle photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv5_rh5oXNyE2gWNUo4uL-ff6MS3AipqObUJNS9yg2IYVcOwLRxft7NhKvbq0Ro-9U3yYdzaEf5KKz182Vc8CSWpnHwWZHcIIie0haM72Y57c9E3zcbzVQG4_OTNp80m_txiQkpdqNGHvw0bcpCLYqtRHPO2Njb0d5qj1P-UznWiyE0jryvq61Mbkp9wDHeuCy62MZLzIFTJwTWcUquQzvKj1WfFEg6O7TxNz9h79BirPO5_olXSly">
+</div>
+<div>
+<p class="font-bold">Eleanor Vance</p>
+<p class="text-caption text-ice-white/50 uppercase tracking-wider">Property Owner, Bel Air</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-2xl relative">
+<span class="material-symbols-outlined absolute top-8 right-8 text-white/10 text-6xl">format_quote</span>
+<p class="font-body-lg text-body-lg mb-6 italic leading-relaxed">
+                                "They are our go-to for everything. From seasonal garden prep to minor structural fixes, the team is always prompt, polite, and exceptionally skilled."
+                            </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a mature man with grey hair and glasses, wearing a smart casual sweater. He has a warm, confident smile, conveying reliability and professional success. High-end studio portrait lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAekibGCudstgNVF7DHtssA947TV_zUAbSVE9iYgkzbkN-Ip3_SsiFpqV2M5ZBL6ISVP9jja8lKjlnpx6meJa1ozFmYeYNEbgpZ9OkXRXFN3u-61PCaKHnxDHmO4rhkBKq6JT6ZIOVLwXjF9RvNVKyHUKbSQxal56DG5_ok9IL8y8bg69LqRwlFyXnuvTWoRs16OjMGQfvN7Mn6VCM7FghY4v3oS3L9obBsD-_vh1xuBkfjFYelSNNx">
+</div>
+<div>
+<p class="font-bold">Julian Sterling</p>
+<p class="text-caption text-ice-white/50 uppercase tracking-wider">Estate Manager</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-margin-mobile relative overflow-hidden">
+
+<div class="relative z-10 max-w-3xl mx-auto text-center">
+<h2 class="font-display-lg text-display-lg text-charcoal-deep mb-8">Ready to elevate your property?</h2>
+<p class="text-on-surface-variant text-body-lg mb-12">Connect with our experts today for a bespoke quote tailored to your property's specific needs.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-charcoal-deep text-ice-white px-10 py-5 rounded-lg font-bold text-label-md hover:shadow-2xl transition-all">Request a Bespoke Quote</button>
+<button class="bg-white border border-outline-variant text-charcoal-deep px-10 py-5 rounded-lg font-bold text-label-md hover:bg-surface-container-low transition-all">Call Our Office</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-charcoal-deep dark:bg-surface-container-lowest w-full">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<a class="text-headline-md font-headline-md text-ice-white dark:text-on-surface font-bold" href="index.html">Handyman &amp; Garden Pro</a>
+<p class="text-surface-variant dark:text-on-surface-variant text-caption font-caption max-w-xs text-center md:text-left">
+                    © 2024 Handyman &amp; Gardening Services. Professional Care for Your Property.
+                </p>
+</div>
+<div class="flex gap-8 flex-wrap justify-center">
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-safety-gold transition-all font-body-md text-body-md" href="index.html">Privacy Policy</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-safety-gold transition-all font-body-md text-body-md" href="index.html">Terms of Service</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-safety-gold transition-all font-body-md text-body-md" href="index.html">FAQ</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-safety-gold transition-all font-body-md text-body-md" href="index.html">Cookie Settings</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-ice-white hover:bg-safety-gold hover:text-charcoal-deep transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">qr_code_2</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-ice-white hover:bg-safety-gold hover:text-charcoal-deep transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">mail</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-ice-white hover:bg-safety-gold hover:text-charcoal-deep transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">location_on</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+
+        // Interactive Button Scale
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
+            btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
+            btn.addEventListener('mouseleave', () => btn.classList.remove('scale-95'));
+        });
+    </script>
+</body></html>

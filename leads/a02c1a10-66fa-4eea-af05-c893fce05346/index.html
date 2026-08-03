@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>G Property Maintenance | Expert Property Care</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Hanken+Grotesk:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f7f9fb",
+                        "surface-dim": "#d8dadc",
+                        "tertiary-fixed": "#d8e3fb",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "primary": "#000000",
+                        "primary-fixed": "#dae2fd",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#fea619",
+                        "primary-fixed-dim": "#bec6e0",
+                        "secondary-fixed": "#ffddb8",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary": "#000000",
+                        "surface-tint": "#565e74",
+                        "surface-container": "#eceef0",
+                        "on-surface-variant": "#45464d",
+                        "on-primary-fixed": "#131b2e",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-container-high": "#e6e8ea",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#111c2d",
+                        "outline": "#76777d",
+                        "on-tertiary-container": "#79849a",
+                        "tertiary-container": "#111c2d",
+                        "on-secondary-fixed": "#2a1700",
+                        "on-error": "#ffffff",
+                        "on-background": "#191c1e",
+                        "on-tertiary-fixed-variant": "#3c475a",
+                        "on-secondary-container": "#684000",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary": "#855300",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "inverse-primary": "#bec6e0",
+                        "surface-bright": "#f7f9fb",
+                        "outline-variant": "#c6c6cd",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary-container": "#131b2e",
+                        "tertiary-fixed-dim": "#bcc7de",
+                        "on-primary-container": "#7c839b",
+                        "surface": "#f7f9fb",
+                        "inverse-surface": "#2d3133"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "stack-lg": "48px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "stack-sm": "12px",
+                        "section-padding": "80px",
+                        "margin-mobile": "16px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "label-bold": ["Inter"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .shadow-industrial {
+            box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.08);
+        }
+        .shadow-industrial:hover {
+            box-shadow: 0px 8px 30px rgba(15, 23, 42, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Header / TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/95 dark:bg-surface/95 backdrop-blur-md border-b border-outline-variant shadow-sm transition-transform duration-300" id="header">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<img alt="G Property Maintenance Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFyEG8J4QQhimoaOWciJdJvIshZ6FAJ8aAMekKj46KSLhRSraOTlSGpEyDC5y0iBvPyHbe8wZrvu04LlZzGrXFgxLxh-gVFRsfHTwuiV2hdwC3zOwNJJHSrG3QFOdY81TalOFSsuD3Zh_TNmYaBJx4vtK5FiaWdENYjF6HW1pvv5FJRMoelHx2HhG8HMbNtVJZatNBVXRaN5-HnIUw1ujXMIiDCQSV403_6yASCIBEdY7XwfQ7nk2OPw"/>
+<span class="font-display-lg text-headline-md tracking-tighter text-primary">G Property Maintenance</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0" href="#services">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0" href="#portfolio">Portfolio</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0" href="#about">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden lg:flex items-center gap-2 text-primary font-label-bold" href="tel:5550123456">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">phone</span>
+                    (555) 012-3456
+                </a>
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-bold hover:bg-secondary transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 shadow-industrial" href="#contact">
+                    Get a Quote
+                </a>
+</div>
+</div>
+</header>
+<main class="pt-20 overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-30" data-alt="A professional handyman in a navy blue jacket kneeling on a high-end wooden deck construction site. The setting is a modern house with warm wood siding and large glass windows under a clear, bright sky. The lighting is crisp and natural, highlighting the precision of the tools and the professional quality of the construction work. The overall atmosphere is industrious, reliable, and premium." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEizh_lSw8ZvSjiG09RbzfDPy11k6JNAqU_qHo4BKEbUFWPqNOZ08z3h-Bwc5xYxWWcxywmoWIFxUS-0QqFDeqx5IErdIUvCVnq30h_zEZjR5dvbmAHxprqDx377z0eYsBg9JQrsXvWOzyvSppkkSEoVzwQxh6tKlN6Wxfy_ozaGtsncmeq3vgZZ3B-780KTNaE1EkjjqumXnGmxNjoW08g9cQQ1jRV446bisbpXjlifgk2-gn5HBG2g')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="container max-w-container-max mx-auto px-gutter relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="reveal">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed/20 text-secondary font-label-bold mb-6">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        Licensed &amp; Insured Professionals
+                    </div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">
+                        Your Trusted Property Maintenance Experts
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        Professional handyman services for your home and business. Reliable, licensed, and insured craftsmanship delivered with executive-level precision.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-label-bold text-lg hover:scale-105 transition-transform duration-300 shadow-industrial text-center" href="#contact">
+                            Get a Free Quote
+                        </a>
+<a class="border border-outline px-8 py-4 rounded-xl font-label-bold text-lg text-primary hover:bg-surface-container-high transition-colors text-center" href="#services">
+                            Explore Services
+                        </a>
+</div>
+</div>
+<div class="hidden lg:block reveal" style="transition-delay: 200ms;">
+<div class="relative">
+<div class="absolute -inset-4 bg-secondary-container/10 rounded-3xl blur-2xl"></div>
+<img class="relative rounded-2xl shadow-2xl border border-white/20 aspect-[4/3] object-cover" data-alt="Close-up shot of professional property maintenance tools like a high-end cordless drill, a leather tool belt, and architectural blueprints resting on a clean marble countertop. The image is brightly lit with a clean, corporate aesthetic using a palette of navy, gold, and white. The focus is sharp, emphasizing the quality and precision of the maintenance equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6aGfS7JsQaWboCOJBTUP2RJVMgEQowWjuHF6pHCwmHQmG1jL0yGwwHQPMk6W07QJ77NE3YNpl2El_p3IIQlZ8kzFi-LVqPFsP_yze1Eg2k9MLJGYz5mVlQVusuQxiz1AdjcAzAUw__48HHDYpfPIpBtTYZMSaCbOxObrz4t3975wPtnzrbIbtEebLwIodtMNE626VYyJuBYOjShN72nBpBWqct3E7au9WOwdgHYdNuGNVRsxfoKOwHw"/>
+<div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-industrial reveal" style="transition-delay: 500ms;">
+<div class="flex items-center gap-4">
+<div class="bg-secondary-container/20 p-3 rounded-full">
+<span class="material-symbols-outlined text-secondary text-3xl">star</span>
+</div>
+<div>
+<div class="text-headline-md font-display-lg text-primary">5-Star</div>
+<div class="text-label-bold text-on-surface-variant">Service Rated</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-padding bg-surface" id="services">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 reveal">
+<h2 class="font-display-lg text-headline-lg text-primary mb-4">Our Professional Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                        We handle everything from minor repairs to major renovations with the same commitment to excellence and durability.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- General Repairs -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-industrial group hover:-translate-y-2 transition-transform duration-300 reveal">
+<div class="h-56 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="A clean, minimalist interior shot of a living room where a technician is perfectly aligning a shelf on a light gray wall. The lighting is soft and even, highlighting the clean lines and modern furniture. The overall aesthetic is one of precision, home care, and high-end residential maintenance in a light mode palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7dXCqNkaq99kktz4uKnuYFd4IDgJqeSluDiamhjukMYXXAZdHesmcUOE2IWXUTTKZ7dB_KD32bI763L6FHghgZuWHHZwsfAhMGxQXr5Q9NTZYnU9qyxKO4ec4DWvkpO0VSged7ZYDEwXdKaaQv3QQ0zL6z6dK9GVOtHR2Sr3m1f_hOpyIBTi_OkzMv0qrVk6ulr63FMrldlNCVg1lmf3uls-_VCDB-P34AWsH2j_P__w5cfapKu1ZvA')"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-label-bold text-primary text-xs uppercase tracking-wider">Reliable</div>
+</div>
+<div class="p-8">
+<h3 class="font-display-lg text-headline-md text-primary mb-4">General Repairs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                                Drywall patching, furniture assembly, door adjustments, and comprehensive home "honey-do" lists managed professionally.
+                            </p>
+<a class="flex items-center justify-between group/btn text-secondary font-label-bold border-t border-outline-variant pt-6" href="#contact">
+                                Schedule Service
+                                <span class="material-symbols-outlined group-hover/btn:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Exterior Maintenance -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-industrial group hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 150ms;">
+<div class="h-56 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="A wide-angle shot of a beautifully maintained luxury home exterior during sunset. The lighting is golden and warm, showcasing a pristine garden, clean gutters, and professional power-washed siding. The image conveys high-end property value and meticulous exterior care in a sophisticated architectural setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuKanvEPfanWW4uQzJeialGE89cMQCM-ZJzLAb4H5CCIgz_I8fgOy72BfFAIRy2AfU5vpkaTs4vbClpbyR5Ch5QwhaWEXqe17Rjnf1BDsx8_z6LXt3n6OcXNyUPZJCmNwOlB7XdSU8YhumY31UJxXc1kBTyvCMvbpCrphMF8o1ZENlmI3BjpK1XhY2BQzSCdZXwxl3Pqn4KRSI_FiuxKSyfSOeRlqPtLcK7fI6I9GZSe_hfYNmOaUbcA')"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-label-bold text-primary text-xs uppercase tracking-wider">Exterior</div>
+</div>
+<div class="p-8">
+<h3 class="font-display-lg text-headline-md text-primary mb-4">Exterior Maintenance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                                Gutter cleaning, power washing, deck staining, and fence repairs to keep your property's curb appeal at its absolute peak.
+                            </p>
+<a class="flex items-center justify-between group/btn text-secondary font-label-bold border-t border-outline-variant pt-6" href="#contact">
+                                Schedule Service
+                                <span class="material-symbols-outlined group-hover/btn:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Plumbing & Electrical -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-industrial group hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 300ms;">
+<div class="h-56 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="A modern kitchen faucet with water flowing smoothly into a stainless steel sink, highlighting professional plumbing work. The lighting is bright and industrial-chic, focusing on the polished chrome and clean installation. The scene represents precision electrical and plumbing maintenance in a contemporary domestic environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnwtONI8cvKXvSqSQO0VsgvjES0GdnnKIns0UKx8dzxjjElHnOXAfT1tGPe9djD4MYhzlpWUxoejG-suHXsBLEfyPswC4veS1Ki42pgC2KIuqTRhsCn8fw13YyGIrPCMA2_l6JxWLLx56XmfcLRqllBcQkU1B73I4rNifNNyvsRQBFKD6lMTlIF0iPhM_w5AtDk_zV3LOl1m7DbizeY8kistsPYBnD2rg2FH5Kk2YuJ1VL-FW7do914g')"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-label-bold text-primary text-xs uppercase tracking-wider">Specialized</div>
+</div>
+<div class="p-8">
+<h3 class="font-display-lg text-headline-md text-primary mb-4">Plumbing &amp; Electrical</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                                Faucet replacement, light fixture installation, ceiling fans, and smart home setup handled by skilled technicians.
+                            </p>
+<a class="flex items-center justify-between group/btn text-secondary font-label-bold border-t border-outline-variant pt-6" href="#contact">
+                                Schedule Service
+                                <span class="material-symbols-outlined group-hover/btn:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Credentials Banner -->
+<section class="bg-primary-container py-12">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-2">verified_user</span>
+<span class="text-on-primary-container font-label-bold">Fully Insured</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-2">payments</span>
+<span class="text-on-primary-container font-label-bold">Upfront Pricing</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-2">history</span>
+<span class="text-on-primary-container font-label-bold">Fast Response</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-2">thumb_up</span>
+<span class="text-on-primary-container font-label-bold">Work Guaranteed</span>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-padding bg-background relative overflow-hidden" id="contact">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div class="reveal">
+<h2 class="font-display-lg text-headline-lg text-primary mb-6">Let's Get to Work</h2>
+<p class="font-body-md text-body-lg text-on-surface-variant mb-10">
+                        Tell us about your project and we'll provide a transparent, competitive quote within 24 hours. Our specialists are ready to handle your maintenance needs.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-container-high transition-colors">
+<div class="bg-secondary-container text-on-secondary-container p-3 rounded-lg">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-label-bold text-primary">Direct Line</h4>
+<p class="text-body-md text-on-surface-variant">(555) 012-3456</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-container-high transition-colors">
+<div class="bg-secondary-container text-on-secondary-container p-3 rounded-lg">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h4 class="font-label-bold text-primary">Email Support</h4>
+<p class="text-body-md text-on-surface-variant">hello@gproperty.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-container-high transition-colors">
+<div class="bg-secondary-container text-on-secondary-container p-3 rounded-lg">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h4 class="font-label-bold text-primary">Working Hours</h4>
+<p class="text-body-md text-on-surface-variant">Mon-Fri: 8AM - 6PM | Emergency: 24/7</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 md:p-12 rounded-2xl shadow-industrial border border-outline-variant reveal" style="transition-delay: 200ms;">
+<form action="#" class="space-y-6" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-label-bold text-on-surface-variant" for="name">Full Name</label>
+<input class="w-full bg-white border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary-container focus:border-secondary-container outline-none transition-all" id="name" name="name" placeholder="John Doe" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-label-bold text-on-surface-variant" for="email">Email Address</label>
+<input class="w-full bg-white border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary-container focus:border-secondary-container outline-none transition-all" id="email" name="email" placeholder="john@example.com" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-label-bold text-on-surface-variant" for="service">Service Type</label>
+<select class="w-full bg-white border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary-container focus:border-secondary-container outline-none transition-all" id="service" name="service">
+<option>General Repairs</option>
+<option>Exterior Maintenance</option>
+<option>Plumbing &amp; Electrical</option>
+<option>Emergency Service</option>
+<option>Other</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block text-label-bold text-on-surface-variant" for="message">Message</label>
+<textarea class="w-full bg-white border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary-container focus:border-secondary-container outline-none transition-all" id="message" name="message" placeholder="Tell us about your needs..." required="" rows="4"></textarea>
+</div>
+<div class="bg-surface-container p-4 rounded-lg flex items-center gap-4">
+<input class="w-5 h-5 rounded border-outline-variant text-secondary-container focus:ring-secondary-container" id="captcha" type="checkbox"/>
+<label class="text-body-md text-on-surface-variant select-none" for="captcha">I am not a robot</label>
+<span class="material-symbols-outlined ml-auto text-outline-variant">verified_user</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-bold text-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 shadow-industrial group" type="submit">
+                            Send Quote Request
+                            <span class="material-symbols-outlined align-middle ml-2 group-hover:translate-x-1 transition-transform">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-surface-container-lowest w-full py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg max-w-container-max mx-auto px-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Logo" class="h-8 w-8 filter brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFyEG8J4QQhimoaOWciJdJvIshZ6FAJ8aAMekKj46KSLhRSraOTlSGpEyDC5y0iBvPyHbe8wZrvu04LlZzGrXFgxLxh-gVFRsfHTwuiV2hdwC3zOwNJJHSrG3QFOdY81TalOFSsuD3Zh_TNmYaBJx4vtK5FiaWdENYjF6HW1pvv5FJRMoelHx2HhG8HMbNtVJZatNBVXRaN5-HnIUw1ujXMIiDCQSV403_6yASCIBEdY7XwfQ7nk2OPw"/>
+<span class="font-display-lg text-headline-md text-on-primary-container">G Property</span>
+</div>
+<p class="text-on-primary-fixed-variant text-body-md mb-6">
+                    Rugged reliability. Executive professionalism. The standard in property maintenance.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-on-primary-container/10 flex items-center justify-center text-on-primary-container hover:bg-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-on-primary-container/10 flex items-center justify-center text-on-primary-container hover:bg-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">chat</span>
+</a>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="text-on-primary-container font-label-bold mb-6 uppercase tracking-wider">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">About Us</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">Our Portfolio</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">Testimonials</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="text-on-primary-container font-label-bold mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">Service Areas</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">Emergency Services</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="text-on-primary-container font-label-bold mb-6 uppercase tracking-wider">Stay Connected</h4>
+<p class="text-on-primary-fixed-variant text-body-md mb-4">Subscribe for maintenance tips and seasonal discounts.</p>
+<div class="flex gap-2">
+<input class="bg-on-primary-container/5 border-on-primary-container/20 border text-on-primary-container rounded-lg px-4 py-2 w-full focus:outline-none focus:border-secondary-container" placeholder="Email" type="email"/>
+<button class="bg-secondary-container text-on-secondary-container p-2 rounded-lg">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-on-primary-container/10">
+<p class="text-on-primary-fixed-variant text-body-md text-center">
+                © 2024 G Property Maintenance. Licensed &amp; Insured. All Rights Reserved.
+            </p>
+</div>
+</footer>
+<!-- BottomNavBar Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center p-2 pb-safe bg-surface border-t border-outline-variant shadow-lg z-50 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-secondary bg-secondary-fixed/20 rounded-xl px-4 py-1 scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-bold text-label-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high scale-95 transition-transform duration-150" href="#services">
+<span class="material-symbols-outlined">build_circle</span>
+<span class="font-label-bold text-label-bold">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high scale-95 transition-transform duration-150" href="#contact">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="font-label-bold text-label-bold">Quote</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high scale-95 transition-transform duration-150" href="#contact">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-bold text-label-bold">Contact</span>
+</a>
+</nav>
+<script>
+        // Scroll reveal animation
+        const reveal = () => {
+            const reveals = document.querySelectorAll('.reveal');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        // Initial call
+        reveal();
+
+        // Header scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const header = document.getElementById('header');
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('-translate-y-full');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                header.classList.add('-translate-y-full');
+            } else {
+                header.classList.remove('-translate-y-full');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body></html>

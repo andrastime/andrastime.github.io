@@ -1,0 +1,331 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio | Handyman &amp; Garden Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .perspective-container {
+            perspective: 1000px;
+        }
+        .reveal-on-hover {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .group:hover .reveal-on-hover {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .filter-chip.active {
+            background-color: #1A1D1E;
+            color: #FFFFFF;
+        }
+        @keyframes subtle-zoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+        .hover-zoom:hover img {
+            animation: subtle-zoom 10s forwards;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#3f6d38",
+                        "on-surface-variant": "#444749",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary": "#030200",
+                        "on-tertiary-fixed": "#251a00",
+                        "surface-variant": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "background": "#f8f9fa",
+                        "tertiary-container": "#261b00",
+                        "secondary": "#3b6934",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-primary-fixed-variant": "#444748",
+                        "on-tertiary-container": "#a67f00",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "charcoal-deep": "#1A1D1E",
+                        "on-tertiary-fixed-variant": "#5a4300",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c4c7c8",
+                        "on-secondary-fixed-variant": "#23501e",
+                        "tertiary-fixed": "#ffdf99",
+                        "slate-muted": "#64748B",
+                        "on-surface": "#191c1d",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "surface-container": "#edeeef",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary": "#010202",
+                        "on-primary-fixed": "#191c1d",
+                        "on-primary-container": "#828586",
+                        "surface-tint": "#5c5f60",
+                        "primary-fixed-dim": "#c5c7c8",
+                        "forest-refined": "#2D5A27",
+                        "outline": "#747879",
+                        "primary-container": "#1a1d1e",
+                        "surface-dim": "#d9dadb",
+                        "inverse-primary": "#c5c7c8",
+                        "secondary-container": "#b9eeab",
+                        "safety-gold": "#E6B325",
+                        "surface-container-low": "#f3f4f5",
+                        "ice-white": "#FFFFFF",
+                        "primary-fixed": "#e1e3e4",
+                        "on-background": "#191c1d",
+                        "secondary-fixed": "#bcf0ae",
+                        "surface-container-high": "#e7e8e9",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#f3bf32",
+                        "secondary-fixed-dim": "#a1d494",
+                        "on-secondary-fixed": "#002201",
+                        "error-container": "#ffdad6"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "margin-mobile": "20px",
+                        "margin-tablet": "32px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-charcoal-deep/90 backdrop-blur-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold tracking-tight text-charcoal-deep dark:text-ice-white">
+                Handyman &amp; Garden Pro
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-forest-refined transition-colors text-label-md font-label-md" href="our-services.html">Services</a>
+<a class="text-forest-refined dark:text-secondary-fixed font-bold border-b-2 border-forest-refined pb-1 text-label-md font-label-md" href="our-work-portfolio.html">Portfolio</a>
+<a class="text-on-surface-variant hover:text-forest-refined transition-colors text-label-md font-label-md" href="index.html">About</a>
+<a class="text-on-surface-variant hover:text-forest-refined transition-colors text-label-md font-label-md" href="contact-us-request-a-quote.html">Contact</a>
+</div>
+<button class="bg-charcoal-deep text-ice-white px-6 py-2 rounded-lg text-label-md font-label-md hover:opacity-90 active:scale-95 transition-all">
+                Request a Quote
+            </button>
+</div>
+</nav>
+<!-- Header Section -->
+<header class="pt-32 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<span class="inline-block px-4 py-1 mb-4 rounded-full bg-secondary-container text-on-secondary-container text-label-md font-label-md">
+            Our Masterpieces
+        </span>
+<h1 class="text-display-lg font-display-lg mb-6 text-charcoal-deep">Crafting Excellence in Every Corner</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+            Browse our gallery of professional renovations and garden transformations. High-precision work meeting premium expectations.
+        </p>
+</header>
+<!-- Filter Bar -->
+<section class="sticky top-[72px] z-40 bg-surface/80 backdrop-blur-sm py-4 border-y border-outline-variant/30 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-wrap justify-center gap-3">
+<button class="filter-chip active px-6 py-2 rounded-full border border-charcoal-deep text-label-md font-label-md transition-all hover:bg-charcoal-deep hover:text-ice-white" onclick="filterPortfolio('all', this)">All Projects</button>
+<button class="filter-chip px-6 py-2 rounded-full border border-outline-variant text-label-md font-label-md transition-all hover:border-charcoal-deep" onclick="filterPortfolio('gardening', this)">Gardening</button>
+<button class="filter-chip px-6 py-2 rounded-full border border-outline-variant text-label-md font-label-md transition-all hover:border-charcoal-deep" onclick="filterPortfolio('renovation', this)">Interior Renovation</button>
+<button class="filter-chip px-6 py-2 rounded-full border border-outline-variant text-label-md font-label-md transition-all hover:border-charcoal-deep" onclick="filterPortfolio('woodwork', this)">Custom Woodwork</button>
+<button class="filter-chip px-6 py-2 rounded-full border border-outline-variant text-label-md font-label-md transition-all hover:border-charcoal-deep" onclick="filterPortfolio('repairs', this)">General Repairs</button>
+</div>
+</section>
+<!-- Portfolio Bento Grid -->
+<main class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter" id="portfolio-grid">
+<!-- Item 1: Large Featured Gardening -->
+<div class="portfolio-item gardening md:col-span-8 group relative overflow-hidden rounded-xl h-[500px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A panoramic wide shot of a professionally landscaped luxury garden with a manicured lawn, architectural stone paths, and a variety of vibrant ornamental grasses and perennials. The lighting is the golden hour of sunset, casting long, soft shadows and highlighting the deep greens and safety-gold accents of the foliage. The style is pristine, high-end corporate minimalism for a property service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg_aUBf1EIkoIxMJBGTIcqvUQ2J4EUCln73FFzkVmMXilFCob-2RwrcRvaBpt6qvLKfLZkNbK4j3GK2gWvwpfVJW6iySK4Z7N0HXiS09ePqGqfvhdfSlvqJjboBNS8UACpOmB7sF8PwePk4RkpmEEBK4LeX4zer3qyKuVfk-a8gimX-CMKSOoiLHG2viAvdQBjySUSSNl7PAJFXspWwq5IfiDtIH7cDJR53QmlPo2hI1eeANk9VtMq">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-deep/90 via-charcoal-deep/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 p-8 reveal-on-hover w-full">
+<span class="text-safety-gold text-label-md font-label-md mb-2 block">Premium Landscaping</span>
+<h3 class="text-ice-white text-headline-lg font-headline-lg mb-2">Modern Zen Retreat</h3>
+<p class="text-surface-variant/80 text-body-md font-body-md mb-4 max-w-md">Complete overhaul of a 2,000 sq ft backyard including automated irrigation and architectural lighting.</p>
+<button class="text-ice-white flex items-center gap-2 font-bold hover:underline">
+                        View Details <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Small Interior -->
+<div class="portfolio-item renovation md:col-span-4 group relative overflow-hidden rounded-xl h-[500px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-contrast vertical shot of a minimalist modern bathroom renovation. White marble tiles with grey veining, matte black fixtures, and a glass-enclosed walk-in shower. The lighting is crisp and bright, reflecting off polished surfaces. Professional architectural photography style with a clean, organized aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBamTndqMNRLuMAfGxhqi01dSnMFbIfw8or9vfTYANtYugGuCFuMRVbFVIz9mswjBVykAOWlBgYLMRwo2A6iwas4-nNX_w0BdLo3JyUCVcwWmpUCn1NXxqY44CmhVbP03UcVCL6HN7_xztuQmFcuiSnjOqdSY7i5yLO5TG_e5VtwsTQXqUv841QNXQflbrLcRnRWwALEzYK8Z14tFVLXSEsin7790Nm1uM-KEdp5OEPf3rV6-WFOdHq">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-deep/90 via-charcoal-deep/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 p-8 reveal-on-hover w-full">
+<span class="text-safety-gold text-label-md font-label-md mb-2 block">Bath Renovation</span>
+<h3 class="text-ice-white text-headline-md font-headline-md mb-2">Minimalist Spa Bath</h3>
+<p class="text-surface-variant/80 text-body-md font-body-md">Precision tiling and fixture installation for a high-end master suite.</p>
+</div>
+</div>
+<!-- Item 3: Square Woodwork -->
+<div class="portfolio-item woodwork md:col-span-4 group relative overflow-hidden rounded-xl h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A close-up shot of custom-built oak bookshelves in a home library. The wood has a rich, warm forest-refined stain and features intricate crown molding. The lighting is soft and warm, highlighting the texture of the wood grain and the precisely joined corners. Professional craftsmanship focused image." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS39k9xQIQhLbb676Cn0mJANemsG91hknQf5OnGg0zFMOCJY_DlY8xTxhRAYkHJIxLbn1P9cja3DQLE48vxcORAPBkNCH7Hy4HroNKBm11WCshxW0dnva-_r7csh4ip7G3srOJMzw-cWlzmx5R3vXvS1DOLdiQYYSKVZYoK_EDnKAHKe98IZbC6DIpVadf_P2qGKbELWAJRdgigrWNlwCxXfFyr1tLQ3q0LhzBdF0Ye0H5c8Sa3LDx">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-deep/90 via-charcoal-deep/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 p-8 reveal-on-hover w-full">
+<span class="text-safety-gold text-label-md font-label-md mb-2 block">Joinery</span>
+<h3 class="text-ice-white text-headline-md font-headline-md mb-2">Heritage Library</h3>
+<p class="text-surface-variant/80 text-body-md font-body-md">Custom floor-to-ceiling oak shelving with integrated LED accents.</p>
+</div>
+</div>
+<!-- Item 4: Square Gardening (Before/After vibe) -->
+<div class="portfolio-item gardening md:col-span-4 group relative overflow-hidden rounded-xl h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A split composition showing a 'Before' overgrown garden with weeds and cracked pavement versus an 'After' shot of a pristine patio with limestone pavers, built-in planters, and designer outdoor furniture. The mood is a dramatic transformation, bright and airy. Clean, professional property maintenance aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSkfb2PRLA9VpmqDBjL86wTSkieb4F37HDP-41U28spah_NGQSiLPb4EbYEssOu9cg_xzg_N6bAKmGAWTcSj7Et57hG_W5iSLfvD_uB0FunT3jUYL9HTb6wAsrEtlZAqPUVGAb7swiyKAV8hzR85Il00LLuwn4a-3texoFS49qqjKAF6SoZo9AH3tEnm-4RyXw2u96J7KaRo1qXXP86Smbb_q5vkh5csqNuflMklhuiPVImyh2teP3">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-deep/90 via-charcoal-deep/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 p-8 reveal-on-hover w-full">
+<span class="text-safety-gold text-label-md font-label-md mb-2 block">Garden Recovery</span>
+<h3 class="text-ice-white text-headline-md font-headline-md mb-2">Patio Transformation</h3>
+<p class="text-surface-variant/80 text-body-md font-body-md">From neglected yard to premium outdoor living space.</p>
+</div>
+</div>
+<!-- Item 5: Square Repairs -->
+<div class="portfolio-item repairs md:col-span-4 group relative overflow-hidden rounded-xl h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A professional handyman's toolkit organized neatly on a clean workshop table, with a background of a perfectly repaired and painted drywall. High-quality tools and a sense of precision and order. The color palette features charcoal-deep and forest-refined tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALnvYVi50bjvLgJFQ_xPZlqIabNd5wayn0Czn4aKunawyJOPvakm4D2beKynDRkO9peSm-jFTTzeL-NxDrR4tEKD5WnGy72lnjyIncVJ-XZON2enu_4_FtC4UiOMEDNApTyV_cXfT94ty5GZz0B3jWf6TZ5ZOPpQOZRxozZJtVC0yiMM5nCO_3urqyI79Ta-y7AYRFXxy9ue7Lpmi8Pu54vSRV3x1L3U1FDlNiK3FgfvKpSQnx6Bqw">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-deep/90 via-charcoal-deep/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 p-8 reveal-on-hover w-full">
+<span class="text-safety-gold text-label-md font-label-md mb-2 block">General Repair</span>
+<h3 class="text-ice-white text-headline-md font-headline-md mb-2">Structural Integrity</h3>
+<p class="text-surface-variant/80 text-body-md font-body-md">Expert wall reinforcement and flawless finish work.</p>
+</div>
+</div>
+<!-- Item 6: Wide Interior -->
+<div class="portfolio-item renovation md:col-span-12 group relative overflow-hidden rounded-xl h-[500px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An expansive wide-angle shot of an open-concept luxury kitchen renovation. Featuring a large island with a waterfall quartz countertop, custom navy blue cabinetry, and top-of-the-line stainless steel appliances. The lighting is sophisticated, using a mix of recessed spotlights and statement pendant lights. The atmosphere is upscale, clean, and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbsQ31_A4VfEXRioX8H-bqBj2mIu6QIr8jknqc852ZxrNzln9i8V3Bt5TF9A89CbkT2lrB_88DqXE4ux2yqVMvg4DAsHT6tbENPipDDZSnHSVcYt7VXQihviay_UYBK8uExVc-7HfCSx-q_LvS7WaS451gHLJ5MNTXDfV1Rx8-WOr0S2hQQ5wzvvJSKPRngl8auqsz2n6JZPmwx4xpybUDDKbPaFmE34s1W2rBIKYFTETdU53g94RE">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-deep/90 via-charcoal-deep/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 p-8 reveal-on-hover w-full">
+<div class="flex flex-col md:flex-row md:items-end md:justify-between">
+<div>
+<span class="text-safety-gold text-label-md font-label-md mb-2 block">Kitchen Mastery</span>
+<h3 class="text-ice-white text-headline-lg font-headline-lg mb-2">The Culinary Hub</h3>
+<p class="text-surface-variant/80 text-body-md font-body-md max-w-xl">A complete structural renovation creating an open-plan chef's kitchen with high-performance materials.</p>
+</div>
+<button class="mt-4 md:mt-0 bg-safety-gold text-charcoal-deep px-8 py-3 rounded-lg text-label-md font-label-md hover:scale-105 active:scale-95 transition-all">
+                            View Full Case Study
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Stats Section (Social Proof) -->
+<section class="bg-charcoal-deep py-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div>
+<div class="text-display-lg text-ice-white font-bold mb-2">450+</div>
+<div class="text-surface-variant text-label-md font-label-md">Gardens Revived</div>
+</div>
+<div>
+<div class="text-display-lg text-safety-gold font-bold mb-2">1.2k</div>
+<div class="text-surface-variant text-label-md font-label-md">Homes Perfected</div>
+</div>
+<div>
+<div class="text-display-lg text-ice-white font-bold mb-2">15</div>
+<div class="text-surface-variant text-label-md font-label-md">Years Expertise</div>
+</div>
+<div>
+<div class="text-display-lg text-safety-gold font-bold mb-2">100%</div>
+<div class="text-surface-variant text-label-md font-label-md">Client Satisfaction</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="relative py-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="text-headline-lg font-headline-lg text-charcoal-deep mb-6">Ready to Start Your Transformation?</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+                Join our list of satisfied homeowners. Contact us today for a meticulous assessment of your project.
+            </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-charcoal-deep text-ice-white px-10 py-4 rounded-lg text-label-md font-label-md hover:shadow-xl transition-all active:scale-95">
+                    Request a Free Quote
+                </button>
+<button class="border-2 border-charcoal-deep text-charcoal-deep px-10 py-4 rounded-lg text-label-md font-label-md hover:bg-charcoal-deep hover:text-ice-white transition-all">
+                    Browse Services
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-charcoal-deep dark:bg-surface-container-lowest w-full">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md text-ice-white dark:text-on-surface font-bold">
+                Handyman &amp; Garden Pro
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-safety-gold transition-all text-body-md" href="index.html">Privacy Policy</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-safety-gold transition-all text-body-md" href="index.html">Terms of Service</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-safety-gold transition-all text-body-md" href="index.html">FAQ</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-safety-gold transition-all text-body-md" href="index.html">Cookie Settings</a>
+</div>
+<div class="text-surface-variant dark:text-on-surface-variant text-caption font-caption text-center md:text-right">
+                © 2024 Handyman &amp; Gardening Services. Professional Care for Your Property.
+            </div>
+</div>
+</footer>
+<script>
+        function filterPortfolio(category, element) {
+            // Update filter chips UI
+            const chips = document.querySelectorAll('.filter-chip');
+            chips.forEach(chip => {
+                chip.classList.remove('active', 'bg-charcoal-deep', 'text-ice-white');
+                chip.classList.add('border-outline-variant');
+            });
+            element.classList.add('active', 'bg-charcoal-deep', 'text-ice-white');
+            element.classList.remove('border-outline-variant');
+
+            // Filter items
+            const items = document.querySelectorAll('.portfolio-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                    // Re-trigger animation
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                        item.style.transition = 'all 0.5s ease-out';
+                    }, 50);
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Simple scroll reveal
+        window.addEventListener('scroll', () => {
+            const reveals = document.querySelectorAll('.reveal-on-hover');
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveal.getBoundingClientRect().top;
+                if (revealTop < windowHeight - 100) {
+                    // reveal.style.opacity = "1";
+                }
+            });
+        });
+    </script>
+</body></html>

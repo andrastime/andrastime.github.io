@@ -1,0 +1,472 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>JW Handyman Services | Professional Home Repairs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-fixed": "#dae2fd",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary": "#000000",
+                        "surface-dim": "#d8dadc",
+                        "tertiary-fixed": "#d5e3fd",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "inverse-surface": "#2d3133",
+                        "on-surface-variant": "#45464d",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "inverse-primary": "#bec6e0",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#7c839b",
+                        "outline-variant": "#c6c6cd",
+                        "surface-container": "#eceef0",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-secondary-fixed": "#2a1700",
+                        "secondary-fixed": "#ffddb8",
+                        "background": "#f7f9fb",
+                        "tertiary-container": "#0d1c2f",
+                        "surface-variant": "#e0e3e5",
+                        "surface-tint": "#565e74",
+                        "tertiary": "#000000",
+                        "on-background": "#191c1e",
+                        "inverse-on-surface": "#eff1f3",
+                        "outline": "#76777d",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "surface": "#f7f9fb",
+                        "secondary-container": "#fea619",
+                        "primary-container": "#131b2e",
+                        "on-primary-fixed": "#131b2e",
+                        "secondary": "#855300",
+                        "on-tertiary-container": "#76859b",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#684000",
+                        "tertiary-fixed-dim": "#b9c7e0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    },
+                    "keyframes": {
+                        "fade-up": {
+                            "0%": { opacity: "0", transform: "translateY(30px)" },
+                            "100%": { opacity: "1", transform: "translateY(0)" }
+                        }
+                    },
+                    "animation": {
+                        "fade-up": "fade-up 0.8s ease-out forwards"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .hero-parallax { will-change: transform; transition: transform 0.1s ease-out; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant w-full h-20 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
+<a class="font-display-lg text-display-lg text-primary uppercase tracking-tight" href="our-services-jw-handyman-services.html">
+                JW <span class="text-secondary">Services</span>
+</a>
+<nav aria-label="Main Navigation" class="hidden md:flex items-center space-x-8">
+<a class="text-secondary font-label-bold border-b-2 border-secondary pb-1" href="#">Home</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors" href="#services">Services</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors" href="our-services-jw-handyman-services-optimized.html">Gallery</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors" href="#about">About</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors" href="#contact">Contact</a>
+</nav>
+<a class="hidden md:flex items-center gap-2 bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg font-label-bold hover:brightness-95 transition-all active:scale-95" href="tel:5550123456">
+<span class="material-symbols-outlined">phone_in_talk</span>
+                Call Now: (555) 012-3456
+            </a>
+<!-- Mobile Menu Trigger (Hamburger) -->
+<button aria-label="Open Menu" class="md:hidden flex items-center p-2 text-primary">
+<span class="material-symbols-outlined text-4xl">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary-container/40 z-10"></div>
+<img alt="Professional Handyman at work" class="w-full h-full object-cover hero-parallax" id="hero-bg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhsyUjQQtCULKRZku_kk-2zxrtOJt6pUCH1Lg5w6eRQQlm0vYoKlalhCTyCKJUU2BLqDdbxb_UgCeZ9DxxDNpmQbYbP5e9SeaVGsO7NEOb6W7wCyBtTAPNxfFPlTX_wOIKjVrHd6SXwDOYjQly_eXc7aRwGMnuI9C0TUoiL-CXSfanfuegRojzic-HPkIdrpG79HHJGHOPLbDLWQEfZ006aTmGVozS7dOhG1Fiy1IEcgEjrm3kgKM2">
+</div>
+<div class="relative z-20 w-full px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-2xl text-white">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight animate-fade-up" style="animation-delay: 100ms;">
+                        Expert Home Repairs &amp; Professional Craftsmanship.
+                    </h1>
+<p class="font-body-lg text-body-lg mb-10 opacity-90 leading-relaxed border-l-4 border-secondary-container pl-6 animate-fade-up" style="animation-delay: 300ms;">
+                        Reliable, high-quality handyman services for your home or business. Your local choice for precision and care.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 animate-fade-up" style="animation-delay: 500ms;">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-lg font-label-bold text-lg hover:shadow-xl transition-all active:scale-95 uppercase tracking-widest">
+                            Request a Quote
+                        </button>
+<button class="bg-white/10 backdrop-blur-md border-2 border-white text-white px-8 py-4 rounded-lg font-label-bold text-lg hover:bg-white hover:text-primary transition-all active:scale-95 uppercase tracking-widest">
+                            Our Services
+                        </button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+<span class="material-symbols-outlined text-white text-4xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Trust Badges / Stats -->
+<section class="bg-primary-container py-12 border-b border-outline/20">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center text-on-primary-container">
+<div class="reveal">
+<div class="text-3xl font-display-lg text-secondary-container mb-1">15+</div>
+<div class="text-label-bold uppercase">Years Experience</div>
+</div>
+<div class="reveal" style="transition-delay: 100ms;">
+<div class="text-3xl font-display-lg text-secondary-container mb-1">100%</div>
+<div class="text-label-bold uppercase">Satisfaction Rate</div>
+</div>
+<div class="reveal" style="transition-delay: 200ms;">
+<div class="text-3xl font-display-lg text-secondary-container mb-1">2.5k</div>
+<div class="text-label-bold uppercase">Jobs Completed</div>
+</div>
+<div class="reveal" style="transition-delay: 300ms;">
+<div class="text-3xl font-display-lg text-secondary-container mb-1">24h</div>
+<div class="text-label-bold uppercase">Quote Response</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto overflow-hidden" id="services">
+<div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 reveal">
+<div class="max-w-xl">
+<span class="text-secondary font-label-bold uppercase tracking-[0.2em]">Our Expertise</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mt-4">Precision Engineering for Every Corner of Your Home</h2>
+</div>
+<div class="h-px bg-outline-variant flex-grow mx-8 hidden md:block"></div>
+<button class="text-primary font-label-bold flex items-center gap-2 group">
+                    VIEW ALL SERVICES 
+                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<article class="group reveal bg-white border border-outline-variant rounded-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+<div class="h-48 overflow-hidden relative">
+<img alt="General repairs specialist fixing a door hinge" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBMbk1_Ii2IsqGYjpl8X7pD-A0K2Jx3C53j1x6ztt5kL97qLMovcw1ZhJ55GqloHPcN43vjFgBUzMhndpFzU8cVUo1aLblaglqzy31z4TG0EbYu8hglIcOthqIapNl7YQLE0R8faS5OJtZa6s4sllqKRGdpH7Kix4xLsPYZSF96eH9uKHwQ4aNhGCX4oCZxZ_9tFw-tIMd39Ze-WNh_3ivWvh9dsHphU7M_ABS30VLlq6Kx1fm46AO">
+<div class="absolute top-4 right-4 bg-primary text-white p-2 rounded-full">
+<span class="material-symbols-outlined">build</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md mb-3">General Repairs</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Expert fixes for doors, windows, drywall, and everyday hardware needs.</p>
+<a class="inline-flex items-center text-secondary font-label-bold group/link" href="#">
+                            Learn More <span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group reveal bg-white border border-outline-variant rounded-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500" style="transition-delay: 100ms;">
+<div class="h-48 overflow-hidden relative">
+<img alt="Plumbing and copper pipe maintenance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJSjxBTeDiLJm99zHYejJsrTRi_39EVwss_AxPSLm-0HP2hhcPKqiGT1gjCzSnlmNV3Qy3tZtMEQouq4HS-rw7AV6ncUKcHvUDIajCcabi29-LvbhxyDnZjiSNhcLx9wFLnNpEFQr2kOHzCgvTwcF7EUa-ofL9BheKeBGt7uWwCflEDGHvjfeHBPxMkfLNgdM4gG8j1dM2CBCFg24L0qR0zdHPfgoc7Unx0IPGddNFEIjCq1kVPnpP">
+<div class="absolute top-4 right-4 bg-primary text-white p-2 rounded-full">
+<span class="material-symbols-outlined">plumbing</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md mb-3">Plumbing &amp; Electrical</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Professional installation of fixtures, leak repairs, and light electrical updates.</p>
+<a class="inline-flex items-center text-secondary font-label-bold group/link" href="our-services-jw-handyman-services.html">
+                            Learn More <span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group reveal bg-white border border-outline-variant rounded-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500" style="transition-delay: 200ms;">
+<div class="h-48 overflow-hidden relative">
+<img alt="Custom carpentry and shelving installation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT2jUDsUIaFFvJpY-pro5zUY85VP370VGAKrNqvAVitCVeSvRGnAbMLNUYgIhjUBRkDrf6G6L8VBIU6i3KrKNGF-ZlaZBEp3qJMDT2oYxUgy8kjZ4KyhXxvp6muuxNjGaY_qxBecgPjFe21TYKdXSlp-5tlZXzPRqs3V1oJfqOOC6ygJYa0UOe8h9UJxqdcgJvVPijhRNsptb0wsAmqtJmq9fT9J7HBzK-WUOhe7Nw42Q4-ENH67l-">
+<div class="absolute top-4 right-4 bg-primary text-white p-2 rounded-full">
+<span class="material-symbols-outlined">stream_apps</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md mb-3">Carpentry &amp; Custom</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Bespoke shelving, trim work, and customized storage solutions for your space.</p>
+<a class="inline-flex items-center text-secondary font-label-bold group/link" href="our-services-jw-handyman-services.html">
+                            Learn More <span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="group reveal bg-white border border-outline-variant rounded-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500" style="transition-delay: 300ms;">
+<div class="h-48 overflow-hidden relative">
+<img alt="Professional home maintenance tool set" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVqY8nM1CRTJuX1QcNASridJaog76Tn8uFAbHdSr8DW0L-PQiP_ycbspJX6_wzMHwxYJRSJnS6JNLtXAyayKvhp4RlYyNGYFBKnRJmi_juR7OBFZhOjoMgV9dp6w_20_QqBbv_LXYdXMBPGGP3Guk1DiXBwPTWshgiEG0Mwg5b47jz8O5ypK3kXnJN-a42C9e6URwCzN3tiOhPNa6n11UD9ACEA74l4UdGeLEriMho-OM6kgBPKYkr">
+<div class="absolute top-4 right-4 bg-primary text-white p-2 rounded-full">
+<span class="material-symbols-outlined">checklist</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md mb-3">Home Maintenance</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Scheduled seasonal checks to keep your property in peak professional condition.</p>
+<a class="inline-flex items-center text-secondary font-label-bold group/link" href="our-services-jw-handyman-services.html">
+                            Learn More <span class="material-symbols-outlined ml-1 text-sm group-hover/link:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- Why Choose Us (Bento-ish Layout) -->
+<section class="bg-surface-container-low py-section-gap overflow-hidden" id="about">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 reveal">
+<span class="text-secondary font-label-bold uppercase tracking-[0.2em]">The JW Standard</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mt-4 mb-8">Why Discerning Homeowners Choose Our Team</h2>
+<p class="text-on-surface-variant mb-8 font-body-lg">We don't just fix things; we enhance the longevity and value of your home through disciplined technical mastery and a commitment to absolute reliability.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-primary text-white p-3 rounded-lg flex-shrink-0">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<h4 class="font-label-bold text-lg mb-1">Qualified Professionals</h4>
+<p class="text-on-surface-variant text-sm">Every technician is background-checked, insured, and masterfully trained in their specific trade.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary text-white p-3 rounded-lg flex-shrink-0">
+<span class="material-symbols-outlined">mop</span>
+</div>
+<div>
+<h4 class="font-label-bold text-lg mb-1">Clean &amp; Reliable</h4>
+<p class="text-on-surface-variant text-sm">We arrive on time and leave your space cleaner than we found it. White-glove service is our baseline.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary text-white p-3 rounded-lg flex-shrink-0">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<h4 class="font-label-bold text-lg mb-1">Competitive Pricing</h4>
+<p class="text-on-surface-variant text-sm">Transparent, flat-rate pricing with no hidden fees or surprise upcharges on materials.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-2 gap-4 reveal" style="transition-delay: 200ms;">
+<div class="col-span-2 md:col-span-1 rounded-xl overflow-hidden h-80 relative group">
+<img alt="Professional handyman in uniform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhlcvhkpffZcFu1y1AzKMb4ZFE-RZZ-16tfmDf_w9FYFdcpnAxViB1rJJ1f360cNuo21Q6mIFWoNTW5G6mS32egKahEU6H4xgMhMJy3Nqudh8rZxD-mlu4_-JEHlVKIrOrvMnwG0NcVsnge7xZOByGwjDxmLILI-xwRqByDRUOS7i1KKQL3NA0kZLTWNqI9MwJiYY939psHpLmm7k5sydaRBg_Jzi4CY4PEmig-K9Hz3GbIcME9hfk">
+</div>
+<div class="hidden md:block rounded-xl overflow-hidden h-40 relative group self-end">
+<img alt="Close up of high-end power tools" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr7eMSP2lKZseAQSCv0Dt1T37V9rs67Kvl2aHu19xNsJ32b1FzYfYNcUgduPUlvPZHYVXRpP-0izl4mSb3X0qQeTzijdM7tqHM6UF-5yOq-42PeE2ter61d8RLj38MopvmlXnAeD6QgX6FeAbpLkoU3IIMO7kzsUk6atJ163_mXOV2oXRMnHXoH-lcqYQ8Xj_Nc-A1yBtolf5_b63n6j-lVHTMqJzEs9MOEbRAsYdc-St7qQ8q-QMD">
+</div>
+<div class="col-span-2 md:col-span-1 rounded-xl overflow-hidden h-64 relative group">
+<img alt="Luxury home exterior at dusk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5rAJsl5q2YZCvn6n04z-n4VAgGcKyfmUSggVKrFlnVMFha9yZsELxymZ19bFUxrXyNmW3IXXjrMBPeF_3J3molQWXRtICnkyOQqZgURTu8B96TGw3rVsd9nU7GJPjw89xZ2-hlaJvYrlFUzkypj60lwJIt-rlKKvCc8HetApJww-qraqjjBxecTcr7VMM-RRqToAzZZw6Xzarou73_wwsVH9sIPasNJZKemSRbxhcGj78iQaTwl0I">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Contact Section -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto" id="contact">
+<div class="bg-primary-container rounded-2xl overflow-hidden relative">
+<div class="absolute inset-0 z-0 opacity-10">
+<div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-gutter p-8 md:p-16">
+<div class="reveal">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">Ready to Experience True Craftsmanship?</h2>
+<p class="text-on-primary-container mb-10 text-lg max-w-md">Contact us today for a detailed quote. Our team responds to all inquiries within 24 business hours.</p>
+<div class="space-y-6">
+<a class="flex items-center gap-4 text-white hover:text-secondary-container transition-colors" href="tel:5550123456">
+<span class="material-symbols-outlined text-secondary-container">phone_in_talk</span>
+<span class="text-xl font-label-bold">(555) 012-3456</span>
+</a>
+<a class="flex items-center gap-4 text-white hover:text-secondary-container transition-colors" href="mailto:service@jwhandyman.com">
+<span class="material-symbols-outlined text-secondary-container">mail</span>
+<span class="text-lg">service@jwhandyman.com</span>
+</a>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl reveal" style="transition-delay: 200ms;">
+<form action="#" class="space-y-4" method="POST">
+<div>
+<label class="font-label-bold text-sm text-primary mb-2 block uppercase tracking-wider">Your Name</label>
+<input class="w-full border-outline-variant bg-surface-container focus:ring-secondary focus:border-secondary transition-all rounded-lg p-3" placeholder="John Doe" required="" type="text">
+</div>
+<div>
+<label class="font-label-bold text-sm text-primary mb-2 block uppercase tracking-wider">Phone Number</label>
+<input class="w-full border-outline-variant bg-surface-container focus:ring-secondary focus:border-secondary transition-all rounded-lg p-3" placeholder="(555) 000-0000" required="" type="tel">
+</div>
+<div>
+<label class="font-label-bold text-sm text-primary mb-2 block uppercase tracking-wider">How can we help?</label>
+<textarea class="w-full border-outline-variant bg-surface-container focus:ring-secondary focus:border-secondary transition-all rounded-lg p-3 h-32" placeholder="Tell us about your project..." required=""></textarea>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-container font-label-bold p-4 rounded-lg hover:brightness-95 transition-all uppercase tracking-widest active:scale-95">
+                                Send Quote Request
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container border-t border-outline/10 pt-section-gap pb-12">
+<div class="w-full py-section-gap px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<a class="font-display-lg text-display-lg text-secondary uppercase tracking-tight block mb-6" href="#">
+                    JW <span class="text-white">Services</span>
+</a>
+<p class="text-on-primary-fixed-variant text-body-md mb-8">Professional-grade handyman solutions for elite homeowners and property managers.</p>
+<div class="flex gap-4">
+<a aria-label="Social link 1" class="w-10 h-10 rounded-full border border-outline/30 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="contact-us-jw-handyman-services-optimized.html"><span class="material-symbols-outlined text-sm">qr_code_2</span></a>
+<a aria-label="Social link 2" class="w-10 h-10 rounded-full border border-outline/30 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">imagesmode</span></a>
+<a aria-label="Social link 3" class="w-10 h-10 rounded-full border border-outline/30 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="index.html"><span class="material-symbols-outlined text-sm">share</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-label-bold mb-6 uppercase tracking-widest">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary-fixed-variant hover:text-secondary transition-colors" href="#">Home</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary transition-colors" href="#services">Services</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary transition-colors" href="index.html">Gallery</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary transition-colors" href="#about">About Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-label-bold mb-6 uppercase tracking-widest">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary-fixed-variant hover:text-secondary transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary transition-colors" href="index.html">Terms of Service</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary transition-colors" href="#">FAQ</a></li>
+<li><a class="text-on-primary-fixed-variant hover:text-secondary transition-colors" href="index.html">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-label-bold mb-6 uppercase tracking-widest">Contact Information</h4>
+<p class="text-on-primary-fixed-variant mb-4">123 Professional Way<br>Mastery City, MC 90210</p>
+<p class="text-on-primary-fixed-variant mb-2">P: <a class="hover:text-secondary transition-colors" href="tel:5550123456">(555) 012-3456</a></p>
+<p class="text-on-primary-fixed-variant">E: <a class="hover:text-secondary transition-colors" href="mailto:info@jwhandyman.com">info@jwhandyman.com</a></p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline/10 text-center">
+<p class="text-on-primary-fixed-variant text-sm">© 2024 JW Handyman Services. All Rights Reserved.</p>
+</div>
+</footer>
+<!-- Bottom Navigation Bar (Mobile only) -->
+<nav aria-label="Mobile Bottom Navigation" class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-primary-container shadow-[0px_-4px_12px_rgba(0,0,0,0.1)]">
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 scale-90 transition-transform" href="homepage-jw-handyman-services.html">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-bold font-label-bold text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary-fixed-variant hover:bg-primary/10 transition-colors" href="#services">
+<span class="material-symbols-outlined">build</span>
+<span class="text-label-bold font-label-bold text-[10px]">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary-fixed-variant hover:bg-primary/10 transition-colors" href="#contact">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="text-label-bold font-label-bold text-[10px]">Quote</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary-fixed-variant hover:bg-primary/10 transition-colors" href="tel:5550123456">
+<span class="material-symbols-outlined">phone_in_talk</span>
+<span class="text-label-bold font-label-bold text-[10px]">Contact</span>
+</a>
+</nav>
+<script>
+        // Reveal animation on scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        // Parallax Effect
+        function parallax() {
+            const heroBg = document.getElementById('hero-bg');
+            if (heroBg) {
+                let scrollPosition = window.pageYOffset;
+                heroBg.style.transform = 'translateY(' + (scrollPosition * 0.4) + 'px)';
+            }
+        }
+
+        window.addEventListener("scroll", () => {
+            reveal();
+            parallax();
+        });
+
+        // Trigger initial check
+        window.addEventListener("load", reveal);
+        reveal();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white', 'shadow-md', 'h-16');
+                header.classList.remove('bg-surface', 'h-20');
+            } else {
+                header.classList.add('bg-surface', 'h-20');
+                header.classList.remove('bg-white', 'shadow-md', 'h-16');
+            }
+        });
+    </script>
+</body></html>

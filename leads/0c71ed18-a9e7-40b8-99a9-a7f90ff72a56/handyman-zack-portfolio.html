@@ -1,0 +1,306 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio | Handyman Zack Partnership</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#333535",
+                        "secondary": "#c6c6c9",
+                        "on-secondary-fixed-variant": "#454749",
+                        "on-secondary": "#2f3133",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-secondary-container": "#b4b5b7",
+                        "on-error-container": "#ffdad6",
+                        "surface-container": "#1e2020",
+                        "secondary-fixed": "#e2e2e5",
+                        "tertiary": "#cdced4",
+                        "slate-deep": "#121416",
+                        "white-pearl": "#F4F4F4",
+                        "surface": "#121414",
+                        "on-background": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#44474b",
+                        "on-surface": "#e2e2e2",
+                        "inverse-surface": "#e2e2e2",
+                        "on-secondary-fixed": "#1a1c1e",
+                        "brass-highlight": "#C5A028",
+                        "tertiary-fixed-dim": "#c4c6cb",
+                        "background": "#121414",
+                        "primary": "#f2ca50",
+                        "on-error": "#690005",
+                        "secondary-container": "#454749",
+                        "surface-container-lowest": "#0c0f0f",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#554300",
+                        "surface-container-high": "#282a2b",
+                        "surface-dim": "#121414",
+                        "tertiary-container": "#b1b3b8",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#e9c349",
+                        "surface-bright": "#37393a",
+                        "metallic-gold": "#D4AF37",
+                        "primary-container": "#d4af37",
+                        "inverse-primary": "#735c00",
+                        "surface-container-low": "#1a1c1c",
+                        "on-tertiary": "#2e3135",
+                        "on-primary": "#3c2f00",
+                        "surface-container-highest": "#333535",
+                        "on-surface-variant": "#d0c5af",
+                        "on-tertiary-fixed": "#191c20",
+                        "primary-fixed": "#ffe088",
+                        "outline": "#99907c",
+                        "tertiary-fixed": "#e1e2e7",
+                        "on-primary-fixed": "#241a00",
+                        "on-tertiary-container": "#42454a",
+                        "secondary-fixed-dim": "#c6c6c9",
+                        "outline-variant": "#4d4635",
+                        "inverse-on-surface": "#2f3131",
+                        "on-primary-fixed-variant": "#574500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "section-padding": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "button-text": ["Montserrat"],
+                        "headline-xl": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "button-text": ["16px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "headline-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        .metallic-border {
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: inset 0 1px 0 0 rgba(197, 160, 40, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-deep text-on-surface selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="bg-slate-deep/90 backdrop-blur-md fixed w-full top-0 z-50 border-b border-outline-variant/30 shadow-lg transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-gutter py-4">
+<div class="text-headline-md font-headline-md font-bold text-primary">Handyman Zack</div>
+<div class="hidden md:flex gap-stack-lg items-center">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="handyman-zack-home.html">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="index.html">Services</a>
+<a class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1" href="handyman-zack-portfolio.html">Portfolio</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="handyman-zack-contact.html">Contact</a>
+</div>
+<div class="flex gap-stack-md">
+<button class="hidden lg:block px-6 py-2 bg-gradient-to-b from-brass-highlight to-metallic-gold text-slate-deep font-button-text text-button-text rounded-lg hover:brightness-110 transition-all shadow-md">Get a Quote</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Header Section -->
+<header class="pt-32 pb-16 px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end gap-stack-md border-b border-outline-variant/20 pb-8">
+<div class="max-w-2xl">
+<span class="font-label-lg text-label-lg text-primary tracking-widest uppercase mb-4 block">Proven Excellence</span>
+<h1 class="font-headline-xl text-headline-xl text-white-pearl mb-6 md:text-headline-xl text-headline-lg-mobile">Our Portfolio.</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">A curated selection of high-end restorations, precision repairs, and bespoke craftsmanship delivered across London's premier properties.</p>
+</div>
+<div class="flex gap-4">
+<span class="font-headline-md text-headline-md text-primary">150+</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant self-center">Projects Completed</span>
+</div>
+</div>
+</header>
+<!-- Portfolio Grid -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1: Kitchen -->
+<div class="group project-card relative overflow-hidden rounded-xl bg-surface-container metallic-border transition-transform hover:-translate-y-2">
+<div class="aspect-square bg-cover bg-center" data-alt="A luxurious modern kitchen restoration featuring dark matte cabinetry, integrated gold-trimmed handles, and a stunning white marble countertop with subtle gray veining. The lighting is warm and recessed, creating a sophisticated glow that reflects off the high-end polished appliances. The overall aesthetic is minimalist, dark-mode inspired, and exceptionally clean, highlighting professional repair and restoration work." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB66txtCmrohHk2GMt2NzlM892pBPfbJAhbHY0bql6yMj8dzHy9n4fRvwWkj7F9lv4jacwuzJcbDmPnLf90uWjb0BPWXFjri8AoE2E5anxhWbnKnSelDzKIrei63tXIBzxgRbk6Lwa4QbVRt3VaBYecJbbpbKxLiYh7JknlRnMFACvDm35HY581ft9Cpc8Lf-UtweCoE-ihS1Y-8rHO5oerDanSkR8dkqEqbMqeeuAhYIJ_7tVBbveA-g')"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-white-pearl">Modern Kitchen Restoration</h3>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">Complete overhaul of a Mayfair luxury apartment kitchen with bespoke cabinetry and marble integration.</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-bold tracking-tighter border border-primary/40 text-primary px-2 py-1 rounded uppercase">Cabinetry</span>
+<span class="text-[10px] font-bold tracking-tighter border border-primary/40 text-primary px-2 py-1 rounded uppercase">Restoration</span>
+</div>
+</div>
+</div>
+<!-- Project 2: Electrical -->
+<div class="group project-card relative overflow-hidden rounded-xl bg-surface-container metallic-border transition-transform hover:-translate-y-2">
+<div class="aspect-square bg-cover bg-center" data-alt="A professional close-up shot of complex electrical rewiring in a high-end London property. Clean, organized wiring channels are visible within a wall cavity, showcasing meticulous cable management. A professional electrician's hand in a leather glove is adjusting a high-grade brass light switch fitting. The lighting is crisp and cool, emphasizing the precision and technical skill involved in the repair work." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGGDXnG52FrG0qmWhWop7CjhgRX_DW_fVZKH3rUNJFVljVw3Rc31BmpKoEyy6o9969Pz5Sy-MUcJ7S-QlMvUtQbEX9QObEvM2fkE4xQ3fv9wcZcJBz9vw9MJyV-EOTc7s6ZtYeynobMOrygTqqD3BGe3lHU9EBFNHBgRbP6_YewCLjAJLrEEmEzKHkfocoBsPsiSUcBMdABoizUa9hUq2st3S7Zh3doyEOwK8L2AOR1Ha_pX78cRsjNA')"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-white-pearl">Electrical Rewiring London</h3>
+<span class="material-symbols-outlined text-primary">bolt</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">Full infrastructure upgrade for a Grade II listed townhouse, ensuring modern standards meet classic heritage.</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-bold tracking-tighter border border-primary/40 text-primary px-2 py-1 rounded uppercase">Technical</span>
+<span class="text-[10px] font-bold tracking-tighter border border-primary/40 text-primary px-2 py-1 rounded uppercase">Safety</span>
+</div>
+</div>
+</div>
+<!-- Project 3: Bathroom -->
+<div class="group project-card relative overflow-hidden rounded-xl bg-surface-container metallic-border transition-transform hover:-translate-y-2 lg:row-span-2">
+<div class="h-full min-h-[400px] bg-cover bg-center flex flex-col justify-end" data-alt="A breathtaking master bathroom renovation in a penthouse suite. The space features deep charcoal tiles with gold grout accents and a freestanding copper soaking tub. Soft, diffused ambient lighting creates a spa-like atmosphere. The craftsmanship is evident in the seamless tile alignment and the high-polish finish of the metallic fixtures. The aesthetic is ultra-modern and corporate-luxury." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQ04q5i8jAMQmuyBLnQH6Jo-0beF5UX5i2Jv8EqD3DehXfOzpmvQaBL5UtJzT7I7Sk8ChqYDT6Nw9scOnIQ4Qu62cduhlWBAtZFSHH8l-Ov1sckXT2cIXLSQ7hCsvRGZ7lJiH8-Di40J0EDLF_TbQU8qHf1cWcv-4kvnReSfNsBY6T2sOvPismvKKiAKqoOwYh15uAcW6mwFYovTahxGdF2MrfYrijz0QQhhBJY6FoQKwHxt0nPwUgmw')">
+<div class="bg-gradient-to-t from-slate-deep via-slate-deep/80 to-transparent p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Bespoke Bath Restoration</h3>
+<p class="font-body-md text-body-md text-white-pearl mb-4">Transforming a standard ensuite into a gold-accented sanctuary with custom plumbing and tile work.</p>
+<button class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
+                            View Case Study <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Project 4: Flooring -->
+<div class="group project-card relative overflow-hidden rounded-xl bg-surface-container metallic-border transition-transform hover:-translate-y-2">
+<div class="aspect-square bg-cover bg-center" data-alt="High-fidelity shot of a perfectly laid dark oak herringbone floor in a spacious living room. The wood has a subtle satin finish that reflects the natural light from large windows. The alignment is laser-perfect, showcasing premium craftsmanship. A small section of the floor features a professional hand tool, signifying the active restoration process. The mood is warm yet extremely polished." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGzcSCywRNgr_nXFDw3RuZBAKHwIAAVvHure-ELBf7Oh6E4AIlqjtmYLocmIs-g0iDOlYw8SHhgyZXcZ_YsOVFgfMBrbD-z3dMV_iOWJI-1u0q7DH3nIEJc4nrvfTKtoiZ-z4X1j07_lIZ7XwjBSDQxfAfjfYrSpN6dpubWyWaEiX76wWy50Oue2acqyFgM3jDYrWdVe9UngnCAhXYxV6mhu3Mdy7WSYZ0P7geaVNSYwW4RUFFaqSe3Q')"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-white-pearl">Heritage Oak Floor Refinish</h3>
+<span class="material-symbols-outlined text-primary">layers</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">Precision sanding and deep staining of original hardwood floors in a Kensington residence.</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-bold tracking-tighter border border-primary/40 text-primary px-2 py-1 rounded uppercase">Woodwork</span>
+<span class="text-[10px] font-bold tracking-tighter border border-primary/40 text-primary px-2 py-1 rounded uppercase">Refinishing</span>
+</div>
+</div>
+</div>
+<!-- Project 5: Exterior -->
+<div class="group project-card relative overflow-hidden rounded-xl bg-surface-container metallic-border transition-transform hover:-translate-y-2">
+<div class="aspect-square bg-cover bg-center" data-alt="The exterior facade of a luxury London townhouse undergoing meticulous paint restoration. The dark slate masonry is being carefully accented with gold-leaf details on the ironwork and house numbering. Scaffolding is visible but neatly organized, emphasizing a professional work site. The twilight lighting captures the metallic accents beautifully against the deep, dark facade." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhPNgLHLlyEiAMiNWVy_JT7OliL6APD85ZIG7RCya9xLIU7ER6PhwWzeuCoZRrAWQ022dFEt1KzD1h4sY6irayPmMg4OqlRPy0c-N-oD8CCM3lIcSze3XfP4ReI-T2FvaS4OZhgaHuShO7QxlfngjnhvhhGrJ-YTYIRLXLP_N2TTCfBFhGKo6Lh8EvfitAJzGmvu6-avvakLxBRMjGbD4Jc1GXLvpot0rLj1jb3Ipwy93iArvXXbRRrQ')"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-white-pearl">Facade Restoration</h3>
+<span class="material-symbols-outlined text-primary">foundation</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">Comprehensive external repair including masonry cleaning and gold-leaf ironwork detailing.</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-bold tracking-tighter border border-primary/40 text-primary px-2 py-1 rounded uppercase">Exterior</span>
+<span class="text-[10px] font-bold tracking-tighter border border-primary/40 text-primary px-2 py-1 rounded uppercase">Finishing</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<section class="mt-section-padding p-stack-lg rounded-2xl bg-surface-container-high border border-primary/20 relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 blur-[100px] rounded-full"></div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-stack-lg relative z-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white-pearl mb-2">Have a unique project?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We specialize in custom solutions for demanding restorations.</p>
+</div>
+<button class="w-full md:w-auto px-10 py-4 bg-gradient-to-b from-brass-highlight to-metallic-gold text-slate-deep font-button-text text-button-text rounded-xl hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all">Start Your Restoration</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding bg-surface-container-lowest border-t border-outline-variant/20 opacity-90 hover:opacity-100 transition-all">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="md:col-span-2">
+<div class="text-headline-md font-headline-md text-primary mb-4">Handyman Zack</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-6">Providing high-end property maintenance and bespoke restoration services for London's most prestigious homes. Craftsmanship meets corporate reliability.</p>
+<div class="flex gap-4">
+<a class="text-primary hover:text-white-pearl transition-colors" href="handyman-zack-portfolio.html"><span class="material-symbols-outlined">share</span></a>
+<a class="text-primary hover:text-white-pearl transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+<a class="text-primary hover:text-white-pearl transition-colors" href="handyman-zack-contact.html"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-[18px] text-white-pearl uppercase tracking-widest">Navigation</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Services</a></li>
+<li><a class="font-body-md text-body-md text-primary font-bold" href="handyman-zack-portfolio.html">Portfolio</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="handyman-zack-contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-[18px] text-white-pearl uppercase tracking-widest">Legal</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-16 pt-8 border-t border-outline-variant/10 text-center">
+<p class="font-body-md text-[12px] text-on-surface-variant/60">© 2024 Handyman Zack Partnership. All rights reserved. Professional Repair &amp; Restoration London.</p>
+</div>
+</footer>
+<!-- FAB for Emergency -->
+<button class="fixed bottom-8 right-8 w-16 h-16 rounded-full bg-primary shadow-2xl flex items-center justify-center text-slate-deep hover:scale-110 transition-transform group z-40">
+<span class="material-symbols-outlined text-[32px]">emergency_home</span>
+<div class="absolute right-20 bg-slate-deep text-primary px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-primary/20 font-bold">Emergency Call</div>
+</button>
+<script>
+        // Subtle scroll effect for Navbar
+        window.onscroll = function() {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 50) {
+                nav.classList.add('py-2', 'bg-slate-deep/95');
+                nav.classList.remove('py-4', 'bg-slate-deep/90');
+            } else {
+                nav.classList.add('py-4', 'bg-slate-deep/90');
+                nav.classList.remove('py-2', 'bg-slate-deep/95');
+            }
+        };
+
+        // Hover tilt effect on cards
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                let rect = card.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                let dx = (x - rect.width / 2) / (rect.width / 2);
+                let dy = (y - rect.height / 2) / (rect.height / 2);
+                card.style.transform = `perspective(1000px) rotateY(${dx * 2}deg) rotateX(${-dy * 2}deg) translateY(-8px)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(0px)`;
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Book a Quote | Handy Homie East London</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#282c2e",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#44474d",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#ffdbd0",
+                    "background": "#f9f9ff",
+                    "primary-fixed": "#d7e2ff",
+                    "tertiary-fixed-dim": "#c3c7ca",
+                    "on-tertiary-fixed": "#181c1e",
+                    "surface-container-high": "#dee8ff",
+                    "secondary-container": "#fe6a34",
+                    "error-container": "#ffdad6",
+                    "surface": "#f9f9ff",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#111c2c",
+                    "on-primary-fixed-variant": "#374765",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#13181a",
+                    "surface-container-low": "#f0f3ff",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#d8e3fa",
+                    "surface-dim": "#cfdaf1",
+                    "primary-fixed-dim": "#b7c7eb",
+                    "on-tertiary-container": "#8f9396",
+                    "on-secondary-fixed-variant": "#832600",
+                    "inverse-primary": "#b7c7eb",
+                    "primary-container": "#1b2b48",
+                    "primary": "#041632",
+                    "surface-container": "#e7eeff",
+                    "inverse-surface": "#263142",
+                    "inverse-on-surface": "#ebf1ff",
+                    "outline-variant": "#c5c6ce",
+                    "tertiary-fixed": "#e0e3e6",
+                    "secondary": "#ab3500",
+                    "surface-tint": "#4f5e7e",
+                    "on-primary-fixed": "#091b37",
+                    "surface-bright": "#f9f9ff",
+                    "surface-variant": "#d8e3fa",
+                    "on-secondary-fixed": "#390c00",
+                    "outline": "#75777e",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#8393b5",
+                    "on-tertiary-fixed-variant": "#43474a",
+                    "secondary-fixed-dim": "#ffb59d",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#5d1900",
+                    "on-surface": "#111c2c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Montserrat"],
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-focus-ring:focus {
+            outline: none;
+            border-color: #041632;
+            box-shadow: 0 0 0 2px rgba(4, 22, 50, 0.1);
+        }
+        .success-animation {
+            animation: scaleIn 0.5s ease-out forwards;
+        }
+        @keyframes scaleIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-primary border-b border-outline-variant dark:border-on-surface-variant sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-16">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary">Handy Homie</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface dark:text-on-primary-fixed-variant font-label-md text-label-md hover:text-secondary transition-colors duration-200" href="our-handyman-services.html">Services</a>
+<a class="text-on-surface dark:text-on-primary-fixed-variant font-label-md text-label-md hover:text-secondary transition-colors duration-200" href="index.html">Gallery</a>
+<a class="text-on-surface dark:text-on-primary-fixed-variant font-label-md text-label-md hover:text-secondary transition-colors duration-200" href="our-handyman-services.html">Pricing</a>
+<a class="text-on-surface dark:text-on-primary-fixed-variant font-label-md text-label-md hover:text-secondary transition-colors duration-200" href="index.html">About</a>
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-full font-label-md text-label-md active:opacity-80 active:scale-95 transition-all">Book a Quote</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+<!-- Hero Title Section -->
+<div class="mb-12 md:mb-20 text-center md:text-left">
+<h1 class="font-headline-xl text-headline-xl mb-4 text-primary">Book Your Handy Homie</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Expert repairs, installations, and emergency help across East London. Let's get that to-do list done today.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Booking Form -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-8 shadow-sm border border-outline-variant">
+<div id="booking-step-container">
+<form class="space-y-6" id="booking-form">
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mb-8">
+<div class="bg-secondary h-full transition-all duration-500" id="form-progress" style="width: 33%;"></div>
+</div>
+<!-- Step 1: Contact Details -->
+<div class="space-y-6" id="step-1">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">1. Contact Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Full Name</label>
+<input class="bg-white border border-outline rounded-lg p-3 form-focus-ring" placeholder="John Doe" required="" type="text">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Email Address</label>
+<input class="bg-white border border-outline rounded-lg p-3 form-focus-ring" placeholder="john@example.com" required="" type="email">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Phone Number</label>
+<input class="bg-white border border-outline rounded-lg p-3 form-focus-ring" placeholder="07123 456789" required="" type="tel">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Address (East London)</label>
+<input class="bg-white border border-outline rounded-lg p-3 form-focus-ring" placeholder="E1, E2, E14..." required="" type="text">
+</div>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary px-8 py-3 rounded-full font-label-md text-label-md flex items-center justify-center gap-2 hover:opacity-90 transition-all" onclick="nextStep(2)" type="button">
+                                Next Step <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Step 2: Service Details (Hidden initially) -->
+<div class="hidden space-y-6" id="step-2">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">2. Job Details</h2>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Service Type</label>
+<select class="bg-white border border-outline rounded-lg p-3 form-focus-ring" required="">
+<option value="">Select a service</option>
+<option value="plumbing">Plumbing Repair</option>
+<option value="electrical">Electrical Work</option>
+<option value="carpentry">Carpentry &amp; Assembly</option>
+<option value="painting">Painting &amp; Decorating</option>
+<option value="emergency">Emergency (24/7)</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Job Description</label>
+<textarea class="bg-white border border-outline rounded-lg p-3 form-focus-ring" placeholder="Tell us what needs fixing..." required="" rows="4"></textarea>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Upload Photo (Optional)</label>
+<div class="border-2 border-dashed border-outline-variant rounded-lg p-8 text-center bg-white cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2">add_a_photo</span>
+<p class="text-sm text-on-surface-variant">Click to upload or drag and drop</p>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container-highest text-on-surface px-8 py-3 rounded-full font-label-md text-label-md hover:bg-outline-variant transition-all" onclick="nextStep(1)" type="button">Back</button>
+<button class="flex-1 bg-secondary text-on-secondary px-8 py-3 rounded-full font-label-md text-label-md hover:opacity-90 transition-all" type="submit">Complete Booking</button>
+</div>
+</div>
+</form>
+<!-- Success Message (Hidden) -->
+<div class="hidden text-center py-12 success-animation" id="success-message">
+<div class="inline-flex items-center justify-center w-20 h-20 bg-secondary-container text-on-secondary-container rounded-full mb-6">
+<span class="material-symbols-outlined text-5xl">task_alt</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Quote Request Sent!</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">We'll get back to you within 2 hours!</p>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md text-label-md" onclick="location.reload()">Done</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Contact Info & Map -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Direct Contact Cards -->
+<div class="bg-primary-container text-on-primary-container p-8 rounded-xl shadow-lg relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-6">Need Help Faster?</h3>
+<div class="space-y-6">
+<a class="flex items-center gap-4 group" href="tel:02012345678">
+<div class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-xs font-label-sm uppercase tracking-wider opacity-70">Call Us Anytime</p>
+<p class="text-xl font-bold">020 7123 4567</p>
+</div>
+</a>
+<a class="flex items-center gap-4 group" href="https://wa.me/447123456789">
+<div class="w-12 h-12 bg-[#25D366] text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div>
+<p class="text-xs font-label-sm uppercase tracking-wider opacity-70">WhatsApp Message</p>
+<p class="text-xl font-bold">07123 456 789</p>
+</div>
+</a>
+</div>
+</div>
+<div class="absolute -right-12 -bottom-12 opacity-10">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'wght' 700;">handyman</span>
+</div>
+</div>
+<!-- Map Section -->
+<div class="bg-surface rounded-xl border border-outline-variant overflow-hidden">
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Coverage Area</h3>
+<p class="text-on-surface-variant text-sm mb-4">Serving all of East London including Tower Hamlets, Hackney, and Newham.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-xs font-label-md">E1</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-xs font-label-md">E2</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-xs font-label-md">E3</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-xs font-label-md">E14</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-xs font-label-md">N1</span>
+</div>
+</div>
+<div class="h-64 bg-surface-container-highest grayscale hover:grayscale-0 transition-all duration-500 relative" data-location="East London" style="">
+<img class="w-full h-full object-cover" data-alt="A professional, clean, stylized map of East London showing boroughs like Tower Hamlets, Hackney, and Newham. The aesthetic is modern and corporate, with the Handy Homie primary navy blue and safety orange highlights indicating service areas. Lighting is flat and digital, consistent with a high-end service application interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL22vQ1vmn-05W92XY98c38aw79vhAuiK3k8iKLcyapvWnL7KhQ-eYuvcAoq3vLRUp6hTqO5KmQbZZYsd-bL1cic5O3f83BZfaYsGB51qUlKIlDslMBUMuOBLCyXfbKigBZj25KV0qoZLH3YHGkT37Fj41nN5mlS5WDiF48FIDu3roAjr3Xck4dlgkJ6egVSQxM0YHk9cWGpPhrtRDRxr072WN5e8dy58gmmaMm_Yp-pnTtpTMyijU">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white/90 p-4 rounded-lg shadow-xl flex items-center gap-2 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-bold text-primary">East London Coverage</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-tertiary text-on-primary">
+<div class="w-full py-stack-lg px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md text-secondary">Handy Homie</div>
+<p class="text-on-primary-fixed-variant text-body-md">Your reliable partner for all home maintenance in East London.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed">Local Areas</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim hover:underline transition-all" href="index.html">Tower Hamlets</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim hover:underline transition-all" href="our-handyman-services.html">Hackney</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim hover:underline transition-all" href="our-handyman-services.html">Newham</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim hover:underline transition-all" href="#">Waltham Forest</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed">Quick Links</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim hover:underline transition-all" href="index.html">Privacy Policy</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim hover:underline transition-all" href="#">Terms of Service</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim hover:underline transition-all" href="book-a-handyman-quote.html">Work With Us</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed">24/7 Emergency</h4>
+<p class="text-headline-md font-bold text-secondary">020 7123 4567</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined">qr_code_2</span>
+<span class="material-symbols-outlined">share</span>
+</div>
+</div>
+</div>
+<div class="border-t border-on-primary/10 py-6 text-center text-sm opacity-60">
+            © 2024 Handy Homie East London. All rights reserved.
+        </div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full flex justify-around items-center px-4 py-2 md:hidden bg-surface dark:bg-primary-container shadow-lg z-50 border-t border-outline-variant">
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high p-1" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high p-1" href="our-handyman-services.html">
+<span class="material-symbols-outlined">handyman</span>
+<span class="font-label-sm text-label-sm">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 active:scale-95 transition-all" href="index.html">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-sm text-label-sm">Call</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high p-1" href="index.html">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-label-sm text-label-sm">Message</span>
+</a>
+</nav>
+<script>
+        function nextStep(step) {
+            const step1 = document.getElementById('step-1');
+            const step2 = document.getElementById('step-2');
+            const progressBar = document.getElementById('form-progress');
+
+            if (step === 2) {
+                step1.classList.add('hidden');
+                step2.classList.remove('hidden');
+                progressBar.style.width = '66%';
+            } else {
+                step1.classList.remove('hidden');
+                step2.classList.add('hidden');
+                progressBar.style.width = '33%';
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const step2 = document.getElementById('step-2');
+            const success = document.getElementById('success-message');
+            const progressBar = document.getElementById('form-progress');
+            
+            step2.classList.add('hidden');
+            success.classList.remove('hidden');
+            progressBar.style.width = '100%';
+            
+            // Interaction: Haptic-like vibe logic placeholder
+            if ('vibrate' in navigator) {
+                navigator.vibrate(200);
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Projects | Upper Street Contractors</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "ethereal-white": "#F2F2F2",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-secondary": "#313030",
+                        "surface-container-lowest": "#0c0f0f",
+                        "surface": "#121414",
+                        "surface-dim": "#121414",
+                        "inverse-primary": "#735c00",
+                        "secondary": "#c8c6c5",
+                        "surface-container-low": "#1a1c1c",
+                        "surface-container-high": "#282a2b",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "inverse-on-surface": "#2f3131",
+                        "surface-variant": "#333535",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#554300",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-surface": "#e2e2e2",
+                        "primary-container": "#d4af37",
+                        "on-surface-variant": "#d0c5af",
+                        "primary": "#f2ca50",
+                        "on-primary": "#3c2f00",
+                        "on-tertiary-container": "#254188",
+                        "charcoal-surface": "#242424",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "on-primary-fixed": "#241a00",
+                        "surface-bright": "#38393a",
+                        "secondary-container": "#474746",
+                        "tertiary-fixed": "#dbe1ff",
+                        "brushed-gold": "#B89332",
+                        "tertiary-container": "#97b0ff",
+                        "midnight-canvas": "#0A0A0A",
+                        "outline": "#99907c",
+                        "on-background": "#e2e2e2",
+                        "surface-container-highest": "#333535",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-tertiary-fixed": "#00174b",
+                        "tertiary": "#bfcdff",
+                        "on-tertiary": "#082b72",
+                        "outline-variant": "#4d4635",
+                        "surface-tint": "#e9c349",
+                        "on-error-container": "#ffdad6",
+                        "background": "#121414",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-container": "#1e2020",
+                        "on-error": "#690005",
+                        "inverse-surface": "#e2e2e2",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#ffe088"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "element-gap": "24px",
+                        "gutter": "32px",
+                        "margin-mobile": "24px",
+                        "section-gap": "160px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Montserrat"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Montserrat"],
+                        "headline-md": ["Playfair Display"],
+                        "cta-text": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                        "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                        "cta-text": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121414;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #B89332;
+        }
+        .gold-glow:hover {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-midnight-canvas text-on-surface custom-scrollbar selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
+<div class="flex justify-between items-center px-margin-desktop py-6 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary tracking-tighter" href="#">
+                Upper Street Contractors
+            </a>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-cta-text text-cta-text uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">Home</a>
+<a class="font-cta-text text-cta-text uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="services-upper-street-contractors.html">Services</a>
+<a class="font-cta-text text-cta-text uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="projects-upper-street-contractors.html">Projects</a>
+<a class="font-cta-text text-cta-text uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">About</a>
+<button class="bg-primary-container text-on-primary-container font-cta-text text-cta-text uppercase px-8 py-3 hover:scale-105 transition-transform duration-200 gold-glow">
+                    Get a Quote
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-40">
+<!-- Hero Header -->
+<header class="px-margin-desktop max-w-container-max mx-auto mb-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-brushed-gold block mb-4">OUR PORTFOLIO</span>
+<h1 class="font-display-lg text-display-lg text-on-surface leading-tight">
+                        Explore Our Diverse Range of Projects
+                    </h1>
+</div>
+<div class="md:w-1/3">
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        From heritage restorations in Queen's Park to modern architectural expansions across London, witness our commitment to structural integrity and aesthetic precision.
+                    </p>
+</div>
+</div>
+</header>
+<!-- Service Filter Bar -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-16 overflow-x-auto">
+<div class="flex items-center space-x-4 pb-4 min-w-max">
+<button class="px-6 py-2 bg-primary text-on-primary font-label-caps text-label-caps rounded-full gold-glow">All Projects</button>
+<button class="px-6 py-2 border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-full hover:border-primary hover:text-primary transition-all">Renovation</button>
+<button class="px-6 py-2 border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-full hover:border-primary hover:text-primary transition-all">New Build</button>
+<button class="px-6 py-2 border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-full hover:border-primary hover:text-primary transition-all">Plumbing</button>
+<button class="px-6 py-2 border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-full hover:border-primary hover:text-primary transition-all">Handyman</button>
+<button class="px-6 py-2 border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-full hover:border-primary hover:text-primary transition-all">Electrical</button>
+</div>
+</section>
+<!-- Projects Grid (Asymmetric) -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Project 1: Queen's Park -->
+<div class="md:col-span-7 project-card group relative overflow-hidden bg-charcoal-surface">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="Queen's Park Project" class="w-full h-full object-cover transition-transform duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida/AP1WRLtUQi5V7rcNvj0jiDaKwvIVBKiR-iH73BYTu4zLaYYw5sA_tPvMX1UtAYbIyL0yWxoybs5tENA47LVkRvOHARKRTEOu3DZsk8C8v7J2L7INJWGlaBooJGEKPQs7OV6x5bZOKBiPkcg04kTFEeuL6yE2AY2MMISwbpQ02d1YFGZ4_V77lT6Ve1sMQYaZzokP-xKHRwMyg1l8b50q_IbxRlTXxjlEcu2ZSZcCEAV5HfGl5MPfINoGqNYJJGnc">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-midnight-canvas/90 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label-caps text-label-caps text-primary mb-2 block">RENOVATION</span>
+<h3 class="font-headline-lg text-headline-lg text-white mb-2">Queen's Park Project</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                            A bespoke luxury living space featuring hand-finished joinery and integrated architectural lighting.
+                        </p>
+</div>
+</div>
+<!-- Project 2: Dibden Street -->
+<div class="md:col-span-5 project-card group relative overflow-hidden bg-charcoal-surface">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Dibden Street Project" class="w-full h-full object-cover transition-transform duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida/AP1WRLvw1OYhkUyCdzqw5wXWM9h9DOLZJGH_ZzaBSUJkZibRzj4M5tb4sBakYclXLB0ixqq2yIkuwjwNfk8N0kBi7cas7PPU_NrdyzCpKKvV0DiY3IZu3okDc_n_YCO2W_S5dm6HOn7x4Tnj4Z4nDhcwraK8-nkUoFAkO_8OJE6HEoFBeFsHxPRP6tx-PbAmwXviZonu7XiZmgdReoN0s8B5K8D_H7DOk6ExR9udoBU6TFRiGywSoLYb29eTzGDe">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-midnight-canvas/90 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label-caps text-label-caps text-primary mb-2 block">CONTEMPORARY</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Dibden Street Project</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                            Comprehensive home renovation focusing on open-plan fluidity and minimalist aesthetics.
+                        </p>
+</div>
+</div>
+<!-- Project 3: Cleveland Road -->
+<div class="md:col-span-5 project-card group relative overflow-hidden bg-charcoal-surface">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Cleveland Road Project" class="w-full h-full object-cover transition-transform duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida/AP1WRLsAHbzM4RU7f1rY8HiXso9huIB3eHKg7P9i1RTrl-2W9og7Zu6JslMp-JIdWmy2zZv_G_GUnzqaotonpAmRxF5dtILSBVQD5VpJcEPBRRtCefWZGHwhnMGbLSrALMOg_c7hsy3kY_Ef41UHVb-ifoFVJ_11fLr4ueNCRHkbJl7ZerkM1ccX2u330UK5CYpw6uKKvXpxis3kTAZwD_569MHP53qZjvrUCC07WoteBuzzDqa3KRx5vP27pDg">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-midnight-canvas/90 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label-caps text-label-caps text-primary mb-2 block">PREMIUM FINISH</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Cleveland Road Project</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                            High-end residential detailing with custom marble work and polished metal accents.
+                        </p>
+</div>
+</div>
+<!-- Project 4: Fairlawn Grove -->
+<div class="md:col-span-7 project-card group relative overflow-hidden bg-charcoal-surface">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="Fairlawn Grove Project" class="w-full h-full object-cover transition-transform duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida/AP1WRLsYfJcML0mmYRgPZhoEAHzTYFElQfSSfdUb93R_Jl0gAjqkLhSEyC3QXefOCjDqPalPGc2jDYql6TybWcY0tchdtTb-aQmrPi8h_9bKfJXrFT9Xra9sDI5cvhTFJHp4PLxwMPUWJCELkR2TzRCjOq8xhbFFXeNOatIHxDleZxEL8pnFIZgRuSSF-yWCxI7JZ8JOd2BFHJXkyNCv0RwX1GdY2L7X35TDzOEf5xKczVRwK1Z0g7zwIt4hEBo">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-midnight-canvas/90 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label-caps text-label-caps text-primary mb-2 block">STRUCTURAL</span>
+<h3 class="font-headline-lg text-headline-lg text-white mb-2">Fairlawn Grove Project</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                            Expert structural engineering including heavy-duty load-bearing modifications and foundation reinforcement.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap bg-charcoal-surface/30 px-margin-desktop text-center overflow-hidden relative">
+<div class="max-w-4xl mx-auto relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Ready to Start Your Masterpiece?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                    Our team of master builders and designers is ready to bring your vision to life with the precision it deserves.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="bg-primary text-on-primary font-cta-text text-cta-text uppercase px-12 py-5 gold-glow transition-all">Book a Consultation</button>
+<button class="border border-primary text-primary font-cta-text text-cta-text uppercase px-12 py-5 hover:bg-primary/10 transition-all">View All Services</button>
+</div>
+</div>
+<!-- Atmospheric Glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-midnight-canvas border-t border-outline-variant/30 w-full py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-5 mb-12 md:mb-0">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Upper Street Contractors</h2>
+<p class="font-body-md text-body-md text-on-secondary-container max-w-sm mb-8">
+                    Modern Luxury and Architectural Precision. Crafting exclusive spaces for London's most discerning clients.
+                </p>
+<div class="flex space-x-6">
+<a class="text-primary hover:text-white transition-colors" href="get-a-quote-upper-street-contractors.html"><span class="material-symbols-outlined">qr_code_2</span></a>
+<a class="text-primary hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">camera_indoor</span></a>
+<a class="text-primary hover:text-white transition-colors" href="services-upper-street-contractors.html"><span class="material-symbols-outlined">architecture</span></a>
+</div>
+</div>
+<div class="md:col-span-3 mb-12 md:mb-0">
+<h4 class="font-label-caps text-label-caps text-white mb-8">CONTACT US</h4>
+<ul class="space-y-6 font-body-md text-body-md text-on-secondary-container">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm">call</span>
+<a class="hover:text-primary transition-colors" href="tel:02074245466">0207 424 5466</a>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+<a class="hover:text-primary transition-colors" href="mailto:info@upperstreet.contractors">info@upperstreet.contractors</a>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<span>Unit 7, 149 Roman Way, London N7 8XH</span>
+</li>
+</ul>
+</div>
+<div class="md:col-span-4">
+<h4 class="font-label-caps text-label-caps text-white mb-8">NEWSLETTER</h4>
+<p class="font-body-md text-body-md text-on-secondary-container mb-6">Receive curated architectural insights and project updates.</p>
+<form class="flex gap-2">
+<input class="bg-charcoal-surface border-outline-variant text-white focus:ring-primary focus:border-primary w-full p-4 font-body-md" placeholder="Email address" type="email">
+<button class="bg-primary text-on-primary px-6 p-4 hover:bg-brushed-gold transition-colors" type="submit">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</form>
+</div>
+<div class="md:col-span-12 border-t border-outline-variant/10 mt-20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-secondary-container/60">
+                    © 2024 Upper Street Contractors. All rights reserved.
+                </p>
+<div class="flex gap-8 font-label-caps text-label-caps text-on-secondary-container/60">
+<a class="hover:text-primary transition-colors" href="index.html">PRIVACY POLICY</a>
+<a class="hover:text-primary transition-colors" href="index.html">TERMS OF SERVICE</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                // Subtle perspective effect
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 50;
+                const rotateY = (centerX - x) / 50;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+
+        // Smooth reveal on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10', 'opacity-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

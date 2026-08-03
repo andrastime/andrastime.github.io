@@ -1,0 +1,330 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact &amp; Quote Request | Handyman &amp; Garden Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-container": "#3f6d38",
+                "on-surface-variant": "#444749",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "tertiary": "#030200",
+                "on-tertiary-fixed": "#251a00",
+                "surface-variant": "#e1e3e4",
+                "surface-bright": "#f8f9fa",
+                "background": "#f8f9fa",
+                "tertiary-container": "#261b00",
+                "secondary": "#3b6934",
+                "surface-container-highest": "#e1e3e4",
+                "on-primary-fixed-variant": "#444748",
+                "on-tertiary-container": "#a67f00",
+                "on-primary": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "charcoal-deep": "#1A1D1E",
+                "on-tertiary-fixed-variant": "#5a4300",
+                "error": "#ba1a1a",
+                "outline-variant": "#c4c7c8",
+                "on-secondary-fixed-variant": "#23501e",
+                "tertiary-fixed": "#ffdf99",
+                "slate-muted": "#64748B",
+                "on-surface": "#191c1d",
+                "surface-container-lowest": "#ffffff",
+                "surface": "#f8f9fa",
+                "surface-container": "#edeeef",
+                "inverse-surface": "#2e3132",
+                "inverse-on-surface": "#f0f1f2",
+                "primary": "#010202",
+                "on-primary-fixed": "#191c1d",
+                "on-primary-container": "#828586",
+                "surface-tint": "#5c5f60",
+                "primary-fixed-dim": "#c5c7c8",
+                "forest-refined": "#2D5A27",
+                "outline": "#747879",
+                "primary-container": "#1a1d1e",
+                "surface-dim": "#d9dadb",
+                "inverse-primary": "#c5c7c8",
+                "secondary-container": "#b9eeab",
+                "safety-gold": "#E6B325",
+                "surface-container-low": "#f3f4f5",
+                "ice-white": "#FFFFFF",
+                "primary-fixed": "#e1e3e4",
+                "on-background": "#191c1d",
+                "secondary-fixed": "#bcf0ae",
+                "surface-container-high": "#e7e8e9",
+                "on-error-container": "#93000a",
+                "tertiary-fixed-dim": "#f3bf32",
+                "secondary-fixed-dim": "#a1d494",
+                "on-secondary-fixed": "#002201",
+                "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "container-max": "1200px",
+                "margin-mobile": "20px",
+                "margin-tablet": "32px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Inter"],
+                "body-lg": ["Inter"],
+                "caption": ["Inter"],
+                "label-md": ["Inter"],
+                "display-lg": ["Inter"],
+                "headline-md": ["Inter"],
+                "headline-lg": ["Inter"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .nav-blur {
+        backdrop-filter: blur(12px);
+      }
+      .form-input-focus:focus {
+        border-color: #2D5A27;
+        box-shadow: 0 0 0 1px #2D5A27;
+        outline: none;
+      }
+      .ambient-lift {
+        box-shadow: 0 10px 40px -10px rgba(26, 29, 30, 0.08);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-safety-gold/30">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-charcoal-deep/90 backdrop-blur-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold tracking-tight text-charcoal-deep dark:text-ice-white">
+                Handyman &amp; Garden Pro
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-forest-refined transition-colors duration-300 font-label-md text-label-md" href="our-services.html">Services</a>
+<a class="text-on-surface-variant hover:text-forest-refined transition-colors duration-300 font-label-md text-label-md" href="our-work-portfolio.html">Portfolio</a>
+<a class="text-on-surface-variant hover:text-forest-refined transition-colors duration-300 font-label-md text-label-md" href="index.html">About</a>
+<a class="text-forest-refined font-bold border-b-2 border-forest-refined pb-1 font-label-md text-label-md" href="contact-us-request-a-quote.html">Contact</a>
+</div>
+<button class="bg-charcoal-deep text-ice-white px-6 py-2.5 rounded-lg font-label-md text-label-md hover:scale-95 transition-transform duration-200 active:opacity-90">
+                Request a Quote
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header Section -->
+<header class="mb-16 md:mb-24">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-display-lg md:text-[56px] text-charcoal-deep mb-6 leading-tight">
+                    Professional care for your <span class="text-forest-refined">home and garden</span>.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Whether it's a minor repair or a complete garden overhaul, our team of experts is ready to help. Reach out today for a transparent, no-obligation quote.
+                </p>
+</div>
+</header>
+<!-- Bento Grid Layout for Contact and Info -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Quote Request Form (7 columns) -->
+<section class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-8 md:p-12 ambient-lift">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-deep mb-8">Request a Quote</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Full Name</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md form-input-focus transition-all" placeholder="John Doe" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Email Address</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md form-input-focus transition-all" placeholder="john@example.com" type="email">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Service Type</label>
+<select class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md form-input-focus transition-all">
+<option>General Handyman</option>
+<option>Garden Maintenance</option>
+<option>Landscaping</option>
+<option>Plumbing Repairs</option>
+<option>Electrical Tasks</option>
+<option>Other</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Preferred Date</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md form-input-focus transition-all" type="date">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Project Description</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md form-input-focus transition-all resize-none" placeholder="Tell us about the work you need completed..." rows="5"></textarea>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<button class="bg-safety-gold text-charcoal-deep px-8 py-4 rounded-lg font-label-md text-label-md hover:scale-105 active:scale-95 transition-all flex items-center gap-2" type="submit">
+                            Submit Request
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-caption font-caption text-on-surface-variant max-w-[200px]">
+                            We typically respond to quote requests within 24 business hours.
+                        </p>
+</div>
+</form>
+</section>
+<!-- Sidebar Info (5 columns) -->
+<div class="lg:col-span-5 space-y-gutter">
+<!-- Map Card -->
+<div class="bg-surface-container-highest rounded-xl overflow-hidden h-[300px] relative ambient-lift group">
+<div class="absolute inset-0 z-0 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A clean, minimalist street map rendering showing a specific business location in a modern urban or suburban neighborhood. The map features a sophisticated palette of light grays and whites with a single, prominent pin in deep forest green marking the office. The aesthetic is professional, clear, and high-end, fitting for a premium service company property." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDj6LOMxjFsTUWp5Mj12Q566bPTkeP_SM2hRMxP49Dpv2uaAZPxTdtb-GQ_AeT55lNol9HNmvwPJ8HnRhXOxMUR1vGdOgpiOKiAfLw65Vn107m1eQEGlko2GOulr4VmhH1daxVHCAJHzslYe9-AyQLHKxfpmVaS3UFPK1hRHsU-0ZB9bDbnI9VKAqB_Je2eQ7yYa6R09Xq_E4vINlI13y-wQOcgxSxx4djKNoVDyrqbX0pVVRKfrlr3')">
+</div>
+<div class="absolute bottom-4 left-4 z-10 bg-white/90 backdrop-blur-md p-4 rounded-lg shadow-sm">
+<p class="font-label-md text-label-md text-charcoal-deep flex items-center gap-2">
+<span class="material-symbols-outlined text-forest-refined">location_on</span>
+                            128 Professional Way, Suite 400
+                        </p>
+</div>
+<!-- Data Location for Map rendering -->
+<div data-location="London" style=""></div>
+</div>
+<!-- Contact Details Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+<div class="bg-white rounded-xl p-6 ambient-lift border border-surface-container">
+<div class="w-12 h-12 rounded-full bg-forest-refined/10 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-forest-refined">call</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-1">Call Us Directly</h3>
+<p class="font-headline-md text-headline-md text-charcoal-deep">+1 (555) 012-3456</p>
+<p class="text-caption font-caption text-on-surface-variant mt-2">Mon - Fri: 8am - 6pm</p>
+</div>
+<div class="bg-white rounded-xl p-6 ambient-lift border border-surface-container">
+<div class="w-12 h-12 rounded-full bg-safety-gold/10 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-safety-gold">mail</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-1">Email Our Team</h3>
+<p class="font-headline-md text-headline-md text-charcoal-deep">hello@hgpro.com</p>
+<p class="text-caption font-caption text-on-surface-variant mt-2">Anytime for inquiries</p>
+</div>
+</div>
+<!-- Trust Badge Card -->
+<div class="bg-charcoal-deep text-ice-white rounded-xl p-8 flex flex-col justify-between h-auto">
+<div>
+<div class="flex gap-1 mb-4 text-safety-gold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-md text-headline-md leading-snug mb-4 italic">
+                            "The attention to detail in my garden was exceptional. Truly premium service that I trust every season."
+                        </p>
+<p class="font-label-md text-label-md opacity-60">— Sarah Jenkins, Homeowner</p>
+</div>
+<div class="mt-8 flex items-center gap-4">
+<div class="h-px bg-surface-variant/30 flex-grow"></div>
+<span class="text-caption font-caption tracking-widest uppercase opacity-40">Verified Pro</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ Micro-section -->
+<section class="mt-24">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-deep mb-12 text-center">Frequently Asked Questions</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-forest-refined">Do you provide emergency repairs?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Yes, we reserve slots for urgent handyman tasks. Please call us directly for any immediate plumbing or electrical issues that cannot wait for a standard quote request.</p>
+</div>
+<div class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-forest-refined">Is your work insured and guaranteed?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Every project we undertake is fully insured for your peace of mind. We also offer a 12-month craftsmanship guarantee on all repairs and installations completed by our pros.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-charcoal-deep dark:bg-surface-container-lowest w-full">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="space-y-4 text-center md:text-left">
+<div class="text-headline-md font-headline-md text-ice-white dark:text-on-surface">
+                    Handyman &amp; Garden Pro
+                </div>
+<p class="text-caption font-caption text-surface-variant dark:text-on-surface-variant max-w-sm">
+                    © 2024 Handyman &amp; Gardening Services. Professional Care for Your Property.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-12">
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-safety-gold transition-all font-body-md text-body-md" href="index.html">Privacy Policy</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-safety-gold transition-all font-body-md text-body-md" href="index.html">Terms of Service</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-safety-gold transition-all font-body-md text-body-md" href="index.html">FAQ</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-safety-gold transition-all font-body-md text-body-md" href="index.html">Cookie Settings</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Interaction logic for form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalContent = btn.innerHTML;
+            btn.innerHTML = 'Sending...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = 'Request Sent!';
+                btn.classList.replace('bg-safety-gold', 'bg-forest-refined');
+                btn.classList.add('text-white');
+                e.target.reset();
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.replace('bg-forest-refined', 'bg-safety-gold');
+                    btn.classList.remove('text-white');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Soft interaction for cards
+        const cards = document.querySelectorAll('.ambient-lift');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0px)';
+            });
+        });
+    </script>
+</body></html>

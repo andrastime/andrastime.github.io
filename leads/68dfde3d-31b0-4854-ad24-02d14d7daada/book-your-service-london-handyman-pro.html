@@ -1,0 +1,355 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact &amp; Booking | London Handyman Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#002742",
+                    "surface-container-low": "#f2f4f7",
+                    "secondary-container": "#febf3c",
+                    "outline": "#73777e",
+                    "secondary": "#7c5800",
+                    "on-secondary-fixed-variant": "#5e4200",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#304963",
+                    "on-secondary-container": "#6f4e00",
+                    "surface-alt": "#F7F9FC",
+                    "on-tertiary-container": "#4891d0",
+                    "on-tertiary-fixed-variant": "#004a77",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eceef1",
+                    "inverse-on-surface": "#eff1f4",
+                    "primary-fixed-dim": "#afc9e9",
+                    "tertiary": "#001121",
+                    "on-background": "#191c1e",
+                    "deep-navy": "#0A2740",
+                    "inverse-surface": "#2d3133",
+                    "surface-dim": "#d8dadd",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#f7f9fc",
+                    "sky-blue": "#0066A2",
+                    "canvas": "#FFFFFF",
+                    "surface": "#f7f9fc",
+                    "secondary-fixed": "#ffdea7",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e6e8eb",
+                    "primary-container": "#0a2740",
+                    "on-error": "#ffffff",
+                    "primary": "#001223",
+                    "surface-variant": "#e0e3e6",
+                    "surface-tint": "#48607c",
+                    "on-primary-container": "#768fad",
+                    "on-surface": "#191c1e",
+                    "on-surface-variant": "#43474d",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#c3c6ce",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#271900",
+                    "background": "#f7f9fc",
+                    "on-primary-fixed": "#001d35",
+                    "tertiary-fixed": "#cfe5ff",
+                    "primary-fixed": "#d0e4ff",
+                    "inverse-primary": "#afc9e9",
+                    "surface-container-highest": "#e0e3e6",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#001d33",
+                    "secondary-fixed-dim": "#fabc39",
+                    "tertiary-fixed-dim": "#98cbff",
+                    "luxury-gold": "#FFC03D"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-mobile": "16px",
+                    "container-max": "1200px",
+                    "section-padding-lg": "120px",
+                    "gutter": "24px",
+                    "section-padding-md": "80px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Montserrat"],
+                    "caption": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "label-bold": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fc; color: #191c1e; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(10, 39, 64, 0.05);
+            box-shadow: 0px 4px 20px rgba(10, 39, 64, 0.05);
+        }
+        .luxury-shadow { box-shadow: 0px 10px 30px -10px rgba(10, 39, 64, 0.15); }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm h-20 flex justify-between items-center px-margin-mobile md:px-gutter max-w-full">
+<div class="max-w-container-max mx-auto w-full flex justify-between items-center">
+<div class="font-headline-md text-headline-md font-bold text-deep-navy">
+                London Handyman Pro
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-luxury-gold transition-colors duration-200" href="index.html">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-luxury-gold transition-colors duration-200" href="london-handyman-pro-home.html">About</a>
+<a class="font-body-md text-body-md text-luxury-gold font-bold border-b-2 border-luxury-gold pb-1" href="book-your-service-london-handyman-pro.html">Contact</a>
+<button class="bg-deep-navy text-white px-6 py-2 rounded-full font-label-bold hover:bg-luxury-gold hover:text-deep-navy transition-all duration-300 luxury-shadow">
+                    Book Now
+                </button>
+</div>
+<button class="md:hidden text-deep-navy">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-section-padding-lg">
+<!-- Hero Header -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-16 text-center">
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-deep-navy mb-4">Request a Premium Quote</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                From emergency repairs to bespoke maintenance, our master craftsmen are ready to service your London residence.
+            </p>
+</section>
+<!-- Main Grid Layout -->
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Contact & Map -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<!-- Info Cards -->
+<div class="glass-card p-8 rounded-xl">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-6">Concierge Support</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-sky-blue/10 p-3 rounded-lg">
+<span class="material-symbols-outlined text-sky-blue">call</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-deep-navy">Telephone</p>
+<p class="font-body-md text-body-md text-on-surface-variant">+44 (0) 20 7946 0123</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-sky-blue/10 p-3 rounded-lg">
+<span class="material-symbols-outlined text-sky-blue">mail</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-deep-navy">Email</p>
+<p class="font-body-md text-body-md text-on-surface-variant">concierge@londonhandyman.pro</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-sky-blue/10 p-3 rounded-lg">
+<span class="material-symbols-outlined text-sky-blue">schedule</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-deep-navy">Service Hours</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Mon - Sat: 08:00 - 20:00</p>
+<p class="font-caption text-caption text-sky-blue italic">24/7 Emergency Response Available</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Coverage Map -->
+<div class="glass-card overflow-hidden rounded-xl">
+<div class="p-8 pb-4">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-2">Service Coverage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We provide white-glove service across all prime London zones.</p>
+</div>
+<div class="relative h-64 md:h-80 w-full overflow-hidden">
+<img alt="Service Area Map" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsogTZyMP0qxHOE7Dk_KiKlAohoJSwCx84_40UgCXE3bT6El25e3NO8wgLuIHz_BrOyY7Qo0MVNl-3URfqPvcacw5VBTbA8jub5ceC2oJvN-m53y7f7OBa5mGWTlIIYHDKQIwjMubiOfLLXcKiEmzVoEtbaOGdYHCpP-DXSBoQdcVx-djKRfggkfncLrDQXa4_aMgrnUxGHeA4yPnjn_jG6Ef2K1udkjNmj3Y8RTQHyj4SIeIh9ZcV5ib8">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/40 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2">
+<span class="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-caption font-label-bold text-deep-navy shadow-sm">North</span>
+<span class="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-caption font-label-bold text-deep-navy shadow-sm">West</span>
+<span class="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-caption font-label-bold text-deep-navy shadow-sm">East</span>
+<span class="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-caption font-label-bold text-deep-navy shadow-sm">Central</span>
+<span class="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-caption font-label-bold text-deep-navy shadow-sm">South</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Form -->
+<div class="lg:col-span-7">
+<div class="glass-card p-8 md:p-12 rounded-xl h-full">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-8">Detailed Quote Request</h3>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface">Full Name</label>
+<input class="w-full bg-white border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-sky-blue/20 focus:border-sky-blue outline-none transition-all" placeholder="Johnathan Smith" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface">Postcode</label>
+<input class="w-full bg-white border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-sky-blue/20 focus:border-sky-blue outline-none transition-all" placeholder="W1K 7AA" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface">Email Address</label>
+<input class="w-full bg-white border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-sky-blue/20 focus:border-sky-blue outline-none transition-all" placeholder="john@example.com" type="email">
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface">Phone Number</label>
+<input class="w-full bg-white border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-sky-blue/20 focus:border-sky-blue outline-none transition-all" placeholder="+44 7000 000 000" type="tel">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface">Service Required</label>
+<select class="w-full bg-white border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-sky-blue/20 focus:border-sky-blue outline-none transition-all">
+<option>Select a service type...</option>
+<option>Plumbing &amp; Heating</option>
+<option>Electrical Installation</option>
+<option>Bespoke Carpentry</option>
+<option>Painting &amp; Decorating</option>
+<option>Smart Home Setup</option>
+<option>General Maintenance</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface">Describe the Job</label>
+<textarea class="w-full bg-white border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-sky-blue/20 focus:border-sky-blue outline-none transition-all" placeholder="Please provide details about the project or repair needed..." rows="4"></textarea>
+</div>
+<div class="flex items-center gap-3 py-2">
+<input class="w-5 h-5 rounded border-outline-variant text-sky-blue focus:ring-sky-blue" id="urgent" type="checkbox">
+<label class="font-body-md text-body-md text-on-surface-variant" for="urgent">This is an urgent repair request</label>
+</div>
+<button class="w-full bg-deep-navy text-white font-label-bold py-4 rounded-lg hover:bg-luxury-gold hover:text-deep-navy transition-all duration-300 text-lg shadow-lg" type="submit">
+                            Submit Quote Request
+                        </button>
+</form>
+</div>
+</div>
+</div>
+<!-- FAQ Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-section-padding-md">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy">Frequently Asked Questions</h2>
+<div class="w-24 h-1 bg-luxury-gold mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="space-y-4">
+<div class="glass-card p-6 rounded-lg cursor-pointer group hover:border-luxury-gold transition-colors duration-300" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-label-bold text-label-bold text-deep-navy">Do you charge for quotes?</h4>
+<span class="material-symbols-outlined text-sky-blue transform transition-transform duration-300 group-[.active]:rotate-180">expand_more</span>
+</div>
+<p class="hidden font-body-md text-body-md text-on-surface-variant mt-4">Standard quotes are free of charge. For complex projects requiring architectural assessments, a nominal fee may apply which is deductible from the final invoice.</p>
+</div>
+<div class="glass-card p-6 rounded-lg cursor-pointer group hover:border-luxury-gold transition-colors duration-300" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-label-bold text-label-bold text-deep-navy">How quickly can you respond to an emergency?</h4>
+<span class="material-symbols-outlined text-sky-blue transform transition-transform duration-300">expand_more</span>
+</div>
+<p class="hidden font-body-md text-body-md text-on-surface-variant mt-4">For urgent plumbing or electrical issues, we aim to have a technician at your London property within 2-4 hours.</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="glass-card p-6 rounded-lg cursor-pointer group hover:border-luxury-gold transition-colors duration-300" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-label-bold text-label-bold text-deep-navy">Are your craftsmen insured?</h4>
+<span class="material-symbols-outlined text-sky-blue transform transition-transform duration-300">expand_more</span>
+</div>
+<p class="hidden font-body-md text-body-md text-on-surface-variant mt-4">Yes, all our professionals are fully insured with public liability coverage up to £5,000,000 for your peace of mind.</p>
+</div>
+<div class="glass-card p-6 rounded-lg cursor-pointer group hover:border-luxury-gold transition-colors duration-300" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-label-bold text-label-bold text-deep-navy">What payment methods do you accept?</h4>
+<span class="material-symbols-outlined text-sky-blue transform transition-transform duration-300">expand_more</span>
+</div>
+<p class="hidden font-body-md text-body-md text-on-surface-variant mt-4">We accept all major credit/debit cards, bank transfers, and corporate billing for commercial clients.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy w-full py-section-padding-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md text-white mb-6">London Handyman Pro</div>
+<p class="font-caption text-caption text-surface-variant opacity-80">
+                    London's premier maintenance service for the discerning homeowner and enterprise.
+                </p>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-luxury-gold mb-6">Services</h4>
+<ul class="space-y-4">
+<li><a class="font-caption text-caption text-surface-variant hover:text-luxury-gold transition-colors" href="book-your-service-london-handyman-pro.html">Emergency Repair</a></li>
+<li><a class="font-caption text-caption text-surface-variant hover:text-luxury-gold transition-colors" href="index.html">Plumbing</a></li>
+<li><a class="font-caption text-caption text-surface-variant hover:text-luxury-gold transition-colors" href="book-your-service-london-handyman-pro.html">Electrical</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-luxury-gold mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-caption text-caption text-surface-variant hover:text-luxury-gold transition-colors" href="index.html">Terms of Service</a></li>
+<li><a class="font-caption text-caption text-surface-variant hover:text-luxury-gold transition-colors" href="index.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-luxury-gold mb-6">Contact</h4>
+<p class="font-caption text-caption text-surface-variant mb-2">+44 (0) 20 7946 0123</p>
+<p class="font-caption text-caption text-surface-variant">concierge@londonhandyman.pro</p>
+<div class="flex gap-4 mt-6">
+<div class="w-8 h-8 rounded-full border border-surface-variant/30 flex items-center justify-center text-luxury-gold hover:bg-luxury-gold hover:text-deep-navy transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-12 pt-8 border-t border-white/10">
+<p class="font-caption text-caption text-surface-variant opacity-60 text-center">© 2024 London Handyman Pro. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        function toggleFaq(element) {
+            const content = element.querySelector('p');
+            const icon = element.querySelector('.material-symbols-outlined');
+            const isActive = !content.classList.contains('hidden');
+            
+            // Toggle current
+            if (isActive) {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            }
+        }
+    </script>
+</body></html>

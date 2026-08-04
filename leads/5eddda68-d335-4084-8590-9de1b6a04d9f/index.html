@@ -1,0 +1,300 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us | ALBION</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#2f3133",
+                        "secondary": "#ffb693",
+                        "industrial-gray": "#33373B",
+                        "on-secondary-container": "#572000",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#121416",
+                        "on-primary-container": "#00285c",
+                        "inverse-surface": "#e2e2e5",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#351000",
+                        "inverse-on-surface": "#2f3133",
+                        "charcoal-base": "#0F1113",
+                        "primary-fixed-dim": "#adc6ff",
+                        "tertiary-fixed": "#e2e2e5",
+                        "secondary-container": "#fe6b00",
+                        "primary": "#adc6ff",
+                        "surface-tint": "#adc6ff",
+                        "surface-dim": "#121416",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-tertiary-fixed": "#1a1c1e",
+                        "surface-container-highest": "#333537",
+                        "tertiary-fixed-dim": "#c6c6c9",
+                        "on-error": "#690005",
+                        "slate-surface": "#1A1C1E",
+                        "on-primary": "#002e69",
+                        "primary-container": "#4b8eff",
+                        "on-secondary": "#561f00",
+                        "primary-fixed": "#d8e2ff",
+                        "electric-blue": "#007AFF",
+                        "surface-container": "#1e2022",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-high": "#282a2c",
+                        "on-tertiary-fixed-variant": "#454749",
+                        "tertiary-container": "#909193",
+                        "on-surface-variant": "#c1c6d7",
+                        "kinetic-orange": "#FF6B00",
+                        "surface-container-low": "#1a1c1e",
+                        "background": "#121416",
+                        "surface-container-lowest": "#0c0e10",
+                        "outline-variant": "#414755",
+                        "secondary-fixed": "#ffdbcc",
+                        "surface-variant": "#333537",
+                        "secondary-fixed-dim": "#ffb693",
+                        "on-secondary-fixed-variant": "#7a3000",
+                        "on-tertiary-container": "#282a2c",
+                        "error": "#ffb4ab",
+                        "on-background": "#e2e2e5",
+                        "tertiary": "#c6c6c9",
+                        "inverse-primary": "#005bc1",
+                        "on-surface": "#e2e2e5",
+                        "outline": "#8b90a0",
+                        "surface-bright": "#38393c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter-desktop": "24px",
+                        "base": "8px",
+                        "gutter-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "label-md": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.charcoal-base');
+            color: theme('colors.on-surface');
+        }
+        
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .glass-card {
+            background: rgba(26, 28, 30, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid theme('colors.industrial-gray');
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased overflow-x-hidden min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-slate-surface/80 dark:bg-slate-surface/80 docked full-width top-0 sticky backdrop-blur-md border-b border-industrial-gray shadow-sm transition-all duration-200 ease-in-out z-50 glass-nav">
+<div class="flex justify-between items-center w-full px-margin-desktop h-20 max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-extrabold tracking-tighter text-on-surface dark:text-on-surface" href="home-albion-electrical-wholesalers.html">
+                ALBION
+            </a>
+<!-- Links (Desktop) -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300 hover:text-electric-blue dark:hover:text-primary" href="home-albion-electrical-wholesalers.html">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300 hover:text-electric-blue dark:hover:text-primary" href="products-services-albion-electrical-wholesalers.html">Products</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300 hover:text-electric-blue dark:hover:text-primary" href="products-services-albion-electrical-wholesalers.html">Services</a>
+<a class="font-label-md text-label-md text-electric-blue border-b-2 border-electric-blue pb-1 transition-all duration-200 ease-in-out" href="index.html">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300 hover:text-electric-blue dark:hover:text-primary" href="contact-albion-electrical-wholesalers.html">Contact</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center space-x-4">
+<button class="hidden md:flex items-center justify-center px-4 py-2 bg-electric-blue text-white font-label-md text-label-md rounded shadow-[inset_0_1px_0_rgba(255,255,255,0.2)] hover:bg-primary-container transition-colors">
+                    Trade Account
+                </button>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 px-margin-mobile md:px-margin-desktop overflow-hidden flex items-center justify-center min-h-[60vh]">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 mix-blend-luminosity" data-alt="A moody, high-contrast photograph of a historic industrial building facade in Leeds, specifically Albion Street. The image is bathed in deep shadows with sharp, cool lighting highlighting architectural details, evoking a sense of heritage and precision. The overall color palette leans heavily into dark charcoal and slate tones, matching a sleek, modern technical luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcEzCpjQ_gLYvh81ULXExJUd4M-lIfjHJVJZSs_AA2sl9B6T6Cma1wBUp97Mm7T-hk_9g8CNTPL2xHsfOqsM9YXRsiabP9mndAjmTFeGnBczlxLcJ5CZB0M9g6LWyikp9m7-pIfK6vtXyhcjh8N0ITJr7rmI73m_OUMlc6nIohxwN1tHsoYBR3gDVDTjHEfb1SosYA__mAqvle8cDUxZcMwZ82edKcaV8gBK3fUr4vQeRHftWbTo5hcA">
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-base via-charcoal-base/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto text-center">
+<h1 class="font-display-lg text-display-lg md:text-[64px] md:leading-[72px] font-extrabold text-on-surface mb-6 tracking-tighter">
+                    Powering Industry <br> <span class="text-electric-blue">Since 1912.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Founded on Albion Street, Leeds, we have spent over a century delivering uncompromising quality and expertise to the electrical trade.
+                </p>
+</div>
+</section>
+<!-- Mission Statement Bento Grid -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-slate-surface border-y border-industrial-gray relative">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop">
+<!-- Core Mission -->
+<div class="md:col-span-8 glass-card p-12 rounded-lg flex flex-col justify-center relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-6 opacity-10 transition-opacity group-hover:opacity-20">
+<span class="material-symbols-outlined text-9xl">bolt</span>
+</div>
+<div class="relative z-10">
+<span class="font-label-sm text-label-sm text-electric-blue uppercase tracking-widest mb-4 block">Our Mission</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">
+                                Best products at competitive prices.
+                            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                                We don't just supply components; we supply reliability. By leveraging our deep industry relationships and technical expertise, we ensure that every professional has access to the highest-grade materials without compromising their bottom line.
+                            </p>
+</div>
+</div>
+<!-- Value Props -->
+<div class="md:col-span-4 grid grid-rows-2 gap-gutter-desktop">
+<div class="glass-card p-8 rounded-lg flex flex-col justify-between hover:border-electric-blue transition-colors duration-300">
+<span class="material-symbols-outlined text-electric-blue text-4xl mb-4">precision_manufacturing</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Technical Excellence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Curated inventory tested for the most demanding environments.</p>
+</div>
+</div>
+<div class="glass-card p-8 rounded-lg flex flex-col justify-between hover:border-electric-blue transition-colors duration-300">
+<span class="material-symbols-outlined text-electric-blue text-4xl mb-4">handshake</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Trade Trusted</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Generations of contractors rely on our unwavering support.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Heritage Timeline -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-20">
+<span class="font-label-sm text-label-sm text-electric-blue uppercase tracking-widest block mb-4">The Legacy</span>
+<h2 class="font-display-lg text-display-lg text-on-surface">A Century of Current</h2>
+</div>
+<div class="relative border-l border-industrial-gray ml-4 md:ml-1/2 md:-translate-x-1/2 space-y-24 pb-12">
+<!-- 1912 -->
+<div class="relative pl-12 md:pl-0 md:w-1/2 md:pr-12 ml-0 group">
+<div class="absolute left-[-5px] md:right-[-5px] md:left-auto top-2 w-2 h-2 rounded-full bg-charcoal-base border-2 border-electric-blue shadow-[0_0_10px_rgba(0,122,255,0.5)] z-10 transition-transform group-hover:scale-150"></div>
+<div class="glass-card p-8 rounded-lg text-left md:text-right relative">
+<span class="font-label-lg text-electric-blue font-bold text-2xl block mb-2">1912</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">The Spark on Albion Street</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                                Founded in a small warehouse in Leeds, Albion Electrical began by supplying vital components to the booming local textile industry as it transitioned to electric power.
+                            </p>
+<div class="w-full h-48 rounded bg-surface-container-high overflow-hidden border border-industrial-gray">
+<img class="w-full h-full object-cover mix-blend-luminosity opacity-70" data-alt="A vintage, sepia-toned archival photograph styled with modern high-contrast adjustments, showing an early 20th-century warehouse interior filled with electrical spools and brass components. The image has a subtle digital grain and deep shadows, fitting a professional, technical luxury dark mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8evHN4xf3J6Vt8mUyxqvUvGcKGaWFkwy7wOHQxj7_BKT1jMwfwXU1-uYoZbYNtTtpVy_G2SMp2_XeoS9X67t6KlWxoZTVFGg5oR5I8ogUbECJ5yAHK2GBIWj9ClxK14CqNkSbkuX2P4DdDJqgJ3WVcYeeqdN6a-fb45QUop2HQ7SsTmaycglD-bm_plKkOHgvYQ1HliERfTiIZoXvEvJdS75SBDLP_8XlD9DoTi58oBheK34C6d7CQg">
+</div>
+</div>
+</div>
+<!-- 1950s -->
+<div class="relative pl-12 md:pl-12 md:w-1/2 md:ml-auto group">
+<div class="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-charcoal-base border-2 border-industrial-gray group-hover:border-electric-blue z-10 transition-colors"></div>
+<div class="glass-card p-8 rounded-lg text-left">
+<span class="font-label-lg text-electric-blue font-bold text-2xl block mb-2">1954</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Post-War Expansion</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                As rebuilding efforts swept the nation, Albion scaled its operations, establishing a regional distribution network that prioritized speed and massive inventory reserves to keep the trade moving.
+                            </p>
+</div>
+</div>
+<!-- 1990s -->
+<div class="relative pl-12 md:pl-0 md:w-1/2 md:pr-12 ml-0 group">
+<div class="absolute left-[-5px] md:right-[-5px] md:left-auto top-2 w-2 h-2 rounded-full bg-charcoal-base border-2 border-industrial-gray group-hover:border-electric-blue z-10 transition-colors"></div>
+<div class="glass-card p-8 rounded-lg text-left md:text-right">
+<span class="font-label-lg text-electric-blue font-bold text-2xl block mb-2">1998</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">The Digital Shift</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Embracing the future, Albion modernized its supply chain with early adoption of computerized inventory systems, ensuring the 'best products at competitive prices' mandate could scale nationally.
+                            </p>
+</div>
+</div>
+<!-- Today -->
+<div class="relative pl-12 md:pl-12 md:w-1/2 md:ml-auto group">
+<div class="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-electric-blue shadow-[0_0_15px_rgba(0,122,255,0.8)] z-10 animate-pulse"></div>
+<div class="glass-card p-8 rounded-lg text-left relative overflow-hidden border-electric-blue/30">
+<div class="absolute top-0 right-0 w-32 h-32 bg-electric-blue/5 rounded-full blur-2xl"></div>
+<span class="font-label-lg text-electric-blue font-bold text-2xl block mb-2">Present Day</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Modern Performance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                                Today, Albion stands as a premier technical wholesaler, merging our heritage of personal service with cutting-edge logistics to power the modern infrastructure of tomorrow.
+                            </p>
+<div class="w-full h-48 rounded bg-surface-container-high overflow-hidden border border-industrial-gray">
+<img class="w-full h-full object-cover opacity-80" data-alt="A sleek, highly stylized photograph of a modern, automated warehouse interior. Rows of organized industrial shelving disappear into the distance, illuminated by cool, crisp blue LED lighting. The image emphasizes clean lines, technical precision, and a dark, sophisticated corporate modern style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgffQ0c5qDZNhrZqHXs1wd32zXBuctLTPQutW7_gEtMnCcIkz8VZAspX0ICC5ej-LYySXoFSIIlnbeL1EnFpEBEqGSaFwZURcC74qbWhIXdodWUtObGmaC1HV69R42d6hjYwt1CdS8omcD54pM1niIM46NBUiYFiIm6Bl88qVisbH8DKVFNC6lxQf5s6oJV3qCVjCu-Oz_yjrf_3omcW8Mpus3xgRGvQKvN3MERUEFMXyID4IGkzvvPQ">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-charcoal-base dark:bg-charcoal-base w-full py-16 border-t border-industrial-gray">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-desktop px-margin-desktop max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Brand Column -->
+<div class="flex flex-col space-y-4">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">ALBION</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Powering the trade with precision and reliability since 1912.
+                </p>
+</div>
+<!-- Links -->
+<div class="md:col-span-3 flex flex-wrap gap-8 justify-start md:justify-end">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors opacity-80 hover:opacity-100 uppercase" href="home-albion-electrical-wholesalers.html">Terms of Sale</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors opacity-80 hover:opacity-100 uppercase" href="home-albion-electrical-wholesalers.html">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors opacity-80 hover:opacity-100 uppercase" href="index.html">Environmental Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors opacity-80 hover:opacity-100 uppercase" href="home-albion-electrical-wholesalers.html">Cookie Settings</a>
+</div>
+<!-- Copyright -->
+<div class="md:col-span-4 mt-12 pt-8 border-t border-industrial-gray/50 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60 text-sm">
+                    © 1912-2024 Albion Electrical Wholesalers. All Rights Reserved.
+                </p>
+<div class="mt-4 md:mt-0 flex space-x-4">
+<span class="font-label-sm text-label-sm text-electric-blue opacity-50">Technical Luxury Edition</span>
+</div>
+</div>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F5eddda68-d335-4084-8590-9de1b6a04d9f" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

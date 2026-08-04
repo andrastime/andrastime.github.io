@@ -1,0 +1,541 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ideal Electricians Ltd. | Expert Electrical Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed-dim": "#b6c4ff",
+                      "surface-tint": "#004dea",
+                      "inverse-on-surface": "#f0f1f2",
+                      "surface-variant": "#e1e3e4",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#1a1c1e",
+                      "on-background": "#191c1d",
+                      "outline-variant": "#c3c5d9",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#001551",
+                      "on-error": "#ffffff",
+                      "surface-bright": "#f8f9fa",
+                      "secondary-fixed-dim": "#e9c400",
+                      "primary-container": "#0055ff",
+                      "surface-container-high": "#e7e8e9",
+                      "surface-dim": "#d9dadb",
+                      "on-tertiary-container": "#e7e7ea",
+                      "secondary-container": "#fcd400",
+                      "primary": "#0041c8",
+                      "tertiary-container": "#66686a",
+                      "secondary": "#705d00",
+                      "on-primary-container": "#e3e6ff",
+                      "on-primary-fixed-variant": "#0039b3",
+                      "surface": "#f8f9fa",
+                      "on-error-container": "#93000a",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-secondary-fixed-variant": "#544600",
+                      "on-tertiary-fixed-variant": "#454749",
+                      "outline": "#737688",
+                      "tertiary-fixed-dim": "#c6c6c9",
+                      "primary-fixed": "#dce1ff",
+                      "inverse-surface": "#2e3132",
+                      "on-surface": "#191c1d",
+                      "on-secondary-container": "#6e5c00",
+                      "on-surface-variant": "#434656",
+                      "surface-container-low": "#f3f4f5",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#b6c4ff",
+                      "secondary-fixed": "#ffe16d",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#e2e2e5",
+                      "surface-container": "#edeeef",
+                      "background": "#f8f9fa",
+                      "tertiary": "#4e5052",
+                      "on-secondary-fixed": "#221b00",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-md": "16px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "stack-lg": "32px",
+                      "base": "8px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "headline-xl-mobile": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-xl": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased relative overflow-x-hidden">
+<!-- Global Background Shader -->
+<div class="fixed inset-0 z-[-1] opacity-10 pointer-events-none">
+<!-- STITCH_SHADER_START:ANIMATION_5 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_5" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_5');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Slow moving gradient background
+    vec3 color1 = vec3(0.0, 0.33, 1.0); // Electric Blue
+    vec3 color2 = vec3(0.1, 0.1, 0.12); // Charcoal Grey
+    
+    float pulse = sin(u_time * 0.2) * 0.5 + 0.5;
+    vec3 finalColor = mix(color1, color2, uv.y + pulse * 0.2);
+    
+    // Subtle electric "sparks" or light pulses
+    float sparks = pow(abs(sin(uv.x * 20.0 + u_time) * cos(uv.y * 15.0 - u_time)), 40.0);
+    finalColor += sparks * color1 * 0.5;
+    
+    gl_FragColor = vec4(finalColor * 0.15, 1.0); // Low opacity for subtle background effect
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_5 -->
+</div>
+<!-- Top Navigation -->
+<header class="bg-surface dark:bg-inverse-surface font-headline-md text-headline-md font-body-md text-body-md fixed top-0 left-0 w-full z-50 border-b border-outline-variant dark:border-outline flat no shadows">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">electric_bolt</span>
+                Ideal Electricians Ltd.
+            </a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-bold text-label-bold" href="#services">Services</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-bold text-label-bold" href="#about">About</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-bold text-label-bold" href="#contact">Contact</a>
+<a class="bg-primary hover:bg-on-primary-fixed-variant text-on-primary px-6 py-2 rounded-lg font-label-bold text-label-bold transition-all duration-200 flex items-center gap-2" href="tel:+1234567890">
+<span class="material-symbols-outlined">call</span>
+                    Book an Appointment
+                </a>
+</nav>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary p-2" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Mobile Side Nav (Hidden by default) -->
+<div class="fixed inset-y-0 right-0 w-64 z-[60] bg-surface dark:bg-inverse-surface shadow-lg transform translate-x-full transition-transform duration-300 flex flex-col p-stack-md md:hidden" id="mobile-nav">
+<div class="flex justify-end mb-stack-md">
+<button class="text-on-surface-variant p-2" id="close-mobile-nav">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="text-on-surface-variant dark:text-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant dark:hover:bg-on-tertiary-fixed-variant rounded-xl transition-colors font-label-bold text-label-bold" href="#services">
+<span class="material-symbols-outlined">electrical_services</span> Services
+            </a>
+<a class="text-on-surface-variant dark:text-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant dark:hover:bg-on-tertiary-fixed-variant rounded-xl transition-colors font-label-bold text-label-bold" href="#about">
+<span class="material-symbols-outlined">info</span> About
+            </a>
+<a class="text-on-surface-variant dark:text-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant dark:hover:bg-on-tertiary-fixed-variant rounded-xl transition-colors font-label-bold text-label-bold" href="#contact">
+<span class="material-symbols-outlined">mail</span> Contact
+            </a>
+<a class="mt-4 bg-primary text-on-primary px-4 py-3 rounded-xl font-label-bold text-label-bold text-center" href="tel:+1234567890">
+                Call Now
+            </a>
+</nav>
+</div>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-margin-mobile md:px-margin-desktop py-stack-lg md:py-24 max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-gutter min-h-[80vh]">
+<div class="flex-1 space-y-stack-md z-10 animate-fade-in-up">
+<div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-bold text-label-bold mb-4">
+<span class="material-symbols-outlined text-[16px] animate-pulse">emergency</span>
+                    24/7 Emergency Service Available
+                </div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface font-bold leading-tight">
+                    Expert Electrical Solutions for Your Home &amp; Business
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Precision, reliability, and safety-conscious electrical services. From minor repairs to full commercial installations, our certified electricians deliver excellence.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="bg-primary hover:bg-on-primary-fixed-variant text-on-primary px-8 py-4 rounded-lg font-label-bold text-label-bold text-center transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center gap-2" href="#contact">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+                        Book an Appointment
+                    </a>
+<a class="bg-transparent border border-primary text-primary hover:bg-surface-container px-8 py-4 rounded-lg font-label-bold text-label-bold text-center transition-all duration-200 flex items-center justify-center gap-2" href="#quote">
+                        Get a Free Quote
+                    </a>
+</div>
+</div>
+<div class="flex-1 w-full relative z-10 animate-fade-in-up delay-200">
+<div class="aspect-square md:aspect-[4/3] rounded-xl overflow-hidden shadow-sm border border-surface-variant relative group">
+<img alt="Professional Electrician at Work" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A professional electrician in safety gear inspecting a complex residential electrical panel in a well-lit modern home. The scene implies precision and expertise, with bright, clean lighting emphasizing safety and reliability. Subtle electric blue tones in the uniform connect to the brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaZl89kUSY2MNlqO49mnPAcIrWhLfUIvFb4DTZMxV6y_NWsvTCVVwmP0MN4KDW6kqrqA8sE37QRWK_3koG0ARVlNFtPIwd4g3z1H1FB_VFy_z5c81VYZuXawjYAxcrwC6dEITgEHHvo443wsJ0VcfBOGfnqjrXb_bKme7penUjZ25oyKufUJmkRZ145pV6sYbNbl99JYixwtmPmrFWsbkQIM32SS4daYGDuWeBBAvNbTJl8JjZkv68Hw">
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="bg-surface-container-low py-stack-lg md:py-24" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-12 animate-fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-4">Our Core Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Comprehensive electrical solutions tailored to meet the highest safety and performance standards.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service Card 1 -->
+<article class="bg-surface rounded-xl p-6 border border-surface-variant hover:shadow-md transition-all duration-300 animate-fade-in-up delay-100 flex flex-col">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<h3 class="font-headline-md text-[20px] leading-tight font-bold text-on-surface mb-2">Residential Services</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Wiring, lighting design, panel upgrades, and smart home integrations for your family's safety and comfort.</p>
+<a class="text-primary font-label-bold text-label-bold inline-flex items-center gap-1 hover:underline" href="shader.html">
+                            View Details <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</article>
+<!-- Service Card 2 -->
+<article class="bg-surface rounded-xl p-6 border border-surface-variant hover:shadow-md transition-all duration-300 animate-fade-in-up delay-200 flex flex-col">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">domain</span>
+</div>
+<h3 class="font-headline-md text-[20px] leading-tight font-bold text-on-surface mb-2">Commercial Solutions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Scalable electrical systems, regular maintenance, and energy-efficient retrofits for modern businesses.</p>
+<a class="text-primary font-label-bold text-label-bold inline-flex items-center gap-1 hover:underline" href="shader.html">
+                            View Details <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</article>
+<!-- Service Card 3 -->
+<article class="bg-surface rounded-xl p-6 border border-secondary-container hover:shadow-md transition-all duration-300 animate-fade-in-up delay-300 flex flex-col relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-secondary-container text-on-secondary-container text-xs px-2 py-1 rounded-bl-lg font-bold">URGENT</div>
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center mb-4 text-on-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">build</span>
+</div>
+<h3 class="font-headline-md text-[20px] leading-tight font-bold text-on-surface mb-2">Emergency Repairs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Rapid response 24/7 troubleshooting and repair to restore power and ensure immediate safety.</p>
+<a class="text-secondary font-label-bold text-label-bold inline-flex items-center gap-1 hover:underline" href="shader.html">
+                            View Details <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</article>
+<!-- Service Card 4 -->
+<article class="bg-surface rounded-xl p-6 border border-surface-variant hover:shadow-md transition-all duration-300 animate-fade-in-up delay-[400ms] flex flex-col">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">ev_charger</span>
+</div>
+<h3 class="font-headline-md text-[20px] leading-tight font-bold text-on-surface mb-2">EV Charger Installation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Professional installation of Level 2 charging stations for homes and commercial parking facilities.</p>
+<a class="text-primary font-label-bold text-label-bold inline-flex items-center gap-1 hover:underline" href="#">
+                            View Details <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</article>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-stack-lg md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="about">
+<div class="flex flex-col md:flex-row items-center gap-gutter">
+<div class="flex-1 animate-fade-in-up">
+<img alt="Ideal Electricians Logo" class="w-full max-w-[300px] mx-auto md:mx-0 rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtMpQy0Kd7qiX4OR5Geyyh5ytIR5JfQIym_qDD8PHORxgLQNRPAjEhWoYlddiUQUAXTDb1MAMKuQ28Jo-y1lMxdFzIaTTl3pozPFspJBTezdPR_UsBzgIeHXTP0IzPPVT2Wex8uJxEwxh_WcJVcO8LDNwDNjFKE1tdLaX9qWUky8gBlX5c3z4wyFGxOyr87ui3h7jepsdIdiP-0KYI9c6z-gRaIPqlxZfox-AYQAXDCKG8-REa2yxBCA">
+</div>
+<div class="flex-1 space-y-4 animate-fade-in-up delay-200 text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Committed to Excellence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        At Ideal Electricians Ltd., we don't just fix wires; we build trust through technical precision. With over a decade of experience serving our community, our licensed professionals bring a high-energy commitment to every project, ensuring your systems are efficient, compliant, and profoundly safe.
+                    </p>
+<ul class="space-y-2 text-left inline-block mt-4">
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span> Fully Licensed &amp; Insured
+                        </li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span> Transparent Upfront Pricing
+                        </li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span> 100% Satisfaction Guarantee
+                        </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="bg-surface-bright py-stack-lg md:py-24 border-t border-outline-variant" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<div class="animate-fade-in-up space-y-6">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Request a Service</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Fill out the form below, and our team will get back to you promptly to discuss your electrical needs.</p>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Headquarters</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">123 Energy Way, Volt City, VC 90210</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">phone</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Phone</h4>
+<p class="font-body-md text-body-md text-on-surface-variant"><a class="hover:text-primary transition-colors" href="tel:5550198273">(555) 019-8273</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface p-6 md:p-8 rounded-xl border border-surface-variant shadow-sm animate-fade-in-up delay-200">
+<form class="space-y-4">
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface mb-1" for="name">Full Name</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface outline-none transition-all" id="name" placeholder="John Doe" required="" type="text">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface mb-1" for="email">Email Address</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface outline-none transition-all" id="email" placeholder="john@example.com" required="" type="email">
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface mb-1" for="phone">Phone Number</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface outline-none transition-all" id="phone" placeholder="(555) 000-0000" required="" type="tel">
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface mb-1" for="message">How can we help?</label>
+<textarea class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface outline-none transition-all resize-none" id="message" placeholder="Describe your electrical issue or project..." required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary hover:bg-on-primary-fixed-variant text-on-primary h-12 rounded-lg font-label-bold text-label-bold transition-colors" type="submit">
+                                Submit Request
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest text-primary-fixed dark:text-primary font-body-md text-body-md w-full grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto border-t border-outline-variant">
+<div>
+<div class="font-headline-md text-headline-md font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">electric_bolt</span> Ideal Electricians
+            </div>
+<p class="font-caption text-caption text-surface-variant dark:text-on-surface-variant mb-4">Precision, reliability, and professional excellence in every connection.</p>
+<p class="font-caption text-caption text-surface-variant dark:text-on-surface-variant">© 2024 Ideal Electricians Ltd. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-bold text-label-bold text-on-secondary mb-2">Quick Links</h4>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed dark:hover:text-primary hover:underline transition-all" href="#services">Services</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed dark:hover:text-primary hover:underline transition-all" href="index.html">Privacy Policy</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed dark:hover:text-primary hover:underline transition-all" href="index.html">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-bold text-label-bold text-on-secondary mb-2">Support</h4>
+<a class="text-secondary-fixed-dim font-bold hover:underline transition-all flex items-center gap-1" href="index.html">
+<span class="material-symbols-outlined text-[16px]">warning</span> Emergency Support
+            </a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed dark:hover:text-primary hover:underline transition-all mt-2" href="mailto:info@idealelectricians.com">info@idealelectricians.com</a>
+</div>
+</footer>
+<script>
+        // Simple Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMobileNav = document.getElementById('close-mobile-nav');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        function toggleMenu() {
+            mobileNav.classList.toggle('translate-x-full');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        closeMobileNav.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a link
+        const mobileLinks = mobileNav.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+<img src="https://andrastime.goatcounter.com/count?p=%2F2fae4f72-c188-44a2-8eef-fefd97b156b8" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

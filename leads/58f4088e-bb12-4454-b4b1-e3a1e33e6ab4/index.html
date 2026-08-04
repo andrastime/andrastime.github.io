@@ -1,0 +1,481 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>East London Handyman</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-surface": "#263142",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed": "#e0e3e5",
+                      "secondary-fixed-dim": "#ffb77d",
+                      "on-tertiary-container": "#8d9193",
+                      "on-primary-fixed": "#0b1d2d",
+                      "tertiary": "#121617",
+                      "surface-tint": "#4f6073",
+                      "primary-fixed-dim": "#b7c8de",
+                      "on-surface": "#111c2c",
+                      "background": "#f9f9ff",
+                      "secondary-fixed": "#ffdcc3",
+                      "primary-fixed": "#d2e4fb",
+                      "on-surface-variant": "#44474c",
+                      "surface-container-highest": "#d8e3fa",
+                      "inverse-primary": "#b7c8de",
+                      "on-secondary-fixed-variant": "#6e3900",
+                      "on-tertiary-fixed": "#181c1e",
+                      "surface-container": "#e7eeff",
+                      "primary": "#041627",
+                      "primary-container": "#1a2b3c",
+                      "on-tertiary-fixed-variant": "#434749",
+                      "on-secondary-container": "#603100",
+                      "surface-bright": "#f9f9ff",
+                      "surface-container-low": "#f0f3ff",
+                      "on-secondary-fixed": "#2f1500",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#904d00",
+                      "on-primary-container": "#8192a7",
+                      "outline-variant": "#c4c6cd",
+                      "surface-container-high": "#dee8ff",
+                      "tertiary-container": "#262a2c",
+                      "on-background": "#111c2c",
+                      "surface-variant": "#d8e3fa",
+                      "surface-dim": "#cfdaf1",
+                      "on-primary-fixed-variant": "#38485a",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "on-primary": "#ffffff",
+                      "outline": "#74777d",
+                      "error-container": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface": "#f9f9ff",
+                      "secondary-container": "#fd8b00",
+                      "on-error": "#ffffff",
+                      "inverse-on-surface": "#ebf1ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "section-gap": "80px",
+                      "base": "8px",
+                      "container-max": "1200px",
+                      "margin-desktop": "40px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-xl": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "East London Handyman",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBKMa4tUZGZsB2eHlzkKgK2YEhx-e1GUiW7GaHomfJ9bkmAXfpuqo-pKw5DDkDc93kydWCegk_wpethP9PoC-CmAg_DdkrmIivMdkIu4Ow2jodc47yA06OBEYuD7qvwY8ACXksK9fICcXIDsuSno5hweC1Ir_iIt84qnAZyIVgnp1CwF9cdodZlntxdEwopP-m_Br_wxbt8o9qnHqMEzxrIptnJfIvYAeegXLlRBZSWj9AnCfnmdptg-w",
+      "telephone": "+44 20 1234 5678",
+      "areaServed": [
+        "Hackney",
+        "Tower Hamlets",
+        "Newham"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "UK"
+      }
+    }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased scroll-smooth">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant flat no shadows transition-all duration-300" id="main-header">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<a class="flex items-center gap-2" href="index.html">
+<img alt="East London Handyman Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKMa4tUZGZsB2eHlzkKgK2YEhx-e1GUiW7GaHomfJ9bkmAXfpuqo-pKw5DDkDc93kydWCegk_wpethP9PoC-CmAg_DdkrmIivMdkIu4Ow2jodc47yA06OBEYuD7qvwY8ACXksK9fICcXIDsuSno5hweC1Ir_iIt84qnAZyIVgnp1CwF9cdodZlntxdEwopP-m_Br_wxbt8o9qnHqMEzxrIptnJfIvYAeegXLlRBZSWj9AnCfnmdptg-w">
+<span class="font-headline-md text-headline-md font-bold text-primary hidden sm:block">East London Handyman</span>
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 hover:opacity-80 transition-opacity font-label-bold text-label-bold uppercase" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-bold text-label-bold uppercase" href="#how-it-works">How It Works</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-bold text-label-bold uppercase" href="#testimonials">Testimonials</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-bold text-label-bold uppercase" href="#contact">Contact</a>
+</nav>
+<a class="hidden md:flex items-center gap-2 bg-secondary-container text-on-secondary-container px-6 py-3 rounded font-label-bold text-label-bold hover:bg-secondary hover:text-on-secondary transition-colors uppercase" href="tel:+442012345678">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+                Call Now
+            </a>
+<!-- Mobile Menu Toggle -->
+<button aria-label="Toggle Menu" class="md:hidden text-primary p-2 focus:outline-none">
+<span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 bg-primary-container">
+<img class="w-full h-full object-cover opacity-40 mix-blend-multiply" data-alt="A rugged, professional handyman in deep navy workwear, focused on precision carpentry in a modern, well-lit East London apartment. The lighting is high-key and natural, creating a bright, reliable mood. Deep blacks and pristine whites dominate the background, with safety orange accents on his tools. Industrial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrwP8VHDyCKGUirprKqG3_J9VyypehsAmUaNhQlP9XveX70rMmQ1D_-sCAVuXIJ_9FMIou85zxZDU-IgCkIcr-mXKH0YADDpX1wsel-1WSMRRAgfYV5aoEj6z9cG3HJw16H0N328a_WFlfMEvDL9rgCI5KgjgSFszg3J472k6rUov3F8itc2MNrYkLWZJRnAafxPRTtQXdBigqAhHpoN_UCbRWbWuUhrQYumMUg-y2QY1nnYfjYOLyMg">
+
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto fade-in-up">
+<h1 class="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-primary mb-6">Expert Handyman Services Across East London</h1>
+<p class="font-body-lg text-body-lg text-surface-container-high mb-10 max-w-2xl mx-auto">Reliable, Professional, and Quality Workmanship for Your Home.</p>
+<a class="inline-flex items-center justify-center gap-2 bg-secondary-container text-on-secondary-container px-8 py-4 rounded-lg font-label-bold text-label-bold hover:bg-secondary hover:text-on-secondary transition-colors shadow-md uppercase tracking-wider text-lg" href="#contact">
+                    Get a Free Quote
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap bg-surface px-margin-mobile md:px-margin-desktop" id="services">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Services</h2>
+<div class="h-1 w-20 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Plumbing -->
+<div class="bg-surface-container-lowest p-6 border border-outline-variant rounded hover:shadow-lg transition-shadow duration-300 fade-in-up relative group">
+<div class="absolute top-4 right-4 text-secondary opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl" data-icon="plumbing">plumbing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mt-8 mb-4">Plumbing</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Leaks, blockages, installations, and general maintenance.</p>
+<a class="text-secondary font-label-bold text-label-bold uppercase flex items-center gap-1 group-hover:text-primary transition-colors" href="#contact">
+                            Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Electrical -->
+<div class="bg-surface-container-lowest p-6 border border-outline-variant rounded hover:shadow-lg transition-shadow duration-300 fade-in-up relative group delay-100">
+<div class="absolute top-4 right-4 text-secondary opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl" data-icon="electrical_services">electrical_services</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mt-8 mb-4">Electrical</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Light fixtures, socket replacements, and fault finding.</p>
+<a class="text-secondary font-label-bold text-label-bold uppercase flex items-center gap-1 group-hover:text-primary transition-colors" href="#contact">
+                            Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Carpentry -->
+<div class="bg-surface-container-lowest p-6 border border-outline-variant rounded hover:shadow-lg transition-shadow duration-300 fade-in-up relative group delay-200">
+<div class="absolute top-4 right-4 text-secondary opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl" data-icon="carpenter">carpenter</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mt-8 mb-4">Carpentry</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Custom shelving, door hanging, and wooden repairs.</p>
+<a class="text-secondary font-label-bold text-label-bold uppercase flex items-center gap-1 group-hover:text-primary transition-colors" href="#contact">
+                            Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- General Repairs -->
+<div class="bg-surface-container-lowest p-6 border border-outline-variant rounded hover:shadow-lg transition-shadow duration-300 fade-in-up relative group delay-300">
+<div class="absolute top-4 right-4 text-secondary opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl" data-icon="home_repair_service">home_repair_service</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mt-8 mb-4">General Repairs</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Painting, decorating, flat-pack assembly, and odd jobs.</p>
+<a class="text-secondary font-label-bold text-label-bold uppercase flex items-center gap-1 group-hover:text-primary transition-colors" href="#contact">
+                            Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-section-gap bg-surface-container-low px-margin-mobile md:px-margin-desktop" id="how-it-works">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">How It Works</h2>
+<div class="h-1 w-20 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative">
+<!-- Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-12 left-1/6 right-1/6 h-0.5 bg-outline-variant -z-10"></div>
+<!-- Step 1 -->
+<div class="fade-in-up bg-surface-container-lowest p-8 rounded border border-outline-variant relative z-0">
+<div class="w-24 h-24 bg-primary text-on-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-md border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined text-4xl" data-icon="edit_calendar">edit_calendar</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">1. Book</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Get in touch to describe your problem and schedule a convenient time.</p>
+</div>
+<!-- Step 2 -->
+<div class="fade-in-up delay-100 bg-surface-container-lowest p-8 rounded border border-outline-variant relative z-0">
+<div class="w-24 h-24 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-6 shadow-md border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined text-4xl fill-icon" data-icon="build">build</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">2. Repair</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Our expert arrives on time, fully equipped to resolve the issue efficiently.</p>
+</div>
+<!-- Step 3 -->
+<div class="fade-in-up delay-200 bg-surface-container-lowest p-8 rounded border border-outline-variant relative z-0">
+<div class="w-24 h-24 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto mb-6 shadow-md border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined text-4xl" data-icon="coffee">coffee</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">3. Relax</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Enjoy your perfectly functioning home with our satisfaction guarantee.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap bg-surface px-margin-mobile md:px-margin-desktop" id="contact">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Form Area -->
+<div class="fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Ready to Fix Your Home?</h2>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8">Fill out the form below or call us directly. We aim to respond within 2 hours.</p>
+<form class="space-y-6">
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2 uppercase" for="name">Name</label>
+<input class="w-full border border-outline-variant rounded p-3 bg-surface-container-lowest focus:border-primary focus:ring-2 focus:ring-primary-fixed outline-none transition-all font-body-md text-body-md" id="name" name="name" required="" type="text">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2 uppercase" for="email">Email</label>
+<input class="w-full border border-outline-variant rounded p-3 bg-surface-container-lowest focus:border-primary focus:ring-2 focus:ring-primary-fixed outline-none transition-all font-body-md text-body-md" id="email" name="email" required="" type="email">
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2 uppercase" for="phone">Phone</label>
+<input class="w-full border border-outline-variant rounded p-3 bg-surface-container-lowest focus:border-primary focus:ring-2 focus:ring-primary-fixed outline-none transition-all font-body-md text-body-md" id="phone" name="phone" type="tel">
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2 uppercase" for="message">Message</label>
+<textarea class="w-full border border-outline-variant rounded p-3 bg-surface-container-lowest focus:border-primary focus:ring-2 focus:ring-primary-fixed outline-none transition-all font-body-md text-body-md" id="message" name="message" required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-bold text-label-bold py-4 rounded hover:bg-primary-container transition-colors shadow-md uppercase tracking-wide" type="submit">
+                                Send Message
+                            </button>
+</form>
+</div>
+<!-- Info Area & Map -->
+<div class="fade-in-up delay-100 flex flex-col gap-8">
+<div class="bg-primary-container text-on-primary-container p-8 rounded">
+<h3 class="font-headline-md text-headline-md text-on-primary mb-6 border-b border-surface-tint pb-4">Contact Information</h3>
+<div class="space-y-4">
+<a class="flex items-center gap-4 hover:text-secondary-fixed transition-colors" href="tel:+442012345678">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" data-icon="call">call</span>
+</div>
+<span class="font-label-bold text-label-bold text-lg">+44 20 1234 5678</span>
+</a>
+<a class="flex items-center gap-4 hover:text-secondary-fixed transition-colors" href="mailto:info@eastlondonhandyman.co.uk">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" data-icon="mail">mail</span>
+</div>
+<span class="font-body-md text-body-md">info@eastlondonhandyman.co.uk</span>
+</a>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary" data-icon="schedule">schedule</span>
+</div>
+<span class="font-body-md text-body-md">Mon - Sat: 8:00 AM - 6:00 PM</span>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-surface-tint">
+<h4 class="font-label-bold text-label-bold uppercase text-surface-container-high mb-3">Areas We Serve</h4>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary text-on-primary px-3 py-1 rounded text-sm font-label-sm">Hackney</span>
+<span class="bg-primary text-on-primary px-3 py-1 rounded text-sm font-label-sm">Tower Hamlets</span>
+<span class="bg-primary text-on-primary px-3 py-1 rounded text-sm font-label-sm">Newham</span>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="flex-grow min-h-[250px] bg-surface-container-highest rounded overflow-hidden relative border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A stylized, modern map centered on East London (Hackney, Tower Hamlets, Newham). The map uses a sophisticated color palette of deep navy blues, crisp whites, and subtle grey roads. A prominent, high-contrast safety orange location pin marks the central service area. Industrial, clean design." data-location="East London, UK" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPLSMYT0pt5nL_MhqDHT-oGidFwUVxeAiyBQRSXJM9-IO_YKNpoJG2V7oPn1jitukydTWG44Ohoq9tUGxPn5VzY_RK0_0bGDzUWbjH_KvwoJEl326YvD-DXSdeWqPybJvg2AZ2x8p6E7HjnjXC_w7_mjQaMWhZbE5x4mJymJFk4CyqR6mYG2XHrWW5XZmMjjPjQbGqWEP1nVvmR8XOxjnjhj8v-YQBSSpk8SHN8aNtgSlWCZqgC3U5aA">
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-primary text-on-primary border-t-4 border-secondary">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="md:col-span-4 mb-8 md:mb-0">
+<a class="flex items-center gap-2 mb-4" href="index.html">
+<img alt="East London Handyman Logo" class="h-12 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKMa4tUZGZsB2eHlzkKgK2YEhx-e1GUiW7GaHomfJ9bkmAXfpuqo-pKw5DDkDc93kydWCegk_wpethP9PoC-CmAg_DdkrmIivMdkIu4Ow2jodc47yA06OBEYuD7qvwY8ACXksK9fICcXIDsuSno5hweC1Ir_iIt84qnAZyIVgnp1CwF9cdodZlntxdEwopP-m_Br_wxbt8o9qnHqMEzxrIptnJfIvYAeegXLlRBZSWj9AnCfnmdptg-w">
+<span class="font-headline-md text-headline-md font-bold text-on-primary">East London Handyman</span>
+</a>
+<p class="font-body-md text-body-md text-surface-container-high mb-4 max-w-xs">Professional property maintenance and repair services across East London.</p>
+<div class="flex gap-4">
+<!-- Social placeholders -->
+<a class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-colors" href="shader.html">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+</div>
+</div>
+<!-- Links 1 -->
+<div class="md:col-span-3 md:col-start-6">
+<h4 class="font-label-bold text-label-bold uppercase text-secondary-fixed mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="index.html">Plumbing</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="index.html">Electrical</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="index.html">Carpentry</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="index.html">General Repairs</a></li>
+</ul>
+</div>
+<!-- Links 2 -->
+<div class="md:col-span-3">
+<h4 class="font-label-bold text-label-bold uppercase text-secondary-fixed mb-4">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="index.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+<!-- Copyright -->
+<div class="md:col-span-12 mt-12 pt-8 border-t border-surface-tint text-center md:text-left">
+<p class="font-label-sm text-label-sm text-on-primary-container">
+                    © 2024 East London Handyman. Professional property maintenance in Hackney, Tower Hamlets, and Newham.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll animations
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+            
+            // Header scroll effect
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    header.classList.add('shadow-md');
+                } else {
+                    header.classList.remove('shadow-md');
+                }
+            });
+        });
+    </script>
+<img src="https://andrastime.goatcounter.com/count?p=%2F58f4088e-bb12-4454-b4b1-e3a1e33e6ab4" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

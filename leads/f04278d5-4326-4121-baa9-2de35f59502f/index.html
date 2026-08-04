@@ -1,0 +1,331 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>West London Craftsmen - Professional Handyman Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#96d0de",
+                        "surface-container-highest": "#e2e2e2",
+                        "deep-navy": "#101828",
+                        "primary-fixed": "#e5e2e1",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#1c1b1b",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#474746",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "surface": "#f9f9f9",
+                        "on-secondary-container": "#6e5200",
+                        "on-surface-variant": "#444748",
+                        "on-secondary-fixed": "#251a00",
+                        "surface-container-low": "#f3f3f4",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#c8c6c5",
+                        "secondary-fixed-dim": "#f7be1e",
+                        "secondary": "#785a00",
+                        "tertiary-container": "#001f26",
+                        "surface-dim": "#dadada",
+                        "on-primary-container": "#858383",
+                        "outline-variant": "#c4c7c7",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "on-tertiary-fixed-variant": "#054e5b",
+                        "error": "#ba1a1a",
+                        "outline": "#747878",
+                        "on-tertiary-fixed": "#001f26",
+                        "safety-orange": "#FF9E28",
+                        "on-tertiary-container": "#538c9a",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-fixed": "#b2ecfb",
+                        "surface-gray": "#F9FAFB",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-surface": "#2f3131",
+                        "tertiary": "#000000",
+                        "surface-container": "#eeeeee",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "primary": "#000000",
+                        "surface-tint": "#5f5e5e",
+                        "secondary-container": "#fdc325",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed": "#ffdf9b",
+                        "error-container": "#ffdad6",
+                        "background": "#f9f9f9",
+                        "on-background": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "base": "8px",
+                        "stack-sm": "12px",
+                        "stack-lg": "48px",
+                        "margin-mobile": "16px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "caption": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-20">
+<!-- Top Navigation Bar (Shared Component) -->
+<header class="bg-surface/80 backdrop-blur-md dark:bg-surface-container-low/80 fixed top-0 w-full z-50 border-b border-outline-variant/30 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md font-bold tracking-tight text-deep-navy dark:text-primary-fixed" href="index.html">
+                West London Craftsmen
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-gutter">
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md hover:bg-surface-container-high/50 transition-all duration-300 active:scale-95 px-2 rounded-t-sm" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-high/50 duration-300 active:scale-95 px-2 py-1 rounded-sm" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-high/50 duration-300 active:scale-95 px-2 py-1 rounded-sm" href="#gallery">Gallery</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-high/50 duration-300 active:scale-95 px-2 py-1 rounded-sm" href="#reviews">Reviews</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-high/50 duration-300 active:scale-95 px-2 py-1 rounded-sm" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-high/50 duration-300 active:scale-95 px-2 py-1 rounded-sm" href="#contact">Contact</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4">
+<a class="hidden md:flex items-center gap-2 bg-secondary text-on-secondary px-6 py-2.5 rounded-full font-label-md text-label-md hover:bg-safety-orange transition-colors shadow-sm hover:shadow-md active:scale-95" href="tel:1234567890">
+<span class="material-symbols-outlined text-sm">phone</span>
+                    Call Now
+                </a>
+<!-- Mobile Menu Button -->
+<button class="md:hidden p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Side Navigation / Mobile Menu (Hidden by default on desktop, visible on mobile toggle - conceptual placeholder) -->
+<div class="md:hidden fixed inset-y-0 left-0 w-64 z-[60] bg-surface-container-lowest dark:bg-surface-dim border-r border-outline-variant shadow-xl flex flex-col h-full transform -translate-x-full transition-transform duration-300" id="mobile-menu">
+<div class="p-6 border-b border-outline-variant">
+<h2 class="font-headline-md text-headline-md text-primary">West London Craftsmen</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Professional Handyman Services</p>
+</div>
+<nav class="flex-1 overflow-y-auto py-4">
+<a class="bg-secondary-container text-on-secondary-container rounded-lg mx-2 my-1 px-4 py-3 flex items-center gap-3 font-body-md text-body-md tap-highlight-transparent" href="index.html">
+<span class="material-symbols-outlined">home</span>
+                Home
+            </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-lg mx-2 my-1 px-4 py-3 flex items-center gap-3 font-body-md text-body-md transition-colors tap-highlight-transparent" href="#services">
+<span class="material-symbols-outlined">build</span>
+                Services
+            </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-lg mx-2 my-1 px-4 py-3 flex items-center gap-3 font-body-md text-body-md transition-colors tap-highlight-transparent" href="#gallery">
+<span class="material-symbols-outlined">imagesmode</span>
+                Projects
+            </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-lg mx-2 my-1 px-4 py-3 flex items-center gap-3 font-body-md text-body-md transition-colors tap-highlight-transparent" href="#reviews">
+<span class="material-symbols-outlined">star</span>
+                Reviews
+            </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-lg mx-2 my-1 px-4 py-3 flex items-center gap-3 font-body-md text-body-md transition-colors tap-highlight-transparent" href="#contact">
+<span class="material-symbols-outlined">request_quote</span>
+                Request Quote
+            </a>
+</nav>
+<div class="p-4 border-t border-outline-variant flex flex-col gap-2">
+<a class="bg-secondary text-on-secondary w-full py-3 rounded-full text-center font-label-md text-label-md flex justify-center items-center gap-2" href="tel:123">
+<span class="material-symbols-outlined">call</span>
+                Call Now
+            </a>
+<div class="flex justify-around mt-2">
+<a class="text-on-surface-variant flex items-center gap-1 text-sm" href="contact-us-get-a-free-quote.html"><span class="material-symbols-outlined text-sm">call</span> Contact</a>
+<a class="text-on-surface-variant flex items-center gap-1 text-sm" href="index.html"><span class="material-symbols-outlined text-sm">policy</span> Privacy</a>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<main>
+<!-- Hero Section -->
+<section class="relative bg-surface-container-lowest overflow-hidden border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-6 z-10">
+<h1 class="font-display-lg text-display-lg md:text-[64px] md:leading-[72px] text-deep-navy">
+                        Professional Handyman &amp; Decorating Services in West London
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Meticulous craftsmanship, reliable service, and premium finishes for your home or property. We deliver excellence without compromise.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-label-md text-label-md text-center hover:bg-safety-orange transition-colors shadow-sm hover:-translate-y-1 duration-200" href="#contact">
+                            Get a Free Quote
+                        </a>
+<a class="border border-deep-navy text-deep-navy px-8 py-4 rounded-full font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors hover:-translate-y-1 duration-200" href="#services">
+                            Explore Services
+                        </a>
+</div>
+</div>
+<div class="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl border border-outline-variant/20 z-10">
+<img alt="Professional painter applying pristine white paint to a wall with a roller, standing on a wooden ladder in a clean, modern bright space." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsEUnhazcKRY6dASKZAKHAxjBmc4MUcxc6Hy6UOSD6zv3jtx6lyCvQ4BSAVzFoQsmCBJtOI39oQqukfnvOIlJoGbvyO8yGGqnQVZR1KZiVibJllC5mBKdGvzazS_T94MbF-QtrM-O6CF3dMOMZr5y8ItdyGHaXGdVbZ4hDwY9E_KK0krmAFJnmkmhTFVEp-PhIW4IGJDAQBUTLmPR-9AtpYH1bZUyg5i3W8dAPFjkqpA0eyBO4ThEfZRmk">
+<!-- Subtle overlay for text legibility if needed on smaller screens, though grid handles this well -->
+</div>
+</div>
+<!-- Abstract background pattern -->
+<div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#101828 1px, transparent 1px); background-size: 32px 32px;"></div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-surface px-margin-mobile md:px-margin-desktop" id="services">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-4">Our Services</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Comprehensive solutions for every corner of your property, delivered with precision.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl border border-outline-variant/50 overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-secondary/30 transition-all duration-300 flex flex-col h-full cursor-pointer">
+<div class="h-48 relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close up shot of a professional painter meticulously cutting in a crisp line of deep blue paint along a white ceiling edge using a high quality angled brush. Bright natural light illuminates the clean, precise work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrWGBcuDwdymNJaBPmTIi5Xha6kYtIpOY37GRHSxYSypyMD733zTtShUzHBYtewUJOTzwZ3uyM_KnhnAtmmgKCl6J4Y2B7_-lBEekOJwA2VJK6x088_vgYkaEiokV0gXJb6ARySp1rBt-0IRq6EHW-x_e_xwoRw_N1NnbMPIyud64iUanNNao1YXVlmSmyvwypFfqj3FvtVJpMidc9tFbZI6HTxxqFoT0i1iNTV2_oS_qAbQmobZQF">
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="format_paint">format_paint</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">Painting &amp; Decorating</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Interior and exterior painting, wallpapering, and detailed surface preparation for a flawless finish.</p>
+<a class="font-label-md text-label-md text-secondary group-hover:text-safety-orange flex items-center gap-1 transition-colors mt-auto" href="our-services-professional-west-london-handyman.html">
+                                Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl border border-outline-variant/50 overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-secondary/30 transition-all duration-300 flex flex-col h-full cursor-pointer">
+<div class="h-48 relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A skilled carpenter installing custom oak shelving in a modern living room. Sawdust softly catches the warm sunlight. Focus is on the hands carefully measuring and fitting the natural wood pieces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw0_Zns3vmnP3IWN11Gg1n6qLjkhNO5HL-CyDlhM3m11k6QQn5t3KZbBYmDUs0buuWUK3HGYvJmblGxwE31osu5Zr9kEZSoM1q5S9OLjT4dFPvX9UbhCJwC_PehOMZBUVpzbBlzAlNYJjQH_ihqrFvI51XSKnTGF3aNj4KbdZoMji4qC7-M88iSIqRDzF0s4Y1J0vcKXvtSmeScD87CvMwk_bEme-AB0yw7ZSsx-EWIm9G6aZwjxsE">
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="carpenter">carpenter</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">Carpentry</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Custom shelving, door hanging, skirting boards, and bespoke woodwork tailored to your space.</p>
+<a class="font-label-md text-label-md text-secondary group-hover:text-safety-orange flex items-center gap-1 transition-colors mt-auto" href="our-services-professional-west-london-handyman.html">
+                                Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl border border-outline-variant/50 overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-secondary/30 transition-all duration-300 flex flex-col h-full cursor-pointer">
+<div class="h-48 relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, organized toolbox resting on a freshly laid wooden floor in a minimalist home setting. High-quality hand tools are visible, suggesting preparation for precise general repair work in a premium residential environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeSpkAju2I5rzco33ViuG8w_cDT9qor_dyNdF_iIfcNmiYe3jlTXThniSyRVf04OD5yvvIP800ftoH7eXmURUO5g4C9Qc3Mr6uT1IUnAdjtXgVy-pSMl8C-ISfvgYzy0MwJgJmKyCan4DxbhgFPzoHRxP-z8sV9ap6bS04aj0GlmmEmOeTeuxBQAVSvhblB20kqUJvq2vYocwrzOsEiRGhpuFmlZCQwvwn35UxjKDQVAglCNJnDN3E">
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">General Repairs</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">From fixing squeaky floors to mounting TVs and assembling furniture, no detail is too small.</p>
+<a class="font-label-md text-label-md text-secondary group-hover:text-safety-orange flex items-center gap-1 transition-colors mt-auto" href="our-services-professional-west-london-handyman.html">
+                                Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-deep-navy dark:bg-tertiary-container w-full mt-stack-lg border-t border-on-primary-fixed-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-md px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-secondary-fixed tracking-tight">West London Craftsmen</span>
+<p class="font-body-md text-body-md text-outline-variant max-w-xs mt-2">
+                    Delivering uncompromising quality and reliable service to homeowners across West London.
+                </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md text-surface-container-lowest mb-4 uppercase tracking-wider text-sm opacity-80">Services</h4>
+<ul class="flex flex-col gap-3 font-body-md text-body-md">
+<li><a class="text-outline-variant hover:text-white transition-colors hover:translate-x-1 inline-block duration-200" href="our-services-professional-west-london-handyman.html">Painting &amp; Decorating</a></li>
+<li><a class="text-outline-variant hover:text-white transition-colors hover:translate-x-1 inline-block duration-200" href="our-services-professional-west-london-handyman.html">Carpentry</a></li>
+<li><a class="text-outline-variant hover:text-white transition-colors hover:translate-x-1 inline-block duration-200" href="our-services-professional-west-london-handyman.html">General Repairs</a></li>
+<li><a class="text-outline-variant hover:text-white transition-colors hover:translate-x-1 inline-block duration-200" href="our-services-professional-west-london-handyman.html">Electrical</a></li>
+<li><a class="text-outline-variant hover:text-white transition-colors hover:translate-x-1 inline-block duration-200" href="our-services-professional-west-london-handyman.html">Plumbing</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md text-surface-container-lowest mb-4 uppercase tracking-wider text-sm opacity-80">Company</h4>
+<ul class="flex flex-col gap-3 font-body-md text-body-md">
+<li><a class="text-outline-variant hover:text-white transition-colors hover:translate-x-1 inline-block duration-200" href="index.html">About Us</a></li>
+<li><a class="text-outline-variant hover:text-white transition-colors hover:translate-x-1 inline-block duration-200" href="index.html">Reviews</a></li>
+<li><a class="text-secondary-fixed font-semibold hover:translate-x-1 inline-block transition-transform duration-200" href="contact-us-get-a-free-quote.html">Get a Free Quote</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md text-surface-container-lowest mb-4 uppercase tracking-wider text-sm opacity-80">Contact</h4>
+<ul class="flex flex-col gap-3 font-body-md text-body-md">
+<li class="flex items-center gap-2 text-outline-variant">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        West London, UK
+                    </li>
+<li class="flex items-center gap-2 text-outline-variant hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">phone</span>
+                        020 1234 5678
+                    </li>
+<li class="flex items-center gap-2 text-outline-variant hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">mail</span>
+                        hello@westlondoncraftsmen.co.uk
+                    </li>
+</ul>
+</div>
+</div>
+<div class="border-t border-on-primary-fixed-variant/50 py-6 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4 font-caption text-caption text-outline-variant">
+<p>© 2024 West London Craftsmen. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="hover:text-white transition-colors focus-within:ring-2 focus-within:ring-secondary rounded outline-none" href="index.html">Privacy Policy</a>
+<a class="hover:text-white transition-colors focus-within:ring-2 focus-within:ring-secondary rounded outline-none" href="index.html">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2Ff04278d5-4326-4121-baa9-2de35f59502f" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Book a Service - Handy On The Hill</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "deep-slate": "#1E293B",
+                      "primary-container": "#131b2e",
+                      "on-surface-variant": "#45464d",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed-dim": "#e0c47e",
+                      "on-secondary-container": "#776227",
+                      "on-tertiary-fixed-variant": "#3a485c",
+                      "error": "#ba1a1a",
+                      "background": "#f7f9fb",
+                      "ivory-surface": "#FCFCFB",
+                      "outline": "#76777d",
+                      "outline-variant": "#c6c6cd",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed-dim": "#b9c7e0",
+                      "surface-tint": "#565e74",
+                      "muted-gold": "#D4C291",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#2d3133",
+                      "on-secondary-fixed-variant": "#57440a",
+                      "surface-container-high": "#e6e8ea",
+                      "on-primary-container": "#7c839b",
+                      "surface-container-low": "#f2f4f6",
+                      "tertiary": "#000000",
+                      "primary-fixed-dim": "#bec6e0",
+                      "inverse-primary": "#bec6e0",
+                      "surface-variant": "#e0e3e5",
+                      "primary": "#000000",
+                      "tertiary-container": "#0d1c2f",
+                      "surface": "#f7f9fb",
+                      "surface-container": "#eceef0",
+                      "secondary": "#715c21",
+                      "on-secondary-fixed": "#241a00",
+                      "surface-dim": "#d8dadc",
+                      "success-green": "#064E3B",
+                      "on-background": "#191c1e",
+                      "on-tertiary-container": "#76859b",
+                      "primary-fixed": "#dae2fd",
+                      "secondary-fixed": "#fde097",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed": "#d5e3fd",
+                      "secondary-container": "#fde097",
+                      "on-error-container": "#93000a",
+                      "surface-bright": "#f7f9fb",
+                      "on-primary-fixed": "#131b2e",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-surface": "#191c1e",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#0d1c2f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "32px",
+                      "unit": "8px",
+                      "margin-desktop": "64px",
+                      "container-max": "1280px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-xl": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "display-xl-mobile": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-xl": [
+                              "60px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-xl-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+          .signature-shadow {
+              box-shadow: 0 40px 40px -15px rgba(30, 41, 59, 0.15);
+          }
+          .input-focus-ring:focus-within {
+              border-color: #D4C291;
+              box-shadow: 0 0 0 2px rgba(212, 194, 145, 0.2);
+          }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-ivory-surface dark:bg-primary-container fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 mx-auto border-b border-deep-slate/10 dark:border-outline-variant/10 shadow-deep-slate/15 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.15)]">
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-deep-slate dark:text-on-primary">
+            Handy On The Hill
+        </div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-muted-gold transition-colors duration-300" href="our-services-handy-on-the-hill.html">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-muted-gold transition-colors duration-300" href="home-handy-on-the-hill.html">Portfolio</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-muted-gold transition-colors duration-300" href="home-handy-on-the-hill.html">Testimonials</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-muted-gold transition-colors duration-300" href="home-handy-on-the-hill.html">About</a>
+</nav>
+<button class="bg-muted-gold text-deep-slate px-6 py-2 rounded font-body-md text-body-md font-semibold hover:bg-muted-gold/90 transition-colors">Book Now</button>
+</header>
+<main class="flex-grow pt-32 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="text-center mb-16">
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-deep-slate mb-4">Book Your Service</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Select your required service, choose a convenient time, and provide us with the details. We'll handle the rest with precision.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Booking Form Area -->
+<div class="lg:col-span-8 space-y-12">
+<!-- Step 1: Service Selection -->
+<section class="bg-ivory-surface p-8 md:p-12 rounded signature-shadow">
+<h2 class="font-headline-lg text-headline-lg text-deep-slate mb-8 flex items-center gap-4">
+<span class="bg-deep-slate text-on-secondary w-10 h-10 rounded-full flex items-center justify-center font-body-md text-body-md">1</span>
+                        Select Service
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Service Option 1 -->
+<label class="cursor-pointer group">
+<input checked="" class="peer sr-only" name="service" type="radio">
+<div class="border border-deep-slate/10 p-6 rounded bg-surface hover:bg-surface-variant transition-colors peer-checked:border-muted-gold peer-checked:bg-muted-gold/5 flex flex-col items-center text-center h-full">
+<span class="material-symbols-outlined text-4xl text-deep-slate mb-4 group-hover:text-muted-gold transition-colors">plumbing</span>
+<h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Plumbing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Leaks, installations, and repairs.</p>
+</div>
+</label>
+<!-- Service Option 2 -->
+<label class="cursor-pointer group">
+<input class="peer sr-only" name="service" type="radio">
+<div class="border border-deep-slate/10 p-6 rounded bg-surface hover:bg-surface-variant transition-colors peer-checked:border-muted-gold peer-checked:bg-muted-gold/5 flex flex-col items-center text-center h-full">
+<span class="material-symbols-outlined text-4xl text-deep-slate mb-4 group-hover:text-muted-gold transition-colors">carpenter</span>
+<h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Carpentry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Custom builds and structural fixes.</p>
+</div>
+</label>
+<!-- Service Option 3 -->
+<label class="cursor-pointer group">
+<input class="peer sr-only" name="service" type="radio">
+<div class="border border-deep-slate/10 p-6 rounded bg-surface hover:bg-surface-variant transition-colors peer-checked:border-muted-gold peer-checked:bg-muted-gold/5 flex flex-col items-center text-center h-full">
+<span class="material-symbols-outlined text-4xl text-deep-slate mb-4 group-hover:text-muted-gold transition-colors">electrical_services</span>
+<h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Electrical</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Wiring, fixtures, and safety checks.</p>
+</div>
+</label>
+</div>
+</section>
+<!-- Step 2: Schedule -->
+<section class="bg-ivory-surface p-8 md:p-12 rounded signature-shadow">
+<h2 class="font-headline-lg text-headline-lg text-deep-slate mb-8 flex items-center gap-4">
+<span class="bg-deep-slate text-on-secondary w-10 h-10 rounded-full flex items-center justify-center font-body-md text-body-md">2</span>
+                        Choose Date &amp; Time
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Calendar Component -->
+<div class="border border-deep-slate/10 rounded p-4 bg-surface">
+<div class="flex justify-between items-center mb-6">
+<button class="p-2 hover:bg-surface-variant rounded text-on-surface-variant"><span class="material-symbols-outlined">chevron_left</span></button>
+<span class="font-headline-md text-headline-md text-deep-slate">October 2024</span>
+<button class="p-2 hover:bg-surface-variant rounded text-on-surface-variant"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center mb-2">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Su</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Mo</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Tu</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">We</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Th</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Fr</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Sa</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center font-body-md text-body-md">
+<!-- Dummy Calendar Days -->
+<div class="p-2 text-outline-variant">29</div><div class="p-2 text-outline-variant">30</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">1</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">2</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">3</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">4</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">5</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">6</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">7</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">8</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">9</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">10</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">11</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">12</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">13</div>
+<div class="p-2 bg-muted-gold text-deep-slate font-bold rounded cursor-pointer shadow-sm">14</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">15</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">16</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">17</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">18</div>
+<div class="p-2 hover:bg-surface-variant rounded cursor-pointer">19</div>
+</div>
+</div>
+<!-- Time Slots -->
+<div class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-deep-slate mb-4">Available Times</h3>
+<div class="grid grid-cols-2 gap-3">
+<button class="border border-deep-slate/10 py-3 rounded font-body-md text-body-md text-on-surface-variant hover:border-muted-gold hover:text-deep-slate transition-colors bg-surface">09:00 AM</button>
+<button class="border border-muted-gold py-3 rounded font-body-md text-body-md text-deep-slate bg-muted-gold/10 font-semibold transition-colors">10:30 AM</button>
+<button class="border border-deep-slate/10 py-3 rounded font-body-md text-body-md text-on-surface-variant hover:border-muted-gold hover:text-deep-slate transition-colors bg-surface">01:00 PM</button>
+<button class="border border-deep-slate/10 py-3 rounded font-body-md text-body-md text-on-surface-variant hover:border-muted-gold hover:text-deep-slate transition-colors bg-surface">03:30 PM</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 3: Details & Upload -->
+<section class="bg-ivory-surface p-8 md:p-12 rounded signature-shadow">
+<h2 class="font-headline-lg text-headline-lg text-deep-slate mb-8 flex items-center gap-4">
+<span class="bg-deep-slate text-on-secondary w-10 h-10 rounded-full flex items-center justify-center font-body-md text-body-md">3</span>
+                        Job Details
+                    </h2>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="input-focus-ring border border-deep-slate/10 rounded bg-ivory-surface overflow-hidden transition-all">
+<input class="w-full bg-transparent border-none p-4 font-body-md text-body-md text-deep-slate placeholder:text-outline-variant focus:ring-0" placeholder="First Name" type="text">
+</div>
+<div class="input-focus-ring border border-deep-slate/10 rounded bg-ivory-surface overflow-hidden transition-all">
+<input class="w-full bg-transparent border-none p-4 font-body-md text-body-md text-deep-slate placeholder:text-outline-variant focus:ring-0" placeholder="Last Name" type="text">
+</div>
+</div>
+<div class="input-focus-ring border border-deep-slate/10 rounded bg-ivory-surface overflow-hidden transition-all">
+<input class="w-full bg-transparent border-none p-4 font-body-md text-body-md text-deep-slate placeholder:text-outline-variant focus:ring-0" placeholder="Email Address" type="email">
+</div>
+<div class="input-focus-ring border border-deep-slate/10 rounded bg-ivory-surface overflow-hidden transition-all">
+<textarea class="w-full bg-transparent border-none p-4 font-body-md text-body-md text-deep-slate placeholder:text-outline-variant focus:ring-0 resize-none" placeholder="Describe the job in detail..." rows="4"></textarea>
+</div>
+<!-- Photo Upload -->
+<div>
+<label class="block font-headline-md text-headline-md text-deep-slate mb-4">Upload Photos of the Job</label>
+<div class="border-2 border-dashed border-deep-slate/20 rounded-lg p-12 text-center bg-surface hover:bg-surface-variant transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-4xl text-outline-variant mb-2 group-hover:text-muted-gold transition-colors">add_photo_alternate</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Drag and drop images here, or <span class="text-deep-slate font-semibold underline decoration-muted-gold decoration-2 underline-offset-4">browse</span></p>
+<p class="font-label-sm text-label-sm text-outline-variant mt-2">Max file size: 10MB (JPG, PNG)</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Sticky Summary Sidebar -->
+<div class="lg:col-span-4">
+<div class="bg-deep-slate text-on-secondary p-8 rounded signature-shadow sticky top-32">
+<h3 class="font-headline-lg text-headline-lg mb-6 border-b border-on-secondary/10 pb-4">Booking Summary</h3>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between items-start">
+<span class="font-body-md text-body-md text-on-secondary/80">Service</span>
+<span class="font-headline-md text-headline-md text-on-secondary text-right">Plumbing Repair</span>
+</div>
+<div class="flex justify-between items-start">
+<span class="font-body-md text-body-md text-on-secondary/80">Date</span>
+<span class="font-headline-md text-headline-md text-on-secondary text-right">Oct 14, 2024</span>
+</div>
+<div class="flex justify-between items-start">
+<span class="font-body-md text-body-md text-on-secondary/80">Time</span>
+<span class="font-headline-md text-headline-md text-on-secondary text-right">10:30 AM</span>
+</div>
+<div class="flex justify-between items-start border-t border-on-secondary/10 pt-4 mt-4">
+<span class="font-body-md text-body-md text-on-secondary/80">Est. Base Callout</span>
+<span class="font-headline-lg text-headline-lg text-muted-gold text-right">$150</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-secondary/50 mt-2">*Final quote provided after assessment</p>
+</div>
+<button class="w-full bg-muted-gold text-deep-slate font-headline-md text-headline-md py-4 rounded hover:bg-muted-gold/90 transition-colors shadow-lg">Confirm Booking</button>
+<div class="mt-6 flex items-center justify-center gap-2 text-on-secondary/70">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="font-label-sm text-label-sm uppercase">Secure Booking Process</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-deep-slate dark:bg-tertiary-container w-full py-16 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter mt-auto">
+<div class="font-headline-md text-headline-md text-on-secondary col-span-1 md:col-span-4 mb-8">
+            Handy On The Hill
+        </div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-secondary/80 hover:text-on-secondary transition-colors" href="our-services-handy-on-the-hill.html">Plumbing</a>
+<a class="font-body-md text-body-md text-on-secondary/80 hover:text-on-secondary transition-colors" href="our-services-handy-on-the-hill.html">Carpentry</a>
+<a class="font-body-md text-body-md text-on-secondary/80 hover:text-on-secondary transition-colors" href="our-services-handy-on-the-hill.html">Electrical</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-secondary/80 hover:text-on-secondary transition-colors" href="our-services-handy-on-the-hill.html">Painting</a>
+<a class="font-body-md text-body-md text-on-secondary/80 hover:text-on-secondary transition-colors" href="home-handy-on-the-hill.html">Contact Us</a>
+<a class="font-body-md text-body-md text-on-secondary/80 hover:text-on-secondary transition-colors" href="index.html">Privacy Policy</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-on-secondary/10 font-body-md text-body-md text-on-secondary/60">
+            © 2024 Handy On The Hill. Precision in Every Detail.
+        </div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F4beb684b-b510-471e-a3bb-bf298ad5fa5c" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

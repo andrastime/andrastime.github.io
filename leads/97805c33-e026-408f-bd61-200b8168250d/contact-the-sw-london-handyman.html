@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact - The SW London Handyman</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;family=Manrope:wght@400;600&amp;family=Playfair+Display:wght@600;700;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#f9f9f9",
+                      "primary": "#b22b05",
+                      "on-secondary-fixed": "#1b1c1c",
+                      "surface-tint": "#b22b05",
+                      "surface-dim": "#dadada",
+                      "tertiary-fixed": "#eedfdc",
+                      "error-container": "#ffdad6",
+                      "crisp-white": "#FFFFFF",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-high": "#e8e8e8",
+                      "primary-fixed-dim": "#ffb4a2",
+                      "on-secondary-container": "#656464",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#e2bfb6",
+                      "inverse-primary": "#ffb4a2",
+                      "secondary-fixed": "#e4e2e1",
+                      "inverse-surface": "#2f3131",
+                      "on-tertiary-fixed-variant": "#4e4542",
+                      "on-tertiary-fixed": "#211a18",
+                      "on-surface": "#1a1c1c",
+                      "electric-orange": "#FF613A",
+                      "outline": "#8e7069",
+                      "deep-charcoal": "#282828",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "on-background": "#1a1c1c",
+                      "surface-container-highest": "#e2e2e2",
+                      "background": "#f9f9f9",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-variant": "#e2e2e2",
+                      "on-tertiary-container": "#342c2a",
+                      "warm-slate": "#807572",
+                      "on-surface-variant": "#5a413b",
+                      "on-error-container": "#93000a",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#ffdad2",
+                      "tertiary-container": "#9f9390",
+                      "tertiary-fixed-dim": "#d1c4c0",
+                      "muted-dust": "#E4D0CC",
+                      "on-secondary-fixed-variant": "#474746",
+                      "secondary": "#5f5e5e",
+                      "primary-container": "#ff613a",
+                      "surface-container": "#eeeeee",
+                      "surface": "#f9f9f9",
+                      "on-primary-fixed-variant": "#8a1c00",
+                      "on-primary-fixed": "#3c0700",
+                      "on-primary-container": "#5d1000",
+                      "inverse-on-surface": "#f1f1f1",
+                      "secondary-container": "#e4e2e1",
+                      "surface-container-low": "#f3f3f3",
+                      "error": "#ba1a1a",
+                      "tertiary": "#665c59"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "24px",
+                      "container-max": "1280px",
+                      "section-gap": "120px",
+                      "gutter": "32px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-xl-mobile": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "headline-xl": [
+                              "Playfair Display"
+                      ],
+                      "label-caps": [
+                              "JetBrains Mono"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+          .input-underline {
+              border: none;
+              border-bottom: 1px solid #807572; /* warm-slate */
+              border-radius: 0;
+              background-color: transparent;
+          }
+          .input-underline:focus {
+              outline: none;
+              border-bottom-color: #282828; /* deep-charcoal */
+              box-shadow: none;
+          }
+      </style>
+</head>
+<body class="bg-crisp-white text-on-surface font-body-md antialiased pt-[88px]">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto bg-white/80 dark:bg-deep-charcoal/80 backdrop-blur-md border-b border-muted-dust dark:border-on-secondary-fixed-variant transition-all ease-in-out duration-300">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-deep-charcoal dark:text-crisp-white">
+            SW HANDYMAN
+        </div>
+<div class="hidden md:flex gap-8">
+<a class="font-headline-md text-headline-md text-deep-charcoal dark:text-surface-dim hover:text-electric-orange transition-colors" href="services-the-sw-london-handyman.html">Services</a>
+<a class="font-headline-md text-headline-md text-deep-charcoal dark:text-surface-dim hover:text-electric-orange transition-colors" href="pricing-the-sw-london-handyman.html">Pricing</a>
+<a class="font-headline-md text-headline-md text-deep-charcoal dark:text-surface-dim hover:text-electric-orange transition-colors" href="index.html">Areas Covered</a>
+<a class="font-headline-md text-headline-md text-deep-charcoal dark:text-surface-dim hover:text-electric-orange transition-colors" href="index.html">Portfolio</a>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="font-label-caps text-label-caps uppercase text-deep-charcoal border-2 border-deep-charcoal px-6 py-3 hover:text-electric-orange hover:border-electric-orange transition-colors duration-300 tracking-widest">
+                CONTACT
+            </button>
+<button class="font-label-caps text-label-caps uppercase bg-deep-charcoal text-crisp-white px-6 py-3 hover:bg-electric-orange transition-colors duration-300 tracking-widest">
+                BOOK NOW
+            </button>
+</div>
+<button class="md:hidden text-deep-charcoal">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap">
+<!-- Header Section -->
+<div class="mb-section-gap">
+<h1 class="font-display-lg text-display-lg text-deep-charcoal mb-4">Get in Touch</h1>
+<p class="font-body-lg text-body-lg text-warm-slate max-w-2xl">
+                 Ready to cross off that to-do list? Contact David for reliable, premium handyman services across South West London.
+             </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Contact Form Area -->
+<div class="md:col-span-7 bg-surface-bright p-8 md:p-12 border border-muted-dust">
+<form action="#" class="flex flex-col gap-8" method="POST">
+<div class="relative pt-6">
+<label class="absolute top-0 left-0 font-label-caps text-label-caps text-warm-slate uppercase" for="name">Full Name</label>
+<input class="input-underline w-full py-2 font-body-lg text-body-lg text-deep-charcoal placeholder-transparent" id="name" name="name" placeholder="John Doe" required="" type="text">
+</div>
+<div class="relative pt-6">
+<label class="absolute top-0 left-0 font-label-caps text-label-caps text-warm-slate uppercase" for="email">Email Address</label>
+<input class="input-underline w-full py-2 font-body-lg text-body-lg text-deep-charcoal placeholder-transparent" id="email" name="email" placeholder="john@example.com" required="" type="email">
+</div>
+<div class="relative pt-6">
+<label class="absolute top-0 left-0 font-label-caps text-label-caps text-warm-slate uppercase" for="phone">Phone Number</label>
+<input class="input-underline w-full py-2 font-body-lg text-body-lg text-deep-charcoal placeholder-transparent" id="phone" name="phone" placeholder="07956 532630" type="tel">
+</div>
+<div class="relative pt-6">
+<label class="absolute top-0 left-0 font-label-caps text-label-caps text-warm-slate uppercase" for="message">Project Details</label>
+<textarea class="input-underline w-full py-2 font-body-lg text-body-lg text-deep-charcoal placeholder-transparent resize-none" id="message" name="message" placeholder="How can I help?" required="" rows="4"></textarea>
+</div>
+<button class="font-label-caps text-label-caps uppercase bg-deep-charcoal text-crisp-white px-8 py-4 hover:bg-electric-orange transition-colors duration-300 tracking-widest mt-4 self-start" type="submit">
+                        Send Message
+                    </button>
+</form>
+</div>
+<!-- Contact Info Sidebar -->
+<div class="md:col-span-5 flex flex-col gap-12">
+<!-- Image -->
+<div class="w-full h-64 md:h-80 relative overflow-hidden border border-muted-dust">
+<img alt="Professional Handyman at work" class="object-cover w-full h-full absolute inset-0 transform hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="A close up shot of a professional handyman's hands precisely turning a screwdriver on a polished chrome light switch plate. The setting suggests a high-end modern residential interior in London, with bright natural lighting highlighting the metallic textures and the worker's focused competence. The overall aesthetic is clean, premium, and trustworthy." src="https://lh3.googleusercontent.com/aida/AP1WRLsCviPEK9-P7VVyxL40_-3it6SfOilefxNSrtLR49C0Ecofei0NPkts7-s8KyoNU4Vcvi-qclJnNLLcMaCT7jNOxXeIG3OWwOBhUbTtf2Y_neZsDagSGVz5rx4kNZQt28vYFxFUIbFOdVKFaxVUiNX6mGd2mcdmxK7Jme2q9CJsQooqvHJb6nAKK56x5Q7TKFPj7qepHfhmpCjvqu2FnqCHvIHNp9TEFyznwUdvquy0RtvNcg0mrM_m28U7">
+</div>
+<!-- Details -->
+<div class="flex flex-col gap-8">
+<div>
+<h3 class="font-headline-md text-headline-md text-deep-charcoal mb-4">Direct Contact</h3>
+<div class="flex items-center gap-4 mb-2">
+<span class="material-symbols-outlined text-electric-orange">call</span>
+<a class="font-body-lg text-body-lg text-deep-charcoal hover:text-electric-orange transition-colors" href="tel:07956532630">07956 532630</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-electric-orange">mail</span>
+<a class="font-body-lg text-body-lg text-deep-charcoal hover:text-electric-orange transition-colors" href="mailto:david@swlondonhandyman.co.uk">david@swlondonhandyman.co.uk</a>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-deep-charcoal mb-4">Operating Hours</h3>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-orange">schedule</span>
+<div>
+<p class="font-body-lg text-body-lg text-deep-charcoal">Monday – Saturday</p>
+<p class="font-body-md text-body-md text-warm-slate">8:30 AM – 7:30 PM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Areas Covered Grid -->
+<div class="mt-section-gap">
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-deep-charcoal mb-8 border-b border-muted-dust pb-4">Primary Areas Covered</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<!-- Chips -->
+<div class="bg-muted-dust/30 p-4 border border-muted-dust flex flex-col items-center justify-center gap-2 hover:border-deep-charcoal transition-colors">
+<span class="font-label-caps text-label-caps text-deep-charcoal uppercase">Richmond</span>
+<span class="font-label-caps text-label-caps text-electric-orange">TW9, TW10</span>
+</div>
+<div class="bg-muted-dust/30 p-4 border border-muted-dust flex flex-col items-center justify-center gap-2 hover:border-deep-charcoal transition-colors">
+<span class="font-label-caps text-label-caps text-deep-charcoal uppercase">Wimbledon</span>
+<span class="font-label-caps text-label-caps text-electric-orange">SW19, SW20</span>
+</div>
+<div class="bg-muted-dust/30 p-4 border border-muted-dust flex flex-col items-center justify-center gap-2 hover:border-deep-charcoal transition-colors">
+<span class="font-label-caps text-label-caps text-deep-charcoal uppercase">Putney</span>
+<span class="font-label-caps text-label-caps text-electric-orange">SW15</span>
+</div>
+<div class="bg-muted-dust/30 p-4 border border-muted-dust flex flex-col items-center justify-center gap-2 hover:border-deep-charcoal transition-colors">
+<span class="font-label-caps text-label-caps text-deep-charcoal uppercase">Wandsworth</span>
+<span class="font-label-caps text-label-caps text-electric-orange">SW18</span>
+</div>
+<div class="bg-muted-dust/30 p-4 border border-muted-dust flex flex-col items-center justify-center gap-2 hover:border-deep-charcoal transition-colors">
+<span class="font-label-caps text-label-caps text-deep-charcoal uppercase">Battersea</span>
+<span class="font-label-caps text-label-caps text-electric-orange">SW11</span>
+</div>
+<div class="bg-muted-dust/30 p-4 border border-muted-dust flex flex-col items-center justify-center gap-2 hover:border-deep-charcoal transition-colors">
+<span class="font-label-caps text-label-caps text-deep-charcoal uppercase">Clapham</span>
+<span class="font-label-caps text-label-caps text-electric-orange">SW4</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-gutter flex flex-col items-center gap-unit text-center bg-deep-charcoal dark:bg-black text-crisp-white font-body-md text-body-md">
+<div class="font-headline-md text-headline-md font-bold text-electric-orange mb-4">
+            SW HANDYMAN
+        </div>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="text-warm-slate hover:text-crisp-white transition-colors" href="services-the-sw-london-handyman.html">Plumbing</a>
+<a class="text-warm-slate hover:text-crisp-white transition-colors" href="services-the-sw-london-handyman.html">Electrical</a>
+<a class="text-warm-slate hover:text-crisp-white transition-colors" href="services-the-sw-london-handyman.html">Carpentry</a>
+<a class="text-warm-slate hover:text-crisp-white transition-colors" href="services-the-sw-london-handyman.html">Decorating</a>
+<a class="text-warm-slate hover:text-crisp-white transition-colors" href="index.html">Terms of Service</a>
+<a class="text-warm-slate hover:text-crisp-white transition-colors" href="index.html">Privacy Policy</a>
+</div>
+<div class="text-warm-slate text-sm opacity-80 hover:opacity-100 transition-opacity">
+            © 2024 SW HANDYMAN ELITE. SERVING SOUTH WEST LONDON WITH PRECISION.
+        </div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F97805c33-e026-408f-bd61-200b8168250d" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

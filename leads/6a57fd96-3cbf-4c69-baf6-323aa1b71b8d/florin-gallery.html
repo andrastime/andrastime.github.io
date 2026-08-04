@@ -1,0 +1,197 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>FLORIN - Project Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Montserrat:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#7a3000",
+                        "surface-bright": "#393939",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-high": "#2a2a2a",
+                        "background": "#131313",
+                        "on-background": "#e4e2e1",
+                        "inverse-primary": "#a04100",
+                        "surface-tint": "#ffb693",
+                        "inverse-surface": "#e4e2e1",
+                        "on-secondary": "#313030",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353535",
+                        "on-primary-container": "#572000",
+                        "surface-container": "#1f2020",
+                        "on-primary-fixed": "#351000",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary-fixed-variant": "#474746",
+                        "primary": "#ffb693",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "outline-variant": "#5a4136",
+                        "on-secondary-container": "#b7b5b4",
+                        "primary-fixed-dim": "#ffb693",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "error-container": "#93000a",
+                        "on-surface": "#e4e2e1",
+                        "on-surface-variant": "#e2bfb0",
+                        "tertiary": "#c6c6c7",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-low": "#1b1c1c",
+                        "secondary": "#c8c6c5",
+                        "on-tertiary": "#2f3131",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-container": "#2f3132",
+                        "primary-container": "#ff6b00",
+                        "on-primary": "#561f00",
+                        "secondary-container": "#474746",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-highest": "#353535",
+                        "primary-fixed": "#ffdbcc",
+                        "surface": "#131313",
+                        "tertiary-container": "#989999",
+                        "outline": "#a98a7d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "grid-columns": "12"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #1A1A1A; /* Enforcing design system background */
+        }
+        .gallery-card {
+            background-color: #2D2D2D;
+            border: 1px solid #3D3D3D;
+        }
+        .gallery-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+        }
+        .gallery-card:hover {
+            border-color: #FF6B00;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-background text-primary dark:text-primary docked full-width top-0 sticky border-b border-outline-variant bg-background/95 backdrop-blur-md flat no shadows flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 z-50">
+<div class="text-headline-md font-display-lg font-extrabold tracking-tighter text-on-surface dark:text-on-surface">FLORIN</div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm hover:text-primary dark:hover:text-primary transition-all duration-300" href="index.html">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm hover:text-primary dark:hover:text-primary transition-all duration-300" href="florin-services.html">Services</a>
+<a class="text-primary dark:text-primary border-b-2 border-primary pb-1 font-bold text-label-sm font-label-sm hover:text-primary dark:hover:text-primary transition-all duration-300" href="florin-gallery.html">Gallery</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm hover:text-primary dark:hover:text-primary transition-all duration-300" href="florin-contact.html">Contact</a>
+</nav>
+<button class="hidden md:inline-flex bg-primary-container text-on-primary font-bold text-label-sm font-label-sm px-6 py-3 rounded hover:outline hover:outline-2 hover:outline-primary-container hover:outline-offset-2 transition-all">Get Quote</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</header>
+<!-- Main Content: Gallery -->
+<main class="flex-grow px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+<!-- Header Section -->
+<div class="mb-16 md:w-2/3">
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-on-surface mb-4">Precision in Every Build.</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">A showcase of our recent high-end structural, flooring, and renovation projects. Built to exact standards.</p>
+</div>
+<!-- Bento Grid Gallery -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[300px]">
+<!-- Item 1: Flooring (Placeholder) -->
+<div class="gallery-card group relative overflow-hidden rounded md:col-span-8 row-span-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide angle shot of a freshly installed, high-end hardwood floor in a spacious modern living room. The wood has a rich, warm tone, contrasting with the dark industrial walls of the room. Natural light spills across the floor, highlighting the perfect alignment and precision of the planks. The scene exudes professional craftsmanship and a sleek, modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv8MQ-T1o--C6IlhXOyeiSzy17Tx8dduHKU4T9-wkro1NBOoC_hfjlvb5qc95BMQ0rvryPbfWOUfIVT5vpzk6aPM3JUQ3hk83SN_HP2sUXSAmOu53eGIVEXh2IEntsnZOK3T61RpuskMM_z8dmkQLtrxLjK8bAgVZrOFerlcY42lU2z3OF7yUTWksZ3GgHZEiT1M9cJB-SIGV1DxFj1cDGH-Ff34DAmTFNBuFLIudYqgjJCvY0qRGTcg">
+<div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="inline-block px-2 py-1 bg-[#3D3D3D] text-white text-label-sm font-label-sm w-max mb-2 border border-[#4D4D4D]">FLOORING</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-1">Premium Hardwood Installation</h3>
+<p class="text-body-md font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> Central District</p>
+</div>
+</div>
+<!-- Item 2: Under-floor works -->
+<div class="gallery-card group relative overflow-hidden rounded md:col-span-4 row-span-1">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLt14sxnLVJzaACpT-fBCuhQBDxwBI8LfKBRiM9cKnS0ZZODjrGF2POn8hEgCyykteCby5RENy8PpmWGwn551agBIpz8Ddreo1mqTHstgTOWN0y6jqF0TyJs8kINyh8fCaThLugg_6-r3gkThiOp-30ygosAKiSHzbMLqeuKH2cvMjY7QbRiLJw2vojsyJNkS--pUC7OFNzPw5-yET46Ce9-PBNfRxIudP3a4BanyjIWQ6-VMufjeUrxVJbv">
+<div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="inline-block px-2 py-1 bg-[#3D3D3D] text-white text-label-sm font-label-sm w-max mb-2 border border-[#4D4D4D]">STRUCTURAL</span>
+<h3 class="text-body-lg font-headline-md text-on-surface mb-1">Under-floor Assessment</h3>
+<p class="text-body-md font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> Northside Residential</p>
+</div>
+</div>
+<!-- Item 3: Staircase -->
+<div class="gallery-card group relative overflow-hidden rounded md:col-span-4 row-span-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up view of a newly renovated staircase featuring solid oak treads and sleek, dark metal stringers. The lighting is focused, highlighting the crisp lines and robust construction. The surrounding walls are finished in a dark, matte tone, emphasizing the high-end, modern industrial design style. The craftsmanship is flawless." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjg5jupHMQ4CWz0hw2WLUHtKbmpv3eScoZ-S0uM-dwXycvGKfbiRUK9f8gIyJu9mjhf24ELL1q68Dr_-3dQknau5dt0BZh4emTdNHZuXaE5jIYM2xJZ_ltQVrF12CTLta-nuwVafAyuZHG5a106TPpPJfFb6QDh9Hec0tzzHodSGrfa867ybLmv7i-a5dN7aKvqya37JZNYjV4r03bS3A8l1051gtwZ9Datx5cKC6WbB03NFqRTacM5Q">
+<div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="inline-block px-2 py-1 bg-[#3D3D3D] text-white text-label-sm font-label-sm w-max mb-2 border border-[#4D4D4D]">RENOVATION</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-1">Staircase Modernization</h3>
+<p class="text-body-md font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> West End</p>
+</div>
+</div>
+<!-- Item 4: Window Framing -->
+<div class="gallery-card group relative overflow-hidden rounded md:col-span-8 row-span-1">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A construction scene showing the precise structural framing for a large, modern window opening. The raw timber studs are perfectly aligned against a dark, industrial background. Bright construction lighting casts strong shadows, emphasizing the technical complexity and robust nature of the build. The scene conveys reliability and expert craftsmanship." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-IrFNF56FFacKAzQeZSPtSCFJ1tPW5wM6OOwE9NVxxts6hS85hzG17d-8YFGbZ2xBWTjBzksqcWFEwNNyBVGLmPIaChBOQboDOE4KcYKPgAQbPOZiNbQ8MwxJbvJ4s0q14koHCt8FEde-mpPLZ9cO8ObPSDdIrsJLlU9sdbTYv4aXOWTBIvHOZusX9_jVQLe6OqgA8P2SY2QUUERW4F3gQ-YIaTSYOjJv4BV7aSwZ95u26W5olKtwDA')"></div>
+<div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="inline-block px-2 py-1 bg-[#3D3D3D] text-white text-label-sm font-label-sm w-max mb-2 border border-[#4D4D4D]">FRAMING</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-1">Custom Window Framing</h3>
+<p class="text-body-md font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> South Park Studio</p>
+</div>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="mt-16 flex justify-center">
+<a class="inline-flex items-center gap-2 bg-transparent border border-on-surface text-on-surface px-8 py-4 rounded font-bold hover:border-primary hover:text-primary transition-colors text-label-sm font-label-sm uppercase tracking-wider" href="florin-gallery.html">
+<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+                View More on Instagram
+            </a>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest text-primary dark:text-primary full-width bottom-0 border-t-4 border-primary bg-surface-container-lowest flat no shadows grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop py-12">
+<div class="md:col-span-4 flex flex-col gap-4">
+<div class="text-headline-md font-display-lg font-extrabold text-on-surface">FLORIN</div>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm">© 2024 FLORIN THE BUILDER AND HANDYMAN. PRECISION IN EVERY BUILD.</p>
+</div>
+<div class="md:col-span-8 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-start text-label-sm font-label-sm">
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors hover:underline decoration-primary decoration-2 underline-offset-4" href="index.html">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors hover:underline decoration-primary decoration-2 underline-offset-4" href="index.html">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors hover:underline decoration-primary decoration-2 underline-offset-4" href="index.html">FAQ</a>
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors hover:underline decoration-primary decoration-2 underline-offset-4" href="index.html">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors hover:underline decoration-primary decoration-2 underline-offset-4" href="index.html">LinkedIn</a>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F6a57fd96-3cbf-4c69-baf6-323aa1b71b8d" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

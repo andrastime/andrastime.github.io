@@ -1,0 +1,378 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact Us - TMT Central Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=Inter:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#39475f",
+                        "on-secondary-fixed": "#351000",
+                        "tertiary-fixed": "#dce1ff",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-fixed": "#00164e",
+                        "surface-container-low": "#f2f4f6",
+                        "error": "#ba1a1a",
+                        "glass-bg": "rgba(255, 255, 255, 0.7)",
+                        "primary": "#000000",
+                        "on-tertiary-fixed-variant": "#264191",
+                        "surface": "#f7f9fb",
+                        "surface-tint": "#515f78",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#0d1c32",
+                        "on-secondary-fixed-variant": "#7a3000",
+                        "on-background": "#191c1e",
+                        "on-secondary-container": "#572000",
+                        "accent-orange-light": "#FF8533",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "secondary-fixed": "#ffdbcc",
+                        "secondary-container": "#fe6b00",
+                        "surface-variant": "#e0e3e5",
+                        "secondary": "#a04100",
+                        "outline-variant": "#c5c6cd",
+                        "tertiary": "#000000",
+                        "on-surface": "#191c1e",
+                        "tertiary-container": "#00164e",
+                        "outline": "#75777e",
+                        "surface-container-high": "#e6e8ea",
+                        "on-error": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "tertiary-fixed-dim": "#b6c4ff",
+                        "primary-fixed": "#d6e3ff",
+                        "border-subtle": "#E2E8F0",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#44474d",
+                        "surface-dark": "#020617",
+                        "primary-container": "#0d1c32",
+                        "background": "#f7f9fb",
+                        "secondary-fixed-dim": "#ffb693",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "inverse-primary": "#b9c7e4",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary-container": "#76849f",
+                        "on-tertiary-container": "#6780d3",
+                        "surface-container-highest": "#e0e3e5"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "section-gap": "120px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Hanken Grotesk", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "headline-xl": ["Hanken Grotesk", "sans-serif"],
+                        "headline-lg-mobile": ["Hanken Grotesk", "sans-serif"],
+                        "display-lg": ["Hanken Grotesk", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-lg": ["32px", { lineHeight: "1.3", fontWeight: "700" }],
+                        "label-md": ["14px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "headline-xl": ["48px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "1.3", fontWeight: "700" }],
+                        "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .btn-primary-gradient {
+            background: linear-gradient(180deg, theme('colors.accent-orange-light') 0%, theme('colors.secondary-container') 100%);
+        }
+        .btn-primary-gradient:hover {
+            background: linear-gradient(180deg, theme('colors.secondary-container') 0%, theme('colors.secondary') 100%);
+        }
+        .input-focus-ring:focus {
+            outline: none;
+            border-color: theme('colors.secondary-container');
+            box-shadow: 0 0 0 3px rgba(254, 107, 0, 0.2);
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.background'); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.surface-tint'); 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.primary-container'); 
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-white">
+<!-- TopNavBar JSON Component (Relevance Check: Yes, top-level destination) -->
+<!-- Nav Semantic State: Current page is Contact, which isn't explicitly in the nav array, but it's a primary page. We will leave all inactive as requested by strict match rules if not present. -->
+<nav class="fixed top-0 w-full z-50 bg-glass-bg dark:bg-surface-dark/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20 transition-all duration-300" id="topNav">
+<a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary dark:text-on-primary-fixed flex items-center gap-2" href="/">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1; font-size: 32px;">home_repair_service</span>
+            TMT Central
+        </a>
+<div class="hidden md:flex items-center gap-8">
+<ul class="flex gap-6 items-center">
+<li><a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 active:scale-95 transition-transform pb-1" href="index.html">Services</a></li>
+<li><a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 active:scale-95 transition-transform pb-1" href="index.html">Commercial</a></li>
+<li><a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 active:scale-95 transition-transform pb-1" href="tmt-central-contact-us.html">Emergencies</a></li>
+<li><a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 active:scale-95 transition-transform pb-1" href="index.html">About</a></li>
+<!-- Contact is active logically for this page, adding it manually to show active state based on instructions if it were present, but strict rules say use exact array. Array doesn't have Contact. I will just render array items inactive. -->
+</ul>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<a class="font-label-md text-label-md text-primary dark:text-secondary-fixed hover:text-secondary transition-colors duration-300 flex items-center gap-1" href="tel:02039518263">
+<span class="material-symbols-outlined text-[18px]">call</span> 020 3951 8263
+            </a>
+<a class="btn-primary-gradient text-primary font-label-md text-label-md px-6 py-3 rounded-DEFAULT hover:shadow-lg transition-all duration-300 active:scale-95" href="#contact-form">
+                Get a Free Quote
+            </a>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative pt-section-gap pb-24 md:pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 80% 20%, theme('colors.secondary-container') 0%, transparent 40%);"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter relative z-10">
+<div class="lg:col-span-7 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded-full w-fit mb-6 border border-border-subtle">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">We're Online &amp; Ready to Help</span>
+</div>
+<h1 class="font-display-lg text-headline-xl md:text-display-lg text-primary mb-6">
+                        Let's get the <br><span class="text-secondary-container">job done.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10">
+                        Whether you need a quick fix, a comprehensive refurbishment, or routine property maintenance in Central London, our expert team is ready. No fuss, no silly prices. Just fast, friendly, and super-efficient service.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-1">Call Us Directly</h3>
+<a class="font-body-md text-body-md text-secondary-container hover:underline font-bold transition-all" href="tel:02039503309">020 3950 3309</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-1">Email Us</h3>
+<a class="font-body-md text-body-md text-secondary-container hover:underline font-bold transition-all" href="mailto:info@tmtcentral.co.uk">info@tmtcentral.co.uk</a>
+</div>
+</div>
+<div class="flex items-start gap-4 sm:col-span-2">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-1">Head Office</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">TMT Central LTD, Portland Hardware<br>146 Great Portland Street London W1W 6QB</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Style Contact Form -->
+<div class="lg:col-span-5 mt-12 lg:mt-0" id="contact-form">
+<div class="glass-panel p-8 rounded-xl shadow-[0px_10px_30px_rgba(10,25,47,0.05)] relative overflow-hidden group hover:border-secondary-container transition-colors duration-500">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Request a Quote</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Fill out the details below and we'll get back to you within 24 hours.</p>
+<form class="space-y-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-primary" for="fullName">Full Name *</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-body-md input-focus-ring transition-all placeholder:text-outline" id="fullName" placeholder="John Doe" required="" type="text">
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-primary" for="contactNumber">Contact Number *</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-body-md input-focus-ring transition-all placeholder:text-outline" id="contactNumber" placeholder="07123 456789" required="" type="tel">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-primary" for="email">Email *</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-body-md input-focus-ring transition-all placeholder:text-outline" id="email" placeholder="john@example.com" required="" type="email">
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-primary" for="postcode">Postcode</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-body-md input-focus-ring transition-all placeholder:text-outline" id="postcode" placeholder="W1W 6QB" type="text">
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-primary" for="serviceType">Service Required</label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-body-md input-focus-ring transition-all appearance-none" id="serviceType">
+<option disabled="" selected="" value="">Select a service...</option>
+<option value="handyman">Handyman</option>
+<option value="plumbing">Plumbing</option>
+<option value="electrics">Electrics</option>
+<option value="refurbishment">Refurbishment</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-primary" for="message">How can we help you? *</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-body-md input-focus-ring transition-all placeholder:text-outline resize-none" id="message" placeholder="Please describe the job in detail..." required="" rows="4"></textarea>
+</div>
+<button class="w-full btn-primary-gradient text-primary font-label-md text-label-md px-6 py-4 rounded-DEFAULT flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 active:scale-[0.98]" type="submit">
+                                Request A Quote Now! <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Areas Section (Asymmetric Layout) -->
+<section class="py-section-gap bg-surface-container-low px-margin-mobile md:px-margin-desktop border-t border-border-subtle">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="md:w-1/2 w-full order-2 md:order-1 relative rounded-xl overflow-hidden shadow-sm h-[400px]">
+<!-- Map Image Placeholder -->
+<div class="absolute inset-0 bg-primary-fixed-dim/20 flex items-center justify-center">
+<img alt="Map of Central London service areas" class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="A stylized, modern, high-end digital map of Central London focusing on areas like Marylebone, Mayfair, and Soho. The map uses a sophisticated color palette of deep navy blues and pristine whites, with vibrant orange map pins indicating service coverage areas. The lighting is bright and clear, adhering to a light-mode aesthetic, presenting a clean, professional, and super-efficient mood suitable for a premium property maintenance brand." data-location="Central London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdCT4zOFZ5Ti5GNGj3XOTHIEqxVS3vo07x5SQB-HOVIOLhHmyra6B4P-UuQtt4L-STMmtwcOe-Y3Sk491cHp4IjxPQO-qeFsD_vtIW7YfNg1xz3QRZWEBmg38K_XbiwvwFgmLpScJWLwS3iiL86jh_aRMB6Xju6e9RXn1t5-s7ILI0igui8Kg9FIN7K380PL7bLJDt5gnK8rpswIHqnvvdAEK40SACPYEcCHiLnWQ1HlzwHKjK01R4ZQ">
+</div>
+<div class="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">my_location</span>
+<p class="font-label-md text-label-md text-primary m-0">Central London Based &amp; Responsive</p>
+</div>
+</div>
+<div class="md:w-1/2 w-full order-1 md:order-2">
+<span class="font-label-md text-label-md text-secondary-container tracking-wider uppercase mb-2 block">Our Coverage</span>
+<h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-6">Wherever you are in <br>Central London.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            Being central-London based, we know how the traffic can be unpredictable. That’s why we always leave an extra margin of error with all our work schedules to ensure we arrive on time.
+                        </p>
+<div class="flex flex-wrap gap-3">
+<!-- Chips for locations -->
+<span class="px-4 py-2 bg-surface rounded-full border border-border-subtle font-body-md text-label-md text-primary hover:border-secondary-container hover:text-secondary-container transition-colors cursor-default">Marylebone</span>
+<span class="px-4 py-2 bg-surface rounded-full border border-border-subtle font-body-md text-label-md text-primary hover:border-secondary-container hover:text-secondary-container transition-colors cursor-default">Mayfair</span>
+<span class="px-4 py-2 bg-surface rounded-full border border-border-subtle font-body-md text-label-md text-primary hover:border-secondary-container hover:text-secondary-container transition-colors cursor-default">Soho</span>
+<span class="px-4 py-2 bg-surface rounded-full border border-border-subtle font-body-md text-label-md text-primary hover:border-secondary-container hover:text-secondary-container transition-colors cursor-default">Fitzrovia</span>
+<span class="px-4 py-2 bg-surface rounded-full border border-border-subtle font-body-md text-label-md text-primary hover:border-secondary-container hover:text-secondary-container transition-colors cursor-default">Paddington</span>
+<span class="px-4 py-2 bg-surface rounded-full border border-border-subtle font-body-md text-label-md text-primary hover:border-secondary-container hover:text-secondary-container transition-colors cursor-default">Belgravia</span>
+<span class="px-4 py-2 bg-surface rounded-full border border-border-subtle font-body-md text-label-md text-primary hover:border-secondary-container hover:text-secondary-container transition-colors cursor-default">Covent Garden</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer JSON Component -->
+<footer class="w-full pt-section-gap pb-8 bg-primary-container dark:bg-surface-dark border-t-0">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12">
+<div class="col-span-1 md:col-span-2">
+<a class="font-headline-lg text-headline-lg font-bold text-on-primary-fixed dark:text-on-primary-fixed flex items-center gap-2 mb-4" href="/">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1; font-size: 32px;">home_repair_service</span>
+                    TMT Central
+                </a>
+<p class="font-body-md text-body-md text-on-primary-container/80 max-w-sm mb-6">
+                    High-End Reliability and Super-Efficiency. London's Premier Property Maintenance service for discernible homeowners and commercial managers.
+                </p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-tint/20 flex items-center justify-center text-on-primary-fixed hover:bg-secondary-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-primary-fixed mb-4">Services</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-container transition-colors" href="index.html">Plumbing &amp; Heating</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-container transition-colors" href="index.html">Electrical Services</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-container transition-colors" href="index.html">Handyman Tasks</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-container transition-colors" href="shader.html">Painting &amp; Decorating</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-primary-fixed mb-4">Legal</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-container transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-container transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-surface-tint/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-primary-container/60 text-sm">
+                © 2024 TMT Central Ltd. All rights reserved. London's Premier Property Maintenance.
+            </p>
+<div class="flex gap-2">
+<!-- Badges -->
+<span class="px-2 py-1 bg-surface-tint/10 rounded text-xs text-on-primary-container font-label-md">DBS Checked</span>
+<span class="px-2 py-1 bg-surface-tint/10 rounded text-xs text-on-primary-container font-label-md">Fully Insured</span>
+</div>
+</div>
+</footer>
+<!-- Schema.org ContactPage Markup -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "mainEntity": {
+        "@type": "LocalBusiness",
+        "name": "TMT Central Ltd",
+        "image": "https://tmtcentral.co.uk/logo.png",
+        "telephone": "020 3950 3309",
+        "email": "info@tmtcentral.co.uk",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Portland Hardware, 146 Great Portland Street",
+          "addressLocality": "London",
+          "postalCode": "W1W 6QB",
+          "addressCountry": "UK"
+        },
+        "areaServed": ["Marylebone", "Mayfair", "Soho", "Fitzrovia", "Paddington", "Central London"],
+        "openingHours": "Mo-Fr 08:00-17:30, Sa 09:00-17:00"
+      }
+    }
+    </script>
+<script>
+        // Simple sticky nav effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('topNav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md', 'bg-glass-bg/95');
+                nav.classList.remove('bg-glass-bg');
+            } else {
+                nav.classList.remove('shadow-md', 'bg-glass-bg/95');
+                nav.classList.add('bg-glass-bg');
+            }
+        });
+    </script>
+<img src="https://andrastime.goatcounter.com/count?p=%2Fe0fdd568-c9c6-498d-94b7-b5814f323a23" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

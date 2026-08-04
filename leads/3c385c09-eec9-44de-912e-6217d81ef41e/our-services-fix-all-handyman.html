@@ -1,0 +1,284 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services - Fix All Handyman Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#41312a",
+                        "surface-container": "#2b1c16",
+                        "on-secondary-container": "#bbbbbf",
+                        "outline-variant": "#5a4136",
+                        "outline": "#a98a7d",
+                        "tertiary-container": "#9499a4",
+                        "on-tertiary-fixed": "#171c24",
+                        "on-primary": "#561f00",
+                        "on-tertiary-container": "#2c313a",
+                        "tertiary": "#c2c6d2",
+                        "on-secondary-fixed": "#1a1c1f",
+                        "on-tertiary": "#2c313a",
+                        "secondary-fixed": "#e2e2e6",
+                        "background": "#1d100a",
+                        "tertiary-fixed": "#dee2ee",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#45474a",
+                        "on-primary-fixed-variant": "#7a3000",
+                        "tertiary-fixed-dim": "#c2c6d2",
+                        "on-primary-container": "#572000",
+                        "secondary": "#c6c6ca",
+                        "on-error-container": "#ffdad6",
+                        "primary": "#ffb693",
+                        "surface-bright": "#46362e",
+                        "on-surface": "#f8ddd2",
+                        "inverse-surface": "#f8ddd2",
+                        "primary-container": "#ff6b00",
+                        "drill-yellow": "#FDB913",
+                        "surface-container-high": "#362720",
+                        "secondary-fixed-dim": "#c6c6ca",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#ffb693",
+                        "safety-orange": "#FF6B00",
+                        "on-tertiary-fixed-variant": "#424750",
+                        "surface-dim": "#1d100a",
+                        "inverse-primary": "#a04100",
+                        "inverse-on-surface": "#3d2d26",
+                        "surface": "#1d100a",
+                        "on-background": "#f8ddd2",
+                        "surface-variant": "#41312a",
+                        "primary-fixed": "#ffdbcc",
+                        "surface-container-lowest": "#170b06",
+                        "on-primary-fixed": "#351000",
+                        "surface-container-low": "#261812",
+                        "primary-fixed-dim": "#ffb693",
+                        "slate-gray": "#4A5568",
+                        "steel-white": "#F4F7FA",
+                        "secondary-container": "#4a4b4f",
+                        "on-surface-variant": "#e2bfb0",
+                        "charcoal-black": "#0D0F12",
+                        "error-container": "#93000a",
+                        "on-secondary": "#2f3034"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-mobile": "64px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "section-gap-desktop": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "42px", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0D0F12; color: #f8ddd2; }
+        .service-card {
+            background: linear-gradient(145deg, #121417, #0D0F12);
+            border: 1px solid #2C313A;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            border-color: #FF6B00;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(255, 107, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        .btn-primary {
+            background: linear-gradient(180deg, #FF8226 0%, #FF6B00 100%);
+            border: 1px solid #FF8226;
+            box-shadow: 0 2px 10px rgba(255, 107, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+        .btn-primary:hover {
+            background: #FF6B00;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#2C313A 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="font-body-md antialiased overflow-x-hidden selection:bg-safety-orange selection:text-white">
+<!-- TopNavBar -->
+<header class="bg-background/90 dark:bg-background/90 backdrop-blur-md docked full-width top-0 sticky z-50 flat no shadows border-b border-outline-variant">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<a class="font-display-lg text-headline-md tracking-tighter text-on-background dark:text-on-background hover:text-safety-orange transition-colors" href="/">
+                FIX ALL HANDYMAN
+            </a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-headline-md text-headline-md text-on-surface-variant dark:text-on-surface-variant hover:text-safety-orange transition-colors" href="/">Home</a>
+<a class="font-headline-md text-headline-md text-safety-orange font-bold border-b-2 border-safety-orange pb-1" href="/services">Services</a>
+<a class="font-headline-md text-headline-md text-on-surface-variant dark:text-on-surface-variant hover:text-safety-orange transition-colors" href="/about">About</a>
+<a class="font-headline-md text-headline-md text-on-surface-variant dark:text-on-surface-variant hover:text-safety-orange transition-colors" href="/reviews">Reviews</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center gap-2 btn-primary px-6 py-2 rounded font-label-bold text-white uppercase tracking-wider">
+                    Book Now
+                </button>
+<a class="text-safety-orange hover:bg-surface-container-highest p-2 rounded-full transition-all duration-300 active:scale-95" href="tel:+447446376394">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-section-gap-mobile pb-section-gap-mobile md:pt-section-gap-desktop md:pb-section-gap-desktop border-b border-outline-variant overflow-hidden">
+<div class="absolute inset-0 bg-pattern opacity-20"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
+<div class="relative max-w-container-max mx-auto px-gutter text-center z-10">
+<div class="inline-flex items-center gap-2 bg-surface-container border border-outline-variant px-4 py-1.5 rounded-full mb-8">
+<span class="w-2 h-2 rounded-full bg-safety-orange animate-pulse"></span>
+<span class="font-label-bold text-safety-orange uppercase tracking-wider text-xs">Premium Craftsmanship</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-on-surface mb-6 mx-auto max-w-4xl">
+                    Expert Solutions for <br class="hidden md:block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-safety-orange to-drill-yellow">Every Repair</span>
+</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                    From leaky taps to full home repairs — fast, reliable, and fully insured in East London. Master contractor level precision for every project.
+                </p>
+</div>
+</section>
+<!-- Services Grid (Bento Style) -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop max-w-container-max mx-auto px-gutter relative z-20 -mt-16 md:-mt-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-base md:gap-gutter auto-rows-[250px]">
+<!-- Plumbing (Large) -->
+<div class="service-card md:col-span-8 rounded-xl p-8 flex flex-col justify-between group overflow-hidden relative">
+<div class="absolute top-0 right-0 w-64 h-64 bg-safety-orange/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-safety-orange/10 transition-all duration-500"></div>
+<div class="relative z-10">
+<div class="w-12 h-12 bg-surface-container rounded-lg border border-outline-variant flex items-center justify-center mb-6 group-hover:border-safety-orange transition-colors">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<h3 class="font-headline-lg text-on-surface mb-2">Plumbing</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">From leaky taps and blocked drains to full bathroom installations. Precision water systems management.</p>
+</div>
+</div>
+<!-- Electrical (Tall) -->
+<div class="service-card md:col-span-4 md:row-span-2 rounded-xl p-8 flex flex-col justify-between group overflow-hidden relative">
+<div class="relative z-10 h-full flex flex-col">
+<div class="w-12 h-12 bg-surface-container rounded-lg border border-outline-variant flex items-center justify-center mb-6 group-hover:border-safety-orange transition-colors">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div class="mt-auto">
+<h3 class="font-headline-md text-on-surface mb-2">Electrical</h3>
+<p class="font-body-md text-on-surface-variant">Safe, certified electrical work — lights, sockets, fuse boards and more. Guaranteed compliance.</p>
+</div>
+</div>
+</div>
+<!-- Carpentry (Medium) -->
+<div class="service-card md:col-span-4 rounded-xl p-8 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 bg-surface-container rounded-lg border border-outline-variant flex items-center justify-center mb-6 group-hover:border-safety-orange transition-colors">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">carpenter</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-2">Carpentry</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Doors, shelves, fittings and bespoke woodwork done right.</p>
+</div>
+</div>
+<!-- Painting (Medium) -->
+<div class="service-card md:col-span-4 rounded-xl p-8 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 bg-surface-container rounded-lg border border-outline-variant flex items-center justify-center mb-6 group-hover:border-safety-orange transition-colors">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">format_paint</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-2">Painting &amp; Decorating</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Interior and exterior painting that transforms your space completely.</p>
+</div>
+</div>
+<!-- Tiling (Medium) -->
+<div class="service-card md:col-span-4 rounded-xl p-8 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 bg-surface-container rounded-lg border border-outline-variant flex items-center justify-center mb-6 group-hover:border-safety-orange transition-colors">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">grid_on</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-2">Tiling</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Kitchen and bathroom tiling finished to structural perfection.</p>
+</div>
+</div>
+<!-- Furniture Assembly & General Maintenance (Wide Split) -->
+<div class="service-card md:col-span-8 rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center group">
+<div class="flex-1">
+<div class="w-12 h-12 bg-surface-container rounded-lg border border-outline-variant flex items-center justify-center mb-6 group-hover:border-safety-orange transition-colors">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">handyman</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-2">General Maintenance &amp; Assembly</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Flat-pack nightmares solved and regular upkeep so your home stays in top shape. Structural integrity prioritized.</p>
+</div>
+<div class="w-full md:w-1/2 h-full rounded-lg overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500" data-alt="A professional handyman in dark high-vis workwear inspecting a modern residential electrical panel. The setting is a clean, industrial-chic basement with slate gray walls and subtle warm lighting. The aesthetic is high-end craftsmanship, emphasizing precision, reliability, and safety with a modern corporate feel." src="https://lh3.googleusercontent.com/aida/AP1WRLtocWsiFiou1lZFK8DOAJ9x6SrL49XU9TxC3zNT435BLUD-PEETmCQ91eeUfKRL6T--i6GAVzKJzhrH0fszcNsFR8OBzzhMmeVsKszHbRSZEqLMKXkFG4QlCoTMu2J4cckhFKooeMcW2XJ0DHc4XqyF2wcU_1zUCI4mtenPfyw6-6giuo7hYIA5wG-mnRxxYn1mZNCnIp36rhmu52lh4fRZ519FAqgS0dWva6z8czb72ii_UIHeSsGxlA">
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-lowest border-t border-outline-variant text-center px-gutter">
+<div class="max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-on-surface mb-4">Ready to fix it properly?</h2>
+<p class="font-body-md text-on-surface-variant mb-8">Transparent pricing, fully insured, and built to last. Contact East London's trusted experts today.</p>
+<button class="btn-primary px-8 py-4 rounded-lg font-label-bold text-white uppercase tracking-wider inline-flex items-center gap-2">
+                    Get a Free Quote
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width mt-section-gap-desktop border-t border-outline-variant flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-base px-gutter py-section-gap-mobile max-w-container-max mx-auto">
+<div>
+<span class="font-headline-md text-headline-md text-on-surface block mb-4">FIX ALL HANDYMAN</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 FIX ALL HANDYMAN SERVICES. PREMIUM CRAFTSMANSHIP IN EAST LONDON.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-bold text-on-surface uppercase mb-2">Services</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform" href="our-services-fix-all-handyman.html">Emergency Repairs</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform" href="our-services-fix-all-handyman.html">Electrical</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform" href="our-services-fix-all-handyman.html">Plumbing</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform" href="our-services-fix-all-handyman.html">Carpentry</a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-bold text-on-surface uppercase mb-2">Legal</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform" href="index.html">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform" href="index.html">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<!-- FAB -->
+<a class="fixed bottom-8 right-8 w-14 h-14 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform z-50 group" href="https://api.whatsapp.com/send?phone=%2B447446376394">
+<span class="material-symbols-outlined text-white text-3xl">chat</span>
+</a>
+<img src="https://andrastime.goatcounter.com/count?p=%2F3c385c09-eec9-44de-912e-6217d81ef41e" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

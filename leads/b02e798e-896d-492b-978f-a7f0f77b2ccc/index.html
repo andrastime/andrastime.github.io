@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>London Premier Handyman Service</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdada",
+                        "on-error": "#ffffff",
+                        "secondary": "#735c00",
+                        "surface": "#fcf8fa",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f3f0f2",
+                        "surface-dim": "#dcd9db",
+                        "inverse-surface": "#303032",
+                        "premium-gold": "#D4AF37",
+                        "on-tertiary-fixed": "#40000c",
+                        "on-surface-variant": "#45464d",
+                        "surface-tint": "#565e74",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fed65b",
+                        "on-tertiary-container": "#f83256",
+                        "deep-slate": "#0F172A",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#e9c349",
+                        "background": "#fcf8fa",
+                        "surface-container-highest": "#e4e2e4",
+                        "primary-fixed": "#dae2fd",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#745c00",
+                        "primary": "#000000",
+                        "outline-variant": "#c6c6cd",
+                        "tertiary": "#000000",
+                        "london-red": "#E11D48",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#eae7e9",
+                        "surface-container": "#f0edef",
+                        "surface-container-low": "#f6f3f5",
+                        "tertiary-fixed-dim": "#ffb3b6",
+                        "on-secondary-fixed": "#241a00",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-tertiary-fixed-variant": "#920028",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#7c839b",
+                        "inverse-primary": "#bec6e0",
+                        "primary-container": "#131b2e",
+                        "secondary-fixed": "#ffe088",
+                        "tertiary-container": "#40000c",
+                        "surface-bright": "#fcf8fa",
+                        "on-surface": "#1b1b1d",
+                        "surface-variant": "#e4e2e4",
+                        "outline": "#76777d",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "whatsapp-green": "#25D366",
+                        "ice-surface": "#F8FAFC",
+                        "on-primary-fixed": "#131b2e",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1b1b1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "section-gap": "120px",
+                        "stack-sm": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "stack-md": "16px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "price-display": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "price-display": ["32px", { "lineHeight": "32px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-premium-gold selection:text-white">
+<!-- Top Navigation -->
+<header class="bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30 shadow-sm transition-all duration-300" id="main-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-display-lg text-headline-md font-extrabold text-primary dark:text-on-primary-fixed tracking-tight" href="#">METRO HANDYMAN</a>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-label-caps text-label-caps text-primary dark:text-premium-gold font-bold border-b-2 border-primary dark:border-premium-gold pb-1 transition-colors" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-premium-gold transition-colors" href="#services">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-premium-gold transition-colors" href="#gallery">Gallery</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-premium-gold transition-colors" href="#testimonials">Testimonials</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-premium-gold transition-colors" href="#about">About</a>
+</nav>
+<div class="hidden md:flex items-center gap-stack-md">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2" href="tel:07851882887">
+<span class="material-symbols-outlined text-[18px]">phone</span>
+                    07851882887
+                </a>
+<a class="bg-deep-slate text-white px-6 py-3 rounded hover:opacity-80 transition-opacity font-label-caps text-label-caps border border-transparent shadow-sm hover-lift inline-block text-center scale-95 active:transition-all" href="#contact">
+                    Book Now
+                </a>
+</div>
+</div>
+</header>
+<main class="pt-20"> <!-- Padding for fixed nav -->
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center bg-deep-slate text-white overflow-hidden py-section-gap">
+<div class="absolute inset-0 w-full h-full">
+<!-- Using placeholder for hero background, but it's not a specified image from the list that makes sense for hero background based on sizes. Falling back to a style background to simulate a dark overlay if needed, but since it's a requested placeholder, I'll use a standard structure. The prompt requested IMAGE_3 but it's missing from the list. Using a generic dark pattern instead as instructed not to generate new placeholders. -->
+<div class="absolute inset-0 bg-gradient-to-br from-deep-slate to-surface-tint opacity-90 z-10"></div>
+<!-- Assuming IMAGE_10 or similar could be used if forced, but skipping missing IMAGE_3 per instructions to use exact placeholders. Using a generic dark background. -->
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h1 class="font-display-lg text-display-lg md:text-[80px] leading-tight mb-stack-md text-white drop-shadow-md opacity-0 translate-y-4 animate-fade-in-up" style="animation: fadeInUp 0.8s ease forwards;">
+                    Expert Handyman Services Across London.
+                </h1>
+<p class="font-body-lg text-body-lg md:text-xl text-surface-variant mb-stack-lg max-w-2xl mx-auto opacity-0 translate-y-4 animate-fade-in-up" style="animation: fadeInUp 0.8s ease forwards 0.2s;">
+                    From furniture assembly to full home setups, we provide professional, reliable, and stress-free solutions tailored to the modern London home.
+                </p>
+<div class="flex flex-col sm:flex-row gap-stack-md justify-center opacity-0 translate-y-4 animate-fade-in-up" style="animation: fadeInUp 0.8s ease forwards 0.4s;">
+<a class="bg-premium-gold text-deep-slate px-8 py-4 rounded-DEFAULT font-label-caps text-label-caps shadow-lg hover-lift hover:opacity-90 transition-all border border-premium-gold" href="#contact">
+                        Request a Quote
+                    </a>
+<a class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-DEFAULT font-label-caps text-label-caps shadow-sm hover-lift hover:bg-white hover:text-deep-slate transition-all" href="#services">
+                        Book Now
+                    </a>
+</div>
+</div>
+</section>
+<!-- Service Highlights (Bento Grid) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface" id="services">
+<div class="max-w-container-max mx-auto">
+<div class="mb-section-gap text-center max-w-3xl mx-auto">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-deep-slate mb-stack-sm">Premium Services for Your Home</h2>
+<p class="font-body-md text-body-lg text-on-surface-variant">We handle the details so you can enjoy your space. Reliable, efficient, and precise.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[300px]">
+<!-- Service 1: Handyman / Setup (Large) -->
+<a class="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-lg hover-lift" href="#">
+<div class="absolute inset-0 bg-deep-slate/20 group-hover:bg-deep-slate/10 transition-colors z-10"></div>
+<img alt="Handyman Service" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 group-hover:scale-105" data-alt="A professional handyman in a dark polo shirt carefully installing a large flat-screen TV in a modern, minimalist London living room with warm ambient lighting. The scene exudes competence and premium service." src="https://lh3.googleusercontent.com/aida/AP1WRLt_XWCDr-JRiRWJjKn4m9hTPn4u-1mqogvFZu7squGY0jy6Q0IGysJtBgkUkd9cw4iuOhLphnKYQ_d61QuJBPnt5Us0Cm3NnhYQnchdTNL9hahQ_alKsD6CHZBI8IplUlXTaGjn6FiAA6JDmumYq9OQhMUPlQcnd_F8SMHfExSR6E9kmKvIF8vczcL4pyW6FptXoWe0jxsA57hWpP6K5udJkmasPcYAYL4UfJ-0DPeHSyFhSqGlq7EASITj"/>
+<div class="absolute bottom-0 left-0 p-stack-lg z-20 w-full glass-panel border-t border-r border-transparent">
+<span class="inline-block px-3 py-1 bg-surface-container-low text-deep-slate font-label-caps text-label-caps rounded mb-stack-sm shadow-sm">Setup & Assembly</span>
+<h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Full Home Setup</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md hidden md:block mb-stack-md">From empty house to fully set-up home fast, clean and stress-free.</p>
+<span class="font-label-caps text-label-caps text-premium-gold flex items-center gap-1 group-hover:gap-2 transition-all">Explore Service <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>
+</div>
+</a>
+<!-- Service 2: Furniture -->
+<a class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-lg hover-lift" href="#">
+<div class="absolute inset-0 bg-deep-slate/20 group-hover:bg-deep-slate/10 transition-colors z-10"></div>
+<img alt="Furniture Assembly" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a handyman's hands expertly assembling high-end flat pack furniture using professional tools on a clean hardwood floor in a bright, modern apartment." src="https://lh3.googleusercontent.com/aida/AP1WRLuKkXudIRXS8m9zCei3vvoPbieYCZ2ALTPsUj9s5D4D4x8tD9ciCJueNMqfYAxBlM8K5MQhe6_4hFOv3658Zv7VLK8k4zCkbyFqpo7AjbkI4LQkteyuVSvkTabaxScs9YxSXECy2q-fuR4zXGpvRyZREmPnkDMZClhFwyvfaQxL44_iw2DGxdp-nPd_YkqqiMfjcNAYJZVVqrknU0RIRsVJwn7otGsgdkQNckWNiYoUA9LS3Adw2UxEf2M"/>
+<div class="absolute bottom-0 left-0 p-stack-md z-20 w-full glass-panel">
+<h3 class="font-headline-md text-[20px] font-semibold text-deep-slate mb-1">Furniture Assembly</h3>
+<span class="font-label-caps text-label-caps text-on-surface-variant">From £45 per hour</span>
+</div>
+</a>
+<!-- Service 3: Electrical -->
+<a class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-lg hover-lift" href="#">
+<div class="absolute inset-0 bg-deep-slate/20 group-hover:bg-deep-slate/10 transition-colors z-10"></div>
+<img alt="Painting & Decorating" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 group-hover:scale-105" data-alt="A clean, minimalist white hallway with a modern white door, showcasing fresh, high-quality painting and decorating work in a premium London flat." src="https://lh3.googleusercontent.com/aida/AP1WRLs1FzluuQSSh-w87iP7qV6rSKDxM_BW2lw86Wq38FafPMa5oqY4esn63i-Qg6nW_NswoHLlAjK_IqvRtjvA6eDscJHvlRdIBCoaTJQwEmPyyw7Etc3lvO41gZLOKH-R-TqO5rG9wnncqdb98I7LTpwKB73u0ixjJu9VubQ86HwDEzg1ags3v6asTPvo_6W92q9Zvwcklcmu7vx1_kSkG_C_tXi-vGcyzf_0mkfiXMrAaQVbS4hcamfrHxu3"/>
+<div class="absolute bottom-0 left-0 p-stack-md z-20 w-full glass-panel">
+<h3 class="font-headline-md text-[20px] font-semibold text-deep-slate mb-1">Painting & Decorating</h3>
+<span class="font-label-caps text-label-caps text-on-surface-variant">From £250 per day</span>
+</div>
+</a>
+<!-- Service 4: Plumbing -->
+<a class="md:col-span-6 md:row-span-1 group relative overflow-hidden rounded-lg hover-lift bg-ice-surface border border-outline-variant/30 flex items-center p-stack-lg" href="#">
+<div class="flex-1">
+<span class="inline-block px-3 py-1 bg-white text-deep-slate font-label-caps text-label-caps rounded mb-stack-sm shadow-sm border border-outline-variant/20">Plumbing</span>
+<h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Minor Plumbing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Quick fixes for leaky faucets or running toilets.</p>
+<span class="font-label-caps text-label-caps text-premium-gold">From £60</span>
+</div>
+<div class="w-24 h-24 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[40px] text-surface-tint">plumbing</span>
+</div>
+</a>
+<!-- Service 5: Room Design -->
+<a class="md:col-span-6 md:row-span-1 group relative overflow-hidden rounded-lg hover-lift" href="#">
+<div class="absolute inset-0 bg-deep-slate/30 group-hover:bg-deep-slate/20 transition-colors z-10"></div>
+<img alt="Room Design" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 group-hover:scale-105" data-alt="A beautifully designed modern living space in London, featuring curated furniture, soft neutral tones, and abundant natural light, demonstrating professional room design services." src="https://lh3.googleusercontent.com/aida/AP1WRLskape1RlgVPzLPC_f5Y36_nlLKuqbqdEIv-wUH4d7dEUCs3wnZEFOMOiFUu3wyNqyRmi-SKaieQZU6b_yckdxlCYxvmNbEQFT8H_qn9KIlo0KxABauZpHJ5R3b_9KjujfgUa0ghhcvtj0arbI2wANANMpNDVECDQ0DysTBZa_hpzQcK_HTumBKaK2a3gJNbG9mfpNIeiHdp1yZvcTMWAACTOJ1TxYFWpOZaS5DZ_3-lQgzBalzka15uO0"/>
+<div class="absolute inset-0 z-20 flex flex-col justify-end p-stack-lg bg-gradient-to-t from-deep-slate/80 to-transparent">
+<h3 class="font-headline-md text-headline-md text-white mb-1">Room Design & Planning</h3>
+<p class="font-body-md text-body-md text-inverse-on-surface max-w-sm mb-stack-sm opacity-90">We design your room and help choose furniture – no mistakes.</p>
+<span class="font-label-caps text-label-caps text-premium-gold">£350 / day</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="py-section-gap bg-deep-slate text-white text-center px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<span class="material-symbols-outlined text-premium-gold text-[48px] mb-stack-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-lg">Trusted Local Handyman in London</h2>
+<div class="flex flex-col md:flex-row justify-center items-center gap-gutter">
+<div class="glass-panel bg-white/10 p-stack-lg rounded-lg border-white/20 max-w-sm text-left">
+<div class="flex text-premium-gold mb-stack-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-inverse-on-surface italic">"Professional, reliable, and done right. They completely transformed our new flat in just a few days. Highly recommend."</p>
+</div>
+<div class="glass-panel bg-white/10 p-stack-lg rounded-lg border-white/20 max-w-sm text-left hidden md:block">
+<div class="flex text-premium-gold mb-stack-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-inverse-on-surface italic">"Excellent service from start to finish. The TV mounting and furniture assembly was flawless."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery / Before & After -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest" id="gallery">
+<div class="max-w-container-max mx-auto">
+<div class="mb-section-gap text-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-deep-slate mb-stack-sm">Before & After Projects</h2>
+<p class="font-body-md text-body-lg text-on-surface-variant">See the transformation quality we bring to every job.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
+<!-- Pair 1 -->
+<div class="space-y-stack-sm">
+<div class="relative rounded-lg overflow-hidden border border-outline-variant/30 shadow-sm aspect-[0.75]">
+<img alt="Before" class="w-full h-full object-cover" data-alt="A raw, unfinished hallway in a London flat showing exposed brick and plasterwork before a renovation project begins." src="https://lh3.googleusercontent.com/aida/AP1WRLszvE70jtWHxekW57K_PILtZuZ5ZwRgQ8JhjwH_B2m2J_mfvE7ZBm5p08d42aciuJAer-9wLkd5TmyKIsE7l7fZ4Yue_0YDBKteM6KQLSCnsi3GdI_dGIS4B1bBPKTzIbb1T7j9Cb5QUPNGf2CShG410PFd602lQQR68-xQNtQRX8rrAmKPZq2RG6d12jzAutWwyPqFCZCa2vWaBjKTS1uBthymh0MN31tmCLAogC4oktaByw4Wodh6_6wi"/>
+<div class="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-sm text-white font-label-caps text-[10px] rounded">BEFORE</div>
+</div>
+</div>
+<div class="space-y-stack-sm">
+<div class="relative rounded-lg overflow-hidden border border-outline-variant/30 shadow-sm aspect-[0.75]">
+<img alt="After" class="w-full h-full object-cover" data-alt="The same hallway after renovation, featuring perfectly smooth painted white walls, elegant new lighting, and beautiful oak hardwood flooring." src="https://lh3.googleusercontent.com/aida/AP1WRLswSaGmEg_nOdHDYAA-1EiZTBvPKOKxgAubBot_grhITTF0tqjCqQYrsyfr30VT1qzCmEVkYzUTgCq3AH4nYMmoPNScmg5BW8U6aOB6i7gNNe1h6L9CLgZxL9NXrPHHvrO2SDIhnzd6BB9C-9YGOl3J6wzaD1jMN1f3N7lXu4FitZA2hvu7gNSx4REPiFBV4hpBIt6DCjUN9FU263yVC_rNQco2DXRxPLTlkRn19xWDFrgN3mnZnSZXe2-N"/>
+<div class="absolute top-4 right-4 px-3 py-1 bg-premium-gold/90 backdrop-blur-sm text-deep-slate font-label-caps text-[10px] rounded font-bold">AFTER</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Map -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-ice-surface border-t border-outline-variant/20" id="contact">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-section-gap">
+<!-- Contact Form -->
+<div class="glass-panel p-margin-mobile md:p-stack-lg rounded-xl shadow-lg">
+<h2 class="font-headline-md text-headline-md text-deep-slate mb-stack-md">Request a Quote</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">Contact us today for all your handyman needs in London.</p>
+<form class="space-y-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div>
+<label class="block font-label-caps text-label-caps text-surface-tint mb-2">Name</label>
+<input class="w-full bg-white border-outline-variant/50 focus:border-deep-slate focus:ring-1 focus:ring-deep-slate rounded-DEFAULT p-3 font-body-md text-deep-slate transition-colors" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-surface-tint mb-2">Phone</label>
+<input class="w-full bg-white border-outline-variant/50 focus:border-deep-slate focus:ring-1 focus:ring-deep-slate rounded-DEFAULT p-3 font-body-md text-deep-slate transition-colors" placeholder="07851882887" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-surface-tint mb-2">Email</label>
+<input class="w-full bg-white border-outline-variant/50 focus:border-deep-slate focus:ring-1 focus:ring-deep-slate rounded-DEFAULT p-3 font-body-md text-deep-slate transition-colors" placeholder="hello@example.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-surface-tint mb-2">Message</label>
+<textarea class="w-full bg-white border-outline-variant/50 focus:border-deep-slate focus:ring-1 focus:ring-deep-slate rounded-DEFAULT p-3 font-body-md text-deep-slate transition-colors resize-none" placeholder="Describe the job..." rows="4"></textarea>
+</div>
+<div class="flex items-start gap-3 py-2">
+<input class="mt-1 border-outline-variant rounded text-deep-slate focus:ring-deep-slate" id="gdpr" type="checkbox"/>
+<label class="font-body-md text-[12px] text-on-surface-variant leading-tight" for="gdpr">By submitting this form, you agree to our privacy policy and consent to us contacting you regarding your inquiry.</label>
+</div>
+<button class="w-full bg-deep-slate text-white py-4 rounded-DEFAULT font-label-caps text-label-caps hover-lift hover:opacity-90 transition-all shadow-md" type="submit">
+                            Send Message
+                        </button>
+</form>
+<div class="mt-stack-lg pt-stack-lg border-t border-outline-variant/20 flex flex-col items-center">
+<span class="font-body-md text-body-md text-on-surface-variant mb-3">Or get a faster response:</span>
+<a class="flex items-center justify-center gap-2 w-full bg-whatsapp-green text-white py-4 rounded-DEFAULT font-label-caps text-label-caps hover-lift shadow-md transition-transform" href="https://wa.me/447851882887">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+                            Get a Quote on WhatsApp
+                        </a>
+</div>
+</div>
+<!-- Info & Map -->
+<div class="space-y-stack-lg flex flex-col justify-center">
+<div>
+<h3 class="font-headline-md text-headline-md text-deep-slate mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-surface-tint">location_on</span>
+                            We are here
+                        </h3>
+<p class="font-body-md text-body-lg text-on-surface-variant mb-2">4 Mary neuner road, n8 0ff</p>
+<p class="font-body-md text-body-lg text-on-surface-variant">London, UK</p>
+</div>
+<div class="h-64 rounded-xl overflow-hidden shadow-inner border border-outline-variant/30 bg-surface-container-high relative">
+<!-- Simulated Map Area -->
+<div class="absolute inset-0 bg-surface-dim flex items-center justify-center text-surface-tint font-label-caps" data-location="London" style="">
+<img alt="Map Location" class="w-full h-full object-cover opacity-80" data-alt="A clean, minimalist high-contrast digital map interface centered on North London (N8 0FF area), showing street grids in subtle grays with a prominent dark slate pin marker indicating the business location." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6z5znzcvxqJb2EQ3eCoGlXAri22tcL5gWVNGv4fVXvp-fw3I1Z2DQrIYpqBwu7B9gDST6TzKTMqFIs4YhQmf5xvKsYSA-2-XZz2zpnQ023nNE3nrSy8iYdD035gGBEx9-LtdEHaezpAjKHgKJUleb88747RUF_aIKUdtPWOLe3vD5U9KSBwckGauuHqclqRiIMoEogDg1nq3qR2EzePlwKrM3drjvr4BTgmEGRiCT6VwaTMMasLviSw"/>
+</div>
+</div>
+<div class="space-y-stack-sm">
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-deep-slate transition-colors font-body-md text-body-md" href="mailto:infolphandyman@gmail.com">
+<span class="material-symbols-outlined">mail</span> infolphandyman@gmail.com
+                        </a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-deep-slate transition-colors font-body-md text-body-md" href="tel:07851882887">
+<span class="material-symbols-outlined">call</span> 07851882887
+                        </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Generated from JSON) -->
+<footer class="bg-deep-slate dark:bg-surface-container-lowest w-full text-surface dark:text-on-surface font-body-md text-body-md mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto border-t border-white/10">
+<div class="col-span-1 md:col-span-2 space-y-stack-md">
+<div class="font-display-lg text-headline-md text-surface dark:text-on-surface mb-stack-sm">METRO HANDYMAN</div>
+<p class="text-surface-variant dark:text-on-surface-variant max-w-sm">Premium handyman services for London's discerning homeowners and businesses. Professional, reliable, done right.</p>
+<div class="flex gap-4 pt-4">
+<a class="text-surface-variant hover:text-premium-gold transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="text-surface-variant hover:text-premium-gold transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-surface-variant mb-stack-md">Services</h4>
+<ul class="space-y-3">
+<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-white dark:hover:text-black transition-colors hover:text-premium-gold" href="#">Plumbing</a></li>
+<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-white dark:hover:text-black transition-colors hover:text-premium-gold" href="#">Electrical</a></li>
+<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-white dark:hover:text-black transition-colors hover:text-premium-gold" href="#">Carpentry</a></li>
+<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-white dark:hover:text-black transition-colors hover:text-premium-gold" href="#">Painting</a></li>
+<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-white dark:hover:text-black transition-colors hover:text-premium-gold" href="#">Emergency</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-surface-variant mb-stack-md">Connect</h4>
+<ul class="space-y-3">
+<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-white dark:hover:text-black transition-colors hover:text-premium-gold flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[16px]">photo_camera</span> Instagram</a></li>
+<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-white dark:hover:text-black transition-colors hover:text-premium-gold flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[16px]">thumb_up</span> Facebook</a></li>
+<li class="pt-2"><a class="text-premium-gold font-bold" href="tel:07851882887">07851882887</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 px-margin-mobile md:px-margin-desktop py-6 text-center text-surface-variant text-[12px]">
+            © 2024 Metropolitan Premium Handyman Services. All rights reserved.
+        </div>
+</footer>
+<!-- Bottom Nav Bar (Mobile Only - Generated from JSON) -->
+<nav class="bg-surface/90 dark:bg-inverse-surface/90 backdrop-blur-lg fixed bottom-0 w-full z-50 md:hidden rounded-t-xl border-t border-outline-variant/20 shadow-lg pb-safe">
+<div class="flex justify-around items-center h-16 px-4">
+<a class="flex flex-col items-center justify-center text-primary dark:text-premium-gold font-bold transition-transform duration-200 active:scale-90 active:bg-surface-container-high dark:active:bg-surface-container-highest p-2 rounded-lg" href="#services">
+<span class="material-symbols-outlined">construction</span>
+<span class="font-label-caps text-[10px] mt-1">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant transition-transform duration-200 active:scale-90 active:bg-surface-container-high dark:active:bg-surface-container-highest p-2 rounded-lg" href="#about">
+<span class="material-symbols-outlined">info</span>
+<span class="font-label-caps text-[10px] mt-1">About</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant transition-transform duration-200 active:scale-90 active:bg-surface-container-high dark:active:bg-surface-container-highest p-2 rounded-lg" href="#contact">
+<span class="material-symbols-outlined">phone</span>
+<span class="font-label-caps text-[10px] mt-1">Contact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant transition-transform duration-200 active:scale-90 active:bg-surface-container-high dark:active:bg-surface-container-highest p-2 rounded-lg" href="#testimonials">
+<span class="material-symbols-outlined">star</span>
+<span class="font-label-caps text-[10px] mt-1">Reviews</span>
+</a>
+</div>
+</nav>
+<style>
+        /* Utilities */
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+<script>
+        // Simple script for nav styling on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('bg-surface/80', 'bg-surface/95');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.replace('bg-surface/95', 'bg-surface/80');
+            }
+        });
+    </script>
+<img src="https://andrastime.goatcounter.com/count?p=%2Fb02e798e-896d-492b-978f-a7f0f77b2ccc" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

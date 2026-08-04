@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services - HSM Handyman Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#001a41",
+                      "on-surface-variant": "#424750",
+                      "surface-bright": "#fcf9f8",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#114783",
+                      "on-tertiary-fixed-variant": "#004494",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-tertiary-container": "#9fbeff",
+                      "on-error": "#ffffff",
+                      "background": "#fcf9f8",
+                      "outline-variant": "#c3c6d1",
+                      "outline": "#737781",
+                      "on-primary-container": "#98bfff",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "accent-magenta": "#E1007A",
+                      "secondary-container": "#fc9430",
+                      "on-secondary-fixed-variant": "#6e3900",
+                      "surface-variant": "#e5e2e1",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "secondary-fixed-dim": "#ffb77d",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#ffdcc3",
+                      "primary-fixed": "#d5e3ff",
+                      "tertiary-container": "#0b4a9c",
+                      "error-container": "#ffdad6",
+                      "tertiary": "#003474",
+                      "surface-container-high": "#ebe7e7",
+                      "primary": "#00366b",
+                      "tertiary-fixed-dim": "#adc6ff",
+                      "surface": "#fcf9f8",
+                      "secondary": "#914d00",
+                      "primary-container": "#1b4d89",
+                      "on-surface": "#1c1b1b",
+                      "on-secondary-fixed": "#2f1500",
+                      "safety-yellow": "#D1A451",
+                      "inverse-primary": "#a7c8ff",
+                      "inverse-surface": "#313030",
+                      "surface-container-low": "#f6f3f2",
+                      "surface-container": "#f0edec",
+                      "surface-tint": "#325f9c",
+                      "on-background": "#1c1b1b",
+                      "surface-dim": "#dcd9d9",
+                      "tertiary-fixed": "#d8e2ff",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-primary-fixed": "#001b3c",
+                      "on-secondary-container": "#663500",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-gray": "#F4F7FA"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "section-padding": "80px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "64px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-xl": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Open Sans"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "headline-xl-mobile": [
+                              "Montserrat"
+                      ],
+                      "label-bold": [
+                              "Open Sans"
+                      ],
+                      "body-lg": [
+                              "Open Sans"
+                      ],
+                      "caption": [
+                              "Open Sans"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-xl-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface-bright dark:bg-surface-dim font-headline-md text-headline-md for headings, font-body-md text-body-md for links docked full-width top-0 sticky z-50 shadow-md dark:bg-surface-container-high shadow-md hidden md:block">
+<div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-screen-2xl mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+                HSM Handyman Services
+            </div>
+<div class="flex gap-gutter items-center">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all scale-95 active:scale-90 transition-transform px-4 py-2 rounded-lg font-body-md text-body-md" href="#">Home</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-body-md text-body-md" href="index.html">Services</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all scale-95 active:scale-90 transition-transform px-4 py-2 rounded-lg font-body-md text-body-md" href="home-hsm-handyman-services.html">About</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all scale-95 active:scale-90 transition-transform px-4 py-2 rounded-lg font-body-md text-body-md" href="contact-us-hsm-handyman-services.html">Contact</a>
+</div>
+<div>
+<a class="bg-primary text-on-primary font-label-bold text-label-bold px-6 py-3 rounded-DEFAULT hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-md" href="contact-us-hsm-handyman-services.html">Call Now</a>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pb-32 md:pb-0">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-padding bg-surface-container-low text-center">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary mb-6">Our Professional Services</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto mb-8">
+                Comprehensive property maintenance and handyman services. We deliver precision, reliability, and guaranteed quality for every project, large or small.
+            </p>
+</section>
+<!-- Services Grid - Bento Style -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-padding max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Electrical Service Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(27,77,137,0.08)] overflow-hidden hover:shadow-[0px_8px_30px_rgba(27,77,137,0.15)] hover:-translate-y-1 transition-all duration-300 md:col-span-2 lg:col-span-2 flex flex-col md:flex-row">
+<div class="md:w-1/2 h-64 md:h-auto">
+<img alt="Electrician installing a modern light fixture in a renovated living room." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC66r3VEM8kMuqs3xyK1m6IBjRA0PrGqm71tffUbfJQGNfyDOrmcq6j8qvLwf52AmeS94Zo7nX4smSAOW_6pk9ASZCuURGoR4BuT7xHVJiOXRtF86nv1twWWs7v1NjoVN1yZ_B78hgJudSw_JrXw7-y6Ngyzzp4I_8w34ZGsK4fxNHlJuQRZRJCOROWrjgOV9TSGXekjfJAgVO_2rs3u0pivLYUohhAFmagAI9bkEStYfK8GcmjATG-">
+</div>
+<div class="p-8 md:w-1/2 flex flex-col justify-center">
+<div class="flex items-center gap-4 mb-4 text-primary">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">electrical_services</span>
+<h2 class="font-headline-lg text-headline-lg">Electrical</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Safe, code-compliant electrical repairs and installations. From upgrading light fixtures and ceiling fans to troubleshooting outlets and switches, our certified professionals ensure your home's electrical systems are reliable and safe.
+                        </p>
+<ul class="mb-6 space-y-2">
+<li class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant"><span class="material-symbols-outlined text-primary text-xl">check_circle</span> Fixture Installation</li>
+<li class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant"><span class="material-symbols-outlined text-primary text-xl">check_circle</span> Outlet &amp; Switch Repair</li>
+<li class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant"><span class="material-symbols-outlined text-primary text-xl">check_circle</span> Fault Troubleshooting</li>
+</ul>
+<a class="inline-flex items-center justify-center bg-secondary-container text-on-surface font-label-bold text-label-bold px-6 py-3 rounded-DEFAULT hover:bg-secondary hover:text-on-secondary transition-colors w-full sm:w-auto" href="contact-us-hsm-handyman-services.html">
+                            Get a Quote
+                        </a>
+</div>
+</div>
+<!-- Carpentry Service Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(27,77,137,0.08)] overflow-hidden hover:shadow-[0px_8px_30px_rgba(27,77,137,0.15)] hover:-translate-y-1 transition-all duration-300 flex flex-col">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="Close up of a skilled carpenter planing a piece of rich mahogany wood in a bright, organized workshop. Wood shavings curling off the plane. Bright, professional lighting highlighting the texture of the wood. Corporate modern aesthetic, clean and precise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5reqrE3gazhP03zOBj4WpKAl7bQUk-4qC4_ZloSazyVl3IbalQZGBrheQ5UxtOwdvLiH90DLi79kqYFUAeHs5EhNFStmX-ylQdTYAHgfQPMGaeB7KH6AcnR5WlQQ72zplk4s0RWz0W0E-aNvZpicfovv4De4qluLC2rcjeB80LOJ30XmIco4vrkrZGIQNlbL6hLs71jgVRT9qpY_7rcvxB2uj_xeotfjCAgxDJN55jqPzZMthj6he">
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">carpenter</span>
+<h2 class="font-headline-md text-headline-md">Carpentry</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Custom woodworking, repairs, and structural enhancements. We handle everything from door framing and trim work to custom shelving and deck repairs with precision craftsmanship.
+                        </p>
+<a class="inline-flex items-center justify-center border-2 border-primary text-primary font-label-bold text-label-bold px-6 py-3 rounded-DEFAULT hover:bg-primary-container hover:text-on-primary-container transition-colors w-full" href="#">
+                            Get a Quote
+                        </a>
+</div>
+</div>
+<!-- Plumbing Service Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(27,77,137,0.08)] overflow-hidden hover:shadow-[0px_8px_30px_rgba(27,77,137,0.15)] hover:-translate-y-1 transition-all duration-300 flex flex-col">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="A professional plumber tightening a fitting under a modern kitchen sink. Clean white cabinets and stainless steel fixtures. Bright, high-key lighting emphasizing hygiene and professional service. Corporate modern style, blue and white color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVAtRZFUIDbV9X5Q26lIFn5LNp7d7PQxGvw2qTnbvWje2f-TrWFO0e6XwUDJBvriJ3Me4nwilZ4Xywj5ekKEAW32uKMcLZhxUJrud41VhGPSSsVtswBhCpUQ4MOLfbtRbKZvKsqU9bzttf83HVxraIsSgXAVW7khAt0kJjrbsrEJvFee2ULatK1sImS-p_UuF2_KOi4HyA_Uv9jcF8OMXlgZ6HhPIRbSU-LClO87WsvQ7mDtxzW2iN">
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+<h2 class="font-headline-md text-headline-md">Plumbing</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Fast, efficient solutions for leaks, clogs, and fixture replacements. Maintain your home's water systems with our expert plumbing maintenance services.
+                        </p>
+<a class="inline-flex items-center justify-center border-2 border-primary text-primary font-label-bold text-label-bold px-6 py-3 rounded-DEFAULT hover:bg-primary-container hover:text-on-primary-container transition-colors w-full" href="contact-us-hsm-handyman-services.html">
+                            Get a Quote
+                        </a>
+</div>
+</div>
+<!-- Painting Service Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(27,77,137,0.08)] overflow-hidden hover:shadow-[0px_8px_30px_rgba(27,77,137,0.15)] hover:-translate-y-1 transition-all duration-300 flex flex-col">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="A painter carefully cutting in a crisp line between a light gray wall and white trim using a high-quality brush. Clean, modern interior. Bright natural light. Emphasis on precision and clean lines, reflecting a professional modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1CcTBpEQ8MyIYr8vyleJbqtrbFXJv_vd-qjmlE7reKmNmKxNlQmkKJe_6JENkIFPzTS-gxA5oNrXV1fE4KVcXon2sqysjwSKCRCsvwP2j9iyUWCTonkIoiHG098i9QJuBJIjHcKsYKaCCgn__THx5oPm1iUeDUc7k_K3scfbW2T9Agg3u3XgEGVlH1eR4hpV6atMdlUaglcP0va-FlTbYAmxuzN0sYS_0EsF6NOni5yDFnR7i9C0W">
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">format_paint</span>
+<h2 class="font-headline-md text-headline-md">Painting</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Interior and exterior painting services designed to refresh and protect your property. We ensure meticulous prep work and flawless finishes for lasting results.
+                        </p>
+<a class="inline-flex items-center justify-center border-2 border-primary text-primary font-label-bold text-label-bold px-6 py-3 rounded-DEFAULT hover:bg-primary-container hover:text-on-primary-container transition-colors w-full" href="contact-us-hsm-handyman-services.html">
+                            Get a Quote
+                        </a>
+</div>
+</div>
+<!-- General Maintenance Service Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(27,77,137,0.08)] overflow-hidden hover:shadow-[0px_8px_30px_rgba(27,77,137,0.15)] hover:-translate-y-1 transition-all duration-300 flex flex-col md:col-span-2 lg:col-span-1">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="A tidy, organized workbench featuring various professional handyman tools like a drill, level, and tape measure. Bright, clean lighting against a light gray background. Conveys reliability, organization, and a corporate modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB46ZUuL6yfBJ6S5V6Z92y7pTx_lDinUyHD8Vny0PlcwfdLE5etDplgRIpRlC0e2PcoqWz2egxgCOTT4pEXQXIEyBqC7Iz7UTfFTeeig23GuVbWiBQD3hHnVzOJW91HbrESwt0OcSxGakePmpjvq3SGxwVR5of_mOXpiLZrxfZHUxBBIQRoTIPnFp4rzHC2uqyVa7Mn1mezC32l1eoQqa_VmuDl23Fkuu2NXLci-JxjL9tRSFOCQCPF">
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">home_repair_service</span>
+<h2 class="font-headline-md text-headline-md">General Maintenance</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Preventative care and routine upkeep to maintain your property's value and functionality. From drywall repair to seasonal maintenance checks.
+                        </p>
+<a class="inline-flex items-center justify-center border-2 border-primary text-primary font-label-bold text-label-bold px-6 py-3 rounded-DEFAULT hover:bg-primary-container hover:text-on-primary-container transition-colors w-full" href="contact-us-hsm-handyman-services.html">
+                            Get a Quote
+                        </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="bg-surface-container dark:bg-on-tertiary-fixed font-label-bold text-label-bold docked full-width bottom-0 z-50 md:hidden shadow-lg border-t border-outline-variant dark:border-none shadow-lg fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 pb-safe">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-tertiary-container active:bg-surface-variant transition-colors tap-highlight-transparent w-16 h-14 rounded-full" href="home-hsm-handyman-services.html">
+<span class="material-symbols-outlined text-2xl mb-1">home</span>
+<span class="text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 active:bg-surface-variant transition-colors tap-highlight-transparent w-16 h-14" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" style="font-variation-settings: 'FILL' 1;">build</span>
+<span class="text-[10px]">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-tertiary-container active:bg-surface-variant transition-colors tap-highlight-transparent w-16 h-14 rounded-full" href="contact-us-hsm-handyman-services.html">
+<span class="material-symbols-outlined text-2xl mb-1">request_quote</span>
+<span class="text-[10px]">Quote</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-tertiary-container active:bg-surface-variant transition-colors tap-highlight-transparent w-16 h-14 rounded-full" href="contact-us-hsm-handyman-services.html">
+<span class="material-symbols-outlined text-2xl mb-1">phone</span>
+<span class="text-[10px]">Contact</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-on-tertiary-fixed dark:bg-surface-container-lowest text-surface-bright dark:text-primary font-body-md text-body-md full-width mt-section-padding flat no shadows transition-all duration-300">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-padding w-full max-w-screen-2xl mx-auto">
+<div class="md:col-span-1 mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md text-surface-bright dark:text-primary mb-4 font-bold">
+                    HSM Handyman Services
+                </div>
+<p class="text-on-tertiary-container dark:text-on-surface-variant font-body-md text-body-md">
+                    Professional, reliable, and precise property maintenance solutions.
+                </p>
+</div>
+<div class="md:col-span-1 mb-6 md:mb-0">
+<h3 class="font-label-bold text-label-bold text-surface-bright dark:text-primary mb-4 uppercase tracking-wider">Services</h3>
+<ul class="space-y-3">
+<li><a class="text-on-tertiary-container dark:text-on-surface-variant hover:text-surface-bright dark:hover:text-primary transition-colors hover:underline decoration-secondary-container" href="index.html">Electrical</a></li>
+<li><a class="text-on-tertiary-container dark:text-on-surface-variant hover:text-surface-bright dark:hover:text-primary transition-colors hover:underline decoration-secondary-container" href="#">Carpentry</a></li>
+<li><a class="text-on-tertiary-container dark:text-on-surface-variant hover:text-surface-bright dark:hover:text-primary transition-colors hover:underline decoration-secondary-container" href="index.html">Plumbing</a></li>
+<li><a class="text-on-tertiary-container dark:text-on-surface-variant hover:text-surface-bright dark:hover:text-primary transition-colors hover:underline decoration-secondary-container" href="index.html">Painting</a></li>
+</ul>
+</div>
+<div class="md:col-span-1 mb-6 md:mb-0">
+<h3 class="font-label-bold text-label-bold text-surface-bright dark:text-primary mb-4 uppercase tracking-wider">Legal</h3>
+<ul class="space-y-3">
+<li><a class="text-on-tertiary-container dark:text-on-surface-variant hover:text-surface-bright dark:hover:text-primary transition-colors hover:underline decoration-secondary-container" href="#">Privacy Policy</a></li>
+<li><a class="text-on-tertiary-container dark:text-on-surface-variant hover:text-surface-bright dark:hover:text-primary transition-colors hover:underline decoration-secondary-container" href="home-hsm-handyman-services.html">Terms of Service</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h3 class="font-label-bold text-label-bold text-surface-bright dark:text-primary mb-4 uppercase tracking-wider">Contact</h3>
+<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary-container font-label-bold text-label-bold px-6 py-3 rounded-DEFAULT hover:bg-surface-variant hover:text-on-surface transition-colors w-full sm:w-auto" href="#">
+                    Get in Touch
+                </a>
+</div>
+</div>
+<div class="border-t border-tertiary px-margin-desktop py-6 text-center text-on-tertiary-container dark:text-on-surface-variant font-caption text-caption">
+            © 2024 HSM Handyman Services &amp; Maintenance CIC. All rights reserved.
+        </div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2Fd9849129-a62c-4da1-b6d9-0eb8820dd149" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

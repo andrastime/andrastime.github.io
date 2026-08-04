@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Quick Nick's Handyman Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fff8f6",
+                        "off-white": "#F8F8F8",
+                        "primary": "#a93200",
+                        "tertiary-container": "#007cb4",
+                        "on-surface-variant": "#5a4139",
+                        "surface-bright": "#fff8f6",
+                        "primary-fixed-dim": "#ffb59e",
+                        "tertiary-fixed-dim": "#8ccdff",
+                        "on-tertiary-fixed": "#001e2f",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#ffdbd0",
+                        "surface-dim": "#efd4cd",
+                        "action-blue": "#0054A6",
+                        "secondary-fixed": "#d6e3ff",
+                        "inverse-on-surface": "#ffede8",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#261814",
+                        "surface-tint": "#ad3300",
+                        "surface-variant": "#f8ddd5",
+                        "primary-container": "#d1430a",
+                        "tertiary": "#00628f",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#ffb59e",
+                        "inverse-surface": "#3d2d28",
+                        "on-background": "#261814",
+                        "on-secondary-fixed": "#001b3d",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#31476b",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#fcfcff",
+                        "surface-container-low": "#fff1ed",
+                        "on-primary-fixed": "#3a0b00",
+                        "on-secondary-container": "#445a7f",
+                        "surface": "#fff8f6",
+                        "outline": "#8e7067",
+                        "secondary-fixed-dim": "#b1c7f2",
+                        "on-primary-fixed-variant": "#842500",
+                        "on-primary-container": "#fffbff",
+                        "slate-gray": "#828AA3",
+                        "on-tertiary-fixed-variant": "#004b70",
+                        "secondary": "#495f84",
+                        "surface-container": "#ffe9e3",
+                        "secondary-container": "#bcd2fe",
+                        "surface-container-high": "#fee2da",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#f8ddd5",
+                        "tertiary-fixed": "#cae6ff",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#e2bfb4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "label-bold": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .display-font { font-family: 'Hanken Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-[100] bg-background/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Quick Nick's Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLvIGXF9bPGtRJvhLe_bP3lB_tw_43eZTRNMhc4ySBGIotBaCEOhLmHfktNNbzyDPCV6QPh3WK6ckkJVO2j9lgfIbpXQ4l10IzZuGiGUZgnvslMn4irMdMSTE5G2jDPT-beYtlTjdcRuLhRIFD6lEI8n6usvGcr6PG5g2pPl3zcoiEZdWSoAg19knLubC7soql1v6iGZypKLtim26LF1ZaOUBwcoEF1KmfmzAih8ZwMrfu94eOjXJ6sfO8QQ">
+<span class="font-headline-sm text-headline-sm font-black text-secondary tracking-tight hidden md:block">Quick Nick's</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold text-primary border-b-2 border-primary pb-1 active" href="services-quick-nick-s.html">Services</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/5 px-2 py-1 rounded" href="index.html">About</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/5 px-2 py-1 rounded" href="index.html">Reviews</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/5 px-2 py-1 rounded" href="services-quick-nick-s.html">Portfolio</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors">Call Us</button>
+<button class="bg-primary text-on-primary font-label-bold text-label-bold px-6 py-3 rounded-DEFAULT hover:bg-primary-container transition-colors shadow-sm">Book Now</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[80vh] flex items-center justify-center pt-10 pb-section-gap overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Two professional handymen in orange shirts working on a door frame of a brick house, climbing a ladder, high quality photography, bright daylight." src="https://lh3.googleusercontent.com/aida/AP1WRLuWgJ0aDrxA8gZ359mgHK1L-TCtF9JmmFA2uZ9gdIa0Vp1wiGnNZQDnWOfPdhs2lk5PMt31d8MQhsy9y3bcSNZjQ4VEk-sPk9vpO4gKocU7VDUbg8N4nLyUt2ZAepOB7dLPakduQNmj4dyHlxgsdnvtUK-a3zvoRCdEOXLikvKMedJnWhEaDb7kEVDqsKWw_A7_DL5oGpTKkr-XJOyv0iXxqjwN4g-vkVvFo0k0fSqouBQlmpOo6Dwk-1w">
+<div class="absolute inset-0 bg-on-secondary-fixed/70"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center md:text-left flex flex-col md:flex-row items-center gap-10">
+<div class="flex-1 text-off-white">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Professional Excellence in Every Repair.</h1>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim/90 mb-8 max-w-2xl">We are your trusted partners for premium property maintenance. Delivering meticulous craftsmanship and reliable service for discerning homeowners.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<button class="bg-primary text-on-primary font-label-bold text-label-bold px-8 py-4 rounded-DEFAULT hover:bg-primary-container transition-colors shadow-sm">Get an Estimate</button>
+<button class="bg-transparent border border-off-white text-off-white font-label-bold text-label-bold px-8 py-4 rounded-DEFAULT hover:bg-white/10 transition-colors">View Our Work</button>
+</div>
+</div>
+<div class="flex-1 hidden md:block">
+<!-- Decorative element or additional info could go here -->
+</div>
+</div>
+</section>
+<!-- Why Choose Us / Services Bento Grid -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">Precision Maintenance.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mx-auto">Our expertise spans a wide range of services, executed with the utmost professionalism and attention to detail.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Service Card 1 -->
+<div class="bg-off-white border border-outline-variant/50 rounded-xl overflow-hidden group hover:shadow-lg transition-shadow duration-300 col-span-1 md:col-span-2 relative min-h-[300px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, modern bathroom with sparkling fixtures, showcasing high-end plumbing repair work, bright lighting, luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA90kkbjNCRZmVuwFqMqFfL3Oe0GT3zS2_d05UNNqRCMIZ1VhQPybgHbleZCi1cQ1lGUCUdx-IZomhrzwgY41O0oBt0vDG1AYdVeBwVYTIyTqvCbo7IfK7JK6NtA0pB51n18erQx26b09wTF9KPBSL9OAwvWjdB9qIkG5KbOA83uPDAzxOeZvnwgeNjJxYH-nRCOp53eAlFFAhnSSmwhwuCnUJj9tQ7qnNYM55LI94Hxv_0NwVEHVsmYg">
+<div class="absolute inset-0 bg-gradient-to-t from-on-secondary-fixed/90 via-on-secondary-fixed/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="bg-on-secondary-fixed/80 backdrop-blur-sm text-off-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3 border border-outline/30">Plumbing</div>
+<h3 class="font-headline-sm text-headline-sm text-off-white mb-2">Expert Plumbing Diagnostics</h3>
+<p class="font-body-md text-body-md text-secondary-fixed-dim line-clamp-2">From leak detection to full fixture installations, we ensure your systems run flawlessly.</p>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-on-secondary-fixed rounded-xl p-8 flex flex-col justify-center relative overflow-hidden group">
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-all duration-500"></div>
+<span class="material-symbols-outlined text-primary text-5xl mb-6">format_paint</span>
+<h3 class="font-headline-sm text-headline-sm text-off-white mb-4">Premium Painting</h3>
+<p class="font-body-md text-body-md text-secondary-fixed-dim/80 mb-6">Immaculate interior and exterior finishes using top-tier materials.</p>
+<a class="font-label-bold text-label-bold text-primary flex items-center gap-2 group-hover:gap-3 transition-all" href="services-quick-nick-s.html">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-on-secondary-fixed rounded-xl p-8 flex flex-col justify-center relative overflow-hidden group">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">bolt</span>
+<h3 class="font-headline-sm text-headline-sm text-off-white mb-4">Electrical Repairs</h3>
+<p class="font-body-md text-body-md text-secondary-fixed-dim/80 mb-6">Safe, certified electrical troubleshooting and minor installations.</p>
+<a class="font-label-bold text-label-bold text-primary flex items-center gap-2 group-hover:gap-3 transition-all" href="services-quick-nick-s.html">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-off-white border border-outline-variant/50 rounded-xl overflow-hidden group hover:shadow-lg transition-shadow duration-300 col-span-1 md:col-span-2 relative min-h-[300px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a carpenter's hands measuring and cutting custom wood trim, fine woodworking tools, warm workshop lighting, highly detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBUDzl4v2j72lcrcTtF6UQoWQz5FtWidQWb6cRPM-P6D4BP29O0e4PsVGCqFNhxB9MpWvYt7a6vBBKkjb7ewV0Wxza_-aSTDIhNIOj0Lau16IeKrOnBmYxmVf-HoxNnu21a1rWVDOSgnTaPFaonf07EM3CSsnS1SO-sgajlZyDfV3LR1M3CpO2OAcd_TuD0vV6geTkRQxig7ePm4m-Ge-UljcmMsc-JwF443oyL-Zm7PC7RpgoNO6eWg">
+<div class="absolute inset-0 bg-gradient-to-t from-on-secondary-fixed/90 via-on-secondary-fixed/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="bg-on-secondary-fixed/80 backdrop-blur-sm text-off-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3 border border-outline/30">Carpentry</div>
+<h3 class="font-headline-sm text-headline-sm text-off-white mb-2">Custom Carpentry</h3>
+<p class="font-body-md text-body-md text-secondary-fixed-dim line-clamp-2">Bespoke built-ins, trim work, and structural repairs tailored to your home's aesthetic.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap bg-on-secondary-fixed text-off-white relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 20% 50%, theme('colors.primary') 0%, transparent 50%);"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Ready for Flawless Execution?</h2>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim max-w-2xl mx-auto mb-10">Stop delaying your property improvements. Experience the Quick Nick's standard of service today.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary text-on-primary font-label-bold text-label-bold px-8 py-4 rounded-DEFAULT hover:bg-primary-container transition-colors shadow-sm text-lg">Book a Consultation</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-secondary w-full py-section-gap border-t border-outline/10 text-off-white">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-off-white">
+<div class="col-span-1 md:col-span-1 mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md font-extrabold text-off-white mb-4">Quick Nick's</div>
+<p class="font-body-md text-body-md text-secondary-fixed-dim/80">© 2024 Quick Nick's Handyman Services. Professional Excellence in Every Repair.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-bold text-label-bold text-primary-fixed mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim/80 hover:text-off-white hover:underline decoration-primary decoration-2 underline-offset-4 transition-colors" href="index.html">About Us</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim/80 hover:text-off-white hover:underline decoration-primary decoration-2 underline-offset-4 transition-colors" href="index.html">Careers</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-bold text-label-bold text-primary-fixed mb-4">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim/80 hover:text-off-white hover:underline decoration-primary decoration-2 underline-offset-4 transition-colors" href="index.html">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim/80 hover:text-off-white hover:underline decoration-primary decoration-2 underline-offset-4 transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim/80 hover:text-off-white hover:underline decoration-primary decoration-2 underline-offset-4 transition-colors" href="services-quick-nick-s.html">License Information</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-bold text-label-bold text-primary-fixed mb-4">Trust</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim/80 hover:text-off-white hover:underline decoration-primary decoration-2 underline-offset-4 transition-colors" href="index.html">Accreditations</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim/80 hover:text-off-white hover:underline decoration-primary decoration-2 underline-offset-4 transition-colors" href="services-quick-nick-s.html">Insurance</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F462fa270-fe63-42f1-85a4-eae7aa1c75b3" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

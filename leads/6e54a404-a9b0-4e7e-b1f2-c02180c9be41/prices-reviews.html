@@ -1,0 +1,425 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Prices &amp; Reviews - London Handyman Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#0b0c0c",
+                        "outline": "#747878",
+                        "secondary": "#bc000c",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-container": "#fffbff",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#222222",
+                        "tertiary-fixed-dim": "#b6c4ff",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed": "#ffdad5",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "on-secondary-fixed": "#410001",
+                        "on-primary-fixed": "#1b1c1c",
+                        "on-tertiary-container": "#5c81ff",
+                        "surface-container": "#eeeeee",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-container": "#e12823",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#444748",
+                        "on-secondary-fixed-variant": "#930007",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "canvas-gray": "#F3F3F3",
+                        "on-primary-container": "#8a8989",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "surface-tint": "#5f5e5e",
+                        "tertiary": "#00082d",
+                        "electric-blue": "#0055FF",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#c8c6c5",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary-fixed": "#dce1ff",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-tertiary-fixed": "#001551",
+                        "inverse-on-surface": "#f1f1f1",
+                        "slate-charcoal": "#222222",
+                        "background": "#f9f9f9",
+                        "error-container": "#ffdad6",
+                        "safety-red": "#FF3F35",
+                        "on-tertiary-fixed-variant": "#0039b3",
+                        "tertiary-container": "#001b60",
+                        "surface-container-low": "#f3f3f3",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1a1c1c",
+                        "primary-fixed": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "section-gap-md": "80px",
+                        "section-gap-lg": "120px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "caption": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .elevation-1 { box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05); }
+        .elevation-2 { box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-on-background docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto shadow-sm">
+<a class="font-display-lg text-headline-sm font-bold text-primary dark:text-primary-fixed-dim tracking-tight" href="index.html">
+                London Handyman Pro
+            </a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="plumbing-electrical-services.html">Services</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary pb-1" href="prices-reviews.html">Pricing</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="prices-reviews.html">Reviews</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="index.html">About</a>
+</div>
+<div class="hidden md:flex items-center space-x-4">
+<a class="font-label-md text-label-md text-slate-charcoal hover:text-secondary transition-colors" href="tel:02034044424">Call Now</a>
+<a class="bg-safety-red text-white font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-secondary-container transition-colors elevation-1 hover:elevation-2" href="index.html">Book Online</a>
+</div>
+</div>
+</nav>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="py-section-gap-md px-margin-mobile md:px-gutter max-w-container-max mx-auto text-center">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Transparent Pricing &amp; Real Reviews</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">We believe in upfront costs and honest work. Explore our rates and see what our London clients have to say.</p>
+</section>
+<!-- Pricing Section -->
+<section class="py-section-gap-md bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Our Rates</h2>
+<p class="text-on-surface-variant">Simple, clear pricing for all your handyman needs.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Standard Rate -->
+<div class="bg-surface rounded-lg p-8 elevation-1 border border-outline-variant hover:border-secondary transition-colors duration-300 flex flex-col h-full">
+<div class="mb-6">
+<h3 class="font-headline-sm text-headline-sm text-primary">Standard Hourly Rate</h3>
+<p class="text-on-surface-variant mt-2">For general odd jobs and repairs.</p>
+</div>
+<div class="mb-8">
+<span class="text-4xl font-bold text-primary">£65</span>
+<span class="text-on-surface-variant">/ hour</span>
+</div>
+<ul class="space-y-4 mb-8 flex-grow text-on-surface-variant">
+<li class="flex items-center"><span class="material-symbols-outlined text-safety-red mr-2">check_circle</span> Minimum 1 hour charge</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-safety-red mr-2">check_circle</span> Excludes materials</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-safety-red mr-2">check_circle</span> Available Mon-Fri, 8am-6pm</li>
+</ul>
+<button class="w-full bg-slate-charcoal text-white py-3 rounded-lg font-label-md hover:bg-primary transition-colors">Book Standard Service</button>
+</div>
+<!-- Half Day -->
+<div class="bg-primary-container text-white rounded-lg p-8 elevation-2 border-2 border-safety-red relative flex flex-col h-full transform md:-translate-y-4">
+<div class="absolute top-0 right-0 bg-safety-red text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Most Popular</div>
+<div class="mb-6">
+<h3 class="font-headline-sm text-headline-sm text-white">Half Day Package</h3>
+<p class="text-on-primary-container mt-2">Perfect for tackling a list of small jobs.</p>
+</div>
+<div class="mb-8">
+<span class="text-4xl font-bold text-white">£220</span>
+<span class="text-on-primary-container">/ 4 hours</span>
+</div>
+<ul class="space-y-4 mb-8 flex-grow text-on-primary-container">
+<li class="flex items-center"><span class="material-symbols-outlined text-safety-red mr-2">check_circle</span> Priority booking</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-safety-red mr-2">check_circle</span> Multi-trade capable</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-safety-red mr-2">check_circle</span> Save £40 vs hourly</li>
+</ul>
+<button class="w-full bg-safety-red text-white py-3 rounded-lg font-label-md hover:bg-secondary-container transition-colors shadow-lg">Book Half Day</button>
+</div>
+<!-- Full Day -->
+<div class="bg-surface rounded-lg p-8 elevation-1 border border-outline-variant hover:border-secondary transition-colors duration-300 flex flex-col h-full">
+<div class="mb-6">
+<h3 class="font-headline-sm text-headline-sm text-primary">Full Day Package</h3>
+<p class="text-on-surface-variant mt-2">For larger projects or renovations.</p>
+</div>
+<div class="mb-8">
+<span class="text-4xl font-bold text-primary">£400</span>
+<span class="text-on-surface-variant">/ 8 hours</span>
+</div>
+<ul class="space-y-4 mb-8 flex-grow text-on-surface-variant">
+<li class="flex items-center"><span class="material-symbols-outlined text-safety-red mr-2">check_circle</span> Dedicated professional</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-safety-red mr-2">check_circle</span> Includes waste removal (light)</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-safety-red mr-2">check_circle</span> Save £120 vs hourly</li>
+</ul>
+<button class="w-full bg-slate-charcoal text-white py-3 rounded-lg font-label-md hover:bg-primary transition-colors">Book Full Day</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section (Bento Grid) -->
+<section class="py-section-gap-md bg-canvas-gray">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-4">What London Says</h2>
+<p class="text-on-surface-variant max-w-lg">We let our work speak for itself through the voices of our satisfied customers across the city.</p>
+</div>
+<div class="mt-6 md:mt-0 flex items-center space-x-2 bg-surface px-4 py-2 rounded-lg elevation-1">
+<span class="font-bold text-primary text-xl">4.9</span>
+<div class="flex text-safety-red">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-sm text-on-surface-variant ml-2">(30,000+ Reviews)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6">
+<!-- Featured Review -->
+<div class="bg-surface p-8 rounded-lg elevation-1 md:col-span-2 md:row-span-2 flex flex-col justify-between">
+<div>
+<div class="flex text-safety-red mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-primary italic mb-6">"Go Handyman's service was outstanding from start to finish. Their attention to detail and dedication to customer satisfaction are commendable. A top-notch handyman service in London! They mounted my TV perfectly, and the cable management made everything look neat."</p>
+</div>
+<div class="flex items-center border-t border-outline-variant pt-4 mt-auto">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold mr-4">WT</div>
+<div>
+<p class="font-bold text-primary">William Thompson</p>
+<p class="text-sm text-on-surface-variant">TV Mounting &amp; Wiring</p>
+</div>
+</div>
+</div>
+<!-- Review Card -->
+<div class="bg-surface p-6 rounded-lg elevation-1 flex flex-col justify-between">
+<div>
+<div class="flex text-safety-red mb-2 text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">"Team was professional and efficient in assembling my furniture. Saved me so much time and hassle. Will definitely use them again!"</p>
+</div>
+<div>
+<p class="font-bold text-primary text-sm">David Patel</p>
+<p class="text-xs text-outline">Furniture Assembly</p>
+</div>
+</div>
+<!-- Review Card -->
+<div class="bg-surface p-6 rounded-lg elevation-1 flex flex-col justify-between">
+<div>
+<div class="flex text-safety-red mb-2 text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">"Electricians did a fantastic job fixing issues in my home. Prompt, knowledgeable, and courteous. I'm very satisfied!"</p>
+</div>
+<div>
+<p class="font-bold text-primary text-sm">Thomas Johnson</p>
+<p class="text-xs text-outline">Electrical Repairs</p>
+</div>
+</div>
+<!-- Review Card -->
+<div class="bg-surface p-6 rounded-lg elevation-1 md:col-span-2 flex flex-col justify-between">
+<div>
+<div class="flex text-safety-red mb-2 text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">"I hired Go Handyman for some odd jobs around my house, and they were excellent! From picture hanging to small repairs, they handled everything professionally. Highly recommend for responsive and hassle-free booking."</p>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-tertiary text-white flex items-center justify-center text-xs font-bold mr-3">SM</div>
+<div>
+<p class="font-bold text-primary text-sm">Sarah Mitchell</p>
+<p class="text-xs text-outline">Odd Jobs</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<button class="border border-slate-charcoal text-slate-charcoal px-6 py-2 rounded-lg font-label-md hover:bg-slate-charcoal hover:text-white transition-colors">Read All Reviews</button>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-gap-md bg-surface-container-lowest">
+<div class="max-w-3xl mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-12">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Frequently Asked Questions</h2>
+<p class="text-on-surface-variant">Everything you need to know about our services and booking process.</p>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item -->
+<div class="border border-outline-variant rounded-lg bg-surface overflow-hidden">
+<button class="w-full text-left px-6 py-4 font-bold text-primary flex justify-between items-center focus:outline-none hover:bg-surface-container transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.icon').textContent = this.querySelector('.icon').textContent === 'expand_more' ? 'expand_less' : 'expand_more';">
+<span>How do I schedule a handyman service?</span>
+<span class="material-symbols-outlined icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="px-6 pb-4 hidden text-on-surface-variant border-t border-outline-variant pt-4">
+                            Scheduling a service is easy! You can either book online through our website or call our dedicated hotline to speak with a representative to find a time that works for you.
+                        </div>
+</div>
+<!-- FAQ Item -->
+<div class="border border-outline-variant rounded-lg bg-surface overflow-hidden">
+<button class="w-full text-left px-6 py-4 font-bold text-primary flex justify-between items-center focus:outline-none hover:bg-surface-container transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.icon').textContent = this.querySelector('.icon').textContent === 'expand_more' ? 'expand_less' : 'expand_more';">
+<span>Are your handymen licensed and insured?</span>
+<span class="material-symbols-outlined icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="px-6 pb-4 hidden text-on-surface-variant border-t border-outline-variant pt-4">
+                            Yes, all our handymen are highly skilled professionals, and we ensure the company is fully insured and bonded for your peace of mind while we work in your property.
+                        </div>
+</div>
+<!-- FAQ Item -->
+<div class="border border-outline-variant rounded-lg bg-surface overflow-hidden">
+<button class="w-full text-left px-6 py-4 font-bold text-primary flex justify-between items-center focus:outline-none hover:bg-surface-container transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.icon').textContent = this.querySelector('.icon').textContent === 'expand_more' ? 'expand_less' : 'expand_more';">
+<span>Are there any hidden fees in your pricing?</span>
+<span class="material-symbols-outlined icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="px-6 pb-4 hidden text-on-surface-variant border-t border-outline-variant pt-4">
+                            No, our pricing is completely transparent. We don’t believe in hidden fees. The rates you see or the estimate provided is what you’ll pay, excluding any specific materials required which are agreed upon beforehand.
+                        </div>
+</div>
+<!-- FAQ Item -->
+<div class="border border-outline-variant rounded-lg bg-surface overflow-hidden">
+<button class="w-full text-left px-6 py-4 font-bold text-primary flex justify-between items-center focus:outline-none hover:bg-surface-container transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.icon').textContent = this.querySelector('.icon').textContent === 'expand_more' ? 'expand_less' : 'expand_more';">
+<span>Do you offer emergency handyman services?</span>
+<span class="material-symbols-outlined icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="px-6 pb-4 hidden text-on-surface-variant border-t border-outline-variant pt-4">
+                            Yes, we understand that some issues require immediate attention. We offer rapid response emergency handyman services across London to address urgent situations like leaks or lockouts.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap-lg bg-slate-charcoal text-white relative overflow-hidden">
+<!-- Decorative background element -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 70% 30%, #FF3F35 0%, transparent 50%);"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10 text-center">
+<h2 class="font-display-lg-mobile md:font-display-lg text-white mb-6">Ready to get those jobs sorted?</h2>
+<p class="font-body-lg text-on-primary-container max-w-2xl mx-auto mb-10">Join 30,000+ happy Londoners. Book your trusted local handyman today and cross off your to-do list.</p>
+<div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+<button class="w-full sm:w-auto bg-safety-red text-white font-label-md px-8 py-4 rounded-lg hover:bg-secondary-container transition-colors elevation-2 flex items-center justify-center">
+<span class="material-symbols-outlined mr-2">calendar_today</span> Book Online Now
+                    </button>
+<a class="w-full sm:w-auto bg-transparent border-2 border-outline-variant text-white font-label-md px-8 py-4 rounded-lg hover:border-white transition-colors flex items-center justify-center" href="tel:02034044424">
+<span class="material-symbols-outlined mr-2">phone_in_talk</span> 020 3404 4424
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 md:hidden border-t border-outline-variant dark:border-outline bg-surface dark:bg-on-background shadow-lg">
+<div class="flex justify-around items-center h-16 w-full">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-high transition-all w-full h-full" href="index.html">
+<span class="material-symbols-outlined text-2xl mb-1">calendar_today</span>
+<span class="font-caption text-caption">Book Now</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-high transition-all w-full h-full" href="index.html">
+<span class="material-symbols-outlined text-2xl mb-1">handyman</span>
+<span class="font-caption text-caption">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-safety-red dark:text-secondary-fixed-dim font-bold active:bg-surface-container-high transition-all w-full h-full" href="index.html">
+<span class="material-symbols-outlined text-2xl mb-1" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+<span class="font-caption text-caption">Contact</span>
+</a>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="bg-slate-charcoal dark:bg-primary-container full-width pb-20 md:pb-0">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-section-gap-md px-gutter max-w-container-max mx-auto">
+<div>
+<a class="font-headline-sm text-on-primary dark:text-on-primary-container block mb-4" href="furniture-assembly-mounting.html">London Handyman Pro</a>
+<p class="text-surface-variant opacity-80 text-sm mb-4">Your Reliable Home Solutions Partner in London. From mounting TVs to assembling furniture, our skilled technicians are here to handle all your property maintenance needs.</p>
+<div class="flex space-x-4">
+<a class="text-surface-variant hover:text-white transition-colors" href="furniture-assembly-mounting.html"><span class="material-symbols-outlined">qr_code_2</span></a>
+<a class="text-surface-variant hover:text-white transition-colors" href="prices-reviews.html"><span class="material-symbols-outlined">reviews</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-white mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="text-surface-variant opacity-80 hover:text-on-primary hover:opacity-100 transition-opacity" href="plumbing-electrical-services.html">Emergency Services</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-on-primary hover:opacity-100 transition-opacity" href="plumbing-electrical-services.html">Plumbing</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-on-primary hover:opacity-100 transition-opacity" href="plumbing-electrical-services.html">Electrical</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-on-primary hover:opacity-100 transition-opacity" href="index.html">Carpentry</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-white mb-4">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-surface-variant opacity-80 hover:text-on-primary hover:opacity-100 transition-opacity" href="index.html">Privacy Policy</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-on-primary hover:opacity-100 transition-opacity" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-white mb-4">Contact</h4>
+<p class="text-surface-variant opacity-80 text-sm mb-2 flex items-center"><span class="material-symbols-outlined text-sm mr-2">location_on</span> Pendlestone Rd, E17 9BJ, London</p>
+<p class="text-surface-variant opacity-80 text-sm mb-2 flex items-center"><span class="material-symbols-outlined text-sm mr-2">mail</span> office@go-handyman.co.uk</p>
+<p class="text-surface-variant opacity-80 text-sm flex items-center"><span class="material-symbols-outlined text-sm mr-2">phone</span> 020 3404 4424</p>
+</div>
+</div>
+<div class="border-t border-outline/20">
+<div class="max-w-container-max mx-auto px-gutter py-6 text-center md:text-left text-surface-variant opacity-60 text-xs">
+                © 2024 London Handyman Pro. All rights reserved. Licensed and Insured.
+            </div>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F6e54a404-a9b0-4e7e-b1f2-c02180c9be41" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

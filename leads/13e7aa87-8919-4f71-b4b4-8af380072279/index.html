@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>GREYFORM Property Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#ffb59b",
+                      "surface-container-high": "#e7e8e9",
+                      "on-primary-fixed": "#1b1c1c",
+                      "on-error": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-primary-container": "#a2a1a1",
+                      "on-error-container": "#93000a",
+                      "surface": "#f8f9fa",
+                      "on-secondary-fixed-variant": "#394857",
+                      "on-secondary-fixed": "#0c1d2a",
+                      "on-surface-variant": "#444748",
+                      "on-secondary-container": "#546474",
+                      "inverse-surface": "#2e3132",
+                      "slate-light": "#92A3BB",
+                      "surface-variant": "#e1e3e4",
+                      "on-tertiary-fixed": "#380d00",
+                      "on-surface": "#191c1d",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#ffdbcf",
+                      "inverse-on-surface": "#f0f1f2",
+                      "surface-dim": "#d9dadb",
+                      "secondary-fixed": "#d4e4f7",
+                      "secondary-container": "#d1e1f4",
+                      "tertiary": "#441100",
+                      "primary": "#222323",
+                      "deep-navy": "#1A2634",
+                      "on-primary-fixed-variant": "#474747",
+                      "secondary": "#506070",
+                      "inverse-primary": "#c8c6c6",
+                      "outline": "#747878",
+                      "surface-container-highest": "#e1e3e4",
+                      "surface-container-low": "#f3f4f5",
+                      "secondary-fixed-dim": "#b8c8da",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#681f00",
+                      "on-tertiary-fixed-variant": "#812900",
+                      "on-background": "#191c1d",
+                      "primary-fixed-dim": "#c8c6c6",
+                      "on-tertiary-container": "#ff7a46",
+                      "primary-container": "#383838",
+                      "slate-medium": "#4F5D6B",
+                      "surface-tint": "#5f5e5e",
+                      "surface-container": "#edeeef",
+                      "background": "#f8f9fa",
+                      "safety-orange": "#FF5E13",
+                      "primary-fixed": "#e4e2e1",
+                      "surface-bright": "#f8f9fa",
+                      "on-secondary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "outline-variant": "#c4c7c7",
+                      "error": "#ba1a1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px",
+                      "base": "8px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "56px",
+                              {
+                                      "lineHeight": "64px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        .hero-pattern {
+            background-color: #f8f9fa;
+            background-image: radial-gradient(#92A3BB 1px, transparent 1px);
+            background-size: 24px 24px;
+            background-position: -12px -12px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg antialiased">
+<!-- TopNavBar -->
+<nav class="bg-surface/95 backdrop-blur-md text-primary font-headline-md text-headline-md docked full-width top-0 sticky border-b border-outline/20 flat no shadows z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-20">
+<div class="flex items-center gap-4">
+<img alt="GREYFORM Logo" class="h-12 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsBUK_IG-jCbnfcXePrqL-jb8tFNQc0_BcXw2smkZbfufVZNnkabxpw-NV6STm-oQM0mlHuN8TUFIoYTOnk8w55VF9gRjgFdbrI7KfK-sQTm4nzKG-HVMLYN_Tq4C2FSr9XgjAb_cyfc9D49izPQSE7ahlpEz4X8856biufbZy81d8kce9HzMtoFDAKhuf8Nxrcb3uHRtitIBtlYdtBYz8FrlNxjb5P6a3iRP6x4PnH6Q2TVlUJCJEFiQ">
+<span class="font-display-lg text-headline-md tracking-tighter text-primary font-bold">GREYFORM</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-label-md text-label-md">
+<a class="text-safety-orange border-b-2 border-safety-orange pb-1 font-bold" href="services.html">Services</a>
+<a class="text-on-surface-variant hover:text-safety-orange transition-colors" href="our-projects.html">Projects</a>
+<a class="text-on-surface-variant hover:text-safety-orange transition-colors" href="about-contact.html">Testimonials</a>
+<a class="text-on-surface-variant hover:text-safety-orange transition-colors" href="about-contact.html">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center gap-2 bg-primary-container text-white px-6 py-3 rounded hover:bg-safety-orange transition-all duration-300 font-label-md text-label-md">
+                    Request Quote
+                    <span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-section-gap pb-24 px-margin-mobile md:px-margin-desktop hero-pattern overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="z-10">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Chiswick's Premier Property Solutions</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">Expert craftsmanship and reliable maintenance for discerning homeowners. Experience structural integrity and meticulous attention to detail.</p>
+<button class="bg-primary-container text-white px-8 py-4 rounded hover:bg-safety-orange transition-colors duration-300 font-label-md text-label-md inline-flex items-center gap-2 group">
+                    Book a Handyman
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="relative h-[500px] lg:h-[600px] rounded-lg overflow-hidden border border-outline/20">
+<img class="w-full h-full object-cover" data-alt="A high-end, newly renovated interior space in Chiswick, London. Minimalist architectural design with clean lines, natural light pouring through large windows, and premium materials like oak flooring and subtle grey walls. The scene conveys pristine quality, modern structural integrity, and meticulous craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChOGtzZdFwlh_ZkCTD_T3_HNOm6DuNhERoRB0T70NXyPawdFJdYbOINrLYrKxFjoLSErTreGnmj3nXay6DYPeezkDfhIdVKckI4Hb-VownOCCTOivAk99-Dj4aYHN6pk5zY_GsRMLMZ93A7O_SkKs_DKD1VL-f0D7aCHYB1PPdktBGmNBRZ2A_FcZ7rC_OhDzIKihR6NxmORmRvgS7Yh0uVb3tc27AK3NE1KY000vmZi5P1lmF14Di">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Services Overview -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Expertise</h2>
+<div class="w-16 h-1 bg-safety-orange"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service 1 -->
+<div class="bg-white p-8 border border-outline/20 rounded hover:border-safety-orange/50 transition-colors group cursor-pointer">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded mb-6 group-hover:bg-safety-orange/10 transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-safety-orange transition-colors" data-icon="electric_bolt">electric_bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Lighting &amp; Electrical</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Precision electrical work and ambient lighting installations.</p>
+</div>
+<!-- Service 2 -->
+<div class="bg-white p-8 border border-outline/20 rounded hover:border-safety-orange/50 transition-colors group cursor-pointer">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded mb-6 group-hover:bg-safety-orange/10 transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-safety-orange transition-colors" data-icon="carpenter">carpenter</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Carpentry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Bespoke joinery and structural woodwork tailored to your space.</p>
+</div>
+<!-- Service 3 -->
+<div class="bg-white p-8 border border-outline/20 rounded hover:border-safety-orange/50 transition-colors group cursor-pointer">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded mb-6 group-hover:bg-safety-orange/10 transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-safety-orange transition-colors" data-icon="plumbing">plumbing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Plumbing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Reliable heating solutions and flawless plumbing fixtures.</p>
+</div>
+<!-- Service 4 -->
+<div class="bg-white p-8 border border-outline/20 rounded hover:border-safety-orange/50 transition-colors group cursor-pointer">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded mb-6 group-hover:bg-safety-orange/10 transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-safety-orange transition-colors" data-icon="handyman">handyman</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Maintenance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Comprehensive upkeep to preserve the integrity of your property.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Us -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low border-y border-outline/10">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter divide-y md:divide-y-0 md:divide-x divide-outline/10">
+<div class="p-8 md:pl-0">
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Expert Craftsmanship</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Decades of combined experience ensuring every project meets rigorous architectural standards.</p>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Local &amp; Reliable</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Deeply rooted in Chiswick, we provide prompt, dependable service to our community.</p>
+</div>
+<div class="p-8 md:pr-0">
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Transparent Pricing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Clear, detailed quotes with no hidden fees, reflecting the true value of premium work.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Projects Gallery -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Recent Projects</h2>
+<div class="w-16 h-1 bg-safety-orange"></div>
+</div>
+<a class="font-label-md text-label-md uppercase text-primary border-b-2 border-safety-orange pb-1 hidden md:block hover:text-safety-orange transition-colors" href="our-projects.html">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="relative group overflow-hidden rounded border border-outline/20 aspect-square">
+<img alt="Recent Project 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsVJTRCgQxnhpmybMFuDlN460WRun7Thjqfp6e8dRiHxJOguA_54Mq6Kb_E5pxtZEm9_iLyTiGTxuBdSvActY8gdl2lciQuq6gFs7y8uA2hFtS83Um-eL2ZD0GIjQWN3j6EdCuEC8S7UlJRVInxx4J0EXd1qVmIDp_wTvmKCbwHHQt_rrn0HQdhTNu0cU7z9duXB-r-axNSj8y7waeUlyS2xz1uPZOtvxAXt4lfs3BqptqiVmRMQIbgIgI">
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="text-white font-label-md text-label-md uppercase tracking-widest border border-white px-4 py-2">View Details</span>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded border border-outline/20 aspect-square">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A modern living room in a Chiswick property undergoing high-end renovations. Fresh plaster on walls, sophisticated architectural details, and premium tools neatly organized. The aesthetic is clean, professional, and indicative of high-quality craftsmanship in a well-lit, contemporary space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqogZhK4IDCknJiSg11_Q49Pz42fOyFPRifwieqR60KUGMUaZdCHeS9_9WJ8PMRNu8be-u4UKn8tIWfEuq-p6bY8LdyZw7pMv9G-UUSsJcopldRd_kO-hUM3s8a6OFo3IFpu75f9NmY6FdOuMv1r6bHFUs6tfoCEtAArLQxu6O9NAu20Bv9AAgwu0pk1sB8-xmF842HerpcJOlCK44QCquPsd9GttAuyeQKwP5qiv9Eu2wIidGGWzh">
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="text-white font-label-md text-label-md uppercase tracking-widest border border-white px-4 py-2">View Details</span>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded border border-outline/20 aspect-square md:col-span-2 lg:col-span-1">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up detail of bespoke carpentry in a high-end London home. Precision-cut oak wood joints, flawless finish, minimalist design. The lighting is soft and natural, emphasizing the texture and quality of the materials used in this premium property solution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-3tgSPaRyY6GAd7XDNNFedipPr9poG0PmLiLfCl-3vUUANtgmLVPE6PzNJ3gFXrcsPM-5Cq3pm9o4N1ObL4-HPGx__6efrUoS92__OmdbRTKiyE912eSRKZ4PwDQdWKG55w-jRXQxg3LXyjJYEi6qh8aEnooXOLH9ff-yem1fgwrkK92UsbiBuFiOxOmSp4ZAqnZDPaPknXLfViIwMBnx5My6Ue0R38h1tUk3cqby5qqirRfFhIop">
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="text-white font-label-md text-label-md uppercase tracking-widest border border-white px-4 py-2">View Details</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-primary text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">Ready to upgrade your home?</h2>
+<p class="font-body-lg text-body-lg text-slate-light mb-10">Experience the difference of Chiswick's premium property solutions. Professional, reliable, and finished to perfection.</p>
+<button class="bg-safety-orange text-white px-10 py-4 rounded hover:bg-white hover:text-primary transition-colors duration-300 font-label-md text-label-md inline-flex items-center gap-2">
+                Request a quote today
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-surface font-body-md text-body-md full-width border-t border-outline/10 flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<span class="font-display-lg text-headline-lg text-white font-bold tracking-tighter">GREYFORM</span>
+<p class="text-slate-light text-sm max-w-xs">Premium Handyman Services in Chiswick, ensuring structural integrity and modern aesthetics for discerning clients.</p>
+</div>
+<div class="flex flex-col gap-4 font-label-md text-label-md uppercase">
+<a class="text-slate-light hover:text-white transition-colors duration-200 inline-block w-max hover:border-b-2 hover:border-safety-orange pb-0.5" href="services.html">Lighting &amp; Electrical</a>
+<a class="text-slate-light hover:text-white transition-colors duration-200 inline-block w-max hover:border-b-2 hover:border-safety-orange pb-0.5" href="services.html">Carpentry &amp; Joinery</a>
+<a class="text-slate-light hover:text-white transition-colors duration-200 inline-block w-max hover:border-b-2 hover:border-safety-orange pb-0.5" href="services.html">Plumbing &amp; Heating</a>
+<a class="text-slate-light hover:text-white transition-colors duration-200 inline-block w-max hover:border-b-2 hover:border-safety-orange pb-0.5" href="services.html">General Maintenance</a>
+</div>
+<div class="flex flex-col gap-4 font-label-md text-label-md uppercase">
+<a class="text-slate-light hover:text-white transition-colors duration-200 inline-block w-max hover:border-b-2 hover:border-safety-orange pb-0.5" href="about-contact.html">Contact Us</a>
+<a class="text-slate-light hover:text-white transition-colors duration-200 inline-block w-max hover:border-b-2 hover:border-safety-orange pb-0.5" href="about-contact.html">Privacy Policy</a>
+</div>
+</div>
+<div class="border-t border-outline/10 py-6 px-margin-mobile md:px-margin-desktop text-center text-slate-light text-sm">
+            © 2024 GREYFORM Property Solutions. Premium Handyman Services in Chiswick.
+        </div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F13e7aa87-8919-4f71-b4b4-8af380072279" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>DOMALL - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "pure-white": "#FFFFFF",
+                        "primary": "#005529",
+                        "on-secondary-container": "#656464",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "deep-charcoal": "#1A1C1E",
+                        "primary-fixed": "#9af7b0",
+                        "on-secondary-fixed-variant": "#474646",
+                        "primary-fixed-dim": "#7fda96",
+                        "forest-mute": "#C0DBCD",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed-variant": "#005232",
+                        "surface-variant": "#e1e3e4",
+                        "outline-variant": "#becabd",
+                        "surface-dim": "#d9dadb",
+                        "on-primary-fixed": "#00210c",
+                        "tertiary": "#005534",
+                        "on-primary-container": "#95f0aa",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#002111",
+                        "inverse-primary": "#7fda96",
+                        "on-background": "#191c1d",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-container": "#edeeef",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-surface-variant": "#3f4940",
+                        "tertiary-fixed-dim": "#86d7a8",
+                        "background": "#f8f9fa",
+                        "secondary-container": "#e5e2e1",
+                        "outline": "#6f7a6f",
+                        "surface-tint": "#006d36",
+                        "on-surface": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#047038",
+                        "surface": "#f8f9fa",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#a1f4c3",
+                        "secondary": "#5f5e5e",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f3f4f5",
+                        "success-emerald": "#047038",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-container": "#176f48",
+                        "on-primary-fixed-variant": "#005227",
+                        "on-tertiary-container": "#9cefbe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "section-padding-sm": "64px",
+                        "section-padding-lg": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["\"Source Serif 4\""],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg": ["\"Source Serif 4\""],
+                        "headline-lg": ["\"Source Serif 4\""],
+                        "headline-lg-mobile": ["\"Source Serif 4\""],
+                        "label-bold": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-pure-white text-deep-charcoal font-body-md antialiased overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="bg-pure-white/70 dark:bg-deep-charcoal/70 backdrop-blur-md text-primary dark:text-primary-fixed docked full-width top-0 sticky z-50 border-b border-surface-variant dark:border-on-surface-variant flat no shadows">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed flex items-center" href="#">
+<img alt="DOMALL Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLt_P4CxvnMrdC-Kuk6jdgj8xmtMEhxujLI7inBqz7DYPn1e7m2GAuWxc73yEpHw3BZ0-au8LoFTyiX18grefwtDLJk7YhAQmR8eA-AvQuNWpylDiP96cmmIWPk41V4VZleQJ8J4UI0DRJMz3YLbyTA4o4euQOxGbwMGUHLf_g7r0X-6uaAZtrYgp3mXdr9RyuBFrO8vurR6lErl-Li_SiTbemMZwg_AX8TlC5Zln6x5KgU5H-bX6_x7jGkB">
+</a>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-lg text-body-lg flex items-center h-full hover:bg-surface-container dark:hover:bg-on-surface-variant/10 rounded-lg px-4" href="our-services-expert-care-for-your-home.html">Services</a>
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 font-body-lg text-body-lg flex items-center h-full scale-95 duration-200 ease-in-out px-4" href="our-work-craftsmanship-grit.html">Portfolios</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-lg text-body-lg flex items-center h-full hover:bg-surface-container dark:hover:bg-on-surface-variant/10 rounded-lg px-4" href="#">Reviews</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-lg text-body-lg flex items-center h-full hover:bg-surface-container dark:hover:bg-on-surface-variant/10 rounded-lg px-4" href="index.html">About</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-lg text-body-lg flex items-center h-full hover:bg-surface-container dark:hover:bg-on-surface-variant/10 rounded-lg px-4" href="book-now-let-s-get-your-project-sorted.html">Contact</a>
+</nav>
+<a class="hidden md:flex items-center justify-center bg-success-emerald text-pure-white font-label-bold text-label-bold uppercase px-6 py-3 rounded-lg hover:bg-primary transition-colors" href="book-now-let-s-get-your-project-sorted.html">
+                Book Now
+            </a>
+<button class="md:hidden flex items-center text-primary p-2">
+<span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="pt-section-padding-lg pb-section-padding-sm px-margin-mobile md:px-gutter max-w-container-max mx-auto text-center">
+<h1 class="font-display-lg text-display-lg text-deep-charcoal mb-6">Expert Craftsmanship.<br>Proven Results.</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto mb-10">Explore our gallery of before and after transformations. From intricate carpentry to seamless installations, see the DOMALL difference.</p>
+</section>
+<!-- Bento Grid Portfolio -->
+<section class="py-section-padding-sm px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+<!-- Item 1 (Large) -->
+<div class="md:col-span-2 md:row-span-2 relative group rounded-xl overflow-hidden border border-surface-variant shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] transition-all duration-300">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-resolution, professional photograph showing a before and after split of a beautifully constructed custom bookshelf in a modern living room. The lighting is bright and natural, highlighting the crisp white paint and precise carpentry. The overall aesthetic is clean, high-end, and minimalist, emphasizing expert craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkWeGATAeijjBwLoIH_x3dVCR0kFPBOP11IMQQMYl7IX32v_RVAM6EnuHkxEE1pgHbmZa8F4ZRMbAyv2BoGx4Yr3m97QOdIwYlSjZXMhWJHeEAh9EEHBAg3LxbNR420W8f-NIURbAKJrXhEhsWjnSCaKcs3n_sZrmClY-ODsVoG6LoXligZ8dPOAo8W8VwYVl5bpua4_FuOnLMS335XQML8CeVkfJzSwAKV2E_r0HB4ulrqHoJazry_g">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-charcoal/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="flex gap-2 mb-3">
+<span class="bg-forest-mute text-success-emerald font-label-bold text-[12px] px-3 py-1 rounded">CARPENTRY</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-pure-white">Custom Living Room Built-ins</h3>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative group rounded-xl overflow-hidden border border-surface-variant shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] transition-all duration-300">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, high-quality image of a perfectly mounted flat-screen TV on a pristine white wall, with no visible wires. The lighting is soft and ambient, creating a sleek, modern, and uncluttered look. The style conveys precision and professional installation in a luxury home setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXi5-3rbLaTt3R3778gBaauOGo_DDr3zCYjeIuvayymtwzZmZx-K8O2XlgKLwSJtXwdnmJBAP-3dZpB3bid5xb9VeczfYQkzMGdhMjLF9nJnVDVpOMAF2pLSiOJCwOWoIt-Fyd3vyr7JF1MDwSTPXPo8lNZVfkmXC3zlFBiVX0eNopse4MTujRFSUMmNa4y2EeqoQmjLqL_APcCfNZxl7HuY5K_BbBwR9n9q8Q3403BSz4S9jjQDfX6w">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-charcoal/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-pure-white mb-1">TV Mounting</h3>
+<a class="text-primary-fixed font-label-bold text-[12px] uppercase tracking-wider group-hover:underline" href="#">View Service</a>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative group rounded-xl overflow-hidden border border-surface-variant shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] transition-all duration-300">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A detailed, bright photograph showing a freshly painted interior space with perfect cut-in lines along the ceiling and trim. The wall color is a subtle, sophisticated neutral tone. The lighting is even and natural, emphasizing the flawless finish and attention to detail typical of a high-end decorating service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4WCUZQbIcFVK8bZS73fBB3EekthigVFiATh7gtuKc4bNEUHksCk_YKukBHLEGZ6z8Aq_CX6NlIKyymiJelwMgtD9S2fSY9JowKE0FRZwoNWgJUVdgY-WXhBJp057_xTkwr7DBvRtiyF5IgjhvuWb6nt4tj7YLOune2I_kGUsHfHNkYwoefHN4q9BfT3G1o9UCBWsBf-Iw5P8a-PTXZZTk_HiqmqQl6Ie1MBMkWvatPonsiVqL2HznYw">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-charcoal/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-pure-white mb-1">Decorating</h3>
+<a class="text-primary-fixed font-label-bold text-[12px] uppercase tracking-wider group-hover:underline" href="our-services-expert-care-for-your-home.html">View Service</a>
+</div>
+</div>
+<!-- Item 4 (Wide) -->
+<div class="md:col-span-2 relative group rounded-xl overflow-hidden border border-surface-variant shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] transition-all duration-300">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide, professional shot of a modern kitchen showing a newly installed, sleek faucet and pristine sink area. The styling is contemporary with clean lines, stainless steel accents, and bright, surgical-level lighting to convey cleanliness, precision, and top-tier plumbing work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOJWOczbxmaV5veJAQWt6NjpL513BhdxvDqUQ5QQqBGniCt8vhO6c6bDeegaFJcunBEXH99Ys_3nTGF5L1Ze-XFUM-MlhfYXOQRqjH7ejtkRbaxE-yAIe88qXTPctWfXUwXbEvJB0tJ_CPSLfeAAogmDJlC5GraIiJLHswQ0tpFai_xAHdrFIC4gAeWOUmNQnZkkCLbEkd8UiB8M_kblqhv0lS9TqwYvejrahLJczome95Qd-0xfScUg">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-charcoal/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<div class="flex gap-2 mb-2">
+<span class="bg-forest-mute text-success-emerald font-label-bold text-[12px] px-3 py-1 rounded">PLUMBING</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-pure-white">Kitchen Fixture Upgrades</h3>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="relative group rounded-xl overflow-hidden border border-surface-variant shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] transition-all duration-300">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A crisp, high-resolution image of complex flat-pack furniture fully assembled into a beautiful, modern wardrobe. The setting is a bright bedroom with minimalist decor. The lighting highlights the sturdy construction and perfect alignment of doors and drawers, representing hassle-free assembly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDujMVb3VV9-bfkO7hVmOILPNbcQ72_0iS8Wy7YMspCIeQMLdxM7P8GrhjQlYSHx8C9HP_-q7G3ouoaP-E09IOdWThyjN2D1x3M7WNmRtUc_13frhSQpQyb3_E2SE64x8J2qQoQUfiD72zt1E0EeJGUN2qv3EV11jb8S936fIBvSZVXlwtbhOcdib0yTalwqqHDhFupqxyuqnFUQvjDQZAxJbs43w0m7KKbqIn3T4ZYzhcoHKCe19vbRg">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-charcoal/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-pure-white mb-1">Assembly</h3>
+<a class="text-primary-fixed font-label-bold text-[12px] uppercase tracking-wider group-hover:underline" href="our-services-expert-care-for-your-home.html">View Service</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats / Trust Section -->
+<section class="bg-surface py-section-padding-lg mt-12 border-y border-surface-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-deep-charcoal mb-6">Why Choose DOMALL?</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-8">
+                            My goal is simple: to help as many people as possible enjoy a home that works exactly the way it should. With 15 years of professional experience and a lifetime of hands-on DIY grit, I bring a level of precision and attention to detail that only comes from a true passion for the craft.
+                        </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-forest-mute text-success-emerald p-3 rounded-lg mt-1">
+<span class="material-symbols-outlined" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-deep-charcoal text-[24px]">15 Years Experience</h4>
+<p class="font-body-md text-body-md text-secondary">A lifetime of hands-on grit and professional expertise.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-forest-mute text-success-emerald p-3 rounded-lg mt-1">
+<span class="material-symbols-outlined" data-icon="shield" data-weight="fill" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-deep-charcoal text-[24px]">£1M Insured</h4>
+<p class="font-body-md text-body-md text-secondary">Fully covered with comprehensive liability insurance for your peace of mind.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-forest-mute text-success-emerald p-3 rounded-lg mt-1">
+<span class="material-symbols-outlined" data-icon="handshake" data-weight="fill" style="font-variation-settings: 'FILL' 1;">handshake</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-deep-charcoal text-[24px]">100% Reliability</h4>
+<p class="font-body-md text-body-md text-secondary">Upfront, fair pricing and transparent communication.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative h-[600px] rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.05)]">
+<img class="w-full h-full object-cover" data-alt="A professional, high-end portrait of a craftsman/handyman in clean, modern workwear standing confidently in a bright, beautifully finished living space. The lighting is cinematic yet natural, projecting trust, expertise, and a premium service aesthetic. The overall mood is approachable but highly professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDylx0amiFcdb2cb9_-_HSH2ZAMtDF_ks8QLtTZ62Cuy3J-5BDSYVXWIvc55I4nH9EK32nV6w35n9_wbskylkLW6VwJ0p-xjeTEEz_kaK4XJvqTxJBsb8LXMIIixKSkMHxhhFtXuJVt6yd0SYTWOLyo0tINNVV2Cl2ShHHmF47hKE32UH5k9RPZeXJdXdNtxUBt4E3Ate_NqPyODlmEIURyBh3otCghsc6UgCG16vi5pZx2IW81qj7LHQ">
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-charcoal dark:bg-black text-primary-fixed dark:text-primary-fixed-dim font-body-md text-body-md full-width bottom-0 flat no shadows grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-padding-sm max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md text-pure-white block mb-4">DOMALL</span>
+<p class="text-secondary-fixed text-sm mb-4">© 2024 DOMALL Handyman Services. Expertly Crafted. Fully Insured.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-secondary-fixed hover:text-pure-white transition-colors hover:translate-x-1 duration-300 focus:ring-2 focus:ring-primary-fixed rounded" href="#">Plumbing</a>
+<a class="text-secondary-fixed hover:text-pure-white transition-colors hover:translate-x-1 duration-300 focus:ring-2 focus:ring-primary-fixed rounded" href="our-services-expert-care-for-your-home.html">Electrical</a>
+<a class="text-secondary-fixed hover:text-pure-white transition-colors hover:translate-x-1 duration-300 focus:ring-2 focus:ring-primary-fixed rounded" href="our-services-expert-care-for-your-home.html">Carpentry</a>
+<a class="text-secondary-fixed hover:text-pure-white transition-colors hover:translate-x-1 duration-300 focus:ring-2 focus:ring-primary-fixed rounded" href="our-services-expert-care-for-your-home.html">Assembly</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-secondary-fixed hover:text-pure-white transition-colors hover:translate-x-1 duration-300 focus:ring-2 focus:ring-primary-fixed rounded" href="our-services-expert-care-for-your-home.html">Emergency Repairs</a>
+<a class="text-secondary-fixed hover:text-pure-white transition-colors hover:translate-x-1 duration-300 focus:ring-2 focus:ring-primary-fixed rounded" href="#">Service Areas</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-secondary-fixed hover:text-pure-white transition-colors hover:translate-x-1 duration-300 focus:ring-2 focus:ring-primary-fixed rounded" href="index.html">Terms of Service</a>
+<a class="text-secondary-fixed hover:text-pure-white transition-colors hover:translate-x-1 duration-300 focus:ring-2 focus:ring-primary-fixed rounded" href="#">Privacy Policy</a>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2Ff101aca3-0522-4295-945a-efcdfb0068b3" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

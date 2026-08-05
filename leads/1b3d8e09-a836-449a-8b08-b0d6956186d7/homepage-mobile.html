@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Sharp Property Services - Homepage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#dae2fd",
+                        "inverse-on-surface": "#eef1f2",
+                        "inverse-primary": "#bec6e0",
+                        "tertiary-fixed": "#ffdf9f",
+                        "secondary-fixed": "#ffdbcc",
+                        "outline": "#76777d",
+                        "tertiary-fixed-dim": "#f9bd22",
+                        "tertiary": "#000000",
+                        "secondary": "#a04100",
+                        "surface-bright": "#f7fafb",
+                        "on-secondary-fixed-variant": "#7a3000",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "slate-gray": "#404445",
+                        "on-surface": "#181c1d",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#5e2300",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#a87d00",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c6c6cd",
+                        "on-background": "#181c1d",
+                        "inverse-surface": "#2d3132",
+                        "on-primary-fixed": "#131b2e",
+                        "safety-orange": "#E46109",
+                        "on-tertiary-fixed": "#261a00",
+                        "surface-container": "#ebeeef",
+                        "secondary-container": "#ff7524",
+                        "surface-tint": "#565e74",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#7c839b",
+                        "primary": "#000000",
+                        "tertiary-container": "#261a00",
+                        "surface-container-high": "#e6e9e9",
+                        "surface-container-highest": "#e0e3e4",
+                        "surface-variant": "#e0e3e4",
+                        "on-error": "#ffffff",
+                        "background": "#f7fafb",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "caution-yellow": "#FBBF24",
+                        "surface-container-low": "#f1f4f5",
+                        "deep-navy": "#0F172A",
+                        "primary-container": "#131b2e",
+                        "on-surface-variant": "#45464d",
+                        "on-secondary-fixed": "#351000",
+                        "surface": "#f7fafb",
+                        "ice-white": "#F8FAFC",
+                        "secondary-fixed-dim": "#ffb693",
+                        "surface-dim": "#d7dadb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "title-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased pt-20 pb-20 md:pb-0">
+<!-- Top Navigation (Desktop Only, mostly hidden on mobile per prompt requests, but semantic shell mandates keeping it for Top-level) -->
+<header class="fixed top-0 w-full z-50 bg-white/60 dark:bg-inverse-surface/60 backdrop-blur-md border-b border-slate-gray/10 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-max-width mx-auto">
+<a class="flex items-center" href="index.html">
+<img alt="Sharp Property Services Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLsOq212Mww1ZYxLVepdCmT2yT0u5i804i8lOmCBU9d4HUOXJkr4kCODwdcHMe6ohQgkNzO_ovN73a1HPr8y9ma54tp572WRO0bfuBp4MZd9Xv4Sujn5S_Qi_P-niSQATuhDigxLUjzDsIhVl1-S1gDIArLAAvSSOQHplowFiRCyF6nG3H3EZUS5qX2oKZzYKu_efocnMWLsuVvE2qiBdOynKYH0VPmq6UNNOLoOpYv01fsZiltMyVi2vZEq">
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex space-x-8">
+<a class="text-safety-orange font-bold border-b-2 border-safety-orange pb-1 font-Hanken-Grotesk text-body-md hover:opacity-90 transition-all duration-300 active:scale-95 transform" href="our-services-desktop.html">Services</a>
+<a class="text-on-surface-variant hover:text-safety-orange transition-colors font-Hanken-Grotesk text-body-md hover:opacity-90 transition-all duration-300 active:scale-95 transform" href="index.html">Gallery</a>
+<a class="text-on-surface-variant hover:text-safety-orange transition-colors font-Hanken-Grotesk text-body-md hover:opacity-90 transition-all duration-300 active:scale-95 transform" href="index.html">Reviews</a>
+<a class="text-on-surface-variant hover:text-safety-orange transition-colors font-Hanken-Grotesk text-body-md hover:opacity-90 transition-all duration-300 active:scale-95 transform" href="index.html">About</a>
+</nav>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-safety-orange text-white font-title-md rounded-xl shadow-[0_4px_12px_rgba(15,23,42,0.1)] hover:bg-secondary-container hover:shadow-[0_6px_16px_rgba(15,23,42,0.15)] transition-all active:scale-95 transform" href="tel:5551234567">
+<span class="material-symbols-outlined mr-2">phone_in_talk</span>
+            Call Now
+        </a>
+</header>
+<!-- Mobile Hero Section -->
+<section class="relative w-full h-[60vh] min-h-[400px] flex items-end pb-margin-mobile">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtY_-1WSltxhTapYdmw7P432T4NCPe4e5dr_p4Q3SfCfeoNg4H_54WfnTd6868VA6iwPPTfQFiFMFmKBp21XSp69D_Gg1k7r2RSQP0QkjMF0ErSWaihSZUyRyDa5TR_6CrAW7gi2xfKd2vqFlRTjGh6K4EVKOLy_zJCuHIV4rBHhnuhwF5HeplPJUR2jdUMxEnmiMVBDQj3SOYXgiNkB8G4y7gHSdOynz6v-b1fOQozV0Y9eEuaUkkAQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy via-deep-navy/50 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile">
+<span class="font-label-sm text-label-sm text-safety-orange bg-safety-orange/10 px-3 py-1 rounded-full mb-4 inline-block">CAMBRIDGE &amp; SURROUNDING</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-white mb-4">Professional Property Maintenance, Delivered.</h1>
+<p class="font-body-md text-body-md text-surface-container-high mb-6 max-w-md">Reliable repairs, renovations, and upkeep for homeowners and property managers.</p>
+<a class="w-full flex items-center justify-center px-6 py-4 bg-safety-orange text-white font-title-md rounded-xl shadow-[0_4px_12px_rgba(15,23,42,0.1)] hover:bg-secondary-container transition-all active:scale-95 transform text-center" href="#quote">
+                Get a Fast Quote
+            </a>
+</div>
+</section>
+<!-- Simplified Service List -->
+<section class="py-16 px-margin-mobile max-w-max-width mx-auto">
+<div class="mb-8">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-deep-navy mb-2">Our Core Services</h2>
+<div class="w-16 h-1 bg-safety-orange"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Service Card 1 -->
+<div class="bg-white border border-slate-gray/10 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed/20 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-deep-navy text-[24px]">plumbing</span>
+</div>
+<h3 class="font-title-md text-title-md text-deep-navy mb-2">Plumbing &amp; Heating</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Emergency repairs, installations, and routine maintenance for domestic systems.</p>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-white border border-slate-gray/10 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed/20 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-deep-navy text-[24px]">electric_bolt</span>
+</div>
+<h3 class="font-title-md text-title-md text-deep-navy mb-2">Electrical Work</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Fault finding, rewiring, and fixture installations by certified professionals.</p>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-white border border-slate-gray/10 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed/20 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-deep-navy text-[24px]">carpenter</span>
+</div>
+<h3 class="font-title-md text-title-md text-deep-navy mb-2">Carpentry &amp; Joinery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Bespoke fittings, door hanging, and structural repairs.</p>
+</div>
+</div>
+</section>
+<!-- Quick Contact Form -->
+<section class="bg-deep-navy py-16 px-margin-mobile" id="quote">
+<div class="max-w-max-width mx-auto md:flex md:gap-12 md:items-center">
+<div class="md:w-1/2 mb-10 md:mb-0">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-white mb-4">Need it fixed fast?</h2>
+<p class="font-body-md text-body-md text-surface-container-high mb-6">Send us a few details about your property issue, and our team will get back to you with a rapid quote.</p>
+<div class="flex items-center text-white mb-4">
+<span class="material-symbols-outlined text-safety-orange mr-3">check_circle</span>
+<span class="font-body-md">Fully insured &amp; guaranteed</span>
+</div>
+<div class="flex items-center text-white">
+<span class="material-symbols-outlined text-safety-orange mr-3">check_circle</span>
+<span class="font-body-md">Local Cambridge experts</span>
+</div>
+</div>
+<div class="md:w-1/2">
+<form class="bg-white/10 backdrop-blur-md border border-white/10 rounded-xl p-6">
+<div class="space-y-4">
+<div>
+<label class="sr-only" for="name">Name</label>
+<input class="w-full bg-white/90 border-slate-gray/20 rounded-xl px-4 py-3 focus:ring-2 focus:ring-deep-navy focus:border-deep-navy transition-colors font-body-md" id="name" placeholder="Your Name" type="text">
+</div>
+<div>
+<label class="sr-only" for="phone">Phone</label>
+<input class="w-full bg-white/90 border-slate-gray/20 rounded-xl px-4 py-3 focus:ring-2 focus:ring-deep-navy focus:border-deep-navy transition-colors font-body-md" id="phone" placeholder="Phone Number" type="tel">
+</div>
+<div>
+<label class="sr-only" for="details">Issue Details</label>
+<textarea class="w-full bg-white/90 border-slate-gray/20 rounded-xl px-4 py-3 focus:ring-2 focus:ring-deep-navy focus:border-deep-navy transition-colors font-body-md" id="details" placeholder="Briefly describe the issue..." rows="3"></textarea>
+</div>
+<button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm font-title-md text-white bg-safety-orange hover:bg-secondary-container focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-safety-orange transition-all" type="submit">
+                            Send Request
+                        </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="bg-deep-navy dark:bg-surface-container-lowest relative w-full border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-20 max-w-max-width mx-auto">
+<div class="flex flex-col space-y-4">
+<span class="text-headline-lg font-headline-lg text-white">Sharp Property Services</span>
+<p class="text-surface-container-high font-body-md">© 2024 Sharp Property Services Cambridge. All rights reserved.</p>
+</div>
+<div class="flex flex-col space-y-3">
+<h4 class="font-title-md text-white">Quick Links</h4>
+<a class="text-white/70 hover:text-white transition-colors duration-200 font-Hanken-Grotesk text-body-md hover:underline decoration-safety-orange underline-offset-4" href="#">Emergency Repairs</a>
+<a class="text-white/70 hover:text-white transition-colors duration-200 font-Hanken-Grotesk text-body-md hover:underline decoration-safety-orange underline-offset-4" href="our-services-desktop.html">Plumbing</a>
+<a class="text-white/70 hover:text-white transition-colors duration-200 font-Hanken-Grotesk text-body-md hover:underline decoration-safety-orange underline-offset-4" href="our-services-desktop.html">Electrical</a>
+<a class="text-white/70 hover:text-white transition-colors duration-200 font-Hanken-Grotesk text-body-md hover:underline decoration-safety-orange underline-offset-4" href="our-services-desktop.html">Carpentry</a>
+</div>
+<div class="flex flex-col space-y-3">
+<h4 class="font-title-md text-white">Legal</h4>
+<a class="text-white/70 hover:text-white transition-colors duration-200 font-Hanken-Grotesk text-body-md hover:underline decoration-safety-orange underline-offset-4" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation (Mobile Only - Shared Component) -->
+<nav class="fixed bottom-0 w-full z-50 md:hidden bg-white/60 dark:bg-inverse-surface/60 backdrop-blur-md border-t border-slate-gray/10 shadow-[0_-4px_12px_rgba(15,23,42,0.05)]">
+<div class="flex justify-around items-center h-16 pb-safe px-4">
+<a class="flex flex-col items-center justify-center text-safety-orange bg-secondary-fixed/20 rounded-xl px-4 py-1 active:bg-surface-container-high tap-highlight-transparent font-label-sm text-label-sm" href="index.html">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">home</span>
+                Home
+            </a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high tap-highlight-transparent font-label-sm text-label-sm" href="our-services-desktop.html">
+<span class="material-symbols-outlined mb-1">build</span>
+                Services
+            </a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high tap-highlight-transparent font-label-sm text-label-sm" href="#quote">
+<span class="material-symbols-outlined mb-1">request_quote</span>
+                Quote
+            </a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high tap-highlight-transparent font-label-sm text-label-sm" href="tel:5551234567">
+<span class="material-symbols-outlined mb-1">phone_in_talk</span>
+                Contact
+            </a>
+</div>
+</nav>
+<img src="https://andrastime.goatcounter.com/count?p=%2F1b3d8e09-a836-449a-8b08-b0d6956186d7" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

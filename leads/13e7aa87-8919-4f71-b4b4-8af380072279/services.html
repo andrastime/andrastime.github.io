@@ -1,0 +1,358 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services - GREYFORM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "surface-container-high": "#e7e8e9",
+                    "on-primary-fixed": "#1b1c1c",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-primary-container": "#a2a1a1",
+                    "on-error-container": "#93000a",
+                    "surface": "#f8f9fa",
+                    "on-secondary-fixed-variant": "#394857",
+                    "on-secondary-fixed": "#0c1d2a",
+                    "on-surface-variant": "#444748",
+                    "on-secondary-container": "#546474",
+                    "inverse-surface": "#2e3132",
+                    "slate-light": "#92A3BB",
+                    "surface-variant": "#e1e3e4",
+                    "on-tertiary-fixed": "#380d00",
+                    "on-surface": "#191c1d",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#ffdbcf",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-dim": "#d9dadb",
+                    "secondary-fixed": "#d4e4f7",
+                    "secondary-container": "#d1e1f4",
+                    "tertiary": "#441100",
+                    "primary": "#222323",
+                    "deep-navy": "#1A2634",
+                    "on-primary-fixed-variant": "#474747",
+                    "secondary": "#506070",
+                    "inverse-primary": "#c8c6c6",
+                    "outline": "#747878",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-container-low": "#f3f4f5",
+                    "secondary-fixed-dim": "#b8c8da",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#681f00",
+                    "on-tertiary-fixed-variant": "#812900",
+                    "on-background": "#191c1d",
+                    "primary-fixed-dim": "#c8c6c6",
+                    "on-tertiary-container": "#ff7a46",
+                    "primary-container": "#383838",
+                    "slate-medium": "#4F5D6B",
+                    "surface-tint": "#5f5e5e",
+                    "surface-container": "#edeeef",
+                    "background": "#f8f9fa",
+                    "safety-orange": "#FF5E13",
+                    "primary-fixed": "#e4e2e1",
+                    "surface-bright": "#f8f9fa",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c4c7c7",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "base": "8px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "display-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "caption": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "label-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "display-lg-mobile": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "display-lg": [
+                            "56px",
+                            {
+                                    "lineHeight": "64px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "caption": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "48px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface/95 dark:bg-primary/95 backdrop-blur-md text-primary dark:text-inverse-primary border-b border-outline/20 sticky top-0 z-50 w-full transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-20">
+<!-- Brand -->
+<a class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-white font-bold" href="#">
+                GREYFORM
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-safety-orange border-b-2 border-safety-orange pb-1 font-bold" href="services.html">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-primary-fixed-dim hover:text-safety-orange transition-colors" href="our-projects.html">Projects</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-primary-fixed-dim hover:text-safety-orange transition-colors" href="about-contact.html">Testimonials</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-primary-fixed-dim hover:text-safety-orange transition-colors" href="about-contact.html">About</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-base">
+<button class="hidden md:flex items-center justify-center h-10 px-4 bg-primary-container text-white font-label-md text-label-md rounded hover:bg-safety-orange transition-all duration-300">
+                    Request Quote
+                </button>
+<button class="flex items-center justify-center w-10 h-10 text-primary dark:text-inverse-primary hover:text-safety-orange transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden flex items-center justify-center w-10 h-10 text-primary hover:text-safety-orange transition-colors duration-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="w-full">
+<!-- Hero Section -->
+<section class="w-full pt-section-gap pb-20 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="max-w-3xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
+                    Expert Solutions for Every Corner of Your Home.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                    From meticulous electrical work to bespoke joinery, GREYFORM delivers precision and quality across all trades. Explore our core services designed to elevate and maintain your property.
+                </p>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="w-full py-section-gap px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto border-t border-outline/10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Lighting & Electrical -->
+<div class="bg-white border border-slate-light/20 rounded p-8 md:p-12 flex flex-col justify-between group hover:border-safety-orange/50 transition-colors duration-300">
+<div>
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center rounded mb-6 text-primary">
+<span class="material-symbols-outlined" data-weight="fill">lightbulb</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Lighting &amp; Electrical</h2>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-3 mb-8">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-safety-orange text-[20px] mt-0.5">check</span> Chandelier installation &amp; lighting design</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-safety-orange text-[20px] mt-0.5">check</span> Fault finding &amp; rewiring</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-safety-orange text-[20px] mt-0.5">check</span> Smart home integration</li>
+</ul>
+</div>
+<div class="w-full h-64 overflow-hidden rounded">
+<img alt="Modern kitchen lighting setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvwbKXh2PqYVyk9Ovi87Rt6o77j-O28RZ3sJaik6yyxKUeCJmo1X-NDfFAWMHhMWMuR2DBlqAcTiiLvMKK1CuZJGLHumwZwsd53mTYThWH25lZiJPcNZISnG1OIp_5maYZV5jac2A43FmkXTGSDPfiplAsqxl093nzWiXsPFVHiVjxbWFz1Aw5_F6ePuaph_9K6d1p_j2s3E0oRmKfevhsog5hH43i45yQJkf_1ZCjg5Rt6K0cE5aN2ng">
+</div>
+</div>
+<!-- Carpentry & Joinery -->
+<div class="bg-white border border-slate-light/20 rounded p-8 md:p-12 flex flex-col justify-between group hover:border-safety-orange/50 transition-colors duration-300">
+<div>
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center rounded mb-6 text-primary">
+<span class="material-symbols-outlined" data-weight="fill">carpenter</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Carpentry &amp; Joinery</h2>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-3 mb-8">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-safety-orange text-[20px] mt-0.5">check</span> Bespoke shelving &amp; storage solutions</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-safety-orange text-[20px] mt-0.5">check</span> Door hanging &amp; frame repairs</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-safety-orange text-[20px] mt-0.5">check</span> Custom cabinetry construction</li>
+</ul>
+</div>
+<div class="w-full h-64 overflow-hidden rounded">
+<img alt="Custom wooden cabinetry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuGANYRlSPoKYDKQJACV8wsdWieJpNLAJvEFeMjx98PN9xemEjseqiIW3ERLEVd8jez3ml8lAe-fb6XcSoN9_kukbBbTSkTgZH3sY3IodtoisS4JsuH5RYllgEGfknnn2dgSURhMTZGlYXW_7Dz317lqZrnjepSP3kdQIozuG2Kk0foXcT5RVQ4uApnBUyBLn-amCoxgjtgODMvl0V2zc9oFePqgLAM5N2R_izAFJUA1wjCdnbzHKA2m8U">
+</div>
+</div>
+<!-- Plumbing & Heating -->
+<div class="bg-white border border-slate-light/20 rounded p-8 md:p-12 flex flex-col justify-between group hover:border-safety-orange/50 transition-colors duration-300 md:col-span-2 lg:col-span-1">
+<div>
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center rounded mb-6 text-primary">
+<span class="material-symbols-outlined" data-weight="fill">plumbing</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Plumbing &amp; Heating</h2>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-3 mb-8">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-safety-orange text-[20px] mt-0.5">check</span> Leak repair &amp; pipe replacement</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-safety-orange text-[20px] mt-0.5">check</span> Radiator installation &amp; maintenance</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-safety-orange text-[20px] mt-0.5">check</span> Bathroom fixture fitting</li>
+</ul>
+</div>
+<div class="w-full h-64 overflow-hidden rounded">
+<img alt="Exposed plumbing pipes in a new build" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Exposed white PVC plumbing pipes running through wooden floor joists in a new residential construction project. Bright, clean lighting showcasing the structural integrity and layout." src="https://lh3.googleusercontent.com/aida/AP1WRLvxv6uGa4jvdSTTRGW4Efyr2f6GMuJFJX8nB7TvrsZiBvF28qbwxG3yzfpR8UBhJaYoQtN7Q3CwPHio_2Fi6WoM9wxCkG4dU3LH12_S4kyFhRb9XVHjzXvnGs3yK4jkASJ37IVZGkMPrXU-cNnsKz-lhtUcHI_U9aT7Jnx2MqLtfR2LJ4ANB82AmqkSpb_IiC4wC0JDJUIWQQK4LHhrDBLdq_XUXH0PV4VNZbXQVPEdagT-ffQSvC39JpQ">
+</div>
+</div>
+<!-- General Maintenance -->
+<div class="bg-white border border-slate-light/20 rounded p-8 md:p-12 flex flex-col justify-between group hover:border-safety-orange/50 transition-colors duration-300 md:col-span-2 lg:col-span-1">
+<div>
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center rounded mb-6 text-primary">
+<span class="material-symbols-outlined" data-weight="fill">home_repair_service</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">General Maintenance</h2>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-3 mb-8">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-safety-orange text-[20px] mt-0.5">check</span> Patching &amp; painting touch-ups</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-safety-orange text-[20px] mt-0.5">check</span> Furniture assembly &amp; mounting</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-safety-orange text-[20px] mt-0.5">check</span> Routine property health checks</li>
+</ul>
+</div>
+<div class="w-full h-64 overflow-hidden rounded">
+<img alt="General maintenance tools on a counter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLsvsyghpK-qRgqVk0ozb-3ImJhirpYlyDZi9p21lfmJN1d13k8s6wr3wV4t1Abu-fgFmWHvBQ66BHfs1JiDvXrDpHKKwP1laT6s4OtLzGljMRIXCbcM_GnyxCGXUDtv0w6_gmQGEIcyFYfsejNAgF6Mlg1DKke7XWTPHqJNgqOppZImLeP_LZSuu9lSo4wKEFVVnvrziSOABKG0B_6nuNoJfgfc6i0cSQ1g9mvAChg3wdWqFnOaoQCHZA4">
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="w-full py-section-gap px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto bg-surface-container-low border-y border-outline/10">
+<div class="text-center mb-16">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">How it Works</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Our streamlined process ensures your project is handled with precision from start to finish.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+<!-- Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-slate-light/30 -z-10 -translate-y-1/2"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center bg-surface-container-low z-10 px-4">
+<div class="w-16 h-16 bg-white border-2 border-primary rounded-full flex items-center justify-center font-headline-md text-headline-md text-primary mb-6 shadow-[0_4px_12px_rgba(26,38,52,0.05)]">
+                        1
+                    </div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Consult</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Discuss your requirements with our expert team to define the scope and vision.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center bg-surface-container-low z-10 px-4">
+<div class="w-16 h-16 bg-white border-2 border-primary rounded-full flex items-center justify-center font-headline-md text-headline-md text-primary mb-6 shadow-[0_4px_12px_rgba(26,38,52,0.05)]">
+                        2
+                    </div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Quote</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Receive a transparent, detailed breakdown of costs and timelines.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center bg-surface-container-low z-10 px-4">
+<div class="w-16 h-16 bg-safety-orange border-2 border-safety-orange rounded-full flex items-center justify-center font-headline-md text-headline-md text-white mb-6 shadow-[0_4px_12px_rgba(255,94,19,0.2)]">
+                        3
+                    </div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Complete</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Our tradesmen execute the work to our exacting standards, leaving the site immaculate.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-primary-fixed text-surface dark:text-surface-bright border-t border-outline/10 full-width">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-7xl mx-auto">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-6">
+<a class="font-display-lg text-headline-lg text-white font-bold tracking-tighter" href="index.html">
+                    GREYFORM
+                </a>
+<p class="font-body-md text-body-md text-slate-light">
+                    © 2024 GREYFORM Property Solutions. Premium Handyman Services in Chiswick.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col gap-4">
+<a class="font-label-md text-label-md uppercase text-slate-light hover:text-white transition-colors hover:text-safety-orange transition-colors duration-200 border-b-2 border-transparent hover:border-safety-orange w-max" href="services.html">Lighting &amp; Electrical</a>
+<a class="font-label-md text-label-md uppercase text-slate-light hover:text-white transition-colors hover:text-safety-orange transition-colors duration-200 border-b-2 border-transparent hover:border-safety-orange w-max" href="#">Carpentry &amp; Joinery</a>
+<a class="font-label-md text-label-md uppercase text-slate-light hover:text-white transition-colors hover:text-safety-orange transition-colors duration-200 border-b-2 border-transparent hover:border-safety-orange w-max" href="services.html">Plumbing &amp; Heating</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col gap-4">
+<a class="font-label-md text-label-md uppercase text-slate-light hover:text-white transition-colors hover:text-safety-orange transition-colors duration-200 border-b-2 border-transparent hover:border-safety-orange w-max" href="services.html">General Maintenance</a>
+<a class="font-label-md text-label-md uppercase text-slate-light hover:text-white transition-colors hover:text-safety-orange transition-colors duration-200 border-b-2 border-transparent hover:border-safety-orange w-max" href="about-contact.html">Contact Us</a>
+<a class="font-label-md text-label-md uppercase text-slate-light hover:text-white transition-colors hover:text-safety-orange transition-colors duration-200 border-b-2 border-transparent hover:border-safety-orange w-max" href="about-contact.html">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F13e7aa87-8919-4f71-b4b4-8af380072279" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

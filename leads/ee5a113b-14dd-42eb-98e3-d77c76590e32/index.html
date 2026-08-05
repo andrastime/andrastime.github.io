@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Services - Sir Handyman</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#43474e",
+                      "outline-variant": "#c4c6cf",
+                      "surface-container-highest": "#e2e2e2",
+                      "error-container": "#ffdad6",
+                      "on-tertiary": "#ffffff",
+                      "primary": "#000613",
+                      "secondary-fixed-dim": "#e9c349",
+                      "secondary-fixed": "#ffe088",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#eeeeee",
+                      "tertiary-container": "#1c1f20",
+                      "inverse-surface": "#2f3131",
+                      "tertiary-fixed-dim": "#c5c7c8",
+                      "on-surface": "#1a1c1c",
+                      "slate-gray": "#4A5568",
+                      "surface-bright": "#f9f9f9",
+                      "surface-dim": "#dadada",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#191c1d",
+                      "inverse-on-surface": "#f0f1f1",
+                      "deep-navy": "#001F3F",
+                      "surface-variant": "#e2e2e2",
+                      "inverse-primary": "#afc8f0",
+                      "tertiary": "#040607",
+                      "ink-black": "#000B16",
+                      "primary-container": "#001f3f",
+                      "error": "#ba1a1a",
+                      "primary-fixed": "#d4e3ff",
+                      "primary-fixed-dim": "#afc8f0",
+                      "surface-container-low": "#f3f3f4",
+                      "on-secondary-fixed": "#241a00",
+                      "professional-gold": "#D4AF37",
+                      "surface-tint": "#476083",
+                      "on-primary-fixed-variant": "#2f486a",
+                      "on-tertiary-fixed-variant": "#454748",
+                      "on-error-container": "#93000a",
+                      "outline": "#74777f",
+                      "secondary-container": "#fed65b",
+                      "background": "#f9f9f9",
+                      "on-background": "#1a1c1c",
+                      "on-secondary-container": "#745c00",
+                      "secondary": "#735c00",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed": "#001c3a",
+                      "surface": "#f9f9f9",
+                      "gold-hover": "#B8932D",
+                      "on-tertiary-container": "#848688",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed-variant": "#574500",
+                      "surface-container-high": "#e8e8e8",
+                      "on-primary-container": "#6f88ad",
+                      "glass-fill": "rgba(255, 255, 255, 0.7)",
+                      "tertiary-fixed": "#e1e3e4"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "section-gap": "120px",
+                      "margin-desktop": "80px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Montserrat"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "headline-md": ["Montserrat"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "display-lg-mobile": ["Montserrat"],
+                      "label-caps": ["Montserrat"],
+                      "headline-sm": ["Montserrat"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                      "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                      "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                      "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+        }
+        .service-card-shadow:hover {
+            box-shadow: 0px 20px 40px rgba(0, 31, 63, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-[80px] md:pt-[100px]">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm glass-nav hidden md:block">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+<a class="font-display-lg text-headline-sm font-bold text-deep-navy tracking-tight" href="#">Sir Handyman</a>
+<nav class="hidden md:flex space-x-8 items-center">
+<a class="text-deep-navy font-medium hover:text-professional-gold transition-colors font-label-caps text-label-caps" href="#">Home</a>
+<a class="text-professional-gold font-bold border-b-2 border-professional-gold pb-1 font-label-caps text-label-caps" href="#">Services</a>
+<a class="text-deep-navy font-medium hover:text-professional-gold transition-colors font-label-caps text-label-caps" href="#">About</a>
+<a class="text-deep-navy font-medium hover:text-professional-gold transition-colors font-label-caps text-label-caps" href="#">Contact</a>
+</nav>
+<div class="hidden md:flex items-center">
+<a class="text-deep-navy font-bold hover:text-professional-gold transition-colors flex items-center gap-2" href="tel:07983929814">
+<span class="material-symbols-outlined" data-weight="fill">phone_in_talk</span>
+                    07983 929 814
+                </a>
+</div>
+</div>
+</header>
+<!-- Mobile Header -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm glass-nav md:hidden">
+<div class="flex justify-between items-center w-full px-margin-mobile py-4">
+<a class="font-display-lg-mobile text-headline-sm font-bold text-deep-navy tracking-tight" href="#">Sir Handyman</a>
+<button class="text-deep-navy hover:text-professional-gold">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main>
+<!-- Hero Section -->
+<section class="w-full py-section-gap px-margin-mobile md:px-margin-desktop bg-surface relative overflow-hidden">
+<div class="max-w-7xl mx-auto relative z-10 text-center">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-deep-navy mb-4">Our Expertise</h1>
+<p class="font-body-lg text-body-lg text-slate-gray max-w-2xl mx-auto">Comprehensive property maintenance and premium trade services for residential and commercial clients across London.</p>
+</div>
+<div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: radial-gradient(circle at 20% 50%, #D4AF37 0%, transparent 50%);"></div>
+</section>
+<!-- Services & Contact Section (Bento Grid Layout) -->
+<section class="w-full py-16 px-margin-mobile md:px-margin-desktop bg-background">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Services Grid (Main Area) -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Service Card: Painting -->
+<div class="bg-surface-container-lowest rounded-xl border-t-4 border-t-professional-gold border border-outline-variant/30 service-card-shadow transition-all duration-300 overflow-hidden flex flex-col h-full">
+<img class="w-full h-48 object-cover" data-alt="A professional painter meticulously applying a fresh coat of white paint to a modern living room wall, bright natural light, crisp and clean aesthetic, conveying premium craftsmanship and attention to detail." src="https://lh3.googleusercontent.com/aida/AP1WRLvIj0bRp-J6OIzEUG0NFy1gJDnyzzb5ZWJXK-mjf5yogCgkmG0rO3VrPFQqrI9WVTEyw81bCoYJt-mG5m0GMammL99XWncnCwbaL1bWLxFCwR2UMQU0bqrNk5n7gyQfFKaPRw6T5hIcFE7IOVvF9sVLeeTEnsR-8S4SA5ARpkLVpmmVJho5DuVunHoyIDHRQyG2hBq-kUTG_CT40_mXiBgAjj5WAkM6dOGVYb12sPjyZt0qx8cEZBlv91rm"/>
+<div class="p-6 flex-grow flex flex-col">
+<h2 class="font-headline-md text-headline-sm text-deep-navy mb-3">Painting &amp; Decorating</h2>
+<p class="font-body-md text-body-md text-slate-gray mb-6 flex-grow">Flawless finishes for interiors and exteriors. From single rooms to complete property redecoration.</p>
+<a class="inline-flex items-center justify-center bg-deep-navy text-on-primary font-label-caps text-label-caps py-3 px-6 rounded-md hover:bg-ink-black transition-colors" href="#">Book Now <span class="material-symbols-outlined ml-2 text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Service Card: Plumbing -->
+<div class="bg-surface-container-lowest rounded-xl border-t-4 border-t-professional-gold border border-outline-variant/30 service-card-shadow transition-all duration-300 overflow-hidden flex flex-col h-full">
+<img class="w-full h-48 object-cover" data-alt="Close up of a modern, shiny chrome bathroom faucet with crystal clear water running, surrounded by pristine white tiles, conveying cleanliness, high-end plumbing service, and reliable maintenance." src="https://lh3.googleusercontent.com/aida/AP1WRLtxF4MxGiCheyO43zs4MasWM3v0JsywM2vLnsiXX6VK8W2QpHPkw5SCN2b8I7QvCFiEcBO_hNlCAWeG_ib78dAK0WgdFyR1bTCroMspZQU5bIY9Jwunhorz6vjXXqcm7TGgcvdhgzYpfaRp5hYvshD1S9x8BesHQQJ2Im1N2i1CWM7UMghHhB3fvwkOlznYT0llrycyee2fx106jPoGoYBpM_peVAuoB6AyXEP2cu9w2tNQXbbbw5c4rP6Z"/>
+<div class="p-6 flex-grow flex flex-col">
+<h2 class="font-headline-md text-headline-sm text-deep-navy mb-3">Plumbing Services</h2>
+<p class="font-body-md text-body-md text-slate-gray mb-6 flex-grow">Expert installation, leak repairs, and general plumbing maintenance for kitchens and bathrooms.</p>
+<a class="inline-flex items-center justify-center bg-deep-navy text-on-primary font-label-caps text-label-caps py-3 px-6 rounded-md hover:bg-ink-black transition-colors" href="#">Book Now <span class="material-symbols-outlined ml-2 text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Service Card: Hanging & Mounting -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 service-card-shadow transition-all duration-300 overflow-hidden flex flex-col h-full">
+<img class="w-full h-48 object-cover" data-alt="A sleek flat-screen TV perfectly mounted on a contemporary living room wall with hidden wires, subtle backlighting, conveying precision, neatness, and professional installation services." src="https://lh3.googleusercontent.com/aida/AP1WRLuvBFtzFZ769_DE6rsuFsx70ch2Q32pyUL88frCdCBZf-1IIOs4peNhspREzDZmou6LDfmcyHVhZzwdFlWCbbGDvHWg3a_VhZbcNn2P-3RoS6xokrh9Snjf0cDKmvfprSbZCU_s10caRkRh92Re8Wpe-yXBtL6V_Q7R92SuAn8lvHZPfani93kBHOiRLoup6Tm_p-uuAOxBQfAkdty2X9lRZwPIqjaW81H1A_uW-BSOBtsKXydyWgbVc5dJ"/>
+<div class="p-6 flex-grow flex flex-col">
+<h2 class="font-headline-md text-headline-sm text-deep-navy mb-3">Hanging &amp; Mounting</h2>
+<p class="font-body-md text-body-md text-slate-gray mb-6 flex-grow">Secure mounting for TVs, mirrors, shelves, and heavy artwork on any wall type.</p>
+<a class="inline-flex items-center justify-center border border-deep-navy text-deep-navy font-label-caps text-label-caps py-3 px-6 rounded-md hover:bg-surface-container transition-colors" href="#">Book Now <span class="material-symbols-outlined ml-2 text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Service Card: Electrical -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 service-card-shadow transition-all duration-300 overflow-hidden flex flex-col h-full">
+<div class="p-6 flex-grow flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mb-4 text-professional-gold">
+<span class="material-symbols-outlined text-2xl">electrical_services</span>
+</div>
+<h2 class="font-headline-md text-headline-sm text-deep-navy mb-3">Electrical Services</h2>
+<p class="font-body-md text-body-md text-slate-gray mb-6 flex-grow">Lighting installations, socket replacements, and safe electrical fault finding by qualified professionals.</p>
+<a class="inline-flex items-center justify-center border border-deep-navy text-deep-navy font-label-caps text-label-caps py-3 px-6 rounded-md hover:bg-surface-container transition-colors" href="#">Book Now <span class="material-symbols-outlined ml-2 text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Service Card: Carpentry -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 service-card-shadow transition-all duration-300 overflow-hidden flex flex-col h-full">
+<div class="p-6 flex-grow flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mb-4 text-professional-gold">
+<span class="material-symbols-outlined text-2xl">carpenter</span>
+</div>
+<h2 class="font-headline-md text-headline-sm text-deep-navy mb-3">Carpentry &amp; Furniture</h2>
+<p class="font-body-md text-body-md text-slate-gray mb-6 flex-grow">Bespoke shelving, furniture assembly, door hanging, and general wood repairs.</p>
+<a class="inline-flex items-center justify-center border border-deep-navy text-deep-navy font-label-caps text-label-caps py-3 px-6 rounded-md hover:bg-surface-container transition-colors" href="#">Book Now <span class="material-symbols-outlined ml-2 text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Service Card: Flooring -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 service-card-shadow transition-all duration-300 overflow-hidden flex flex-col h-full">
+<div class="p-6 flex-grow flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mb-4 text-professional-gold">
+<span class="material-symbols-outlined text-2xl">layers</span>
+</div>
+<h2 class="font-headline-md text-headline-sm text-deep-navy mb-3">Flooring &amp; Tiling</h2>
+<p class="font-body-md text-body-md text-slate-gray mb-6 flex-grow">Laminate, hardwood installations, and precision tiling for kitchens, bathrooms, and hallways.</p>
+<a class="inline-flex items-center justify-center border border-deep-navy text-deep-navy font-label-caps text-label-caps py-3 px-6 rounded-md hover:bg-surface-container transition-colors" href="#">Book Now <span class="material-symbols-outlined ml-2 text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<!-- Contact Form Sidebar -->
+<div class="lg:col-span-4 mt-8 lg:mt-0">
+<div class="bg-deep-navy rounded-xl p-8 sticky top-[100px] shadow-lg">
+<h3 class="font-headline-md text-headline-sm text-on-primary mb-2">Request a Quote</h3>
+<p class="font-body-md text-body-md text-surface-variant mb-6">Describe your project and we'll get back to you promptly.</p>
+<form class="space-y-4">
+<div>
+<label class="sr-only" for="name">Name</label>
+<input class="w-full bg-surface-tint/20 border-b border-outline-variant/30 text-on-primary placeholder:text-surface-variant focus:border-professional-gold focus:ring-0 rounded-t-sm px-4 py-3 transition-colors" id="name" placeholder="Your Name" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="email">Email</label>
+<input class="w-full bg-surface-tint/20 border-b border-outline-variant/30 text-on-primary placeholder:text-surface-variant focus:border-professional-gold focus:ring-0 rounded-t-sm px-4 py-3 transition-colors" id="email" placeholder="Email Address" type="email"/>
+</div>
+<div>
+<label class="sr-only" for="phone">Phone</label>
+<input class="w-full bg-surface-tint/20 border-b border-outline-variant/30 text-on-primary placeholder:text-surface-variant focus:border-professional-gold focus:ring-0 rounded-t-sm px-4 py-3 transition-colors" id="phone" placeholder="Phone Number" type="tel"/>
+</div>
+<div>
+<label class="sr-only" for="service">Service</label>
+<select class="w-full bg-surface-tint/20 border-b border-outline-variant/30 text-on-primary focus:border-professional-gold focus:ring-0 rounded-t-sm px-4 py-3 transition-colors appearance-none" id="service">
+<option class="text-on-surface" disabled="" selected="" value="">Select a Service</option>
+<option class="text-on-surface" value="painting">Painting &amp; Decorating</option>
+<option class="text-on-surface" value="plumbing">Plumbing</option>
+<option class="text-on-surface" value="electrical">Electrical</option>
+<option class="text-on-surface" value="other">Other</option>
+</select>
+</div>
+<div>
+<label class="sr-only" for="message">Message</label>
+<textarea class="w-full bg-surface-tint/20 border-b border-outline-variant/30 text-on-primary placeholder:text-surface-variant focus:border-professional-gold focus:ring-0 rounded-t-sm px-4 py-3 transition-colors resize-none" id="message" placeholder="How can we help?" rows="4"></textarea>
+</div>
+<button class="w-full bg-professional-gold text-deep-navy font-label-caps text-label-caps py-4 rounded-md hover:bg-gold-hover transition-colors shadow-md mt-4 flex justify-center items-center gap-2" type="submit">
+                                Send Request
+                                <span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-3 px-4 pb-safe bg-surface/80 backdrop-blur-xl border-t border-outline-variant/20 shadow-[0_-4px_20px_rgba(0,31,63,0.1)] rounded-t-xl z-50 glass-nav">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-xl" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-xl" href="tel:07983929814">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-caps text-label-caps mt-1">Call</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-professional-gold rounded-xl px-4 py-2 scale-90" href="#">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="font-label-caps text-label-caps mt-1">Quote</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-xl" href="#">
+<span class="material-symbols-outlined">location_on</span>
+<span class="font-label-caps text-label-caps mt-1">Location</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full bg-deep-navy py-section-gap px-margin-mobile md:px-margin-desktop mb-20 md:mb-0">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8">
+<div class="flex-1">
+<a class="font-display-lg text-headline-md text-professional-gold mb-4 inline-block" href="#">Sir Handyman</a>
+<p class="text-surface-variant font-body-md text-body-md max-w-sm mt-4">Premium trade concierge for residential and commercial clients across London.</p>
+<div class="mt-8 flex gap-4">
+<a class="text-surface-variant hover:text-professional-gold transition-colors flex items-center gap-2 font-body-md" href="tel:07983929814">
+<span class="material-symbols-outlined">call</span> 07983 929 814
+                    </a>
+</div>
+</div>
+<div class="flex-1">
+<h4 class="font-label-caps text-label-caps text-professional-gold mb-4">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-surface-variant hover:text-white transition-colors font-body-md text-body-md" href="#">Services</a></li>
+<li><a class="text-surface-variant hover:text-white transition-colors font-body-md text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant hover:text-white transition-colors font-body-md text-body-md" href="#">Terms of Service</a></li>
+<li><a class="text-surface-variant hover:text-white transition-colors font-body-md text-body-md" href="#">FAQ</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-surface-tint/30 text-center md:text-left text-surface-variant font-label-caps text-label-caps">
+            © 2024 Sir Handyman. Premier Trade Concierge.
+        </div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2Fee5a113b-14dd-42eb-98e3-d77c76590e32" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

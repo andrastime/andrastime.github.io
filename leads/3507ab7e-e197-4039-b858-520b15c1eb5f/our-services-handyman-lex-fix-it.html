@@ -1,0 +1,289 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Handyman Lex Fix It - Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Manrope:wght@400;600&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#3f484a",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#002023",
+                        "on-primary-fixed-variant": "#004f55",
+                        "tertiary": "#735c00",
+                        "on-error-container": "#93000a",
+                        "background": "#f8f9fa",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffdcbc",
+                        "surface": "#f8f9fa",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container": "#edeeef",
+                        "tertiary-container": "#cca730",
+                        "inverse-on-surface": "#f0f1f2",
+                        "electric-cyan": "#2EC4B6",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-secondary-container": "#663b00",
+                        "surface-tint": "#20686f",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed": "#abeef6",
+                        "on-surface": "#191c1d",
+                        "on-tertiary-container": "#4f3d00",
+                        "primary-container": "#0d5c63",
+                        "surface-variant": "#e1e3e4",
+                        "secondary": "#895100",
+                        "error-container": "#ffdad6",
+                        "primary": "#004349",
+                        "secondary-fixed-dim": "#ffb86b",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "primary-fixed-dim": "#8fd1d9",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-primary": "#8fd1d9",
+                        "deep-teal": "#073B4C",
+                        "safety-orange": "#FF6B35",
+                        "charcoal-text": "#1A1C1E",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#2c1700",
+                        "outline-variant": "#bfc8c9",
+                        "on-primary-container": "#90d2da",
+                        "on-secondary-fixed-variant": "#683d00",
+                        "on-background": "#191c1d",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffe088",
+                        "secondary-container": "#fd9d1a",
+                        "outline": "#6f797a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "grid-gutter": "24px",
+                        "base": "8px",
+                        "section-padding-desktop": "120px",
+                        "section-padding-mobile": "64px",
+                        "container-max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Manrope"],
+                        "button-text": ["Hanken Grotesk"],
+                        "headline-xl-mobile": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "button-text": ["16px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "headline-xl-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased pt-20">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-surface/90 dark:bg-on-surface/90 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm dark:shadow-none transition-all duration-300">
+<div class="flex justify-between items-center max-w-container-max-width mx-auto px-grid-gutter h-20">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-surface flex items-center gap-2 tracking-tight" href="index.html">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">build_circle</span>
+                Handyman Lex Fix It
+            </a>
+<!-- Nav Links (Desktop) -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="index.html">Home</a>
+<a class="font-button-text text-button-text text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1" href="our-services-handyman-lex-fix-it.html">Services</a>
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="portfolio-handyman-lex-fix-it.html">Portfolio</a>
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="portfolio-handyman-lex-fix-it.html">Reviews</a>
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="contact-us-handyman-lex-fix-it.html">Contact</a>
+</div>
+<!-- Trailing Action -->
+<a class="hidden md:flex items-center justify-center bg-safety-orange text-white font-button-text text-button-text px-6 py-3 rounded hover:bg-orange-600 transition-colors shadow-md hover:shadow-lg hover:-translate-y-0.5 transform duration-200" href="tel:07383981983">
+<span class="material-symbols-outlined mr-2">phone_in_talk</span>
+                Emergency Call
+            </a>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Header Section -->
+<header class="py-section-padding-desktop px-grid-gutter max-w-container-max-width mx-auto text-center">
+<div class="inline-flex items-center gap-2 bg-tertiary/10 text-tertiary px-3 py-1 rounded-full mb-6 font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+            CERTIFIED &amp; 24/7 AVAILABLE
+        </div>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-deep-teal mb-6">Expert Solutions for Every Need</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">From minor fixes to major installations, our diverse range of skills ensures your home or office runs smoothly. Professional service and quality workmanship, guaranteed.</p>
+</header>
+<!-- Services Grid (Bento Style) -->
+<section class="pb-section-padding-desktop px-grid-gutter max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter auto-rows-[320px]">
+<!-- Service 1: Plumbing (Featured - Spans 8 cols) -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(7,59,76,0.05)] hover:shadow-[0_25px_50px_rgba(7,59,76,0.08)] hover:-translate-y-1 transition-all duration-300 overflow-hidden relative group cursor-pointer border border-surface-variant">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up shot of a professional plumber's tool bag filled with wrenches, pliers, and a level, resting on a clean floor next to a worker in blue overalls kneeling under a modern sink. The lighting is bright and clean, emphasizing a professional, high-end repair service aesthetic with a pristine white and teal color palette." src="https://lh3.googleusercontent.com/aida/AP1WRLufRCzw8NEd1NqTI3xpcLYxePlz-7SZspQcS9UYGuTcLh0un5bYb1rsgB61Q7AfknyMeMZTWL3VNaKUQUdWIdAAWRmQaiiZyVAhiAaRfaCDEAPrhCNi8nXW1FEWwOgBUcO5qbeSsOY0zfHHH7Bno4kmBpZXAZDB5gwORcIIdOo3qLbqrsslg5qPf57w8hSWn1ZhcB_T_vMmZe4MvPJSiT6gWTQyMk3kPTuWWitj5AZLDuhi03XWTRg2fA">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-teal/90 via-deep-teal/40 to-transparent"></div>
+</div>
+<div class="absolute inset-0 z-10 p-8 flex flex-col justify-end text-white">
+<span class="material-symbols-outlined text-tertiary-container text-4xl mb-4 bg-white/10 p-2 rounded-lg w-fit backdrop-blur-sm" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+<h3 class="font-headline-md text-headline-md mb-2">Plumbing Services</h3>
+<p class="font-body-md text-body-md text-white/90 max-w-md">Comprehensive plumbing solutions including urgent repairs, new installations, and preventative maintenance to keep your systems running smoothly around the clock.</p>
+</div>
+</div>
+<!-- Service 2: General Repairs (Spans 4 cols) -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(7,59,76,0.05)] hover:shadow-[0_25px_50px_rgba(7,59,76,0.08)] hover:-translate-y-1 transition-all duration-300 overflow-hidden relative group cursor-pointer border border-surface-variant">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a person's hands using a screwdriver to fix a white UPVC window frame. The image is bright, crisp, and conveys precision craftsmanship in a modern, clean home environment." src="https://lh3.googleusercontent.com/aida/AP1WRLueFP4ds3JqQ54n_9AAchqpwn3iDpxQKOoMAjn1slIrUEL858tzPk1dMdrUnvxDolhTEVuMPdg4Iul_84MUDgmo-jUBf9pr8q6Kjnwuv-mYRdwxYdfuNejjFXyDNenhN-sMihmsO2VpBjuVRFvxGEQ-8xiH_thFpRo_kh2pzyZ76QI_H40min6AcI1TSpMcMBUpM9E4rmzhkLX-bCe2upA4YEHDfVV_AQAM5G2DirSaTsbxLsvqrIIKl7U">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-teal/90 via-deep-teal/40 to-transparent"></div>
+</div>
+<div class="absolute inset-0 z-10 p-8 flex flex-col justify-end text-white">
+<span class="material-symbols-outlined text-tertiary-container text-3xl mb-3 bg-white/10 p-2 rounded-lg w-fit backdrop-blur-sm" style="font-variation-settings: 'FILL' 1;">home_repair_service</span>
+<h3 class="font-headline-md text-2xl font-bold mb-2">General Repairs</h3>
+<p class="font-body-md text-sm text-white/90 line-clamp-2">Covering a wide range of essential maintenance tasks around your home or modern office.</p>
+</div>
+</div>
+<!-- Service 3: Painting (Spans 4 cols) -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(7,59,76,0.05)] hover:shadow-[0_25px_50px_rgba(7,59,76,0.08)] hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col group cursor-pointer border border-surface-variant relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+<span class="material-symbols-outlined text-tertiary-container text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">format_paint</span>
+<h3 class="font-headline-md text-2xl font-bold text-deep-teal mb-3">Painting</h3>
+<p class="font-body-md text-on-surface-variant mb-auto">Professional painting services, from precise touch-ups to entire room transformations, ensuring a fresh, appealing, and premium finish.</p>
+<div class="mt-6 flex items-center text-primary font-button-text group-hover:gap-2 transition-all">
+                    Learn more <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+<!-- Service 4: Carpentry (Spans 4 cols) -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(7,59,76,0.05)] hover:shadow-[0_25px_50px_rgba(7,59,76,0.08)] hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col group cursor-pointer border border-surface-variant relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+<span class="material-symbols-outlined text-tertiary-container text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">carpenter</span>
+<h3 class="font-headline-md text-2xl font-bold text-deep-teal mb-3">Carpentry</h3>
+<p class="font-body-md text-on-surface-variant mb-auto">Expert carpentry covering structural repairs, precise installations, and bespoke custom woodworking projects tailored to your space.</p>
+<div class="mt-6 flex items-center text-primary font-button-text group-hover:gap-2 transition-all">
+                    Learn more <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+<!-- Service 5: Assembly (Spans 4 cols) -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(7,59,76,0.05)] hover:shadow-[0_25px_50px_rgba(7,59,76,0.08)] hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col group cursor-pointer border border-surface-variant relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+<span class="material-symbols-outlined text-tertiary-container text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">handyman</span>
+<h3 class="font-headline-md text-2xl font-bold text-deep-teal mb-3">Assembly Services</h3>
+<p class="font-body-md text-on-surface-variant mb-auto">Efficient and correct assembly for flat-pack furniture, technical equipment, and complex fittings, saving you time and frustration.</p>
+<div class="mt-6 flex items-center text-primary font-button-text group-hover:gap-2 transition-all">
+                    Learn more <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop px-grid-gutter bg-primary-container text-on-primary-container relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<!-- Decorative pattern placeholder -->
+<svg class="h-full w-full" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid-pattern" patternUnits="userSpaceOnUse" width="40">
+<path d="M0 40L40 0H20L0 20M40 40V20L20 40" fill="none" stroke="currentColor" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid-pattern)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="max-w-3xl mx-auto text-center relative z-10 flex flex-col items-center">
+<span class="material-symbols-outlined text-5xl mb-4 text-safety-orange">support_agent</span>
+<h2 class="font-headline-lg text-headline-xl-mobile md:text-headline-lg text-white mb-6">Need a Reliable Handyman in Peckham?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container/80 mb-8 max-w-2xl">We are available 24/7 for emergency repairs and scheduled maintenance. Don't let small issues become big problems.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-safety-orange text-white font-button-text text-button-text px-8 py-4 rounded-md hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2" href="tel:07383981983">
+<span class="material-symbols-outlined">call</span>
+                    Call 07383 981983
+                </a>
+<a class="bg-transparent border-2 border-primary-fixed-dim text-primary-fixed-dim font-button-text text-button-text px-8 py-4 rounded-md hover:bg-primary-fixed-dim/10 transition-colors flex items-center justify-center gap-2" href="mailto:muideen.akanji1@gmail.com">
+<span class="material-symbols-outlined">mail</span>
+                    Email Us
+                </a>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-section-padding-desktop px-grid-gutter text-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter max-w-container-max-width mx-auto">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<a class="font-headline-md text-headline-md text-surface dark:text-on-surface flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">build_circle</span>
+                    Lex Fix It
+                </a>
+<p class="font-body-md text-sm text-surface-variant/70 mt-4">Professional Grade Craftsmanship for Peckham and surrounding areas.</p>
+</div>
+<!-- Links Column 1 -->
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-button-text text-white mb-2">Services</h4>
+<a class="font-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="our-services-handyman-lex-fix-it.html">Plumbing</a>
+<a class="font-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="our-services-handyman-lex-fix-it.html">Electrical</a>
+<a class="font-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="our-services-handyman-lex-fix-it.html">General Repairs</a>
+<a class="font-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="#">Carpentry</a>
+</div>
+<!-- Links Column 2 -->
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-button-text text-white mb-2">Support</h4>
+<a class="font-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="our-services-handyman-lex-fix-it.html">Emergency Service</a>
+<a class="font-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="contact-us-handyman-lex-fix-it.html">Contact Us</a>
+<a class="font-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="index.html">Privacy Policy</a>
+</div>
+<!-- Contact Info -->
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-button-text text-white mb-2">Contact</h4>
+<div class="flex items-center gap-2 font-body-md text-sm">
+<span class="material-symbols-outlined text-sm text-primary-fixed">call</span>
+                    07383 981983
+                </div>
+<div class="flex items-center gap-2 font-body-md text-sm">
+<span class="material-symbols-outlined text-sm text-primary-fixed">mail</span>
+                    muideen.akanji1@gmail.com
+                </div>
+<div class="flex items-center gap-2 font-body-md text-sm mt-2">
+<span class="material-symbols-outlined text-sm text-tertiary-container">schedule</span>
+                    Available 24/7
+                </div>
+</div>
+</div>
+<div class="max-w-container-max-width mx-auto mt-16 pt-8 border-t border-surface-variant/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-sm text-surface-variant/60">© 2024 Handyman Lex Fix It. Professional Grade Craftsmanship.</p>
+<div class="flex gap-4">
+<!-- Social Placeholders -->
+<a class="text-surface-variant/60 hover:text-white transition-colors" href="our-services-handyman-lex-fix-it.html"><span class="material-symbols-outlined">public</span></a>
+</div>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F3507ab7e-e197-4039-b858-520b15c1eb5f" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

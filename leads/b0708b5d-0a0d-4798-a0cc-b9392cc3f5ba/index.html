@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dan The Handyman - Cambridge</title>
+<meta content="Professional home repairs, maintenance, and improvements done right the first time in Cambridge." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#d8dadc",
+                        "tertiary": "#1b2b3f",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#4059aa",
+                        "secondary-fixed-dim": "#ffb690",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#264191",
+                        "surface-variant": "#e0e3e5",
+                        "secondary": "#9d4300",
+                        "surface": "#f7f9fb",
+                        "primary": "#00236f",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "inverse-primary": "#b6c4ff",
+                        "on-secondary-container": "#5c2400",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "on-background": "#191c1e",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-fixed": "#dce1ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#9dadc6",
+                        "secondary-fixed": "#ffdbca",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "primary-container": "#1e3a8a",
+                        "tertiary-container": "#314156",
+                        "surface-bright": "#f7f9fb",
+                        "on-error": "#ffffff",
+                        "background": "#f7f9fb",
+                        "on-surface": "#191c1e",
+                        "on-primary-container": "#90a8ff",
+                        "on-surface-variant": "#444651",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-fixed-variant": "#783200",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "secondary-container": "#fd761a",
+                        "tertiary-fixed": "#d3e4fe",
+                        "surface-container-highest": "#e0e3e5",
+                        "outline": "#757682",
+                        "on-primary-fixed": "#00164e",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c5c5d3",
+                        "on-secondary-fixed": "#341100"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "sm": "8px",
+                        "base": "4px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "container-max": "1280px",
+                        "xl": "40px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-xl-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-xl": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased pt-16 md:pt-0 pb-20 md:pb-0" itemscope="" itemtype="http://schema.org/HomeAndConstructionBusiness">
+<meta content="Dan The Handyman - Cambridge" itemprop="name"/>
+<meta content="01223 123456" itemprop="telephone"/>
+<meta content="Cambridge, CB1" itemprop="address"/>
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 shadow-sm dark:shadow-none bg-surface dark:bg-inverse-surface bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-md hidden md:block">
+<div class="flex justify-between items-center w-full px-lg md:px-xl max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-4">
+<img alt="Dan The Handyman Logo" class="h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA40J_nEe1jyjTUrpGORuxGRUKf0l1vLMW8WOPh7DGbu8DsDIKZucFdU2m9iOoqMluBdEtj2YUxAjIlC7-Git8lvayV9_RIubEgvcibEWwvt4A3m3stZHJZbahTFboGKGt7rk28ZyK9alxMgp9YF3uJ_I17JsfFhanwkmki0FNNfBbaFatXkyVLh0bGF7gzMMFlNS4mO7u1zsYQgt3Lq_ScegcRowcFLim_6KzYgt2hFZhc6chXm9wEcA"/>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary hidden lg:inline-block">Dan The Handyman</span>
+</div>
+<div class="flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md hover:bg-surface-container dark:hover:bg-surface-container-high transition-all px-2 py-1 rounded" href="#services">Services</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md hover:bg-surface-container dark:hover:bg-surface-container-high transition-all px-2 py-1 rounded" href="#reviews">Reviews</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md hover:bg-surface-container dark:hover:bg-surface-container-high transition-all px-2 py-1 rounded" href="#about">About</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md hover:bg-surface-container dark:hover:bg-surface-container-high transition-all px-2 py-1 rounded" href="#contact">Contact</a>
+</div>
+<a class="bg-secondary-container text-on-secondary-container hover:opacity-90 font-label-md text-label-md px-6 py-3 rounded-full transition-all flex items-center gap-2 font-bold shadow-[0px_4px_20px_rgba(15,23,42,0.08)]" href="tel:01223123456">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+                Call Now
+            </a>
+</div>
+</nav>
+<!-- Mobile Top App Bar (Simplified) -->
+<header class="fixed top-0 w-full z-40 bg-surface shadow-sm md:hidden h-16 flex items-center justify-between px-md">
+<img alt="Dan The Handyman Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA40J_nEe1jyjTUrpGORuxGRUKf0l1vLMW8WOPh7DGbu8DsDIKZucFdU2m9iOoqMluBdEtj2YUxAjIlC7-Git8lvayV9_RIubEgvcibEWwvt4A3m3stZHJZbahTFboGKGt7rk28ZyK9alxMgp9YF3uJ_I17JsfFhanwkmki0FNNfBbaFatXkyVLh0bGF7gzMMFlNS4mO7u1zsYQgt3Lq_ScegcRowcFLim_6KzYgt2hFZhc6chXm9wEcA"/>
+<a class="text-primary font-bold font-label-md text-label-md flex items-center gap-1" href="tel:01223123456">
+<span class="material-symbols-outlined">call</span>
+</a>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Handyman working in a modern Cambridge home" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIL6Y_uplKBbmfEpl5MpSBHI3PUeoMuGcxdMpG4TjTn7kiEvozOu18zNK7ZE3GQ1TUsp5mshNarEFqGiX6f9Rm3eCXgZBYW_L4BNxkkRnlw6WhkLfEoyeQsao5hG7jYcDmXc1sxQBGcdNW4hYa9fozj6HL720iD1UQRM4khdyo4_IZGUmAn_nIXUc34knVogcz1dN7wzoFKrOFeJrN1cZ1WWbL3llt6wdaJinRmHzFT0OnGS7Yorbmsg"/>
+<div class="absolute inset-0 bg-tertiary/70 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-lg md:px-xl text-center fade-in-up">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-primary mb-6 max-w-3xl mx-auto drop-shadow-md">
+                    Your Reliable Local Handyman in Cambridge
+                </h1>
+<p class="font-body-lg text-body-lg text-on-primary/90 mb-10 max-w-2xl mx-auto drop-shadow">
+                    Professional home repairs, maintenance, and improvements done right the first time.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all w-full sm:w-auto min-h-[48px] flex items-center justify-center" href="#contact">
+                        Request a Quote
+                    </a>
+<a class="bg-surface/10 text-on-primary border border-on-primary/30 backdrop-blur-sm font-label-md text-label-md font-bold px-8 py-4 rounded-full hover:bg-surface/20 transition-all w-full sm:w-auto min-h-[48px] flex items-center justify-center" href="#services">
+                        Our Services
+                    </a>
+</div>
+<div class="mt-12 flex items-center justify-center gap-4 text-on-primary">
+<div class="flex bg-primary-container/80 backdrop-blur-md rounded-full px-4 py-2 items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-md text-label-md">Fully Insured</span>
+</div>
+<div class="flex bg-primary-container/80 backdrop-blur-md rounded-full px-4 py-2 items-center gap-2 hidden sm:flex">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-md text-label-md">Serving Cambridge</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl bg-surface-container-lowest" id="services">
+<div class="max-w-container-max mx-auto px-lg md:px-xl">
+<div class="text-center mb-12 fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Professional Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Expert solutions for every corner of your home, delivered with precision and care.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service 1 -->
+<div class="bg-surface rounded-xl border border-outline-variant p-6 shadow-[0px_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0px_8px_30px_rgba(15,23,42,0.08)] transition-all flex flex-col h-full fade-in-up" style="transition-delay: 100ms;">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Plumbing Repairs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">From leaky faucets to pipe repairs, quick and reliable plumbing solutions.</p>
+<a class="text-secondary font-label-md text-label-md flex items-center gap-1 hover:underline mt-auto" href="#contact">
+                            Schedule Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface rounded-xl border border-outline-variant p-6 shadow-[0px_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0px_8px_30px_rgba(15,23,42,0.08)] transition-all flex flex-col h-full fade-in-up" style="transition-delay: 200ms;">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">electric_bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Electrical</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Safe and certified electrical maintenance, fixture installations, and repairs.</p>
+<a class="text-secondary font-label-md text-label-md flex items-center gap-1 hover:underline mt-auto" href="#contact">
+                            Schedule Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface rounded-xl border border-outline-variant p-6 shadow-[0px_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0px_8px_30px_rgba(15,23,42,0.08)] transition-all flex flex-col h-full fade-in-up" style="transition-delay: 300ms;">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">handyman</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Carpentry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Custom woodwork, furniture assembly, and structural repairs.</p>
+<a class="text-secondary font-label-md text-label-md flex items-center gap-1 hover:underline mt-auto" href="#contact">
+                            Schedule Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service 4 -->
+<div class="bg-surface rounded-xl border border-outline-variant p-6 shadow-[0px_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0px_8px_30px_rgba(15,23,42,0.08)] transition-all flex flex-col h-full fade-in-up" style="transition-delay: 400ms;">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home_repair_service</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Improvements</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">General home improvements, painting, and property maintenance.</p>
+<a class="text-secondary font-label-md text-label-md flex items-center gap-1 hover:underline mt-auto" href="#contact">
+                            Schedule Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-xl bg-surface-container" id="reviews">
+<div class="max-w-container-max mx-auto px-lg md:px-xl">
+<div class="text-center mb-12 fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">What Our Customers Say</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Don't just take our word for it. See why Cambridge residents trust Dan.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm border border-outline-variant/50 fade-in-up">
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-6">"Dan fixed a persistent leak in our kitchen that three other plumbers couldn't resolve. Professional, tidy, and extremely knowledgeable."</p>
+<div class="font-label-md text-label-md text-on-surface-variant">- Sarah T., Cambridge</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm border border-outline-variant/50 fade-in-up" style="transition-delay: 150ms;">
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-6">"Assembled all our new IKEA furniture perfectly and mounted our TV. Saved us a weekend of frustration. Highly recommend his services!"</p>
+<div class="font-label-md text-label-md text-on-surface-variant">- James M., Trumpington</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm border border-outline-variant/50 fade-in-up" style="transition-delay: 300ms;">
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-6">"Reliable and honest. Dan gave a fair quote and stuck to it. The finish on the trim work he did in our hallway is flawless."</p>
+<div class="font-label-md text-label-md text-on-surface-variant">- Emily R., Chesterton</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl bg-surface-container-lowest" id="contact">
+<div class="max-w-container-max mx-auto px-lg md:px-xl">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<div class="fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Get a Free Quote</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Ready to tackle that to-do list? Fill out the form below or give us a call to discuss your project.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant">Phone</div>
+<a class="font-headline-md text-headline-md text-primary font-bold hover:underline" href="tel:01223123456">01223 123456</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant">Service Area</div>
+<div class="font-body-lg text-body-lg text-on-surface font-semibold">Cambridge, CB1 &amp; Surrounding Areas</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant fade-in-up" style="transition-delay: 200ms;">
+<form class="space-y-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="name">Full Name</label>
+<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest focus:border-primary focus:ring-primary shadow-sm h-12" id="name" name="name" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="email">Email Address</label>
+<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest focus:border-primary focus:ring-primary shadow-sm h-12" id="email" name="email" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="phone">Phone Number</label>
+<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest focus:border-primary focus:ring-primary shadow-sm h-12" id="phone" name="phone" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="message">Project Details</label>
+<textarea class="w-full rounded-lg border-outline-variant bg-surface-container-lowest focus:border-primary focus:ring-primary shadow-sm" id="message" name="message" required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md font-bold px-8 py-4 rounded-lg shadow hover:bg-primary/90 transition-colors min-h-[48px]" type="submit">
+                                Send Message
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full relative bg-tertiary dark:bg-on-tertiary-fixed flat no shadows text-on-tertiary dark:text-tertiary-fixed pt-xl pb-32 md:pb-xl">
+<div class="w-full px-lg py-xl md:px-xl max-w-container-max mx-auto flex flex-col md:flex-row justify-between gap-lg">
+<div class="mb-8 md:mb-0">
+<div class="font-headline-lg text-headline-lg text-on-tertiary mb-4 font-bold">Dan The Handyman</div>
+<p class="font-body-md text-body-md text-on-tertiary/80 max-w-xs mb-4">Professional home repairs, maintenance, and improvements in Cambridge.</p>
+<div class="font-body-md text-body-md text-on-tertiary/60">
+                    © 2024 Dan The Handyman - Cambridge. Fully Insured.
+                </div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 md:gap-16">
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-tertiary mb-4 uppercase tracking-wider">Contact</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-tertiary/80 dark:text-tertiary-fixed-dim/80 hover:text-on-tertiary transition-colors hover:underline" href="tel:01223123456">01223 123456</a></li>
+<li><span class="font-body-md text-body-md text-on-tertiary/80 dark:text-tertiary-fixed-dim/80">Cambridge, CB1</span></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-tertiary mb-4 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-tertiary/80 dark:text-tertiary-fixed-dim/80 hover:text-on-tertiary transition-colors hover:underline" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-tertiary/80 dark:text-tertiary-fixed-dim/80 hover:text-on-tertiary transition-colors hover:underline" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full md:hidden z-50 rounded-t-xl shadow-[0px_-4px_20px_rgba(15,23,42,0.08)] bg-surface dark:bg-inverse-surface shadow-lg pb-safe">
+<div class="flex justify-around items-center px-md pb-base pt-sm">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:opacity-80 flex-1 py-2" href="#services">
+<span class="material-symbols-outlined mb-1">build</span>
+<span class="font-label-md text-label-md text-[10px]">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:opacity-80 flex-1 py-2" href="#reviews">
+<span class="material-symbols-outlined mb-1">star</span>
+<span class="font-label-md text-label-md text-[10px]">Reviews</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:opacity-80 flex-1 py-2" href="#about">
+<span class="material-symbols-outlined mb-1">info</span>
+<span class="font-label-md text-label-md text-[10px]">About</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 hover:opacity-80 transform transition-transform active:scale-90" href="#contact">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">request_quote</span>
+<span class="font-label-md text-label-md text-[10px]">Quote</span>
+</a>
+</div>
+</nav>
+<script>
+        // Simple Intersection Observer for scroll animations
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach((element) => {
+                observer.observe(element);
+            });
+        });
+    </script>
+<img src="https://andrastime.goatcounter.com/count?p=%2Fb0708b5d-0a0d-4798-a0cc-b9392cc3f5ba" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

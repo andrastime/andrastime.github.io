@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Handy Homie - Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#0d1c32",
+                        "error": "#ba1a1a",
+                        "artisan-teal": "#008080",
+                        "on-primary-fixed-variant": "#39475f",
+                        "tertiary-container": "#002020",
+                        "surface-tint": "#515f78",
+                        "surface-container": "#edeeef",
+                        "safety-orange": "#FF8C00",
+                        "on-tertiary-container": "#289291",
+                        "slate-white": "#F8F9FA",
+                        "on-secondary-container": "#603100",
+                        "secondary": "#904d00",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary-fixed-variant": "#004f4f",
+                        "secondary-fixed-dim": "#ffb77d",
+                        "on-primary": "#ffffff",
+                        "deep-navy": "#0A192F",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#2f1500",
+                        "on-secondary-fixed-variant": "#6e3900",
+                        "tertiary-fixed": "#93f2f2",
+                        "background": "#f8f9fa",
+                        "border-subtle": "#E2E8F0",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#000000",
+                        "inverse-primary": "#b9c7e4",
+                        "primary": "#000000",
+                        "surface-bright": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "on-secondary": "#ffffff",
+                        "outline": "#75777e",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e1e3e4",
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed-dim": "#76d6d5",
+                        "inverse-on-surface": "#f0f1f2",
+                        "secondary-container": "#fd8b00",
+                        "on-surface": "#191c1d",
+                        "on-surface-variant": "#44474d",
+                        "primary-fixed": "#d6e3ff",
+                        "iron-gray": "#334155",
+                        "inverse-surface": "#2e3132",
+                        "outline-variant": "#c5c6cd",
+                        "on-background": "#191c1d",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#002020",
+                        "on-primary-container": "#76849f",
+                        "surface-container-highest": "#e1e3e4",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "secondary-fixed": "#ffdcc3",
+                        "primary-container": "#0d1c32",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f4f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #f8f9fa; }
+        .service-card {
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 10px 30px rgba(10, 25, 47, 0.05);
+        }
+        .service-card img {
+            transition: filter 0.3s ease;
+        }
+        .service-card:hover img {
+            filter: contrast(1.1);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface bg-background antialiased selection:bg-safety-orange selection:text-white">
+<!-- TopAppBar -->
+<nav class="bg-deep-navy w-full docked top-0 border-b border-subtle z-50">
+<div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-slate-white">Handy Homie</div>
+<div class="hidden md:flex items-center gap-gutter font-label-bold text-label-bold">
+<a class="text-safety-orange border-b-2 border-safety-orange pb-1 transition-all duration-300 ease-in-out" href="our-services-handy-homie.html">Services</a>
+<a class="text-slate-white hover:text-safety-orange hover:bg-on-primary-fixed-variant/10 transition-all duration-300 ease-in-out px-2 py-1 rounded" href="index.html">To-Do Special</a>
+<a class="text-slate-white hover:text-safety-orange hover:bg-on-primary-fixed-variant/10 transition-all duration-300 ease-in-out px-2 py-1 rounded" href="#">About Us</a>
+<a class="text-slate-white hover:text-safety-orange hover:bg-on-primary-fixed-variant/10 transition-all duration-300 ease-in-out px-2 py-1 rounded" href="our-services-handy-homie.html">Pricing</a>
+</div>
+<button class="bg-safety-orange text-white font-label-bold text-label-bold px-6 py-2 rounded transition-colors hover:bg-opacity-90 hidden md:block">
+                Book Now
+            </button>
+<button class="md:hidden text-slate-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<header class="mb-section-gap max-w-3xl">
+<h1 class="font-display-lg text-display-lg text-deep-navy mb-4">Premium Services for Modern Living.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Expert craftsmanship meets tech-enabled reliability in West London. Transparent pricing, instant booking.</p>
+</header>
+<!-- Service Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Smart Home Architect (Featured) -->
+<div class="service-card md:col-span-2 lg:col-span-2 bg-slate-white border border-subtle rounded flex flex-col md:flex-row overflow-hidden relative group">
+<div class="md:w-1/2 relative h-64 md:h-auto">
+<img alt="Handyman installing a smart thermostat on a wall with modern tools" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlLv-WVrY3tzFFnyURyoQz1keWIKIUTUEUOwlKgjhy23KxXj4LEnJReuEGQITEKR0bTwi0gzrZNYSNkRf9epzthswlnwqsWvbSrN8xCi8NT49K6QTcknKgLaETRMPJZYvHCy9XbN9ml_vkXiS45F4qOTvN2QFTKb2byka2K7366lQfwTlqSTZWKAYgrOr9oAXGWskRWDQ4tx4KQ5Rsh6Lk0t-0SVmFFc7ZpqIBJYpQgAIok-ZvkA">
+<div class="absolute top-4 left-4 bg-artisan-teal text-white font-caption text-caption px-2 py-1 rounded">Verified Expert</div>
+</div>
+<div class="p-6 md:p-8 flex flex-col justify-between md:w-1/2">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-deep-navy">Smart Home Architect</h2>
+<span class="bg-surface-variant text-on-surface-variant font-caption text-caption px-2 py-1 rounded">W8, SW3</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Seamless integration of smart thermostats, lighting systems, and security cameras. Mess-free installation guaranteed.</p>
+<div class="mb-6">
+<span class="font-headline-md text-headline-md text-deep-navy">£85</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/hour</span>
+</div>
+</div>
+<button class="w-full bg-safety-orange text-white font-label-bold text-label-bold py-3 rounded hover:bg-opacity-90 transition-colors flex justify-center items-center gap-2">
+                        Instant Booking <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Gallery-Grade Art Hanging -->
+<div class="service-card bg-slate-white border border-subtle rounded flex flex-col overflow-hidden relative">
+<div class="h-48 relative" data-alt="A meticulously curated gallery wall in a luxury modern London apartment, featuring perfectly aligned framed artwork. Bright, natural lighting highlights the precision of the installation against a soft grey wall. Modern industrial aesthetic with elegant white framing." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDayC_GXX7Tu7vn-YpDDKow11Dl6YUm8xC_1MDn1LMMD7b9W5ei2iUe2WrJuQ_CU0wIUI7FmR8QnwpqFbOmkxxtP8lbRes4jWWvKt4U-w5LMqVX7Doa27OsS_BAyhxZN4dKPUybskRUVes_z1SVKE1uBzEfO720KjdtZ8XtpGgsOZG4cEyNxtDoO4jPdjUfHdBBlBe2tnyHbPRojfqlmKevXkw5FEXC86XQxsIi4j0GqC23dy13SA')">
+<div class="absolute top-4 right-4 bg-white/90 text-deep-navy font-caption text-caption px-2 py-1 rounded shadow-sm">Popular</div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-deep-navy">Gallery-Grade Art Hanging</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Precision laser-leveled hanging for heavy mirrors and valuable art pieces.</p>
+<div class="mb-6 flex items-center gap-2">
+<span class="bg-surface-variant text-on-surface-variant font-caption text-caption px-2 py-1 rounded">W11</span>
+<span class="text-artisan-teal font-label-bold text-label-bold">£65/hr</span>
+</div>
+</div>
+<button class="w-full border-2 border-deep-navy text-deep-navy font-label-bold text-label-bold py-2 rounded hover:bg-deep-navy hover:text-white transition-colors">
+                        Book Now
+                    </button>
+</div>
+</div>
+<!-- Flat-Pack Assembly -->
+<div class="service-card bg-slate-white border border-subtle rounded flex flex-col overflow-hidden relative">
+<div class="h-48 bg-surface-container flex items-center justify-center p-6 relative">
+<div class="absolute inset-0 bg-cover bg-center opacity-80" data-alt="A pristine, modern workspace showing a partially assembled designer furniture piece. High-quality German hand tools are neatly laid out on a protective mat. Bright, clean lighting emphasizing a mess-free, professional assembly process in a luxury setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJqgMWnOuV2kcXmALNku4It2V94x0vehSOMhXw7ndT1I4RRv2-5wWzD1HA4BLzujZ11yjDkBJMbWyQeF1pq9nYH5mkVlo5GFjychU0RAYTwKaACrpR1wyaXYXEasPuJkE9IKBSlorfEi27pcvC0hKm_MDAcidXw_gOuTKPgr2WI1EoicNcotSVOGanFS1iz8sqU0y6mV5svhtSxHSj9U5MQeIegtMekgt10H02YxCA7Cp5mXcKAg')"></div>
+<span class="material-symbols-outlined text-6xl text-artisan-teal z-10 bg-white/80 rounded-full p-2">build</span>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-deep-navy">Flat-Pack Assembly</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Rapid, sturdy assembly of all furniture brands. All packaging responsibly recycled.</p>
+<div class="mb-6 flex items-center gap-2">
+<span class="bg-surface-variant text-on-surface-variant font-caption text-caption px-2 py-1 rounded">All Areas</span>
+<span class="text-artisan-teal font-label-bold text-label-bold">£55/hr</span>
+</div>
+</div>
+<button class="w-full border-2 border-deep-navy text-deep-navy font-label-bold text-label-bold py-2 rounded hover:bg-deep-navy hover:text-white transition-colors">
+                        Book Now
+                    </button>
+</div>
+</div>
+<!-- Electrical/Plumbing Fixes -->
+<div class="service-card md:col-span-2 bg-slate-white border border-subtle rounded flex flex-col md:flex-row overflow-hidden relative">
+<div class="p-6 md:p-8 flex flex-col justify-between md:w-1/2 order-2 md:order-1">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-deep-navy">Electrical &amp; Plumbing Fixes</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Fault finding, leaky tap repairs, socket replacements, and minor structural repairs by certified professionals.</p>
+<div class="flex items-center gap-2 mb-6">
+<span class="bg-surface-variant text-on-surface-variant font-caption text-caption px-2 py-1 rounded">SW3, W8</span>
+<span class="bg-artisan-teal text-white font-caption text-caption px-2 py-1 rounded">Clean Guarantee</span>
+</div>
+<div class="mb-6">
+<span class="font-headline-md text-headline-md text-deep-navy">£75</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/hour</span>
+</div>
+</div>
+<button class="w-full bg-safety-orange text-white font-label-bold text-label-bold py-3 rounded hover:bg-opacity-90 transition-colors flex justify-center items-center gap-2">
+                        Instant Booking <span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+<div class="md:w-1/2 h-64 md:h-auto order-1 md:order-2" data-alt="A clean, close-up shot of professional hands using a high-end multimeter on a modern electrical outlet. The background is a sharply in-focus, pristine white wall indicating a high-end luxury residential setting. Lighting is bright and analytical." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAXr9sbUjSqQ39heXichXAV3BHrA5T13-qt5mHyGM1OxuZLvMXqtSDs6K8g7tVCG_ClUNllHMc0tSyYCX9aLd_kUqsMZB9g2WztT44DSc8IByM89qI1irkmfmwYF59PBDOLZ-kDgwCd19Fj6kap-oFVA6ZAYgFMrHz354IVTIDMP3MZY_NvLEZvGMnBp3Js_VL_-olp90py-lUqVQPhWg9pYl9RgD-g9Vybs4GeqEhzLA7-0ySZg')">
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-white border-t border-subtle w-full rounded-none mt-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-deep-navy mb-4">Handy Homie</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-90 hover:opacity-100 transition-opacity">© 2024 Handy Homie West London. Your Reliable Neighbor.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-4 md:gap-8 md:justify-end items-start md:items-center">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-safety-orange transition-colors" href="index.html">Privacy Policy</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-safety-orange transition-colors" href="#">Terms of Service</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-safety-orange transition-colors" href="our-services-handy-homie.html">Service Areas</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-safety-orange transition-colors" href="index.html">Contact</a>
+</div>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2Fd6d76ded-2b7a-4a6c-a698-c856d7cfb70b" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Flat Pack Assembly London</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-highest": "#e1e3e4",
+                        "inverse-primary": "#f1c100",
+                        "secondary-container": "#e4e2e1",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-tertiary-fixed-variant": "#004f57",
+                        "on-primary": "#ffffff",
+                        "surface-off-white": "#F8F9FA",
+                        "ink-black": "#1A1A1A",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#e4e2e1",
+                        "on-secondary": "#ffffff",
+                        "primary": "#745b00",
+                        "on-primary-fixed": "#241a00",
+                        "on-background": "#191c1d",
+                        "on-surface": "#191c1d",
+                        "action-amber": "#FFCC00",
+                        "surface": "#f8f9fa",
+                        "primary-container": "#ffcc00",
+                        "tertiary": "#006874",
+                        "surface-container": "#edeeef",
+                        "primary-fixed": "#ffe08b",
+                        "surface-variant": "#e1e3e4",
+                        "primary-fixed-dim": "#f1c100",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-fixed-variant": "#584400",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#656464",
+                        "surface-tint": "#745b00",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#00e7fe",
+                        "tertiary-fixed": "#95f1ff",
+                        "success-green": "#2D6A4F",
+                        "secondary": "#5f5e5e",
+                        "outline-variant": "#d2c5ab",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed": "#001f24",
+                        "surface-dim": "#d9dadb",
+                        "on-primary-container": "#6f5700",
+                        "background": "#f8f9fa",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-surface-variant": "#4e4632",
+                        "on-tertiary-container": "#00646e",
+                        "slate-charcoal": "#3E3E3E",
+                        "outline": "#80765f",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "tertiary-fixed-dim": "#00daf0",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "gutter": "24px",
+                        "stack-lg": "32px"
+                    },
+                    fontFamily: {
+                        "display-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "label-sm": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    fontSize: {
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "500" }],
+                        "label-bold": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-ink-black sticky top-0 z-50 shadow-sm w-full transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Flat Pack Assembly London Logo" class="h-12 w-auto object-contain" data-alt="Flat Pack Assembly London company logo, featuring a clear, professional design in green and black." src="https://lh3.googleusercontent.com/aida/AP1WRLvATRD-Dm2wTEVfFVp8HGXDeHCntpXd8aULyhVGvxLcrKkEBkplXBPQa3afAw6AjNiNLieX7QqPkf2NvUXuFgUBU_pCiEt-GjYSa36L_PwO-n4E9MCp3AZoZa3tnADMPWnFwQzrffJW-VSidjOOmsO3bfkE0aXK1o5wl3CCzf4QjQt7556B-LXfLXQxRbN9M0LZxVAGSOjZ8YfnDOT4mHOromh3LPv-P5C8Q0zza34TlHa5vbXW4TVD2Cw"/>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-action-amber font-bold border-b-2 border-primary dark:border-action-amber pb-1 font-label-bold text-label-bold" href="#">Home</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors font-label-bold text-label-bold" href="#">Services</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors font-label-bold text-label-bold" href="#">About</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors font-label-bold text-label-bold" href="#">Contact</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<span class="font-headline-md text-headline-md text-primary dark:text-action-amber flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="call" data-weight="fill" style="font-variation-settings: 'FILL' 1;">call</span>
+                    0203 151 0666
+                </span>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-40" data-alt="A wide, bright living room interior featuring a professionally assembled white bookshelf unit, comfortable grey sofa, and a wooden coffee table in the foreground. Natural light streams in from large windows, creating a clean, modern, and inviting atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAcWGg2BBfnUZhD5D-7rMjRx9lzKVjAZYRItxfTM7QCw9XELhB2NXHj429taNT1fsrWjdn83kzBBXhq7_ACoh7PH3BYWVfP34Pa5cL1rv2-wPH3oRFGqu4B5G_YNZAq8HPioec7zLls0AYCsSfeizRGwZgSBiy-WPerxad1ZNCNxqYQefZIts4QDPFDWsDXXheMQ1CPktf3AzmIaE9B1h4041yFl8XeYOrrWwR0fK2auDOgxW-BvzPV')"></div>
+<!-- Using a gradient overlay to ensure text readability -->
+<div class="absolute inset-0 bg-gradient-to-r from-surface-off-white/90 via-surface-off-white/70 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="fade-in-up">
+<h1 class="font-display-lg text-display-lg text-ink-black mb-stack-md leading-tight">
+                        London's Premier <br/><span class="text-primary">Flat Pack Assembly</span> Experts
+                    </h1>
+<p class="font-body-lg text-body-lg text-slate-charcoal mb-stack-lg max-w-lg">
+                        Professional, fixed-price furniture assembly across London and the M25. We assemble, dismantle, and deliver so you don't have to.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="inline-flex items-center justify-center bg-action-amber text-ink-black font-label-bold text-label-bold rounded px-8 h-[56px] hover:shadow-lg hover:-translate-y-1 transition-all duration-300" href="#quote">
+                            Get a Quick Quote
+                        </a>
+<a class="inline-flex items-center justify-center border-2 border-slate-charcoal text-slate-charcoal font-label-bold text-label-bold rounded px-8 h-[56px] hover:bg-surface-container-high transition-all duration-300 bg-transparent" href="tel:02031510666">
+                            Call 0203 151 0666
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Highlights (Bento Grid) -->
+<section class="py-20 md:py-32 bg-surface-off-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16 fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-ink-black mb-4">Our Services</h2>
+<p class="font-body-md text-body-md text-secondary max-w-2xl mx-auto">Expert assembly for every room and every retailer.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl border border-surface-container-highest shadow-[0_4px_20px_-4px_rgba(62,62,62,0.08)] overflow-hidden hover:shadow-[0_8px_30px_-4px_rgba(62,62,62,0.12)] transition-all duration-300 flex flex-col fade-in-up">
+<div class="h-64 overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A male professional assembler in white uniform kneeling in a bedroom, using a power drill to assemble a large, high-quality wooden wardrobe unit. The setting is bright and clean, demonstrating precision and expertise." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbfp0Jwb5XuiEtVYaVvgZJzx8dyDgNqvF5GSTcoay5II_-odLWyS8hUjhTu09HoJ5DVlw7_rxsKXh8AaSlT8tql11zCD9Mu778f-yjVA_xI7z25cpBpidUM8RQ43OhCN2d4P6azOiTTA7OhG3LP9HmHhMnHXspx_lUkl3mGrRP9760pl-JBb4BlBnI4NenhoyEMzpKQ-DH3bbu-nnQdh1J72jZr0NkgkcRis0hDsQHBmMh8CbAeqZv')"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="font-headline-md text-headline-md text-ink-black mb-2">Wardrobes &amp; Bedrooms</h3>
+<p class="font-body-md text-body-md text-slate-charcoal mb-4 flex-1">From sliding door wardrobes to intricate bed frames, we ensure a perfect build.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl border border-surface-container-highest shadow-[0_4px_20px_-4px_rgba(62,62,62,0.08)] overflow-hidden hover:shadow-[0_8px_30px_-4px_rgba(62,62,62,0.12)] transition-all duration-300 flex flex-col fade-in-up" style="transition-delay: 100ms;">
+<div class="h-64 overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A modern, high-end office setup featuring a sleek wooden desk with drawers and a premium ergonomic Herman Miller chair in a brightly lit room with a large window and subtle green plants on floating shelves." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmRRs0HExOFBg5jYRwc0VJ180Kf5WzoIDNetlQPEGZy07orZZFowGyMDCKed97sGc69hvkPL4Aifovmhz6e_8pEpkLHowTnSmcvi7n9YoJ3fYnfOUMJ0t1bqBXlkR4dSXQhmk9RIfzqv-uLFbVn4EU_RYE9CclhnU7pmK0CeOJG0FsFkCOGCtNc-dV4LAuC-jxkooBOpVUYvlhpkapgjc-ANX9SjffcOp4Aseek5aUYbOhA6u9YDIG')"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="font-headline-md text-headline-md text-ink-black mb-2">Office &amp; Commercial</h3>
+<p class="font-body-md text-body-md text-slate-charcoal mb-4 flex-1">Efficient assembly for desks, chairs, and storage units to get your business running.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl border border-surface-container-highest shadow-[0_4px_20px_-4px_rgba(62,62,62,0.08)] overflow-hidden hover:shadow-[0_8px_30px_-4px_rgba(62,62,62,0.12)] transition-all duration-300 flex flex-col fade-in-up" style="transition-delay: 200ms;">
+<div class="h-64 overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A wide panoramic view of a residential area in Greenwich or Blackheath, London, serving as a background banner, implying widespread local service coverage." style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLuFv7FYr33j1yWXijeLrbEpSbfHyi64Lq82c0qqqQwVYIdYE1UPd6HO4AvDXJUdg1tv7Eo8J_xYyj2gtpOcHkrfMp255EkmVfp1GE9AESBNNaNOcVilIfCZi_ZlLO7ujxqQhv1qSne1l3bquOIpu9PvANtHCfYZKPZANS5HM9_MGYsmysy32CpPAyYAw9UsXPILr5Fdphuhh2qP8b0zXMCrexTXS4xyaPdU8FmOupX6E_3c8dEFdgw2tQ')"></div>
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="bg-slate-charcoal text-on-primary font-label-sm text-label-sm px-3 py-1 rounded-full">IKEA</span>
+<span class="bg-surface-container-high text-ink-black font-label-sm text-label-sm px-3 py-1 rounded-full">Argos</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="font-headline-md text-headline-md text-ink-black mb-2">IKEA &amp; All Retailers</h3>
+<p class="font-body-md text-body-md text-slate-charcoal mb-4 flex-1">We assemble items from all major retailers. If it comes in a flat pack, we build it.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-20 md:py-32 bg-ink-black text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="text-center fade-in-up">
+<div class="w-16 h-16 mx-auto bg-slate-charcoal rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-amber text-3xl" data-icon="payments">payments</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Fixed Pricing</h4>
+<p class="font-body-md text-body-md text-surface-variant">No hidden fees or hourly surprises. You know exactly what you pay upfront.</p>
+</div>
+<div class="text-center fade-in-up" style="transition-delay: 100ms;">
+<div class="w-16 h-16 mx-auto bg-slate-charcoal rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-amber text-3xl" data-icon="event_available">event_available</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">7 Days a Week</h4>
+<p class="font-body-md text-body-md text-surface-variant">We work around your schedule, offering assembly from 9am to 9pm every day.</p>
+</div>
+<div class="text-center fade-in-up" style="transition-delay: 200ms;">
+<div class="w-16 h-16 mx-auto bg-slate-charcoal rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-amber text-3xl" data-icon="verified_user">verified_user</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Fully Insured</h4>
+<p class="font-body-md text-body-md text-surface-variant">Complete peace of mind knowing our professional team and your property are covered.</p>
+</div>
+<div class="text-center fade-in-up" style="transition-delay: 300ms;">
+<div class="w-16 h-16 mx-auto bg-slate-charcoal rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-amber text-3xl" data-icon="engineering">engineering</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Expert Assemblers</h4>
+<p class="font-body-md text-body-md text-surface-variant">Experienced professionals who build your furniture to the exact manufacturer instructions.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Integrated Contact Form & Trust Signals -->
+<section class="py-20 md:py-32 bg-surface" id="quote">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-ink-black mb-6">Ready to get started? Request an Estimate</h2>
+<p class="font-body-md text-body-md text-slate-charcoal mb-8">
+                        Fill out the form below with details of your items, and we'll get back to you swiftly with a fixed-price quote.
+                    </p>
+<form class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-sm text-label-sm text-slate-charcoal mb-1" for="name">Full Name</label>
+<input class="w-full bg-surface-container-lowest border border-slate-charcoal/20 rounded px-4 py-3 focus:outline-none focus:border-action-amber focus:ring-2 focus:ring-action-amber/20 transition-colors font-body-md" id="name" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-slate-charcoal mb-1" for="phone">Phone Number</label>
+<input class="w-full bg-surface-container-lowest border border-slate-charcoal/20 rounded px-4 py-3 focus:outline-none focus:border-action-amber focus:ring-2 focus:ring-action-amber/20 transition-colors font-body-md" id="phone" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-slate-charcoal mb-1" for="email">Email Address</label>
+<input class="w-full bg-surface-container-lowest border border-slate-charcoal/20 rounded px-4 py-3 focus:outline-none focus:border-action-amber focus:ring-2 focus:ring-action-amber/20 transition-colors font-body-md" id="email" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-slate-charcoal mb-1" for="details">Items to Assemble (Links or Descriptions)</label>
+<textarea class="w-full bg-surface-container-lowest border border-slate-charcoal/20 rounded px-4 py-3 focus:outline-none focus:border-action-amber focus:ring-2 focus:ring-action-amber/20 transition-colors font-body-md" id="details" rows="4"></textarea>
+</div>
+<button class="w-full bg-action-amber text-ink-black font-label-bold text-label-bold rounded px-8 h-[56px] hover:shadow-lg hover:-translate-y-1 transition-all duration-300" type="button">
+                            Submit Request
+                        </button>
+</form>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl fade-in-up h-full flex flex-col justify-center">
+<h3 class="font-headline-md text-headline-md text-ink-black mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+                        Service Areas
+                    </h3>
+<p class="font-body-md text-body-md text-slate-charcoal mb-6">
+                        We have Flat Pack Assemblers strategically located to provide fast, reliable service across the region.
+                    </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-action-amber" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-ink-black">London (Within M25)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-action-amber" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-ink-black">Bedfordshire</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-action-amber" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-ink-black">Buckinghamshire</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-action-amber" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-ink-black">Hertfordshire</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-action-amber" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-ink-black">Kent &amp; Surrey</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-ink-black dark:bg-surface-container-lowest w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<span class="font-display-lg text-headline-md text-surface-off-white dark:text-ink-black block mb-4">Flat Pack Assembly London</span>
+<p class="font-body-md text-body-md text-surface-variant dark:text-secondary max-w-md">
+                    © 2024 Flat Pack Assembly London. Professional furniture assembly services across London and the M25.
+                 </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-bold text-label-bold text-action-amber dark:text-primary mb-2">Navigation</span>
+<a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-action-amber transition-colors hover:underline" href="#">Home</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-action-amber transition-colors hover:underline" href="#">Services</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-action-amber transition-colors hover:underline" href="#">About</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-action-amber transition-colors hover:underline" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-bold text-label-bold text-action-amber dark:text-primary mb-2">Legal</span>
+<a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-action-amber transition-colors hover:underline" href="#">Service Areas</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-action-amber transition-colors hover:underline" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface-container-lowest dark:bg-ink-black border-t border-surface-container-highest dark:border-slate-charcoal shadow-[0_-4px_6px_-1px_rgba(62,62,62,0.08)]">
+<div class="flex justify-around items-center h-16 w-full">
+<a class="flex flex-col items-center justify-center text-primary dark:text-action-amber bg-primary-container/10 rounded-xl px-4 py-1 active:bg-surface-container-high tap-highlight-transparent" href="tel:02031510666">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+<span class="font-label-sm text-label-sm mt-1">Call</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim active:bg-surface-container-high tap-highlight-transparent" href="#quote">
+<span class="material-symbols-outlined" data-icon="request_quote">request_quote</span>
+<span class="font-label-sm text-label-sm mt-1">Quote</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim active:bg-surface-container-high tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+<span class="font-label-sm text-label-sm mt-1">Services</span>
+</a>
+</div>
+</nav>
+<script>
+        // Simple Intersection Observer for scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+<img src="https://andrastime.goatcounter.com/count?p=%2Fb547476c-b629-49b7-886e-78a1661071db" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

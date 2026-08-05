@@ -1,0 +1,267 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio - Project Handyman LTD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#f9dcd4",
+                    "on-secondary-container": "#00616d",
+                    "safety-orange": "#FF5F1F",
+                    "inverse-on-surface": "#3d2c27",
+                    "outline": "#aa897f",
+                    "surface": "#1e100b",
+                    "tertiary-fixed-dim": "#8dcdff",
+                    "on-error": "#690005",
+                    "primary-fixed-dim": "#ffb59c",
+                    "tertiary-fixed": "#cae6ff",
+                    "electric-cyan": "#00E5FF",
+                    "on-primary-fixed": "#390c00",
+                    "on-secondary": "#00363d",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#00e3fd",
+                    "on-primary-container": "#561700",
+                    "on-tertiary-fixed-variant": "#004b70",
+                    "outline-variant": "#5b4138",
+                    "surface-container-high": "#372621",
+                    "tertiary-container": "#009de4",
+                    "inverse-primary": "#ab3600",
+                    "charcoal-bg": "#121212",
+                    "on-surface-variant": "#e3bfb3",
+                    "on-primary-fixed-variant": "#832700",
+                    "on-secondary-fixed-variant": "#004f58",
+                    "surface-bright": "#47352f",
+                    "secondary-fixed-dim": "#00daf3",
+                    "slate-surface": "#1E2227",
+                    "on-tertiary": "#00344f",
+                    "surface-container-low": "#271813",
+                    "secondary-fixed": "#9cf0ff",
+                    "on-tertiary-fixed": "#001e30",
+                    "surface-dim": "#1e100b",
+                    "surface-container-lowest": "#180b07",
+                    "on-surface": "#f9dcd4",
+                    "error-container": "#93000a",
+                    "glass-stroke": "rgba(255, 255, 255, 0.1)",
+                    "background": "#1e100b",
+                    "surface-container": "#2b1c17",
+                    "surface-container-highest": "#42312b",
+                    "on-primary": "#5c1900",
+                    "secondary": "#bdf4ff",
+                    "surface-variant": "#42312b",
+                    "primary-container": "#ff5f1f",
+                    "inverse-surface": "#f9dcd4",
+                    "error": "#ffb4ab",
+                    "on-tertiary-container": "#00304a",
+                    "primary": "#ffb59c",
+                    "tertiary": "#8dcdff",
+                    "surface-tint": "#ffb59c",
+                    "on-secondary-fixed": "#001f24",
+                    "primary-fixed": "#ffdbcf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "stack-lg": "32px",
+                    "section-gap": "120px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter", "sans-serif"],
+                    "body-md": ["Inter", "sans-serif"],
+                    "display-lg": ["Montserrat", "sans-serif"],
+                    "headline-lg-mobile": ["Montserrat", "sans-serif"],
+                    "headline-lg": ["Montserrat", "sans-serif"],
+                    "label-bold": ["Inter", "sans-serif"],
+                    "headline-md": ["Montserrat", "sans-serif"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        .glass-card {
+            background: rgba(30, 34, 39, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid theme('colors.glass-stroke');
+        }
+        
+        .glass-overlay {
+            background: linear-gradient(to top, rgba(30, 16, 11, 0.9) 0%, rgba(30, 16, 11, 0) 100%);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md selection:bg-safety-orange selection:text-white">
+<!-- TopNavBar -->
+<header class="bg-background/80 dark:bg-background/80 backdrop-blur-md full-width top-0 z-50 sticky border-b border-glass-stroke transition-all duration-300 w-full" id="global-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter py-stack-md w-full max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-display-lg text-body-lg font-black text-on-surface uppercase tracking-tighter hover:text-safety-orange transition-all duration-300" href="index.html">
+                PROJECT HANDYMAN LTD
+            </a>
+<!-- Nav Links (Desktop) -->
+<nav class="hidden md:flex items-center space-x-gutter">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="index.html">Home</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="services-project-handyman-ltd.html">Services</a>
+<a class="font-label-bold text-label-bold text-safety-orange border-b-2 border-safety-orange pb-1 scale-95 duration-150" href="portfolio-project-handyman-ltd.html">Portfolio</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="get-help-now-project-handyman-ltd.html">Contact</a>
+</nav>
+<!-- Trailing Action -->
+<div class="hidden md:flex items-center">
+<a class="bg-safety-orange text-white font-label-bold text-label-bold px-6 py-3 rounded hover:brightness-110 hover:shadow-[0_0_15px_rgba(255,95,31,0.5)] transition-all duration-300" href="get-help-now-project-handyman-ltd.html">
+                    Get Help Now
+                </a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface hover:text-safety-orange transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full">
+<!-- Hero Section -->
+<section class="w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter pt-section-gap pb-stack-lg">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-stack-md">Craftsmanship in Action.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+                    A curated selection of our precision engineering for the home. Explore our recent transformations across West London.
+                </p>
+<div class="h-1 w-24 bg-safety-orange"></div>
+</div>
+</section>
+<!-- Portfolio Grid -->
+<section class="w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Project 1: Living Space Transformation (Featured - spans 12 cols on desktop) -->
+<article class="md:col-span-12 group relative rounded-lg overflow-hidden glass-card h-[60vh] min-h-[400px]">
+<img alt="Living Space Transformation" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLv0RghEl-wid8dntxEKkiFfCO7Caf1y3lNYj3Cj9Isz8NH8Ia4aqeKdqmSn78meNnbAcdvP2dOQh9jYlN1jHTabglYIp4YV449r1o68hZqJhMZiTu148TzogmZw2vhZeMvhtxIivK9s2AlrOSkKp2WC2LIfhusieOwD5MzWNe-ns-IC8XtOqNLNE-qKMLKKHzWcRsp-5LLw_U5ZjUvjoCeUInyP4LhJkk0McK0Nu6cwautLu4Cmdm8nQlI">
+<div class="absolute inset-0 glass-overlay flex flex-col justify-end p-margin-mobile md:p-gutter">
+<div class="flex flex-wrap gap-2 mb-stack-sm">
+<span class="px-3 py-1 bg-surface/80 backdrop-blur-md rounded-full border border-glass-stroke font-label-bold text-label-bold text-electric-cyan text-[10px] md:text-xs tracking-wider uppercase">Painting &amp; Decorating</span>
+<span class="px-3 py-1 bg-surface/80 backdrop-blur-md rounded-full border border-glass-stroke font-label-bold text-label-bold text-electric-cyan text-[10px] md:text-xs tracking-wider uppercase">General Repairs</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm group-hover:text-safety-orange transition-colors duration-300">Living Space Transformation</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl hidden md:block">
+                            Complete living room overhaul featuring custom fireplace restoration, precision painting, and tailored furniture assembly to create a vibrant, modern relaxation area.
+                        </p>
+</div>
+</article>
+<!-- Project 2: Modern Kitchen Update (spans 7 cols on desktop) -->
+<article class="md:col-span-7 group relative rounded-lg overflow-hidden glass-card h-[50vh] min-h-[350px]">
+<img alt="Modern Kitchen Update" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLu0U-rFj97GN4sURLzNKgVl0Zdl7Ybt362ORdrqMUffzkho5dIu2shFVTYmF_vSZlLCTR7KfaRQIcDApZ_5_KcGdJpJN9Rl97NrSj1BI-KRjukAdQVNjmeGPCmCEoaAyoN0T_QPTUoVUm8p8Ae8yXZ1tOeeO1HqAKJf2JhU0Sd7kyEc6E2UQTfUxsLQDeBdDj23Cu0Exs_xzs6Tu348mw6iVJ7RjKEEDdsYuzlzejZuSdOS7u5ART36-uQ">
+<div class="absolute inset-0 glass-overlay flex flex-col justify-end p-margin-mobile md:p-gutter">
+<div class="flex flex-wrap gap-2 mb-stack-sm">
+<span class="px-3 py-1 bg-surface/80 backdrop-blur-md rounded-full border border-glass-stroke font-label-bold text-label-bold text-electric-cyan text-[10px] md:text-xs tracking-wider uppercase">Kitchen Fitting</span>
+<span class="px-3 py-1 bg-surface/80 backdrop-blur-md rounded-full border border-glass-stroke font-label-bold text-label-bold text-electric-cyan text-[10px] md:text-xs tracking-wider uppercase">Tiling</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm group-hover:text-safety-orange transition-colors duration-300">Modern Kitchen Update</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                            Installation of sleek, modern cabinetry with precise alignment and custom shelving solutions to maximize space and utility.
+                        </p>
+</div>
+</article>
+<!-- Project 3: Loft & Bedroom Refresh (spans 5 cols on desktop) -->
+<article class="md:col-span-5 group relative rounded-lg overflow-hidden glass-card h-[50vh] min-h-[350px]">
+<img alt="Loft &amp; Bedroom Refresh" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsE0C_1MbrwYJmGB0w-4T4n1ARNj3ECHv2C2zrBIygiiv8gM0vo-kv0PWJjnoaHAv_e5ZQF0oNu9UcTn9FYB7qGXojNeMq_SLoayGQTVGWiqfKslCuUwvjjqL7yFBc6iEM2GFX7Utn3E1HPFtpMW0W24coEoCjgWieIDzErtfttwXiFg2Pzb5Sm-9R3wYdyttAcFKupHoq22abPUfXuQylelBa2SsID6uAGrHRemsnTsgS184_-uytzR_g">
+<div class="absolute inset-0 glass-overlay flex flex-col justify-end p-margin-mobile md:p-gutter">
+<div class="flex flex-wrap gap-2 mb-stack-sm">
+<span class="px-3 py-1 bg-surface/80 backdrop-blur-md rounded-full border border-glass-stroke font-label-bold text-label-bold text-electric-cyan text-[10px] md:text-xs tracking-wider uppercase">Furniture Assembly</span>
+<span class="px-3 py-1 bg-surface/80 backdrop-blur-md rounded-full border border-glass-stroke font-label-bold text-label-bold text-electric-cyan text-[10px] md:text-xs tracking-wider uppercase">Decorating</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm group-hover:text-safety-orange transition-colors duration-300">Loft &amp; Bedroom Refresh</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Careful assembly of space-saving furniture and delicate touch-up painting to revitalize a cozy loft sleeping area.
+                        </p>
+</div>
+</article>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="w-full bg-surface-container-low border-y border-glass-stroke py-section-gap relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-safety-orange via-surface to-background"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10 text-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-stack-md">Ready for your own transformation?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-stack-lg">
+                    Contact our team of precision engineers to discuss your next home improvement project in West London.
+                </p>
+<a class="inline-flex items-center justify-center bg-safety-orange text-white font-label-bold text-label-bold px-8 py-4 rounded hover:brightness-110 hover:shadow-[0_0_20px_rgba(255,95,31,0.6)] transition-all duration-300 uppercase tracking-widest" href="#">
+                    Request a Quote <span class="material-symbols-outlined ml-2 text-sm" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width border-t border-glass-stroke">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-gutter py-section-gap max-w-container-max mx-auto">
+<!-- Brand & Copyright -->
+<div class="flex flex-col space-y-stack-md">
+<span class="font-display-lg text-headline-md text-safety-orange tracking-tighter uppercase">PROJECT HANDYMAN LTD</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Precision Engineering for the Home.<br>
+                    West London, Acton
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-auto pt-stack-lg">
+                    © 2024 PROJECT HANDYMAN LTD. Precision Engineering for the Home.
+                </p>
+</div>
+<!-- Services Links -->
+<div class="flex flex-col space-y-stack-sm">
+<h4 class="font-label-bold text-label-bold text-on-surface mb-stack-sm uppercase tracking-widest">Services</h4>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-safety-orange underline transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange rounded w-fit" href="services-project-handyman-ltd.html">General Repairs</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-safety-orange underline transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange rounded w-fit" href="#">Painting &amp; Decorating</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-safety-orange underline transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange rounded w-fit" href="services-project-handyman-ltd.html">Furniture Assembly</a>
+</div>
+<!-- Legal & Contact Links -->
+<div class="flex flex-col space-y-stack-sm">
+<h4 class="font-label-bold text-label-bold text-on-surface mb-stack-sm uppercase tracking-widest">Information</h4>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-safety-orange underline transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange rounded w-fit" href="services-project-handyman-ltd.html">Booking</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-safety-orange underline transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange rounded w-fit" href="#">Privacy Policy</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-safety-orange underline transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange rounded w-fit" href="index.html">Terms of Service</a>
+<a class="font-label-bold text-label-bold text-electric-cyan hover:text-safety-orange transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange rounded w-fit mt-stack-md flex items-center" href="mailto:info@projecthandyman.co.uk">
+<span class="material-symbols-outlined mr-2 text-sm" style="font-variation-settings: 'FILL' 1;">mail</span>
+                    info@projecthandyman.co.uk
+                </a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for top nav
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('global-nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg', 'shadow-black/50');
+            } else {
+                nav.classList.remove('shadow-lg', 'shadow-black/50');
+            }
+        });
+    </script>
+<img src="https://andrastime.goatcounter.com/count?p=%2F55658a1b-ce8c-4bc1-b05e-f33a167aaebf" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

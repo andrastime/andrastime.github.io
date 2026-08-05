@@ -1,0 +1,474 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>To-Do Special - Handy Homie</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#0d1c32",
+                        "error": "#ba1a1a",
+                        "artisan-teal": "#008080",
+                        "on-primary-fixed-variant": "#39475f",
+                        "tertiary-container": "#002020",
+                        "surface-tint": "#515f78",
+                        "surface-container": "#edeeef",
+                        "safety-orange": "#FF8C00",
+                        "on-tertiary-container": "#289291",
+                        "slate-white": "#F8F9FA",
+                        "on-secondary-container": "#603100",
+                        "secondary": "#904d00",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary-fixed-variant": "#004f4f",
+                        "secondary-fixed-dim": "#ffb77d",
+                        "on-primary": "#ffffff",
+                        "deep-navy": "#0A192F",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#2f1500",
+                        "on-secondary-fixed-variant": "#6e3900",
+                        "tertiary-fixed": "#93f2f2",
+                        "background": "#f8f9fa",
+                        "border-subtle": "#E2E8F0",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#000000",
+                        "inverse-primary": "#b9c7e4",
+                        "primary": "#000000",
+                        "surface-bright": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "on-secondary": "#ffffff",
+                        "outline": "#75777e",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e1e3e4",
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed-dim": "#76d6d5",
+                        "inverse-on-surface": "#f0f1f2",
+                        "secondary-container": "#fd8b00",
+                        "on-surface": "#191c1d",
+                        "on-surface-variant": "#44474d",
+                        "primary-fixed": "#d6e3ff",
+                        "iron-gray": "#334155",
+                        "inverse-surface": "#2e3132",
+                        "outline-variant": "#c5c6cd",
+                        "on-background": "#191c1d",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#002020",
+                        "on-primary-container": "#76849f",
+                        "surface-container-highest": "#e1e3e4",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "secondary-fixed": "#ffdcc3",
+                        "primary-container": "#0d1c32",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f4f5"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "section-gap": "80px"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-bold": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        .checklist-item.selected {
+            background-color: theme('colors.surface-container-highest');
+            border-color: theme('colors.artisan-teal');
+        }
+        .checklist-item.selected .material-symbols-outlined {
+            color: theme('colors.artisan-teal');
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-deep-navy dark:bg-deep-navy border-b border-subtle dark:border-iron-gray docked full-width top-0 sticky z-50 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-slate-white tracking-tight" href="home-handy-homie.html">Handy Homie</a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-bold text-label-bold text-slate-white hover:text-safety-orange transition-colors hover:bg-on-primary-fixed-variant/10 px-3 py-2 rounded" href="our-services-handy-homie.html">Services</a>
+<a class="font-label-bold text-label-bold text-safety-orange border-b-2 border-safety-orange pb-1 hover:bg-on-primary-fixed-variant/10 px-3 py-2 rounded" href="index.html">To-Do Special</a>
+<a class="font-label-bold text-label-bold text-slate-white hover:text-safety-orange transition-colors hover:bg-on-primary-fixed-variant/10 px-3 py-2 rounded" href="#">About Us</a>
+<a class="font-label-bold text-label-bold text-slate-white hover:text-safety-orange transition-colors hover:bg-on-primary-fixed-variant/10 px-3 py-2 rounded" href="our-services-handy-homie.html">Pricing</a>
+</div>
+<button class="bg-safety-orange text-on-primary font-label-bold text-label-bold px-6 py-2 rounded hover:bg-secondary-container transition-colors shadow-sm">
+                Book Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-section-gap overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover object-center opacity-40" data-alt="A sophisticated, high-contrast, modern industrial interior in West London. The space is impeccably clean, featuring exposed brickwork painted in deep navy, contrasted with warm oak flooring. A tidy, professional toolkit rests on a sleek slate countertop, lit by dramatic, directional lighting that highlights the precision of the tools. The mood is calm, reliable, and premium, embodying a 'mess-free' professional service aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-1EvntcJ9YhAb6jfOtSAGwdV2J0UoEIuYeONsDUFlvwnUEZsbKcQt-x3HXi6jNpxAOvkb_fqsOj0dRnpYZH70jqCOG_-7URpL_gTPDGJnKW6JeTIqXIk25ht__Fco3YRRAZRymb7m_KJBWczgcDqHn8U6jxkHxGxYk25bxLJeRBGow9aKIDoNi969_-z_5z7qfShcZdU_AFgluuEuIfEhaiS0BatO9Qg9_VRglNxNexakh3t-SA">
+<div class="absolute inset-0 bg-gradient-to-r from-deep-navy/90 to-background/50"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 bg-artisan-teal/10 px-3 py-1 rounded border border-artisan-teal/30">
+<span class="material-symbols-outlined text-artisan-teal text-sm" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="font-label-bold text-label-bold text-artisan-teal">The Luxury of Reclaimed Time</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-[64px] md:leading-[72px] text-deep-navy font-bold tracking-tight">
+                    Your Weekend,<br>Returned.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Stop letting the "to-do" list dictate your downtime. Our productized maintenance packages allow you to batch those nagging tasks into one seamless, professional visit. 
+                </p>
+<div class="pt-4 flex flex-col sm:flex-row gap-4">
+<a class="inline-block bg-safety-orange text-on-primary font-label-bold text-label-bold px-8 py-3 rounded text-center hover:bg-secondary-container transition-colors shadow-md" href="#packages">
+                        View Packages
+                    </a>
+<a class="inline-block bg-transparent text-deep-navy border-2 border-deep-navy font-label-bold text-label-bold px-8 py-3 rounded text-center hover:bg-deep-navy hover:text-slate-white transition-colors" href="#builder">
+                        Build Your Checklist
+                    </a>
+</div>
+</div>
+<div class="hidden md:block relative h-[500px] w-full rounded-xl overflow-hidden border border-subtle shadow-xl">
+<img class="w-full h-full object-cover" data-alt="A close-up, highly detailed shot of a skilled tradesperson's hands meticulously adjusting a sleek, modern fixture against a crisp, white background. The tradesperson wears a neat, deep navy uniform. The focus is incredibly sharp on the specialized tool and the fixture, blurring the background into a soft, high-key bokeh. The lighting is bright and even, conveying a sense of precision, cleanliness, and modern industrial craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDb4np5UyZmCOlKeN19E8AL5jIJVU6SzyRpjF1IC-nBssjK-c4SEdqvzs4hTP6UdaPYM9QGIBuHWSWb4yzI3o5Y64uG6BrtG5mc4kch2uRk7zAvZerMq04iDljxNq2BFSlQwUMf2rQzLAiHaFH0232ypZfIvkf1gSJ5W-RDXYlUZ60D1upeHJhvx6QnB07m31WOrRv1eY8NzHlqKO3jRDcZZdqf09GnqXOyqyUGgafdWCcoOfNBw">
+<div class="absolute bottom-6 left-6 right-6 bg-slate-white/95 backdrop-blur-md p-4 rounded border border-subtle shadow-lg">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-safety-orange text-3xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-label-bold text-label-bold text-deep-navy">Mess-Free Guarantee</p>
+<p class="font-caption text-caption text-on-surface-variant">We leave your home cleaner than we found it.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Packages Section (Bento Grid) -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto" id="packages">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-deep-navy font-bold">Predictable Excellence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Choose a block of time, and we'll handle the rest. Transparent pricing, professional execution.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Half Day Package -->
+<div class="col-span-1 md:col-span-5 flex flex-col h-full">
+<div class="bg-surface-container-lowest border border-subtle rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 relative group flex flex-col h-full group-hover:-translate-y-1">
+<div class="h-48 w-full bg-surface-variant relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A beautifully composed, high-end lifestyle shot of a modern living room in West London being subtly maintained. A professional in a navy uniform is seen in the soft-focus background adjusting a picture frame perfectly level. In the foreground, a sleek, minimalist smart home panel is sharply in focus. The lighting is natural, bright, and airy, emphasizing a pristine, hassle-free environment. The overall aesthetic is clean, premium, and relaxing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVCxJcz2g28hiUSGFstVeh1UXdEetybt2jTA5Qqsk_BGgHedB6KxcKkkOJN65wBmkTkTJZr2Vqy-BGtF3c2fFP5AGELrblGr1npLI7U_R_ZcPDCVrS_r_52NKBfH6Rtd-ykbUfFp3ehGFot-0R1dNHWNkJrSjxqAk3JjtC8IX4_y6TMc7MOarHOb27IickmlTfTjsmxHQtVLc1iOoCTV0ewJswqR8j5JuxYwWLXW0p_TUPLI5sIw">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/80 to-transparent"></div>
+<h3 class="absolute bottom-4 left-4 font-headline-md text-headline-md text-slate-white font-bold">Half-Day Hit</h3>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="font-display-lg text-display-lg text-safety-orange font-bold">£249</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ 4 Hours</span>
+</div>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-artisan-teal text-sm mt-1">done</span>
+<span class="font-body-md text-body-md text-on-surface">Ideal for 5-8 small tasks</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-artisan-teal text-sm mt-1">done</span>
+<span class="font-body-md text-body-md text-on-surface">One dedicated professional</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-artisan-teal text-sm mt-1">done</span>
+<span class="font-body-md text-body-md text-on-surface">Standard fixing materials included</span>
+</li>
+</ul>
+<button class="w-full bg-deep-navy text-on-primary font-label-bold text-label-bold px-4 py-3 rounded hover:bg-on-primary-fixed-variant transition-colors border border-transparent">Select Half-Day</button>
+</div>
+</div>
+</div>
+<!-- Full Day Package -->
+<div class="col-span-1 md:col-span-7 flex flex-col h-full">
+<div class="bg-surface-container-lowest border-2 border-safety-orange rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 relative flex flex-col h-full transform hover:-translate-y-1">
+<div class="absolute top-4 right-4 bg-safety-orange text-on-primary font-label-bold text-caption px-3 py-1 rounded-full z-10 shadow-sm">Most Popular</div>
+<div class="grid grid-cols-1 md:grid-cols-2 h-full">
+<div class="p-8 flex flex-col justify-center relative z-10">
+<h3 class="font-headline-lg text-headline-lg text-deep-navy font-bold mb-2">Full-Day Overhaul</h3>
+<div class="flex items-baseline gap-2 mb-6">
+<span class="font-display-lg text-display-lg text-safety-orange font-bold">£449</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ 8 Hours</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                                Reclaim your entire weekend. Perfect for tackling long-standing to-do lists, room refreshes, or comprehensive seasonal maintenance.
+                            </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-artisan-teal text-sm mt-1">done</span>
+<span class="font-body-md text-body-md text-on-surface">Unlimited tasks within timeframe</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-artisan-teal text-sm mt-1">done</span>
+<span class="font-body-md text-body-md text-on-surface">Priority scheduling</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-artisan-teal text-sm mt-1">done</span>
+<span class="font-body-md text-body-md text-on-surface">Comprehensive tool kit deployment</span>
+</li>
+</ul>
+<button class="w-full bg-safety-orange text-on-primary font-label-bold text-label-bold px-4 py-3 rounded hover:bg-secondary-container transition-colors shadow-sm">Select Full-Day</button>
+</div>
+<div class="hidden md:block h-full relative">
+<img class="w-full h-full object-cover" data-alt="A dynamic, wide-angle shot of a beautifully organized, modern workspace garage or utility room. A premium, industrial-grade tool chest in deep navy and safety orange stands prominently. Specialized tools are neatly arranged on a pegboard against a crisp white wall. The lighting is bright, crisp, and high-contrast, showcasing a meticulous attention to detail and professional readiness. The scene feels highly efficient, clean, and modern industrial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb5bj6oLZOf_l-LY3gTGYSq9HS1LkEd-fcpq_9X3RYDIeEEBR2Ig0CrgLFNOAndMfYQ0akqyE4PyhsbRaWt39eczgGkPCZyjZQqg12iYEs-E0bfiFNJgTdOE0K_F84eMXnjcJN3R8uxnbVAXfQz3J3qIy9QjtGjVkj4Q5jE-of0cOeUR3xZ6SMCppv3LwboFaufLNQpOk6Glz-6ENbkF7n7DEI_oMaxActnfQSBUEsYfnWWLq_Dw">
+<div class="absolute inset-0 bg-gradient-to-l from-transparent to-surface-container-lowest"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Checklist Builder -->
+<section class="bg-surface-container px-margin-mobile md:px-margin-desktop py-section-gap" id="builder">
+<div class="max-w-container-max mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-12 space-y-4">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-deep-navy font-bold">Build Your Checklist</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Select tasks to estimate your time requirement. Most tasks take 30-45 mins.</p>
+</div>
+<div class="bg-surface-container-lowest border border-subtle rounded-xl p-6 md:p-8 shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Tasks Selection -->
+<div class="lg:col-span-2">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline-md text-headline-md text-deep-navy font-semibold">Common Tasks</h3>
+<span class="font-label-bold text-caption text-on-surface-variant uppercase bg-surface-container px-2 py-1 rounded">Select up to 15</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="task-grid">
+<!-- Task Items generated by JS -->
+</div>
+</div>
+<!-- Sidebar Summary -->
+<div class="bg-surface px-6 py-8 rounded-lg border border-subtle flex flex-col h-full sticky top-24">
+<h4 class="font-headline-md text-headline-md text-deep-navy font-semibold mb-6">Your Plan</h4>
+<div class="flex-grow">
+<div class="flex justify-between items-center mb-2">
+<span class="font-body-md text-body-md text-on-surface-variant">Selected Tasks</span>
+<span class="font-label-bold text-label-bold text-deep-navy" id="task-count">0 / 15</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 mb-6 overflow-hidden">
+<div class="bg-artisan-teal h-2 rounded-full transition-all duration-300 w-0" id="progress-bar"></div>
+</div>
+<div class="bg-surface-container-lowest border border-subtle rounded p-4 mb-6">
+<p class="font-caption text-caption text-on-surface-variant uppercase mb-1">Estimated Time</p>
+<p class="font-headline-md text-headline-md text-safety-orange font-bold" id="est-time">0 hrs</p>
+</div>
+<div class="hidden bg-tertiary-fixed-dim/20 border border-artisan-teal/30 rounded p-4 mb-6" id="recommendation-box">
+<p class="font-label-bold text-label-bold text-artisan-teal mb-1">Recommendation</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm" id="recommendation-text"></p>
+</div>
+</div>
+<button class="w-full bg-deep-navy text-on-primary font-label-bold text-label-bold px-4 py-3 rounded hover:bg-on-primary-fixed-variant transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed" disabled="" id="continue-btn">
+                            Review &amp; Book
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-deep-navy font-bold text-center mb-16">Neighbors Rely On Us</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-subtle shadow-sm flex flex-col">
+<div class="flex gap-1 mb-4">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">
+                    "Booked the Full-Day package before hosting a major dinner party. The technician was incredibly tidy and managed to fix a wobbly dining chair, hang three large mirrors, and sort out a tricky smart-bulb setup. Exceptional service."
+                </p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-label-bold text-deep-navy">EH</div>
+<div>
+<p class="font-label-bold text-label-bold text-deep-navy">Eleanor H.</p>
+<p class="font-caption text-caption text-on-surface-variant">Notting Hill</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-subtle shadow-sm flex flex-col">
+<div class="flex gap-1 mb-4">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">
+                    "The half-day hit is brilliant. I piled up odd jobs for months—fixing a dripping tap, re-sealing the bath, and putting up some shelves. Done in 4 hours flat with zero mess left behind. Worth every penny."
+                </p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-label-bold text-deep-navy">JM</div>
+<div>
+<p class="font-label-bold text-label-bold text-deep-navy">James M.</p>
+<p class="font-caption text-caption text-on-surface-variant">Kensington</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-subtle shadow-sm flex flex-col">
+<div class="flex gap-1 mb-4">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">
+                    "Professional from start to finish. They arrived exactly on time, wore shoe covers, and worked through my list methodically. It’s refreshing to find a service this reliable in London."
+                </p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-label-bold text-deep-navy">SA</div>
+<div>
+<p class="font-label-bold text-label-bold text-deep-navy">Sarah A.</p>
+<p class="font-caption text-caption text-on-surface-variant">Chelsea</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-white dark:bg-deep-navy border-t border-subtle dark:border-iron-gray w-full rounded-none">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="flex flex-col justify-between">
+<div>
+<span class="font-headline-md text-headline-md font-bold text-deep-navy dark:text-slate-white block mb-4">Handy Homie</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-8">
+                        Premium property maintenance for West London. Mess-free, reliable, and professional.
+                    </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    © 2024 Handy Homie West London. Your Reliable Neighbor.
+                </p>
+</div>
+<div class="flex flex-col md:items-end justify-start">
+<nav class="flex flex-col sm:flex-row gap-6 md:gap-8">
+<a class="font-label-bold text-label-bold text-on-surface-variant dark:text-surface-variant hover:text-safety-orange transition-colors opacity-90 hover:opacity-100" href="home-handy-homie.html">Privacy Policy</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant dark:text-surface-variant hover:text-safety-orange transition-colors opacity-90 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant dark:text-surface-variant hover:text-safety-orange transition-colors opacity-90 hover:opacity-100" href="our-services-handy-homie.html">Service Areas</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant dark:text-surface-variant hover:text-safety-orange transition-colors opacity-90 hover:opacity-100" href="#">Contact</a>
+</nav>
+</div>
+</div>
+</footer>
+<!-- Interactive Scripts -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tasks = [
+                { id: 't1', icon: 'format_paint', name: 'Touch-up Painting' },
+                { id: 't2', icon: 'shelves', name: 'Hang Shelves' },
+                { id: 't3', icon: 'tv', name: 'Mount TV' },
+                { id: 't4', icon: 'plumbing', name: 'Fix Leaky Tap' },
+                { id: 't5', icon: 'lightbulb', name: 'Replace Fixture' },
+                { id: 't6', icon: 'chair', name: 'Furniture Assembly' },
+                { id: 't7', icon: 'imagesmode', name: 'Hang Pictures/Mirrors' },
+                { id: 't8', icon: 'door_front', name: 'Adjust Doors' },
+                { id: 't9', icon: 'curtains', name: 'Install Blinds/Curtains' },
+                { id: 't10', icon: 'water_damage', name: 'Re-seal Bath/Shower' },
+                { id: 't11', icon: 'smart_toy', name: 'Smart Home Setup' },
+                { id: 't12', icon: 'power', name: 'Replace Sockets' }
+            ];
+
+            const grid = document.getElementById('task-grid');
+            let selectedCount = 0;
+            const maxTasks = 15;
+
+            // Render tasks
+            tasks.forEach(task => {
+                const btn = document.createElement('button');
+                btn.className = 'checklist-item text-left flex items-center gap-3 p-4 border border-subtle rounded-lg bg-surface hover:bg-surface-container transition-colors';
+                btn.dataset.id = task.id;
+                btn.innerHTML = `
+                    <div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 transition-colors">
+                        <span class="material-symbols-outlined text-on-surface-variant transition-colors">${task.icon}</span>
+                    </div>
+                    <span class="font-body-md text-body-md text-deep-navy font-medium leading-tight">${task.name}</span>
+                `;
+                grid.appendChild(btn);
+
+                btn.addEventListener('click', function() {
+                    const isSelected = this.classList.contains('selected');
+                    
+                    if (!isSelected && selectedCount >= maxTasks) return;
+
+                    if (isSelected) {
+                        this.classList.remove('selected');
+                        selectedCount--;
+                    } else {
+                        this.classList.add('selected');
+                        selectedCount++;
+                    }
+                    
+                    updateSummary();
+                });
+            });
+
+            function updateSummary() {
+                // Update Count
+                document.getElementById('task-count').textContent = `${selectedCount} / ${maxTasks}`;
+                
+                // Update Progress Bar
+                const progressPct = (selectedCount / maxTasks) * 100;
+                document.getElementById('progress-bar').style.width = `${progressPct}%`;
+                
+                // Estimate Time (Roughly 0.5 hours per task on average)
+                const estHours = (selectedCount * 0.5).toFixed(1);
+                document.getElementById('est-time').textContent = `${estHours} hrs`;
+
+                // Recommendation Logic
+                const recBox = document.getElementById('recommendation-box');
+                const recText = document.getElementById('recommendation-text');
+                
+                if (selectedCount === 0) {
+                    recBox.classList.add('hidden');
+                } else {
+                    recBox.classList.remove('hidden');
+                    if (estHours <= 4) {
+                        recText.textContent = "Perfect for the Half-Day Hit (£249).";
+                    } else if (estHours <= 8) {
+                        recText.textContent = "Looks like a job for the Full-Day Overhaul (£449).";
+                    } else {
+                        recText.textContent = "Extensive list! You may need to book multiple days or contact us for a custom quote.";
+                    }
+                }
+
+                // Enable/Disable Button
+                document.getElementById('continue-btn').disabled = selectedCount === 0;
+            }
+        });
+    </script>
+<img src="https://andrastime.goatcounter.com/count?p=%2Fd6d76ded-2b7a-4a6c-a698-c856d7cfb70b" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

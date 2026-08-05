@@ -1,0 +1,351 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Handy Homie - Booking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#0d1c32",
+                      "error": "#ba1a1a",
+                      "artisan-teal": "#008080",
+                      "on-primary-fixed-variant": "#39475f",
+                      "tertiary-container": "#002020",
+                      "surface-tint": "#515f78",
+                      "surface-container": "#edeeef",
+                      "safety-orange": "#FF8C00",
+                      "on-tertiary-container": "#289291",
+                      "slate-white": "#F8F9FA",
+                      "on-secondary-container": "#603100",
+                      "secondary": "#904d00",
+                      "surface-container-high": "#e7e8e9",
+                      "on-tertiary-fixed-variant": "#004f4f",
+                      "secondary-fixed-dim": "#ffb77d",
+                      "on-primary": "#ffffff",
+                      "deep-navy": "#0A192F",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#2f1500",
+                      "on-secondary-fixed-variant": "#6e3900",
+                      "tertiary-fixed": "#93f2f2",
+                      "background": "#f8f9fa",
+                      "border-subtle": "#E2E8F0",
+                      "on-tertiary": "#ffffff",
+                      "tertiary": "#000000",
+                      "inverse-primary": "#b9c7e4",
+                      "primary": "#000000",
+                      "surface-bright": "#f8f9fa",
+                      "surface-dim": "#d9dadb",
+                      "on-secondary": "#ffffff",
+                      "outline": "#75777e",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#e1e3e4",
+                      "surface": "#f8f9fa",
+                      "tertiary-fixed-dim": "#76d6d5",
+                      "inverse-on-surface": "#f0f1f2",
+                      "secondary-container": "#fd8b00",
+                      "on-surface": "#191c1d",
+                      "on-surface-variant": "#44474d",
+                      "primary-fixed": "#d6e3ff",
+                      "iron-gray": "#334155",
+                      "inverse-surface": "#2e3132",
+                      "outline-variant": "#c5c6cd",
+                      "on-background": "#191c1d",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#002020",
+                      "on-primary-container": "#76849f",
+                      "surface-container-highest": "#e1e3e4",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "secondary-fixed": "#ffdcc3",
+                      "primary-container": "#0d1c32",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f3f4f5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "48px",
+                      "section-gap": "80px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .step-active {
+            @apply border-safety-orange text-safety-orange;
+        }
+        .step-inactive {
+            @apply border-border-subtle text-on-surface-variant;
+        }
+        .step-completed {
+            @apply border-artisan-teal text-artisan-teal;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md min-h-screen antialiased">
+<!-- Top Navigation Omitted because this is a transactional flow (Booking) -->
+<main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<!-- Header -->
+<div class="mb-gutter text-center max-w-2xl mx-auto">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-deep-navy mb-base">Book Your Handy Homie</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Secure, reliable, and mess-free service. Let's get your home sorted.</p>
+</div>
+<!-- Progress Stepper -->
+<div class="mb-section-gap">
+<div class="flex items-center justify-between relative">
+<!-- Line -->
+<div class="absolute left-0 top-1/2 transform -translate-y-1/2 w-full h-0.5 bg-border-subtle -z-10"></div>
+<!-- Step 1 (Active) -->
+<div class="flex flex-col items-center bg-background px-2">
+<div class="w-10 h-10 rounded-full border-2 step-active flex items-center justify-center bg-background mb-2">
+<span class="font-label-bold text-label-bold">1</span>
+</div>
+<span class="font-label-bold text-label-bold text-deep-navy hidden md:block">Service</span>
+</div>
+<!-- Step 2 (Inactive) -->
+<div class="flex flex-col items-center bg-background px-2">
+<div class="w-10 h-10 rounded-full border-2 step-inactive flex items-center justify-center bg-background mb-2">
+<span class="font-label-bold text-label-bold">2</span>
+</div>
+<span class="font-label-bold text-label-bold text-on-surface-variant hidden md:block">Details</span>
+</div>
+<!-- Step 3 (Inactive) -->
+<div class="flex flex-col items-center bg-background px-2">
+<div class="w-10 h-10 rounded-full border-2 step-inactive flex items-center justify-center bg-background mb-2">
+<span class="font-label-bold text-label-bold">3</span>
+</div>
+<span class="font-label-bold text-label-bold text-on-surface-variant hidden md:block">Pricing</span>
+</div>
+<!-- Step 4 (Inactive) -->
+<div class="flex flex-col items-center bg-background px-2">
+<div class="w-10 h-10 rounded-full border-2 step-inactive flex items-center justify-center bg-background mb-2">
+<span class="font-label-bold text-label-bold">4</span>
+</div>
+<span class="font-label-bold text-label-bold text-on-surface-variant hidden md:block">Confirm</span>
+</div>
+</div>
+</div>
+<!-- Main Content Area (Bento Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Left Column: Form / Selection Area -->
+<div class="lg:col-span-2 space-y-gutter">
+<!-- Step 1: Service Selection -->
+<section class="bg-slate-white border border-border-subtle p-gutter rounded-lg">
+<h2 class="font-headline-md text-headline-md text-deep-navy mb-gutter">Select Service</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-base mb-gutter">
+<!-- Service Card 1 -->
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="service" type="radio">
+<div class="border border-border-subtle rounded-lg p-base hover:shadow-lg transition-shadow duration-300 peer-checked:border-safety-orange peer-checked:bg-safety-orange/5">
+<div class="flex items-center gap-base mb-2">
+<span class="material-symbols-outlined text-artisan-teal" style="font-variation-settings: 'FILL' 1;">plumbing</span>
+<h3 class="font-label-bold text-label-bold text-deep-navy">Plumbing Fixes</h3>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">Leaks, unclogging, fixture installation.</p>
+</div>
+</label>
+<!-- Service Card 2 -->
+<label class="cursor-pointer">
+<input class="peer sr-only" name="service" type="radio">
+<div class="border border-border-subtle rounded-lg p-base hover:shadow-lg transition-shadow duration-300 peer-checked:border-safety-orange peer-checked:bg-safety-orange/5">
+<div class="flex items-center gap-base mb-2">
+<span class="material-symbols-outlined text-artisan-teal" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h3 class="font-label-bold text-label-bold text-deep-navy">Electrical Work</h3>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">Light fittings, switch repair, fault finding.</p>
+</div>
+</label>
+<!-- Service Card 3 -->
+<label class="cursor-pointer">
+<input class="peer sr-only" name="service" type="radio">
+<div class="border border-border-subtle rounded-lg p-base hover:shadow-lg transition-shadow duration-300 peer-checked:border-safety-orange peer-checked:bg-safety-orange/5">
+<div class="flex items-center gap-base mb-2">
+<span class="material-symbols-outlined text-artisan-teal" style="font-variation-settings: 'FILL' 1;">carpenter</span>
+<h3 class="font-label-bold text-label-bold text-deep-navy">Carpentry</h3>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">Door hanging, shelf fitting, furniture assembly.</p>
+</div>
+</label>
+<!-- Service Card 4 -->
+<label class="cursor-pointer">
+<input class="peer sr-only" name="service" type="radio">
+<div class="border border-border-subtle rounded-lg p-base hover:shadow-lg transition-shadow duration-300 peer-checked:border-safety-orange peer-checked:bg-safety-orange/5">
+<div class="flex items-center gap-base mb-2">
+<span class="material-symbols-outlined text-artisan-teal" style="font-variation-settings: 'FILL' 1;">format_paint</span>
+<h3 class="font-label-bold text-label-bold text-deep-navy">Painting &amp; Decorating</h3>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">Patching, single room painting, wallpapering.</p>
+</div>
+</label>
+</div>
+<h2 class="font-headline-md text-headline-md text-deep-navy mb-gutter mt-gutter">Select Time</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-base">
+<label class="cursor-pointer">
+<input class="peer sr-only" name="time" type="radio">
+<div class="border border-border-subtle rounded px-4 py-2 text-center hover:border-artisan-teal peer-checked:bg-artisan-teal peer-checked:text-slate-white transition-colors">
+<span class="font-label-bold text-label-bold">09:00 AM</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="time" type="radio">
+<div class="border border-border-subtle rounded px-4 py-2 text-center hover:border-artisan-teal peer-checked:bg-artisan-teal peer-checked:text-slate-white transition-colors">
+<span class="font-label-bold text-label-bold">11:00 AM</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="time" type="radio">
+<div class="border border-border-subtle rounded px-4 py-2 text-center hover:border-artisan-teal peer-checked:bg-artisan-teal peer-checked:text-slate-white transition-colors">
+<span class="font-label-bold text-label-bold">02:00 PM</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="time" type="radio">
+<div class="border border-border-subtle rounded px-4 py-2 text-center hover:border-artisan-teal peer-checked:bg-artisan-teal peer-checked:text-slate-white transition-colors">
+<span class="font-label-bold text-label-bold">04:00 PM</span>
+</div>
+</label>
+</div>
+</section>
+<div class="flex justify-end mt-gutter">
+<button class="bg-safety-orange text-slate-white font-label-bold text-label-bold py-3 px-8 rounded hover:bg-secondary-container transition-colors shadow-sm">Continue to Details</button>
+</div>
+</div>
+<!-- Right Column: Summary & Badges -->
+<aside class="space-y-gutter">
+<!-- Trust Badge -->
+<div class="bg-slate-white border border-border-subtle p-base rounded-lg flex items-start gap-base">
+<div class="bg-artisan-teal/10 p-2 rounded-full flex-shrink-0">
+<span class="material-symbols-outlined text-artisan-teal text-3xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-deep-navy mb-1">Professional Performance</h4>
+<p class="font-caption text-caption text-on-surface-variant">Our Homies wear branded shoe covers and carry HEPA-filter vacuums for a mess-free finish.</p>
+</div>
+</div>
+<!-- Order Summary Glassmorphism placeholder -->
+<div class="bg-slate-white/80 backdrop-blur-md border border-border-subtle p-gutter rounded-lg shadow-sm">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-base border-b border-border-subtle pb-2">Your Booking</h3>
+<div class="space-y-4 mb-base">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">Service</span>
+<span class="font-label-bold text-label-bold text-deep-navy">Plumbing Fixes</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">Date</span>
+<span class="font-label-bold text-label-bold text-deep-navy">Today, 11:00 AM</span>
+</div>
+</div>
+<div class="border-t border-border-subtle pt-4">
+<div class="flex justify-between items-center">
+<span class="font-body-lg text-body-lg text-deep-navy font-bold">Estimated Base Rate</span>
+<span class="font-body-lg text-body-lg text-artisan-teal font-bold">£65/hr</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant mt-2 text-right">Final price calculated in Step 3.</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Omitted due to transactional flow -->
+<img src="https://andrastime.goatcounter.com/count?p=%2Fd6d76ded-2b7a-4a6c-a698-c856d7cfb70b" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

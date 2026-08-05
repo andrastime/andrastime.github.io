@@ -1,0 +1,303 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio - Handyman Lex Fix It</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@600&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#3f484a",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#002023",
+                        "on-primary-fixed-variant": "#004f55",
+                        "tertiary": "#735c00",
+                        "on-error-container": "#93000a",
+                        "background": "#f8f9fa",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffdcbc",
+                        "surface": "#f8f9fa",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container": "#edeeef",
+                        "tertiary-container": "#cca730",
+                        "inverse-on-surface": "#f0f1f2",
+                        "electric-cyan": "#2EC4B6",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-secondary-container": "#663b00",
+                        "surface-tint": "#20686f",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed": "#abeef6",
+                        "on-surface": "#191c1d",
+                        "on-tertiary-container": "#4f3d00",
+                        "primary-container": "#0d5c63",
+                        "surface-variant": "#e1e3e4",
+                        "secondary": "#895100",
+                        "error-container": "#ffdad6",
+                        "primary": "#004349",
+                        "secondary-fixed-dim": "#ffb86b",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "primary-fixed-dim": "#8fd1d9",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-primary": "#8fd1d9",
+                        "deep-teal": "#073B4C",
+                        "safety-orange": "#FF6B35",
+                        "charcoal-text": "#1A1C1E",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#2c1700",
+                        "outline-variant": "#bfc8c9",
+                        "on-primary-container": "#90d2da",
+                        "on-secondary-fixed-variant": "#683d00",
+                        "on-background": "#191c1d",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffe088",
+                        "secondary-container": "#fd9d1a",
+                        "outline": "#6f797a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "grid-gutter": "24px",
+                        "base": "8px",
+                        "section-padding-desktop": "120px",
+                        "section-padding-mobile": "64px",
+                        "container-max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Manrope"],
+                        "button-text": ["Hanken Grotesk"],
+                        "headline-xl-mobile": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "button-text": ["16px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "headline-xl-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .ambient-shadow {
+                box-shadow: 0 20px 40px rgba(7, 59, 76, 0.05);
+            }
+            .ambient-shadow-hover {
+                box-shadow: 0 30px 60px rgba(7, 59, 76, 0.08);
+            }
+        }
+        
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface/90 dark:bg-on-surface/90 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm dark:shadow-none shadow-[0_20px_40px_rgba(7,59,76,0.05)]">
+<div class="flex justify-between items-center max-w-container-max-width mx-auto px-grid-gutter h-20">
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-surface flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">handyman</span>
+                Handyman Lets fix It
+            </a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 font-button-text text-button-text" href="index.html">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 font-button-text text-button-text" href="our-services-handyman-lex-fix-it.html">Services</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 font-button-text text-button-text transition-all opacity-80 scale-95" href="portfolio-handyman-lex-fix-it.html">Portfolio</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 font-button-text text-button-text" href="#">Reviews</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 font-button-text text-button-text" href="contact-us-handyman-lex-fix-it.html">Contact</a>
+</nav>
+<a class="hidden md:inline-flex items-center justify-center bg-safety-orange text-white font-button-text text-button-text px-6 py-3 rounded-DEFAULT hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group" href="tel:07383981983">
+<span class="relative z-10 flex items-center gap-2">
+<span class="material-symbols-outlined">emergency</span>
+                    Emergency Call
+                </span>
+<div class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+</a>
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop px-grid-gutter bg-surface-container-low relative overflow-hidden">
+<div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #073B4C 1px, transparent 0); background-size: 32px 32px;"></div>
+<div class="max-w-container-max-width mx-auto text-center relative z-10">
+<span class="inline-block font-label-caps text-label-caps bg-tertiary/10 text-tertiary px-3 py-1 rounded-full mb-6 tracking-widest uppercase">Our Projects</span>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-primary mb-6">Our Work Speaks for Itself</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Explore a curated gallery of our recent projects. From bespoke carpentry to complete room transformations, witness the premium craftsmanship that sets us apart.</p>
+</div>
+</section>
+<!-- Gallery Section (Masonry) -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop px-grid-gutter">
+<div class="max-w-container-max-width mx-auto">
+<div class="masonry-grid">
+<!-- Item 1 -->
+<div class="masonry-item group relative rounded-xl overflow-hidden bg-surface ambient-shadow hover:ambient-shadow-hover transition-all duration-500 cursor-pointer">
+<div class="aspect-w-4 aspect-h-3 w-full overflow-hidden">
+<img alt="Custom Carpentry Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="" src="https://lh3.googleusercontent.com/aida/AP1WRLu9Fm7vc8m__TDbw0SlOWZwZP1OAKck9bfowmIowO1pNEdPz3b44TUopJTB9SlgTH28TMGkRgcOQPswINDDZv5yWiKNdTtPC--ZLrKdTf-BnibJ1pDm4x9t6-pROqkkbALm7l58csudvhjBmeaVqvJViYi9GEsvtMts-TbE6r6kCdA3TXbx202aSTBwmsp4CgzlLwsPHmslTRI8f7tY_vPeODCl7OE6pPWiFguh0cxef0-UflQf3cg54hU">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="material-symbols-outlined text-tertiary-fixed mb-2 text-3xl">carpenter</span>
+<h3 class="font-headline-md text-headline-md text-white mb-1">Custom Carpentry</h3>
+<p class="font-body-md text-body-md text-white/80">Bespoke shelving unit installation.</p>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="masonry-item group relative rounded-xl overflow-hidden bg-surface ambient-shadow hover:ambient-shadow-hover transition-all duration-500 cursor-pointer">
+<div class="aspect-w-3 aspect-h-4 w-full overflow-hidden">
+<img alt="Precision Painting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="" src="https://lh3.googleusercontent.com/aida/AP1WRLsHICvtI95WGx9VxCfMRDNapGSV68Nb8FEvBJF8PmKhoCUIM3cyp71dvqzUP1H-3IOvViMy3x2jTC4Bej4uaNw3yqENiqwPd0TKyoULWnv0fYw7_xZ9mA2AKyTp8fIkUz5LJkD_jCnewK_6C5p95_wpm6GPjHpOV-vDPGlQ88ZixeZGqK4SNds0DwKNga0MxRJamWeydYl61hq8x3Gcc2fe71L4Nl41wn9l8ovgXE2raNrBNCGs402wBOQ">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="material-symbols-outlined text-tertiary-fixed mb-2 text-3xl">format_paint</span>
+<h3 class="font-headline-md text-headline-md text-white mb-1">Precision Painting</h3>
+<p class="font-body-md text-body-md text-white/80">Detailed trim and wall finishing.</p>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="masonry-item group relative rounded-xl overflow-hidden bg-surface ambient-shadow hover:ambient-shadow-hover transition-all duration-500 cursor-pointer">
+<div class="aspect-w-16 aspect-h-9 w-full overflow-hidden">
+<img alt="General Repairs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="" src="https://lh3.googleusercontent.com/aida/AP1WRLur1zrsK7uYXFBQHGajPfkIPE68Ow_laDK9JWChFkaf7GNRGTCBpKXuboMB91hypT7e4snDoD3GzZ3i9arcV2kmwZhI9h4B2x2ktpSGA1OZRjdeJP224guhwEb1Y1oOg9mkvU_yttDTOfj2eCrmJ44d1Bpt11Prwru4qfZ3mm0hVE_CI5Oo2yELlXOyVpp4lL4ddNKOAhXU-SVGQ1CX1g9L7DTrR27bGOUvshIwUi7bf9DTUKxDBRyjcwM">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="material-symbols-outlined text-tertiary-fixed mb-2 text-3xl">build</span>
+<h3 class="font-headline-md text-headline-md text-white mb-1">General Repairs</h3>
+<p class="font-body-md text-body-md text-white/80">Comprehensive household maintenance.</p>
+</div>
+</div>
+</div>
+<!-- Additional Placeholder Items to fill grid -->
+<div class="masonry-item group relative rounded-xl overflow-hidden bg-surface ambient-shadow hover:ambient-shadow-hover transition-all duration-500 cursor-pointer">
+<div class="aspect-w-4 aspect-h-5 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-end, well-lit photograph showing a modern bathroom with pristine new plumbing fixtures being installed. The lighting is bright and natural, highlighting the polished chrome and clean white tiles, conveying a sense of premium service and meticulous craftsmanship in a modern home setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtzamd5rLwNS4JbQdNi9CtjhmUvPIQNWuMr6NtJNXbntZf3VAK7OGQPQOfW-NtxZvUX-ctJpk5P1ryXiZWBLTnkg1s3FbTbOnZp6ki1VizP2GSkijnkZqQl6fn0lp8gjih-nIKd3A4M3Y3g5YPuz8otfLTRYEtuybDqJQO0sYU184V3UQZoFrocM9mFtREVsl6YW1nsb0Gc4Pf811HM1RjTwYwUNVSiAWI37FtiawjBB1tsh4kWFYR">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="material-symbols-outlined text-tertiary-fixed mb-2 text-3xl">plumbing</span>
+<h3 class="font-headline-md text-headline-md text-white mb-1">Plumbing Fixtures</h3>
+<p class="font-body-md text-body-md text-white/80">Modern bathroom upgrades.</p>
+</div>
+</div>
+</div>
+<div class="masonry-item group relative rounded-xl overflow-hidden bg-surface ambient-shadow hover:ambient-shadow-hover transition-all duration-500 cursor-pointer">
+<div class="aspect-w-1 aspect-h-1 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, high-quality image of hands assembling sleek, modern flat-pack furniture. The focus is sharp on the tools and wooden components. The setting is a clean, bright, minimalist living space, emphasizing professional assembly services and attention to detail in a premium residential environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjjWvhhIdNBjCsA-BXoTpaIBay5ugI-Xm8dA3bW7SDmmc3RaUyFqiooA4r0_bgDLl6Tiabzc2EEQbkOW3JL1xxbJcBv0VTKVV4bIaDoc41BHpV5-dhyfifbG0GKzPJJl8oZHh-RHYJD3pywrzh9mWOBclr7MISxivOv0yuLKoDtyXcs503iOWribIIzSzIKRbxDi_ZYDEu7L_ZpXaKNAf2KNjiIxZoyNbjrtoFFKh5n7k3wKSDg3t2">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="material-symbols-outlined text-tertiary-fixed mb-2 text-3xl">chair</span>
+<h3 class="font-headline-md text-headline-md text-white mb-1">Assembly Services</h3>
+<p class="font-body-md text-body-md text-white/80">Flawless furniture construction.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<a class="inline-flex items-center justify-center bg-primary text-white font-button-text text-button-text px-8 py-4 rounded-DEFAULT hover:bg-primary/90 hover:-translate-y-1 transition-all duration-300 ambient-shadow" href="tel:07383981983">
+                        Ready to start your project? Call Now
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-section-padding-desktop px-grid-gutter">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter max-w-container-max-width mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col gap-4">
+<a class="font-headline-md text-headline-md text-surface dark:text-on-surface flex items-center gap-2" href="our-services-handyman-lex-fix-it.html">
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">handyman</span>
+                    Handyman Lex fix It
+                </a>
+<p class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant mt-4">
+                    Professional Grade Craftsmanship. Reliable solutions for all your repair and maintenance needs in Peckham.
+                </p>
+<div class="mt-4">
+<p class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">call</span> <a class="hover:text-tertiary-container transition-colors" href="tel:07383981983">07383 981983</a>
+</p>
+<p class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-sm">mail</span> <a class="hover:text-tertiary-container transition-colors" href="mailto:muideen.akanji1@gmail.com">muideen.akanji1@gmail.com</a>
+</p>
+</div>
+</div>
+<!-- Services Links -->
+<div class="flex flex-col gap-3">
+<h4 class="font-button-text text-button-text text-surface mb-2">Services</h4>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="#">Plumbing</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="our-services-handyman-lex-fix-it.html">Electrical</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="our-services-handyman-lex-fix-it.html">General Repairs</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="#">Carpentry</a>
+</div>
+<!-- Quick Links -->
+<div class="flex flex-col gap-3">
+<h4 class="font-button-text text-button-text text-surface mb-2">Quick Links</h4>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="index.html">Home</a>
+<a class="font-body-md text-body-md text-secondary-container font-bold underline hover:text-tertiary-container transition-colors" href="portfolio-handyman-lex-fix-it.html">Portfolio</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="portfolio-handyman-lex-fix-it.html">Reviews</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-tertiary-container transition-colors" href="index.html">Privacy Policy</a>
+</div>
+<!-- Opening Hours -->
+<div class="flex flex-col gap-3">
+<h4 class="font-button-text text-button-text text-surface mb-2">Availability</h4>
+<div class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant">
+<p class="flex justify-between border-b border-surface/10 pb-1 mb-1"><span>Mon - Sun:</span> <span>24 Hours</span></p>
+<p class="mt-4 text-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-safety-orange text-lg">emergency</span>
+                         Emergency Service Available
+                    </p>
+</div>
+</div>
+</div>
+<div class="max-w-container-max-width mx-auto mt-16 pt-8 border-t border-surface/10 text-center font-body-md text-body-md text-surface-variant/60">
+             © 2024 Handyman Lex Fix It. Professional Grade Craftsmanship.
+        </div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F3507ab7e-e197-4039-b858-520b15c1eb5f" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

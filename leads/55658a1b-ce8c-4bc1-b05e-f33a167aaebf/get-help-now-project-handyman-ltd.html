@@ -1,0 +1,364 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact | Project Handyman LTD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#f9dcd4",
+                      "on-secondary-container": "#00616d",
+                      "safety-orange": "#FF5F1F",
+                      "inverse-on-surface": "#3d2c27",
+                      "outline": "#aa897f",
+                      "surface": "#1e100b",
+                      "tertiary-fixed-dim": "#8dcdff",
+                      "on-error": "#690005",
+                      "primary-fixed-dim": "#ffb59c",
+                      "tertiary-fixed": "#cae6ff",
+                      "electric-cyan": "#00E5FF",
+                      "on-primary-fixed": "#390c00",
+                      "on-secondary": "#00363d",
+                      "on-error-container": "#ffdad6",
+                      "secondary-container": "#00e3fd",
+                      "on-primary-container": "#561700",
+                      "on-tertiary-fixed-variant": "#004b70",
+                      "outline-variant": "#5b4138",
+                      "surface-container-high": "#372621",
+                      "tertiary-container": "#009de4",
+                      "inverse-primary": "#ab3600",
+                      "charcoal-bg": "#121212",
+                      "on-surface-variant": "#e3bfb3",
+                      "on-primary-fixed-variant": "#832700",
+                      "on-secondary-fixed-variant": "#004f58",
+                      "surface-bright": "#47352f",
+                      "secondary-fixed-dim": "#00daf3",
+                      "slate-surface": "#1E2227",
+                      "on-tertiary": "#00344f",
+                      "surface-container-low": "#271813",
+                      "secondary-fixed": "#9cf0ff",
+                      "on-tertiary-fixed": "#001e30",
+                      "surface-dim": "#1e100b",
+                      "surface-container-lowest": "#180b07",
+                      "on-surface": "#f9dcd4",
+                      "error-container": "#93000a",
+                      "glass-stroke": "rgba(255, 255, 255, 0.1)",
+                      "background": "#1e100b",
+                      "surface-container": "#2b1c17",
+                      "surface-container-highest": "#42312b",
+                      "on-primary": "#5c1900",
+                      "secondary": "#bdf4ff",
+                      "surface-variant": "#42312b",
+                      "primary-container": "#ff5f1f",
+                      "inverse-surface": "#f9dcd4",
+                      "error": "#ffb4ab",
+                      "on-tertiary-container": "#00304a",
+                      "primary": "#ffb59c",
+                      "tertiary": "#8dcdff",
+                      "surface-tint": "#ffb59c",
+                      "on-secondary-fixed": "#001f24",
+                      "primary-fixed": "#ffdbcf"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "stack-lg": "32px",
+                      "section-gap": "120px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .glass-panel {
+                @apply bg-slate-surface/80 backdrop-blur-xl border border-glass-stroke shadow-2xl;
+            }
+            .glass-input {
+                @apply bg-background/50 border border-glass-stroke text-on-surface focus:ring-0 focus:border-safety-orange transition-colors duration-300;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen font-body-md antialiased selection:bg-safety-orange selection:text-white flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-background/80 dark:bg-background/80 backdrop-blur-md font-headline-md text-headline-md font-label-bold text-label-bold docked full-width top-0 z-50 sticky border-b border-glass-stroke flat no shadows">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter py-stack-md w-full max-w-container-max mx-auto">
+<a class="font-display-lg text-body-lg font-black text-on-surface uppercase tracking-tighter text-safety-orange hover:text-safety-orange transition-all duration-300" href="/">
+                PROJECT HANDYMAN LTD
+            </a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-safety-orange transition-all duration-300" href="/">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-safety-orange transition-all duration-300" href="/services">Services</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-safety-orange transition-all duration-300" href="/portfolio">Portfolio</a>
+<a class="text-safety-orange border-b-2 border-safety-orange pb-1 hover:text-safety-orange transition-all duration-300 scale-95 duration-150" href="/contact">Contact</a>
+</div>
+<a class="hidden md:inline-flex bg-safety-orange text-white px-6 py-3 rounded hover:bg-opacity-90 transition-all duration-300 font-label-bold text-label-bold shadow-[0_0_15px_rgba(255,95,31,0.3)] hover:shadow-[0_0_25px_rgba(255,95,31,0.5)]" href="/contact">
+                Get Help Now
+            </a>
+<!-- Mobile Menu Button (Decorative for now) -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col relative z-10">
+<!-- Hero Section for Contact -->
+<header class="relative pt-section-gap pb-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full">
+<div class="text-center space-y-stack-sm max-w-3xl mx-auto">
+<h1 class="font-display-lg text-display-lg md:text-[80px] leading-tight font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-safety-orange to-electric-cyan pb-2">
+                    Get Help Now
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Precision engineering for your home starts with a conversation. Reach out to secure your spot with West London’s premium handyman service.
+                </p>
+</div>
+</header>
+<!-- Form and Contact Info Section -->
+<section class="px-margin-mobile md:px-gutter pb-section-gap w-full max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Contact Info Card (Sidebar) -->
+<div class="lg:col-span-4 space-y-gutter">
+<div class="glass-panel rounded-xl p-stack-lg flex flex-col gap-stack-md h-full">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-electric-cyan">location_on</span>
+                            Location
+                        </h2>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<div>
+<strong class="text-on-surface block mb-1">Headquarters</strong>
+                                Project Handyman LTD<br>
+                                West London, Acton
+                            </div>
+<div class="pt-4 border-t border-glass-stroke">
+<strong class="text-on-surface block mb-1">Direct Line</strong>
+<a class="text-safety-orange hover:text-white transition-colors flex items-center gap-2 mt-2" href="mailto:info@projecthandyman.co.uk">
+<span class="material-symbols-outlined text-sm">mail</span>
+                                    info@projecthandyman.co.uk
+                                </a>
+</div>
+</div>
+<!-- Map Image Placeholder -->
+<div class="mt-auto pt-stack-lg">
+<div class="w-full h-48 rounded-lg overflow-hidden border border-glass-stroke relative group">
+<img class="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-opacity duration-500" data-alt="A highly detailed, ultra-modern dark-mode map view of West London, Acton area. The map style is sleek and technical, resembling a high-end GPS navigation interface. Streets are depicted in deep charcoal and subtle grays, with key routes subtly glowing. A precise, glowing safety-orange pin drops confidently on the Acton location, casting a soft orange luminescent glow on the surrounding digital terrain. The overall aesthetic is precision-engineered, dark, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm6aAz0Qdw6Ib2Bu4aMe4NbqBJiZZlWWcgP7LCtf5yvApV6PvTOB-OD6jmyMlIWTznsMj9dndb8z0CP5sAcUq0CzHFaw6Z4TyFZG5KvRw9-7TxvlxPajSsyFdDz8YsPknkB71sTeTHENBCSLw53kPTuqC6muzINWq6X7hSzO7D6XNlO4kWdCRcFLwIDxwLa3peuwD8dbdNTGVQhCtU_fe-NlnPJzmXOTUZ0A4djFNDkIo75MZUts9C">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent pointer-events-none"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-8">
+<div class="glass-panel rounded-xl p-stack-lg md:p-[48px]">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-lg">
+                            Submit a Request
+                        </h2>
+<form class="space-y-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant block uppercase tracking-widest text-xs" for="name">Name *</label>
+<input class="glass-input w-full rounded-lg px-4 py-3 font-body-md placeholder-on-surface-variant/50 focus:outline-none" id="name" placeholder="John Doe" required="" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant block uppercase tracking-widest text-xs" for="email">Email address *</label>
+<input class="glass-input w-full rounded-lg px-4 py-3 font-body-md placeholder-on-surface-variant/50 focus:outline-none" id="email" placeholder="john@example.com" required="" type="email">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant block uppercase tracking-widest text-xs" for="service">Service Needed</label>
+<div class="relative">
+<select class="glass-input w-full rounded-lg px-4 py-3 font-body-md appearance-none bg-slate-surface focus:outline-none cursor-pointer" id="service">
+<option disabled="" selected="" value="">Select a service category</option>
+<option value="general">General Repairs</option>
+<option value="painting">Painting and Decorating</option>
+<option value="furniture">Furniture Assembly</option>
+<option value="other">Other / Custom Project</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-safety-orange">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant block uppercase tracking-widest text-xs" for="message">Message *</label>
+<textarea class="glass-input w-full rounded-lg px-4 py-3 font-body-md placeholder-on-surface-variant/50 focus:outline-none resize-none" id="message" placeholder="Describe your project requirements in detail..." required="" rows="5"></textarea>
+</div>
+<!-- Honeypot -->
+<div class="hidden">
+<label>Leave this field empty</label>
+<input name="honeypot" type="text">
+</div>
+<div class="pt-stack-sm">
+<button class="w-full md:w-auto bg-safety-orange text-white px-8 py-4 rounded-lg font-label-bold text-label-bold uppercase tracking-wider shadow-[0_0_20px_rgba(255,95,31,0.2)] hover:shadow-[0_0_30px_rgba(255,95,31,0.6)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2" type="submit">
+                                    Submit Request
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="bg-surface-container-low border-y border-glass-stroke py-section-gap relative overflow-hidden">
+<!-- Decorative background elements -->
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-electric-cyan/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto relative z-10">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-2">Frequently Asked Questions</h2>
+<div class="h-1 w-20 bg-safety-orange mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
+<!-- FAQ 1 -->
+<div class="glass-panel p-stack-md rounded-lg group hover:border-electric-cyan/50 transition-colors duration-300">
+<h3 class="font-headline-md text-lg text-safety-orange mb-2 flex items-start gap-2">
+<span class="material-symbols-outlined text-electric-cyan text-xl shrink-0 mt-0.5">help</span>
+                            What areas do you cover?
+                        </h3>
+<p class="font-body-md text-on-surface-variant pl-7">
+                            We primarily serve the West London area, including Acton and the surrounding areas.
+                        </p>
+</div>
+<!-- FAQ 2 -->
+<div class="glass-panel p-stack-md rounded-lg group hover:border-electric-cyan/50 transition-colors duration-300">
+<h3 class="font-headline-md text-lg text-safety-orange mb-2 flex items-start gap-2">
+<span class="material-symbols-outlined text-electric-cyan text-xl shrink-0 mt-0.5">verified_user</span>
+                            Are your handymen qualified and insured?
+                        </h3>
+<p class="font-body-md text-on-surface-variant pl-7">
+                            Yes, all our handymen are fully qualified and insured to ensure your peace of mind.
+                        </p>
+</div>
+<!-- FAQ 3 -->
+<div class="glass-panel p-stack-md rounded-lg md:col-span-2 group hover:border-electric-cyan/50 transition-colors duration-300">
+<h3 class="font-headline-md text-lg text-safety-orange mb-2 flex items-start gap-2">
+<span class="material-symbols-outlined text-electric-cyan text-xl shrink-0 mt-0.5">schedule</span>
+                            How soon can you start a project?
+                        </h3>
+<p class="font-body-md text-on-surface-variant pl-7">
+                            We strive to accommodate our clients' schedules and can often start a project within a few days of booking.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest font-body-md text-body-md font-label-bold text-label-bold full-width border-t border-glass-stroke flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-gutter py-section-gap max-w-container-max mx-auto">
+<div class="space-y-4">
+<div class="font-display-lg text-headline-md text-safety-orange">PROJECT HANDYMAN LTD</div>
+<p class="text-on-surface-variant font-body-sm max-w-xs">Precision Engineering for the Home.</p>
+<p class="text-on-surface-variant/50 text-sm mt-8">© 2024 PROJECT HANDYMAN LTD. Precision Engineering for the Home.</p>
+</div>
+<div>
+<h4 class="font-label-bold text-on-surface mb-4 uppercase tracking-wider text-xs">Services</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-safety-orange underline transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange" href="#">General Repairs</a></li>
+<li><a class="text-on-surface-variant hover:text-safety-orange underline transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange" href="services-project-handyman-ltd.html">Painting &amp; Decorating</a></li>
+<li><a class="text-on-surface-variant hover:text-safety-orange underline transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange" href="services-project-handyman-ltd.html">Furniture Assembly</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-on-surface mb-4 uppercase tracking-wider text-xs">Legal &amp; Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-electric-cyan font-bold hover:text-safety-orange underline transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange" href="get-help-now-project-handyman-ltd.html">Booking</a></li>
+<li><a class="text-on-surface-variant hover:text-safety-orange underline transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange" href="index.html">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-safety-orange underline transition-all duration-200 outline-none focus:ring-2 focus:ring-safety-orange" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F55658a1b-ce8c-4bc1-b05e-f33a167aaebf" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

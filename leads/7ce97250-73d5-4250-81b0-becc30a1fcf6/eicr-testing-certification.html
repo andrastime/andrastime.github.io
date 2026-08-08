@@ -1,0 +1,296 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>EICR Testing &amp; Certification | RCD Electrical</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Sora:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#ffdfa0",
+                      "error": "#ffb4ab",
+                      "primary-container": "#ffbf00",
+                      "surface-dim": "#131313",
+                      "carbon-surface": "#1A1A1A",
+                      "outline-variant": "#504532",
+                      "on-surface": "#e5e2e1",
+                      "on-primary-fixed-variant": "#5c4300",
+                      "surface-bright": "#3a3939",
+                      "on-error-container": "#ffdad6",
+                      "on-tertiary": "#303031",
+                      "on-tertiary-container": "#545454",
+                      "on-surface-variant": "#d4c5ab",
+                      "outline": "#9c8f78",
+                      "surface-container-low": "#1c1b1b",
+                      "secondary-fixed-dim": "#c0c6db",
+                      "primary": "#ffe2ab",
+                      "on-secondary": "#293040",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-secondary-fixed": "#141b2b",
+                      "secondary-fixed": "#dce2f7",
+                      "amber-glow": "#FFD700",
+                      "inverse-on-surface": "#313030",
+                      "on-secondary-fixed-variant": "#404758",
+                      "surface-variant": "#353534",
+                      "secondary": "#c0c6db",
+                      "tertiary": "#e7e5e5",
+                      "tertiary-fixed-dim": "#c7c6c6",
+                      "surface-container-highest": "#353534",
+                      "on-secondary-container": "#aeb5c9",
+                      "on-primary-fixed": "#261a00",
+                      "on-error": "#690005",
+                      "primary-fixed-dim": "#fbbc00",
+                      "surface": "#131313",
+                      "secondary-container": "#404758",
+                      "on-background": "#e5e2e1",
+                      "inverse-surface": "#e5e2e1",
+                      "surface-container": "#201f1f",
+                      "on-tertiary-fixed": "#1b1c1c",
+                      "background": "#131313",
+                      "inverse-primary": "#795900",
+                      "tertiary-container": "#cac9c9",
+                      "error-container": "#93000a",
+                      "surface-container-high": "#2a2a2a",
+                      "on-primary": "#402d00",
+                      "on-primary-container": "#6d5000",
+                      "on-tertiary-fixed-variant": "#464747",
+                      "pure-white": "#FFFFFF",
+                      "tertiary-fixed": "#e4e2e2",
+                      "surface-tint": "#fbbc00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "section-padding-desktop": "120px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "section-padding-mobile": "64px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "button-text": [
+                              "Sora"
+                      ],
+                      "headline-lg-mobile": [
+                              "Sora"
+                      ],
+                      "headline-lg": [
+                              "Sora"
+                      ],
+                      "headline-md": [
+                              "Sora"
+                      ],
+                      "body-md": [
+                              "Montserrat"
+                      ],
+                      "display-lg": [
+                              "Sora"
+                      ],
+                      "body-lg": [
+                              "Montserrat"
+                      ],
+                      "label-bold": [
+                              "Sora"
+                      ]
+              },
+              "fontSize": {
+                      "button-text": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, theme('colors.primary-container'), theme('colors.primary'));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .amber-glow-shadow {
+            box-shadow: 0 4px 20px rgba(255, 191, 0, 0.15);
+        }
+        .carbon-card {
+            background-color: theme('colors.carbon-surface');
+            border: 1px solid theme('colors.surface-variant');
+            transition: all 0.3s ease;
+        }
+        .carbon-card:hover {
+            border-color: theme('colors.primary-container');
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen pt-20">
+<!-- TopNavBar -->
+<nav class="bg-background/80 backdrop-blur-xl dark:bg-background/80 fixed top-0 w-full z-50 border-b border-outline-variant/30 shadow-[0_4px_20px_rgba(255,191,0,0.05)]">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter">
+                RCD ELECTRICAL
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-button-text text-button-text uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-300" href="our-services.html">Services</a>
+<a class="font-button-text text-button-text uppercase tracking-wider text-primary border-b-2 border-primary pb-1" href="eicr-testing-certification.html">EICR Testing</a>
+<a class="font-button-text text-button-text uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-300" href="our-services.html">Emergency</a>
+<a class="font-button-text text-button-text uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">About</a>
+<a class="font-button-text text-button-text uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">Contact</a>
+</div>
+<button class="hidden md:flex font-button-text text-button-text uppercase tracking-wider bg-primary-container text-black px-6 py-3 rounded-DEFAULT hover:bg-primary transition-all scale-95 active:scale-90 amber-glow-shadow items-center gap-2">
+                Book Now
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop relative overflow-hidden flex-grow">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<div class="w-full h-full bg-cover bg-center" data-alt="A highly detailed, modern architectural blueprint featuring precise geometric lines, electrical circuit symbols, and technical schematics. The composition is rendered in glowing amber lines against a deep, carbon black background, emphasizing high-tech precision and industrial luxury." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhFEQXcCmmRYmDh5mVyWrkDcJcpHzneMd_FiZql0ITeGhfn3Q7EVFMXfsI7P77fUAXuvxT3qd_kLD_l031xh8WIN1boBwhdCsheiKJVohNtocAlVe4XrG903fKn05qpNiK1qqKOLsN9YRue3dE_d9rgx2ME-SLV60qhBux_01jNRFvvNhKNG1s4dIHBAMKMZr2a1iPrQeUEg-R1iP1JEaTltCneHn0MJ568_hngaViyNr9n6Z8Cvar')"></div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<div class="inline-flex items-center gap-2 bg-primary-container/10 border border-primary-container/30 px-4 py-2 rounded-full mb-6">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="bolt" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-label-bold text-label-bold text-primary-container uppercase">Certified Inspections</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6">
+                    Professional <span class="text-gradient">EICR</span> Testing &amp; Certification
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                    Comprehensive Electrical Installation Condition Reports for landlords, homeowners, and commercial properties in Fulham. Ensuring safety, compliance, and peace of mind with expert diagnostics.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="font-button-text text-button-text uppercase tracking-wider bg-primary-container text-black px-8 py-4 rounded-DEFAULT hover:bg-primary transition-all amber-glow-shadow flex items-center justify-center gap-2">
+                        Book EICR Now
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="font-button-text text-button-text uppercase tracking-wider border border-primary-container text-on-surface px-8 py-4 rounded-DEFAULT hover:bg-primary-container/10 transition-all flex items-center justify-center gap-2">
+                        View Pricing
+                    </button>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden carbon-card p-2 aspect-square lg:aspect-[4/3]">
+<img class="w-full h-full object-cover rounded-lg" data-alt="A professional electrician in high-visibility technical gear holding a glowing tablet device displaying an EICR checklist. The setting is a modern, high-end residential utility room. Lighting is dramatic, with deep carbon shadows contrasted by crisp, amber-toned technical readouts on the tablet, conveying expertise and advanced diagnostics." src="https://lh3.googleusercontent.com/aida/AP1WRLs30gRseVlC5ltQePtcigQExMky20ivUyvZLHNs22Q4LugvONamNnVX8yWEVhtEfxa0qmyIQpbz9OlvgVMqDdJV4cwV8PJIPdGa-NAPJo5OSE_gGVPMO53esGbsRUxH6qFGuVTky08kfwH5GrM-Bt_e6CTbjkxk9xsSWXgCCsyTV0VcTs1K1bd9GPj4H0sX2occzYe_FYEHRUevuwN1cYA_5hg7q-udynVf9dPXpAhj-vh9et2WHqPErcA">
+<div class="absolute bottom-6 left-6 right-6 bg-carbon-surface/90 backdrop-blur-md border border-outline-variant p-4 rounded-lg flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center border border-primary-container">
+<span class="material-symbols-outlined text-primary-container" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<div class="font-label-bold text-label-bold text-on-surface">NICEIC APPROVED</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm">Certified Contractor</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-section-padding-mobile md:py-section-padding-desktop border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<div class="font-headline-md text-headline-md text-primary mb-6">RCD ELECTRICAL</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Reliable electrical services in Fulham for emergency call-outs, fault finding, EICR certificates, and safe electrical repairs.</p>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm mt-8 opacity-100 hover:opacity-80 transition-opacity">
+                    © 2024 RCD Electrical LTD Fulham. All rights reserved. Registered NICEIC Approved Contractor.
+                </div>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-6">Services</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-amber-glow transition-colors" href="our-services.html">Residential Services</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-amber-glow transition-colors" href="our-services.html">Commercial Electrical</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-amber-glow transition-colors" href="our-services.html">Emergency Callouts</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-amber-glow transition-colors" href="our-services.html">EV Charging</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-amber-glow transition-colors" href="index.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-amber-glow transition-colors" href="index.html">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-6">Contact</h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="phone">phone</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-amber-glow transition-colors" href="tel:02034882928">020 3488 2928</a>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="mail">mail</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-amber-glow transition-colors" href="mailto:info@rcdelectrician.co.uk">info@rcdelectrician.co.uk</a>
+</li>
+</ul>
+</div>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F7ce97250-73d5-4250-81b0-becc30a1fcf6" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

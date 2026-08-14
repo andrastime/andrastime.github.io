@@ -1,0 +1,343 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Proof Gallery | Handys Property Services</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Hanken Grotesk, Inter, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=Inter:wght@400;700&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#0d1c2f",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#ffb690",
+                        "deep-navy": "#0F172A",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-secondary-container": "#5c2400",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#76859b",
+                        "surface-dim": "#dcd9db",
+                        "surface-container-high": "#eae7e9",
+                        "inverse-on-surface": "#f3f0f2",
+                        "on-background": "#1b1b1d",
+                        "tertiary-fixed": "#d5e3fd",
+                        "primary-container": "#131b2e",
+                        "safety-orange": "#F97316",
+                        "background": "#fcf8fa",
+                        "surface-container": "#f0edef",
+                        "off-white": "#F8FAFC",
+                        "inverse-surface": "#303032",
+                        "inverse-primary": "#bec6e0",
+                        "on-surface": "#1b1b1d",
+                        "primary": "#000000",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e4e2e4",
+                        "outline-variant": "#c6c6cd",
+                        "surface-tint": "#565e74",
+                        "on-surface-variant": "#45464d",
+                        "on-error-container": "#93000a",
+                        "trust-blue": "#2563EB",
+                        "secondary-fixed": "#ffdbca",
+                        "slate-gray": "#475569",
+                        "on-secondary-fixed": "#341100",
+                        "on-secondary-fixed-variant": "#783200",
+                        "on-primary-container": "#7c839b",
+                        "surface": "#fcf8fa",
+                        "primary-fixed": "#dae2fd",
+                        "surface-bright": "#fcf8fa",
+                        "tertiary-fixed-dim": "#b9c7e0",
+                        "on-primary": "#ffffff",
+                        "secondary": "#9d4300",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#000000",
+                        "outline": "#76777d",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#131b2e",
+                        "secondary-container": "#fd761a",
+                        "surface-container-low": "#f6f3f5",
+                        "surface-container-highest": "#e4e2e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "section-gap-lg": "120px",
+                        "section-gap-md": "80px",
+                        "margin-mobile": "16px",
+                        "element-gap": "16px"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "display-hero-mobile": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "callout-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-hero-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "callout-bold": ["20px", { "lineHeight": "1.4", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .ambient-shadow {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-off-white text-on-surface font-body-md antialiased selection:bg-safety-orange selection:text-white">
+<!-- TopNavBar Component -->
+<header class="bg-deep-navy dark:bg-deep-navy shadow-sm sticky top-0 z-50 w-full">
+<div class="flex justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md font-bold text-off-white flex items-center gap-2 style_universal_hover scale-95 active:scale-90 transition-transform" href="homepage-handys-property-services.html">
+                Handys Property Services
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center gap-8">
+<!-- 'Proof' is the active tab based on intent -->
+<a class="font-body-md text-body-md text-safety-orange font-bold border-b-2 border-safety-orange pb-1 scale-95 active:scale-90 transition-transform" href="index.html">Proof</a>
+<a class="font-body-md text-body-md text-off-white hover:text-safety-orange transition-colors scale-95 active:scale-90 transition-transform" href="skills-services-handys-property-services-2.html">Services</a>
+<a class="font-body-md text-body-md text-off-white hover:text-safety-orange transition-colors scale-95 active:scale-90 transition-transform" href="trust-reviews-handys-property-services.html">Reviews</a>
+<a class="font-body-md text-body-md text-off-white hover:text-safety-orange transition-colors scale-95 active:scale-90 transition-transform" href="homepage-handys-property-services.html">About</a>
+<a class="font-body-md text-body-md text-off-white hover:text-safety-orange transition-colors scale-95 active:scale-90 transition-transform" href="homepage-handys-property-services.html">Contact</a>
+</nav>
+<!-- Trailing Primary Action -->
+<div class="flex items-center gap-4">
+<a class="hidden md:inline-flex bg-safety-orange text-white font-callout-bold text-callout-bold px-6 py-2 rounded font-bold hover:opacity-90 transition-all scale-95 active:scale-90 transition-transform" href="tel:#">
+                    Call Now
+                </a>
+<!-- Mobile Menu Toggle (Visual only for mockup) -->
+<button class="md:hidden text-off-white material-symbols-outlined text-3xl">menu</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-deep-navy pt-20 pb-32 px-margin-mobile md:px-gutter overflow-hidden">
+<!-- Background Image overlay -->
+<div class="absolute inset-0 opacity-20" data-alt="A high-end, cinematic wide shot of a modern architectural home interior under construction, focusing on exposed premium timber beams and pristine drywall. The lighting is bright and natural, streaming through large windows, highlighting dust motes in the air. The color palette emphasizes crisp whites, deep slate shadows, and subtle warm wood tones, conveying professional, high-end property service execution." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuiz4bpgAdJSVNObcww0cKJUHdznK--PhApLj7HnztVYDq1kyfYFAxGgz_3UI94qeQwg_TqKVwcZGbb_l60QylgIsDToUvS9bZjXPRddJ2LIklvDAyF973PzIsF3wNXBC4vBmyVI-iLL258dV1xkMvUCPjAPSvzqU5P4Hmmr19cxixFDrQ9lXv-3GmfPten6JH673fEfyGysMiCiNgKj9FV68P3LZBqEaBJsV4sC9hCpalleSSl-R3')"></div>
+<div class="max-w-container-max mx-auto relative z-10 flex flex-col items-center text-center">
+<span class="font-label-caps text-label-caps text-safety-orange mb-4 tracking-widest uppercase">No Promises, Just Proof</span>
+<h1 class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero text-off-white mb-6 max-w-3xl">
+                    Seeing the Standard <br><span class="text-slate-gray">Before You Hire.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl mx-auto mb-10">
+                    With over a decade of hands-on experience and a relentless commitment to transparency, we document our process. {{DATA:DOCUMENT:DOCUMENT_1}} Explore our gallery to see exactly what "Property Excellence" looks like.
+                </p>
+<div class="flex flex-wrap gap-4 justify-center">
+<a class="bg-safety-orange text-white font-callout-bold text-callout-bold px-8 py-3 rounded font-bold hover:-translate-y-1 transition-transform shadow-lg" href="#videos">
+                        Watch The Videos
+                    </a>
+<a class="bg-transparent border-2 border-slate-gray text-off-white font-callout-bold text-callout-bold px-8 py-3 rounded font-bold hover:border-off-white transition-colors" href="#projects">
+                        View Projects
+                    </a>
+</div>
+</div>
+</section>
+<!-- Video Slider Section: The Tool On Trial -->
+<section class="py-section-gap-md md:py-section-gap-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="videos">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-2">The Tool On Trial</h2>
+<p class="font-body-md text-body-md text-slate-gray">70+ Deep-Dive Videos &amp; Transparent Reviews.</p>
+</div>
+<a class="hidden md:flex items-center gap-2 font-label-caps text-label-caps text-deep-navy uppercase hover:text-safety-orange transition-colors group" href="homepage-handys-property-services.html">
+                    Visit YouTube Channel
+                    <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Horizontal Slider -->
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-6 hide-scrollbar pb-8 -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0">
+<!-- Video Card 1 -->
+<div class="snap-start shrink-0 w-[85vw] md:w-[600px] relative rounded-lg overflow-hidden ambient-shadow group cursor-pointer bg-white border border-slate-gray border-opacity-10">
+<div class="aspect-video relative overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A dynamic, close-up shot of a high-end power drill resting on a spotless, custom-built wooden workbench. The drill is sleek black and industrial orange, perfectly matching the brand colors. The lighting is dramatic, spotlighting the tool against a deep navy blue background, creating a premium, professional 'tool review' aesthetic with sharp focus and cinematic depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfKj6rV5C1S51zNMTA97VtGEjpIqpZS6mTkLlToR3QnngdByJgArAWZ86AgIppJEals0X51WB7zfvo6fEk4v5g0FM8coQlHJONwfyKvpF8O_YyTwuG4JYs_GOxYZ7mRa2CqSmg1nrZRVERXmA_T4EbsCLZn-OzLXTamZr51L6fn8x69x4z7ktfGA4uwRI7lBdgf-y3BtNrSmSXzpQPzpCdyhIZXJjzQ5Cz_-jEVZpoZJD0y5IMlbLO">
+<div class="absolute top-4 left-4 bg-safety-orange text-white font-label-caps text-label-caps px-3 py-1 rounded shadow-sm z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                            LIVE PROOF
+                        </div>
+<div class="absolute inset-0 bg-deep-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity transform scale-50 group-hover:scale-100" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-deep-navy to-transparent pt-12 pb-6 px-6">
+<h3 class="font-headline-md text-headline-md text-off-white line-clamp-2 shadow-sm">Makita vs DeWalt: The Ultimate Impact Driver Test on Site</h3>
+</div>
+</div>
+<!-- Video Card 2 -->
+<div class="snap-start shrink-0 w-[85vw] md:w-[600px] relative rounded-lg overflow-hidden ambient-shadow group cursor-pointer bg-white border border-slate-gray border-opacity-10">
+<div class="aspect-video relative overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A beautifully composed, mid-range shot of a freshly installed, luxury modern kitchen island featuring flawless white marble and matte black fixtures. A set of professional spirit levels and measuring tools lay perfectly aligned on the surface. The scene is brightly lit with cool, clean light, emphasizing precision, quality craftsmanship, and a premium property service standard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR1z2DL4uiTJ5r--RsxmnR4d4X3JnbVLO6N7oVnYaeBsgfdg39Ca8WMu9Dkwurfv8rRJpa6deK7KVfk9z2ACNZe8dv_nuAlT2zhXBs_-VrEGC4NGA6R-o1OcY85X_vWkp0nDgMr-f9-wrZuCwOmY03B9Dk7M9_ssOKnNzsPTY23O-jjeZoa_gC4MOaYX8gXXgoe87obb6HSO8eRIUT2Avb-hGU3qyFp72PEAjmsQsfP3a-HzDyZQ-M">
+<div class="absolute top-4 left-4 bg-safety-orange text-white font-label-caps text-label-caps px-3 py-1 rounded shadow-sm z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                            LIVE PROOF
+                        </div>
+<div class="absolute inset-0 bg-deep-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity transform scale-50 group-hover:scale-100" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-deep-navy to-transparent pt-12 pb-6 px-6">
+<h3 class="font-headline-md text-headline-md text-off-white line-clamp-2 shadow-sm">Kitchen Renovation Timelapse: From Teardown to Perfect Finish</h3>
+</div>
+</div>
+<!-- Video Card 3 -->
+<div class="snap-start shrink-0 w-[85vw] md:w-[600px] relative rounded-lg overflow-hidden ambient-shadow group cursor-pointer bg-white border border-slate-gray border-opacity-10">
+<div class="aspect-video relative overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A detailed shot showing the meticulous application of premium sealant along the edge of a newly installed, dark slate shower tray. The hands of a professional, wearing clean work gloves, guide the tool with exact precision. The bathroom environment is modern and minimalist. The lighting highlights the flawless, smooth bead of sealant, demonstrating high-quality finishing work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtFsUXNIOhBW46_xjVHZTCtsE8vPdqiOVUa7Ky699vSAbd7teNg56SpyhWlnKCDeWovkaF5W7eafSJlpAkEVZLiO0DOhkzWvlRWX7xfg2gpInSNV7MgpsA-fnwnRrW5nPaVf9SA1md320P0rv9jm22FN_EWZqmlsVfE4F-esEsl4UteuCRJX1AuN5-98PpawTsifeIFac3Ah9CTmBv1oAFKzxJ4Tlbe-iTltqKw9t7pEmyC9nys2zM">
+<div class="absolute top-4 left-4 bg-safety-orange text-white font-label-caps text-label-caps px-3 py-1 rounded shadow-sm z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                            LIVE PROOF
+                        </div>
+<div class="absolute inset-0 bg-deep-navy bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity transform scale-50 group-hover:scale-100" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-deep-navy to-transparent pt-12 pb-6 px-6">
+<h3 class="font-headline-md text-headline-md text-off-white line-clamp-2 shadow-sm">Mastering Silicone Sealant: Professional Finishing Techniques</h3>
+</div>
+</div>
+</div>
+<div class="mt-8 md:hidden flex justify-center">
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-deep-navy uppercase hover:text-safety-orange transition-colors group" href="homepage-handys-property-services.html">
+                    Visit YouTube Channel
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Divider -->
+<div class="max-w-container-max mx-auto px-gutter"><hr class="border-t border-slate-gray border-opacity-20"></div>
+<!-- Project Photo Gallery Section (Masonry) -->
+<section class="py-section-gap-md md:py-section-gap-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="projects">
+<div class="text-center mb-12 max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-4">Completed Projects</h2>
+<p class="font-body-md text-body-md text-slate-gray">A curated selection of our recent property improvements, showcasing our commitment to clean lines, perfect finishes, and structural integrity.</p>
+</div>
+<!-- CSS Columns Masonry Layout -->
+<div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+<!-- Masonry Item 1 -->
+<div class="break-inside-avoid relative group rounded overflow-hidden ambient-shadow border border-slate-gray border-opacity-10 bg-white">
+<img class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A stunning architectural photograph of a newly renovated, modern living room. The space features large floor-to-ceiling windows, perfectly laid herringbone oak flooring, and crisp white walls. The lighting is soft and inviting, highlighting the flawless finish of the carpentry and painting. The mood is aspirational and high-end, demonstrating top-tier property maintenance and renovation quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2JPi-PUPjh3V8G7iIJ-LTe290QLpOt-60wn26SgItisUz1IVQRX1JrHf0NFoXEyXzY55R6GPXn27dc561mNEK5WmkvvljrMmZlL_s4bMYLjj7TWIm8NnfzCERiVNLWB63cHR1IfeIgYW4xihiy_V3Ia0mrlAAa09gtMHX4H33GIKvaKsdfTiA-mMB6WD6P8qRPRS2xaJYhk0XdK5et5MY9rhEhSaXh6cPLvVa_U0ajjJSmpyzjY61">
+<div class="absolute inset-0 bg-deep-navy bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100">
+<span class="font-label-caps text-label-caps text-safety-orange mb-1 uppercase">Interior Finish</span>
+<h4 class="font-body-lg text-body-lg text-off-white font-bold">Herringbone Oak Installation</h4>
+</div>
+</div>
+<!-- Masonry Item 2 (Taller) -->
+<div class="break-inside-avoid relative group rounded overflow-hidden ambient-shadow border border-slate-gray border-opacity-10 bg-white">
+<img class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 aspect-[3/4]" data-alt="A highly detailed, close-up vertical shot of custom exterior brickwork and sleek metal flashing on a modern residential property. The precision of the mortar lines and the perfect alignment of materials are the focus. Lit by warm afternoon sunlight, creating strong shadows that emphasize texture and durability. The aesthetic is industrial yet refined, showing expert craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDmmC-OC-hsP-Y0aqe5LwWn4DkCT3HrrpYHUyyBkT9OXKQVLjImB2nGLSTFaD9pRcUo1FyPhj5U5zgNMju4bL0rjdtlrFtMOCE0SR4TEJK5nkUviaRmGwT1at6gZI6IY21p09S1NOIWc9o5KUYw1VRMdFi_DjvGZt5CZ_gijizBDnvp6FaCk5BbRxdLWiJn20i6eamEcqH-eOHYErzY-Qz-lzQkSzcZ_4jOeee2WfprWgKg2S59SQG">
+<div class="absolute inset-0 bg-deep-navy bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100">
+<span class="font-label-caps text-label-caps text-safety-orange mb-1 uppercase">Exterior Masonry</span>
+<h4 class="font-body-lg text-body-lg text-off-white font-bold">Custom Facade Restoration</h4>
+</div>
+</div>
+<!-- Masonry Item 3 -->
+<div class="break-inside-avoid relative group rounded overflow-hidden ambient-shadow border border-slate-gray border-opacity-10 bg-white">
+<img class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A bright, wide shot of a newly fitted, contemporary family bathroom. It features a freestanding matte white bathtub, large format grey slate floor tiles, and a custom glass walk-in shower enclosure. The plumbing fixtures are brushed brass, adding a touch of luxury. The room is impeccably clean, representing the high standard of final handover for property renovations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe7nShv4oaXFWqZLSE52jX2cHfJa6KU5xrVb7iPFKaL56to_wWsbtDKGGqEOF3IxpMuHU3KGWtH0n9LizwIuQAVxS7k3xzf_OaRGWROvdVF5aZyDdiSa-Pc79-34e1unchNR_Y9mN8-qKGlONlLzgL741SgGFwg1Ho3WJBFk95USLNzzAyKWFJQbd8_KP7RhGgsZ9NziTIND41a9yli9Kfpj5gqL7lDvlXkKmIMDyzlI1DAbV2vzny">
+<div class="absolute inset-0 bg-deep-navy bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100">
+<span class="font-label-caps text-label-caps text-safety-orange mb-1 uppercase">Plumbing &amp; Tiling</span>
+<h4 class="font-body-lg text-body-lg text-off-white font-bold">Luxury Bathroom Fit-out</h4>
+</div>
+</div>
+<!-- Masonry Item 4 -->
+<div class="break-inside-avoid relative group rounded overflow-hidden ambient-shadow border border-slate-gray border-opacity-10 bg-white">
+<img class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A wide, magazine-quality photograph of a beautifully landscaped backyard patio featuring custom stonework and a built-in outdoor kitchen. The stonework is flawless, blending natural gray hues. The lighting implies early evening with subtle ambient lights illuminating the space. The mood is luxurious and relaxing, showcasing premium exterior property improvement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHVf4NcnWQy4uf8I6l9IazoVGImRbkNmBG6lTdM0xPFWC8kiUxgFPHNTcbjBh7uG09nr7aB8yuTxN6DBEkVMYc-oAC4JRB3ThQrfpD1C3Fo6dn4bqm0r214KNUkFEQZpw4HxcffJS57weejmXaJc_iZKu24MYA3RxtMEnXRPsJS6tin71Pxvk5-jEvzw8DPM5UxVSMuCbDDQKlc9E3B9EnE9nqOxzaQeit1vUHY9QiPLYDlRiyncuk">
+<div class="absolute inset-0 bg-deep-navy bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100">
+<span class="font-label-caps text-label-caps text-safety-orange mb-1 uppercase">Landscaping</span>
+<h4 class="font-body-lg text-body-lg text-off-white font-bold">Bespoke Patio &amp; Kitchen</h4>
+</div>
+</div>
+<!-- Masonry Item 5 -->
+<div class="break-inside-avoid relative group rounded overflow-hidden ambient-shadow border border-slate-gray border-opacity-10 bg-white">
+<img class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 aspect-square" data-alt="A close-up shot of a sophisticated smart home security panel perfectly flush-mounted into a crisp white wall. The screen displays a modern UI. The surrounding wall shows zero blemishes or dust, highlighting the incredibly tidy electrical installation work. The mood is secure, modern, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAteNq8hV6LCHIcSHw2eF_58AcfQjy-3VJqWk36JvSBO-ya6wh7t0JqpglLEOQKpZJ58CEZPkRhgz0JbSNqa9CSRx9dgkj40hLg7KnvJBb1CkVXMfjJ5tINFk9wgTHOQrbFZCkw2a_kNLYxQX_A0pcuD4XdfaK3ZLPxXXHRTcJrmSwiEiYhsTrD1BHBpGzQVaw1OzyYBb5eQ8pvLolrNOCHhhxdvrXZ2_HNvgz726PFO6kJY9F0kwj">
+<div class="absolute inset-0 bg-deep-navy bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100">
+<span class="font-label-caps text-label-caps text-safety-orange mb-1 uppercase">Electrical</span>
+<h4 class="font-body-lg text-body-lg text-off-white font-bold">Smart System Integration</h4>
+</div>
+</div>
+<!-- Masonry Item 6 -->
+<div class="break-inside-avoid relative group rounded overflow-hidden ambient-shadow border border-slate-gray border-opacity-10 bg-white">
+<img class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A photograph showing a newly constructed, heavy-duty wooden garden outbuilding or workshop. The timber is premium quality, treated, and expertly joined. The roof features sleek, modern slate tiles. It stands in a neatly leveled yard, portraying robust construction and reliable property enhancement services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBMXHcAKUF_L036MRGEnwUVT4AECvQCdOzMzNae6mRygEml2obUOKQOCq-yfnHHXxreVL31g6FYZfWcrYBiImxQympmP0Dz0L5gJg8AgRep06qUF-M10KZRmbpXTORMFpMlUavuURYRxrEQxJ6X6nQcuYYiMdWzZkKjH8L8MIVePtW2t-OFKX-wYebRKNOr0gpbuXDLFBRMRk8Q5EUdEqJoPEl4wJI5XpOmjlH7dRLN1jX8ge1Qzcu">
+<div class="absolute inset-0 bg-deep-navy bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100">
+<span class="font-label-caps text-label-caps text-safety-orange mb-1 uppercase">Carpentry</span>
+<h4 class="font-body-lg text-body-lg text-off-white font-bold">Custom Garden Workshop</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar (from guidelines) -->
+<div class="w-full bg-off-white border-y border-slate-gray border-opacity-10 py-8">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex items-center gap-2 font-headline-md text-headline-md text-deep-navy font-bold">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    TrustATrader
+                </div>
+<div class="hidden md:block h-8 w-px bg-slate-gray opacity-20"></div>
+<div class="flex items-center gap-2 font-headline-md text-headline-md text-deep-navy font-bold">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+                    Top Rated Pro
+                </div>
+</div>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="bg-deep-navy dark:bg-deep-navy w-full border-t border-slate-gray border-opacity-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-element-gap px-gutter py-section-gap-md max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col gap-4">
+<span class="font-headline-sm text-headline-sm font-bold text-safety-orange">Handys Property Services</span>
+<p class="font-body-md text-body-md text-slate-gray mt-2 max-w-xs">
+                    Delivering premium property maintenance and renovation with uncompromising transparency.
+                </p>
+</div>
+<!-- Links Column -->
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-slate-gray hover:text-off-white transition-colors hover:text-safety-orange opacity-100 hover:opacity-80" href="trust-reviews-handys-property-services.html">TrustATrader Profile</a>
+<a class="font-body-md text-body-md text-slate-gray hover:text-off-white transition-colors hover:text-safety-orange opacity-100 hover:opacity-80" href="homepage-handys-property-services.html">Facebook</a>
+<a class="font-body-md text-body-md text-slate-gray hover:text-off-white transition-colors hover:text-safety-orange opacity-100 hover:opacity-80" href="homepage-handys-property-services.html">Contact Us</a>
+</div>
+<!-- Legal Column -->
+<div class="flex flex-col gap-3 md:text-right">
+<p class="font-body-md text-body-md text-slate-gray">© 2024 Handys Property Services. No Promises, Just Proof.</p>
+<a class="font-body-md text-body-md text-slate-gray hover:text-off-white transition-colors hover:text-safety-orange opacity-100 hover:opacity-80" href="homepage-handys-property-services.html">Terms of Service</a>
+<a class="font-body-md text-body-md text-slate-gray hover:text-off-white transition-colors hover:text-safety-orange opacity-100 hover:opacity-80" href="homepage-handys-property-services.html">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2Fbeb127e0-3195-47f7-b56c-9745d5c8b021" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

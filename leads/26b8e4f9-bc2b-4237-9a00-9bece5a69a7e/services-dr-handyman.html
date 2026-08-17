@@ -1,0 +1,347 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services - Dr Handyman</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#e0e3e5",
+                      "success-green": "#10B981",
+                      "outline-variant": "#c4c6cf",
+                      "tertiary-fixed-dim": "#fdb69a",
+                      "surface-bright": "#f7f9fb",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed": "#351002",
+                      "surface-container-low": "#f2f4f6",
+                      "on-surface-variant": "#43474e",
+                      "tertiary": "#110200",
+                      "secondary": "#006a6a",
+                      "secondary-fixed-dim": "#76d6d5",
+                      "surface-tint": "#476083",
+                      "on-primary-fixed-variant": "#2f486a",
+                      "on-primary-fixed": "#001c3a",
+                      "surface-container-high": "#e6e8ea",
+                      "on-secondary": "#ffffff",
+                      "on-surface": "#191c1e",
+                      "on-background": "#191c1e",
+                      "inverse-surface": "#2d3133",
+                      "on-primary-container": "#6f88ad",
+                      "on-tertiary-container": "#b5785f",
+                      "primary": "#000613",
+                      "tertiary-container": "#391303",
+                      "primary-fixed": "#d4e3ff",
+                      "secondary-fixed": "#93f2f2",
+                      "inverse-primary": "#afc8f0",
+                      "on-secondary-fixed": "#002020",
+                      "surface-container": "#eceef0",
+                      "primary-fixed-dim": "#afc8f0",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#e0e3e5",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#ffdbce",
+                      "on-secondary-fixed-variant": "#004f4f",
+                      "on-error": "#ffffff",
+                      "outline": "#74777f",
+                      "surface-dim": "#d8dadc",
+                      "inverse-on-surface": "#eff1f3",
+                      "secondary-container": "#90efef",
+                      "on-error-container": "#93000a",
+                      "authority-navy": "#001F3F",
+                      "surface-container-lowest": "#ffffff",
+                      "error-red": "#EF4444",
+                      "background": "#f7f9fb",
+                      "surface-white": "#FFFFFF",
+                      "primary-container": "#001f3f",
+                      "on-tertiary-fixed-variant": "#6b3a25",
+                      "clinical-teal": "#008080",
+                      "on-secondary-container": "#006e6e",
+                      "surface": "#f7f9fb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1200px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "48px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Montserrat"],
+                      "body-md": ["Inter"],
+                      "headline-lg-mobile": ["Montserrat"],
+                      "body-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "display-lg": ["Montserrat"],
+                      "title-md": ["Montserrat"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .clinical-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 31, 63, 0.05);
+        }
+        
+        .btn-hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 24px rgba(0, 128, 128, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col antialiased">
+<!-- Top Navigation Bar -->
+<header class="bg-surface-white/70 dark:bg-primary/70 backdrop-blur-md docked full-width top-0 sticky border-b border-outline-variant/30 shadow-sm z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Brand -->
+<div class="flex items-center gap-3">
+<img alt="Dr Handyman Logo" class="h-10 w-10 object-contain rounded-full border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLSENwzZezNAVtEnIInISYdUSPi7xEq5z0cr8mxvWo7lHS-scqXY1bp5z0wi58UwT5L6hh6VjOu0hVxVCJkcbyJtkzVY3wSGIdKJ_36fjIK_2F-k-TIbS45PWo9TbItnsNIYPoED4jCCeVZ8fCOhFOHm6du08L3W7oQa0VlqRhooyev08mZHO3DdSPa2sgkexZgTKKBJPVfWmg27d9G_3p3sTXekskCbCT6WBj9x9JSZQ2TTTy7tgoig">
+<span class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-authority-navy dark:text-surface-bright">Dr Handyman</span>
+</div>
+<!-- Nav Links (Desktop) -->
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-clinical-teal transition-colors duration-200 flex items-center h-full px-2" data-icon="home" href="index.html">Home</a>
+<a class="text-clinical-teal font-bold border-b-2 border-clinical-teal flex items-center h-full px-2" data-icon="build" href="services-dr-handyman.html">Services</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-clinical-teal transition-colors duration-200 flex items-center h-full px-2" data-icon="auto_awesome" href="gallery-dr-handyman.html">Gallery</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-clinical-teal transition-colors duration-200 flex items-center h-full px-2" data-icon="star" href="index.html">Reviews</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="hidden md:flex text-on-surface-variant hover:text-clinical-teal font-label-sm text-label-sm uppercase tracking-wider items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+                    Photo Quote
+                </button>
+<button class="bg-clinical-teal text-white font-label-sm text-label-sm uppercase tracking-wider px-6 py-3 rounded-DEFAULT hover:bg-opacity-90 btn-hover-lift flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                    Book Now
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-12 md:py-24 flex flex-col gap-16 md:gap-32">
+<!-- Header Section -->
+<section class="flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-full w-max border border-outline-variant/50">
+<span class="material-symbols-outlined text-clinical-teal text-[16px]">health_and_safety</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Diagnostic Maintenance</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-authority-navy">Precision Care for Your Property.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    We approach home maintenance with surgical precision. Our certified technicians diagnose the root cause before applying sterile, high-grade solutions ensuring long-term structural health.
+                </p>
+<div class="flex gap-4 mt-4">
+<button class="bg-authority-navy text-white font-label-sm text-label-sm uppercase tracking-wider px-8 py-4 rounded-DEFAULT hover:bg-opacity-90 btn-hover-lift flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+                        Request Diagnosis
+                    </button>
+</div>
+</div>
+<div class="flex-1 w-full relative">
+<div class="absolute inset-0 bg-clinical-teal/5 rounded-xl transform translate-x-4 translate-y-4"></div>
+<img class="w-full aspect-[4/3] object-cover rounded-xl border border-outline-variant/30 relative z-10 clinical-shadow" data-alt="A brightly lit, modern medical-style laboratory or pristine workshop space. The environment features sterile white surfaces, neatly organized high-end tools laid out with geometric precision on a stainless steel table. Soft, diffused daylight pours through a large frosted window, creating a serene, highly professional, and clinical atmosphere emphasizing hygiene and structural perfection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzTda_cwTsXAr5_5bDURcsgOZYFOS8a4GL6jN7fbJGj_Jh2HYj9YtY0-3mn0fRms-mUphlunVUMYg6ea4tREBe387gUSYtwM9oapO-KVuP8txLApjsvuO9n0DnsPiKYpz1PcJ9qKyVgBzxmJYzhi7UaD_rBaVnH7m1sKCtrD7YomumIyyNX3T6_vQiIAgdhNGXycVhrahZaZ5D49knd2Nsfii61Fb23WxuzMp6f8MnHuSMLbxZtyOVFA">
+</div>
+</section>
+<!-- Services Grid -->
+<section class="flex flex-col gap-12">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-outline-variant/30 pb-6">
+<div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-authority-navy">Treatment Protocols</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Specialized procedures for comprehensive home rehabilitation.</p>
+</div>
+<div class="flex gap-2">
+<span class="bg-surface-container-high w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant cursor-pointer hover:bg-clinical-teal hover:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_left</span>
+</span>
+<span class="bg-clinical-teal w-10 h-10 rounded-full flex items-center justify-center text-white cursor-pointer hover:bg-opacity-90 transition-colors">
+<span class="material-symbols-outlined">arrow_right</span>
+</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service Card 1 -->
+<div class="bg-surface-white rounded-lg p-6 border border-outline-variant/30 clinical-shadow flex flex-col gap-6 hover:border-clinical-teal transition-colors group">
+<div class="w-12 h-12 bg-surface-container-low rounded-DEFAULT flex items-center justify-center text-clinical-teal group-hover:bg-clinical-teal group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">plumbing</span>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<h3 class="font-title-md text-title-md text-authority-navy">General Repairs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Systematic troubleshooting and resolution of structural anomalies, leaks, and wear-and-tear degradation.</p>
+</div>
+<ul class="flex flex-col gap-2 mb-4">
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-success-green text-[16px]">check_circle</span> Integrity Checks
+                         </li>
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-success-green text-[16px]">check_circle</span> Component Replacement
+                         </li>
+</ul>
+<button class="w-full bg-transparent border border-clinical-teal text-clinical-teal font-label-sm text-label-sm uppercase tracking-wider py-3 rounded-DEFAULT hover:bg-clinical-teal hover:text-white transition-colors flex items-center justify-center gap-2">
+                        Initiate Diagnosis
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-white rounded-lg p-6 border border-outline-variant/30 clinical-shadow flex flex-col gap-6 hover:border-clinical-teal transition-colors group">
+<div class="w-12 h-12 bg-surface-container-low rounded-DEFAULT flex items-center justify-center text-clinical-teal group-hover:bg-clinical-teal group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">handyman</span>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<h3 class="font-title-md text-title-md text-authority-navy">Carpentry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Precision millwork and structural framing using calibrated measurements for flawless integration.</p>
+</div>
+<ul class="flex flex-col gap-2 mb-4">
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-success-green text-[16px]">check_circle</span> Custom Fabrication
+                         </li>
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-success-green text-[16px]">check_circle</span> Joint Remediation
+                         </li>
+</ul>
+<button class="w-full bg-transparent border border-clinical-teal text-clinical-teal font-label-sm text-label-sm uppercase tracking-wider py-3 rounded-DEFAULT hover:bg-clinical-teal hover:text-white transition-colors flex items-center justify-center gap-2">
+                        Initiate Diagnosis
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-white rounded-lg p-6 border border-outline-variant/30 clinical-shadow flex flex-col gap-6 hover:border-clinical-teal transition-colors group">
+<div class="w-12 h-12 bg-surface-container-low rounded-DEFAULT flex items-center justify-center text-clinical-teal group-hover:bg-clinical-teal group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">format_paint</span>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<h3 class="font-title-md text-title-md text-authority-navy">Surface Coating</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Application of sterile, high-durability polymers and pigments for surface protection and aesthetic renewal.</p>
+</div>
+<ul class="flex flex-col gap-2 mb-4">
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-success-green text-[16px]">check_circle</span> Surface Prep &amp; Sealing
+                         </li>
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-success-green text-[16px]">check_circle</span> Uniform Layering
+                         </li>
+</ul>
+<button class="w-full bg-transparent border border-clinical-teal text-clinical-teal font-label-sm text-label-sm uppercase tracking-wider py-3 rounded-DEFAULT hover:bg-clinical-teal hover:text-white transition-colors flex items-center justify-center gap-2">
+                        Initiate Diagnosis
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-surface-white rounded-lg p-6 border border-outline-variant/30 clinical-shadow flex flex-col gap-6 hover:border-clinical-teal transition-colors group">
+<div class="w-12 h-12 bg-surface-container-low rounded-DEFAULT flex items-center justify-center text-clinical-teal group-hover:bg-clinical-teal group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">tv</span>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<h3 class="font-title-md text-title-md text-authority-navy">Specialized Mounting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Calculated load-bearing installations ensuring secure affixation to diverse structural substrates.</p>
+</div>
+<ul class="flex flex-col gap-2 mb-4">
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-success-green text-[16px]">check_circle</span> Load Assessment
+                         </li>
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-success-green text-[16px]">check_circle</span> Alignment Calibration
+                         </li>
+</ul>
+<button class="w-full bg-transparent border border-clinical-teal text-clinical-teal font-label-sm text-label-sm uppercase tracking-wider py-3 rounded-DEFAULT hover:bg-clinical-teal hover:text-white transition-colors flex items-center justify-center gap-2">
+                        Initiate Diagnosis
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Equipment/Hygiene Section -->
+<section class="bg-surface-container-low rounded-xl p-8 md:p-16 border border-outline-variant/30 flex flex-col md:flex-row gap-12 items-center relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-clinical-teal/5 rounded-full blur-3xl"></div>
+<div class="flex-1 w-full">
+<img class="w-full aspect-square md:aspect-[4/3] object-cover rounded-lg clinical-shadow border border-white" data-alt="A close-up shot of surgical-grade, polished chrome maintenance tools resting on a sterile, white microfiber cloth. The lighting is crisp and bright, emphasizing cleanliness and professional precision. A subtle blue tint in the shadows reinforces a high-tech, medical clinic aesthetic applied to hardware equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3f55AVFbbGzXbvQXYbbJANhSfJdg-P90M7eq6VLF31Hh5eqjBtYvyYgKYJKDAGW4yLvfrN_xPigimJ1BFUbjevzizZNJvm030r8a6voQJRK_oL83GvDs_27d4coqyGvFrmEZwbsmqS1h7OruyRlOJC3v724ocGh1t-dUKdsWb6HVBe2Dcd-NyEhItmbPQnB6OS4CqH0QuFgfrSKxiJ4JGdGpHWGE5VyW5cY7ks-jGFdzpWOl18z2qCw">
+</div>
+<div class="flex-1 flex flex-col gap-6 z-10">
+<span class="font-label-sm text-label-sm text-clinical-teal uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified_user</span> Protocol Standards
+                </span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-authority-navy">Clinical Equipment &amp; Sanitation.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    We utilize meticulously maintained, high-caliber instrumentation for every procedure. Our workspace protocols guarantee zero cross-contamination and leave your environment pristine post-operation.
+                </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+<div class="flex items-start gap-3">
+<div class="mt-1 w-8 h-8 rounded-full bg-clinical-teal/10 flex items-center justify-center text-clinical-teal shrink-0">
+<span class="material-symbols-outlined text-[16px] icon-fill">sanitizer</span>
+</div>
+<div>
+<h4 class="font-title-md text-[16px] text-authority-navy mb-1">Sterilized Tools</h4>
+<p class="text-xs text-on-surface-variant">All equipment is sanitized between assignments to maintain hygiene integrity.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="mt-1 w-8 h-8 rounded-full bg-clinical-teal/10 flex items-center justify-center text-clinical-teal shrink-0">
+<span class="material-symbols-outlined text-[16px] icon-fill">cleaning_services</span>
+</div>
+<div>
+<h4 class="font-title-md text-[16px] text-authority-navy mb-1">Zero-Trace Exit</h4>
+<p class="text-xs text-on-surface-variant">Post-procedure cleanup ensures your space is returned to baseline conditions.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-authority-navy dark:bg-primary text-surface-bright w-full py-12 px-margin-mobile md:px-margin-desktop mt-12">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="flex flex-col gap-4">
+<div class="text-surface-bright font-headline-lg flex items-center gap-3">
+<img alt="Dr Handyman Logo" class="h-8 w-8 object-contain rounded-full bg-white p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLSENwzZezNAVtEnIInISYdUSPi7xEq5z0cr8mxvWo7lHS-scqXY1bp5z0wi58UwT5L6hh6VjOu0hVxVCJkcbyJtkzVY3wSGIdKJ_36fjIK_2F-k-TIbS45PWo9TbItnsNIYPoED4jCCeVZ8fCOhFOHm6du08L3W7oQa0VlqRhooyev08mZHO3DdSPa2sgkexZgTKKBJPVfWmg27d9G_3p3sTXekskCbCT6WBj9x9JSZQ2TTTy7tgoig">
+                    Dr Handyman
+                </div>
+<p class="font-body-md text-body-md text-surface-container-highest/70">
+                    © 2024 Dr Handyman Australia. Licensed &amp; Police Checked.
+                </p>
+</div>
+<div class="flex flex-wrap gap-6 md:justify-end">
+<a class="font-label-sm text-label-sm text-surface-container-highest/70 hover:text-clinical-teal transition-colors" href="index.html">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-surface-container-highest/70 hover:text-clinical-teal transition-colors" href="index.html">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-surface-container-highest/70 hover:text-clinical-teal transition-colors" href="services-dr-handyman.html">Insurance Info</a>
+<a class="font-label-sm text-label-sm text-surface-container-highest/70 hover:text-clinical-teal transition-colors" href="index.html">Contact Us</a>
+</div>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2F26b8e4f9-bc2b-4237-9a00-9bece5a69a7e" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

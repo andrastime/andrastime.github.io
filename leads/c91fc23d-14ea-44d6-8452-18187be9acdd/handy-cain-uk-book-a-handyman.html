@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact &amp; Booking | Handy Cain UK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&amp;family=IBM+Plex+Mono:wght@400;600&amp;family=IBM+Plex+Sans:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&amp;family=IBM+Plex+Mono:wght@100..900&amp;family=IBM+Plex+Sans:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed": "#001d35",
+                        "on-primary-fixed-variant": "#1f4970",
+                        "primary-container": "#0b3b61",
+                        "inverse-on-surface": "#eff1f3",
+                        "safety-orange": "#F2941C",
+                        "on-secondary": "#ffffff",
+                        "ice-tint": "#C9DDEF",
+                        "tertiary-fixed": "#d1e4ff",
+                        "primary-fixed": "#d0e4ff",
+                        "secondary-fixed": "#ffdcbe",
+                        "surface-container-high": "#e6e8ea",
+                        "surface": "#f7f9fb",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "on-error": "#ffffff",
+                        "primary": "#002542",
+                        "tertiary-container": "#003b65",
+                        "outline-variant": "#c2c7cf",
+                        "background": "#f7f9fb",
+                        "outline": "#73777f",
+                        "primary-fixed-dim": "#a3caf7",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#002542",
+                        "electric-blue": "#1C75BC",
+                        "deep-navy": "#0B3B61",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#42474e",
+                        "surface-bright": "#f7f9fb",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#673b00",
+                        "on-surface": "#191c1e",
+                        "tertiary-fixed-dim": "#9dcaff",
+                        "on-tertiary-fixed-variant": "#00497c",
+                        "secondary-fixed-dim": "#ffb870",
+                        "inverse-primary": "#a3caf7",
+                        "on-secondary-fixed": "#2c1600",
+                        "on-secondary-fixed-variant": "#693c00",
+                        "surface-tint": "#3a6189",
+                        "surface-dim": "#d8dadc",
+                        "on-tertiary-container": "#5da7f1",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-background": "#191c1e",
+                        "inverse-surface": "#2d3133",
+                        "error": "#ba1a1a",
+                        "secondary": "#8a5000",
+                        "on-primary-fixed": "#001d35",
+                        "on-primary-container": "#7fa6d1",
+                        "secondary-container": "#fd9d27",
+                        "surface-container-lowest": "#ffffff",
+                        "slate-dark": "#1E293B"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "stack-gap-lg": "32px",
+                        "stack-gap-md": "16px",
+                        "stack-gap-sm": "8px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Archivo"],
+                        "headline-lg": ["Archivo"],
+                        "label-caps": ["IBM Plex Mono"],
+                        "body-lg": ["IBM Plex Sans"],
+                        "body-md": ["IBM Plex Sans"],
+                        "headline-md": ["Archivo"],
+                        "headline-xl-mobile": ["Archivo"],
+                        "headline-xl": ["Archivo"],
+                        "stats-number": ["Archivo"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                        "headline-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "stats-number": ["40px", { "lineHeight": "40px", "fontWeight": "800" }]
+                    },
+                    "boxShadow": {
+                        "card": "0px 10px 30px rgba(11, 59, 97, 0.08)",
+                        "button": "0px 4px 14px rgba(11, 59, 97, 0.15)"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-electric-blue selection:text-white pt-20">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md border-b border-outline-variant/20 dark:border-outline/30 shadow-sm dark:shadow-none glass-nav transition-all duration-300 ease-in-out hover:bg-ice-tint/10 dark:hover:bg-primary-container/20">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="text-headline-sm font-headline-sm font-black tracking-tighter text-deep-navy dark:text-ice-tint uppercase hover:scale-95 duration-150 ease-in-out" href="handy-cain-uk-homepage.html">
+                HANDY CAIN UK
+            </a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:text-on-surface-variant dark:hover:text-primary-fixed-dim transition-colors uppercase" href="handy-cain-uk-homepage.html">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:text-on-surface-variant dark:hover:text-primary-fixed-dim transition-colors uppercase" href="index.html">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:text-on-surface-variant dark:hover:text-primary-fixed-dim transition-colors uppercase" href="handy-cain-uk-about-us.html">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:text-on-surface-variant dark:hover:text-primary-fixed-dim transition-colors uppercase" href="index.html">Areas</a>
+<!-- Active State Logic Applied Here -->
+<a class="font-label-caps text-label-caps text-electric-blue border-b-2 border-safety-orange pb-1 uppercase" href="handy-cain-uk-book-a-handyman.html">Contact</a>
+</nav>
+<!-- Actions -->
+<div class="hidden md:flex items-center gap-4">
+<a class="font-label-caps text-label-caps text-deep-navy hover:text-electric-blue transition-colors flex items-center gap-1 uppercase" href="tel:+447761399188">
+<span class="material-symbols-outlined text-[16px]">call</span> Call Now
+                </a>
+<a class="bg-safety-orange text-white font-headline-sm text-[16px] px-6 py-2 rounded shadow-button hover:bg-orange-500 transition-colors uppercase" href="handy-cain-uk-book-a-handyman.html">
+                    Get a Quote
+                </a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-deep-navy">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<!-- Header Section -->
+<div class="mb-16 text-center md:text-left">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-deep-navy mb-stack-gap-md">
+                Get a Free Quote
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Tell us what needs doing. We offer same-day availability across London and the M25 area with clear, upfront pricing and no hidden charges.
+            </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Form Section -->
+<div class="lg:col-span-7 bg-white rounded-lg shadow-card p-margin-mobile md:p-stack-gap-lg border border-surface-container-highest">
+<form class="space-y-stack-gap-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-gap-md">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase" for="name">Full Name</label>
+<input class="w-full border-outline-variant rounded focus:border-electric-blue focus:ring-1 focus:ring-electric-blue bg-surface font-body-md px-4 py-3 outline-none transition-colors" id="name" placeholder="e.g. Jane Doe" type="text">
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase" for="phone">Phone Number</label>
+<input class="w-full border-outline-variant rounded focus:border-electric-blue focus:ring-1 focus:ring-electric-blue bg-surface font-body-md px-4 py-3 outline-none transition-colors" id="phone" placeholder="e.g. 07700 900000" type="tel">
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase" for="postcode">Postcode (London/M25 Focus)</label>
+<input class="w-full border-outline-variant rounded focus:border-electric-blue focus:ring-1 focus:ring-electric-blue bg-surface font-body-md px-4 py-3 outline-none transition-colors" id="postcode" placeholder="e.g. SW1A 1AA" type="text">
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase" for="jobs">List of Jobs / Description</label>
+<textarea class="w-full border-outline-variant rounded focus:border-electric-blue focus:ring-1 focus:ring-electric-blue bg-surface font-body-md px-4 py-3 outline-none transition-colors resize-none" id="jobs" placeholder="Please describe what you need done... (e.g. Mount 65' TV, fix leaky tap in kitchen, assemble 2x IKEA wardrobes)" rows="5"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full md:w-auto bg-deep-navy text-white font-headline-sm px-8 py-4 rounded shadow-button hover:bg-electric-blue transition-colors flex items-center justify-center gap-2" type="submit">
+                            Request Quote <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Info Sidebar Section -->
+<div class="lg:col-span-5 space-y-stack-gap-lg">
+<!-- Contact Highlight Box -->
+<div class="bg-ice-tint/20 rounded-lg p-stack-gap-lg border border-ice-tint">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-safety-orange text-3xl" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+                        07761 399188
+                    </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Call us directly for urgent inquiries or emergency call-outs.</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-blue mt-1">bolt</span>
+<div>
+<span class="block font-headline-sm text-lg text-deep-navy">Same-Day Availability</span>
+<span class="font-body-md text-sm text-on-surface-variant">Often able to respond within hours.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-blue mt-1">verified_user</span>
+<div>
+<span class="block font-headline-sm text-lg text-deep-navy">No Hidden Charges</span>
+<span class="font-body-md text-sm text-on-surface-variant">Clear, upfront pricing before we start.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Areas Map/List Box -->
+<div class="bg-white rounded-lg shadow-card p-stack-gap-lg border border-surface-container-highest">
+<h4 class="font-headline-sm text-headline-sm text-deep-navy mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-deep-navy">map</span>
+                        Areas We Cover
+                    </h4>
+<!-- Map Placeholder -->
+<div class="w-full h-48 bg-surface-container rounded mb-4 overflow-hidden relative">
+<img class="object-cover w-full h-full" data-alt="A detailed map illustration showing Greater London and the M25 ring road area, styled in a clean, modern, high-contrast corporate aesthetic with deep navy outlines, subtle light blue shading for covered regions, and bright safety orange pin markers indicating service hotspots. The map is minimalist, professional, and visually engaging, fitting a premium handyman service." data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWCRpd6NyJAQlyhKMR8gI-tjY4uGls-jzx1V-KiJvsYybie_iXFtC_rVqyGloYl_UA7-YCd95Lk9Gk_aQEI9uqpD5fZQHpndenGuQqDYeEmL4Q3kNZHtVPhZzzXm0976TGHLZFwaoxQDlWB7SIviFbcjec4h5idW3bLJTMIkPuZ-tLgSOOePD_g-7ndeL9PffDeC10TwjXD-7CVU03Yjyhu9wMxipCL4RmxpDzW1O3U5sv4b8BM3VvDw">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/40 to-transparent flex items-end p-4">
+<span class="text-white font-label-caps uppercase tracking-widest text-xs font-bold drop-shadow-md">London &amp; M25</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">We cover Greater London and the surrounding M25 area.</p>
+<div class="grid grid-cols-2 gap-2 font-label-caps text-xs text-on-surface-variant uppercase">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> North London</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> South London</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> East London</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> West London</div>
+<div class="flex items-center gap-1 col-span-2"><span class="material-symbols-outlined text-[14px]">location_on</span> Central London</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer from JSON -->
+<footer class="bg-primary dark:bg-slate-dark text-on-primary dark:text-surface-container-lowest w-full py-section-gap border-t border-deep-navy flat no shadows hover:translate-x-1 transition-transform duration-200 opacity-100">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<span class="font-headline-sm text-headline-sm text-safety-orange uppercase block mb-4">HANDY CAIN UK</span>
+<p class="font-body-md text-body-md text-surface-variant max-w-sm mb-4">
+                     Local, insured handymen serving London and the surrounding M25 area. Fast quotes, honest pricing, no fuss.
+                 </p>
+<p class="font-label-caps text-label-caps text-surface-variant uppercase">© 2024 Handy Cain UK. Professional Handyman Services London &amp; M25.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-primary uppercase mb-4 opacity-70">Legal</h4>
+<ul class="space-y-2 flex flex-col">
+<a class="font-label-caps text-label-caps text-surface-variant hover:text-on-primary transition-colors uppercase" href="index.html">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-surface-variant hover:text-on-primary transition-colors uppercase" href="index.html">Privacy Policy</a>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-primary uppercase mb-4 opacity-70">Info</h4>
+<ul class="space-y-2 flex flex-col">
+<a class="font-label-caps text-label-caps text-surface-variant hover:text-on-primary transition-colors uppercase" href="index.html">Electrical Safety</a>
+<a class="font-label-caps text-label-caps text-surface-variant hover:text-on-primary transition-colors uppercase" href="handy-cain-uk-homepage.html">Sitemap</a>
+</ul>
+</div>
+</div>
+</footer>
+<img src="https://andrastime.goatcounter.com/count?p=%2Fc91fc23d-14ea-44d6-8452-18187be9acdd" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

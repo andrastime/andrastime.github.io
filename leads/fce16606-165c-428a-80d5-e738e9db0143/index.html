@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface": "#111319", "surface-container-low": "#191c21", "teal-deep": "#00707D", "surface-container-lowest": "#0b0e13", "slate-border": "#212A38", "on-surface": "#e1e2ea", "slate-elevated": "#151B24", "tertiary-fixed": "#ffd8ea", "on-primary": "#610045", "slate-black": "#07090C", "cyan-electric": "#14E5E9", "on-background": "#e1e2ea", "on-secondary-fixed-variant": "#004f58", "tertiary-container": "#9f0876", "surface-container-high": "#272a30", "on-surface-variant": "#dabfcb", "on-primary-fixed-variant": "#880363", "teal-accent": "#008B9B", "primary": "#ffaed8", "surface-container": "#1d2025", "surface-tint": "#ffaed8", "on-primary-fixed": "#3c0029", "glass-panel": "rgba(21, 27, 36, 0.72)", "surface-dim": "#111319", "text-subtle": "#64748B", "surface-bright": "#36393f", "on-tertiary-fixed": "#3c002a", "glass-specular": "rgba(255, 255, 255, 0.12)", "secondary-fixed": "#9bf0ff", "secondary": "#6fd5e6", "surface-container-highest": "#32353b", "on-secondary": "#00363d", "primary-container": "#9a1b71", "background": "#111319", "on-error": "#690005", "text-pure": "#FFFFFF", "tertiary": "#ffaed9", "slate-surface": "#0E1218", "on-tertiary": "#610046", "magenta-primary": "#9A1B71", "surface-variant": "#32353b", "primary-fixed": "#ffd8e9", "on-primary-container": "#ffb2d9", "inverse-surface": "#e1e2ea", "magenta-glow": "#D946A6", "error-container": "#93000a", "outline-variant": "#55414b", "secondary-fixed-dim": "#6fd5e6", "on-secondary-container": "#002f35", "on-tertiary-fixed-variant": "#890065", "error": "#ffb4ab", "on-error-container": "#ffdad6", "on-tertiary-container": "#ffb2db", "text-muted": "#94A3B8", "inverse-primary": "#a7287c", "magenta-deep": "#8B1865", "tertiary-fixed-dim": "#ffaed9", "on-secondary-fixed": "#001f24", "inverse-on-surface": "#2e3036", "secondary-container": "#2d9eae", "cyan-luminous": "#00A3A6", "outline": "#a28a95", "primary-fixed-dim": "#ffaed8" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-4xl": "6rem", "grid-gutter-sm": "1rem", "space-2xl": "3rem", "space-3xl": "4rem", "space-5xl": "8rem", "container-max-width": "1280px", "grid-gutter-lg": "2rem", "space-sm": "0.75rem", "space-xl": "2rem", "space-md": "1rem", "space-2xs": "0.25rem", "space-xs": "0.5rem", "space-lg": "1.5rem" }, fontFamily: { "label-interactive": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "display-hero": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "body-xl": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Playfair Display"], "headline-xl": ["Playfair Display"], "headline-lg": ["Playfair Display"], "stat-numeric": ["Playfair Display"], "quote-editorial": ["Playfair Display"], "headline-sm": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"] }, fontSize: { "label-interactive": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }], "display-hero-mobile": ["38px", { lineHeight: "46px", letterSpacing: "-0.01em", fontWeight: "600" }], "display-hero": ["64px", { lineHeight: "76px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["16px", { lineHeight: "26px", letterSpacing: "0em", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "0em", fontWeight: "500" }], "body-sm": ["14px", { lineHeight: "22px", letterSpacing: "0.01em", fontWeight: "400" }], "body-xl": ["18px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "400" }], "headline-xl-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-xl": ["44px", { lineHeight: "54px", letterSpacing: "-0.015em", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "500" }], "stat-numeric": ["48px", { lineHeight: "52px", letterSpacing: "-0.02em", fontWeight: "600" }], "quote-editorial": ["22px", { lineHeight: "34px", letterSpacing: "0.01em", fontWeight: "400" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-caps": ["11px", { lineHeight: "16px", letterSpacing: "0.14em", fontWeight: "700" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 w-full z-50 bg-slate-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-container-max-width mx-auto px-space-lg lg:px-space-xl flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><span class="w-2.5 h-2.5 rounded-full bg-cyan-electric shadow-[0_0_8px_#14E5E9]"></span><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-text-pure">Scuseme</span><span class="font-label-caps text-label-caps uppercase text-text-subtle -mt-1">Cambridge Residential Concierge</span></div></a></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-text-pure bg-surface-container-high rounded-full px-space-sm py-1.5 font-bold"><a class="font-label-interactive text-label-interactive text-on-surface-variant hover:text-text-pure transition-colors" data-path="services" href="#">Services</a><a class="font-label-interactive text-label-interactive text-on-surface-variant hover:text-text-pure transition-colors" data-path="about-dawn" href="#">About Dawn</a><a class="font-label-interactive text-label-interactive text-on-surface-variant hover:text-text-pure transition-colors" data-path="process" href="#">Process</a><a class="font-label-interactive text-label-interactive text-on-surface-variant hover:text-text-pure transition-colors" data-path="projects-and-testimonials" href="#">Projects &amp; Testimonials</a><a class="font-label-interactive text-label-interactive text-on-surface-variant hover:text-text-pure transition-colors" data-path="journal" href="#">Journal</a></nav><div class="flex items-center gap-space-md"><a class="hidden lg:flex flex-col text-right group" href="tel:07496503954"><span class="font-label-caps text-label-caps uppercase text-text-subtle">Direct Line</span><span class="font-label-interactive text-label-interactive text-cyan-electric group-hover:text-secondary-fixed transition-colors">07496 503954</span></a><a class="relative inline-flex items-center justify-center px-space-lg py-2.5 rounded-full bg-primary-container hover:bg-magenta-deep text-text-pure font-label-interactive text-label-interactive shadow-[0_4px_20px_rgba(154,27,113,0.35)] hover:shadow-[0_6px_25px_rgba(217,70,166,0.45)] transition-all transform hover:-translate-y-0.5" data-path="book-consultation" href="#"><span>Book Free Consultation</span></a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-glass-specular ml-space-xs" src="https://lh3.googleusercontent.com/aida/AEtjO1VpvFb41Oj4Zx-puG8ORMdMV9upgStaQFgLe7U1br8LNSaIjHxnZRpM-_0-M_0Yva3PO4fXzhSg1qSS0NFZqAbuMJ4d5xMxOZ49YNMe3ky4gIZEIitGkWorIYrHbaoeku42ntMifs5vWPDK89GGW8syf-e4aQRe6UbQKt4Sy3ozwlqfe7308e5NBpN7dvi1svdO_fkVGhDmXnW49i9uDpi-eEVU7MW5_CuCs-7W_x6CaNZ7NCNfLU-0388"/></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Hero Section with Architectural Layering and Editorial Atmosphere -->
+<section class="relative w-full overflow-hidden bg-slate-black py-space-3xl lg:py-space-5xl">
+<!-- Ambient jewel lighting circles behind content -->
+<div class="absolute top-10 left-1/4 w-96 h-96 rounded-full bg-magenta-primary/15 blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-10 right-10 w-[30rem] h-[30rem] rounded-full bg-teal-deep/15 blur-[140px] pointer-events-none"></div>
+<div class="max-w-container-max-width mx-auto px-space-lg lg:px-space-xl relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Left Editorial Column -->
+<div class="lg:col-span-7 flex flex-col items-start gap-space-lg">
+<!-- Trust Badge / Sub-heading -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-low shadow-sm">
+<span class="w-2 h-2 rounded-full bg-cyan-electric shadow-[0_0_8px_#14E5E9]"></span>
+<span class="font-label-caps text-label-caps uppercase text-cyan-electric">Cambridge &amp; Surrounding Areas Concierge</span>
+</div>
+<!-- Hero Headline -->
+<h1 class="font-display-hero text-display-hero text-text-pure tracking-tight">
+            Scuseme Residential <br/>
+<span class="text-primary italic font-normal">Project Management</span> Services
+          </h1>
+<p class="font-body-xl text-body-xl text-text-muted max-w-xl">
+            Stress-free residential renovations, architectural transformations, and vetted Cambridge trades coordination under the dedicated personal guidance of Dawn Giesler.
+          </p>
+<!-- Editorial Quote Glass Card -->
+<div class="relative w-full bg-slate-elevated/90 backdrop-blur-xl p-space-lg lg:p-space-xl rounded-xl shadow-xl">
+<span class="font-quote-editorial text-stat-numeric text-primary leading-none absolute top-2 left-4 opacity-25 select-none">“</span>
+<blockquote class="relative z-10 pl-space-md">
+<p class="font-quote-editorial text-quote-editorial italic text-text-pure">
+                Approaching the world of home renovations was rather daunting, but with Dawn, I always felt that I had someone on my side.
+              </p>
+<div class="mt-space-sm flex items-center justify-between flex-wrap gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-cyan-electric">— Lalitha Sundaram</span>
+<span class="font-body-sm text-body-sm text-text-subtle">Cambridge, CB5 Project</span>
+</div>
+</blockquote>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center px-space-xl py-3.5 rounded-full bg-primary-container hover:bg-magenta-deep text-text-pure font-label-interactive text-label-interactive shadow-lg hover:shadow-[0_8px_28px_rgba(217,70,166,0.35)] transition-all transform hover:-translate-y-0.5" href="#consultation">
+<span>Let’s Talk • Free 1-Hour Consultation</span>
+<span class="material-symbols-outlined ml-space-xs text-sm">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center px-space-lg py-3.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-text-pure font-label-interactive text-label-interactive transition-colors" href="#signature-framework">
+<span>Explore Our Method</span>
+</a>
+</div>
+<!-- Quick Micro Stats Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm w-full pt-space-md">
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="font-stat-numeric text-stat-numeric text-cyan-electric">100+</div>
+<div class="font-label-caps text-label-caps uppercase text-text-subtle mt-1">Cambridge Projects</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="font-stat-numeric text-stat-numeric text-primary">100%</div>
+<div class="font-label-caps text-label-caps uppercase text-text-subtle mt-1">Vetted Builders</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="font-stat-numeric text-stat-numeric text-cyan-electric">1:1</div>
+<div class="font-label-caps text-label-caps uppercase text-text-subtle mt-1">Dedicated Contact</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="font-stat-numeric text-stat-numeric text-primary">0%</div>
+<div class="font-label-caps text-label-caps uppercase text-text-subtle mt-1">Contractor Hassle</div>
+</div>
+</div>
+</div>
+<!-- Right Visual Showcase: Layered Architectural Glass Composition -->
+<div class="lg:col-span-5 relative flex justify-center">
+<div class="relative w-full max-w-lg aspect-[4/5] rounded-xl overflow-hidden shadow-2xl bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Luxurious open-plan renovated Cambridge townhouse interior with bespoke marble kitchen island, warm recessed architectural lighting, and high ceilings with restored crown molding in deep moody atmospheric slate and jewel tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5g7J4fimvubjZTgt2iHRJUhEKb6suwytqescbOo_KNnBMnbxjPoLiG7S9Evca91ia5cOzZIVsiEJ4wksPdcd7Oi7iXq4qq4qnP-rREohAAgC-i2W6Lwp1HpJUZ6T8RwxQdl8pb2fESniPt82weTrRjlG8vE6GP328vGd9Ya7kMLoBkeg8PNyF0LNns_3YZByS6LhA1zFyl2hdHza1IclgxfFi6N4zsuaEJxJ9aLC1QY5lsthe3dhOLg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-black via-slate-black/30 to-transparent"></div>
+<!-- Floating Overlay Card on Image -->
+<div class="absolute bottom-space-lg left-space-lg right-space-lg p-space-md bg-slate-elevated/90 backdrop-blur-md rounded-lg shadow-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-magenta-primary flex items-center justify-center text-text-pure font-bold">
+<span class="material-symbols-outlined text-cyan-electric">verified</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-text-pure">Single Point of Contact</div>
+<p class="font-body-sm text-body-sm text-text-muted">From planning permission to handover inspection.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Overlapping Artisan Snapshot -->
+<div class="absolute -bottom-8 -left-6 hidden sm:block w-48 h-48 rounded-xl overflow-hidden shadow-2xl bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Skilled British craftsman installing bespoke cabinetry joinery in a Victorian Cambridge home under focused directional task lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYsME420VNAYUIPYJnl5nRaPUdISw_WShorT_83PV7f4MB6gIxubTQEErjd7Jb8Yqx8JvosfFj6aVWwrX1ob80lEgMDBLgXnyLtU6OjhuwkQPCq1spFfKP6NgwlVZgQ_CHS3ULG3D2xYxiHWW5IzwEhEa0Z6iOOIj9AHTKsfX_61eHQQBNbHqA2Cw3LCboP6_kkOGAfFAACUfCl9Ib4_uHpxTteljdk24tVHfnM0SRJBXJNyx_oMCqUw"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: About Dawn Giesler & Scuseme Value Proposition -->
+<section class="w-full py-space-4xl bg-surface" id="about-dawn">
+<div class="max-w-container-max-width mx-auto px-space-lg lg:px-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Left: Image Composition of Dawn with Editorial Label -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-container-low aspect-[4/5]">
+<img class="w-full h-full object-cover" data-alt="Portrait of Dawn Giesler, warm and confident female residential project manager smiling thoughtfully in front of architectural drawings and sample stones in Cambridge studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT8brDaFYL1EN2S6_srTlUWNLiVT4S9ldM7zLEtGtSvMWDnwkPblE1P8--FhvxadFq5Zn-u8M6xE4W1ZqyaBOVP1O2F1rJtog7wRpI7h6jgTSq-FdUI-KqWj7tJoK1w-lpo4VaHH3ewtSv4JJP-HYgFGqMaU1LCQM7uLMKct5BIr1N0W6O2SHLvWPY_u8RdvKtxcTyW0nf_ap7UaR8J96vDU6SLqvpVVkdXtAvD4UnDV8SarbwgWop4Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-black/80 via-transparent to-transparent"></div>
+<!-- Inset Badge Quote -->
+<div class="absolute bottom-space-md left-space-md right-space-md bg-primary-container/95 p-space-md rounded-lg shadow-md text-text-pure">
+<p class="font-quote-editorial text-headline-md italic font-semibold">
+                “I am passionate about working with clients.”
+              </p>
+<span class="font-label-caps text-label-caps uppercase text-tertiary-fixed mt-1 block">Founder • Dawn Giesler</span>
+</div>
+</div>
+<!-- Micro Location Stamp Tag -->
+<div class="absolute top-4 -right-4 hidden md:flex items-center gap-space-xs bg-slate-elevated/95 px-space-md py-2 rounded-full shadow-lg">
+<span class="w-2 h-2 rounded-full bg-cyan-electric animate-ping"></span>
+<span class="font-label-caps text-label-caps uppercase text-text-pure">Italy • London • Cambridge Experience</span>
+</div>
+</div>
+<!-- Right: Story and 6 Core Value Pillars -->
+<div class="lg:col-span-7 flex flex-col items-start gap-space-md">
+<div class="inline-flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-cyan-electric">Bespoke Concierge Heritage</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-pure">
+            Dawn Giesler Residential Project Management Services
+          </h2>
+<p class="font-body-md text-body-md text-text-muted">
+            There is no doubt that undertaking a building project can be daunting, stressful, and consume an enormous amount of personal time. I know this firsthand through my own extensive experience steering home renovation projects in Italy, London, and right here in Cambridge.
+          </p>
+<p class="font-body-md text-body-md text-text-muted">
+            Through <span class="text-text-pure font-semibold">Scuseme</span>, an online marketplace and curated network dedicated to finding verified trades, I have spent years cultivating loyal, trusted relationships with top-tier local contractors, specialist suppliers, and master artisans. Today, I offer a full end-to-end residential project management service to protect your peace of mind at every step.
+          </p>
+<!-- 6 Core Pillars Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md w-full pt-space-sm">
+<div class="flex items-start gap-space-sm bg-surface-container p-space-md rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-cyan-electric text-headline-md shrink-0">workspace_premium</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-text-pure">A Professional Service</div>
+<p class="font-body-sm text-body-sm text-text-subtle">Rigorous scheduling, regulatory oversight, and quality control.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container p-space-md rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-headline-md shrink-0">forum</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-text-pure">Clear Communications</div>
+<p class="font-body-sm text-body-sm text-text-subtle">Constant transparency with weekly updates, photos, and budget logs.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container p-space-md rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-cyan-electric text-headline-md shrink-0">handshake</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-text-pure">Support &amp; Guidance</div>
+<p class="font-body-sm text-body-sm text-text-subtle">Expert advice on materials, layouts, spatial planning, and interior logic.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container p-space-md rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-headline-md shrink-0">shield_with_heart</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-text-pure">Trusted Contractors</div>
+<p class="font-body-sm text-body-sm text-text-subtle">Hand-picked trades with verified credentials and impeccable track records.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container p-space-md rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-cyan-electric text-headline-md shrink-0">bolt</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-text-pure">Efficient Decision-Making</div>
+<p class="font-body-sm text-body-sm text-text-subtle">Fast problem solving when unexpected structural quirks arise on site.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container p-space-md rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-headline-md shrink-0">verified_user</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-text-pure">Satisfaction Assured</div>
+<p class="font-body-sm text-body-sm text-text-subtle">Snagging inspections and sign-off before final milestone release.</p>
+</div>
+</div>
+</div>
+<div class="pt-space-sm">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-primary-container hover:bg-magenta-deep text-text-pure font-label-interactive text-label-interactive shadow-md transition-all" href="#consultation">
+<span>Book Your Free Consultation</span>
+<span class="material-symbols-outlined text-sm">schedule</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Three-Step Signature Management Framework -->
+<section class="w-full py-space-4xl bg-surface-container-lowest relative" id="signature-framework">
+<div class="max-w-container-max-width mx-auto px-space-lg lg:px-space-xl">
+<div class="text-center max-w-2xl mx-auto mb-space-3xl">
+<span class="font-label-caps text-label-caps uppercase text-cyan-electric">The Scuseme Approach</span>
+<h2 class="font-headline-xl text-headline-xl text-text-pure mt-space-xs">
+          Trusted Project Management Services
+        </h2>
+<p class="font-body-md text-body-md text-text-muted mt-space-sm">
+          Finding the right contractors, making key spatial decisions, future-proofing your property, and navigating Cambridge planning guidelines can create friction. My priority is to deliver a seamless, stress-free path to your ideal home.
+        </p>
+</div>
+<!-- 3 Steps Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Step 01 -->
+<div class="relative bg-surface-container p-space-xl rounded-xl shadow-lg flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-lg">
+<span class="font-stat-numeric text-stat-numeric text-text-subtle/40 group-hover:text-primary transition-colors">01</span>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-cyan-electric">
+<span class="material-symbols-outlined text-2xl">architecture</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-pure mb-space-sm">Project Specification</h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+              Whether you are doing a full house renovation or an individual room transformation, I help you realise your vision. I work through architectural options you may or may not have considered, focusing on space optimization, bespoke joinery, future-proofing, and ergonomic flow.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm text-cyan-electric font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1">
+<span>Concept • Design Logic</span>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="relative bg-surface-container p-space-xl rounded-xl shadow-lg flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-lg">
+<span class="font-stat-numeric text-stat-numeric text-text-subtle/40 group-hover:text-cyan-electric transition-colors">02</span>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-pure mb-space-sm">Project Scope</h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+              Together we formulate the realistic scope with accurate milestone timelines, material contingencies, and transparent contractor pricing. Utilizing my verified network of builders, engineers, and craftspeople, we match the best specialist talent to your exact property specifications.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm text-primary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1">
+<span>Tendering • Vetting</span>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="relative bg-surface-container p-space-xl rounded-xl shadow-lg flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-lg">
+<span class="font-stat-numeric text-stat-numeric text-text-subtle/40 group-hover:text-primary transition-colors">03</span>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-cyan-electric">
+<span class="material-symbols-outlined text-2xl">engineering</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-pure mb-space-sm">Project Co-ordination</h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+              As an experienced communicator, I ensure you are kept informed at every stage without having to manage trades yourself. I oversee daily site logistics, coordinate material drop-offs, supervise subcontractors, handle sudden snags, and tightly monitor the budget ledger.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm text-cyan-electric font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1">
+<span>Daily Site Execution</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Tailored Service Portfolio Grid -->
+<section class="w-full py-space-4xl bg-surface" id="services">
+<div class="max-w-container-max-width mx-auto px-space-lg lg:px-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-2xl">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-cyan-electric">Comprehensive Capabilities</span>
+<h2 class="font-headline-xl text-headline-xl text-text-pure mt-space-xs">
+            Scuseme Project Management Services
+          </h2>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted max-w-md">
+          Tailored residential support for Cambridge residents looking to undertake home improvements — from a single room transformation to total structural rebuilds.
+        </p>
+</div>
+<!-- 8 Services Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="aspect-[4/3] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Exquisite complete exterior renovation of a classic Cambridge period brick residence with heritage sash windows and clean manicured front garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhE95465_a42st02kF3bTj0AlY4xOhq1UoIo-L3fuUF3jov-GjSUUDEkKkY2igZApV2AHt_Oil0JYgdmrijnvsFRvdUDkAMjK_r_aN_uMPBnS5Rvqoacj2myBgOwN0oLAw_gRnhVyuAZw8MeJSOt5LlPkkkwQ7cNKD58vZHsAIp0E6WM66PlUQ75bAGVV0XZmVw6-1LjyzBHGNDIZiZN9QXOarmyqY2Ds2egXxXxbhA9R-ddFHCYlNZA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-pure">Home Renovations &amp; Rebuilds</h3>
+<p class="font-body-sm text-body-sm text-text-subtle mt-space-xs">
+                Structural alterations, space reconfigurations, and whole-house restorations.
+              </p>
+</div>
+<a class="mt-space-md inline-flex items-center text-cyan-electric font-label-interactive text-label-interactive gap-1 hover:text-text-pure" href="#consultation">
+<span>Discuss Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="aspect-[4/3] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-end bespoke kitchen remodel featuring seamless quartz countertops, integrated luxury induction appliances, and pendant lighting over center island" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCil8KzXOa4MQbnXqWiX8V7I__2L05-ZClVUVxNk-CjAVgJOqqch-xV8G5EcF4ymhUWdvBlL-8KavRZfB7L5N5JQ02sVQQk4mb4Pdfgkq_AS8wqUCY_552vPdnrdnFVV78qHLwqdMO1hWG7Oy-ValtFi0S5eKpLpY-AehhVcWn6ZHKEWx_rRXyPT_1nBoZ5SYAs8v9uFSerCY4AGZvdpxjYLAKxGhm166vhmZJzdx8_EqBPV-Xo2qk3cg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-pure">Kitchen Renovations</h3>
+<p class="font-body-sm text-body-sm text-text-subtle mt-space-xs">
+                Ergonomic floor planning, premium cabinetry installation, plumbing and lighting.
+              </p>
+</div>
+<a class="mt-space-md inline-flex items-center text-cyan-electric font-label-interactive text-label-interactive gap-1 hover:text-text-pure" href="#consultation">
+<span>Discuss Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="aspect-[4/3] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Airy modern loft conversion master bedroom with skylights and built-in eaves storage in a Cambridge home" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDkiduR5voL7EzRutPu3wpfiFrQ3OwPQaI46pAcyjUo3-eWH8lQqPanxjv13pRIpNZakIpfH3WHBOgWjC63KTiJwcge6gE9vlRQfg9ZyYZ27ESi_Hg6ZwEEaung7nItLbXLGiCwtxGAwDivDccpqazJetMN2s8cchChBfG3I8kVc3jYRNYVX08DJbPGojD3TLMz5CQBKmR28sw7B8h7CB9HEL9WCLN9zeLdPGNGRTY_HdMWL7ucusX8A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-pure">Loft Conversions</h3>
+<p class="font-body-sm text-body-sm text-text-subtle mt-space-xs">
+                Dormer, mansard, or Velux conversions engineered for optimal natural light and value.
+              </p>
+</div>
+<a class="mt-space-md inline-flex items-center text-cyan-electric font-label-interactive text-label-interactive gap-1 hover:text-text-pure" href="#consultation">
+<span>Discuss Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="aspect-[4/3] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Contemporary rear home extension featuring slimline black aluminum bi-fold doors opening onto a lush stone terrace in Cambridgeshire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGYO6ZcNXkitleL-uP8QfAWWYYa1ofmf_sbi_z3WcTt9Dz5QAXtvAi_2APLAn9aXPybDS0qK-n8aL-S_S0xtINSCXBbC9CdSxWeLfMNKzsSK5_19mQzUQxO7fDMNg3asnq1u2AGMKWPD9ZU00Q-Ain90JfXfMZobrfNokmJ428A7kQEGbidvCHTjpdJC_zgn6A1iv75R0zNn5LSIiBzKxbPKH2LQp08-LvrMyigdA3P0RwVse8l7WiUA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-pure">Home Extensions</h3>
+<p class="font-body-sm text-body-sm text-text-subtle mt-space-xs">
+                Single and double-storey rear and side return extensions with full planning liaison.
+              </p>
+</div>
+<a class="mt-space-md inline-flex items-center text-cyan-electric font-label-interactive text-label-interactive gap-1 hover:text-text-pure" href="#consultation">
+<span>Discuss Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="aspect-[4/3] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist luxury walk-in wet room shower with large format textured porcelain tiles and brushed brass thermostatic fixtures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzma5UVAFZE41oZnS_oZdADfvMu_YLIiBxLjuWkKClGN5f4-BXsss7gRcyckry4KT5w_iinwNk_ToFmIB9Ztf6q1qEVVloj48EatZnV3oQ3Wi3pXPD4Ku6lGctIGIiLrvfWfKopJJFWvFHjYu2DLzfgywa-LrWe92HIF7m0Dj8Px7XVkeu_MepsGvRNgWRA3lzWwAd8d_u7ivuvzJlx6DF4PrTKe4BDsVQV662cSK5CMJJQ9bV__g4Pg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-pure">Bathroom Refurbishments</h3>
+<p class="font-body-sm text-body-sm text-text-subtle mt-space-xs">
+                Luxury ensuites, spa-inspired wet rooms, and elegant wall cladding transformations.
+              </p>
+</div>
+<a class="mt-space-md inline-flex items-center text-cyan-electric font-label-interactive text-label-interactive gap-1 hover:text-text-pure" href="#consultation">
+<span>Discuss Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="aspect-[4/3] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Accessible yet sophisticated multi-generational modern interior with level thresholds, wide door entries and warm oak finishes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqotc_NwBvABJ-2V6X133Mt3yoCBXJzgpIpGN9n79zgfq-h218sdl4fQ8NXy-Dpb1EfJNLTEYVl7CM1XN4WmekaIVbyCHWT_FtMmgGmE9LsnT5_FmJ7hh3uy97gJzSG5de8Xiv7e0oR52yPIJo4XCbuVnabUJgO5h0pDnwRB1NPXV7q-SPozVfVRKLZ1sgcFtqDyVCjmhZ8liWD6b5ln03XG-WqnmEdeBLwWb9UM7WTKeKDDkFnk7J9A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-pure">Future Proofing</h3>
+<p class="font-body-sm text-body-sm text-text-subtle mt-space-xs">
+                Accessibility adaptations, smart technology integration, and flexible living zones.
+              </p>
+</div>
+<a class="mt-space-md inline-flex items-center text-cyan-electric font-label-interactive text-label-interactive gap-1 hover:text-text-pure" href="#consultation">
+<span>Discuss Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="aspect-[4/3] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Female project manager inspecting architectural timber framing and brickwork at a live Cambridge construction site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClAYUnm-jmeouEdPOxqBzOqG2AkagTnx_5_wdZy-O-nCV3Zbd7tO6voLgFmHw-nEjVGXJxduhklZl1yLl05IbnZ4rnos0-7SF8roujRvWttv5jVnj_LrHoMOhGi-bp1gYKVvynKCb-J05vJKrpay-1JiiBq9ZvJZLu_2WCy6j3-i1F9PwguYN6JYJK3vemTcsQpY4Rk1lAPYMzAyYTQEWdkeTsj4sl02IJfkIY9xeDIqxWxFyegktOOQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-pure">Trouble Shooting &amp; Rescue</h3>
+<p class="font-body-sm text-body-sm text-text-subtle mt-space-xs">
+                Stepping in when projects stall, contractor disputes occur, or quality needs correcting.
+              </p>
+</div>
+<a class="mt-space-md inline-flex items-center text-cyan-electric font-label-interactive text-label-interactive gap-1 hover:text-text-pure" href="#consultation">
+<span>Discuss Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="aspect-[4/3] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Eco-friendly green sedum sedum flat roof extension with integrated solar array on a contemporary Cambridge sustainable residential home" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuwI23A6gphL8H4tFDsryN3q05upLxA61TJKkp_JA5ROexrCy5w3rsUeB3UkSh_3gPv3lTq7W0iP26PHFaMvr0vL5Yq23nmcP43jjbP_VYOv_KJEt1nL_LMrfUed_cNHWq3IsLM_t2R64lDfr6j8tUX8Eta1m89JdgspIbbIbd21ZLf4JN-f7STVQuJKnIozjMJpkLJh7RkWzTDQDLInyHYd4XWNxb5wrnxUpfP_1-Aoo9uq5fRvogXw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-pure">Eco-Home &amp; Energy Saving</h3>
+<p class="font-body-sm text-body-sm text-text-subtle mt-space-xs">
+                Heat pumps, high-performance insulation, green roofs, and low-energy retrofit design.
+              </p>
+</div>
+<a class="mt-space-md inline-flex items-center text-cyan-electric font-label-interactive text-label-interactive gap-1 hover:text-text-pure" href="#consultation">
+<span>Discuss Project</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Interactive Project Roadmap Estimator -->
+<section class="w-full py-space-3xl bg-slate-surface relative overflow-hidden">
+<div class="max-w-container-max-width mx-auto px-space-lg lg:px-space-xl">
+<div class="bg-surface-container-low p-space-xl lg:p-space-2xl rounded-2xl shadow-2xl relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<div class="lg:col-span-5">
+<span class="font-label-caps text-label-caps uppercase text-cyan-electric">Interactive Planning Tool</span>
+<h2 class="font-headline-lg text-headline-lg text-text-pure mt-space-xs">
+              Estimate Your Project Horizon
+            </h2>
+<p class="font-body-md text-body-md text-text-muted mt-space-sm">
+              Select your intended renovation type to review typical phase durations, contractor composition, and concierge checkpoints tailored for Cambridge properties.
+            </p>
+<div class="mt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm text-text-muted">
+<span class="material-symbols-outlined text-cyan-electric">task_alt</span>
+<span class="font-body-sm text-body-sm">Verified Planning Permission Assessment</span>
+</div>
+<div class="flex items-center gap-space-sm text-text-muted">
+<span class="material-symbols-outlined text-cyan-electric">task_alt</span>
+<span class="font-body-sm text-body-sm">Transparent Contractor Tender Analysis</span>
+</div>
+<div class="flex items-center gap-space-sm text-text-muted">
+<span class="material-symbols-outlined text-cyan-electric">task_alt</span>
+<span class="font-body-sm text-body-sm">Dedicated Dawn Giesler Site Supervision</span>
+</div>
+</div>
+</div>
+<!-- Interactive Calculator Panel -->
+<div class="lg:col-span-7 bg-surface-container p-space-lg rounded-xl shadow-inner">
+<div class="flex flex-col gap-space-md">
+<div>
+<label class="font-label-caps text-label-caps uppercase text-text-subtle block mb-space-xs">Select Renovation Type</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-xs" id="estimator-buttons">
+<button class="est-btn active px-space-sm py-2 rounded-lg bg-primary-container text-text-pure font-label-interactive text-body-sm text-center" onclick="selectType('kitchen')" type="button">Kitchen Remodel</button>
+<button class="est-btn px-space-sm py-2 rounded-lg bg-surface-container-high text-text-muted font-label-interactive text-body-sm text-center" onclick="selectType('extension')" type="button">Rear Extension</button>
+<button class="est-btn px-space-sm py-2 rounded-lg bg-surface-container-high text-text-muted font-label-interactive text-body-sm text-center" onclick="selectType('loft')" type="button">Loft Conversion</button>
+<button class="est-btn px-space-sm py-2 rounded-lg bg-surface-container-high text-text-muted font-label-interactive text-body-sm text-center" onclick="selectType('bathroom')" type="button">Bathroom Suite</button>
+<button class="est-btn px-space-sm py-2 rounded-lg bg-surface-container-high text-text-muted font-label-interactive text-body-sm text-center" onclick="selectType('full')" type="button">Whole House</button>
+<button class="est-btn px-space-sm py-2 rounded-lg bg-surface-container-high text-text-muted font-label-interactive text-body-sm text-center" onclick="selectType('eco')" type="button">Eco-Retrofit</button>
+</div>
+</div>
+<!-- Dynamic Output Cards -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg mt-space-xs">
+<div class="grid grid-cols-3 gap-space-sm text-center">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-text-subtle block">Typical Duration</span>
+<span class="font-headline-md text-headline-md text-primary font-bold" id="est-duration">4 – 6 Weeks</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-text-subtle block">Trades Coordinated</span>
+<span class="font-headline-md text-headline-md text-cyan-electric font-bold" id="est-trades">4 – 6 Trades</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-text-subtle block">Planning Advice</span>
+<span class="font-headline-md text-headline-md text-text-pure font-bold" id="est-planning">Permitted Dev.</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-slate-border/20 text-center">
+<p class="font-body-sm text-body-sm text-text-muted" id="est-note">
+                    Includes cabinet joinery, plumbing, second-fix electrical, tiling, and appliance installation with zero project downtime.
+                  </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-text-subtle">Ready to evaluate your home blueprint?</span>
+<a class="px-space-md py-2 rounded-full bg-primary hover:bg-tertiary-fixed text-on-primary font-label-interactive text-label-interactive transition-colors" href="#consultation">
+                  Discuss This Scope
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Verified Cambridge Client Testimonials & Social Proof -->
+<section class="w-full py-space-4xl bg-surface" id="testimonials">
+<div class="max-w-container-max-width mx-auto px-space-lg lg:px-space-xl">
+<div class="text-center max-w-2xl mx-auto mb-space-3xl">
+<span class="font-label-caps text-label-caps uppercase text-cyan-electric">Endorsements &amp; Word of Mouth</span>
+<h2 class="font-headline-xl text-headline-xl text-text-pure mt-space-xs">
+          Client Experiences in Cambridge
+        </h2>
+<p class="font-body-md text-body-md text-text-muted mt-space-sm">
+          Hear how Cambridge homeowners transformed their properties with complete confidence and peace of mind.
+        </p>
+</div>
+<!-- Testimonial Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Testimonial 1: Rebecca (CB4) -->
+<div class="bg-slate-elevated/80 backdrop-blur-xl p-space-xl rounded-xl shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-cyan-electric">Cambridge, CB4</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              “Thank you so much for all your support with my bathroom makeover. You offered invaluable help from beginning to end: ensuring I had really thought about the different elements I wanted at the planning stage, giving me confidence that my uncharacteristically bold choice of wall panels really would work, appointing reliable tradespeople and checking everything on completion. I am delighted with the end product!”
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-slate-border/20">
+<span class="font-headline-sm text-headline-sm text-text-pure block">Rebecca</span>
+<span class="font-body-sm text-body-sm text-text-subtle">Bathroom Transformation • CB4</span>
+</div>
+</div>
+<!-- Testimonial 2: Charles & Melis (CB1) -->
+<div class="bg-slate-elevated/80 backdrop-blur-xl p-space-xl rounded-xl shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-cyan-electric">Cambridge, CB1</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              “We started working with Dawn in February 2023 after we bought our house. There was a lot of work needed to be done and we were overwhelmed, did not know where to start. Dawn was exactly who we needed. She organised the people and the dates to start the work. We are very happy with the outcome. Dawn is lovely and easy to reach, when we have any questions and requests, she is always very quick to respond. We will continue working with Scuseme in the future.”
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-slate-border/20">
+<span class="font-headline-sm text-headline-sm text-text-pure block">Charles &amp; Melis</span>
+<span class="font-body-sm text-body-sm text-text-subtle">Whole House Refurbishment • CB1</span>
+</div>
+</div>
+<!-- Testimonial 3: Penny & Tom (City Centre) -->
+<div class="bg-slate-elevated/80 backdrop-blur-xl p-space-xl rounded-xl shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-cyan-electric">City Centre Relocation</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              “Moving to a new area where we didn’t know any tradespeople was a huge challenge. So having someone who could recommend builders, tilers, decorators, electricians etc and not only that but who could project manage the work because we weren’t local was a lifesaver. We are delighted with what’s been done, the house was ready to move into, fresh and clean.”
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-slate-border/20">
+<span class="font-headline-sm text-headline-sm text-text-pure block">Penny &amp; Tom</span>
+<span class="font-body-sm text-body-sm text-text-subtle">Full Pre-Move Refurbishment</span>
+</div>
+</div>
+</div>
+<!-- Secondary Testimonial Dual Banner -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-lg">
+<div class="bg-surface-container p-space-lg rounded-xl flex items-start gap-space-md">
+<span class="material-symbols-outlined text-primary text-headline-lg shrink-0">format_quote</span>
+<div>
+<p class="font-body-sm text-body-sm text-text-muted italic">
+              “Thank you so much for all your help, finding solutions, excellent trades people and for your encouragement. I have really gained from your input.”
+            </p>
+<span class="font-label-caps text-label-caps uppercase text-text-pure mt-space-xs block">— Jane, Cambridge CB1</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-lg rounded-xl flex items-start gap-space-md">
+<span class="material-symbols-outlined text-cyan-electric text-headline-lg shrink-0">format_quote</span>
+<div>
+<p class="font-body-sm text-body-sm text-text-muted italic">
+              “Throughout the process, she has been nearly as excited about my flat as me! She spent so much time poring over designs and coming up with ideas: it made the process a lot more fun and LOT less painful.”
+            </p>
+<span class="font-label-caps text-label-caps uppercase text-text-pure mt-space-xs block">— Lalitha, Cambridge CB5</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Journal & Blogs -->
+<section class="w-full py-space-4xl bg-surface-container-lowest" id="journal">
+<div class="max-w-container-max-width mx-auto px-space-lg lg:px-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-2xl">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-cyan-electric">Industry Insights &amp; Advice</span>
+<h2 class="font-headline-xl text-headline-xl text-text-pure mt-space-xs">
+            From the Cambridge Renovation Journal
+          </h2>
+</div>
+<a class="inline-flex items-center text-primary font-label-interactive text-label-interactive hover:text-tertiary transition-colors" href="#">
+<span>Read all articles</span>
+<span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Blog 1 -->
+<article class="bg-surface-container rounded-xl overflow-hidden shadow-md flex flex-col group">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dawn Giesler smiling in a warm Cambridge kitchen setting reviewing renovation portfolios with homeowner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_GC2FltE01BCunh6xNdVerWeOHbQfmAI8VN34xzDQlcZKBxB4y2_AbAy1k9BN-uYvxHUdEoR_LvhdkZ9_M9dqwW8noXN3jsD0waUrx_XpGgC4WrGiOJ2dCJag2rTyf_1i_3VbIZ4xu4Cx3CV_MnDCcXquwqH4t6x0W-VcaRfLgI6DN-iXEz3dqMQSBk0tNaiB1JI9JsSauwx3shyrJ8y-E_DH7iYOBqLNgqx3JcnLOOk8dd3BtT1Weg"/>
+</div>
+<div class="p-space-lg flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center gap-space-xs text-text-subtle font-label-caps text-label-caps uppercase mb-space-xs">
+<span>Dec 1, 2022</span>
+<span>•</span>
+<span class="text-cyan-electric">Dawn Giesler</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-pure group-hover:text-primary transition-colors">
+                Happy to change: The way forward — 1-2-1 project management
+              </h3>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">
+                Why bespoke personal management has become the modern homeowner's greatest safeguard when undertaking renovations in Cambridge.
+              </p>
+</div>
+<span class="mt-space-md inline-flex items-center text-primary font-label-interactive text-label-interactive text-body-sm group-hover:translate-x-1 transition-transform">
+<span>Read Article</span>
+<span class="material-symbols-outlined text-sm ml-1">chevron_right</span>
+</span>
+</div>
+</article>
+<!-- Blog 2 -->
+<article class="bg-surface-container rounded-xl overflow-hidden shadow-md flex flex-col group">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Two professional Cambridge building contractors discussing blueprints and floor plans on a wooden table with tape measure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJPScAREX_NRbuHUXw5mUSel4fLv6xi_qPArrTGRiWK_a9v9fSw6xiND5aW9G_4BODYMEj8Mc9SsvyyPdOedFWCbj9jo9wV2NmdEbCwtjDL8NmXZaXmOLaWtJjwN05-pU4EFMaHE_UGxpz0PI6RFEJv1BL3CZvx-kxLy94sZ5W9HJ9tqe1J0zSDIdwCA8Oa_Li_VdPoUUGTDGo4hCqKYlGc8FFXR2_A0gTscZ7PAsfZieF2kJERVqKlQ"/>
+</div>
+<div class="p-space-lg flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center gap-space-xs text-text-subtle font-label-caps text-label-caps uppercase mb-space-xs">
+<span>Jun 25, 2021</span>
+<span>•</span>
+<span class="text-cyan-electric">Dawn Giesler</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-pure group-hover:text-primary transition-colors">
+                How to find trusted builders in Cambridge – 6 key questions to ask
+              </h3>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">
+                Vital criteria, liability checks, insurance verifications, and contract guarantees to review before committing to any tradesperson.
+              </p>
+</div>
+<span class="mt-space-md inline-flex items-center text-primary font-label-interactive text-label-interactive text-body-sm group-hover:translate-x-1 transition-transform">
+<span>Read Article</span>
+<span class="material-symbols-outlined text-sm ml-1">chevron_right</span>
+</span>
+</div>
+</article>
+<!-- Blog 3 -->
+<article class="bg-surface-container rounded-xl overflow-hidden shadow-md flex flex-col group">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern architectural garage conversion into sunlit home office studio with crittall style glass doors and herringbone wood flooring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgPWTyIy7yxuvpfXGCy4dGtgET1slBJkfA9CLag3LEUyAB7Tuht2_iXwMCaRAvlZHeN4ZS_v7GfxIn-oTjJAuk3Kn52ePZ2tkG6eGKvyKjbDN8Og3dLPBP9Xoc5AsHgnCS9DvpjswXBsgfiwGT-QRyYCahWUz-UjgJQpbaRdtRUP8iHrd8FEmAURvB3IdBD889w9a3vGgtDZ-La7ZdKnb_q2JD9MwZz2k4jP-oGlB5ay8Zrh6yjEUEeg"/>
+</div>
+<div class="p-space-lg flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center gap-space-xs text-text-subtle font-label-caps text-label-caps uppercase mb-space-xs">
+<span>Jun 7, 2021</span>
+<span>•</span>
+<span class="text-cyan-electric">Dawn Giesler</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-pure group-hover:text-primary transition-colors">
+                16 inspiring ways to add value to your home with a garage conversion
+              </h3>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">
+                Transform underutilized garage footprints into home offices, guest suites, micro-gyms, or open-plan garden studios.
+              </p>
+</div>
+<span class="mt-space-md inline-flex items-center text-primary font-label-interactive text-label-interactive text-body-sm group-hover:translate-x-1 transition-transform">
+<span>Read Article</span>
+<span class="material-symbols-outlined text-sm ml-1">chevron_right</span>
+</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Section 8: Consultation & Booking Contact Form -->
+<section class="w-full py-space-5xl bg-surface relative overflow-hidden" id="consultation">
+<!-- Chromatic light ambient blur -->
+<div class="absolute bottom-0 right-1/4 w-[32rem] h-[32rem] rounded-full bg-magenta-primary/10 blur-[130px] pointer-events-none"></div>
+<div class="max-w-container-max-width mx-auto px-space-lg lg:px-space-xl relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl">
+<!-- Left: Consultation Value & Contacts -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-low mb-space-sm">
+<span class="w-2 h-2 rounded-full bg-cyan-electric shadow-[0_0_8px_#14E5E9]"></span>
+<span class="font-label-caps text-label-caps uppercase text-cyan-electric">No Obligation Consultation</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-pure">
+              Contact Dawn Giesler
+            </h2>
+<p class="font-body-lg text-body-xl text-text-muted mt-space-md">
+              If you would like to have a <strong class="text-text-pure font-semibold">FREE no obligation 1 hour meeting</strong> to discuss how I can help you with your home improvement project, please drop me a line.
+            </p>
+<p class="font-body-md text-body-md text-text-muted mt-space-sm">
+              We can meet in person in Cambridge or online via video call — but a face-to-face over coffee is always nicer!
+            </p>
+<!-- Direct Contact Methods -->
+<div class="flex flex-col gap-space-md mt-space-xl">
+<a class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors group" href="tel:07496503954">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-cyan-electric group-hover:bg-primary-container group-hover:text-text-pure transition-colors">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-text-subtle block">Direct Mobile &amp; WhatsApp</span>
+<span class="font-headline-sm text-headline-sm text-text-pure">+44 7496 503954</span>
+</div>
+</a>
+<a class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors group" href="mailto:help@scuseme.co.uk">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-cyan-electric group-hover:bg-primary-container group-hover:text-text-pure transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-text-subtle block">Concierge Email</span>
+<span class="font-headline-sm text-headline-sm text-text-pure">help@scuseme.co.uk</span>
+</div>
+</a>
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-cyan-electric">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-text-subtle block">Location</span>
+<span class="font-body-md text-body-md text-text-pure">Cambridge &amp; Surrounding Villages, UK</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Assured Quality Marker -->
+<div class="mt-space-xl p-space-md rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-xs text-cyan-electric mb-1">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="font-label-caps text-label-caps uppercase">Discreet &amp; Client Confidential</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-subtle">Your property plans and inquiries remain strictly confidential.</p>
+</div>
+</div>
+<!-- Right: Modern Sleek Form -->
+<div class="lg:col-span-7">
+<div class="bg-slate-elevated/95 backdrop-blur-xl p-space-xl lg:p-space-2xl rounded-2xl shadow-2xl">
+<h3 class="font-headline-md text-headline-md text-text-pure mb-space-xs">Schedule Your Consultation</h3>
+<p class="font-body-sm text-body-sm text-text-subtle mb-space-lg">Please fill out your details below and Dawn will respond within 24 hours.</p>
+<form class="flex flex-col gap-space-md" id="contact-form" onsubmit="event.preventDefault(); alert('Thank you. Dawn Giesler will contact you shortly to confirm your consultation.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="font-label-caps text-label-caps uppercase text-text-subtle block mb-space-xs" for="name">Name *</label>
+<input class="w-full h-12 px-space-md rounded-lg bg-surface-container-lowest text-text-pure placeholder:text-text-subtle font-body-md focus:outline-none focus:ring-2 focus:ring-cyan-electric transition-all" id="name" placeholder="e.g. Eleanor Vance" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps uppercase text-text-subtle block mb-space-xs" for="phone">Telephone Number *</label>
+<input class="w-full h-12 px-space-md rounded-lg bg-surface-container-lowest text-text-pure placeholder:text-text-subtle font-body-md focus:outline-none focus:ring-2 focus:ring-cyan-electric transition-all" id="phone" placeholder="e.g. 07123 456789" required="" type="tel"/>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-label-caps uppercase text-text-subtle block mb-space-xs" for="email">Email Address *</label>
+<input class="w-full h-12 px-space-md rounded-lg bg-surface-container-lowest text-text-pure placeholder:text-text-subtle font-body-md focus:outline-none focus:ring-2 focus:ring-cyan-electric transition-all" id="email" placeholder="e.g. eleanor@cambridge.ac.uk" required="" type="email"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="font-label-caps text-label-caps uppercase text-text-subtle block mb-space-xs" for="service-type">Project Category</label>
+<select class="w-full h-12 px-space-md rounded-lg bg-surface-container-lowest text-text-pure font-body-md focus:outline-none focus:ring-2 focus:ring-cyan-electric transition-all" id="service-type">
+<option value="Full House Renovation">Full House Renovation</option>
+<option value="Kitchen Renovation">Kitchen Renovation</option>
+<option value="Loft Conversion">Loft Conversion</option>
+<option value="Home Extension">Home Extension</option>
+<option value="Bathroom Refurbishment">Bathroom Refurbishment</option>
+<option value="Future Proofing">Future Proofing</option>
+<option value="Project Troubleshooting">Project Troubleshooting</option>
+<option value="Eco-home Upgrades">Eco-home Upgrades</option>
+</select>
+</div>
+<div>
+<label class="font-label-caps text-label-caps uppercase text-text-subtle block mb-space-xs" for="meeting-pref">Meeting Preference</label>
+<select class="w-full h-12 px-space-md rounded-lg bg-surface-container-lowest text-text-pure font-body-md focus:outline-none focus:ring-2 focus:ring-cyan-electric transition-all" id="meeting-pref">
+<option value="In Person (Cambridge)">In Person (Cambridge coffee / site)</option>
+<option value="Online Video Call">Online Video Call (Zoom / Teams)</option>
+<option value="Telephone Call">Telephone Call First</option>
+</select>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-label-caps uppercase text-text-subtle block mb-space-xs" for="message">Tell Dawn About Your Project *</label>
+<textarea class="w-full p-space-md rounded-lg bg-surface-container-lowest text-text-pure placeholder:text-text-subtle font-body-md focus:outline-none focus:ring-2 focus:ring-cyan-electric transition-all" id="message" placeholder="Share a few details: property style, target move-in dates, specific questions, or current contractor dilemmas..." required="" rows="4"></textarea>
+</div>
+<div class="flex items-center gap-space-xs">
+<input class="w-4 h-4 rounded bg-surface-container accent-primary" id="consent" required="" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-text-subtle" for="consent">
+                  I agree to receive a personal consultation callback from Scuseme Ltd.
+                </label>
+</div>
+<button class="w-full h-14 rounded-full bg-primary-container hover:bg-magenta-deep text-text-pure font-label-interactive text-label-interactive shadow-lg hover:shadow-[0_8px_30px_rgba(154,27,113,0.5)] transition-all flex items-center justify-center gap-space-xs mt-space-sm" type="submit">
+<span>Request Free 1-Hour Meeting</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Script for Project Horizon Estimator -->
+<script>
+    const estimatorData = {
+      kitchen: {
+        duration: "4 – 6 Weeks",
+        trades: "4 – 6 Trades",
+        planning: "Permitted Dev.",
+        note: "Includes cabinet joinery, plumbing, second-fix electrical, quartz installation, tiling, and appliance commissioning with zero project downtime."
+      },
+      extension: {
+        duration: "12 – 16 Weeks",
+        trades: "8 – 12 Trades",
+        planning: "Full / Permitted",
+        note: "Foundations, brickwork matching, steel beam installation, roof glazing, bi-fold doors, and building control inspections coordinated end-to-end."
+      },
+      loft: {
+        duration: "8 – 10 Weeks",
+        trades: "6 – 8 Trades",
+        planning: "Party Wall &amp; Regs",
+        note: "Structural dormers, timber framework, spray insulation, fire safety doors, ensuite plumbing, and bespoke under-eaves cabinetry."
+      },
+      bathroom: {
+        duration: "2 – 3 Weeks",
+        trades: "3 – 4 Trades",
+        planning: "No Planning Req.",
+        note: "High-grade waterproofing, tanking, precision tile alignment, concealed thermostatic valving, and premium ventilation ducting."
+      },
+      full: {
+        duration: "5 – 9 Months",
+        trades: "15+ Trades",
+        planning: "Architectural &amp; Regs",
+        note: "Complete stripped-back restoration: full rewiring, central heating overhaul, replastering, sash restoration, bespoke kitchen, and multiple luxury bathrooms."
+      },
+      eco: {
+        duration: "6 – 8 Weeks",
+        trades: "4 – 5 Trades",
+        planning: "Grant &amp; Building Regs",
+        note: "External wall insulation, heat pump commissioning, solar PV array integration, draft-proofing, and energy efficiency certification."
+      }
+    };
+
+    function selectType(type) {
+      const data = estimatorData[type];
+      if (!data) return;
+
+      document.getElementById("est-duration").innerText = data.duration;
+      document.getElementById("est-trades").innerText = data.trades;
+      document.getElementById("est-planning").innerText = data.planning;
+      document.getElementById("est-note").innerHTML = data.note;
+
+      const buttons = document.querySelectorAll("#estimator-buttons button");
+      buttons.forEach(btn => {
+        btn.classList.remove("bg-primary-container", "text-text-pure");
+        btn.classList.add("bg-surface-container-high", "text-text-muted");
+      });
+
+      event.target.classList.remove("bg-surface-container-high", "text-text-muted");
+      event.target.classList.add("bg-primary-container", "text-text-pure");
+    }
+  </script>
+</div></main><footer class="w-full bg-slate-surface shadow-[0_-1px_12px_rgba(0,0,0,0.5)] pt-space-4xl pb-space-2xl"><div class="max-w-container-max-width mx-auto px-space-lg lg:px-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-2xl mb-space-3xl"><div class="lg:col-span-4 flex flex-col items-start gap-space-md"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-cyan-electric shadow-[0_0_6px_#14E5E9]"></span><span class="font-headline-md text-headline-md text-text-pure">Scuseme Ltd</span></div><p class="font-body-md text-body-md text-text-muted">End-to-end residential renovation, architectural project coordination, and bespoke artisan management serving Cambridge, Grantchester, and surrounding villages.</p><div class="flex items-center gap-space-xs mt-space-sm px-space-md py-1.5 rounded-full bg-surface-container-low text-text-subtle"><span class="w-1.5 h-1.5 rounded-full bg-cyan-electric animate-pulse"></span><span class="font-label-caps text-label-caps uppercase text-on-surface">Cambridge Local Practice</span></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase text-cyan-electric">Curated Portfolio</span><a class="font-body-sm text-body-sm text-text-muted hover:text-text-pure transition-colors" data-path="services" href="#">Full Renovations</a><a class="font-body-sm text-body-sm text-text-muted hover:text-text-pure transition-colors" data-path="services" href="#">Architectural Design</a><a class="font-body-sm text-body-sm text-text-muted hover:text-text-pure transition-colors" data-path="services" href="#">Historic Conservation</a><a class="font-body-sm text-body-sm text-text-muted hover:text-text-pure transition-colors" data-path="projects-and-testimonials" href="#">Client Residences</a><a class="font-body-sm text-body-sm text-text-muted hover:text-text-pure transition-colors" data-path="process" href="#">Concierge Method</a></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase text-cyan-electric">Contact &amp; Studio</span><span class="font-body-sm text-body-sm text-text-muted">Station Road, Cambridge, CB1 2JW</span><a class="font-body-sm text-body-sm text-text-pure hover:text-cyan-electric transition-colors" href="tel:07496503954">07496 503954</a><span class="font-body-sm text-body-sm text-text-subtle">dawn@scuseme.co.uk</span><span class="font-body-sm text-body-sm text-text-subtle mt-space-xs">Mon – Fri: 8:30 – 18:00</span></div><div class="lg:col-span-4 flex flex-col gap-space-md"><span class="font-label-caps text-label-caps uppercase text-cyan-electric">Private Inquiry &amp; Dispatch</span><p class="font-body-sm text-body-sm text-text-muted">Receive seasonal insights on Cambridge planning approvals, heritage property stewardship, and artisan availability.</p><div class="flex items-center rounded-lg bg-surface-container-lowest p-1 shadow-[0_1px_4px_rgba(0,0,0,0.3)]"><input class="w-full bg-transparent px-space-md py-2 text-on-surface placeholder:text-text-subtle font-body-sm text-body-sm focus:outline-none" placeholder="Enter your email address" type="email"/><button class="px-space-md py-2 rounded-lg bg-primary-container hover:bg-magenta-deep text-text-pure font-label-interactive text-label-interactive transition-colors shrink-0">Join</button></div></div></div><div class="pt-space-xl pb-space-lg flex flex-wrap items-center justify-between gap-space-md"><div class="flex flex-wrap items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-cyan-electric">verified</span><span class="font-label-caps text-label-caps uppercase text-text-muted">Vetted Cambridge Trades</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-cyan-electric">gavel</span><span class="font-label-caps text-label-caps uppercase text-text-muted">Full Liability Insured</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-cyan-electric">domain</span><span class="font-label-caps text-label-caps uppercase text-text-muted">Conservation Compliant</span></div></div><div class="flex items-center gap-space-lg"><a class="font-label-interactive text-label-interactive text-text-subtle hover:text-text-pure transition-colors" href="#">Instagram</a><a class="font-label-interactive text-label-interactive text-text-subtle hover:text-text-pure transition-colors" href="#">LinkedIn</a><a class="font-label-interactive text-label-interactive text-text-subtle hover:text-text-pure transition-colors" href="#">Houzz</a></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-text-subtle"><span class="font-body-sm text-body-sm">© 2025 Scuseme Ltd. All rights reserved. Registered in England &amp; Wales.</span><div class="flex items-center gap-space-md"><a class="font-body-sm text-body-sm hover:text-text-pure transition-colors" data-path="privacy-policy" href="#">Privacy Notice</a><a class="font-body-sm text-body-sm hover:text-text-pure transition-colors" data-path="terms-of-service" href="#">Terms of Engagement</a><a class="font-body-sm text-body-sm hover:text-text-pure transition-colors" data-path="accessibility" href="#">Accessibility</a></div></div></div></footer><img src="https://andrastime.goatcounter.com/count?p=%2Ffce16606-165c-428a-80d5-e738e9db0143" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

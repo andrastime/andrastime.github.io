@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Empower DIY Training</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#001e2f", "surface-dim": "#101319", "outline": "#a08e7a", "on-primary-container": "#613b00", "surface-tint": "#ffb95f", "inverse-surface": "#e1e2eb", "on-surface-variant": "#d8c3ad", "on-error": "#690005", "on-error-container": "#ffdad6", "on-secondary": "#00344d", "tertiary": "#ffc32d", "safety-amber-glow": "rgba(245, 158, 11, 0.25)", "surface-variant": "#32353b", "on-tertiary-fixed": "#261a00", "surface-container-high": "#272a30", "error-container": "#93000a", "tertiary-fixed": "#ffdf9f", "background": "#101319", "on-primary-fixed": "#2a1700", "primary-container": "#f59e0b", "on-secondary-container": "#00344e", "surface-container": "#1d2026", "border-prominent": "rgba(245, 158, 11, 0.35)", "on-tertiary": "#402d00", "on-background": "#e1e2eb", "error": "#ffb4ab", "hazard-warning": "#EF4444", "safety-amber": "#F59E0B", "surface-raised": "#1A1F29", "primary": "#ffc174", "surface-container-highest": "#32353b", "on-primary-fixed-variant": "#653e00", "workshop-cyan-glow": "rgba(14, 165, 233, 0.25)", "secondary": "#89ceff", "border-cyan": "rgba(14, 165, 233, 0.35)", "success-emerald": "#10B981", "on-tertiary-container": "#584000", "secondary-container": "#00a2e6", "primary-fixed": "#ffddb8", "tertiary-container": "#e0a800", "text-muted": "#64748B", "inverse-on-surface": "#2d3037", "inverse-primary": "#855300", "on-secondary-fixed-variant": "#004c6e", "on-tertiary-fixed-variant": "#5c4300", "safety-amber-hover": "#D97706", "surface-base": "#12151B", "primary-fixed-dim": "#ffb95f", "surface-deep": "#0D0F13", "on-surface": "#e1e2eb", "surface-bright": "#363940", "workshop-cyan": "#0EA5E9", "secondary-fixed": "#c9e6ff", "surface-overlay": "#242A36", "surface-highlight": "#2F3644", "border-subtle": "rgba(255, 255, 255, 0.08)", "tertiary-fixed-dim": "#f9bd22", "surface-container-low": "#191c22", "surface": "#101319", "secondary-fixed-dim": "#89ceff", "text-primary": "#F8FAFC", "text-secondary": "#94A3B8", "surface-container-lowest": "#0b0e14", "outline-variant": "#534434", "on-primary": "#472a00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.75rem", "gutter-mobile": "1rem", "container-max": "1280px", "gutter-desktop": "2rem", "space-2xs": "0.25rem", "space-lg": "1.5rem", "space-xs": "0.5rem", "space-2xl": "3rem", "gutter-tablet": "1.5rem", "space-xl": "2rem", "space-4xl": "6rem", "space-md": "1rem", "space-3xl": "4xl" }, "fontFamily": { "label-md": [ "Plus Jakarta Sans" ], "title-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "label-lg": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "display-lg-mobile": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "display-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "code-badge": [ "Inter" ], "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "title-md": [ "18px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" } ], "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "display-lg": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "code-badge": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-deep/95 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.6)]"><div class="w-full bg-surface-container-lowest px-gutter-mobile lg:px-gutter-desktop py-space-2xs text-center"><div class="max-w-container-max mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-2xs"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span><span>6 Church Lane, Papworth Everard, Cambridgeshire CB23 3QN</span></div><div class="flex items-center gap-space-xs text-on-surface font-label-sm text-label-sm"><span class="inline-flex items-center px-space-xs py-0.5 rounded-full bg-surface-container text-workshop-cyan font-code-badge text-code-badge">Next Available</span><span>Upcoming Course Dates: 5/09/2026 &amp; 3/10/2026</span></div></div></div><div class="h-20 max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="Image from https://i0.wp.com/empowerdiy.co.uk/wp-content/uploads/2026/06/FullLogo.webp?fit=1280%2C1024&amp;ssl=1" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XTcslXo1Rnw_njWKjFVx7W0mfWkQQ51k1g6XFPKs6gRLBXMwVjtzEYcQVAm468SotlqDKDypwoGdq-DjnLwabob_XJDmAFYUD0J3b_Bk4My_DJeQscKP-Ya2P4Fmn9_h6rMJUVx-mP3qkjd0CQ6sQtudvln0_iDloQXiauiT9hv8cR_x8fyg-Iv75-Y8nAwWuecDSYD7Fd8eIy2_OH_-Q-jx0yNOV1oyqc9V1JrGNrRt8Y3DBppt1ZMoxz"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface group-hover:text-primary transition-colors">Empower DIY</span><span class="font-label-sm text-label-sm text-workshop-cyan uppercase tracking-widest hidden sm:inline-block">Practical Workshop Training</span></div></a></div><nav class="hidden xl:flex items-center gap-space-xs px-space-xs py-1 rounded-xl bg-surface-base/80" data-active-classes="bg-surface-raised text-primary font-bold shadow-sm rounded-lg"><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-surface-raised text-primary font-bold shadow-sm rounded-lg" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors rounded-lg" data-path="diy-basics" href="#">1 Day DIY Basics</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors rounded-lg" data-path="plumbing-basics" href="#">1 Day Plumbing Basics</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors rounded-lg" data-path="about-us" href="#">About Us</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors rounded-lg" data-path="faqs" href="#">FAQs</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors rounded-lg" data-path="contact" href="#">Contact Us</a></nav><div class="flex items-center gap-space-sm"><a class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" href="tel:01954714999"><span class="material-symbols-outlined text-[20px] text-workshop-cyan">call</span><div class="flex flex-col text-left"><span class="font-label-sm text-label-sm text-text-muted leading-none">Call Us</span><span class="font-label-md text-label-md text-on-surface font-bold">01954 714 999</span></div></a><a class="inline-flex items-center justify-center px-space-lg py-space-xs rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_0_20px_rgba(245,158,11,0.25)] hover:bg-safety-amber-hover hover:text-on-surface transition-all" data-path="booking" href="#">Book a Course</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-28 pb-20 lg:pb-0 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- SAFETY PROTOCOL & SCHEDULE TICKER BANNER -->
+<aside aria-label="Course Alert and Safety Notice" class="w-full bg-surface-deep px-gutter-mobile lg:px-gutter-desktop py-space-xs relative overflow-hidden shadow-sm">
+<div class="h-1 w-full bg-gradient-to-r from-safety-amber via-workshop-cyan to-safety-amber absolute top-0 left-0 opacity-80"></div>
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-0.5 rounded-full bg-surface-raised text-safety-amber font-code-badge text-code-badge">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>PPE Provided On-Site</span>
+</span>
+<span class="font-body-sm text-body-sm text-text-secondary">
+          Next Available Intake: <strong class="text-on-surface">5th September 2026</strong> &amp; <strong class="text-on-surface">3rd October 2026</strong> • Max 6 Learners per Bench
+        </span>
+</div>
+<div class="flex items-center gap-space-sm">
+<a class="font-label-sm text-label-sm text-workshop-cyan hover:text-secondary-fixed transition-colors flex items-center gap-1" href="#booking-section">
+<span>Check Bench Availability</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- HERO SECTION -->
+<section aria-labelledby="hero-title" class="relative w-full px-gutter-mobile lg:px-gutter-desktop py-space-2xl lg:py-space-3xl overflow-hidden">
+<!-- Ambient glowing workshop backdrops -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-safety-amber opacity-10 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 right-0 w-96 h-96 rounded-full bg-workshop-cyan opacity-10 blur-3xl pointer-events-none"></div>
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<!-- Text & Value Callouts (7 Cols) -->
+<article class="lg:col-span-7 flex flex-col items-start gap-space-md">
+<!-- Status Pills -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-raised text-workshop-cyan font-code-badge text-code-badge shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-workshop-cyan">verified</span>
+<span>Cambridgeshire Practical Workshop</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-primary font-code-badge text-code-badge">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span>Absolute Beginners Welcomed</span>
+</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg text-text-primary tracking-tight" id="hero-title">
+          DIY Classes for Beginners — <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-workshop-cyan">Gain Confidence, Save Money,</span> Learn Essential Skills.
+        </h1>
+<p class="font-body-lg text-body-md lg:text-body-lg text-text-secondary leading-relaxed max-w-2xl">
+          Join our hands-on DIY training courses designed for everyone. Build confidence, save hundreds on emergency callout charges, and master domestic maintenance in a warm, family-run Papworth Everard workshop taught by qualified, patient tradesmen.
+        </p>
+<!-- CTA Action Cluster -->
+<div class="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm pt-space-xs">
+<a class="inline-flex items-center justify-center gap-space-xs px-space-xl py-space-sm rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_0_24px_rgba(245,158,11,0.35)] hover:bg-safety-amber-hover transition-all" href="#booking-section">
+<span class="material-symbols-outlined text-[20px]">calendar_add_on</span>
+<span>Book a Course Now</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-full bg-surface-raised text-workshop-cyan font-label-lg text-label-lg hover:bg-surface-highlight transition-all shadow-sm" href="#course-catalog">
+<span class="material-symbols-outlined text-[20px]">download_for_offline</span>
+<span>Download Free DIY Beginner's Guide</span>
+</a>
+</div>
+<!-- 4 Trust Proof Badges -->
+<div class="w-full grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-md border-t border-transparent">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-raised flex items-center justify-center shrink-0 text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">diversity_3</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-primary leading-tight">Family-Run</span>
+<span class="font-body-sm text-body-sm text-text-muted text-[12px]">Supportive Bay</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-raised flex items-center justify-center shrink-0 text-workshop-cyan shadow-sm">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-primary leading-tight">Qualified Pros</span>
+<span class="font-body-sm text-body-sm text-text-muted text-[12px]">Time-Served Men</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-raised flex items-center justify-center shrink-0 text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">group</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-primary leading-tight">Small Groups</span>
+<span class="font-body-sm text-body-sm text-text-muted text-[12px]">Max 6 per bay</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-raised flex items-center justify-center shrink-0 text-success-emerald shadow-sm">
+<span class="material-symbols-outlined text-[20px]">handyman</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-primary leading-tight">100% Practical</span>
+<span class="font-body-sm text-body-sm text-text-muted text-[12px]">Real Power Tools</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Workshop Visual Canvas (5 Cols) -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-2xl overflow-hidden bg-surface-base shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
+<!-- Real workshop imagery matching prompt -->
+<img class="w-full h-[460px] object-cover" data-alt="A brightly lit, organized carpentry and plumbing workshop in Cambridgeshire. A diverse group of adult beginner learners, including a woman operating a red cordless drill into timber and a smiling man using a hand wood plane with a patient tradesman instructor looking on warmly. Real wooden workbenches, chisel racks, wall tools, and dust extraction in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCku3O1nlCCYHhP258wRnvDWcEOIiKzE3-T2YFdGhSYdhKADOvqiFJr4v5eGeU42RQHu198rv8VN125ALedfVQVz2kMHsLyHgioL2_099OdOS4zQNvkvFHJWkMYQ4dTKviDK4QbggGA5ZsQdhF3CUvpNZygpsTbV8DenW-fu4JVVZxkLhvMesgCLY3lffheEpACf5QsY-RmMOCCaM3wM3dzdvwHw5gBiso0ZLjuLd-IQ7OMUB7VUeMshg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-deep/95 via-surface-deep/30 to-transparent"></div>
+<!-- Bottom Visual Card Highlight -->
+<div class="absolute bottom-0 left-0 right-0 p-space-md flex items-center justify-between gap-space-sm bg-surface-raised/90 backdrop-blur-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-safety-amber flex items-center justify-center text-on-primary shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[22px]">precision_manufacturing</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-primary">Papworth Everard Workshop</span>
+<span class="font-body-sm text-body-sm text-text-secondary text-[12px]">Fully equipped domestic mock bays</span>
+</div>
+</div>
+<a class="px-space-sm py-1.5 rounded-lg bg-surface-container text-workshop-cyan hover:text-text-primary font-label-sm text-label-sm transition-colors flex items-center gap-1" href="tel:01954714999">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>01954 714 999</span>
+</a>
+</div>
+</div>
+<!-- Floating Badge Overlap -->
+<div class="hidden sm:flex absolute -bottom-6 -left-6 bg-surface-overlay p-space-sm rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.7)] flex-col gap-1 z-20 max-w-[210px]">
+<div class="flex items-center gap-1 text-safety-amber font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">savings</span>
+<span class="font-bold">Save £100s</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary text-[12px] leading-tight">
+            Fix your own leaks, hang heavy cupboards, and bypass expensive callouts.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- UPCOMING SESSIONS CALENDAR BANNER -->
+<section aria-label="Upcoming Session Dates" class="w-full px-gutter-mobile lg:px-gutter-desktop py-space-lg">
+<div class="max-w-container-max mx-auto rounded-2xl bg-surface-raised p-space-lg lg:p-space-xl shadow-[0_4px_24px_rgba(0,0,0,0.5)]">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-4 flex flex-col gap-space-2xs">
+<div class="flex items-center gap-2 text-workshop-cyan font-code-badge text-code-badge uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">event_available</span>
+<span>Confirmed Scheduled Dates</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-text-primary">Next Practical Workshop Dates</h2>
+<p class="font-body-sm text-body-sm text-text-secondary">
+            Join us in Cambridgeshire to explore a variety of DIY techniques that empower you with ease and assurance.
+          </p>
+</div>
+<!-- Intake Schedule 1 -->
+<div class="lg:col-span-3 rounded-xl bg-surface-base p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-primary/10 text-primary font-code-badge text-code-badge">Autumn Intake #1</span>
+<span class="text-success-emerald flex items-center gap-1 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-success-emerald animate-pulse"></span>
+<span>4 Bays Left</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-text-primary">5th Sept</span>
+<span class="font-body-md text-body-md text-text-muted">2026</span>
+</div>
+<div class="flex items-center gap-space-xs text-text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-workshop-cyan">schedule</span>
+<span>09:30 — 16:30 • Full Day</span>
+</div>
+<div class="flex items-center gap-space-xs text-text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-safety-amber">pin_drop</span>
+<span class="truncate">Papworth Everard Studio</span>
+</div>
+</div>
+<!-- Intake Schedule 2 -->
+<div class="lg:col-span-3 rounded-xl bg-surface-base p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-workshop-cyan/10 text-workshop-cyan font-code-badge text-code-badge">Autumn Intake #2</span>
+<span class="text-success-emerald flex items-center gap-1 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-success-emerald animate-pulse"></span>
+<span>2 Bays Left</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-text-primary">3rd Oct</span>
+<span class="font-body-md text-body-md text-text-muted">2026</span>
+</div>
+<div class="flex items-center gap-space-xs text-text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-workshop-cyan">schedule</span>
+<span>09:30 — 16:30 • Full Day</span>
+</div>
+<div class="flex items-center gap-space-xs text-text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-safety-amber">pin_drop</span>
+<span class="truncate">Papworth Everard Studio</span>
+</div>
+</div>
+<!-- Quick Booking CTA -->
+<div class="lg:col-span-2 flex flex-col gap-space-xs">
+<a class="w-full py-space-sm px-space-md rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-bold text-center hover:bg-safety-amber-hover transition-colors shadow-[0_0_16px_rgba(245,158,11,0.25)]" href="#booking-section">
+            Reserve Spot Today
+          </a>
+<span class="text-center font-label-sm text-label-sm text-text-muted">Instant confirmation</span>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED 1-DAY BEGINNER COURSES (Interactive Course Tracks) -->
+<section aria-labelledby="courses-heading" class="w-full px-gutter-mobile lg:px-gutter-desktop py-space-2xl" id="course-catalog">
+<div class="max-w-container-max mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs max-w-2xl">
+<div class="flex items-center gap-2 text-primary font-code-badge text-code-badge uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">construction</span>
+<span>Accredited Workshop Tracks</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-text-primary" id="courses-heading">
+            1-Day Practical Training Modules
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary">
+            Structured for total beginners and novices. No past DIY experience necessary. All power tools, protective safety kit, materials, and step-by-step guidance included.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="px-space-sm py-1 rounded-full bg-surface-raised text-text-secondary font-label-sm text-label-sm">
+            Small Group Format • Max 6 Learners
+          </span>
+</div>
+</div>
+<!-- Course Comparison Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl">
+<!-- COURSE 1: 1 Day DIY Basics -->
+<article class="rounded-2xl bg-surface-raised overflow-hidden flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.5)] transition-all hover:-translate-y-1">
+<div class="relative h-64 w-full bg-surface-base overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of a beginner learner in a modern workshop drilling into a stud wall testing rawlplugs and spirit levels with safety goggles and workshop apron on. Technical precision tools laid out on clean plywood workbench." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOQvi5UDE7PJfAiwTm6RRo_MbnyzMrgZtHEavNfd95ApyjfLfKreOp1b0sngyEOx1B-Pu4LbjwGIIEvQTradWtmlEdOMMoAjiIoIOoFI3oAcGGc-Kg_CG7G4U0RIPfwp23FEM48NmlFT3m6uWLZAm29ZLOI17T-D0Maa1Am0eD13-swEgjprBqSOUN1-HAu13X7wA6CUQc87TDEebvNbEKXOeK7lU-mpfYIwB8N2p0IMhxWjGzhS5MUg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-raised via-surface-raised/40 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="px-space-xs py-1 rounded-md bg-workshop-cyan text-on-secondary-fixed font-code-badge text-code-badge font-bold">
+                Most Popular
+              </span>
+<span class="px-space-xs py-1 rounded-md bg-surface-deep/80 backdrop-blur text-primary font-code-badge text-code-badge">
+                Beginner Friendly
+              </span>
+</div>
+<div class="absolute bottom-space-sm left-space-md right-space-md flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-workshop-cyan font-bold uppercase tracking-wider">Foundation Module</span>
+<h3 class="font-headline-lg text-headline-lg text-text-primary">1 Day DIY Basics</h3>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-body-sm text-text-muted line-through">Callout: £250+</span>
+<div class="font-headline-md text-headline-md text-primary font-bold">1-Day Intensive</div>
+</div>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+                Overcome tool hesitation and take complete control of your house. Master drilling into multiple wall substrates, level hanging, anchoring, and flat-pack assembly with confidence.
+              </p>
+<!-- Included Skill Modules -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-text-primary uppercase tracking-wider font-bold">What You Will Master:</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-success-emerald text-[18px]">check_circle</span>
+<span>Cordless drills &amp; bits</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-success-emerald text-[18px]">check_circle</span>
+<span>Rawlplugs &amp; wall fixings</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-success-emerald text-[18px]">check_circle</span>
+<span>Spirit levels &amp; squaring</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-success-emerald text-[18px]">check_circle</span>
+<span>Hanging heavy mirrors safely</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-success-emerald text-[18px]">check_circle</span>
+<span>Basic woodwork &amp; joinery</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-success-emerald text-[18px]">check_circle</span>
+<span>Fast furniture assembly</span>
+</div>
+</div>
+</div>
+<!-- Workshop Spec Pill Bar -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-base text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-workshop-cyan">timelapse</span>
+<span>09:30 — 16:30</span>
+</div>
+<div class="flex items-center gap-1.5 text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-primary">handyman</span>
+<span>Tools &amp; Timber Included</span>
+</div>
+<div class="flex items-center gap-1.5 text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-success-emerald">award_star</span>
+<span>Certificate</span>
+</div>
+</div>
+</div>
+<!-- Action cluster -->
+<div class="flex flex-col sm:flex-row items-center gap-space-xs pt-space-sm border-t border-transparent">
+<a class="w-full sm:flex-1 py-space-sm px-space-md rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-bold text-center hover:bg-safety-amber-hover transition-colors shadow-sm" href="#booking-section" onclick="selectCourseChoice('1 Day DIY Basics')">
+                Book This Course
+              </a>
+<a class="w-full sm:w-auto py-space-sm px-space-md rounded-full bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-highlight transition-colors flex items-center justify-center gap-1" href="tel:01954714999">
+<span class="material-symbols-outlined text-[18px] text-workshop-cyan">call</span>
+<span>Ask Question</span>
+</a>
+</div>
+</div>
+</article>
+<!-- COURSE 2: 1 Day Plumbing Basics -->
+<article class="rounded-2xl bg-surface-raised overflow-hidden flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.5)] transition-all hover:-translate-y-1">
+<div class="relative h-64 w-full bg-surface-base overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Plumbing training bay featuring copper pipes, compression fittings, sink trap, and radiator valves with an instructor guiding an adult student on how to isolate water stopcock in a clean educational workshop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4tKy96WuqnSairO_g3p88OnUix-oTRnIEHdtDfVv6B5-oGgZHamtzHcBWVCTcMyebOOhgxnvONgls5zM7KXs1bhg5M1L1NpTWfE83KJFjZiyy_jZNQSWAzg6RXmJ-XmyBGeQJ4qXZw3vNPFheVTWuFO3BNbz4vbB9sJ_xmZdfNaZgVJQ-WdrN3PjkLuQXMDze304WqoH_WPqg9Y9_Xp6WsVhU6SgcHMaY2AamLwIz8Mbn_lFspIuudw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-raised via-surface-raised/40 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="px-space-xs py-1 rounded-md bg-secondary-container text-on-secondary-fixed font-code-badge text-code-badge font-bold">
+                High Return on Investment
+              </span>
+<span class="px-space-xs py-1 rounded-md bg-surface-deep/80 backdrop-blur text-workshop-cyan font-code-badge text-code-badge">
+                Water Safety
+              </span>
+</div>
+<div class="absolute bottom-space-sm left-space-md right-space-md flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-workshop-cyan font-bold uppercase tracking-wider">Domestic Plumbing</span>
+<h3 class="font-headline-lg text-headline-lg text-text-primary">1 Day Plumbing Basics</h3>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-body-sm text-text-muted line-through">Plumber fee: £120/hr</span>
+<div class="font-headline-md text-headline-md text-workshop-cyan font-bold">1-Day Intensive</div>
+</div>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+                Take away the panic of domestic leaks. Learn how your domestic water system functions, how to stop water instantly in an emergency, and service routine bathroom and kitchen fittings yourself.
+              </p>
+<!-- Included Skill Modules -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-text-primary uppercase tracking-wider font-bold">What You Will Master:</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-workshop-cyan text-[18px]">check_circle</span>
+<span>Fixing leaking household taps</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-workshop-cyan text-[18px]">check_circle</span>
+<span>Unblocking sinks &amp; bottle traps</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-workshop-cyan text-[18px]">check_circle</span>
+<span>Radiator bleeding &amp; valves</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-workshop-cyan text-[18px]">check_circle</span>
+<span>Emergency mains water isolation</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-workshop-cyan text-[18px]">check_circle</span>
+<span>Toilet siphon &amp; float valves</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-workshop-cyan text-[18px]">check_circle</span>
+<span>Compression &amp; push-fit joints</span>
+</div>
+</div>
+</div>
+<!-- Workshop Spec Pill Bar -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-base text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-workshop-cyan">timelapse</span>
+<span>09:30 — 16:30</span>
+</div>
+<div class="flex items-center gap-1.5 text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-workshop-cyan">plumbing</span>
+<span>Plumbing Rig Provided</span>
+</div>
+<div class="flex items-center gap-1.5 text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-success-emerald">award_star</span>
+<span>Certificate</span>
+</div>
+</div>
+</div>
+<!-- Action cluster -->
+<div class="flex flex-col sm:flex-row items-center gap-space-xs pt-space-sm border-t border-transparent">
+<a class="w-full sm:flex-1 py-space-sm px-space-md rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold text-center hover:opacity-90 transition-opacity shadow-sm" href="#booking-section" onclick="selectCourseChoice('1 Day Plumbing Basics')">
+                Book This Course
+              </a>
+<a class="w-full sm:w-auto py-space-sm px-space-md rounded-full bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-highlight transition-colors flex items-center justify-center gap-1" href="tel:01954714999">
+<span class="material-symbols-outlined text-[18px] text-workshop-cyan">call</span>
+<span>Ask Question</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ROI / PHILOSOPHY CALLOUT (Asymmetric Bento Quote) -->
+<section aria-label="Course Value Philosophy" class="w-full px-gutter-mobile lg:px-gutter-desktop py-space-xl">
+<div class="max-w-container-max mx-auto rounded-3xl bg-surface-base p-space-xl lg:p-space-2xl relative overflow-hidden shadow-xl">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-safety-amber opacity-10 blur-3xl"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<span class="inline-flex items-center gap-2 text-primary font-code-badge text-code-badge uppercase tracking-widest">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>Self-Sufficiency &amp; Lifetime Practical Value</span>
+</span>
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-text-primary">
+            Empower Your DIY Skills and <em class="text-primary italic">Save Money</em>
+</h2>
+<blockquote class="font-body-lg text-body-md lg:text-body-lg text-text-secondary leading-relaxed border-l-2 border-primary pl-space-md my-space-2xs">
+            “Invest in yourself. Save money every time you fix. A small investment for skills you will remember forever and use it to grow your knowledge.”
+          </blockquote>
+<p class="font-body-sm text-body-sm text-text-muted">
+            Join our hands-on beginner DIY classes designed for everyone, from beginners to enthusiasts. Gain confidence, save money, and learn essential skills in a supportive environment. Sign up today to start your journey towards self-sufficiency and practical home maintenance!
+          </p>
+</div>
+<div class="lg:col-span-4 rounded-2xl bg-surface-raised p-space-lg flex flex-col gap-space-md shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Typical Callout Savings</span>
+<span class="material-symbols-outlined text-success-emerald text-[24px]">trending_up</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-text-secondary">Emergency Plumber (Avg)</span>
+<span class="text-text-primary font-bold">£160 – £250</span>
+</div>
+<div class="w-full bg-surface-deep h-2 rounded-full overflow-hidden">
+<div class="bg-hazard-warning h-full w-[85%] rounded-full"></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-text-secondary">Handyman TV &amp; Shelf Mount</span>
+<span class="text-text-primary font-bold">£90 – £140</span>
+</div>
+<div class="w-full bg-surface-deep h-2 rounded-full overflow-hidden">
+<div class="bg-safety-amber h-full w-[65%] rounded-full"></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-text-secondary">Radiator Bleed &amp; Valve Check</span>
+<span class="text-text-primary font-bold">£80 – £120</span>
+</div>
+<div class="w-full bg-surface-deep h-2 rounded-full overflow-hidden">
+<div class="bg-workshop-cyan h-full w-[50%] rounded-full"></div>
+</div>
+</div>
+<div class="pt-space-xs border-t border-transparent text-center font-code-badge text-code-badge text-success-emerald">
+            Total domestic savings after 2 fixes pays for your course.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- WHY CHOOSE EMPOWER DIY (The 6 Pillars) -->
+<section aria-labelledby="why-empower-heading" class="w-full px-gutter-mobile lg:px-gutter-desktop py-space-2xl">
+<div class="max-w-container-max mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col items-center text-center gap-space-2xs max-w-3xl mx-auto">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-raised text-workshop-cyan font-code-badge text-code-badge uppercase tracking-wider">
+          Practical Methodology
+        </span>
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-text-primary" id="why-empower-heading">
+          Hands-On Training for Everyone
+        </h2>
+<p class="font-body-lg text-body-md lg:text-body-lg text-text-secondary">
+          At Empower Yourself DIY Training, we believe that everyone can learn essential home maintenance skills. Our courses are designed for all levels, from beginners to those looking to refine their abilities. With a focus on practical, hands-on experience, participants will gain confidence in using tools and completing tasks independently.
+        </p>
+</div>
+<!-- 6 Grid Pillars -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Pillar 1 -->
+<div class="rounded-xl bg-surface-raised p-space-lg flex flex-col gap-space-sm shadow-sm hover:bg-surface-highlight transition-colors">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">fitness_center</span>
+</div>
+<h3 class="font-title-md text-title-md text-text-primary">Empower Your DIY Skills</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            Gain complete mastery of standard home tools. Move from feeling intimidated by equipment to operating power drills and saws safely, precisely, and with calm self-assurance.
+          </p>
+</div>
+<!-- Pillar 2 -->
+<div class="rounded-xl bg-surface-raised p-space-lg flex flex-col gap-space-sm shadow-sm hover:bg-surface-highlight transition-colors">
+<div class="w-12 h-12 rounded-xl bg-workshop-cyan/10 flex items-center justify-center text-workshop-cyan">
+<span class="material-symbols-outlined text-[28px]">touch_app</span>
+</div>
+<h3 class="font-title-md text-title-md text-text-primary">Hands-On Learning Experience</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            No dry theoretical slide presentations. You spend over 90% of the session actively drilling, sawing, pipe-fitting, and levelling at your dedicated workshop bench.
+          </p>
+</div>
+<!-- Pillar 3 -->
+<div class="rounded-xl bg-surface-raised p-space-lg flex flex-col gap-space-sm shadow-sm hover:bg-surface-highlight transition-colors">
+<div class="w-12 h-12 rounded-xl bg-success-emerald/10 flex items-center justify-center text-success-emerald">
+<span class="material-symbols-outlined text-[28px]">groups</span>
+</div>
+<h3 class="font-title-md text-title-md text-text-primary">Courses for Everyone</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            Built deliberately for homeowners, renters, young people setting up home, and mature adults alike. Every step is explained simply without jargon or condescension.
+          </p>
+</div>
+<!-- Pillar 4 -->
+<div class="rounded-xl bg-surface-raised p-space-lg flex flex-col gap-space-sm shadow-sm hover:bg-surface-highlight transition-colors">
+<div class="w-12 h-12 rounded-xl bg-safety-amber/10 flex items-center justify-center text-safety-amber">
+<span class="material-symbols-outlined text-[28px]">shield</span>
+</div>
+<h3 class="font-title-md text-title-md text-text-primary">Build Confidence with DIY</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            Mistakes in our workshop are learning opportunities. Practice on dummy walls and plumbing test rigs without the fear of damaging your own home or personal property.
+          </p>
+</div>
+<!-- Pillar 5 -->
+<div class="rounded-xl bg-surface-raised p-space-lg flex flex-col gap-space-sm shadow-sm hover:bg-surface-highlight transition-colors">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">cottage</span>
+</div>
+<h3 class="font-title-md text-title-md text-text-primary">Practical Skills for Homeowners</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            Learn how to handle actual domestic scenarios: stubborn leaking tap washers, unblocking bathroom traps, replacing toilet cistern valves, and securely mounting heavy items.
+          </p>
+</div>
+<!-- Pillar 6 -->
+<div class="rounded-xl bg-surface-raised p-space-lg flex flex-col gap-space-sm shadow-sm hover:bg-surface-highlight transition-colors">
+<div class="w-12 h-12 rounded-xl bg-workshop-cyan/10 flex items-center justify-center text-workshop-cyan">
+<span class="material-symbols-outlined text-[28px]">savings</span>
+</div>
+<h3 class="font-title-md text-title-md text-text-primary">Save Money &amp; Invest in Yourself</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+            Never again pay emergency callout fees for simple fixes. You will possess permanent skills you remember forever, giving you true household independence.
+          </p>
+</div>
+</div>
+<!-- Workshop pedagogical quote box -->
+<div class="p-space-lg rounded-2xl bg-surface-base flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-full bg-surface-raised flex items-center justify-center text-workshop-cyan shrink-0">
+<span class="material-symbols-outlined text-[32px]">support</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-text-primary">How to learn basic DIY without the intimidation</h4>
+<p class="font-body-sm text-body-sm text-text-secondary">
+              We are committed to evolving our offerings based on your feedback, ensuring that our training remains supportive, relevant, and valuable for all participants.
+            </p>
+</div>
+</div>
+<a class="px-space-lg py-space-xs rounded-full bg-surface-raised text-primary hover:bg-surface-highlight font-label-md text-label-md transition-colors shrink-0" href="#inquiry-form">
+          Have a Question?
+        </a>
+</div>
+</div>
+</section>
+<!-- BOOKING & DIRECT INQUIRY SECTION (Comprehensive Form + Studio Contact) -->
+<section aria-labelledby="booking-heading" class="w-full px-gutter-mobile lg:px-gutter-desktop py-space-2xl bg-surface-container-lowest" id="booking-section">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Studio Location & Direct Contact Cards (5 Cols) -->
+<aside aria-label="Studio Location and Contact Information" class="lg:col-span-5 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-2xs">
+<span class="text-safety-amber font-code-badge text-code-badge uppercase tracking-widest">Get In Touch Directly</span>
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-text-primary" id="booking-heading">
+            Contact Us Today!
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary">
+            Book your course now or reach out to ask any questions. We are always happy to discuss which workshop suits your comfort level best.
+          </p>
+</div>
+<!-- Phone Card -->
+<a class="p-space-md rounded-2xl bg-surface-raised flex items-center gap-space-md shadow-sm hover:bg-surface-highlight transition-all group" href="tel:01954714999">
+<div class="w-14 h-14 rounded-xl bg-workshop-cyan/10 flex items-center justify-center text-workshop-cyan shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[30px]">call</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Call Us Directly</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold group-hover:text-workshop-cyan transition-colors">01954 714 999</span>
+<span class="font-body-sm text-body-sm text-text-secondary text-[12px]">Monday – Saturday: 08:30 – 18:00</span>
+</div>
+</a>
+<!-- Email Card -->
+<a class="p-space-md rounded-2xl bg-surface-raised flex items-center gap-space-md shadow-sm hover:bg-surface-highlight transition-all group" href="mailto:info@empowerdiy.co.uk">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[30px]">mail</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Email Inquiry</span>
+<span class="font-title-md text-title-md text-text-primary font-bold group-hover:text-primary transition-colors">info@empowerdiy.co.uk</span>
+<span class="font-body-sm text-body-sm text-text-secondary text-[12px]">Direct response within 24 hours</span>
+</div>
+</a>
+<!-- Location Card -->
+<div class="p-space-md rounded-2xl bg-surface-raised flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-surface-base flex items-center justify-center text-safety-amber shrink-0">
+<span class="material-symbols-outlined text-[30px]">location_on</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Our Workshop Studio</span>
+<address class="font-body-md text-body-md text-text-primary not-italic font-medium">
+                6 Church Lane<br/>
+                Papworth Everard<br/>
+                Cambridgeshire<br/>
+                CB23 3QN
+              </address>
+</div>
+</div>
+<!-- Interactive Static Map Component -->
+<div class="w-full h-40 rounded-xl bg-surface-base bg-cover bg-center mt-space-2xs shadow-inner" data-location="6 Church Lane, Papworth Everard, Cambridgeshire CB23 3QN" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZqzhZ2a3fHpFpaL4W2KuVg6U02-1I3xWjM7O6H9tWDw4pZ-OYn5taF7pFVucaA0F6pO0EjnpC92YnkknjnfuHgCy6FNBhtHu_uslwZycEpy5Ry45dslOtYyXTx-D8A87XoJYdvIOUcZEiis_hD41rPMIw77YbFIGeJ2OMAc64-f-UqziWk55cyc_3J9CIlWQaAVaQHiyF-kjgpcVdJ-jTjN7Z872LylXYW5sIiXJmf-gM9Unw_P18nQ');">
+</div>
+<span class="font-body-sm text-body-sm text-text-muted text-[12px] text-center">
+            Free dedicated on-site parking available for all workshop learners.
+          </span>
+</div>
+</aside>
+<!-- Dedicated Quick Contact & Inquiry Form (7 Cols) -->
+<article class="lg:col-span-7 rounded-3xl bg-surface-raised p-space-lg lg:p-space-xl shadow-xl flex flex-col justify-between" id="inquiry-form">
+<div class="flex flex-col gap-space-xs mb-space-md">
+<div class="flex items-center gap-2 text-primary font-code-badge text-code-badge uppercase">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Registration &amp; Questions</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-text-primary">Reserve Your Spot or Request Info</h3>
+<p class="font-body-sm text-body-sm text-text-secondary">
+            Fill out the form below. We will confirm bench availability and send your comprehensive welcome pack.
+          </p>
+</div>
+<form class="flex flex-col gap-space-md" onsubmit="event.preventDefault(); alert('Thank you! Your registration / inquiry has been received. Our team will contact you shortly.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Full Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-text-primary" for="full-name">
+                Full Name <span class="text-safety-amber">*</span>
+</label>
+<input class="w-full px-space-md py-space-sm rounded-lg bg-surface-deep text-text-primary font-body-md text-body-md placeholder:text-text-muted focus:outline-none focus:bg-surface-highlight transition-colors" id="full-name" placeholder="e.g. Sarah Jenkins" required="" type="text"/>
+</div>
+<!-- Email Address -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-text-primary" for="email-address">
+                Email Address <span class="text-safety-amber">*</span>
+</label>
+<input class="w-full px-space-md py-space-sm rounded-lg bg-surface-deep text-text-primary font-body-md text-body-md placeholder:text-text-muted focus:outline-none focus:bg-surface-highlight transition-colors" id="email-address" placeholder="e.g. sarah@example.co.uk" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Phone Number -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-text-primary" for="phone-number">
+                Phone Number <span class="text-safety-amber">*</span>
+</label>
+<input class="w-full px-space-md py-space-sm rounded-lg bg-surface-deep text-text-primary font-body-md text-body-md placeholder:text-text-muted focus:outline-none focus:bg-surface-highlight transition-colors" id="phone-number" placeholder="e.g. 07123 456789" required="" type="tel"/>
+</div>
+<!-- Course Interest Dropdown -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-text-primary" for="course-choice">
+                Select Course Track <span class="text-safety-amber">*</span>
+</label>
+<select class="w-full px-space-md py-space-sm rounded-lg bg-surface-deep text-text-primary font-body-md text-body-md focus:outline-none focus:bg-surface-highlight transition-colors" id="course-choice">
+<option value="1 Day DIY Basics (5th Sept 2026)">1 Day DIY Basics (5th Sept 2026)</option>
+<option value="1 Day DIY Basics (3rd Oct 2026)">1 Day DIY Basics (3rd Oct 2026)</option>
+<option value="1 Day Plumbing Basics (5th Sept 2026)">1 Day Plumbing Basics (5th Sept 2026)</option>
+<option value="1 Day Plumbing Basics (3rd Oct 2026)">1 Day Plumbing Basics (3rd Oct 2026)</option>
+<option value="Both Courses (Combo Package)">Both Courses (Combo Weekend)</option>
+<option value="General Inquiry / Gift Voucher">General Inquiry / Gift Voucher</option>
+</select>
+</div>
+</div>
+<!-- Message Field -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-text-primary" for="inquiry-message">
+              Your Message or Prior Experience (Optional)
+            </label>
+<textarea class="w-full px-space-md py-space-sm rounded-lg bg-surface-deep text-text-primary font-body-md text-body-md placeholder:text-text-muted focus:outline-none focus:bg-surface-highlight transition-colors" id="inquiry-message" placeholder="Let us know what home projects you're looking forward to tackling, or if you have any questions before booking..." rows="4"></textarea>
+</div>
+<!-- Safety & Terms Consent -->
+<div class="flex items-start gap-space-xs pt-space-2xs">
+<input class="mt-1 w-4 h-4 rounded bg-surface-deep text-primary focus:ring-0 cursor-pointer" id="terms-consent" required="" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-text-secondary leading-snug cursor-pointer" for="terms-consent">
+              I agree to the workshop attendance terms, safety PPE policy, and understand groups are strictly capped at 6 participants.
+            </label>
+</div>
+<!-- Form Submit Button -->
+<button class="w-full py-space-md rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_0_24px_rgba(245,158,11,0.35)] hover:bg-safety-amber-hover transition-all flex items-center justify-center gap-space-xs mt-space-xs" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Send Registration / Inquiry</span>
+</button>
+<div class="flex items-center justify-center gap-space-md pt-space-xs text-text-muted font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-success-emerald text-[16px]">lock</span>
+<span>100% Secure Data</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-workshop-cyan text-[16px]">reply</span>
+<span>Prompt Trade Replies</span>
+</span>
+</div>
+</form>
+</article>
+</div>
+</section>
+<!-- TESTIMONIALS & WORKSHOP ATMOSPHERE PREVIEW -->
+<section aria-label="Learner Feedback and Workshop Atmosphere" class="w-full px-gutter-mobile lg:px-gutter-desktop py-space-2xl">
+<div class="max-w-container-max mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<span class="text-workshop-cyan font-code-badge text-code-badge uppercase">Student Experiences</span>
+<h2 class="font-headline-lg text-headline-lg text-text-primary">What Our Beginners Say</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-safety-amber flex items-center">
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star</span>
+</span>
+<span class="font-label-md text-label-md text-text-primary font-bold">5.0 / 5.0 Rated</span>
+<span class="font-body-sm text-body-sm text-text-muted">(Over 180+ Local Learners)</span>
+</div>
+</div>
+<!-- Testimonial Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Review 1 -->
+<article class="p-space-lg rounded-2xl bg-surface-raised flex flex-col justify-between gap-space-md shadow-sm">
+<p class="font-body-md text-body-md text-text-secondary italic">
+            “I was genuinely terrified of drills and had never hung anything heavier than a small picture hook. After the 1-Day Basics course, I came home and mounted our heavy bathroom mirror and built an entire shelf unit. Truly empowering!”
+          </p>
+<div class="flex items-center gap-space-sm pt-space-xs border-t border-transparent">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+              EW
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-primary">Emma Watson</span>
+<span class="font-body-sm text-body-sm text-text-muted text-[12px]">Cambridge • 1 Day DIY Basics</span>
+</div>
+</div>
+</article>
+<!-- Review 2 -->
+<article class="p-space-lg rounded-2xl bg-surface-raised flex flex-col justify-between gap-space-md shadow-sm">
+<p class="font-body-md text-body-md text-text-secondary italic">
+            “Our kitchen mixer tap was dripping for six months. A plumber quoted £180 just to show up. Attended the plumbing course in Papworth, learned how taps actually work, bought a £4 cartridge, and fixed it in 15 minutes flat.”
+          </p>
+<div class="flex items-center gap-space-sm pt-space-xs border-t border-transparent">
+<div class="w-10 h-10 rounded-full bg-workshop-cyan/20 flex items-center justify-center text-workshop-cyan font-bold">
+              MR
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-primary">Mark Richardson</span>
+<span class="font-body-sm text-body-sm text-text-muted text-[12px]">St Neots • 1 Day Plumbing Basics</span>
+</div>
+</div>
+</article>
+<!-- Review 3 -->
+<article class="p-space-lg rounded-2xl bg-surface-raised flex flex-col justify-between gap-space-md shadow-sm">
+<p class="font-body-md text-body-md text-text-secondary italic">
+            “The tutors are wonderful tradesmen who treat every question with absolute patience. With just 6 people in the workshop, you get instant one-on-one help anytime you need it. Highly recommended to everyone.”
+          </p>
+<div class="flex items-center gap-space-sm pt-space-xs border-t border-transparent">
+<div class="w-10 h-10 rounded-full bg-success-emerald/20 flex items-center justify-center text-success-emerald font-bold">
+              LP
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-primary">Linda Patel</span>
+<span class="font-body-sm text-body-sm text-text-muted text-[12px]">Huntingdon • DIY Basics Course</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- QUICK JUMP & SCRIPT HELPER -->
+<script>
+    function selectCourseChoice(courseName) {
+      const selectElem = document.getElementById('course-choice');
+      if (selectElem) {
+        for (let i = 0; i < selectElem.options.length; i++) {
+          if (selectElem.options[i].text.includes(courseName)) {
+            selectElem.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+  </script>
+</div></main><div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-raised/95 backdrop-blur-xl border-t border-border-subtle lg:hidden px-gutter-mobile py-space-xs shadow-[0_-4px_20px_rgba(0,0,0,0.5)]"><div class="grid grid-cols-4 items-center gap-1 text-center"><a class="flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#"><span class="material-symbols-outlined text-[22px]">construction</span><span class="font-label-sm text-label-sm mt-0.5">Courses</span></a><a class="flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-workshop-cyan transition-colors" href="tel:01954714999"><span class="material-symbols-outlined text-[22px]">call</span><span class="font-label-sm text-label-sm mt-0.5">Call Us</span></a><a class="flex flex-col items-center justify-center py-1 text-primary hover:text-safety-amber-hover transition-colors" data-path="booking" href="#"><span class="material-symbols-outlined text-[22px]">calendar_month</span><span class="font-label-sm text-label-sm font-bold mt-0.5">Book Now</span></a><a class="flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#"><span class="material-symbols-outlined text-[22px]">menu</span><span class="font-label-sm text-label-sm mt-0.5">Menu</span></a></div></div><footer class="w-full bg-surface-deep text-on-surface-variant pt-space-2xl pb-space-2xl lg:pb-space-xl shadow-[0_-1px_12px_rgba(0,0,0,0.4)]"><div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-xl border-b border-border-subtle"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Image from https://i0.wp.com/empowerdiy.co.uk/wp-content/uploads/2026/06/FullLogo.webp?fit=1280%2C1024&amp;ssl=1" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XTcslXo1Rnw_njWKjFVx7W0mfWkQQ51k1g6XFPKs6gRLBXMwVjtzEYcQVAm468SotlqDKDypwoGdq-DjnLwabob_XJDmAFYUD0J3b_Bk4My_DJeQscKP-Ya2P4Fmn9_h6rMJUVx-mP3qkjd0CQ6sQtudvln0_iDloQXiauiT9hv8cR_x8fyg-Iv75-Y8nAwWuecDSYD7Fd8eIy2_OH_-Q-jx0yNOV1oyqc9V1JrGNrRt8Y3DBppt1ZMoxz"/><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Empower DIY</span></div><p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">Hands-on, confidence-building DIY workshops designed for homeowners, beginners, and novices. Real tools, certified instruction, and life-long domestic self-reliance.</p><div class="flex flex-col gap-space-xs text-body-sm font-body-sm"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px] mt-0.5">location_on</span><span class="text-on-surface">6 Church Lane, Papworth Everard, Cambridgeshire CB23 3QN</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-workshop-cyan text-[20px]">call</span><a class="text-on-surface hover:text-primary transition-colors font-bold" href="tel:01954714999">01954 714 999</a></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-workshop-cyan text-[20px]">mail</span><a class="text-on-surface hover:text-primary transition-colors" href="mailto:info@empowerdiy.co.uk">info@empowerdiy.co.uk</a></div></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-on-surface font-bold">Course Tracks</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="flex items-center gap-space-2xs text-text-muted hover:text-primary transition-colors"><span class="material-symbols-outlined text-[16px] text-workshop-cyan">build</span><a class="text-on-surface-variant hover:text-on-surface" data-path="diy-basics" href="#">1 Day DIY Basics</a></li><li class="flex items-center gap-space-2xs text-text-muted hover:text-primary transition-colors"><span class="material-symbols-outlined text-[16px] text-workshop-cyan">water_drop</span><a class="text-on-surface-variant hover:text-on-surface" data-path="plumbing-basics" href="#">1 Day Plumbing Basics</a></li><li class="flex items-center gap-space-2xs text-text-muted hover:text-primary transition-colors"><span class="material-symbols-outlined text-[16px] text-workshop-cyan">bolt</span><a class="text-on-surface-variant hover:text-on-surface" data-path="home-electrics" href="#">Home Electrics Safety</a></li><li class="flex items-center gap-space-2xs text-text-muted hover:text-primary transition-colors"><span class="material-symbols-outlined text-[16px] text-workshop-cyan">carpenter</span><a class="text-on-surface-variant hover:text-on-surface" data-path="woodworking-joinery" href="#">Joinery &amp; Woodwork</a></li><li class="flex items-center gap-space-2xs text-text-muted hover:text-primary transition-colors"><span class="material-symbols-outlined text-[16px] text-workshop-cyan">verified</span><a class="text-on-surface-variant hover:text-on-surface" data-path="custom-training" href="#">Bespoke Workshops</a></li></ul></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-on-surface font-bold">Quick Links</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About the Academy</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="workshop-location" href="#">Workshop Location</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="faqs" href="#">Frequently Asked Questions</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="safety-protocols" href="#">Safety &amp; PPE Policies</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact Team</a></li><li><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-conditions" href="#">Terms &amp; Booking Conditions</a></li></ul></div><div class="lg:col-span-4 flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-on-surface font-bold">Free Workshop Toolkit Guide</h4><p class="font-body-sm text-body-sm text-text-secondary">Sign up for our seasonal domestic maintenance checklist, safety guides, and advance notices on course seat releases.</p><div class="flex flex-col sm:flex-row gap-space-xs"><input class="w-full px-space-sm py-space-xs rounded-lg bg-surface-base border border-border-subtle text-on-surface placeholder:text-text-muted font-body-sm text-body-sm focus:outline-none focus:border-primary" placeholder="Enter your email address" type="email"/><button class="px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold shrink-0 hover:bg-safety-amber-hover transition-colors">Get Guide</button></div><div class="flex items-center gap-space-xs text-label-sm font-label-sm text-text-muted"><span class="material-symbols-outlined text-success-emerald text-[16px]">lock</span><span>No spam. Instant PDF download on submission.</span></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-text-muted"><p>© 2026 Empower Yourself DIY Training Ltd. All rights reserved. Registered in England &amp; Wales.</p><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="cookie-policy" href="#">Cookie Policy</a><a class="hover:text-on-surface transition-colors" data-path="accessibility" href="#">Accessibility</a></div></div></div></footer><img src="https://andrastime.goatcounter.com/count?p=%2Fceb33adc-d04a-43fc-a238-4aa20ba9d1b9" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>

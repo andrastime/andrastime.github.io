@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "primary-fixed-dim": "#bbc7df",
+        "surface-container-highest": "#dee2f0",
+        "error": "#ba1a1a",
+        "secondary-fixed": "#ffddb3",
+        "surface-variant": "#dee2f0",
+        "on-primary-container": "#808ca2",
+        "on-primary": "#ffffff",
+        "shutter-white": "#FFFFFF",
+        "on-secondary-fixed-variant": "#60400d",
+        "primary": "#041021",
+        "tertiary-fixed-dim": "#ffb783",
+        "inverse-surface": "#2b303b",
+        "inverse-primary": "#bbc7df",
+        "surface-border": "#E3DCD3",
+        "outline": "#75777d",
+        "error-container": "#ffdad6",
+        "on-primary-fixed": "#101c2e",
+        "on-tertiary-fixed-variant": "#703700",
+        "on-secondary": "#ffffff",
+        "surface-dim": "#d6dae7",
+        "secondary-container": "#ffcf90",
+        "on-tertiary": "#ffffff",
+        "surface-container-high": "#e4e8f5",
+        "outline-variant": "#c5c6cd",
+        "surface-subtle": "#F3EFEA",
+        "on-secondary-fixed": "#291800",
+        "inverse-on-surface": "#ecf0fe",
+        "on-background": "#171c25",
+        "surface-bright": "#f9f9ff",
+        "surface-container": "#eaeefb",
+        "surface-container-low": "#f0f3ff",
+        "on-tertiary-fixed": "#301400",
+        "tertiary-fixed": "#ffdcc5",
+        "tertiary": "#1d0a00",
+        "surface-tint": "#535f73",
+        "primary-fixed": "#d7e3fb",
+        "on-primary-fixed-variant": "#3b475b",
+        "on-error": "#ffffff",
+        "secondary": "#7b5823",
+        "deep-navy": "#101926",
+        "on-error-container": "#93000a",
+        "tertiary-container": "#3d1b00",
+        "background": "#f9f9ff",
+        "review-gold": "#E5A024",
+        "on-surface": "#171c25",
+        "surface-container-lowest": "#ffffff",
+        "primary-container": "#192537",
+        "on-tertiary-container": "#d47113",
+        "canvas-linen": "#FBF9F5",
+        "secondary-fixed-dim": "#edbf80",
+        "on-surface-variant": "#44474c",
+        "surface": "#f9f9ff",
+        "on-secondary-container": "#7a5722"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "gutter": "1.5rem",
+        "space-lg": "1.5rem",
+        "space-sm": "0.75rem",
+        "space-2xl": "4rem",
+        "margin": "1.25rem",
+        "space-xl": "2.5rem",
+        "margin-desktop": "4rem",
+        "space-xs": "0.5rem",
+        "space-3xl": "6rem",
+        "margin-tablet": "2.5rem",
+        "space-md": "1rem",
+        "gutter-desktop": "2.5rem",
+        "space-2xs": "0.25rem"
+      },
+      "fontFamily": {
+        "headline-lg": ["Playfair Display"],
+        "caption-editorial": ["Plus Jakarta Sans"],
+        "headline-sm": ["Playfair Display"],
+        "headline-lg-mobile": ["Playfair Display"],
+        "display-hero": ["Playfair Display"],
+        "headline-md": ["Playfair Display"],
+        "label-md": ["Plus Jakarta Sans"],
+        "body-lg": ["Plus Jakarta Sans"],
+        "body-md": ["Plus Jakarta Sans"],
+        "title-editorial": ["Plus Jakarta Sans"],
+        "display-hero-mobile": ["Playfair Display"],
+        "label-lg": ["Plus Jakarta Sans"],
+        "body-sm": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "caption-editorial": ["11px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+        "headline-sm": ["22px", {"lineHeight": "30px", "fontWeight": "500"}],
+        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+        "display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+        "label-md": ["13px", {"lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "title-editorial": ["13px", {"lineHeight": "20px", "letterSpacing": "0.14em", "fontWeight": "700"}],
+        "display-hero-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "label-lg": ["15px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+      }
+    }
+  }
+}</script></head><body class="bg-canvas-linen font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-xl shadow-[0_12px_32px_-4px_rgba(25,37,55,0.12)]"><div class="bg-deep-navy/90 py-space-2xs border-b border-primary-container/40 hidden sm:block"><div class="max-w-[1320px] mx-auto px-gutter sm:px-margin-tablet lg:px-margin-desktop flex items-center justify-between font-caption-editorial text-caption-editorial tracking-widest text-primary-fixed-dim uppercase"><div>Family Owned & Operated <span class="text-secondary-fixed mx-space-2xs">•</span> 5-Year Parts & Service Guarantee <span class="text-secondary-fixed mx-space-2xs">•</span> <span class="text-review-gold font-bold">5.0 ★</span> Rated Across the West Midlands</div><div class="flex items-center gap-space-md font-label-md text-label-md text-shutter-white lowercase"><a class="flex items-center gap-space-2xs text-primary-fixed-dim hover:text-shutter-white transition-colors" href="tel:07813133291"><span class="material-symbols-outlined text-review-gold text-[16px]">call</span>07813 133291</a><span class="text-primary-container">|</span><a class="flex items-center gap-space-2xs text-primary-fixed-dim hover:text-shutter-white transition-colors" href="tel:01384277877"><span class="material-symbols-outlined text-review-gold text-[16px]">phone_in_talk</span>01384 277877</a></div></div></div><div class="h-20 max-w-[1320px] mx-auto px-gutter sm:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><div class="p-space-2xs bg-primary-container rounded-lg border border-primary-container/60 group-hover:border-secondary-fixed/40 transition-colors"><img alt="Handyman & Blinds Logo" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XkHjLkF3fXIgCcWRotqTD_0W-U255jsUtA-YiTisLYg6IMb6ow0UqdPM-GaoSreqhnSPbHnRQdDsNa8axKMhUN1u3ynUZMQEN4kHQbW6rbRURmVW0hDLvQoHcXymGlx14Xhn7Nej8miUZuApgRwVmCzLMuBCgRCMG5BOM-d5ZpaG_ycXYj4viIKTgkE4UEtldpFoigGmcby_rq5BO4h3I6sid5YwkIT_zSsa-VPHXmixRDCSM85uZ7ETE"/></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-shutter-white tracking-tight leading-none uppercase">HANDYMAN & BLINDS</span><span class="font-caption-editorial text-caption-editorial text-secondary-fixed tracking-[0.2em] uppercase mt-0.5">Bespoke Window Craftsmanship</span></div></a></div><nav class="hidden xl:flex items-center gap-space-sm" data-active-classes="bg-primary-container text-shutter-white font-bold rounded-lg"><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-shutter-white font-bold rounded-lg" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-primary-fixed-dim hover:text-shutter-white transition-colors" data-path="blinds" href="#">Blinds</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-primary-fixed-dim hover:text-shutter-white transition-colors" data-path="plantation-shutters" href="#">Plantation Shutters</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-primary-fixed-dim hover:text-shutter-white transition-colors" data-path="awnings" href="#">Awnings</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-primary-fixed-dim hover:text-shutter-white transition-colors" data-path="about-us" href="#">About Us</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-primary-fixed-dim hover:text-shutter-white transition-colors" data-path="reviews" href="#">Reviews</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-primary-fixed-dim hover:text-shutter-white transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex flex-col items-end text-right"><span class="font-caption-editorial text-caption-editorial text-primary-fixed-dim uppercase">Speak Directly to Fitters</span><a class="font-label-lg text-label-lg text-shutter-white hover:text-secondary-fixed transition-colors flex items-center gap-space-2xs" href="tel:07813133291"><span class="material-symbols-outlined text-review-gold text-[18px]">phone_android</span>07813 133291</a></div><a class="bg-secondary hover:bg-tertiary-container text-shutter-white font-label-lg text-label-lg px-space-lg py-space-xs rounded-lg shadow-sm hover:-translate-y-0.5 transition-all text-center flex items-center gap-space-2xs" data-path="book-consultation" href="#"><span class="material-symbols-outlined text-[18px]">calendar_month</span><span>Book Free Consultation</span></a></div></div></header><main class="w-full pt-20 bg-canvas-linen pb-20 lg:pb-0"><div class="flex flex-col w-full">
+<!-- =========================================================================
+       HERO SECTION - High Impact Editorial Split Layout with Rich Visual Balance
+       ========================================================================= -->
+<section class="relative bg-primary text-shutter-white overflow-hidden -mt-20 pt-24 pb-16 lg:pt-32 lg:pb-24">
+<!-- Subtle architectural background glow -->
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary-container/40 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 right-0 w-[500px] h-[500px] bg-secondary/15 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="max-w-[1320px] mx-auto px-gutter sm:px-margin-tablet lg:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+<!-- Left Column: Imagery with layered floating credentials -->
+<div class="lg:col-span-6 order-2 lg:order-1 relative">
+<div class="relative rounded-xl overflow-hidden shadow-2xl bg-primary-container aspect-[1.05/1]">
+<img alt="Custom kitchen roller blinds by Handyman and Blinds" class="w-full h-full object-cover object-center transform transition duration-700 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1X8i1i14y8kRpPd9VY2FRR85T0PesQXXZVd9A8R5EkM3ykCi3R-8EZtgNogHhM95-7z5aJs_tdOsKv6ATRrsBTsCqRH9jWrgn4VajcqJ9TNngmgZNi7TJ1lmbdlYt9dPTxz6b9GD1RC2Ep7qUxX5dii8KxQXhSM8GctUIiQbLNFIgwV4G7QUu9fAOfUe_g2MMfbA5HUJnNhP9HIdIZl09_56SdgI6przOAgZfNfyIJ07tIQLQBR59aMwA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<!-- In-Photo Tag -->
+<div class="absolute bottom-5 left-5 right-5 flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 bg-primary/85 backdrop-blur-md px-3 py-1.5 rounded text-shutter-white font-caption-editorial text-caption-editorial tracking-widest uppercase">
+<span class="w-2 h-2 rounded-full bg-review-gold animate-ping"></span>
+                Crafted & Fitted in West Midlands
+              </span>
+<span class="text-primary-fixed-dim font-caption-editorial text-caption-editorial uppercase tracking-wider hidden sm:inline-block">
+                Precision Made-To-Measure
+              </span>
+</div>
+</div>
+<!-- Floating Trust Stamp -->
+<div class="absolute -bottom-6 sm:-bottom-8 -right-2 sm:-right-6 bg-canvas-linen text-on-surface p-4 sm:p-5 rounded-xl shadow-xl max-w-[260px] sm:max-w-[280px]">
+<div class="flex items-center gap-2 mb-1.5">
+<div class="flex text-review-gold">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold">5.0 / 5.0</span>
+</div>
+<p class="font-body-sm text-[13px] text-on-surface-variant leading-snug">
+              Over 30+ verified 5-star customer ratings on Facebook & Google Reviews.
+            </p>
+</div>
+</div>
+<!-- Right Column: Editorial Copy & CTAs -->
+<div class="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 self-start bg-primary-container/80 px-3.5 py-1.5 rounded-full mb-5">
+<span class="material-symbols-outlined text-review-gold text-[18px]">family_restroom</span>
+<span class="font-caption-editorial text-caption-editorial text-secondary-fixed uppercase tracking-[0.16em]">
+              Family Owned & Operated in the West Midlands
+            </span>
+</div>
+<h1 class="font-display-hero text-[34px] sm:text-[44px] lg:text-display-hero leading-[1.12] tracking-tight text-shutter-white mb-6 uppercase">
+            Heartfelt Personal Service with Meticulous Professional Skill
+          </h1>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim mb-8 max-w-xl">
+            Bespoke blinds, premium plantation shutters, and weatherproof outdoor awnings crafted and installed with master precision for discerning homeowners.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+<a class="bg-secondary hover:bg-on-tertiary-container text-shutter-white font-label-lg text-label-lg px-8 py-4 rounded-lg shadow-lg hover:-translate-y-0.5 transition-all text-center flex items-center justify-center gap-2" href="#consultation-booking">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<span>Book a Free Consultation</span>
+</a>
+<a class="bg-primary-container/90 hover:bg-primary-container text-shutter-white font-label-lg text-label-lg px-6 py-4 rounded-lg transition-all text-center flex items-center justify-center gap-2" href="tel:07813133291">
+<span class="material-symbols-outlined text-review-gold text-[20px]">phone_in_talk</span>
+<span>Call 07813 133291</span>
+</a>
+</div>
+<!-- Trust Bar Indicators -->
+<div class="grid grid-cols-3 gap-3 sm:gap-4 pt-6 bg-deep-navy/40 p-4 rounded-xl">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-review-gold mb-1">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-md text-label-md font-bold text-shutter-white">5 Years</span>
+</div>
+<span class="font-body-sm text-[12px] text-primary-fixed-dim leading-tight">Parts & Service Guarantee</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-review-gold mb-1">
+<span class="material-symbols-outlined text-[18px]">straighten</span>
+<span class="font-label-md text-label-md font-bold text-shutter-white">Free Survey</span>
+</div>
+<span class="font-body-sm text-[12px] text-primary-fixed-dim leading-tight">In-Home Laser Measuring</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-review-gold mb-1">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+<span class="font-label-md text-label-md font-bold text-shutter-white">Zero Sub</span>
+</div>
+<span class="font-body-sm text-[12px] text-primary-fixed-dim leading-tight">Direct Owner-Fitter Tom</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       HIGHLIGHT STRIP: 5-YEAR CRAFTSMANSHIP ASSURANCE
+       ========================================================================= -->
+<section class="bg-surface-subtle py-6">
+<div class="max-w-[1320px] mx-auto px-gutter sm:px-margin-tablet lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary text-[26px]">shield</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[18px] text-on-surface font-semibold">5-Year Complete Peace of Mind Guarantee</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Every installation includes our 5-year guarantee covering both mechanical parts and fitment service.</p>
+</div>
+</div>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-on-secondary-fixed-variant inline-flex items-center gap-1.5 flex-shrink-0 font-bold" href="#consultation-booking">
+<span>Learn about our coverage</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- =========================================================================
+       SERVICES SHOWCASE SECTION
+       ========================================================================= -->
+<section class="py-space-2xl lg:py-space-3xl bg-canvas-linen">
+<div class="max-w-[1320px] mx-auto px-gutter sm:px-margin-tablet lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="inline-flex items-center gap-2 mb-3">
+<span class="h-px w-6 bg-secondary"></span>
+<span class="font-caption-editorial text-caption-editorial text-secondary uppercase tracking-[0.2em]">Master Window Dressings</span>
+<span class="h-px w-6 bg-secondary"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase mb-4">
+          Our Blind, Shutter & Awning Services
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          From contemporary motorised fabrics to classic wooden louvres and weatherproof garden canopies, each window dressing is measured, sourced, and fitted to architectural tolerances.
+        </p>
+</div>
+<!-- 3 Primary Service Cards Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+<!-- Card 1: Blinds -->
+<article class="bg-shutter-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col group">
+<div class="relative h-64 overflow-hidden bg-primary-container">
+<img alt="Warm wooden venetian blinds installed in modern master bedroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1URl8fzzzlmXZfrTZs4SvewaZ83ZTMgbOoFphU32m0aGVGdJmsffOghcIWavPXLE8wLmpyMl38nCruhQSIAVrRk2n8mhDkcJsbqmStbaXzUMFyT5yiVo8ialk41OSrVgcUUR3I7yhKHPTTHhQB1P_q37vfq4Uuz49zUA_0qngCxF8VUpUtYmbboaGmuHvbxCRi5LEKc84KahkFKCQedrYbVOSEjZfGU4PWNZRPjjOQSI4s84yCFqg-7nP8"/>
+<div class="absolute top-4 left-4 bg-primary/90 text-shutter-white px-3 py-1 rounded text-caption-editorial uppercase tracking-wider font-bold">
+              Bespoke Blinds
+            </div>
+</div>
+<div class="p-6 sm:p-8 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Blind Installation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+                A rich variety of styles tailored to any decor: Motorised roller blinds, natural wooden Venetians, sophisticated Romans, verticals, and perfect-fit conservatory blinds with an expansive fabric library.
+              </p>
+<ul class="space-y-2 mb-6 font-body-sm text-[13px] text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-review-gold text-[16px]">check</span>
+                  Motorised remote and app control options
+                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-review-gold text-[16px]">check</span>
+                  Extensive fabric, weave, & blackout swatches
+                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-review-gold text-[16px]">check</span>
+                  Child-safe cordless precision mechanisms
+                </li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 text-secondary font-label-lg text-label-lg group-hover:text-tertiary-container transition-colors font-bold pt-4 bg-surface-subtle/50 px-4 py-3 rounded-lg" href="#consultation-booking">
+<span>Explore Blinds & Fabrics</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 2: Plantation Shutters -->
+<article class="bg-shutter-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col group">
+<div class="relative h-64 overflow-hidden bg-primary-container">
+<img alt="White square-bay plantation shutters expertly fitted" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1W0hz5FfkRKMd8f8p-6ZLaPpaUBilblHJwLrHI0oi3u76WGSUjrkfhiTx6RwWHLkgw7A3eRFsmfD9-6b-fUloUFdspkJhgFgJBBAXYWdEtDqKwySccmGyBAqekTv6jMnT_XUR2FTul8odNbbkzDBJMUpcGKyZiUImgYiTTkfNk3N8dVgcnOLjtLusTDX74AfZk-Z1-SwjAzzfZxkJnCpdy_4ea_aY_D9K2zVnO2Ov5E_O2rRaTMjUfa14w"/>
+<div class="absolute top-4 left-4 bg-primary/90 text-shutter-white px-3 py-1 rounded text-caption-editorial uppercase tracking-wider font-bold">
+              Plantation Shutters
+            </div>
+</div>
+<div class="p-6 sm:p-8 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Shutter Installation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+                Top-tier hardwood, polyvinyl, and MDF shutters expertly measured and crafted. Outstanding thermal retention in winter, natural ventilation in summer, and bespoke bay window carpentry.
+              </p>
+<ul class="space-y-2 mb-6 font-body-sm text-[13px] text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-review-gold text-[16px]">check</span>
+                  Full-height, tier-on-tier & cafe style layouts
+                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-review-gold text-[16px]">check</span>
+                  Specialists in complex square and angled bay windows
+                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-review-gold text-[16px]">check</span>
+                  Enhanced acoustic and thermal home insulation
+                </li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 text-secondary font-label-lg text-label-lg group-hover:text-tertiary-container transition-colors font-bold pt-4 bg-surface-subtle/50 px-4 py-3 rounded-lg" href="#consultation-booking">
+<span>View Shutter Styles</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 3: Outdoor Awnings -->
+<article class="bg-shutter-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col group">
+<div class="relative h-64 overflow-hidden bg-primary-container">
+<img alt="Modern retractable garden patio awning over terrace furniture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1VZw6lgfwYFhFiYluMtzmcFlaz4AKBTvbPnsrGPm-UZrlneRJRtfebxpeSAoeNbHiGF5eTrqB1SeWPmZlwnm92THGeTmIz963zW7EO-utV9de-pHSwrKQ4CBdRP_y3t5ZdBckWXE3zHJd3eSYSKwmeIOohZ2UV-b86qyQWuaU3R8wTsxD_P2_Zp08yt_n6efYDiKS19fxkBgkVYJTfntzWMVj3OENnBmP8K31sk2Q1JZquqxJFlIV_Ezg"/>
+<div class="absolute top-4 left-4 bg-primary/90 text-shutter-white px-3 py-1 rounded text-caption-editorial uppercase tracking-wider font-bold">
+              Exterior Living
+            </div>
+</div>
+<div class="p-6 sm:p-8 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Outdoor Awnings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+                Transform your patio and garden with robust, British-weather ready retractable awnings. Choose between smooth manual gearboxes or automated motorized wind-sensor systems.
+              </p>
+<ul class="space-y-2 mb-6 font-body-sm text-[13px] text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-review-gold text-[16px]">check</span>
+                  Heavy-duty waterproof & UV-resistant fabrics
+                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-review-gold text-[16px]">check</span>
+                  Electric Somfy motorisation with optional sensors
+                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-review-gold text-[16px]">check</span>
+                  Extends indoor comfort out onto your garden terrace
+                </li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 text-secondary font-label-lg text-label-lg group-hover:text-tertiary-container transition-colors font-bold pt-4 bg-surface-subtle/50 px-4 py-3 rounded-lg" href="#consultation-booking">
+<span>Discover Awnings</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       MEET THE FAMILY BEHIND THE BUSINESS
+       ========================================================================= -->
+<section class="py-space-2xl lg:py-space-3xl bg-surface-subtle relative overflow-hidden">
+<div class="max-w-[1320px] mx-auto px-gutter sm:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Family Portrait Side -->
+<div class="lg:col-span-5 relative">
+<div class="relative bg-shutter-white p-3 rounded-2xl shadow-xl">
+<div class="rounded-xl overflow-hidden aspect-[0.76/1]">
+<img alt="Tom, Amy and their two young boys - owners of Handyman & Blinds" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VJdf_PjEFSqrzBsIfgchIurJ47H1vVVyDwR4iVx1Bzoy_C3_doVa3cnR9JFMndGIOsI08qzuFFLNfjA7lpARLGB6RU-ovQS35Rb_Ob-wEVoUeH8fM2cjooT0I5nHX3otmxd_PFIbKtIkppsrn_wuMq3CaOVeDH2H0h9mjqpbr0fETui3t1-kBb0Hfwx-w9YpzJtwwn7rCIE1MK_p_yZz-LrTzf0ZmJgScDxsPqlyc5BtKL8SVQyANNzFw"/>
+</div>
+<div class="p-4 text-center">
+<span class="font-headline-sm text-headline-sm text-primary block">Tom & Amy</span>
+<span class="font-caption-editorial text-caption-editorial text-secondary uppercase tracking-widest block mt-0.5">Founders & Proprietors</span>
+</div>
+</div>
+<!-- Decorative Floating Card -->
+<div class="absolute -bottom-6 -left-4 sm:-left-8 bg-primary text-shutter-white p-5 rounded-xl shadow-xl hidden sm:block max-w-xs">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-shutter-white">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-secondary-fixed">Personal Accountability</p>
+<p class="font-body-sm text-[12px] text-primary-fixed-dim">Every home is personally surveyed and installed by Tom.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Story -->
+<div class="lg:col-span-7 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">favorite</span>
+<span class="font-caption-editorial text-caption-editorial text-secondary uppercase tracking-[0.2em]">Our Heritage & Promise</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase mb-6 leading-tight">
+            Personal Care From Our Family To Yours
+          </h2>
+<div class="space-y-4 font-body-lg text-body-md text-on-surface leading-relaxed mb-8">
+<p>
+              We are <strong>Tom and Amy</strong>, the dedicated couple behind our family-run business. Balancing our family life with two young boys, we understand the challenges that come with juggling personal and professional worlds.
+            </p>
+<p>
+              Our business was born from a shared vision: to combine heartfelt personal service with unmatched professional skill in every installation.
+            </p>
+<p>
+              At the heart of what we do is our commitment to reliability and punctuality, ensuring we meet your expectations every time. Tom brings his expertise in fitting and design consultation to each project, focusing on the finer details to perfect your space. Meanwhile, Amy expertly manages our office, orchestrating the smooth operation of our business.
+            </p>
+<p class="font-headline-sm text-[20px] text-secondary italic pt-2">
+              “We’re more than just a business, we’re a family that understands yours.”
+            </p>
+</div>
+<!-- Feature Pills -->
+<div class="flex flex-wrap gap-3">
+<div class="inline-flex items-center gap-2 bg-shutter-white px-4 py-2.5 rounded-lg shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">support_agent</span>
+<span class="font-label-md text-label-md font-bold">Direct Owner Contact</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-shutter-white px-4 py-2.5 rounded-lg shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">schedule</span>
+<span class="font-label-md text-label-md font-bold">Clean & Punctual Fitting</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-shutter-white px-4 py-2.5 rounded-lg shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">person_check</span>
+<span class="font-label-md text-label-md font-bold">No Subcontractors Ever</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SOCIAL PROOF & REVIEWS
+       ========================================================================= -->
+<section class="py-space-2xl lg:py-space-3xl bg-canvas-linen">
+<div class="max-w-[1320px] mx-auto px-gutter sm:px-margin-tablet lg:px-margin-desktop">
+<!-- Section Intro & Facebook Badge Header -->
+<div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-14">
+<div>
+<span class="font-caption-editorial text-caption-editorial text-secondary uppercase tracking-[0.2em] block mb-2">Verified Testimonials</span>
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase">What Our Customers Say</h2>
+</div>
+<!-- Google/Facebook Rating Card mimicking screenshot badge -->
+<div class="bg-shutter-white px-5 py-3.5 rounded-xl shadow-md flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center text-shutter-white flex-shrink-0 font-bold text-xl">
+            f
+          </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[22px] font-bold text-on-surface leading-none">5.0</span>
+<div class="flex text-review-gold">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="font-caption-editorial text-caption-editorial text-on-surface-variant uppercase tracking-wider block mt-1">30+ Verified Facebook Reviews</span>
+</div>
+</div>
+</div>
+<!-- Testimonial Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1: Sheila Wassell -->
+<div class="bg-shutter-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex text-review-gold mb-4">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-6 italic leading-relaxed">
+              “Excellent workmanship, & top class service from Tom. Blinds look so good really pleased. Would thoroughly recommend!”
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4 bg-surface-subtle/40 px-4 py-3 rounded-lg">
+<div class="w-9 h-9 rounded-full bg-secondary text-shutter-white flex items-center justify-center font-bold text-sm">
+              SW
+            </div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Sheila Wassell</p>
+<p class="font-caption-editorial text-[11px] text-on-surface-variant uppercase">Verified Facebook Review</p>
+</div>
+</div>
+</div>
+<!-- Review 2: Deb Worrall -->
+<div class="bg-shutter-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex text-review-gold mb-4">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-6 italic leading-relaxed">
+              “Had new blinds on the front of our home fitted by Tom last week. Went for motorised rollers which are fabulous. Professional from start to end. Good price and a really lovely guy. Great choice of blinds, fabrics and colours. Local guy who deserves to do well. Highly recommend.”
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4 bg-surface-subtle/40 px-4 py-3 rounded-lg">
+<div class="w-9 h-9 rounded-full bg-secondary text-shutter-white flex items-center justify-center font-bold text-sm">
+              DW
+            </div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Deb Worrall</p>
+<p class="font-caption-editorial text-[11px] text-on-surface-variant uppercase">Motorised Rollers Fitting</p>
+</div>
+</div>
+</div>
+<!-- Review 3: Bay Shutter Transformation -->
+<div class="bg-shutter-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex text-review-gold mb-4">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-6 italic leading-relaxed">
+              “From consultation to installation, Tom and Amy were fantastic. Super clean job, arrived right on time, and our bay shutters transformed our living room!”
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4 bg-surface-subtle/40 px-4 py-3 rounded-lg">
+<div class="w-9 h-9 rounded-full bg-secondary text-shutter-white flex items-center justify-center font-bold text-sm">
+              VC
+            </div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Verified Local Client</p>
+<p class="font-caption-editorial text-[11px] text-on-surface-variant uppercase">Square-Bay Shutters</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       AREAS COVERED & FOUR VALUE PILLARS
+       ========================================================================= -->
+<section class="py-space-2xl bg-surface-subtle">
+<div class="max-w-[1320px] mx-auto px-gutter sm:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Regional Map & Counties -->
+<div class="lg:col-span-6 bg-shutter-white p-8 rounded-2xl shadow-md">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary text-[28px]">distance</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Daily Mobile Survey Areas</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+            Tom travels with a mobile showroom full of real fabric books, louvre samples, and motorised hardware to your door across four counties:
+          </p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-subtle p-4 rounded-xl">
+<span class="font-label-md text-label-md text-primary font-bold block">West Midlands</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Dudley, Stourbridge, Kingswinford, Wolverhampton, Halesowen, Birmingham</span>
+</div>
+<div class="bg-surface-subtle p-4 rounded-xl">
+<span class="font-label-md text-label-md text-primary font-bold block">Worcestershire</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Kidderminster, Bromsgrove, Hagley, Bewdley, Droitwich Spa</span>
+</div>
+<div class="bg-surface-subtle p-4 rounded-xl">
+<span class="font-label-md text-label-md text-primary font-bold block">Shropshire</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Bridgnorth, Telford, Albrighton, Shifnal, Cleobury Mortimer</span>
+</div>
+<div class="bg-surface-subtle p-4 rounded-xl">
+<span class="font-label-md text-label-md text-primary font-bold block">Staffordshire</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">South Staffordshire, Kinver, Wombourne, Codsall, Cannock</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-primary text-shutter-white p-4 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-review-gold text-[22px]">home_pin</span>
+<span class="font-body-sm text-body-sm">Not sure if your postcode is in range?</span>
+</div>
+<a class="font-label-md text-label-md text-secondary-fixed hover:text-shutter-white underline whitespace-nowrap" href="tel:07813133291">
+              Ask Tom Directly
+            </a>
+</div>
+</div>
+<!-- 4 Pillars of Value -->
+<div class="lg:col-span-6 space-y-6">
+<div class="mb-4">
+<span class="font-caption-editorial text-caption-editorial text-secondary uppercase tracking-[0.2em] block mb-2">The Difference</span>
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase">Why Choose Handyman & Blinds</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-shutter-white p-6 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[32px] mb-3">straighten</span>
+<h4 class="font-headline-sm text-[18px] text-primary mb-1">Free Measuring & Quote</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+                No high-pressure sales pitches. Free laser measuring and clear, transparent, itemised quotations.
+              </p>
+</div>
+<div class="bg-shutter-white p-6 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[32px] mb-3">precision_manufacturing</span>
+<h4 class="font-headline-sm text-[18px] text-primary mb-1">Precision Craftsmanship</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+                Meticulous attention to alignment, flush reveals, cleanly concealed fixings, and spotless tidying.
+              </p>
+</div>
+<div class="bg-shutter-white p-6 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[32px] mb-3">verified</span>
+<h4 class="font-headline-sm text-[18px] text-primary mb-1">5-Year Guarantee</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+                Backed by our genuine warranty covering internal hardware, fabrics, and our personal fitting service.
+              </p>
+</div>
+<div class="bg-shutter-white p-6 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[32px] mb-3">family_restroom</span>
+<h4 class="font-headline-sm text-[18px] text-primary mb-1">Family-Run Honesty</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+                Tom fits the blinds, Amy handles your enquiries. Courteous, punctual, and genuinely invested in your home.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       LEAD CAPTURE / BOOK FREE CONSULTATION FORM
+       ========================================================================= -->
+<section class="py-space-2xl lg:py-space-3xl bg-primary text-shutter-white relative" id="consultation-booking">
+<div class="max-w-[1320px] mx-auto px-gutter sm:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Side: Reassurance & Direct Contact -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<div class="inline-flex items-center gap-2 bg-primary-container px-3.5 py-1.5 rounded-full mb-4">
+<span class="material-symbols-outlined text-review-gold text-[16px]">calendar_month</span>
+<span class="font-caption-editorial text-caption-editorial text-secondary-fixed uppercase tracking-wider">No Obligation Consultation</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-shutter-white uppercase mb-6 leading-tight">
+              Book Your Free In-Home Consultation & Quote
+            </h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim mb-8 leading-relaxed">
+              Let Tom bring the showroom to you. We'll inspect your windows, measure with millimeter precision, show you samples in your home's natural light, and provide a prompt quotation.
+            </p>
+<div class="space-y-4 mb-8">
+<a class="flex items-center gap-4 p-4 rounded-xl bg-primary-container/60 hover:bg-primary-container transition-colors group" href="tel:07813133291">
+<div class="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center text-shutter-white">
+<span class="material-symbols-outlined text-[24px]">phone_iphone</span>
+</div>
+<div>
+<span class="font-caption-editorial text-caption-editorial text-secondary-fixed uppercase block">Call Tom Directly (Fitter)</span>
+<span class="font-headline-sm text-[20px] text-shutter-white font-bold group-hover:text-secondary-fixed transition-colors">07813 133291</span>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 rounded-xl bg-primary-container/60 hover:bg-primary-container transition-colors group" href="tel:01384277877">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-shutter-white">
+<span class="material-symbols-outlined text-[24px]">deskphone</span>
+</div>
+<div>
+<span class="font-caption-editorial text-caption-editorial text-primary-fixed-dim uppercase block">Amy in the Office</span>
+<span class="font-headline-sm text-[20px] text-shutter-white font-bold group-hover:text-secondary-fixed transition-colors">01384 277877</span>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 rounded-xl bg-primary-container/60 hover:bg-primary-container transition-colors group" href="mailto:office@handymanblinds.co.uk">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-shutter-white">
+<span class="material-symbols-outlined text-[24px]">mail</span>
+</div>
+<div>
+<span class="font-caption-editorial text-caption-editorial text-primary-fixed-dim uppercase block">Direct Email</span>
+<span class="font-body-md text-body-md text-shutter-white font-semibold group-hover:text-secondary-fixed transition-colors">office@handymanblinds.co.uk</span>
+</div>
+</a>
+</div>
+</div>
+<div class="bg-primary-container/40 p-4 rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-review-gold text-[20px]">schedule</span>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">
+<strong>Quick response promise:</strong> We answer messages promptly within 24 hours.
+            </span>
+</div>
+</div>
+<!-- Right Side: Interactive Booking Form -->
+<div class="lg:col-span-7 bg-shutter-white text-on-surface p-8 sm:p-10 rounded-2xl shadow-2xl">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Request In-Home Appointment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-8">
+            Tell us about your home and when works best for your survey visit.
+          </p>
+<form class="space-y-5" id="consultationForm" onsubmit="event.preventDefault(); showConfirmation();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-2" for="full-name">Full Name *</label>
+<input class="w-full h-12 px-4 rounded-lg bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-shutter-white focus:outline-none transition-colors" id="full-name" name="full-name" placeholder="e.g. Sarah Jenkins" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-2" for="phone">Phone Number *</label>
+<input class="w-full h-12 px-4 rounded-lg bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-shutter-white focus:outline-none transition-colors" id="phone" name="phone" placeholder="e.g. 07123 456789" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-2" for="email">Email Address *</label>
+<input class="w-full h-12 px-4 rounded-lg bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-shutter-white focus:outline-none transition-colors" id="email" name="email" placeholder="sarah@example.co.uk" required="" type="email"/>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-2" for="postcode">Postcode / Town *</label>
+<input class="w-full h-12 px-4 rounded-lg bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-shutter-white focus:outline-none transition-colors" id="postcode" name="postcode" placeholder="e.g. DY6, Kingswinford" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-2" for="service">Service of Interest</label>
+<select class="w-full h-12 px-4 rounded-lg bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-shutter-white focus:outline-none transition-colors" id="service" name="service">
+<option value="blinds">Bespoke Window Blinds</option>
+<option value="shutters">Plantation Shutters (Bay / Tier-on-Tier)</option>
+<option value="awnings">Outdoor Patio Awnings</option>
+<option value="multiple">Multiple / Full House Fitting</option>
+<option value="other">General Window Advice</option>
+</select>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-2" for="preferred-time">Preferred Survey Time</label>
+<select class="w-full h-12 px-4 rounded-lg bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-shutter-white focus:outline-none transition-colors" id="preferred-time" name="preferred-time">
+<option value="weekday-morning">Weekday Morning (9am - 12pm)</option>
+<option value="weekday-afternoon">Weekday Afternoon (12pm - 5pm)</option>
+<option value="evening">Weekday Evening (After 5pm)</option>
+<option value="weekend">Saturday Morning</option>
+</select>
+</div>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-2" for="message">Your Window Details / Notes</label>
+<textarea class="w-full p-4 rounded-lg bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-shutter-white focus:outline-none transition-colors" id="message" name="message" placeholder="Number of windows, room types (e.g. living room bay, kitchen), or any specific fabric ideas..." rows="3"></textarea>
+</div>
+<button class="w-full bg-secondary hover:bg-tertiary-container text-shutter-white font-label-lg text-label-lg py-4 rounded-lg shadow-lg hover:-translate-y-0.5 transition-all text-center flex items-center justify-center gap-2 cursor-pointer font-bold" type="submit">
+<span class="material-symbols-outlined text-[22px]">send</span>
+<span>Submit Free Consultation Enquiry</span>
+</button>
+</form>
+<div class="hidden mt-6 p-6 bg-surface-subtle rounded-xl text-center" id="formSuccessMessage">
+<div class="w-12 h-12 bg-secondary/20 text-secondary rounded-full flex items-center justify-center mx-auto mb-3">
+<span class="material-symbols-outlined text-[28px]">check_circle</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1">Thank You for Your Enquiry!</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Amy or Tom will get back to you within 24 hours to confirm your convenient appointment time.
+            </p>
+</div>
+<p class="font-caption-editorial text-[11px] text-on-surface-variant text-center mt-4 uppercase tracking-wider">
+            Your details are kept strictly private • Never shared • No obligation
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       STICKY / QUICK CONTACT CORNER PILL FOR INSTANT DIRECT CALL
+       ========================================================================= -->
+<aside class="fixed bottom-6 right-6 z-40 hidden lg:flex items-center gap-3 bg-deep-navy text-shutter-white pl-4 pr-5 py-3 rounded-full shadow-2xl hover:scale-105 transition-transform duration-300">
+<a class="flex items-center gap-2.5" href="tel:07813133291">
+<span class="w-3 h-3 rounded-full bg-review-gold animate-pulse"></span>
+<span class="font-label-md text-label-md text-shutter-white">Call Tom:</span>
+<span class="font-label-lg text-label-lg text-secondary-fixed font-bold">07813 133291</span>
+</a>
+</aside>
+<!-- Inline Script for Interactive Lead Form confirmation -->
+<script>
+    function showConfirmation() {
+      const form = document.getElementById('consultationForm');
+      const success = document.getElementById('formSuccessMessage');
+      if (form && success) {
+        form.classList.add('hidden');
+        success.classList.remove('hidden');
+      }
+    }
+  </script>
+</div></main><div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-deep-navy/95 backdrop-blur-xl border-t border-primary-container py-space-xs px-space-md shadow-[0_-8px_24px_rgba(4,16,33,0.2)]"><div class="grid grid-cols-4 gap-space-2xs max-w-md mx-auto items-center"><a class="flex flex-col items-center justify-center py-space-2xs text-shutter-white hover:text-secondary-fixed transition-colors" href="tel:07813133291"><span class="material-symbols-outlined text-[20px] text-review-gold">call</span><span class="font-caption-editorial text-[10px] mt-0.5">Call Now</span></a><a class="flex flex-col items-center justify-center py-space-2xs text-primary-fixed-dim hover:text-shutter-white transition-colors" href="mailto:office@handymanblinds.co.uk"><span class="material-symbols-outlined text-[20px]">chat</span><span class="font-caption-editorial text-[10px] mt-0.5">Message</span></a><a class="flex flex-col items-center justify-center py-space-2xs text-primary-fixed-dim hover:text-shutter-white transition-colors" data-path="blinds" href="#"><span class="material-symbols-outlined text-[20px]">window</span><span class="font-caption-editorial text-[10px] mt-0.5">Services</span></a><a class="flex flex-col items-center justify-center py-space-2xs bg-secondary text-shutter-white rounded-lg" data-path="book-consultation" href="#"><span class="material-symbols-outlined text-[18px]">event_available</span><span class="font-caption-editorial text-[10px] mt-0.5 font-bold">Free Quote</span></a></div></div><footer class="w-full bg-primary text-shutter-white pt-space-3xl pb-space-2xl border-t border-primary-container"><div class="max-w-[1320px] mx-auto px-gutter sm:px-margin-tablet lg:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop mb-space-2xl"><div><div class="flex items-center gap-space-sm mb-space-md"><div class="p-space-2xs bg-primary-container rounded-lg"><img alt="Handyman & Blinds Emblem" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XkHjLkF3fXIgCcWRotqTD_0W-U255jsUtA-YiTisLYg6IMb6ow0UqdPM-GaoSreqhnSPbHnRQdDsNa8axKMhUN1u3ynUZMQEN4kHQbW6rbRURmVW0hDLvQoHcXymGlx14Xhn7Nej8miUZuApgRwVmCzLMuBCgRCMG5BOM-d5ZpaG_ycXYj4viIKTgkE4UEtldpFoigGmcby_rq5BO4h3I6sid5YwkIT_zSsa-VPHXmixRDCSM85uZ7ETE"/></div><span class="font-headline-sm text-headline-sm text-shutter-white uppercase">HANDYMAN & BLINDS</span></div><p class="font-body-sm text-body-sm text-primary-fixed-dim mb-space-md">Premium architectural window dressings, luxury plantation shutters, and bespoke outdoor awnings. Crafted with familial pride, measured precisely, and installed by master craftsmen.</p><div class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs bg-primary-container/80 border border-primary-container rounded-lg"><span class="material-symbols-outlined text-review-gold text-[18px]">verified</span><span class="font-caption-editorial text-caption-editorial text-shutter-white uppercase">5-Year Guarantee Included</span></div></div><div><h4 class="font-headline-sm text-headline-sm text-shutter-white mb-space-md">Direct Contact</h4><div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-primary-fixed-dim"><a class="flex items-center gap-space-xs hover:text-shutter-white transition-colors" href="tel:07813133291"><span class="material-symbols-outlined text-secondary-fixed text-[18px]">phone_iphone</span>07813 133291 (Direct Mobile)</a><a class="flex items-center gap-space-xs hover:text-shutter-white transition-colors" href="tel:01384277877"><span class="material-symbols-outlined text-secondary-fixed text-[18px]">deskphone</span>01384 277877 (Office / Studio)</a><a class="flex items-center gap-space-xs hover:text-shutter-white transition-colors" href="mailto:office@handymanblinds.co.uk"><span class="material-symbols-outlined text-secondary-fixed text-[18px]">mail</span>office@handymanblinds.co.uk</a><div class="flex items-start gap-space-xs mt-space-2xs"><span class="material-symbols-outlined text-secondary-fixed text-[18px]">location_on</span><span>Registered Office: Kingswinford, West Midlands, United Kingdom</span></div></div></div><div><h4 class="font-headline-sm text-headline-sm text-shutter-white mb-space-md">Areas Covered</h4><p class="font-body-sm text-body-sm text-primary-fixed-dim mb-space-sm">Our dedicated survey and fitting vehicles operate daily across:</p><ul class="font-body-sm text-body-sm text-primary-fixed-dim space-y-space-2xs"><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-fixed text-[14px]">check_circle</span>West Midlands & Birmingham</li><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-fixed text-[14px]">check_circle</span>Worcestershire & Stourbridge</li><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-fixed text-[14px]">check_circle</span>Shropshire & Bridgnorth</li><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-fixed text-[14px]">check_circle</span>Staffordshire & South Staffs</li></ul></div><div><h4 class="font-headline-sm text-headline-sm text-shutter-white mb-space-md">Explore Ranges</h4><div class="grid grid-cols-2 gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim"><a class="hover:text-shutter-white transition-colors" data-path="blinds" href="#">Roller Blinds</a><a class="hover:text-shutter-white transition-colors" data-path="plantation-shutters" href="#">Plantation Shutters</a><a class="hover:text-shutter-white transition-colors" data-path="blinds" href="#">Venetian Blinds</a><a class="hover:text-shutter-white transition-colors" data-path="awnings" href="#">Retractable Awnings</a><a class="hover:text-shutter-white transition-colors" data-path="blinds" href="#">Motorised Systems</a><a class="hover:text-shutter-white transition-colors" data-path="reviews" href="#">Client Showcase</a><a class="hover:text-shutter-white transition-colors" data-path="about-us" href="#">Our Workshop</a><a class="hover:text-shutter-white transition-colors" data-path="contact" href="#">Request Samples</a></div><div class="mt-space-lg"><span class="font-caption-editorial text-caption-editorial text-primary-fixed-dim uppercase block mb-space-xs">Connect With Us</span><div class="flex items-center gap-space-sm"><a class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-primary-fixed-dim hover:text-shutter-white hover:bg-secondary transition-all" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-primary-fixed-dim hover:text-shutter-white hover:bg-secondary transition-all" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-primary-fixed-dim hover:text-shutter-white hover:bg-secondary transition-all" href="#"><span class="material-symbols-outlined text-[18px]">videocam</span></a></div></div></div></div><div class="pt-space-lg border-t border-primary-container/60 flex flex-col md:flex-row items-center justify-between gap-space-md font-caption-editorial text-caption-editorial text-primary-fixed-dim"><div class="flex flex-col sm:flex-row items-center gap-space-xs text-center md:text-left"><span>© 2025 Handyman and Blinds Ltd.</span><span>•</span><span>Company Reg No. 15032160</span><span>•</span><span>All Rights Reserved.</span></div><div class="flex items-center gap-space-lg"><a class="hover:text-shutter-white transition-colors" href="#">Privacy Policy</a><a class="hover:text-shutter-white transition-colors" href="#">Terms of Guarantee</a><a class="hover:text-shutter-white transition-colors" href="#">Cookie Settings</a></div></div></div></footer><img src="https://andrastime.goatcounter.com/count?p=%2F4d70d15c-1880-4c4b-be23-380e7429e522" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;border:0" referrerpolicy="no-referrer"></body></html>
